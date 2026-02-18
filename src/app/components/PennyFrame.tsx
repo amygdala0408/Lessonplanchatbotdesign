@@ -1,8 +1,14 @@
-import React from 'react';
-import pennyImage from 'figma:asset/556b89ab76ff40690f55e66c7073a0353119496d.png';
+import React, { useState } from 'react';
+import Image from 'next/image';
 import { cn } from '../../lib/utils';
+import { GraduationCap } from 'lucide-react';
+
+// Penny Pedagogy avatar image
+const pennyImage = '/penny-avatar.jpg';
 
 export function PennyFrame({ className, size = "md" }: { className?: string, size?: "sm" | "md" | "lg" | "xl" }) {
+  const [imageError, setImageError] = useState(false);
+  
   // Size mappings for consistent scaling
   const sizeClasses = {
     sm: "p-2 border-[6px]",
@@ -33,15 +39,25 @@ export function PennyFrame({ className, size = "md" }: { className?: string, siz
         <div className="bg-[#e8e6df] h-full w-full shadow-[inset_2px_2px_8px_rgba(0,0,0,0.1)] flex flex-col">
             
             {/* The Picture Itself */}
-            <div className={cn("relative border-[#1a1a1a] m-1 flex-grow", innerBorderClasses[size])}>
-                <div className="relative w-full h-full overflow-hidden grayscale contrast-125 sepia-[0.1]">
-                    <img 
-                        src={pennyImage} 
-                        alt="Penny Pedagogy" 
-                        className="w-full h-full object-cover mix-blend-normal"
-                    />
-                    {/* Texture overlay for the photo */}
-                    <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/noise-lines.png')] opacity-10 pointer-events-none"></div>
+            <div className={cn("relative border-[#1a1a1a] m-1 flex-grow overflow-hidden", innerBorderClasses[size])}>
+                <div className="relative w-full h-full bg-[#dcdcd1]">
+                    {!imageError ? (
+                        <Image
+                            src={pennyImage}
+                            alt="Penny Pedagogy - AI Instructional Design Partner"
+                            fill
+                            className="object-contain grayscale-0 sepia-[0.05]"
+                            style={{ objectPosition: 'center top' }}
+                            onError={() => setImageError(true)}
+                            priority
+                        />
+                    ) : (
+                        <div className="w-full h-full flex items-center justify-center">
+                            <GraduationCap className="w-1/2 h-1/2 text-[#1a1a1a] opacity-60" />
+                        </div>
+                    )}
+                    {/* Subtle texture overlay for vintage effect */}
+                    <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/noise-lines.png')] opacity-5 pointer-events-none"></div>
                 </div>
             </div>
 

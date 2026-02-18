@@ -1,4 +1,4 @@
-import { LessonPlanData } from '../types';
+import { LessonPlanData, StudentMaterialsData } from '../types';
 
 export const initialLessonPlan: LessonPlanData = {
   title: "",
@@ -9,6 +9,13 @@ export const initialLessonPlan: LessonPlanData = {
   materials: [],
   procedure: [],
   assessment: ""
+};
+
+export const initialStudentMaterials: StudentMaterialsData = {
+  worksheets: [],
+  graphicOrganizers: [],
+  readingPassages: [],
+  sentenceFrames: [],
 };
 
 export const demoLessonPlan: LessonPlanData = {

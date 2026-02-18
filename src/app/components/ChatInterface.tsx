@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { User, Bot, Paperclip } from 'lucide-react';
+import { User, Bot, Paperclip, Sparkles, RotateCcw } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
 import { cn } from '../../lib/utils';
 import { Message } from '../../types';
 
@@ -9,9 +10,12 @@ interface ChatInterfaceProps {
   onSendMessage: (message: string) => void;
   isTyping: boolean;
   theme?: 'default' | 'coffee';
+  onFinalize?: () => void;
+  canFinalize?: boolean;
+  onReset?: () => void;
 }
 
-export function ChatInterface({ messages, onSendMessage, isTyping, theme = 'default' }: ChatInterfaceProps) {
+export function ChatInterface({ messages, onSendMessage, isTyping, theme = 'default', onFinalize, canFinalize = false, onReset }: ChatInterfaceProps) {
   const [input, setInput] = useState('');
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
@@ -64,13 +68,29 @@ export function ChatInterface({ messages, onSendMessage, isTyping, theme = 'defa
                 </div>
             </div>
         </div>
-        <div className={cn(
-            "text-[10px] font-mono opacity-60 border-2 px-3 py-1 shadow-[2px_2px_0px_0px_rgba(0,0,0,0.1)] relative z-10 transition-colors duration-500",
-            theme === 'coffee' 
-                ? "bg-[#3e3226] border-[#e8e6df]/20 text-[#e8e6df]" 
-                : "bg-[#fdfdfd] border-[#1a1a1a] text-[#1a1a1a]"
-        )}>
-            SECURE • {new Date().toLocaleDateString()}
+        <div className="flex items-center gap-3 relative z-10">
+          {onReset && (
+            <button
+              onClick={onReset}
+              className={cn(
+                "flex items-center gap-1.5 text-[10px] font-mono uppercase tracking-widest border-2 px-3 py-1 transition-all hover:scale-105 active:scale-95",
+                theme === 'coffee' 
+                  ? "bg-[#3e3226] border-[#e8e6df]/20 text-[#e8e6df] hover:bg-[#4a3b2d]" 
+                  : "bg-[#fdfdfd] border-[#1a1a1a] text-[#1a1a1a] hover:bg-[#f0f0f0]"
+              )}
+            >
+              <RotateCcw size={12} />
+              New
+            </button>
+          )}
+          <div className={cn(
+              "text-[10px] font-mono opacity-60 border-2 px-3 py-1 shadow-[2px_2px_0px_0px_rgba(0,0,0,0.1)] transition-colors duration-500",
+              theme === 'coffee' 
+                  ? "bg-[#3e3226] border-[#e8e6df]/20 text-[#e8e6df]" 
+                  : "bg-[#fdfdfd] border-[#1a1a1a] text-[#1a1a1a]"
+          )}>
+              SECURE • {new Date().toLocaleDateString()}
+          </div>
         </div>
       </div>
 
@@ -145,14 +165,41 @@ export function ChatInterface({ messages, onSendMessage, isTyping, theme = 'defa
                     msg.role === 'user' ? "bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]" : "bg-[url('https://www.transparenttextures.com/patterns/paper.png')]"
                 )}></div>
                 
-                <p className="whitespace-pre-wrap relative z-10">{msg.content}</p>
+                <div className="whitespace-pre-wrap relative z-10 prose prose-sm max-w-none prose-a:text-blue-500 prose-a:underline prose-a:font-medium hover:prose-a:text-blue-700">
+                  <ReactMarkdown
+                    components={{
+                      a: ({ href, children }) => (
+                        <a 
+                          href={href} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-blue-500 underline font-medium hover:text-blue-700"
+                        >
+                          {children}
+                        </a>
+                      ),
+                      p: ({ children }) => <p className="mb-2 last:mb-0">{children}</p>,
+                      ul: ({ children }) => <ul className="list-disc pl-5 mb-2">{children}</ul>,
+                      ol: ({ children }) => <ol className="list-decimal pl-5 mb-2">{children}</ol>,
+                      li: ({ children }) => <li className="mb-1">{children}</li>,
+                      strong: ({ children }) => <strong className="font-bold">{children}</strong>,
+                      em: ({ children }) => <em className="italic">{children}</em>,
+                      h1: ({ children }) => <h1 className="text-xl font-bold mt-4 mb-2">{children}</h1>,
+                      h2: ({ children }) => <h2 className="text-lg font-bold mt-3 mb-2">{children}</h2>,
+                      h3: ({ children }) => <h3 className="text-base font-bold mt-2 mb-1">{children}</h3>,
+                      code: ({ children }) => <code className="bg-black/10 px-1 py-0.5 rounded text-sm font-mono">{children}</code>,
+                    }}
+                  >
+                    {msg.content}
+                  </ReactMarkdown>
+                </div>
                 <span className={cn(
                     "text-[10px] opacity-50 mt-4 block font-mono uppercase tracking-widest pt-3 border-t border-dashed relative z-10 transition-colors duration-500",
                     msg.role === 'user' 
                         ? (theme === 'coffee' ? "border-[#2c241b]/30" : "border-[#e8e6df]/30")
                         : (theme === 'coffee' ? "border-[#e8e6df]/20" : "border-[#1a1a1a]/20")
                 )}>
-                  {msg.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                  {new Date(msg.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                 </span>
               </div>
             </motion.div>
@@ -237,6 +284,23 @@ export function ChatInterface({ messages, onSendMessage, isTyping, theme = 'defa
              <span className="relative z-10">Send</span>
              <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20 pointer-events-none"></div>
           </button>
+          
+          {canFinalize && onFinalize && (
+            <button
+              type="button"
+              onClick={onFinalize}
+              className={cn(
+                  "h-[70px] px-6 font-['Oswald'] uppercase tracking-widest text-sm font-bold transition-all shadow-[6px_6px_0px_0px_rgba(0,0,0,0.2)] active:translate-y-[2px] active:translate-x-[2px] active:shadow-none border-2 relative overflow-hidden flex items-center gap-2",
+                  theme === 'coffee' 
+                      ? "bg-green-700 text-white hover:bg-green-600 border-green-800" 
+                      : "bg-green-600 text-white hover:bg-green-500 border-green-700"
+              )}
+            >
+               <Sparkles size={18} />
+               <span className="relative z-10">Finalize</span>
+               <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20 pointer-events-none"></div>
+            </button>
+          )}
         </form>
       </div>
     </div>
