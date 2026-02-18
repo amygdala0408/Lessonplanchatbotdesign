@@ -90,27 +90,30 @@ export default function HomePage() {
 
       {/* LEFT COLUMN: PENNY (Fixed Width) */}
       <div className={cn(
-          "hidden lg:flex flex-col w-[450px] h-full p-8 border-r-4 z-10 relative shadow-2xl items-center justify-center shrink-0 transition-colors duration-500",
+          "hidden lg:flex flex-col w-[450px] h-full p-8 border-r-4 z-10 relative shadow-2xl items-center justify-between shrink-0 transition-colors duration-500",
           theme === 'coffee' 
             ? "border-[#e8e6df]/20 bg-[#3e3226]" 
             : "border-[#1a1a1a] bg-[#e6e2d6]"
       )}>
           <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cardboard-flat.png')] opacity-10 pointer-events-none mix-blend-multiply"></div>
           
+          {/* Top spacer */}
+          <div className="shrink-0"></div>
+          
+          {/* Penny Frame - centered */}
           <div className="relative z-10 scale-100 transition-transform duration-500 hover:scale-[1.02]">
             <PennyFrame size="xl" />
           </div>
 
-          <div className="mt-12 text-center space-y-4 max-w-[300px] relative">
-             <div className={cn("absolute -top-6 left-1/2 -translate-x-1/2 w-px h-12 transition-colors duration-500", theme === 'coffee' ? "bg-[#e8e6df]/20" : "bg-[#1a1a1a]/20")}></div>
-             <div className={cn("h-1 w-24 mx-auto mb-6 transition-colors duration-500", theme === 'coffee' ? "bg-[#e8e6df]" : "bg-[#1a1a1a]")}></div>
-             <p className="font-['Oswald'] text-2xl uppercase tracking-widest font-bold leading-tight">"Rigor without access is gatekeeping. Access without rigor is abandonment. True equity demands both."</p>
-             <div className={cn("w-12 h-1 mx-auto transition-colors duration-500", theme === 'coffee' ? "bg-[#e8e6df]/20" : "bg-[#1a1a1a]/20")}></div>
-             <p className="font-serif italic opacity-60 text-base">- Penny</p>
-          </div>
+          {/* Bottom section: Quote + Theme Toggle */}
+          <div className="flex flex-col items-center gap-6 pb-4 relative z-10">
+            <div className="text-center space-y-3 max-w-[340px]">
+               <div className={cn("h-1 w-24 mx-auto mb-4 transition-colors duration-500", theme === 'coffee' ? "bg-[#e8e6df]" : "bg-[#1a1a1a]")}></div>
+               <p className="font-['Oswald'] text-lg uppercase tracking-widest font-bold leading-tight">"Rigor without access is gatekeeping. Access without rigor is abandonment. True equity demands both."</p>
+               <p className="font-serif italic opacity-60 text-sm">- Penny</p>
+            </div>
 
-          {/* Theme Toggle */}
-          <div className="absolute bottom-8 left-0 w-full flex justify-center">
+            {/* Theme Toggle */}
             <button 
                 onClick={toggleTheme}
                 className={cn(

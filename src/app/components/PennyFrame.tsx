@@ -17,6 +17,14 @@ export function PennyFrame({ className, size = "md" }: { className?: string, siz
     xl: "p-8 border-[16px]"
   };
 
+  // Explicit dimensions for the frame based on size
+  const frameDimensions = {
+    sm: "w-20 h-24",
+    md: "w-48 h-64",
+    lg: "w-64 h-80",
+    xl: "w-[340px] h-[500px]"
+  };
+
   const innerBorderClasses = {
     sm: "border",
     md: "border-2",
@@ -28,7 +36,8 @@ export function PennyFrame({ className, size = "md" }: { className?: string, siz
     <div className={cn(
         "relative inline-block bg-[#f0f0f0] shadow-2xl", 
         "border-[#1a1a1a]", 
-        sizeClasses[size], 
+        sizeClasses[size],
+        frameDimensions[size], 
         className
     )}>
         {/* Frame Highlight/Bevel Effect (Top/Left light, Bottom/Right dark) */}

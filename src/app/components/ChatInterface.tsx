@@ -17,7 +17,12 @@ interface ChatInterfaceProps {
 
 export function ChatInterface({ messages, onSendMessage, isTyping, theme = 'default', onFinalize, canFinalize = false, onReset }: ChatInterfaceProps) {
   const [input, setInput] = useState('');
+  const [isClient, setIsClient] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -199,7 +204,7 @@ export function ChatInterface({ messages, onSendMessage, isTyping, theme = 'defa
                         ? (theme === 'coffee' ? "border-[#2c241b]/30" : "border-[#e8e6df]/30")
                         : (theme === 'coffee' ? "border-[#e8e6df]/20" : "border-[#1a1a1a]/20")
                 )}>
-                  {new Date(msg.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                  {isClient ? new Date(msg.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : ''}
                 </span>
               </div>
             </motion.div>
