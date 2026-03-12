@@ -153,15 +153,15 @@ function normalizeLessonPlanData(data: Record<string, unknown>): Partial<LessonP
   }
 
   // Teacher Modifications
-  if (Array.isArray(data.teacherModifications || data.teacher_modifications || data.modifications)) {
-    normalized.teacherModifications = (
-      data.teacherModifications || data.teacher_modifications || data.modifications as unknown[]
-    ).map(String);
+  const teacherMods = data.teacherModifications || data.teacher_modifications || data.modifications;
+  if (Array.isArray(teacherMods)) {
+    normalized.teacherModifications = teacherMods.map((m: unknown) => String(m));
   }
 
   // Text Options
-  if (Array.isArray(data.textOptions || data.text_options || data.texts)) {
-    normalized.textOptions = (data.textOptions || data.text_options || data.texts as unknown[]).map((text: unknown) => {
+  const textOpts = data.textOptions || data.text_options || data.texts;
+  if (Array.isArray(textOpts)) {
+    normalized.textOptions = textOpts.map((text: unknown) => {
       const textData = text as Record<string, unknown>;
       return {
         title: String(textData.title || ''),
@@ -290,28 +290,42 @@ export function extractStudentMaterials(response: string): Partial<StudentMateri
  * Used to determine when to show the Finalize button
  */
 export function containsLessonPlanDraft(response: string): boolean {
-  const indicators = [
+  const draftIndicators = [
     /learning\s+objective/i,
-    /success\s+criteria/i,
-    /procedure/i,
-    /lesson\s+tasks?/i,
-    /phase\s+\d/i,
+    /lesson\s+procedure/i,
     /set\s+purpose/i,
-    /modeling/i,
     /guided\s+practice/i,
     /independent\s+practice/i,
-    /closure/i,
     /exit\s+slip/i,
-    /assessment/i,
+    /success\s+criteria/i,
+    /DOK\s+[234]/i,
   ];
+  
+  return draftIndicators.filter(pattern => pattern.test(response)).length >= 3;
+}
 
-  let matchCount = 0;
-  for (const pattern of indicators) {
-    if (pattern.test(response)) {
-      matchCount++;
-    }
-  }
-
-  // If we find at least 3 indicators, consider it a draft
-  return matchCount >= 3;
+/**
+ * Checks if Penny is presenting text options and waiting for selection
+ */
+export function isWaitingForTextSelection(response: string): boolean {
+  const textSelectionIndicators = [
+    /option\s+[123]/i,
+    /which\s+text\s+would\s+you/i,
+    /choose\s+your\s+text/i,
+    /select.*text/i,
+    /📚.*option/i,
+    /text\s+selection/i,
+  ];
+  
+  const waitingIndicators = [
+    /which.*would\s+you\s+(like|prefer)/i,
+    /let\s+me\s+know/i,
+    /what.*choice/i,
+  ];
+  
+  const hasTextOptions = textSelectionIndicators.filter(p => p.test(response)).length >= 2;
+  const isAsking = waitingIndicators.some(p => p.test(response));
+  const hasFullLesson = containsLessonPlanDraft(response);
+  
+  return hasTextOptions && isAsking && !hasFullLesson;
 }

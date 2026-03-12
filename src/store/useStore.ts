@@ -2,6 +2,7 @@ import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 import { Message, LessonPlanData, ConversationPhase, StudentMaterialsData } from '../types';
 import { initialLessonPlan, initialStudentMaterials } from '../data/defaults';
+import { demoLessonPlan, demoMessages } from '../data/demoData';
 
 interface AppState {
   messages: Message[];
@@ -12,6 +13,7 @@ interface AppState {
   hasPlanUpdated: boolean;
   theme: 'default' | 'coffee';
   conversationPhase: ConversationPhase;
+  isDemoMode: boolean;
   
   setMessages: (messages: Message[] | ((prev: Message[]) => Message[])) => void;
   setIsTyping: (isTyping: boolean) => void;
@@ -23,6 +25,7 @@ interface AppState {
   toggleTheme: () => void;
   setConversationPhase: (phase: ConversationPhase) => void;
   resetConversation: () => void;
+  loadDemoMode: () => void;
 }
 
 const initialMessages: Message[] = [
@@ -45,6 +48,7 @@ export const useStore = create<AppState>()(
       hasPlanUpdated: false,
       theme: 'default',
       conversationPhase: 'gathering',
+      isDemoMode: false,
 
       setMessages: (messages) => set((state) => ({ 
         messages: typeof messages === 'function' ? messages(state.messages) : messages 
@@ -68,6 +72,15 @@ export const useStore = create<AppState>()(
         conversationPhase: 'gathering',
         hasPlanUpdated: false,
         isPlanOpen: false,
+        isDemoMode: false,
+      }),
+      loadDemoMode: () => set({
+        messages: demoMessages,
+        lessonPlan: demoLessonPlan,
+        conversationPhase: 'complete',
+        hasPlanUpdated: true,
+        isPlanOpen: true,
+        isDemoMode: true,
       }),
     }),
     {

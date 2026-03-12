@@ -4,7 +4,7 @@ import React, { useRef, useEffect } from 'react';
 import { useReactToPrint } from 'react-to-print';
 import { Toaster, toast } from 'sonner';
 import { motion, AnimatePresence } from 'motion/react';
-import { Printer, BookOpen, PanelRightOpen, X, Moon, Sun, Sparkles, CheckCircle, RotateCcw } from 'lucide-react';
+import { Printer, BookOpen, PanelRightOpen, X, Moon, Sun, Sparkles, CheckCircle, RotateCcw, Play } from 'lucide-react';
 import { ChatInterface } from '@/components/ChatInterface';
 import { LessonPlan } from '@/components/LessonPlan';
 import { PennyFrame } from '@/components/PennyFrame';
@@ -15,8 +15,8 @@ import { extractLessonPlanFromResponse, containsLessonPlanDraft, extractStudentM
 
 export default function HomePage() {
   const { 
-    messages, isTyping, lessonPlan, isPlanOpen, hasPlanUpdated, theme, conversationPhase,
-    setMessages, setIsTyping, setLessonPlan, setIsPlanOpen, setHasPlanUpdated, addMessage, toggleTheme, setConversationPhase, resetConversation
+    messages, isTyping, lessonPlan, isPlanOpen, hasPlanUpdated, theme, conversationPhase, isDemoMode,
+    setMessages, setIsTyping, setLessonPlan, setIsPlanOpen, setHasPlanUpdated, addMessage, toggleTheme, setConversationPhase, resetConversation, loadDemoMode
   } = useStore();
 
   const componentRef = useRef<HTMLDivElement>(null);
@@ -25,7 +25,7 @@ export default function HomePage() {
   const handlePrint = useReactToPrint({
     contentRef: componentRef,
     documentTitle: `Lesson Plan - ${lessonPlan.title || 'Untitled'}`,
-    onBeforeGetContent: () => {
+    onBeforePrint: async () => {
       toast.info("Preparing your lesson plan package...");
     },
     onAfterPrint: () => {
@@ -125,8 +125,7 @@ export default function HomePage() {
         // Also try to extract student materials
         const materials = extractStudentMaterials(fullResponse);
         if (materials) {
-          // Update student materials in store if we add that
-          console.log('Extracted student materials:', materials);
+          // Student materials extracted - could be used for enhanced print package
         }
       } else if (containsLessonPlanDraft(fullResponse) && conversationPhase === 'gathering') {
         // Penny has started drafting but didn't output JSON - move to drafting phase
@@ -224,64 +223,88 @@ Make sure ALL accommodations are embedded within the procedure steps, not just l
 
       {/* LEFT COLUMN: PENNY (Fixed Width) */}
       <div className={cn(
-        "hidden lg:flex flex-col w-[450px] h-full p-8 border-r-4 z-10 relative shadow-2xl items-center justify-center shrink-0 transition-colors duration-500",
+        "hidden lg:flex flex-col w-[450px] h-full p-8 border-r-4 z-10 relative shadow-2xl shrink-0 transition-colors duration-500",
         theme === 'coffee' 
           ? "border-[#e8e6df]/20 bg-[#3e3226]" 
           : "border-[#1a1a1a] bg-[#e6e2d6]"
       )}>
         <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cardboard-flat.png')] opacity-10 pointer-events-none mix-blend-multiply"></div>
         
-        <div className="relative z-10 scale-100 transition-transform duration-500 hover:scale-[1.02]">
-          <PennyFrame size="xl" />
-        </div>
-
-        <div className="mt-12 text-center space-y-4 max-w-[300px] relative">
-          <div className={cn("absolute -top-6 left-1/2 -translate-x-1/2 w-px h-12 transition-colors duration-500", theme === 'coffee' ? "bg-[#e8e6df]/20" : "bg-[#1a1a1a]/20")}></div>
-          <div className={cn("h-1 w-24 mx-auto mb-6 transition-colors duration-500", theme === 'coffee' ? "bg-[#e8e6df]" : "bg-[#1a1a1a]")}></div>
-          <p className="font-['Oswald'] text-2xl uppercase tracking-widest font-bold leading-tight">"Rigor without access is gatekeeping. Access without rigor is abandonment. True equity demands both."</p>
-          <div className={cn("w-12 h-1 mx-auto transition-colors duration-500", theme === 'coffee' ? "bg-[#e8e6df]/20" : "bg-[#1a1a1a]/20")}></div>
-          <p className="font-serif italic opacity-60 text-base">- Penny</p>
-        </div>
-
-        {/* Conversation Phase Indicator */}
-        <div className="absolute bottom-24 left-0 w-full px-8">
-          <div className={cn(
-            "flex items-center justify-between text-xs uppercase tracking-widest font-bold p-3 border-2 transition-colors duration-500",
-            theme === 'coffee' 
-              ? "border-[#e8e6df]/20 bg-[#2c241b]" 
-              : "border-[#1a1a1a]/20 bg-[#dcdcd1]"
-          )}>
-            <span className={cn(conversationPhase === 'gathering' ? "opacity-100" : "opacity-40")}>
-              Gathering
-            </span>
-            <span className="opacity-20">→</span>
-            <span className={cn(conversationPhase === 'drafting' ? "opacity-100" : "opacity-40")}>
-              Drafting
-            </span>
-            <span className="opacity-20">→</span>
-            <span className={cn(conversationPhase === 'complete' ? "opacity-100" : "opacity-40", "flex items-center gap-1")}>
-              {conversationPhase === 'complete' && <CheckCircle size={12} />}
-              Complete
-            </span>
+        {/* Top section with Penny avatar */}
+        <div className="flex-1 flex flex-col items-center justify-center relative z-10">
+          <div className="scale-100 transition-transform duration-500 hover:scale-[1.02]">
+            <PennyFrame size="xl" />
           </div>
         </div>
 
-        {/* Theme Toggle */}
-        <div className="absolute bottom-8 left-0 w-full flex justify-center">
-          <button 
-            onClick={toggleTheme}
-            className={cn(
-              "flex items-center gap-2 px-4 py-2 rounded-full border transition-all duration-300",
+        {/* Bottom section - stacked properly */}
+        <div className="relative z-10 flex flex-col items-center gap-6 pb-4">
+          {/* Quote */}
+          <div className="text-center space-y-3 max-w-[320px]">
+            <div className={cn("h-1 w-24 mx-auto transition-colors duration-500", theme === 'coffee' ? "bg-[#e8e6df]" : "bg-[#1a1a1a]")}></div>
+            <p className="font-['Oswald'] text-lg uppercase tracking-widest font-bold leading-tight">"Rigor without access is gatekeeping. Access without rigor is abandonment. True equity demands both."</p>
+            <p className="font-serif italic opacity-60 text-xs">— Dr. Kristopher J. Childs<br /><span className="text-[10px]">(via Penny Pedagogy)</span></p>
+          </div>
+
+          {/* Conversation Phase Indicator */}
+          <div className="w-full px-4">
+            <div className={cn(
+              "flex items-center justify-between text-[10px] uppercase tracking-widest font-bold p-2.5 border-2 transition-colors duration-500",
               theme === 'coffee' 
-                ? "border-[#e8e6df]/30 text-[#e8e6df]/70 hover:bg-[#e8e6df]/10" 
-                : "border-[#1a1a1a]/30 text-[#1a1a1a]/70 hover:bg-[#1a1a1a]/5"
+                ? "border-[#e8e6df]/20 bg-[#2c241b]" 
+                : "border-[#1a1a1a]/20 bg-[#dcdcd1]"
+            )}>
+              <span className={cn(conversationPhase === 'gathering' ? "opacity-100" : "opacity-40")}>
+                Gathering
+              </span>
+              <span className="opacity-20">→</span>
+              <span className={cn(conversationPhase === 'drafting' ? "opacity-100" : "opacity-40")}>
+                Drafting
+              </span>
+              <span className="opacity-20">→</span>
+              <span className={cn(conversationPhase === 'complete' ? "opacity-100" : "opacity-40", "flex items-center gap-1")}>
+                {conversationPhase === 'complete' && <CheckCircle size={12} />}
+                Complete
+              </span>
+            </div>
+          </div>
+
+          {/* Theme Toggle & Demo Button */}
+          <div className="flex flex-col items-center gap-2">
+            {!isDemoMode && messages.length <= 1 && (
+              <button 
+                onClick={() => {
+                  loadDemoMode();
+                  toast.success("Demo loaded! Check out the lesson plan.");
+                }}
+                className={cn(
+                  "flex items-center gap-2 px-4 py-2 rounded-full border transition-all duration-300 font-bold",
+                  theme === 'coffee' 
+                    ? "border-green-500/50 text-green-400 hover:bg-green-500/20 bg-green-500/10" 
+                    : "border-green-600 text-green-700 hover:bg-green-100 bg-green-50"
+                )}
+              >
+                <Play size={16} />
+                <span className="text-xs uppercase tracking-widest">
+                  View Demo
+                </span>
+              </button>
             )}
-          >
-            {theme === 'coffee' ? <Sun size={16} /> : <Moon size={16} />}
-            <span className="text-xs uppercase tracking-widest font-bold">
-              {theme === 'coffee' ? "Morning Mode" : "Coffee Break"}
-            </span>
-          </button>
+            <button 
+              onClick={toggleTheme}
+              className={cn(
+                "flex items-center gap-2 px-3 py-1.5 rounded-full border transition-all duration-300",
+                theme === 'coffee' 
+                  ? "border-[#e8e6df]/30 text-[#e8e6df]/70 hover:bg-[#e8e6df]/10" 
+                  : "border-[#1a1a1a]/30 text-[#1a1a1a]/70 hover:bg-[#1a1a1a]/5"
+              )}
+            >
+              {theme === 'coffee' ? <Sun size={14} /> : <Moon size={14} />}
+              <span className="text-[10px] uppercase tracking-widest font-bold">
+                {theme === 'coffee' ? "Morning Mode" : "Coffee Break"}
+              </span>
+            </button>
+          </div>
         </div>
       </div>
 
@@ -361,35 +384,36 @@ Make sure ALL accommodations are embedded within the procedure steps, not just l
 
               {/* Drawer Header */}
               <div className={cn(
-                "h-20 border-b-4 flex items-center justify-between px-8 shrink-0 relative z-10 transition-colors duration-500",
+                "min-h-[72px] border-b-4 flex items-center justify-between px-4 md:px-8 shrink-0 relative z-10 transition-colors duration-500",
                 theme === 'coffee' 
                   ? "bg-[#3e3226] border-[#e8e6df]/10 text-[#e8e6df]" 
                   : "bg-[#e6e2d6] border-[#1a1a1a] text-[#1a1a1a]"
               )}>
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-3 md:gap-4">
                   <div className={cn(
-                    "w-10 h-10 flex items-center justify-center shadow-[4px_4px_0px_0px_rgba(0,0,0,0.2)] transition-colors duration-500",
+                    "w-10 h-10 flex items-center justify-center shadow-[4px_4px_0px_0px_rgba(0,0,0,0.2)] transition-colors duration-500 shrink-0",
                     theme === 'coffee' ? "bg-[#e8e6df] text-[#2c241b]" : "bg-[#1a1a1a] text-[#f0ece2]"
                   )}>
                     <BookOpen size={20} />
                   </div>
-                  <div>
-                    <h3 className="font-['Oswald'] uppercase font-bold tracking-widest text-xl">Current Draft</h3>
-                    <p className="text-[10px] font-mono opacity-60 uppercase tracking-widest">Last edited: Just now</p>
+                  <div className="min-w-0">
+                    <h3 className="font-['Oswald'] uppercase font-bold tracking-widest text-lg md:text-xl truncate">Current Draft</h3>
+                    <p className="text-[10px] font-mono opacity-60 uppercase tracking-widest hidden sm:block">Last edited: Just now</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-2 md:gap-4 shrink-0">
                   <button 
                     onClick={() => handlePrint()}
                     className={cn(
-                      "flex items-center gap-2 px-4 py-2 text-xs font-['Oswald'] uppercase tracking-widest transition-all shadow-[4px_4px_0px_0px_rgba(0,0,0,0.2)] active:translate-y-[2px] active:translate-x-[2px] active:shadow-none border border-transparent hover:scale-105",
+                      "flex items-center gap-2 px-3 md:px-4 py-2 text-xs font-['Oswald'] uppercase tracking-widest transition-all shadow-[4px_4px_0px_0px_rgba(0,0,0,0.2)] active:translate-y-[2px] active:translate-x-[2px] active:shadow-none border border-transparent hover:scale-105",
                       theme === 'coffee' 
                         ? "bg-[#e8e6df] text-[#2c241b] hover:bg-[#fff]" 
                         : "bg-[#1a1a1a] text-[#e8e6df] hover:bg-[#333]"
                     )}
                   >
                     <Printer size={16} />
-                    <span>Print Package</span>
+                    <span className="hidden sm:inline">Print Package</span>
+                    <span className="sm:hidden">Print</span>
                   </button>
                   <button 
                     onClick={() => setIsPlanOpen(false)}

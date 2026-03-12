@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { User, Bot, Paperclip, Sparkles, RotateCcw } from 'lucide-react';
+import { User, Bot, Sparkles, RotateCcw } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import { cn } from '../../lib/utils';
 import { Message } from '../../types';
@@ -256,25 +256,19 @@ export function ChatInterface({ messages, onSendMessage, isTyping, theme = 'defa
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              placeholder="Type your message..."
+              onKeyDown={(e) => {
+                if (e.key === 'Escape') {
+                  setInput('');
+                }
+              }}
+              placeholder="Type your message... (Enter to send, Esc to clear)"
               className={cn(
-                  "relative w-full border-2 p-5 pr-14 focus:outline-none font-['DM_Sans'] text-lg shadow-[inset_2px_2px_10px_rgba(0,0,0,0.03)] transition-colors duration-500",
+                  "relative w-full border-2 p-5 pr-5 focus:outline-none font-['DM_Sans'] text-lg shadow-[inset_2px_2px_10px_rgba(0,0,0,0.03)] transition-colors duration-500",
                   theme === 'coffee' 
                     ? "bg-[#3e3226] border-[#e8e6df]/20 text-[#e8e6df] placeholder:text-[#e8e6df]/40" 
                     : "bg-white border-[#1a1a1a] text-[#1a1a1a] placeholder:text-[#1a1a1a]/40"
               )}
             />
-            <button 
-                type="button"
-                className={cn(
-                    "absolute right-4 top-1/2 -translate-y-1/2 transition-colors z-20 hover:scale-110 active:scale-95",
-                    theme === 'coffee' 
-                        ? "text-[#e8e6df]/40 hover:text-[#e8e6df]" 
-                        : "text-[#1a1a1a]/40 hover:text-[#1a1a1a]"
-                )}
-            >
-                <Paperclip size={24} />
-            </button>
           </div>
           <button
             type="submit"

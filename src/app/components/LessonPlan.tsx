@@ -1,8 +1,37 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useMemo } from 'react';
 import { cn } from '../../lib/utils';
 import { LessonPlanData } from '../../types';
-import { ExternalLink, Volume2 } from 'lucide-react';
+import { ExternalLink, Volume2, BookOpen, Target, CheckCircle2 } from 'lucide-react';
 import { QRCodeSVG } from 'qrcode.react';
+
+// Generate a stable reference ID based on lesson content
+function generateStableRefId(title: string, subject: string, gradeLevel: string): string {
+  const input = `${title}-${subject}-${gradeLevel}`.toLowerCase();
+  let hash = 0;
+  for (let i = 0; i < input.length; i++) {
+    const char = input.charCodeAt(i);
+    hash = ((hash << 5) - hash) + char;
+    hash = hash & hash;
+  }
+  return Math.abs(hash).toString(36).toUpperCase().slice(0, 6);
+}
+
+// Extract DOK level from objective text
+function extractDOKLevel(objective: string): number | null {
+  const dokMatch = objective.match(/DOK\s*(\d)/i);
+  if (dokMatch) return parseInt(dokMatch[1]);
+  
+  // Infer DOK from keywords
+  const dok4Keywords = ['design', 'create', 'synthesize', 'apply across', 'connect'];
+  const dok3Keywords = ['analyze', 'explain why', 'compare', 'contrast', 'evaluate', 'justify', 'argue'];
+  const dok2Keywords = ['summarize', 'describe', 'explain', 'interpret', 'classify'];
+  
+  const lowerObj = objective.toLowerCase();
+  if (dok4Keywords.some(k => lowerObj.includes(k))) return 4;
+  if (dok3Keywords.some(k => lowerObj.includes(k))) return 3;
+  if (dok2Keywords.some(k => lowerObj.includes(k))) return 2;
+  return null;
+}
 
 // Helper to format text with proper line breaks for steps, bullets, numbered items
 const FormattedText = ({ text, className = "" }: { text: string; className?: string }) => {
@@ -82,6 +111,32 @@ export const LessonPlan = forwardRef<HTMLDivElement, LessonPlanData>(({
   textOptions,
   teacherModifications,
 }, ref) => {
+  // Generate stable reference ID
+  const refId = useMemo(() => 
+    generateStableRefId(title || '', subject || '', gradeLevel || ''), 
+    [title, subject, gradeLevel]
+  );
+
+  // Extract sentence frames from supports for dynamic display
+  const extractedSentenceFrames = useMemo(() => {
+    const frames: string[] = [];
+    if (supports?.all) {
+      supports.all.forEach(s => {
+        if (s.includes('"') || s.includes('"') || s.includes('___')) {
+          frames.push(s);
+        }
+      });
+    }
+    if (supports?.el) {
+      supports.el.forEach(s => {
+        if (s.includes('"') || s.includes('"') || s.includes('___')) {
+          frames.push(s);
+        }
+      });
+    }
+    return frames;
+  }, [supports]);
+
   return (
     <div ref={ref} className="bg-[#f0ece2] text-[#1a1a1a] p-12 min-h-screen font-['DM_Sans'] relative overflow-hidden print:p-8 print:shadow-none print:bg-white print:text-black">
       {/* Background Texture for Screen View */}
@@ -126,7 +181,7 @@ export const LessonPlan = forwardRef<HTMLDivElement, LessonPlanData>(({
           </div>
           <div className="text-right hidden sm:block">
               <div className="text-xs font-mono border border-[#1a1a1a] p-2 inline-block print:border-black">
-                  REF: {Math.random().toString(36).substring(7).toUpperCase()}
+                  REF: {refId || 'DRAFT'}
               </div>
           </div>
         </div>
@@ -144,11 +199,33 @@ export const LessonPlan = forwardRef<HTMLDivElement, LessonPlanData>(({
         {/* Left Column: Objectives & Materials */}
         <div className="md:col-span-1 space-y-8 print:mb-8">
             <section className="print:mb-6">
-                <h3 className="font-['Oswald'] text-xl font-bold uppercase border-b-2 border-[#1a1a1a] mb-4 pb-1 print:font-mono print:text-lg print:border-black">Objectives</h3>
-                <ul className="list-disc pl-5 space-y-2 text-sm leading-relaxed print:text-xs">
-                    {objectives.map((obj, i) => (
-                        <li key={i}>{obj}</li>
-                    ))}
+                <h3 className="font-['Oswald'] text-xl font-bold uppercase border-b-2 border-[#1a1a1a] mb-4 pb-1 print:font-mono print:text-lg print:border-black flex items-center gap-2">
+                  <Target size={18} className="print:hidden" />
+                  Objectives
+                </h3>
+                <ul className="space-y-3 text-sm leading-relaxed print:text-xs">
+                    {objectives.map((obj, i) => {
+                        const dokLevel = extractDOKLevel(obj);
+                        return (
+                          <li key={i} className="flex items-start gap-2">
+                            <CheckCircle2 size={16} className="text-green-600 mt-0.5 flex-shrink-0 print:hidden" />
+                            <div className="flex-1">
+                              <span>{obj}</span>
+                              {dokLevel && (
+                                <span className={cn(
+                                  "ml-2 text-[10px] font-bold uppercase px-1.5 py-0.5 rounded print:border print:border-black",
+                                  dokLevel === 4 ? "bg-purple-100 text-purple-800 print:bg-white" :
+                                  dokLevel === 3 ? "bg-blue-100 text-blue-800 print:bg-white" :
+                                  dokLevel === 2 ? "bg-green-100 text-green-800 print:bg-white" :
+                                  "bg-gray-100 text-gray-800 print:bg-white"
+                                )}>
+                                  DOK {dokLevel}
+                                </span>
+                              )}
+                            </div>
+                          </li>
+                        );
+                    })}
                 </ul>
             </section>
 
@@ -414,22 +491,33 @@ export const LessonPlan = forwardRef<HTMLDivElement, LessonPlanData>(({
                       <p className="text-center text-sm mb-8 italic opacity-70">Use these frames to help structure your responses</p>
                       
                       <div className="space-y-6">
-                          <div className="p-4 bg-[#f5f5f0] border-l-4 border-[#1a1a1a] print:bg-white">
-                              <p className="font-medium text-sm mb-2">To introduce your claim:</p>
-                              <p className="text-sm italic">"Based on the text, I believe that _______________."</p>
-                          </div>
-                          <div className="p-4 bg-[#f5f5f0] border-l-4 border-[#1a1a1a] print:bg-white">
-                              <p className="font-medium text-sm mb-2">To provide evidence:</p>
-                              <p className="text-sm italic">"The author states, '_______________,' which shows that _______________."</p>
-                          </div>
-                          <div className="p-4 bg-[#f5f5f0] border-l-4 border-[#1a1a1a] print:bg-white">
-                              <p className="font-medium text-sm mb-2">To explain your reasoning:</p>
-                              <p className="text-sm italic">"This evidence supports my claim because _______________."</p>
-                          </div>
-                          <div className="p-4 bg-[#f5f5f0] border-l-4 border-[#1a1a1a] print:bg-white">
-                              <p className="font-medium text-sm mb-2">To make a connection:</p>
-                              <p className="text-sm italic">"This reminds me of _______________ because _______________."</p>
-                          </div>
+                          {/* Dynamic frames from lesson supports */}
+                          {extractedSentenceFrames.length > 0 ? (
+                            extractedSentenceFrames.map((frame, i) => (
+                              <div key={i} className="p-4 bg-[#f5f5f0] border-l-4 border-[#1a1a1a] print:bg-white">
+                                <p className="text-sm italic">{frame}</p>
+                              </div>
+                            ))
+                          ) : (
+                            <>
+                              <div className="p-4 bg-[#f5f5f0] border-l-4 border-[#1a1a1a] print:bg-white">
+                                  <p className="font-medium text-sm mb-2">To introduce your claim:</p>
+                                  <p className="text-sm italic">"Based on the text, I believe that _______________."</p>
+                              </div>
+                              <div className="p-4 bg-[#f5f5f0] border-l-4 border-[#1a1a1a] print:bg-white">
+                                  <p className="font-medium text-sm mb-2">To provide evidence:</p>
+                                  <p className="text-sm italic">"The author states, '_______________,' which shows that _______________."</p>
+                              </div>
+                              <div className="p-4 bg-[#f5f5f0] border-l-4 border-[#1a1a1a] print:bg-white">
+                                  <p className="font-medium text-sm mb-2">To explain your reasoning:</p>
+                                  <p className="text-sm italic">"This evidence supports my claim because _______________."</p>
+                              </div>
+                              <div className="p-4 bg-[#f5f5f0] border-l-4 border-[#1a1a1a] print:bg-white">
+                                  <p className="font-medium text-sm mb-2">To make a connection:</p>
+                                  <p className="text-sm italic">"This reminds me of _______________ because _______________."</p>
+                              </div>
+                            </>
+                          )}
                       </div>
                   </div>
               </div>
@@ -444,24 +532,42 @@ export const LessonPlan = forwardRef<HTMLDivElement, LessonPlanData>(({
                       </div>
                       <p className="text-center text-sm mb-8 italic opacity-70">Scan QR codes with your phone or click links to access texts and audio versions</p>
                       
+                      {/* Audio Access Note */}
+                      <div className="mb-6 p-3 bg-blue-50 border border-blue-200 rounded flex items-start gap-3 print:bg-white print:border-black">
+                        <Volume2 size={20} className="text-blue-600 flex-shrink-0 mt-0.5" />
+                        <div className="text-xs">
+                          <p className="font-bold text-blue-800 mb-1">🔊 Audio Versions Available</p>
+                          <p className="text-blue-700">Most text sources include built-in audio read-aloud. Look for the speaker icon on the source website, or use your browser's "Read Aloud" feature.</p>
+                        </div>
+                      </div>
+                      
                       <div className="space-y-6">
                         {textOptions.map((text, i) => (
                           <div key={i} className="p-4 border border-[#1a1a1a] print:border-black flex gap-4">
                             <div className="flex-1">
-                              <h5 className="font-bold text-base mb-1">{text.title}</h5>
+                              <div className="flex items-center gap-2 mb-1">
+                                <BookOpen size={16} className="text-[#1a1a1a] opacity-60" />
+                                <h5 className="font-bold text-base">{text.title}</h5>
+                              </div>
                               <p className="text-xs opacity-70 mb-2">{text.source} {text.lexile && `• Lexile: ${text.lexile}`}</p>
                               {text.url && (
-                                <div className="flex items-center gap-2 mb-2">
-                                  <ExternalLink size={14} className="text-blue-600 flex-shrink-0" />
-                                  <a 
-                                    href={text.url} 
-                                    target="_blank" 
-                                    rel="noopener noreferrer"
-                                    className="text-xs text-blue-600 underline hover:text-blue-800 break-all cursor-pointer"
-                                    onClick={(e) => e.stopPropagation()}
-                                  >
-                                    {text.url}
-                                  </a>
+                                <div className="space-y-1">
+                                  <div className="flex items-center gap-2">
+                                    <ExternalLink size={14} className="text-blue-600 flex-shrink-0" />
+                                    <a 
+                                      href={text.url} 
+                                      target="_blank" 
+                                      rel="noopener noreferrer"
+                                      className="text-xs text-blue-600 underline hover:text-blue-800 break-all cursor-pointer"
+                                      onClick={(e) => e.stopPropagation()}
+                                    >
+                                      {text.url}
+                                    </a>
+                                  </div>
+                                  <div className="flex items-center gap-2">
+                                    <Volume2 size={14} className="text-green-600 flex-shrink-0" />
+                                    <span className="text-xs text-green-700">Audio available on source site</span>
+                                  </div>
                                 </div>
                               )}
                               {text.rationale && (
@@ -568,10 +674,10 @@ export const LessonPlan = forwardRef<HTMLDivElement, LessonPlanData>(({
         </div>
       </div>
 
-      {/* Footer - appears on each page when printed */}
-      <footer className="mt-16 pt-6 border-t border-[#1a1a1a] flex justify-between items-center text-xs opacity-60 uppercase tracking-widest print:border-black print:font-mono print:fixed print:bottom-4 print:left-8 print:right-8">
+      {/* Footer - appears at end of document */}
+      <footer className="mt-16 pt-6 border-t border-[#1a1a1a] flex justify-between items-center text-xs opacity-60 uppercase tracking-widest print:border-black print:font-mono print:mt-8 print:pt-4">
         <span>Generated by Penny Pedagogy</span>
-        <span>{new Date().toLocaleDateString()}</span>
+        <span>REF: {refId || 'DRAFT'} • {new Date().toLocaleDateString()}</span>
       </footer>
     </div>
   );
