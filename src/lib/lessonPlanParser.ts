@@ -183,50 +183,156 @@ function normalizeLessonPlanData(data: Record<string, unknown>): Partial<LessonP
 function extractFromMarkdown(response: string): Partial<LessonPlanData> | null {
   const result: Partial<LessonPlanData> = {};
   
-  // Extract title from first heading
-  const titleMatch = response.match(/^#\s+(.+)$/m) || response.match(/\*\*Title[:\s]*\*\*\s*(.+)/i);
-  if (titleMatch) {
-    result.title = titleMatch[1].trim();
+  // Extract title - multiple patterns
+  const titlePatterns = [
+    /^#\s+(.+)$/m,
+    /\*\*Title[:\s]*\*\*\s*(.+)/i,
+    /\*\*Lesson[:\s]*\*\*\s*(.+)/i,
+    /^##\s+(.+)$/m,
+    /Lesson\s+Plan[:\s]+(.+)/i,
+    /\*\*(.+?)\*\*\s*\n.*(?:Grade|Subject|Duration)/i,
+  ];
+  for (const pattern of titlePatterns) {
+    const match = response.match(pattern);
+    if (match && match[1] && match[1].length > 5 && match[1].length < 200) {
+      result.title = match[1].trim().replace(/\*\*/g, '');
+      break;
+    }
   }
 
-  // Extract grade level
-  const gradeMatch = response.match(/(?:Grade|Level)[:\s]*([^\n,]+)/i);
-  if (gradeMatch) {
-    result.gradeLevel = gradeMatch[1].trim();
+  // Extract grade level - multiple patterns
+  const gradePatterns = [
+    /(?:Grade|Level)[:\s]*([^\n,•*]+)/i,
+    /(\d+(?:th|st|nd|rd)\s+Grade)/i,
+    /Grade\s+(\d+)/i,
+    /(\d+(?:th|st|nd|rd)[-\s]?\d*(?:th|st|nd|rd)?)\s*(?:Grade)?/i,
+  ];
+  for (const pattern of gradePatterns) {
+    const match = response.match(pattern);
+    if (match && match[1]) {
+      result.gradeLevel = match[1].trim();
+      break;
+    }
   }
 
-  // Extract subject
-  const subjectMatch = response.match(/(?:Subject|Content Area)[:\s]*([^\n,]+)/i);
-  if (subjectMatch) {
-    result.subject = subjectMatch[1].trim();
+  // Extract subject - multiple patterns
+  const subjectPatterns = [
+    /(?:Subject|Content\s+Area|Course)[:\s]*([^\n,•*]+)/i,
+    /(?:ELA|English|Math|Science|History|Social\s+Studies)/i,
+  ];
+  for (const pattern of subjectPatterns) {
+    const match = response.match(pattern);
+    if (match) {
+      result.subject = (match[1] || match[0]).trim();
+      break;
+    }
   }
 
-  // Extract duration
-  const durationMatch = response.match(/(?:Duration|Time|Length)[:\s]*([^\n,]+)/i);
-  if (durationMatch) {
-    result.duration = durationMatch[1].trim();
+  // Extract duration - multiple patterns
+  const durationPatterns = [
+    /(?:Duration|Time|Length|Period)[:\s]*([^\n,•*]+)/i,
+    /(\d+[-\s]?\d*\s*(?:minutes?|mins?|hours?|hrs?|period))/i,
+    /(Block\s+Period)/i,
+  ];
+  for (const pattern of durationPatterns) {
+    const match = response.match(pattern);
+    if (match) {
+      result.duration = (match[1] || match[0]).trim();
+      break;
+    }
   }
 
-  // Extract objectives from bullet points after "Objectives" or "Learning Objective"
-  const objectivesSection = response.match(/(?:Learning\s+)?Objectives?[:\s]*\n((?:[-•*]\s*.+\n?)+)/i);
-  if (objectivesSection) {
-    result.objectives = objectivesSection[1]
-      .split('\n')
-      .map(line => line.replace(/^[-•*]\s*/, '').trim())
-      .filter(Boolean);
+  // Extract standard
+  const standardPatterns = [
+    /(?:Standard|CCSS|NGSS)[:\s]*([^\n]+)/i,
+    /(CCSS\.[A-Z\-\.0-9]+)/i,
+  ];
+  for (const pattern of standardPatterns) {
+    const match = response.match(pattern);
+    if (match) {
+      result.standard = (match[1] || match[0]).trim();
+      break;
+    }
+  }
+
+  // Extract objectives - more flexible patterns
+  const objectivePatterns = [
+    /(?:Learning\s+)?Objectives?[:\s]*\n((?:[-•*\d.]\s*.+\n?)+)/i,
+    /(?:Learning\s+)?Objectives?[:\s]*\n?((?:\*\*.+\*\*\n?)+)/i,
+    /Students?\s+will\s+(?:be\s+able\s+to\s+)?(.+?)(?:\n|$)/gi,
+    /SWBAT\s+(.+?)(?:\n|$)/gi,
+  ];
+  
+  for (const pattern of objectivePatterns) {
+    const match = response.match(pattern);
+    if (match && match[1]) {
+      const objectives = match[1]
+        .split('\n')
+        .map(line => line.replace(/^[-•*\d.]\s*/, '').replace(/\*\*/g, '').trim())
+        .filter(line => line.length > 10);
+      if (objectives.length > 0) {
+        result.objectives = objectives;
+        break;
+      }
+    }
   }
 
   // Extract materials
-  const materialsSection = response.match(/Materials?[:\s]*\n((?:[-•*]\s*.+\n?)+)/i);
-  if (materialsSection) {
-    result.materials = materialsSection[1]
-      .split('\n')
-      .map(line => line.replace(/^[-•*]\s*/, '').trim())
-      .filter(Boolean);
+  const materialsPatterns = [
+    /Materials?[:\s]*\n((?:[-•*\d.]\s*.+\n?)+)/i,
+    /(?:You(?:'ll)?\s+need|Required)[:\s]*\n((?:[-•*\d.]\s*.+\n?)+)/i,
+  ];
+  for (const pattern of materialsPatterns) {
+    const match = response.match(pattern);
+    if (match && match[1]) {
+      result.materials = match[1]
+        .split('\n')
+        .map(line => line.replace(/^[-•*\d.]\s*/, '').trim())
+        .filter(Boolean);
+      break;
+    }
   }
 
-  // Only return if we found meaningful data
-  if (Object.keys(result).length > 2) {
+  // Extract procedure/phases
+  const phaseNames = ['Set Purpose', 'Modeling', 'Guided Practice', 'Independent Practice', 'Closure'];
+  const procedure: { step: string; description: string }[] = [];
+  
+  for (const phase of phaseNames) {
+    const phasePattern = new RegExp(`(?:\\*\\*)?${phase}(?:\\*\\*)?[:\\s]*(?:\\(\\d+\\s*min(?:utes?)?\\))?[:\\s]*([^]*?)(?=(?:\\*\\*)?(?:${phaseNames.join('|')})|$)`, 'i');
+    const match = response.match(phasePattern);
+    if (match && match[1] && match[1].trim().length > 20) {
+      procedure.push({
+        step: phase,
+        description: match[1].trim().substring(0, 1000),
+      });
+    }
+  }
+  
+  if (procedure.length > 0) {
+    result.procedure = procedure;
+  }
+
+  // Extract assessment
+  const assessmentPatterns = [
+    /Assessment[:\s]*\n?([^]*?)(?=\n(?:##|\*\*(?:Exit|Rubric|Support)))/i,
+    /Assessment[:\s]*([^\n]+)/i,
+  ];
+  for (const pattern of assessmentPatterns) {
+    const match = response.match(pattern);
+    if (match && match[1] && match[1].trim().length > 10) {
+      result.assessment = match[1].trim().substring(0, 500);
+      break;
+    }
+  }
+
+  // Extract exit slip
+  const exitSlipMatch = response.match(/Exit\s+Slip[:\s]*\n?([^]*?)(?=\n(?:##|\*\*Rubric))/i);
+  if (exitSlipMatch && exitSlipMatch[1]) {
+    result.exitSlip = exitSlipMatch[1].trim().substring(0, 300);
+  }
+
+  // Return if we found at least a title or objectives (more lenient)
+  if (result.title || (result.objectives && result.objectives.length > 0) || result.procedure) {
     return result;
   }
 
