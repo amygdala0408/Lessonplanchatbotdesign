@@ -1,6 +1,45 @@
 import { LessonPlanData, StudentMaterialsData } from '../types';
 
 /**
+ * Cleans up extracted text - removes markdown formatting and validates content
+ */
+function cleanExtractedText(text: string | undefined, maxLength: number = 100): string {
+  if (!text) return '';
+  
+  let cleaned = text
+    .replace(/\*\*/g, '')           // Remove bold markers
+    .replace(/\*/g, '')             // Remove italic markers
+    .replace(/`/g, '')              // Remove code markers
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1') // Convert links to text
+    .replace(/^#+\s*/g, '')         // Remove heading markers
+    .replace(/\s+/g, ' ')           // Normalize whitespace
+    .trim();
+  
+  // Truncate if too long
+  if (cleaned.length > maxLength) {
+    cleaned = cleaned.substring(0, maxLength).trim();
+  }
+  
+  return cleaned;
+}
+
+/**
+ * Validates that a field looks like valid content (not garbage)
+ */
+function isValidField(text: string | undefined, minLength: number = 2): boolean {
+  if (!text) return false;
+  const cleaned = cleanExtractedText(text);
+  
+  // Reject if too short, too long, or contains suspicious patterns
+  if (cleaned.length < minLength || cleaned.length > 150) return false;
+  if (/^[\*\#\-\•\s]+$/.test(cleaned)) return false; // Only formatting chars
+  if (/^\d+$/.test(cleaned)) return false; // Only numbers
+  if (cleaned.split(' ').length > 20) return false; // Too many words for a field
+  
+  return true;
+}
+
+/**
  * Extracts structured lesson plan JSON from Penny's response
  * Looks for JSON between [LESSON_PLAN_JSON] tags or attempts to parse markdown structure
  */
@@ -202,43 +241,55 @@ function extractFromMarkdown(response: string): Partial<LessonPlanData> | null {
 
   // Extract grade level - multiple patterns
   const gradePatterns = [
-    /(?:Grade|Level)[:\s]*([^\n,•*]+)/i,
+    /(?:Grade\s*Level|Grade)[:\s]*(\d+(?:th|st|nd|rd)?(?:\s*-\s*\d+(?:th|st|nd|rd)?)?)/i,
     /(\d+(?:th|st|nd|rd)\s+Grade)/i,
-    /Grade\s+(\d+)/i,
-    /(\d+(?:th|st|nd|rd)[-\s]?\d*(?:th|st|nd|rd)?)\s*(?:Grade)?/i,
+    /Grades?\s+(\d+(?:\s*-\s*\d+)?)/i,
   ];
   for (const pattern of gradePatterns) {
     const match = response.match(pattern);
     if (match && match[1]) {
-      result.gradeLevel = match[1].trim();
-      break;
+      const cleaned = cleanExtractedText(match[1], 30);
+      if (isValidField(cleaned) && /\d/.test(cleaned)) {
+        result.gradeLevel = cleaned;
+        break;
+      }
     }
   }
 
-  // Extract subject - multiple patterns
-  const subjectPatterns = [
-    /(?:Subject|Content\s+Area|Course)[:\s]*([^\n,•*]+)/i,
-    /(?:ELA|English|Math|Science|History|Social\s+Studies)/i,
-  ];
-  for (const pattern of subjectPatterns) {
-    const match = response.match(pattern);
-    if (match) {
-      result.subject = (match[1] || match[0]).trim();
+  // Extract subject - look for known subjects
+  const knownSubjects = ['ELA', 'English Language Arts', 'English', 'Math', 'Mathematics', 'Science', 'Biology', 'Chemistry', 'Physics', 'History', 'Social Studies', 'Geography', 'Government', 'Economics', 'Art', 'Music', 'PE', 'Health'];
+  for (const subj of knownSubjects) {
+    if (response.toLowerCase().includes(subj.toLowerCase())) {
+      result.subject = subj;
       break;
     }
   }
+  // Fallback to pattern matching if no known subject found
+  if (!result.subject) {
+    const subjectMatch = response.match(/(?:Subject|Content\s+Area|Course)[:\s]*([A-Za-z\s]+?)(?:\n|,|\|)/i);
+    if (subjectMatch && subjectMatch[1]) {
+      const cleaned = cleanExtractedText(subjectMatch[1], 50);
+      if (isValidField(cleaned, 3) && cleaned.length < 50) {
+        result.subject = cleaned;
+      }
+    }
+  }
 
-  // Extract duration - multiple patterns
+  // Extract duration - look for time patterns
   const durationPatterns = [
-    /(?:Duration|Time|Length|Period)[:\s]*([^\n,•*]+)/i,
-    /(\d+[-\s]?\d*\s*(?:minutes?|mins?|hours?|hrs?|period))/i,
-    /(Block\s+Period)/i,
+    /(\d+[-–]\d+\s*(?:minutes?|mins?))/i,
+    /(\d+\s*(?:minutes?|mins?|hours?|hrs?))/i,
+    /((?:Single|Double|Block)\s*Period)/i,
+    /Duration[:\s]*(\d+\s*min)/i,
   ];
   for (const pattern of durationPatterns) {
     const match = response.match(pattern);
-    if (match) {
-      result.duration = (match[1] || match[0]).trim();
-      break;
+    if (match && match[1]) {
+      const cleaned = cleanExtractedText(match[1], 30);
+      if (cleaned.length > 2 && cleaned.length < 40) {
+        result.duration = cleaned;
+        break;
+      }
     }
   }
 
