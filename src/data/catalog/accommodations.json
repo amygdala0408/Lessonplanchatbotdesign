@@ -1,0 +1,5729 @@
+[
+  {
+    "id": "activity_preview_routine",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "presentation",
+    "phaseScope": [
+      "launch"
+    ],
+    "slotTargets": [
+      "support_sidebar"
+    ],
+    "defaultParameters": {
+      "preview_minutes": 2,
+      "preview_elements": [
+        "topic",
+        "format",
+        "duration"
+      ]
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "anxiety_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "anxiety_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"anxiety_support\" OR plan_504==yes AND needs_tags contains \"anxiety_support\"",
+    "teacherPrompt": "At lesson start, provide a brief (2-minute) preview of what will happen: topic, activity format, and approximate duration. Use calm, matter-of-fact tone.",
+    "studentMicrocopy": "At the start of each lesson,  you'll hear a quick preview of what we'll be doing today.",
+    "udlHlpTags": [
+      "UDL 7.2",
+      "HLP7"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "alternate_response_oral_scribed",
+    "labels": [
+      "All"
+    ],
+    "mode": "interaction",
+    "phaseScope": [
+      "guided_practice",
+      "independent_practice",
+      "exit_slip"
+    ],
+    "slotTargets": [
+      "alt_response_box"
+    ],
+    "defaultParameters": {
+      "modes": [
+        "oral",
+        "scribed",
+        "typed"
+      ]
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes OR plan_504==yes",
+    "teacherPrompt": "Allow alternative response: student can answer orally, with a scribe, or typed.",
+    "studentMicrocopy": "You may respond orally, have a teacher write for you, or type your answer.",
+    "udlHlpTags": [
+      "UDL 5.1",
+      "HLP19"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "assignment_preview_day_before",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "presentation",
+    "phaseScope": [
+      "launch"
+    ],
+    "slotTargets": [
+      "support_sidebar"
+    ],
+    "defaultParameters": {
+      "preview_timing": "day_before",
+      "preview_method": "written_or_verbal"
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "anxiety_support"
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "organization_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "anxiety_support"
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "organization_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"anxiety_support\" AND needs_tags contains \"organization_support\" OR plan_504==yes AND needs_tags contains \"anxiety_support\" AND needs_tags contains \"organization_support\"",
+    "teacherPrompt": "When possible, provide this student with a preview of the next day's main activity or assessment the day before. This can be verbal or written.",
+    "studentMicrocopy": "When there's a big activity coming,  you'll get a heads-up the day before so you can prepare.",
+    "udlHlpTags": [
+      "UDL 7.2",
+      "HLP15"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "attention_refocus_cue",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "interaction",
+    "phaseScope": [
+      "model",
+      "guided_practice"
+    ],
+    "slotTargets": [
+      "support_sidebar"
+    ],
+    "defaultParameters": {
+      "cue_type": "nonverbal",
+      "proximity": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "attention_cues"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "attention_cues"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"attention_cues\" OR plan_504==yes AND needs_tags contains \"attention_cues\"",
+    "teacherPrompt": "Establish a private, non-verbal cue (tap on desk, specific hand signal) to redirect attention without drawing peer attention. Use proximity before verbal redirection.",
+    "studentMicrocopy": "Your teacher has a private signal to help you refocus without interrupting the class.",
+    "udlHlpTags": [
+      "UDL 7.3",
+      "HLP7"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "bilingual_glossary_es",
+    "labels": [
+      "EL"
+    ],
+    "mode": "presentation",
+    "phaseScope": [
+      "guided_practice"
+    ],
+    "slotTargets": [
+      "glossary_box"
+    ],
+    "defaultParameters": {
+      "language": "es",
+      "terms": 12
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "ml_level_lte",
+          "value": 3
+        }
+      ],
+      [
+        {
+          "kind": "needs_tag",
+          "tag": "language_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "ml_level <= 3 OR needs_tags contains \"language_support\"",
+    "teacherPrompt": "Provide a Spanish bilingual glossary for key lesson terms.",
+    "studentMicrocopy": "Use the Spanish glossary to check unfamiliar words during the lesson.",
+    "udlHlpTags": [
+      "UDL 2.1",
+      "HLP14"
+    ],
+    "elOnly": true,
+    "languageSupportType": "bilingual_glossary"
+  },
+  {
+    "id": "calculator_allowed_lane",
+    "labels": [
+      "504"
+    ],
+    "mode": "assessment",
+    "phaseScope": [
+      "guided_practice",
+      "assessment_only"
+    ],
+    "slotTargets": [
+      "calculator_icons"
+    ],
+    "defaultParameters": {
+      "enabled": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "math_calculation_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "math_calculation_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"math_calculation_support\" OR plan_504==yes AND needs_tags contains \"math_calculation_support\"",
+    "teacherPrompt": "Permit calculator use on ★ marked math items (if applicable).",
+    "studentMicrocopy": "Use a calculator on the ★ marked items to help with calculations.",
+    "udlHlpTags": [
+      "UDL 5.2",
+      "HLP14"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "calm_down_break_pass",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "timing",
+    "phaseScope": "all",
+    "slotTargets": [
+      "environment_box"
+    ],
+    "defaultParameters": {
+      "break_duration_max_min": 5,
+      "designated_space": true,
+      "pass_required": false
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "anxiety_support"
+        }
+      ],
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "sensory_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "anxiety_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "sensory_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"anxiety_support\" OR iep==yes AND needs_tags contains \"sensory_support\" OR plan_504==yes AND needs_tags contains \"anxiety_support\" OR plan_504==yes AND needs_tags contains \"sensory_support\"",
+    "teacherPrompt": "Allow student to take a brief self-regulation break (up to 5 minutes) in a designated calm space without needing to ask permission. Establish a discreet exit signal.",
+    "studentMicrocopy": "You can take a short break in the calm space when you need to reset. Use our agreed-upon signal.",
+    "udlHlpTags": [
+      "UDL 9.2",
+      "HLP7"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "captions_required",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "presentation",
+    "phaseScope": [
+      "model"
+    ],
+    "slotTargets": [
+      "captions"
+    ],
+    "defaultParameters": {
+      "captions": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "hearing_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "hearing_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"hearing_support\" OR plan_504==yes AND needs_tags contains \"hearing_support\"",
+    "teacherPrompt": "Ensure captions are turned on for videos/lecture segments.",
+    "studentMicrocopy": "Captions are available for all media in this lesson.",
+    "udlHlpTags": [
+      "UDL 1.2",
+      "HLP15"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "checklist_multi_step_writing",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "interaction",
+    "phaseScope": [
+      "guided_practice",
+      "independent_practice"
+    ],
+    "slotTargets": [
+      "direction_steps"
+    ],
+    "defaultParameters": {
+      "checklist_format": true,
+      "steps": 4,
+      "checkbox_enabled": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "fine_motor_support"
+        }
+      ],
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "organization_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "fine_motor_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "organization_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"fine_motor_support\" OR iep==yes AND needs_tags contains \"organization_support\" OR plan_504==yes AND needs_tags contains \"fine_motor_support\" OR plan_504==yes AND needs_tags contains \"organization_support\"",
+    "teacherPrompt": "Provide step-by-step checklist for writing assignments. Student checks off each step as completed to track progress.",
+    "studentMicrocopy": "Follow the checklist and check off each step as you finish. This helps you stay on track.",
+    "udlHlpTags": [
+      "UDL 6.2",
+      "UDL 6.3",
+      "HLP16"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "chunked_directions_steps",
+    "labels": [
+      "All"
+    ],
+    "mode": "interaction",
+    "phaseScope": [
+      "launch",
+      "model",
+      "guided_practice"
+    ],
+    "slotTargets": [
+      "direction_steps"
+    ],
+    "defaultParameters": {
+      "steps": 3
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "attention_cues"
+        }
+      ],
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "organization_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "attention_cues"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "organization_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"attention_cues\" OR iep==yes AND needs_tags contains \"organization_support\" OR plan_504==yes AND needs_tags contains \"attention_cues\" OR plan_504==yes AND needs_tags contains \"organization_support\"",
+    "teacherPrompt": "Present multi-step directions in 3 clear steps, confirming after each.",
+    "studentMicrocopy": "Follow the 3-step checklist for directions.",
+    "udlHlpTags": [
+      "UDL 6.2",
+      "HLP16"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "chunked_task_checklist",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "interaction",
+    "phaseScope": [
+      "independent_practice"
+    ],
+    "slotTargets": [
+      "direction_steps"
+    ],
+    "defaultParameters": {
+      "max_chunks": 3,
+      "checkbox_format": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "attention_cues"
+        }
+      ],
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "attn_chunk_minutes_lte",
+          "value": 10
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "attention_cues"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "attn_chunk_minutes_lte",
+          "value": 10
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"attention_cues\" OR iep==yes AND attn_chunk_minutes <= 10 OR plan_504==yes AND needs_tags contains \"attention_cues\" OR plan_504==yes AND attn_chunk_minutes <= 10",
+    "teacherPrompt": "Break multi-step tasks into a maximum of 3 chunks with checkboxes. Student checks off each chunk before moving to the next.",
+    "studentMicrocopy": "Your task is broken into smaller steps with checkboxes so you can track your progress.",
+    "udlHlpTags": [
+      "UDL 6.2",
+      "HLP16"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "closed_captioning_multimedia",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "presentation",
+    "phaseScope": [
+      "model"
+    ],
+    "slotTargets": [
+      "presentation_mode"
+    ],
+    "defaultParameters": {
+      "captions": true,
+      "speaker_labels": true,
+      "audio_descriptions": false
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "hearing_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "hearing_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"hearing_support\" OR plan_504==yes AND needs_tags contains \"hearing_support\"",
+    "teacherPrompt": "Enable closed captioning with speaker labels on all videos and multimedia. Verify captions are accurate and synchronized.",
+    "studentMicrocopy": "Captions will show what is being said in videos so you can read along.",
+    "udlHlpTags": [
+      "UDL 1.2",
+      "HLP15"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "color_overlay_reading",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "presentation",
+    "phaseScope": [
+      "model",
+      "guided_practice",
+      "independent_practice"
+    ],
+    "slotTargets": [
+      "materials_list"
+    ],
+    "defaultParameters": {
+      "color_overlay": true,
+      "overlay_colors": [
+        "yellow",
+        "blue",
+        "green"
+      ],
+      "student_choice": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "decoding_support"
+        }
+      ],
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "sensory_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "decoding_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "sensory_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"decoding_support\" OR iep==yes AND needs_tags contains \"sensory_support\" OR plan_504==yes AND needs_tags contains \"decoding_support\" OR plan_504==yes AND needs_tags contains \"sensory_support\"",
+    "teacherPrompt": "Provide color overlay options (yellow, blue, green) for reading materials. Allow student to select preferred color.",
+    "studentMicrocopy": "Choose a color overlay to place over your reading if it helps you see the words better.",
+    "udlHlpTags": [
+      "UDL 1.3",
+      "HLP13"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "direction_repetition_protocol",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "presentation",
+    "phaseScope": [
+      "launch",
+      "model",
+      "guided_practice"
+    ],
+    "slotTargets": [
+      "direction_steps"
+    ],
+    "defaultParameters": {
+      "repetition_count": 2,
+      "rephrase": true,
+      "check_understanding": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "hearing_support"
+        }
+      ],
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "attention_cues"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "hearing_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "attention_cues"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"hearing_support\" OR iep==yes AND needs_tags contains \"attention_cues\" OR plan_504==yes AND needs_tags contains \"hearing_support\" OR plan_504==yes AND needs_tags contains \"attention_cues\"",
+    "teacherPrompt": "Repeat key directions at least twice using different wording. Check for understanding before students begin work.",
+    "studentMicrocopy": "Important directions will be repeated so you can hear them more than once.",
+    "udlHlpTags": [
+      "UDL 1.2",
+      "UDL 3.3",
+      "HLP15",
+      "HLP16"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "dyslexia_friendly_font",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "presentation",
+    "phaseScope": "all",
+    "slotTargets": [
+      "presentation_mode"
+    ],
+    "defaultParameters": {
+      "font": "OpenDyslexic",
+      "font_size": 14,
+      "letter_spacing": 1.2
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "decoding_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "decoding_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"decoding_support\" OR plan_504==yes AND needs_tags contains \"decoding_support\"",
+    "teacherPrompt": "Apply dyslexia-friendly font (OpenDyslexic or similar) with increased letter spacing to all text materials for this student.",
+    "studentMicrocopy": "Your materials use a special font designed to make reading easier.",
+    "udlHlpTags": [
+      "UDL 1.3",
+      "UDL 2.1",
+      "HLP13"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "end_of_task_signal",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "interaction",
+    "phaseScope": [
+      "independent_practice",
+      "exit_slip"
+    ],
+    "slotTargets": [
+      "direction_steps"
+    ],
+    "defaultParameters": {
+      "signal_type": "visual",
+      "next_steps_posted": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "organization_support"
+        }
+      ],
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "attention_cues"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "organization_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "attention_cues"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"organization_support\" OR iep==yes AND needs_tags contains \"attention_cues\" OR plan_504==yes AND needs_tags contains \"organization_support\" OR plan_504==yes AND needs_tags contains \"attention_cues\"",
+    "teacherPrompt": "Post clear 'What to do when finished' instructions. Provide a visual signal or specific location where completed work goes.",
+    "studentMicrocopy": "When you finish early,  check the 'What to do next' board for your next steps.",
+    "udlHlpTags": [
+      "UDL 6.2",
+      "HLP7"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "enlarged_workspace_response",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "presentation",
+    "phaseScope": [
+      "guided_practice",
+      "independent_practice",
+      "exit_slip"
+    ],
+    "slotTargets": [
+      "presentation_mode"
+    ],
+    "defaultParameters": {
+      "workspace_scale": 1.5,
+      "line_spacing": 2,
+      "answer_box_enlarged": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "fine_motor_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "fine_motor_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"fine_motor_support\" OR plan_504==yes AND needs_tags contains \"fine_motor_support\"",
+    "teacherPrompt": "Provide enlarged answer spaces and wider line spacing on all worksheets and response areas.",
+    "studentMicrocopy": "Your answer boxes are larger so you have more room to write.",
+    "udlHlpTags": [
+      "UDL 4.1",
+      "HLP13"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "extended_time_1_5x",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "timing",
+    "phaseScope": [
+      "independent_practice",
+      "exit_slip"
+    ],
+    "slotTargets": [
+      "timing_print"
+    ],
+    "defaultParameters": {
+      "time_multiplier": 1.5
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes OR plan_504==yes",
+    "teacherPrompt": "Provide 1.5× time on independent work and exit tasks.",
+    "studentMicrocopy": "You may use up to 1.5× the allotted time on these tasks.",
+    "udlHlpTags": [
+      "UDL 7.3",
+      "HLP18"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "extended_time_2x",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "timing",
+    "phaseScope": [
+      "assessment_only"
+    ],
+    "slotTargets": [
+      "timing_print"
+    ],
+    "defaultParameters": {
+      "time_multiplier": 2
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "processing_speed"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes OR (plan_504==yes AND needs_tags contains \"processing_speed\")",
+    "teacherPrompt": "Provide 2× time for formal assessments.",
+    "studentMicrocopy": "You may use up to 2× the time for assessments.",
+    "udlHlpTags": [
+      "UDL 7.3",
+      "HLP18"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "flexible_participation_mode",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "interaction",
+    "phaseScope": [
+      "guided_practice"
+    ],
+    "slotTargets": [
+      "alt_response_box"
+    ],
+    "defaultParameters": {
+      "alternatives": [
+        "partner_share",
+        "written_response",
+        "thumbs_up_down",
+        "chat_box"
+      ]
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "anxiety_support"
+        }
+      ],
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "social_communication"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "anxiety_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "social_communication"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"anxiety_support\" OR iep==yes AND needs_tags contains \"social_communication\" OR plan_504==yes AND needs_tags contains \"anxiety_support\" OR plan_504==yes AND needs_tags contains \"social_communication\"",
+    "teacherPrompt": "Provide alternative participation options: partner share, written response, thumbs up/down, or chat box instead of whole-class verbal sharing.",
+    "studentMicrocopy": "You have different ways to participate—choose what works best for you today.",
+    "udlHlpTags": [
+      "UDL 5.1",
+      "HLP15"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "graphic_organizer_writing",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "interaction",
+    "phaseScope": [
+      "guided_practice",
+      "independent_practice"
+    ],
+    "slotTargets": [
+      "support_sidebar"
+    ],
+    "defaultParameters": {
+      "organizer_type": "writing_planning",
+      "sections": [
+        "main_idea",
+        "supporting_details",
+        "conclusion"
+      ]
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "fine_motor_support"
+        }
+      ],
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "expression_support"
+        }
+      ],
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "organization_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "fine_motor_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "expression_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "organization_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"fine_motor_support\" OR iep==yes AND needs_tags contains \"expression_support\" OR iep==yes AND needs_tags contains \"organization_support\" OR plan_504==yes AND needs_tags contains \"fine_motor_support\" OR plan_504==yes AND needs_tags contains \"expression_support\" OR plan_504==yes AND needs_tags contains \"organization_support\"",
+    "teacherPrompt": "Provide the writing graphic organizer before any extended response. Walk student through each section before independent work.",
+    "studentMicrocopy": "Use the organizer boxes to plan your writing before you start. Fill in each section one at a time.",
+    "udlHlpTags": [
+      "UDL 5.2",
+      "UDL 6.2",
+      "HLP13",
+      "HLP15"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "grouping_roles_strip",
+    "labels": [
+      "All"
+    ],
+    "mode": "interaction",
+    "phaseScope": [
+      "guided_practice"
+    ],
+    "slotTargets": [
+      "roles_strip"
+    ],
+    "defaultParameters": {
+      "roles": [
+        "Reader",
+        "Recorder"
+      ],
+      "rotation": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "social_communication"
+        }
+      ],
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "organization_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "social_communication"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "organization_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"social_communication\" OR iep==yes AND needs_tags contains \"organization_support\" OR plan_504==yes AND needs_tags contains \"social_communication\" OR plan_504==yes AND needs_tags contains \"organization_support\"",
+    "teacherPrompt": "Assign peer roles (e.g., Reader & Recorder) and rotate halfway.",
+    "studentMicrocopy": "You have a role card (Reader or Recorder); switch roles when indicated.",
+    "udlHlpTags": [
+      "UDL 8.3",
+      "HLP7"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "guided_notes_inline",
+    "labels": [
+      "All"
+    ],
+    "mode": "interaction",
+    "phaseScope": [
+      "model",
+      "guided_practice"
+    ],
+    "slotTargets": [
+      "frames_box"
+    ],
+    "defaultParameters": {
+      "type": "guided_notes",
+      "prompts": "main_ideas;key_terms"
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "expression_support"
+        }
+      ],
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "organization_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "expression_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "organization_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"expression_support\" OR iep==yes AND needs_tags contains \"organization_support\" OR plan_504==yes AND needs_tags contains \"expression_support\" OR plan_504==yes AND needs_tags contains \"organization_support\"",
+    "teacherPrompt": "Provide guided notes (frames in margin) for key ideas.",
+    "studentMicrocopy": "Fill in the guided notes frames as we go through the lesson.",
+    "udlHlpTags": [
+      "UDL 5.3",
+      "HLP13"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "leveled_summary_box_el",
+    "labels": [
+      "EL"
+    ],
+    "mode": "presentation",
+    "phaseScope": [
+      "guided_practice",
+      "independent_practice"
+    ],
+    "slotTargets": [
+      "leveled_summary_box"
+    ],
+    "defaultParameters": {
+      "bands": [
+        "approaching",
+        "on"
+      ]
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "ml_level_lte",
+          "value": 3
+        }
+      ],
+      [
+        {
+          "kind": "reading_band_in",
+          "values": [
+            "early",
+            "approaching"
+          ]
+        }
+      ]
+    ],
+    "appliesWhenRaw": "ml_level <= 3 OR reading_band in [\"early\",\"approaching\"]",
+    "teacherPrompt": "Provide leveled summaries alongside grade-level texts for multilingual learners.",
+    "studentMicrocopy": "Use the leveled summary to support your understanding of the text.",
+    "udlHlpTags": [
+      "UDL 2.1",
+      "HLP14"
+    ],
+    "elOnly": true,
+    "languageSupportType": "leveled_summary"
+  },
+  {
+    "id": "leveled_summary_box_two_bands",
+    "labels": [
+      "All"
+    ],
+    "mode": "presentation",
+    "phaseScope": [
+      "guided_practice"
+    ],
+    "slotTargets": [
+      "leveled_summary_box"
+    ],
+    "defaultParameters": {
+      "bands": [
+        "approaching",
+        "on"
+      ]
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "reading_band_in",
+          "values": [
+            "early",
+            "approaching"
+          ]
+        }
+      ],
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "ml_level_lte",
+          "value": 3
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "reading_band_in",
+          "values": [
+            "early",
+            "approaching"
+          ]
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "ml_level_lte",
+          "value": 3
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND reading_band in [\"early\",\"approaching\"] OR iep==yes AND ml_level <= 3 OR plan_504==yes AND reading_band in [\"early\",\"approaching\"] OR plan_504==yes AND ml_level <= 3",
+    "teacherPrompt": "Include a simplified summary box alongside the main text.",
+    "studentMicrocopy": "Use the summary box if the main text is hard to understand.",
+    "udlHlpTags": [
+      "UDL 2.1",
+      "HLP14"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "manipulatives_math_concepts",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "interaction",
+    "phaseScope": [
+      "model",
+      "guided_practice"
+    ],
+    "slotTargets": [
+      "materials_list"
+    ],
+    "defaultParameters": {
+      "manipulatives": true,
+      "concrete_objects": true,
+      "visual_models": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "math_calculation_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "math_calculation_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"math_calculation_support\" OR plan_504==yes AND needs_tags contains \"math_calculation_support\"",
+    "teacherPrompt": "Provide physical or virtual manipulatives (counters",
+    "studentMicrocopy": "base-ten blocks",
+    "udlHlpTags": [
+      "fraction tiles) during math instruction and practice."
+    ],
+    "elOnly": false,
+    "languageSupportType": "number_line"
+  },
+  {
+    "id": "math_reference_sheet_dyscalculia",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "presentation",
+    "phaseScope": [
+      "guided_practice",
+      "independent_practice",
+      "exit_slip"
+    ],
+    "slotTargets": [
+      "materials_list"
+    ],
+    "defaultParameters": {
+      "reference_sheet": true,
+      "formulas": true,
+      "number_line": true,
+      "facts_table": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "math_calculation_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "math_calculation_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"math_calculation_support\" OR plan_504==yes AND needs_tags contains \"math_calculation_support\"",
+    "teacherPrompt": "Provide math reference sheet with formulas",
+    "studentMicrocopy": "number line",
+    "udlHlpTags": [
+      "and multiplication/division facts table. Review reference sheet use before starting work."
+    ],
+    "elOnly": false,
+    "languageSupportType": "math_reference"
+  },
+  {
+    "id": "microbreak_every_2_items",
+    "labels": [
+      "All"
+    ],
+    "mode": "timing",
+    "phaseScope": [
+      "guided_practice",
+      "independent_practice"
+    ],
+    "slotTargets": [
+      "break_icon_points"
+    ],
+    "defaultParameters": {
+      "every_items": 2,
+      "duration_sec": 30
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "attention_cues"
+        }
+      ],
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "attn_chunk_minutes_lte",
+          "value": 10
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "attention_cues"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "attn_chunk_minutes_lte",
+          "value": 10
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"attention_cues\" OR iep==yes AND attn_chunk_minutes <= 10 OR plan_504==yes AND needs_tags contains \"attention_cues\" OR plan_504==yes AND attn_chunk_minutes <= 10",
+    "teacherPrompt": "Insert a 30-second movement break after every 2 items.",
+    "studentMicrocopy": "Take a quick 30-second break after every 2 items to recharge.",
+    "udlHlpTags": [
+      "UDL 7.2",
+      "HLP18"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "movement_break_protocol",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "timing",
+    "phaseScope": [
+      "guided_practice",
+      "independent_practice"
+    ],
+    "slotTargets": [
+      "break_icon_points"
+    ],
+    "defaultParameters": {
+      "break_duration_sec": 60,
+      "break_type": "movement",
+      "frequency": "as_needed"
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "attention_cues"
+        },
+        {
+          "kind": "attn_chunk_minutes_lte",
+          "value": 15
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "attention_cues"
+        },
+        {
+          "kind": "attn_chunk_minutes_lte",
+          "value": 15
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"attention_cues\" AND attn_chunk_minutes <= 15 OR plan_504==yes AND needs_tags contains \"attention_cues\" AND attn_chunk_minutes <= 15",
+    "teacherPrompt": "Allow brief (60-second) movement breaks as needed during extended work periods. Establish a discreet signal the student can use to request a break.",
+    "studentMicrocopy": "You can take short movement breaks when you need to refocus. Use the signal we agreed on.",
+    "udlHlpTags": [
+      "UDL 7.2",
+      "HLP7"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "opt_out_with_alternative",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "interaction",
+    "phaseScope": [
+      "guided_practice"
+    ],
+    "slotTargets": [
+      "alt_response_box"
+    ],
+    "defaultParameters": {
+      "opt_out_signal": "pass_card",
+      "alternative_required": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "anxiety_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "anxiety_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"anxiety_support\" OR plan_504==yes AND needs_tags contains \"anxiety_support\"",
+    "teacherPrompt": "Allow student to 'pass' on sharing publicly using a discreet signal. Require an alternative form of demonstrating understanding (written, later check-in).",
+    "studentMicrocopy": "You can use your pass card if you're not ready to share. You'll show your thinking another way.",
+    "udlHlpTags": [
+      "UDL 9.2",
+      "HLP15"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "predictability_schedule_post",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "environment",
+    "phaseScope": [
+      "launch"
+    ],
+    "slotTargets": [
+      "visual_schedule"
+    ],
+    "defaultParameters": {
+      "schedule_type": "daily_routine",
+      "change_notification": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "anxiety_support"
+        }
+      ],
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "organization_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "anxiety_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "organization_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"anxiety_support\" OR iep==yes AND needs_tags contains \"organization_support\" OR plan_504==yes AND needs_tags contains \"anxiety_support\" OR plan_504==yes AND needs_tags contains \"organization_support\"",
+    "teacherPrompt": "Post consistent daily routine/lesson structure in the same location every day. Notify student in advance of any schedule changes.",
+    "studentMicrocopy": "The daily schedule is always posted in the same spot. You'll get advance notice if anything changes.",
+    "udlHlpTags": [
+      "UDL 7.2",
+      "HLP7"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "preferential_seating_front",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "environment",
+    "phaseScope": [
+      "launch"
+    ],
+    "slotTargets": [
+      "room_plan"
+    ],
+    "defaultParameters": {
+      "zone": "front_left"
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        }
+      ],
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "organization_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "plan_504==yes OR iep==yes AND needs_tags contains \"organization_support\"",
+    "teacherPrompt": "Seat this student at the front/near instruction (away from distractions).",
+    "studentMicrocopy": "Your seat is up front to help you focus.",
+    "udlHlpTags": [
+      "UDL 7.3",
+      "HLP7"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "private_response_option",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "interaction",
+    "phaseScope": [
+      "guided_practice",
+      "exit_slip"
+    ],
+    "slotTargets": [
+      "alt_response_box"
+    ],
+    "defaultParameters": {
+      "modes": [
+        "written_to_teacher",
+        "whisper",
+        "digital_submission"
+      ]
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "anxiety_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "anxiety_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"anxiety_support\" OR plan_504==yes AND needs_tags contains \"anxiety_support\"",
+    "teacherPrompt": "Offer option to respond privately (written note, whisper, or digital submission) instead of public verbal response. Never require public participation without advance notice.",
+    "studentMicrocopy": "You can share your answer privately with your teacher if you prefer.",
+    "udlHlpTags": [
+      "UDL 5.1",
+      "HLP15"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "progress_checkin_timer",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "timing",
+    "phaseScope": [
+      "independent_practice"
+    ],
+    "slotTargets": [
+      "timing_print"
+    ],
+    "defaultParameters": {
+      "checkin_interval_min": 8,
+      "checkin_type": "proximity"
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "attention_cues"
+        }
+      ],
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "working_memory"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "attention_cues"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "working_memory"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"attention_cues\" OR iep==yes AND needs_tags contains \"working_memory\" OR plan_504==yes AND needs_tags contains \"attention_cues\" OR plan_504==yes AND needs_tags contains \"working_memory\"",
+    "teacherPrompt": "Set a silent timer and check in with this student every 8 minutes during independent work. Use proximity and brief verbal redirect as needed.",
+    "studentMicrocopy": "Your teacher will check in with you a few times during work time to see how it's going.",
+    "udlHlpTags": [
+      "UDL 6.2",
+      "HLP22"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "quiet_workspace_option",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "environment",
+    "phaseScope": [
+      "independent_practice",
+      "exit_slip"
+    ],
+    "slotTargets": [
+      "environment_box"
+    ],
+    "defaultParameters": {
+      "quiet_zone": true,
+      "reduced_auditory_input": true,
+      "headphones_available": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "hearing_support"
+        }
+      ],
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "sensory_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "hearing_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "sensory_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"hearing_support\" OR iep==yes AND needs_tags contains \"sensory_support\" OR plan_504==yes AND needs_tags contains \"hearing_support\" OR plan_504==yes AND needs_tags contains \"sensory_support\"",
+    "teacherPrompt": "Provide access to a quiet workspace or noise-canceling headphones during independent work and assessments.",
+    "studentMicrocopy": "You may work in the quiet area or use headphones to help you concentrate.",
+    "udlHlpTags": [
+      "UDL 7.3",
+      "HLP7"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "read_aloud_option",
+    "labels": [
+      "All"
+    ],
+    "mode": "presentation",
+    "phaseScope": [
+      "model",
+      "guided_practice"
+    ],
+    "slotTargets": [
+      "read_aloud_cue"
+    ],
+    "defaultParameters": {
+      "teacher_read_aloud": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "reading_band_in",
+          "values": [
+            "early",
+            "approaching"
+          ]
+        }
+      ],
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "decoding_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "reading_band_in",
+          "values": [
+            "early",
+            "approaching"
+          ]
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "decoding_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND reading_band in [\"early\",\"approaching\"] OR iep==yes AND needs_tags contains \"decoding_support\" OR plan_504==yes AND reading_band in [\"early\",\"approaching\"] OR plan_504==yes AND needs_tags contains \"decoding_support\"",
+    "teacherPrompt": "Read text aloud or provide an audio reading for this part.",
+    "studentMicrocopy": "Listen and follow along as the text is read aloud.",
+    "udlHlpTags": [
+      "UDL 2.1",
+      "HLP15"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "reduced_distractions_mode",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "environment",
+    "phaseScope": "all",
+    "slotTargets": [
+      "room_plan"
+    ],
+    "defaultParameters": {
+      "quiet_zone": true,
+      "minimal_ui": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        }
+      ],
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "sensory_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "plan_504==yes OR iep==yes AND needs_tags contains \"sensory_support\"",
+    "teacherPrompt": "Use a low-distraction setting (quiet area, minimal visual clutter).",
+    "studentMicrocopy": "You will work in a quiet, low-distraction area.",
+    "udlHlpTags": [
+      "UDL 7.3",
+      "HLP7"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "reduced_items_50",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "assessment",
+    "phaseScope": [
+      "guided_practice",
+      "independent_practice",
+      "exit_slip"
+    ],
+    "slotTargets": [
+      "reduced_items_lane"
+    ],
+    "defaultParameters": {
+      "percent": 0.5,
+      "item_selector": "star"
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        }
+      ],
+      [
+        {
+          "kind": "needs_tag",
+          "tag": "working_memory"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes OR plan_504==yes OR needs_tags contains \"working_memory\"",
+    "teacherPrompt": "Use only the ★ subset of items (reduced workload).",
+    "studentMicrocopy": "Complete just the ★ marked items for this activity.",
+    "udlHlpTags": [
+      "UDL 5.3",
+      "HLP17"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "reduced_text_density",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "presentation",
+    "phaseScope": "all",
+    "slotTargets": [
+      "presentation_mode"
+    ],
+    "defaultParameters": {
+      "text_density": "reduced",
+      "items_per_page": 3,
+      "white_space": "increased",
+      "line_spacing": 1.8
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "decoding_support"
+        }
+      ],
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "sensory_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "decoding_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "sensory_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"decoding_support\" OR iep==yes AND needs_tags contains \"sensory_support\" OR plan_504==yes AND needs_tags contains \"decoding_support\" OR plan_504==yes AND needs_tags contains \"sensory_support\"",
+    "teacherPrompt": "Reduce text density with fewer items per page",
+    "studentMicrocopy": "increased white space",
+    "udlHlpTags": [
+      "and 1.8 line spacing. Break lengthy passages across multiple pages."
+    ],
+    "elOnly": false,
+    "languageSupportType": "reduced_text_density"
+  },
+  {
+    "id": "reduced_writing_quantity",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "assessment",
+    "phaseScope": [
+      "guided_practice",
+      "independent_practice",
+      "exit_slip"
+    ],
+    "slotTargets": [
+      "reduced_items_lane"
+    ],
+    "defaultParameters": {
+      "writing_reduction": 0.5,
+      "depth_maintained": true,
+      "item_selector": "star"
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "fine_motor_support"
+        }
+      ],
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "processing_speed"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "fine_motor_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "processing_speed"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"fine_motor_support\" OR iep==yes AND needs_tags contains \"processing_speed\" OR plan_504==yes AND needs_tags contains \"fine_motor_support\" OR plan_504==yes AND needs_tags contains \"processing_speed\"",
+    "teacherPrompt": "Reduce written response quantity by 50% while maintaining rigor. Use ★ marked items only. Assess same standards with fewer written items.",
+    "studentMicrocopy": "Complete the ★ marked questions. Quality matters more than quantity.",
+    "udlHlpTags": [
+      "UDL 5.3",
+      "UDL 7.3",
+      "HLP17"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "safe_space_identification",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "environment",
+    "phaseScope": [
+      "launch"
+    ],
+    "slotTargets": [
+      "environment_box"
+    ],
+    "defaultParameters": {
+      "space_type": "designated_calm",
+      "access": "as_needed"
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "anxiety_support"
+        }
+      ],
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "sensory_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "anxiety_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "sensory_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"anxiety_support\" OR iep==yes AND needs_tags contains \"sensory_support\" OR plan_504==yes AND needs_tags contains \"anxiety_support\" OR plan_504==yes AND needs_tags contains \"sensory_support\"",
+    "teacherPrompt": "Identify and review the designated safe/calm space at the start of each class. Ensure student knows they can access it without drawing attention.",
+    "studentMicrocopy": "You know where the calm space is and can go there when you need a moment.",
+    "udlHlpTags": [
+      "UDL 9.2",
+      "HLP7"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "scribe_option_extended_writing",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "response",
+    "phaseScope": [
+      "independent_practice",
+      "exit_slip"
+    ],
+    "slotTargets": [
+      "alt_response_box"
+    ],
+    "defaultParameters": {
+      "scribe_enabled": true,
+      "student_dictates": true,
+      "scribe_records_verbatim": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "fine_motor_support"
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "expression_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "fine_motor_support"
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "expression_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"fine_motor_support\" AND needs_tags contains \"expression_support\" OR plan_504==yes AND needs_tags contains \"fine_motor_support\" AND needs_tags contains \"expression_support\"",
+    "teacherPrompt": "Provide a scribe for extended written responses. Student dictates while scribe records verbatim without editing content.",
+    "studentMicrocopy": "You can tell your ideas to a helper who will write them down exactly as you say them.",
+    "udlHlpTags": [
+      "UDL 5.1",
+      "HLP19"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "sentence_frames_CER",
+    "labels": [
+      "All"
+    ],
+    "mode": "interaction",
+    "phaseScope": [
+      "guided_practice",
+      "exit_slip"
+    ],
+    "slotTargets": [
+      "sentence_frames"
+    ],
+    "defaultParameters": {
+      "function": "CER",
+      "count": 3
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "language_support"
+        }
+      ],
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "ml_level_lte",
+          "value": 4
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "language_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "ml_level_lte",
+          "value": 4
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"language_support\" OR iep==yes AND ml_level <= 4 OR plan_504==yes AND needs_tags contains \"language_support\" OR plan_504==yes AND ml_level <= 4",
+    "teacherPrompt": "Provide sentence frames for Claim­Evidence-Reasoning tasks.",
+    "studentMicrocopy": "Use the sentence frame to structure your answer (Claim, Evidence, Reasoning).",
+    "udlHlpTags": [
+      "UDL 5.2",
+      "HLP20"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "sentence_frames_language_scaffold",
+    "labels": [
+      "EL"
+    ],
+    "mode": "interaction",
+    "phaseScope": [
+      "guided_practice",
+      "independent_practice",
+      "exit_slip"
+    ],
+    "slotTargets": [
+      "sentence_frames"
+    ],
+    "defaultParameters": {
+      "function": "open_response",
+      "count": 3
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "ml_level_lte",
+          "value": 4
+        }
+      ],
+      [
+        {
+          "kind": "needs_tag",
+          "tag": "language_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "ml_level <= 4 OR needs_tags contains \"language_support\"",
+    "teacherPrompt": "Provide sentence frames to scaffold academic language production.",
+    "studentMicrocopy": "Use the sentence frames to organize what you want to say or write.",
+    "udlHlpTags": [
+      "UDL 5.2",
+      "HLP20"
+    ],
+    "elOnly": true,
+    "languageSupportType": "frames"
+  },
+  {
+    "id": "separate_setting_assessment",
+    "labels": [
+      "504"
+    ],
+    "mode": "environment",
+    "phaseScope": [
+      "assessment_only"
+    ],
+    "slotTargets": [
+      "assessment_settings"
+    ],
+    "defaultParameters": {
+      "separate_setting": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "reduced_distractions"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "plan_504==yes AND needs_tags contains \"reduced_distractions\"",
+    "teacherPrompt": "Arrange a separate, quiet setting for this student during assessments.",
+    "studentMicrocopy": "You will take tests in a quiet area separate from the main class.",
+    "udlHlpTags": [
+      "UDL 7.3",
+      "HLP7"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "speech_to_text_response",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "response",
+    "phaseScope": [
+      "guided_practice",
+      "independent_practice",
+      "exit_slip"
+    ],
+    "slotTargets": [
+      "alt_response_box"
+    ],
+    "defaultParameters": {
+      "input_mode": "speech_to_text",
+      "dictation_enabled": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "fine_motor_support"
+        }
+      ],
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "expression_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "fine_motor_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "expression_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"fine_motor_support\" OR iep==yes AND needs_tags contains \"expression_support\" OR plan_504==yes AND needs_tags contains \"fine_motor_support\" OR plan_504==yes AND needs_tags contains \"expression_support\"",
+    "teacherPrompt": "Enable speech-to-text software for written responses. Ensure device microphone is working and student knows activation command.",
+    "studentMicrocopy": "You can speak your answers instead of typing or writing. Use the microphone button to dictate.",
+    "udlHlpTags": [
+      "UDL 4.2",
+      "UDL 5.1",
+      "HLP19"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "strategic_seating_focus",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "environment",
+    "phaseScope": "all",
+    "slotTargets": [
+      "environment_box"
+    ],
+    "defaultParameters": {
+      "zone": "low_traffic",
+      "near_instruction": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "attention_cues"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "attention_cues"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"attention_cues\" OR plan_504==yes AND needs_tags contains \"attention_cues\"",
+    "teacherPrompt": "Seat this student in a low-traffic area near instruction, away from windows, doors, and high-activity zones.",
+    "studentMicrocopy": "Your seat is positioned to help you focus on instruction.",
+    "udlHlpTags": [
+      "UDL 7.3",
+      "HLP7"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "success_acknowledgment_private",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "interaction",
+    "phaseScope": [
+      "guided_practice",
+      "independent_practice"
+    ],
+    "slotTargets": [
+      "support_sidebar"
+    ],
+    "defaultParameters": {
+      "acknowledgment_type": "private",
+      "frequency": "effort_based"
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "anxiety_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "anxiety_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"anxiety_support\" OR plan_504==yes AND needs_tags contains \"anxiety_support\"",
+    "teacherPrompt": "Provide private, specific acknowledgment of effort and progress rather than public praise. Focus on process over outcome.",
+    "studentMicrocopy": "Your teacher will check in privately to acknowledge your effort and progress.",
+    "udlHlpTags": [
+      "UDL 9.2",
+      "HLP22"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "task_initiation_prompt",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "interaction",
+    "phaseScope": [
+      "launch",
+      "independent_practice"
+    ],
+    "slotTargets": [
+      "support_sidebar"
+    ],
+    "defaultParameters": {
+      "prompt_delay_sec": 30,
+      "prompt_type": "verbal_cue"
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "attention_cues"
+        }
+      ],
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "organization_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "attention_cues"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "organization_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"attention_cues\" OR iep==yes AND needs_tags contains \"organization_support\" OR plan_504==yes AND needs_tags contains \"attention_cues\" OR plan_504==yes AND needs_tags contains \"organization_support\"",
+    "teacherPrompt": "After giving directions, provide a brief individual prompt to help this student begin (e.g., 'What's your first step?'). Check back within 2 minutes to confirm task initiation.",
+    "studentMicrocopy": "You'll get a quick check-in to help you get started on each task.",
+    "udlHlpTags": [
+      "UDL 6.2",
+      "HLP15"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "text_to_speech_dyslexia",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "presentation",
+    "phaseScope": [
+      "model",
+      "guided_practice",
+      "independent_practice"
+    ],
+    "slotTargets": [
+      "presentation_mode"
+    ],
+    "defaultParameters": {
+      "tts_enabled": true,
+      "highlight_sync": true,
+      "adjustable_speed": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "decoding_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "decoding_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"decoding_support\" OR plan_504==yes AND needs_tags contains \"decoding_support\"",
+    "teacherPrompt": "Enable text-to-speech with synchronized highlighting. Show student how to adjust reading speed. Text-to-speech available for all reading passages.",
+    "studentMicrocopy": "Click the speaker icon to have text read aloud while words are highlighted. You can speed up or slow down the reading.",
+    "udlHlpTags": [
+      "UDL 1.3",
+      "UDL 2.1",
+      "HLP19"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "transition_warning_2min",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "timing",
+    "phaseScope": "all",
+    "slotTargets": [
+      "transition_cue"
+    ],
+    "defaultParameters": {
+      "warning_minutes": 2,
+      "signal_type": "verbal_visual"
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "attention_cues"
+        }
+      ],
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "organization_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "attention_cues"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "organization_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"attention_cues\" OR iep==yes AND needs_tags contains \"organization_support\" OR plan_504==yes AND needs_tags contains \"attention_cues\" OR plan_504==yes AND needs_tags contains \"organization_support\"",
+    "teacherPrompt": "Provide a 2-minute warning before any activity transition. Use both verbal announcement and visual signal (timer displayed or hand signal).",
+    "studentMicrocopy": "You'll always get a 2-minute heads-up before we switch activities.",
+    "udlHlpTags": [
+      "UDL 7.2",
+      "HLP7"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "typing_instead_of_handwriting",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "response",
+    "phaseScope": [
+      "guided_practice",
+      "independent_practice",
+      "exit_slip"
+    ],
+    "slotTargets": [
+      "alt_response_box"
+    ],
+    "defaultParameters": {
+      "input_mode": "keyboard",
+      "handwriting_bypass": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "fine_motor_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "fine_motor_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"fine_motor_support\" OR plan_504==yes AND needs_tags contains \"fine_motor_support\"",
+    "teacherPrompt": "Provide keyboard/device access for all written responses. Handwriting is not required for any task.",
+    "studentMicrocopy": "You may type all your answers instead of writing by hand.",
+    "udlHlpTags": [
+      "UDL 4.1",
+      "UDL 4.2",
+      "HLP19"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "visual_note_companion",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "interaction",
+    "phaseScope": [
+      "model",
+      "guided_practice"
+    ],
+    "slotTargets": [
+      "frames_box"
+    ],
+    "defaultParameters": {
+      "visual_notes": true,
+      "icons_symbols": true,
+      "key_vocabulary_highlighted": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "hearing_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "hearing_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"hearing_support\" OR plan_504==yes AND needs_tags contains \"hearing_support\"",
+    "teacherPrompt": "Provide visual companion notes with icons, symbols, and highlighted vocabulary during verbal instruction.",
+    "studentMicrocopy": "Follow along with the picture notes while the teacher talks. Key words are highlighted for you.",
+    "udlHlpTags": [
+      "UDL 1.2",
+      "UDL 2.1",
+      "HLP13"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "visual_schedule_block",
+    "labels": [
+      "All"
+    ],
+    "mode": "environment",
+    "phaseScope": "all",
+    "slotTargets": [
+      "visual_schedule"
+    ],
+    "defaultParameters": {
+      "blocks": [
+        "Launch",
+        "Model",
+        "We-Do",
+        "You-Do",
+        "Exit"
+      ]
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "anxiety_support"
+        }
+      ],
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "sensory_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "anxiety_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "sensory_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"anxiety_support\" OR iep==yes AND needs_tags contains \"sensory_support\" OR plan_504==yes AND needs_tags contains \"anxiety_support\" OR plan_504==yes AND needs_tags contains \"sensory_support\"",
+    "teacherPrompt": "Display a visual schedule of today’s lesson blocks; refer to it at transitions.",
+    "studentMicrocopy": "Check the visual schedule as we progress through lesson parts.",
+    "udlHlpTags": [
+      "UDL 7.2",
+      "HLP7"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "visual_timer_display",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "environment",
+    "phaseScope": [
+      "guided_practice",
+      "independent_practice",
+      "exit_slip"
+    ],
+    "slotTargets": [
+      "visual_schedule"
+    ],
+    "defaultParameters": {
+      "timer_type": "countdown",
+      "visible_to": "student"
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "attention_cues"
+        }
+      ],
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "processing_speed"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "attention_cues"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "processing_speed"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"attention_cues\" OR iep==yes AND needs_tags contains \"processing_speed\" OR plan_504==yes AND needs_tags contains \"attention_cues\" OR plan_504==yes AND needs_tags contains \"processing_speed\"",
+    "teacherPrompt": "Display a visual countdown timer where this student can see it throughout timed activities. Use a calm color scheme (blue/green) rather than red.",
+    "studentMicrocopy": "A timer will be visible so you can pace yourself during work time.",
+    "udlHlpTags": [
+      "UDL 6.2",
+      "HLP7"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "visual_transition_cues",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "environment",
+    "phaseScope": "all",
+    "slotTargets": [
+      "environment_box"
+    ],
+    "defaultParameters": {
+      "visual_signals": true,
+      "light_cue": true,
+      "countdown_timer_visual": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "hearing_support"
+        }
+      ],
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "attention_cues"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "hearing_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "attention_cues"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"hearing_support\" OR iep==yes AND needs_tags contains \"attention_cues\" OR plan_504==yes AND needs_tags contains \"hearing_support\" OR plan_504==yes AND needs_tags contains \"attention_cues\"",
+    "teacherPrompt": "Use visual signals (light flicker",
+    "studentMicrocopy": "timer display",
+    "udlHlpTags": [
+      "hand signals) for transitions instead of verbal-only cues."
+    ],
+    "elOnly": false,
+    "languageSupportType": "visual_cues"
+  },
+  {
+    "id": "wait_time_extension",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "timing",
+    "phaseScope": [
+      "guided_practice"
+    ],
+    "slotTargets": [
+      "timing_print"
+    ],
+    "defaultParameters": {
+      "wait_time_sec": 10,
+      "no_cold_call": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "anxiety_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "anxiety_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"anxiety_support\" OR plan_504==yes AND needs_tags contains \"anxiety_support\"",
+    "teacherPrompt": "Extend wait time to at least 10 seconds after asking a question. Do not cold-call this student; use voluntary response or advance notice.",
+    "studentMicrocopy": "You'll have plenty of think time before answering,  and you won't be called on without warning.",
+    "udlHlpTags": [
+      "UDL 5.2",
+      "HLP22"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "word_prediction_software",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "interaction",
+    "phaseScope": [
+      "guided_practice",
+      "independent_practice",
+      "exit_slip"
+    ],
+    "slotTargets": [
+      "support_sidebar"
+    ],
+    "defaultParameters": {
+      "word_prediction": true,
+      "autocomplete": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "fine_motor_support"
+        }
+      ],
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "expression_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "fine_motor_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "expression_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"fine_motor_support\" OR iep==yes AND needs_tags contains \"expression_support\" OR plan_504==yes AND needs_tags contains \"fine_motor_support\" OR plan_504==yes AND needs_tags contains \"expression_support\"",
+    "teacherPrompt": "Enable word prediction software to reduce keystrokes needed. Verify software is active before writing tasks begin.",
+    "studentMicrocopy": "Word suggestions will appear as you type. Click or tap a suggestion to add it quickly.",
+    "udlHlpTags": [
+      "UDL 4.2",
+      "UDL 5.2",
+      "HLP19"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "working_memory_reference_card",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "presentation",
+    "phaseScope": [
+      "guided_practice",
+      "independent_practice"
+    ],
+    "slotTargets": [
+      "frames_box"
+    ],
+    "defaultParameters": {
+      "card_type": "key_info",
+      "max_items": 4
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "working_memory"
+        }
+      ],
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "organization_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "working_memory"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "organization_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"working_memory\" OR iep==yes AND needs_tags contains \"organization_support\" OR plan_504==yes AND needs_tags contains \"working_memory\" OR plan_504==yes AND needs_tags contains \"organization_support\"",
+    "teacherPrompt": "Provide a reference card with key information (formulas, steps, vocabulary) that remains visible during the task. Limit to 4 essential items.",
+    "studentMicrocopy": "You have a reference card with key information you can check anytime during the activity.",
+    "udlHlpTags": [
+      "UDL 6.2",
+      "HLP14"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "written_backup_verbal_directions",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "presentation",
+    "phaseScope": [
+      "launch",
+      "model",
+      "guided_practice"
+    ],
+    "slotTargets": [
+      "direction_steps"
+    ],
+    "defaultParameters": {
+      "directions_format": "written_visual",
+      "display_persistent": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "hearing_support"
+        }
+      ],
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "processing_speed"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "hearing_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "processing_speed"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"hearing_support\" OR iep==yes AND needs_tags contains \"processing_speed\" OR plan_504==yes AND needs_tags contains \"hearing_support\" OR plan_504==yes AND needs_tags contains \"processing_speed\"",
+    "teacherPrompt": "Display written directions on board/screen whenever giving verbal instructions. Keep directions visible throughout activity.",
+    "studentMicrocopy": "All directions are written on the board so you can look back at them anytime.",
+    "udlHlpTags": [
+      "UDL 1.2",
+      "UDL 2.5",
+      "HLP15"
+    ],
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "asd_social_narrative_support",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "presentation",
+    "phaseScope": [
+      "launch",
+      "guided_practice"
+    ],
+    "slotTargets": [
+      "support_sidebar"
+    ],
+    "defaultParameters": {
+      "narrative_type": "social_story",
+      "sentence_ratio": "2:1",
+      "timing": "5_min_before"
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "asd_social_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "asd_social_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"asd_social_support\" OR plan_504==yes AND needs_tags contains \"asd_social_support\"",
+    "teacherPrompt": "Provide a brief, first-person social narrative (3-5 sentences) before challenging activities. Read with student 5-10 minutes before the situation occurs. Include descriptive sentences (who, what, when, where), perspective sentences (how others feel/think), and one directive sentence (what to do).",
+    "studentMicrocopy": "Read this story about what we'll be doing today. It will help you know what to expect.",
+    "udlHlpTags": [
+      "UDL 3.4",
+      "HLP9"
+    ],
+    "evidence": {
+      "citationText": "Steinbrenner et al. (2020). Evidence-Based Practices for Children, Youth, and Young Adults with Autism. NCAEP. Comprehensive review identifying 28 evidence-based practices for autism intervention including visual supports, social narratives, and peer-mediated interventions.",
+      "sourceLink": "https://ncaep.fpg.unc.edu/wp-content/uploads/EBP-Report-2020.pdf"
+    },
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "asd_first_then_board",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "presentation",
+    "phaseScope": [
+      "launch",
+      "guided_practice",
+      "independent_practice"
+    ],
+    "slotTargets": [
+      "support_sidebar"
+    ],
+    "defaultParameters": {
+      "panel_count": 2,
+      "icons": true,
+      "reinforcer_visible": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "asd_routine_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "asd_routine_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"asd_routine_support\" OR plan_504==yes AND needs_tags contains \"asd_routine_support\"",
+    "teacherPrompt": "Present a two-panel visual showing 'FIRST: [required task with icon]' → 'THEN: [preferred activity/reinforcer with icon]'. Point to each panel while stating expectation. Update throughout lesson.",
+    "studentMicrocopy": "First, complete [task]. Then, you can [preferred activity].",
+    "udlHlpTags": [
+      "UDL 6.1",
+      "UDL 9.3",
+      "HLP18"
+    ],
+    "evidence": {
+      "citationText": "AFIRM Team. Autism Focused Intervention Resources and Modules. UNC FPG. Free online modules providing step-by-step instructions for implementing evidence-based practices for autism, including antecedent-based interventions and task analysis.",
+      "sourceLink": "https://afirm.fpg.unc.edu/afirm-modules/"
+    },
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "asd_sensory_break_card",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "timing",
+    "phaseScope": "all",
+    "slotTargets": [
+      "environment_box"
+    ],
+    "defaultParameters": {
+      "break_duration_min": 5,
+      "tools": [
+        "fidget",
+        "headphones",
+        "weighted_pad"
+      ],
+      "signal_type": "card"
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "sensory_support"
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "asd_routine_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "sensory_support"
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "asd_routine_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"sensory_support\" AND needs_tags contains \"asd_routine_support\" OR plan_504==yes AND needs_tags contains \"sensory_support\" AND needs_tags contains \"asd_routine_support\"",
+    "teacherPrompt": "Provide a break request card. Pre-teach card use. When student shows card or uses signal, allow 3-5 minute break in designated low-stimulation area with approved sensory tools (fidget, noise-canceling headphones, weighted lap pad).",
+    "studentMicrocopy": "If you need a sensory break, show your break card. You can go to [designated area] for [X] minutes to help your body feel regulated.",
+    "udlHlpTags": [
+      "UDL 7.3",
+      "UDL 9.2",
+      "HLP7"
+    ],
+    "evidence": {
+      "citationText": "Steinbrenner et al. (2020). Evidence-Based Practices for Children, Youth, and Young Adults with Autism. NCAEP. Comprehensive review identifying 28 evidence-based practices for autism intervention including visual supports, social narratives, and peer-mediated interventions.",
+      "sourceLink": "https://ncaep.fpg.unc.edu/wp-content/uploads/EBP-Report-2020.pdf"
+    },
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "asd_reduced_sensory_environment",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "environment",
+    "phaseScope": "all",
+    "slotTargets": [
+      "environment_box"
+    ],
+    "defaultParameters": {
+      "lighting": "reduced",
+      "seating": "low_traffic",
+      "headphones": true,
+      "visual_clutter": "minimal"
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "sensory_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "sensory_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"sensory_support\" OR plan_504==yes AND needs_tags contains \"sensory_support\"",
+    "teacherPrompt": "Seat student away from high-traffic areas, HVAC vents, flickering lights. Provide access to noise-reducing headphones. Reduce visual clutter in student's field of view. Allow sunglasses or hat for light sensitivity.",
+    "studentMicrocopy": "Your workspace is set up to help you focus with fewer distractions. Use your headphones if sounds are bothering you.",
+    "udlHlpTags": [
+      "UDL 7.3",
+      "HLP7"
+    ],
+    "evidence": {
+      "citationText": "Steinbrenner et al. (2020). Evidence-Based Practices for Children, Youth, and Young Adults with Autism. NCAEP. Comprehensive review identifying 28 evidence-based practices for autism intervention including visual supports, social narratives, and peer-mediated interventions.",
+      "sourceLink": "https://ncaep.fpg.unc.edu/wp-content/uploads/EBP-Report-2020.pdf"
+    },
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "asd_explicit_social_cues",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "interaction",
+    "phaseScope": [
+      "guided_practice"
+    ],
+    "slotTargets": [
+      "support_sidebar"
+    ],
+    "defaultParameters": {
+      "cue_card": true,
+      "sentence_starters": [
+        "I agree because...",
+        "I see it differently...",
+        "Can you explain more..."
+      ]
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "asd_social_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "asd_social_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"asd_social_support\" OR plan_504==yes AND needs_tags contains \"asd_social_support\"",
+    "teacherPrompt": "Before collaborative work, explicitly state social expectations: 'In this activity, you'll take turns speaking. When it's not your turn, look at the speaker. If you disagree, say I see it differently because...' Provide written cue card.",
+    "studentMicrocopy": "Use these sentence starters when working with your group: 'I agree because...', 'I see it differently...', 'Can you explain more about...'",
+    "udlHlpTags": [
+      "UDL 8.3",
+      "HLP9",
+      "HLP16"
+    ],
+    "evidence": {
+      "citationText": "Steinbrenner et al. (2020). Evidence-Based Practices for Children, Youth, and Young Adults with Autism. NCAEP. Comprehensive review identifying 28 evidence-based practices for autism intervention including visual supports, social narratives, and peer-mediated interventions.",
+      "sourceLink": "https://ncaep.fpg.unc.edu/wp-content/uploads/EBP-Report-2020.pdf"
+    },
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "asd_peer_mediated_roles",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "interaction",
+    "phaseScope": [
+      "guided_practice"
+    ],
+    "slotTargets": [
+      "roles_strip"
+    ],
+    "defaultParameters": {
+      "roles": [
+        "Reader",
+        "Recorder",
+        "Coach"
+      ],
+      "rotation": true,
+      "visual_cards": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "asd_social_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "asd_social_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"asd_social_support\" OR plan_504==yes AND needs_tags contains \"asd_social_support\"",
+    "teacherPrompt": "Assign explicit roles to all group members. Provide visual role cards with responsibilities. Train peer partners briefly on how to offer support. Rotate roles midway through activity.",
+    "studentMicrocopy": "You are the [Role] for this activity. Your job is to [responsibility]. Switch roles when the teacher signals.",
+    "udlHlpTags": [
+      "UDL 8.3",
+      "HLP17",
+      "HLP18"
+    ],
+    "evidence": {
+      "citationText": "Steinbrenner et al. (2020). Evidence-Based Practices for Children, Youth, and Young Adults with Autism. NCAEP. Comprehensive review identifying 28 evidence-based practices for autism intervention including visual supports, social narratives, and peer-mediated interventions.",
+      "sourceLink": "https://ncaep.fpg.unc.edu/wp-content/uploads/EBP-Report-2020.pdf"
+    },
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "asd_video_modeling_preview",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "presentation",
+    "phaseScope": [
+      "launch"
+    ],
+    "slotTargets": [
+      "support_sidebar"
+    ],
+    "defaultParameters": {
+      "video_duration_min": 3,
+      "advance_preview": true,
+      "repeat_allowed": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "asd_routine_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "asd_routine_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"asd_routine_support\" OR plan_504==yes AND needs_tags contains \"asd_routine_support\"",
+    "teacherPrompt": "Provide 1-3 minute video showing the complete procedure/skill before student attempts it. For lab procedures, present videos day before. Allow repeated viewing. Follow with practice.",
+    "studentMicrocopy": "Watch this short video to see exactly how to [skill/procedure]. You can watch it again if you need to.",
+    "udlHlpTags": [
+      "UDL 1.1",
+      "UDL 3.1",
+      "HLP16"
+    ],
+    "evidence": {
+      "citationText": "Steinbrenner et al. (2020). Evidence-Based Practices for Children, Youth, and Young Adults with Autism. NCAEP. Comprehensive review identifying 28 evidence-based practices for autism intervention including visual supports, social narratives, and peer-mediated interventions.",
+      "sourceLink": "https://ncaep.fpg.unc.edu/wp-content/uploads/EBP-Report-2020.pdf"
+    },
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "asd_task_analysis_checklist",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "interaction",
+    "phaseScope": [
+      "guided_practice",
+      "independent_practice"
+    ],
+    "slotTargets": [
+      "direction_steps"
+    ],
+    "defaultParameters": {
+      "max_steps": 7,
+      "checkbox": true,
+      "icons": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "asd_routine_support"
+        }
+      ],
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "organization_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "asd_routine_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "organization_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"asd_routine_support\" OR iep==yes AND needs_tags contains \"organization_support\" OR plan_504==yes AND needs_tags contains \"asd_routine_support\" OR plan_504==yes AND needs_tags contains \"organization_support\"",
+    "teacherPrompt": "Provide numbered checklist for multi-step tasks (3-7 steps max per chunk). Include checkbox for each step. Add icons where helpful. Prompt student to check off each completed step.",
+    "studentMicrocopy": "Use this checklist to track your progress. Check off each step as you complete it. If you get stuck,  this shows you what to do next.",
+    "udlHlpTags": [
+      "UDL 6.2",
+      "UDL 6.4",
+      "HLP16"
+    ],
+    "evidence": {
+      "citationText": "AFIRM Team. Autism Focused Intervention Resources and Modules. UNC FPG. Free online modules providing step-by-step instructions for implementing evidence-based practices for autism, including antecedent-based interventions and task analysis.",
+      "sourceLink": "https://afirm.fpg.unc.edu/afirm-modules/"
+    },
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "asd_transition_warning_sequence",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "timing",
+    "phaseScope": "all",
+    "slotTargets": [
+      "transition_cue"
+    ],
+    "defaultParameters": {
+      "warnings": [
+        5,
+        2,
+        0.5
+      ],
+      "verbal": true,
+      "visual": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "asd_routine_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "asd_routine_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"asd_routine_support\" OR plan_504==yes AND needs_tags contains \"asd_routine_support\"",
+    "teacherPrompt": "Provide verbal and/or visual warnings at 5-minute, 2-minute, and 30-second intervals before transitions. Use consistent language: 'Five minutes until we switch activities.'",
+    "studentMicrocopy": "In [X] minutes, we'll be moving to [next activity]. Start wrapping up your work.",
+    "udlHlpTags": [
+      "UDL 7.2",
+      "HLP7"
+    ],
+    "evidence": {
+      "citationText": "AFIRM Team. Autism Focused Intervention Resources and Modules. UNC FPG. Free online modules providing step-by-step instructions for implementing evidence-based practices for autism, including antecedent-based interventions and task analysis.",
+      "sourceLink": "https://afirm.fpg.unc.edu/afirm-modules/"
+    },
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "asd_interest_based_examples",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "presentation",
+    "phaseScope": [
+      "model",
+      "guided_practice"
+    ],
+    "slotTargets": [
+      "support_sidebar"
+    ],
+    "defaultParameters": {
+      "interest_integration": true,
+      "student_choice": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "asd_social_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "asd_social_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"asd_social_support\" OR plan_504==yes AND needs_tags contains \"asd_social_support\"",
+    "teacherPrompt": "Identify 2-3 student special interests through student/family interview. Incorporate these topics into word problems, reading selections, or project options when naturally fitting.",
+    "studentMicrocopy": "This problem uses [interest topic] as an example. Think about what you know about [interest] to help you solve it.",
+    "udlHlpTags": [
+      "UDL 7.1",
+      "UDL 7.2",
+      "HLP18"
+    ],
+    "evidence": {
+      "citationText": "Steinbrenner et al. (2020). Evidence-Based Practices for Children, Youth, and Young Adults with Autism. NCAEP. Comprehensive review identifying 28 evidence-based practices for autism intervention including visual supports, social narratives, and peer-mediated interventions.",
+      "sourceLink": "https://ncaep.fpg.unc.edu/wp-content/uploads/EBP-Report-2020.pdf"
+    },
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "asd_literal_language_check",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "presentation",
+    "phaseScope": [
+      "model",
+      "guided_practice"
+    ],
+    "slotTargets": [
+      "support_sidebar"
+    ],
+    "defaultParameters": {
+      "idiom_explanation": true,
+      "check_understanding": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "asd_social_support"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "asd_social_support"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"asd_social_support\" OR plan_504==yes AND needs_tags contains \"asd_social_support\"",
+    "teacherPrompt": "After using idioms or figurative language, pause to check: 'When I said hit the books, I mean start studying hard, not actually hitting anything.' Explain implied meanings explicitly.",
+    "studentMicrocopy": "The phrase [idiom] means [literal explanation]. Let me know if you hear words that are confusing.",
+    "udlHlpTags": [
+      "UDL 2.1",
+      "HLP13"
+    ],
+    "evidence": {
+      "citationText": "Steinbrenner et al. (2020). Evidence-Based Practices for Children, Youth, and Young Adults with Autism. NCAEP. Comprehensive review identifying 28 evidence-based practices for autism intervention including visual supports, social narratives, and peer-mediated interventions.",
+      "sourceLink": "https://ncaep.fpg.unc.edu/wp-content/uploads/EBP-Report-2020.pdf"
+    },
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "ebd_check_in_check_out",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "interaction",
+    "phaseScope": [
+      "launch",
+      "exit_slip"
+    ],
+    "slotTargets": [
+      "support_sidebar"
+    ],
+    "defaultParameters": {
+      "dpr_scale": "0-2",
+      "target_behaviors": 3,
+      "goal_percent": 80
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "behavioral_regulation"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "behavioral_regulation"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"behavioral_regulation\" OR plan_504==yes AND needs_tags contains \"behavioral_regulation\"",
+    "teacherPrompt": "Provide Daily Progress Report (DPR) rating student on 2-3 target behaviors each period (0-2 scale). Student checks in with mentor morning/afternoon. Points toward daily/weekly goal (typically 80%).",
+    "studentMicrocopy": "Check in each morning to get your goal for the day. Teachers will give feedback each period. Check out at the end of the day to see how you did!",
+    "udlHlpTags": [
+      "UDL 6.4",
+      "UDL 9.3",
+      "HLP7",
+      "HLP22"
+    ],
+    "evidence": {
+      "citationText": "Center on PBIS (2024). Positive Behavioral Interventions & Supports. Research-based framework for Tier 2/3 behavioral interventions including Check-In/Check-Out, self-monitoring, and function-based support.",
+      "sourceLink": "https://www.pbis.org/"
+    },
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "ebd_self_monitoring_checklist",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "interaction",
+    "phaseScope": [
+      "guided_practice",
+      "independent_practice"
+    ],
+    "slotTargets": [
+      "support_sidebar"
+    ],
+    "defaultParameters": {
+      "behaviors": 5,
+      "frequency_min": 10,
+      "scale": "yes_no"
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "behavioral_regulation"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "behavioral_regulation"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"behavioral_regulation\" OR plan_504==yes AND needs_tags contains \"behavioral_regulation\"",
+    "teacherPrompt": "Provide checklist with 3-5 observable behaviors worded positively ('I stayed in my seat'). Cue student to self-rate at regular intervals. Compare ratings briefly with student. Celebrate accuracy and meeting goals.",
+    "studentMicrocopy": "Rate yourself on each behavior when you hear the cue/at each transition. Circle Yes or No. We'll compare notes at the end of class.",
+    "udlHlpTags": [
+      "UDL 6.4",
+      "UDL 9.2",
+      "HLP18"
+    ],
+    "evidence": {
+      "citationText": "Center on PBIS (2024). Positive Behavioral Interventions & Supports. Research-based framework for Tier 2/3 behavioral interventions including Check-In/Check-Out, self-monitoring, and function-based support.",
+      "sourceLink": "https://www.pbis.org/"
+    },
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "ebd_choice_board",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "interaction",
+    "phaseScope": [
+      "guided_practice",
+      "independent_practice"
+    ],
+    "slotTargets": [
+      "support_sidebar"
+    ],
+    "defaultParameters": {
+      "choices": 3,
+      "types": [
+        "order",
+        "materials",
+        "location",
+        "format"
+      ]
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "behavioral_regulation"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "behavioral_regulation"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"behavioral_regulation\" OR plan_504==yes AND needs_tags contains \"behavioral_regulation\"",
+    "teacherPrompt": "Present 2-3 equivalent task options: 'Would you like to complete the math problems first or the reading response first?' All options achieve same learning goal. Offer choice before student shows frustration.",
+    "studentMicrocopy": "You get to choose: [Option A], [Option B], or [Option C]. Pick whichever works best for you—all three help you learn [skill].",
+    "udlHlpTags": [
+      "UDL 7.1",
+      "UDL 9.2",
+      "HLP18"
+    ],
+    "evidence": {
+      "citationText": "Center on PBIS (2024). Positive Behavioral Interventions & Supports. Research-based framework for Tier 2/3 behavioral interventions including Check-In/Check-Out, self-monitoring, and function-based support.",
+      "sourceLink": "https://www.pbis.org/"
+    },
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "ebd_cool_down_protocol",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "environment",
+    "phaseScope": "all",
+    "slotTargets": [
+      "environment_box"
+    ],
+    "defaultParameters": {
+      "duration_min": 15,
+      "location": "designated",
+      "reentry": "structured"
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "behavioral_regulation"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "behavioral_regulation"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"behavioral_regulation\" OR plan_504==yes AND needs_tags contains \"behavioral_regulation\"",
+    "teacherPrompt": "Establish designated cool-down location. Teach and practice protocol when calm. When student shows early signs, cue: 'It looks like you might need a break. You can use the cool-down space.' After 5-15 minutes, check regulation. Facilitate dignified return without excessive attention.",
+    "studentMicrocopy": "If you need to cool down, you can go to [location]. Take the time you need (up to [X] minutes). When you're ready, [re-entry instruction].",
+    "udlHlpTags": [
+      "UDL 7.3",
+      "UDL 9.2",
+      "HLP9"
+    ],
+    "evidence": {
+      "citationText": "Center on PBIS (2024). Positive Behavioral Interventions & Supports. Research-based framework for Tier 2/3 behavioral interventions including Check-In/Check-Out, self-monitoring, and function-based support.",
+      "sourceLink": "https://www.pbis.org/"
+    },
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "ebd_precorrection_prompt",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "interaction",
+    "phaseScope": [
+      "launch"
+    ],
+    "slotTargets": [
+      "support_sidebar"
+    ],
+    "defaultParameters": {
+      "timing": "before_challenge",
+      "delivery": "private",
+      "positive_frame": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "behavioral_regulation"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "behavioral_regulation"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"behavioral_regulation\" OR plan_504==yes AND needs_tags contains \"behavioral_regulation\"",
+    "teacherPrompt": "Before challenging activities, briefly remind student of expectation and strategy: 'Remember, during group work you can use your break card if you feel frustrated.' Deliver privately, positively, briefly.",
+    "studentMicrocopy": "Before we start, remember: [expected behavior]. You've got this—use [strategy] if you need it.",
+    "udlHlpTags": [
+      "UDL 7.3",
+      "HLP7",
+      "HLP9"
+    ],
+    "evidence": {
+      "citationText": "Center on PBIS (2024). Positive Behavioral Interventions & Supports. Research-based framework for Tier 2/3 behavioral interventions including Check-In/Check-Out, self-monitoring, and function-based support.",
+      "sourceLink": "https://www.pbis.org/"
+    },
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "ebd_break_pass_system",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "timing",
+    "phaseScope": "all",
+    "slotTargets": [
+      "environment_box"
+    ],
+    "defaultParameters": {
+      "passes_per_class": 3,
+      "duration_min": 5,
+      "no_questions": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "behavioral_regulation"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "behavioral_regulation"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"behavioral_regulation\" OR plan_504==yes AND needs_tags contains \"behavioral_regulation\"",
+    "teacherPrompt": "Provide student with set number of break passes (2-3 per class typically). Student presents pass quietly to request break. No questions asked. Track usage to identify patterns.",
+    "studentMicrocopy": "You have [X] break passes for this class. Show your pass when you need a short break. Use them wisely—they're your tool for staying regulated.",
+    "udlHlpTags": [
+      "UDL 7.1",
+      "UDL 9.2",
+      "HLP18"
+    ],
+    "evidence": {
+      "citationText": "Center on PBIS (2024). Positive Behavioral Interventions & Supports. Research-based framework for Tier 2/3 behavioral interventions including Check-In/Check-Out, self-monitoring, and function-based support.",
+      "sourceLink": "https://www.pbis.org/"
+    },
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "ebd_positive_reinforcement",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "interaction",
+    "phaseScope": "all",
+    "slotTargets": [
+      "support_sidebar"
+    ],
+    "defaultParameters": {
+      "ratio": "4:1",
+      "specific_praise": true,
+      "private_option": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "behavioral_regulation"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "behavioral_regulation"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"behavioral_regulation\" OR plan_504==yes AND needs_tags contains \"behavioral_regulation\"",
+    "teacherPrompt": "Provide specific praise immediately after target behaviors: 'Nice job raising your hand and waiting to be called on.' Avoid generic 'good job.' Track interactions to ensure 4:1 ratio.",
+    "studentMicrocopy": "When you [target behavior], you earn [reinforcer]. Let's see how many you can earn today!",
+    "udlHlpTags": [
+      "UDL 8.1",
+      "HLP22"
+    ],
+    "evidence": {
+      "citationText": "Center on PBIS (2024). Positive Behavioral Interventions & Supports. Research-based framework for Tier 2/3 behavioral interventions including Check-In/Check-Out, self-monitoring, and function-based support.",
+      "sourceLink": "https://www.pbis.org/"
+    },
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "ebd_antecedent_management",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "environment",
+    "phaseScope": "all",
+    "slotTargets": [
+      "environment_box"
+    ],
+    "defaultParameters": {
+      "trigger_modifications": true,
+      "environment_adjustments": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "behavioral_regulation"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "behavioral_regulation"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"behavioral_regulation\" OR plan_504==yes AND needs_tags contains \"behavioral_regulation\"",
+    "teacherPrompt": "Review FBA or observe patterns. Modify environment or instruction BEFORE challenging situations. Document effectiveness. Common modifications: pre-teach difficult tasks, strategic seating, structured interactions.",
+    "studentMicrocopy": "We've set things up to help you be successful. Let me know if something is making it hard to focus.",
+    "udlHlpTags": [
+      "UDL 7.3",
+      "HLP10"
+    ],
+    "evidence": {
+      "citationText": "Center on PBIS (2024). Positive Behavioral Interventions & Supports. Research-based framework for Tier 2/3 behavioral interventions including Check-In/Check-Out, self-monitoring, and function-based support.",
+      "sourceLink": "https://www.pbis.org/"
+    },
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "ebd_private_signal_system",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "interaction",
+    "phaseScope": "all",
+    "slotTargets": [
+      "support_sidebar"
+    ],
+    "defaultParameters": {
+      "signal_type": "nonverbal",
+      "collaborative": true,
+      "response_taught": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "behavioral_regulation"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "behavioral_regulation"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"behavioral_regulation\" OR plan_504==yes AND needs_tags contains \"behavioral_regulation\"",
+    "teacherPrompt": "Collaboratively establish a discreet signal (touch desk, hand gesture, visual cue). When used, student knows to self-check target behavior. No verbal commentary needed.",
+    "studentMicrocopy": "When I [signal], that's our private cue to check in on [target behavior]. No one else needs to know—it's just between us.",
+    "udlHlpTags": [
+      "UDL 7.3",
+      "HLP7",
+      "HLP8"
+    ],
+    "evidence": {
+      "citationText": "Center on PBIS (2024). Positive Behavioral Interventions & Supports. Research-based framework for Tier 2/3 behavioral interventions including Check-In/Check-Out, self-monitoring, and function-based support.",
+      "sourceLink": "https://www.pbis.org/"
+    },
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "ebd_restorative_reentry",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "interaction",
+    "phaseScope": "all",
+    "slotTargets": [
+      "support_sidebar"
+    ],
+    "defaultParameters": {
+      "timing": "after_regulation",
+      "duration_min": 5,
+      "forward_focus": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "behavioral_regulation"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "behavioral_regulation"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"behavioral_regulation\" OR plan_504==yes AND needs_tags contains \"behavioral_regulation\"",
+    "teacherPrompt": "After regulation is restored (not immediately after incident), have brief conversation: 'What happened? What were you thinking/feeling? Who was affected? What do you need to make things right? What can you do differently next time?' Keep to 3-5 minutes.",
+    "studentMicrocopy": "Let's talk briefly about what happened so we can move forward. This isn't about punishment—it's about understanding and making things right.",
+    "udlHlpTags": [
+      "UDL 9.2",
+      "HLP9"
+    ],
+    "evidence": {
+      "citationText": "Center on PBIS (2024). Positive Behavioral Interventions & Supports. Research-based framework for Tier 2/3 behavioral interventions including Check-In/Check-Out, self-monitoring, and function-based support.",
+      "sourceLink": "https://www.pbis.org/"
+    },
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "pm_fatigue_management",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "timing",
+    "phaseScope": "all",
+    "slotTargets": [
+      "timing_print"
+    ],
+    "defaultParameters": {
+      "break_intervals": true,
+      "multi_session": true,
+      "pacing": "student_led"
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "physical_accessibility"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "physical_accessibility"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"physical_accessibility\" OR plan_504==yes AND needs_tags contains \"physical_accessibility\"",
+    "teacherPrompt": "Build natural break points into tasks. Allow standing/stretching. If student shows fatigue signs (slowing, errors increasing, physical discomfort), prompt break. Don't penalize pacing.",
+    "studentMicrocopy": "Take breaks when you need them to maintain your energy. You can complete this over [timeframe] if that works better for you.",
+    "udlHlpTags": [
+      "UDL 7.2",
+      "UDL 7.3",
+      "HLP18"
+    ],
+    "evidence": {
+      "citationText": "IRIS Center. Accommodations: Instructional and Testing Supports. Vanderbilt University. Comprehensive module on accommodation categories, selection, and implementation for students with disabilities.",
+      "sourceLink": "https://iris.peabody.vanderbilt.edu/module/acc/"
+    },
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "pm_alternative_response_methods",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "response",
+    "phaseScope": [
+      "guided_practice",
+      "independent_practice",
+      "exit_slip"
+    ],
+    "slotTargets": [
+      "alt_response_box"
+    ],
+    "defaultParameters": {
+      "modes": [
+        "oral",
+        "typed",
+        "scribed",
+        "recorded",
+        "selected"
+      ]
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "physical_accessibility"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "physical_accessibility"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"physical_accessibility\" OR plan_504==yes AND needs_tags contains \"physical_accessibility\"",
+    "teacherPrompt": "When motor demands would mask knowledge demonstration, offer alternatives: 'You can tell me your answer, type it, or have me write what you say.' Ensure alternative doesn't change what's being assessed.",
+    "studentMicrocopy": "You can show what you know by: speaking your answer, typing, or having someone write what you say. Choose what works best for you.",
+    "udlHlpTags": [
+      "UDL 4.1",
+      "UDL 5.1",
+      "HLP19"
+    ],
+    "evidence": {
+      "citationText": "IRIS Center. Accommodations: Instructional and Testing Supports. Vanderbilt University. Comprehensive module on accommodation categories, selection, and implementation for students with disabilities.",
+      "sourceLink": "https://iris.peabody.vanderbilt.edu/module/acc/"
+    },
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "pm_assistive_tech_access",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "environment",
+    "phaseScope": "all",
+    "slotTargets": [
+      "materials_list"
+    ],
+    "defaultParameters": {
+      "devices": [
+        "switch",
+        "voice_control",
+        "adapted_keyboard"
+      ],
+      "always_available": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "physical_accessibility"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "physical_accessibility"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"physical_accessibility\" OR plan_504==yes AND needs_tags contains \"physical_accessibility\"",
+    "teacherPrompt": "Ensure AT is charged, available, and student knows how to use it. Don't remove AT as consequence. Allow time for AT use in pacing.",
+    "studentMicrocopy": "Use your [AT device/software] whenever it helps you access learning or show what you know.",
+    "udlHlpTags": [
+      "UDL 4.2",
+      "HLP19"
+    ],
+    "evidence": {
+      "citationText": "IRIS Center. Accommodations: Instructional and Testing Supports. Vanderbilt University. Comprehensive module on accommodation categories, selection, and implementation for students with disabilities.",
+      "sourceLink": "https://iris.peabody.vanderbilt.edu/module/acc/"
+    },
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "pm_positioning_support",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "environment",
+    "phaseScope": "all",
+    "slotTargets": [
+      "environment_box"
+    ],
+    "defaultParameters": {
+      "ot_recommended": true,
+      "adjustable": true,
+      "consistent": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "physical_accessibility"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "physical_accessibility"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"physical_accessibility\" OR plan_504==yes AND needs_tags contains \"physical_accessibility\"",
+    "teacherPrompt": "Ensure student has consistent access to recommended positioning supports. Allow position changes throughout class. Consult OT for specific recommendations.",
+    "studentMicrocopy": "Your workspace is set up to help your body feel comfortable so you can focus on learning. Let me know if anything needs adjustment.",
+    "udlHlpTags": [
+      "UDL 4.2",
+      "UDL 7.3"
+    ],
+    "evidence": {
+      "citationText": "IRIS Center. Accommodations: Instructional and Testing Supports. Vanderbilt University. Comprehensive module on accommodation categories, selection, and implementation for students with disabilities.",
+      "sourceLink": "https://iris.peabody.vanderbilt.edu/module/acc/"
+    },
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "pm_extended_time_motor",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "timing",
+    "phaseScope": [
+      "guided_practice",
+      "independent_practice",
+      "exit_slip"
+    ],
+    "slotTargets": [
+      "timing_print"
+    ],
+    "defaultParameters": {
+      "time_multiplier": 2,
+      "motor_tasks": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "physical_accessibility"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "physical_accessibility"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"physical_accessibility\" OR plan_504==yes AND needs_tags contains \"physical_accessibility\"",
+    "teacherPrompt": "Automatically provide extended time for motor-heavy tasks. Don't require student to ask. If test, arrange separate timing so student doesn't feel rushed while peers finish.",
+    "studentMicrocopy": "You have extra time for this task so you can work at a pace that's comfortable for you.",
+    "udlHlpTags": [
+      "UDL 7.3",
+      "HLP13"
+    ],
+    "evidence": {
+      "citationText": "IRIS Center. Accommodations: Instructional and Testing Supports. Vanderbilt University. Comprehensive module on accommodation categories, selection, and implementation for students with disabilities.",
+      "sourceLink": "https://iris.peabody.vanderbilt.edu/module/acc/"
+    },
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "pm_reduced_motor_load",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "presentation",
+    "phaseScope": [
+      "guided_practice",
+      "independent_practice"
+    ],
+    "slotTargets": [
+      "presentation_mode"
+    ],
+    "defaultParameters": {
+      "fill_in_blank": true,
+      "provided_notes": true,
+      "reduced_copying": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "physical_accessibility"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "physical_accessibility"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"physical_accessibility\" OR plan_504==yes AND needs_tags contains \"physical_accessibility\"",
+    "teacherPrompt": "Provide copies of board notes. Use fill-in-blank formats when full writing isn't the target. Reduce copying from board. Provide graphic organizers with partial completion.",
+    "studentMicrocopy": "You have a copy of the notes so you can focus on the ideas instead of writing everything down.",
+    "udlHlpTags": [
+      "UDL 4.1",
+      "UDL 5.2"
+    ],
+    "evidence": {
+      "citationText": "IRIS Center. Accommodations: Instructional and Testing Supports. Vanderbilt University. Comprehensive module on accommodation categories, selection, and implementation for students with disabilities.",
+      "sourceLink": "https://iris.peabody.vanderbilt.edu/module/acc/"
+    },
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "pm_peer_support_dignity",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "interaction",
+    "phaseScope": [
+      "guided_practice"
+    ],
+    "slotTargets": [
+      "roles_strip"
+    ],
+    "defaultParameters": {
+      "partnership_frame": true,
+      "reciprocal": true,
+      "trained": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "physical_accessibility"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "physical_accessibility"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"physical_accessibility\" OR plan_504==yes AND needs_tags contains \"physical_accessibility\"",
+    "teacherPrompt": "Train peer partners on respectful support. Frame as partnership, not helping. Ensure student with disability also has opportunities to contribute to peer. Rotate partners.",
+    "studentMicrocopy": "Your partner can help with [specific tasks] while you work together on the learning. You're partners—both contributing to the team.",
+    "udlHlpTags": [
+      "UDL 8.3",
+      "HLP17"
+    ],
+    "evidence": {
+      "citationText": "IRIS Center. Accommodations: Instructional and Testing Supports. Vanderbilt University. Comprehensive module on accommodation categories, selection, and implementation for students with disabilities.",
+      "sourceLink": "https://iris.peabody.vanderbilt.edu/module/acc/"
+    },
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "pm_environmental_accessibility",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "environment",
+    "phaseScope": "all",
+    "slotTargets": [
+      "environment_box"
+    ],
+    "defaultParameters": {
+      "clear_pathways": true,
+      "materials_reach": true,
+      "advance_notice": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "physical_accessibility"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "physical_accessibility"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"physical_accessibility\" OR plan_504==yes AND needs_tags contains \"physical_accessibility\"",
+    "teacherPrompt": "Ensure clear pathways for mobility devices. Arrange materials within student's reach. Consider lighting and acoustics. Provide advance notice of room changes.",
+    "studentMicrocopy": "Your workspace is set up so everything you need is easily accessible. Let me know if anything needs to be moved.",
+    "udlHlpTags": [
+      "UDL 4.2",
+      "UDL 7.3"
+    ],
+    "evidence": {
+      "citationText": "IRIS Center. Accommodations: Instructional and Testing Supports. Vanderbilt University. Comprehensive module on accommodation categories, selection, and implementation for students with disabilities.",
+      "sourceLink": "https://iris.peabody.vanderbilt.edu/module/acc/"
+    },
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "vi_high_contrast_materials",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "presentation",
+    "phaseScope": "all",
+    "slotTargets": [
+      "presentation_mode"
+    ],
+    "defaultParameters": {
+      "contrast_ratio": "7:1",
+      "font_size": 18,
+      "background": "cream"
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "visual_accessibility"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "visual_accessibility"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"visual_accessibility\" OR plan_504==yes AND needs_tags contains \"visual_accessibility\"",
+    "teacherPrompt": "Provide materials with high contrast. Avoid handouts with gray text, pale colors, or busy backgrounds. Use bold black on white/cream. Check with TVI for specific preferences.",
+    "studentMicrocopy": "Your materials are formatted to be easier to see. Let me know if you need a different color combination.",
+    "udlHlpTags": [
+      "UDL 1.1",
+      "UDL 1.4"
+    ],
+    "evidence": {
+      "citationText": "W3C (2018). WCAG 2.1 Success Criterion 1.4.3 Contrast (Minimum). Establishes 4.5:1 minimum contrast ratio for normal text and 7:1 for enhanced accessibility, accommodating vision loss equivalent to 20/40-20/80 acuity.",
+      "sourceLink": "https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html"
+    },
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "vi_audio_description",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "presentation",
+    "phaseScope": [
+      "model",
+      "guided_practice"
+    ],
+    "slotTargets": [
+      "presentation_mode"
+    ],
+    "defaultParameters": {
+      "visual_narration": true,
+      "demonstrations": true,
+      "spatial_info": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "visual_accessibility"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "visual_accessibility"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"visual_accessibility\" OR plan_504==yes AND needs_tags contains \"visual_accessibility\"",
+    "teacherPrompt": "Narrate visual content as you present: 'This graph shows population growth over time, with years on the bottom and population on the side. The line goes up steeply between 1950 and 2000.' Describe demonstrations as you do them.",
+    "studentMicrocopy": "I'll describe what's on the screen/board so you can follow along. Let me know if you need more detail about any visual.",
+    "udlHlpTags": [
+      "UDL 1.1",
+      "UDL 1.2",
+      "UDL 1.3"
+    ],
+    "evidence": {
+      "citationText": "Perkins School for the Blind. Common Classroom Accommodations for Low Vision. Guidance on large print, verbal spatial cueing, and audio description for students with visual impairments.",
+      "sourceLink": "https://www.perkins.org/"
+    },
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "vi_large_print_materials",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "presentation",
+    "phaseScope": "all",
+    "slotTargets": [
+      "presentation_mode"
+    ],
+    "defaultParameters": {
+      "font_size": 24,
+      "single_sided": true,
+      "line_spacing": 1.5,
+      "sans_serif": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "visual_accessibility"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "visual_accessibility"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"visual_accessibility\" OR plan_504==yes AND needs_tags contains \"visual_accessibility\"",
+    "teacherPrompt": "Enlarge handouts to specified font size. Single-sided printing only. Maintain image proportions. Provide materials same time as peers.",
+    "studentMicrocopy": "Your materials are formatted in the size that works best for you. Let me know if the size needs adjustment.",
+    "udlHlpTags": [
+      "UDL 1.1",
+      "HLP13"
+    ],
+    "evidence": {
+      "citationText": "Perkins School for the Blind. Common Classroom Accommodations for Low Vision. Guidance on large print, verbal spatial cueing, and audio description for students with visual impairments.",
+      "sourceLink": "https://www.perkins.org/"
+    },
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "vi_screen_reader_compatible",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "presentation",
+    "phaseScope": "all",
+    "slotTargets": [
+      "materials_list"
+    ],
+    "defaultParameters": {
+      "tagged_pdf": true,
+      "alt_text": true,
+      "heading_structure": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "visual_accessibility"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "visual_accessibility"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"visual_accessibility\" OR plan_504==yes AND needs_tags contains \"visual_accessibility\"",
+    "teacherPrompt": "Ensure PDFs are tagged/accessible (not scanned images). Add alt-text to all images. Use heading structure in documents. Check accessibility before distributing digital materials.",
+    "studentMicrocopy": "Digital materials are formatted to work with your screen reader. Let me know if anything isn't reading correctly.",
+    "udlHlpTags": [
+      "UDL 1.1",
+      "UDL 1.3",
+      "HLP19"
+    ],
+    "evidence": {
+      "citationText": "CAST (2018). Universal Design for Learning Guidelines 2.2. Framework for optimizing teaching through multiple means of engagement, representation, and action/expression.",
+      "sourceLink": "https://udlguidelines.cast.org/"
+    },
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "vi_verbal_spatial_cueing",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "presentation",
+    "phaseScope": "all",
+    "slotTargets": [
+      "support_sidebar"
+    ],
+    "defaultParameters": {
+      "clock_positions": true,
+      "distance_references": true,
+      "landmarks": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "visual_accessibility"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "visual_accessibility"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"visual_accessibility\" OR plan_504==yes AND needs_tags contains \"visual_accessibility\"",
+    "teacherPrompt": "Replace visual pointing with verbal descriptions: 'Your materials are at 3 o'clock from your desk, about an arm's length away.' Be consistent with vocabulary.",
+    "studentMicrocopy": "I'll tell you exactly where things are using clock positions and distance. 12 o'clock is straight ahead of you.",
+    "udlHlpTags": [
+      "UDL 1.3",
+      "UDL 2.1"
+    ],
+    "evidence": {
+      "citationText": "Perkins School for the Blind. Common Classroom Accommodations for Low Vision. Guidance on large print, verbal spatial cueing, and audio description for students with visual impairments.",
+      "sourceLink": "https://www.perkins.org/"
+    },
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "vi_tactile_braille_materials",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "presentation",
+    "phaseScope": "all",
+    "slotTargets": [
+      "materials_list"
+    ],
+    "defaultParameters": {
+      "lead_time_weeks": 3,
+      "source_files": true,
+      "tvi_coordination": true
+    },
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "visual_accessibility"
+        }
+      ],
+      [
+        {
+          "kind": "plan_504",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "visual_accessibility"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "iep==yes AND needs_tags contains \"visual_accessibility\" OR plan_504==yes AND needs_tags contains \"visual_accessibility\"",
+    "teacherPrompt": "Submit materials to TVI/transcriber with adequate lead time. Provide digital source files (Word preferred over PDF). Simplify graphics for tactile production. Preview materials with student.",
+    "studentMicrocopy": "Your Braille/tactile materials are ready. Let me know if anything isn't clear or if you need more time to explore the tactile graphics.",
+    "udlHlpTags": [
+      "UDL 1.3",
+      "HLP13"
+    ],
+    "evidence": {
+      "citationText": "Perkins School for the Blind. Common Classroom Accommodations for Low Vision. Guidance on large print, verbal spatial cueing, and audio description for students with visual impairments.",
+      "sourceLink": "https://www.perkins.org/"
+    },
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "annotated_exemplar",
+    "labels": [
+      "IEP",
+      "504",
+      "All"
+    ],
+    "mode": "presentation",
+    "phaseScope": [
+      "independent_practice"
+    ],
+    "slotTargets": [
+      "support_slot"
+    ],
+    "defaultParameters": {},
+    "appliesWhen": [
+      [
+        {
+          "kind": "needs_tag",
+          "tag": "writing_support"
+        }
+      ],
+      [
+        {
+          "kind": "needs_tag",
+          "tag": "explicit_models"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "needs_tags contains \"writing_support\" OR needs_tags contains \"explicit_models\"",
+    "teacherPrompt": "Provide annotated exemplar showing model response with visible thinking annotations. Display alongside student workspace.",
+    "studentMicrocopy": "Here's an example of excellent work with notes showing what makes it strong. Use it as a guide for your own writing.",
+    "udlHlpTags": [
+      "HLP16",
+      "UDL3.3"
+    ],
+    "evidence": {
+      "citationText": "McLeskey et al. (2017). High-Leverage Practices in Special Education. HLP #16 (Explicit Instruction) emphasizes providing models with visible thinking and demonstrating what 'done' looks like through annotated exemplars.",
+      "sourceLink": "https://highleveragepractices.org/"
+    },
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "self_monitoring_checklist",
+    "labels": [
+      "IEP",
+      "504"
+    ],
+    "mode": "interaction",
+    "phaseScope": [
+      "independent_practice"
+    ],
+    "slotTargets": [
+      "support_slot"
+    ],
+    "defaultParameters": {},
+    "appliesWhen": [
+      [
+        {
+          "kind": "needs_tag",
+          "tag": "executive_function"
+        }
+      ],
+      [
+        {
+          "kind": "needs_tag",
+          "tag": "self_regulation"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "needs_tags contains \"executive_function\" OR needs_tags contains \"self_regulation\"",
+    "teacherPrompt": "Provide self-monitoring checklist for student to track task completion. Remind student to check boxes before submitting.",
+    "studentMicrocopy": "Use this checklist to make sure you've included everything. Check each box as you complete it.",
+    "udlHlpTags": [
+      "HLP14",
+      "UDL6.4"
+    ],
+    "evidence": {
+      "citationText": "Graham & Harris (2005). Self-Regulated Strategy Development. Research shows self-monitoring checklists improve metacognition and task completion, particularly for students with executive function challenges.",
+      "sourceLink": "https://www.tandfonline.com/doi/abs/10.1207/s15326985ep4002_4"
+    },
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "simplified_directions",
+    "labels": [
+      "IEP",
+      "EL"
+    ],
+    "mode": "presentation",
+    "phaseScope": "all",
+    "slotTargets": [
+      "directions_slot"
+    ],
+    "defaultParameters": {},
+    "appliesWhen": [
+      [
+        {
+          "kind": "iep",
+          "equals": true
+        },
+        {
+          "kind": "needs_tag",
+          "tag": "reading_sld"
+        }
+      ],
+      [
+        {
+          "kind": "ml_level_lte",
+          "value": 2
+        }
+      ]
+    ],
+    "appliesWhenRaw": "(iep==yes AND needs_tags contains \"reading_sld\") OR ml_level <= 2",
+    "teacherPrompt": "Provide simplified directions with reduced linguistic complexity. Same expectations, clearer language.",
+    "studentMicrocopy": "Here are the directions in simpler words. The work is the same—just easier to understand.",
+    "udlHlpTags": [
+      "UDL2.1",
+      "IRIS"
+    ],
+    "evidence": {
+      "citationText": "IRIS Center. Accommodations: Instructional and Testing Supports. Simplifying directions while maintaining expectations is a research-based presentation accommodation that reduces linguistic complexity without changing cognitive demand.",
+      "sourceLink": "https://iris.peabody.vanderbilt.edu/module/acc/"
+    },
+    "elOnly": false,
+    "languageSupportType": ""
+  },
+  {
+    "id": "visual_vocabulary_card",
+    "labels": [
+      "IEP",
+      "EL",
+      "504"
+    ],
+    "mode": "presentation",
+    "phaseScope": [
+      "launch"
+    ],
+    "slotTargets": [
+      "vocabulary_slot"
+    ],
+    "defaultParameters": {},
+    "appliesWhen": [
+      [
+        {
+          "kind": "needs_tag",
+          "tag": "vocabulary_support"
+        }
+      ],
+      [
+        {
+          "kind": "ml_level_lte",
+          "value": 3
+        }
+      ],
+      [
+        {
+          "kind": "needs_tag",
+          "tag": "visual_learner"
+        }
+      ]
+    ],
+    "appliesWhenRaw": "needs_tags contains \"vocabulary_support\" OR ml_level <= 3 OR needs_tags contains \"visual_learner\"",
+    "teacherPrompt": "Provide visual vocabulary cards with images definitions and text connections. Allow students to reference during task.",
+    "studentMicrocopy": "Use these cards to understand new words. Each one shows the word in pictures and explains how it's used in our reading.",
+    "udlHlpTags": [
+      "UDL2.5",
+      "SIOP"
+    ],
+    "evidence": {
+      "citationText": "Echevarría, Vogt, & Short (2017). Making Content Comprehensible for English Learners: The SIOP Model. Visual vocabulary cards with images, definitions, and text connections support academic language acquisition.",
+      "sourceLink": "https://www.cal.org/siop/"
+    },
+    "elOnly": false,
+    "languageSupportType": "vocabulary_support"
+  }
+]

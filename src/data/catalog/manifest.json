@@ -1,0 +1,78 @@
+{
+  "builtAt": "2026-05-11T07:48:17.112Z",
+  "version": 1,
+  "files": [
+    {
+      "name": "lesson_phases.json",
+      "rowCount": 5
+    },
+    {
+      "name": "dok_lexicon.json",
+      "rowCount": 81
+    },
+    {
+      "name": "instructional_models.json",
+      "rowCount": 35
+    },
+    {
+      "name": "representation_tags.json",
+      "rowCount": 17
+    },
+    {
+      "name": "equip_udl_rubric.json",
+      "rowCount": 6
+    },
+    {
+      "name": "resources.json",
+      "rowCount": 333
+    },
+    {
+      "name": "exit_slips.json",
+      "rowCount": 205
+    },
+    {
+      "name": "openers.json",
+      "rowCount": 60
+    },
+    {
+      "name": "misconceptions.json",
+      "rowCount": 121
+    },
+    {
+      "name": "scaffolds_ela.json",
+      "rowCount": 71
+    },
+    {
+      "name": "scaffolds_math.json",
+      "rowCount": 95
+    },
+    {
+      "name": "scaffolds_science.json",
+      "rowCount": 87
+    },
+    {
+      "name": "scaffolds_sel.json",
+      "rowCount": 76
+    },
+    {
+      "name": "scaffolds_social_studies.json",
+      "rowCount": 70
+    },
+    {
+      "name": "bilingual_glossary.json",
+      "rowCount": 1042
+    },
+    {
+      "name": "citations.json",
+      "rowCount": 76
+    },
+    {
+      "name": "accommodations.json",
+      "rowCount": 99
+    },
+    {
+      "name": "standards.json",
+      "rowCount": 466
+    }
+  ]
+}

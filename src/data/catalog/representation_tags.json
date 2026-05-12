@@ -1,0 +1,104 @@
+[
+  {
+    "id": "rtag.context.multiple_perspectives",
+    "category": "context",
+    "label": "Multiple Perspectives",
+    "description": "Include diverse viewpoints"
+  },
+  {
+    "id": "rtag.context.student_voice",
+    "category": "pedagogy",
+    "label": "Student Voice",
+    "description": "Empower student expression"
+  },
+  {
+    "id": "rtag.context.global_voices",
+    "category": "context",
+    "label": "Global Voices",
+    "description": "Incorporate international perspectives"
+  },
+  {
+    "id": "rtag.pedagogy.project_based_relevance",
+    "category": "pedagogy",
+    "label": "Project-Based Relevance",
+    "description": "Connect to real-world projects"
+  },
+  {
+    "id": "rtag.media.multimodal_resources",
+    "category": "media",
+    "label": "Multimodal Resources",
+    "description": "Use multiple media types"
+  },
+  {
+    "id": "rtag.language.plain_language_access",
+    "category": "language",
+    "label": "Plain Language Access",
+    "description": "Use accessible language"
+  },
+  {
+    "id": "rtag.identity.cultural_authenticity",
+    "category": "identity",
+    "label": "Cultural Authenticity",
+    "description": "Respect cultural backgrounds"
+  },
+  {
+    "id": "rtag.media.graphic_organizers",
+    "category": "media",
+    "label": "Graphic Organizers",
+    "description": "Visual organization tools"
+  },
+  {
+    "id": "rtag.pedagogy.collaborative_dialogue",
+    "category": "pedagogy",
+    "label": "Collaborative Dialogue",
+    "description": "Promote peer discussion"
+  },
+  {
+    "id": "rtag.language.inclusive_language",
+    "category": "language",
+    "label": "Inclusive Language",
+    "description": "Use welcoming language"
+  },
+  {
+    "id": "rtag.identity.intersectional_identities",
+    "category": "identity",
+    "label": "Intersectional Identities",
+    "description": "Recognize multiple identities"
+  },
+  {
+    "id": "rtag.identity.lgbtqia_inclusion",
+    "category": "identity",
+    "label": "LGBTQIA+ Inclusion",
+    "description": "Affirm LGBTQIA+ identities"
+  },
+  {
+    "id": "rtag.pedagogy.student_voice",
+    "category": "pedagogy",
+    "label": "Student Voice (Pedagogy)",
+    "description": "Empower student expression through pedagogy"
+  },
+  {
+    "id": "rtag.language.home_language",
+    "category": "language",
+    "label": "Home Language",
+    "description": "Support students' home/heritage languages"
+  },
+  {
+    "id": "rtag.identity.neurodiversity",
+    "category": "identity",
+    "label": "Neurodiversity",
+    "description": "Support neurodivergent learners"
+  },
+  {
+    "id": "rtag.identity.disability_inclusion",
+    "category": "identity",
+    "label": "Disability Inclusion",
+    "description": "Include students with disabilities"
+  },
+  {
+    "id": "rtag.media.accessible_media",
+    "category": "media",
+    "label": "Accessible Media",
+    "description": "Provide accessible media formats"
+  }
+]

@@ -1,0 +1,4292 @@
+[
+  {
+    "id": "ela.academic_discourse_rubric",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Academic Discourse Rubric",
+    "type": "linguistic",
+    "problemType": "Inconsistent expectations for participation quality",
+    "targetMisconception": "Speaking grades are subjective or based on frequency",
+    "teacherMoves": [
+      "Co-construct rubric criteria (UDL 7.2)",
+      "Model proficiency levels (HLP Explicit Instruction)",
+      "Provide ongoing feedback aligned to rubric"
+    ],
+    "studentTasks": [
+      "Self-assess oral contributions",
+      "Identify next goal",
+      "Practice higher-level discourse moves"
+    ],
+    "supports": [
+      "Rubric with examples (UDL 3.3)",
+      "Anchor samples (HLP Exemplars)",
+      "Self-evaluation log (UDL 6.3)"
+    ],
+    "fadePlan": "Teacher-created rubric ‚Üí co-created ‚Üí student-refined/self-assessed.",
+    "whenNotToUse": "At the very beginning of the year before norms exist.",
+    "formativeChecks": [
+      "- Compare self vs teacher scores",
+      "reflect on one discourse goal"
+    ],
+    "bloomLevel": "evaluate",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 6.3",
+      "UDL 7.2",
+      "HLP Explicit Instruction",
+      "HLP Exemplars"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.pedagogy.student_voice",
+      "rtag.context.global_voices"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge",
+      "co_design_with_community"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "ASCD-CFU"
+    ],
+    "lastUpdated": "11/2/25"
+  },
+  {
+    "id": "ela.academic_language_functions_toolkit",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Academic Language Functions Toolkit (Argue‚ÄìExplain‚ÄìCompare‚ÄìEvaluate)",
+    "type": "linguistic",
+    "problemType": "Lack of function-specific phrases for academic moves",
+    "targetMisconception": "Academic English is just sounding formal",
+    "teacherMoves": [
+      "Introduce four functions with L1/English examples (UDL 2.1)",
+      "Model choosing the right function for task/audience (HLP Explicit Instruction)",
+      "Co-create class toolkit of phrases"
+    ],
+    "studentTasks": [
+      "Select function for prompt",
+      "justify choice",
+      "Draft with function-specific frames",
+      "Replace frames with original phrasing"
+    ],
+    "supports": [
+      "Function‚Üíframes chart (UDL 3.3)",
+      "Bilingual phrase bank (UDL 2.1)",
+      "Mini rubrics for function accuracy (UDL 6.3)"
+    ],
+    "fadePlan": "Bilingual frames ‚Üí English starters ‚Üí independent phrasing demonstrating function.",
+    "whenNotToUse": "When creative writing intentionally departs from academic register.",
+    "formativeChecks": [
+      "- Quick check: circle function used and highlight signaling phrase",
+      "Quick check: Identify which function you used and why."
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 2.1",
+      "UDL 3.3",
+      "UDL 6.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "responsible-decision-making",
+    "representationTags": [
+      "rtag.language.home_language",
+      "rtag.language.inclusive_language",
+      "rtag.context.global_voices"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "UDL-CAST-3.0",
+      "HLP-CEC"
+    ],
+    "lastUpdated": "11/2/25"
+  },
+  {
+    "id": "ela.academic_language_scaffolds",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Academic Language Scaffolding System",
+    "type": "linguistic",
+    "problemType": "Students struggle with academic register and discourse",
+    "targetMisconception": "Belief that academic language is arbitrary rather than serving specific purposes",
+    "teacherMoves": [
+      "Teach academic language functions and purposes (HLP Explicit Instruction)",
+      "Provide scaffolds for academic language production (UDL 5.3)",
+      "Practice in progressively challenging contexts (UDL 8.3)",
+      "Connect to professional and academic purposes (UDL 7.2)"
+    ],
+    "studentTasks": [
+      "Identify academic language demands of tasks",
+      "Use sentence frames for academic functions",
+      "Practice academic register in speaking and writing",
+      "Evaluate own academic language use",
+      "Develop academic language repertoire"
+    ],
+    "supports": [
+      "Academic language functions guide (UDL 3.3)",
+      "Sentence frame banks by function (UDL 5.3)",
+      "Practice activities with supports (UDL 8.3)",
+      "Self-evaluation checklist (UDL 6.4)",
+      "Academic language journal (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Full sentence frame support for all functions → Phase 2: Reduced support with frame access → Phase 3: Independent academic language → Phase 4: Flexible academic register use",
+    "whenNotToUse": "When informal language is appropriate for purpose or audience.",
+    "formativeChecks": [
+      "- Sentence frame use and accuracy",
+      "- Independent academic language production",
+      "- Self-evaluation accuracy",
+      "- Repertoire growth"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.4",
+      "UDL 7.2",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.language.plain_language_access",
+      "rtag.identity.neurodiversity",
+      "rtag.language.inclusive_language"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "udl_cast_2024_guidelines"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "ela.accessibility_toolkit_introduction",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Accessibility Toolkit Introduction",
+    "type": "metacognitive",
+    "problemType": "Lack of awareness of assistive supports",
+    "targetMisconception": "Assistive tools are only for IEPs",
+    "teacherMoves": [
+      "Demonstrate screen readers/captions/dictation (UDL 1.2)",
+      "Normalize universal use (UDL 7.2)",
+      "Post tool menu"
+    ],
+    "studentTasks": [
+      "Try three tools",
+      "Record impact on focus/comprehension",
+      "Share findings"
+    ],
+    "supports": [
+      "Tool menu (UDL 1.2)",
+      "Reflection form (UDL 6.3)",
+      "Recommendation board (HLP Cooperative Learning)"
+    ],
+    "fadePlan": "Teacher demos ‚Üí student tutorials ‚Üí independent selection.",
+    "whenNotToUse": "When tech infrastructure is unstable.",
+    "formativeChecks": [
+      "- Survey usage frequency and benefit statements",
+      "Self-report: Identify the tool you found most helpful and why."
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 1.2",
+      "UDL 6.3",
+      "UDL 7.2",
+      "HLP Cooperative Learning"
+    ],
+    "selStrand": "social-awareness",
+    "representationTags": [
+      "rtag.media.multimodal_resources",
+      "rtag.pedagogy.student_voice"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "UDL-CAST-3.0",
+      "HLP-CEC"
+    ],
+    "lastUpdated": "11/2/25"
+  },
+  {
+    "id": "ela.active_listening_log",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Active Listening Log",
+    "type": "social_collaborative",
+    "problemType": "Students tune out peers or fail to respond meaningfully",
+    "targetMisconception": "Listening means waiting to speak",
+    "teacherMoves": [
+      "Model paraphrase/summarize peers (UDL 3.2)",
+      "Provide respectful response stems (UDL 5.3)",
+      "Give feedback on listening notes"
+    ],
+    "studentTasks": [
+      "Record peer ideas during discussion",
+      "Respond with paraphrase or question",
+      "Self-assess engagement"
+    ],
+    "supports": [
+      "Listening log template (UDL 3.3)",
+      "Response stem bank (UDL 5.3)",
+      "Self-assessment rubric (HLP Self-Regulation)"
+    ],
+    "fadePlan": "Full prompts ‚Üí stems only ‚Üí independent active listening.",
+    "whenNotToUse": "When discussion is purely brainstorming and informal.",
+    "formativeChecks": [
+      "- Collect 2‚Äì3 logs weekly",
+      "check paraphrase accuracy"
+    ],
+    "bloomLevel": "understand",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 3.2",
+      "UDL 3.3",
+      "UDL 5.3",
+      "HLP Self-Regulation"
+    ],
+    "selStrand": "social-awareness",
+    "representationTags": [
+      "rtag.pedagogy.student_voice",
+      "rtag.pedagogy.collaborative_dialogue"
+    ],
+    "cspTags": [
+      "sustain_language",
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "FORMATIVE-IES",
+      "JIGSAW-ARONSON"
+    ],
+    "lastUpdated": "11/2/25"
+  },
+  {
+    "id": "ela.anticipation_guide",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Anticipation Guide (Agree/Disagree)",
+    "type": "linguistic",
+    "problemType": "Limited background knowledge and weak purpose-setting before reading",
+    "targetMisconception": "Belief that reading begins only at the first line of the text, without activating prior knowledge or setting a purpose",
+    "teacherMoves": [
+      "Model how to take a stance and justify with personal/community connections (UDL 7.2)",
+      "Read statements aloud and clarify vocabulary",
+      "invite multiple perspectives (HLP Explicit Instruction)",
+      "Require students to revisit stances after reading and cite line numbers (UDL 6.3)"
+    ],
+    "studentTasks": [
+      "Take positions on 6‚Äì8 statements and explain why",
+      "Revisit stances after reading with textual evidence",
+      "Discuss shifts using sentence stems"
+    ],
+    "supports": [
+      "Stance/evidence organizer (UDL 3.3)",
+      "Sentence stem bank (UDL 5.3)",
+      "Turn-and-talk protocol card (HLP Cooperative Learning)"
+    ],
+    "fadePlan": "Teacher models with full stems ‚Üí stems reduced ‚Üí no stems; students cite lines independently.",
+    "whenNotToUse": "When texts are noncontroversial or topic could cause harm without agreements.",
+    "formativeChecks": [
+      "- Collect guides and check for evidence-linked revisions",
+      "- 2-sentence exit: How did your stance change and why?"
+    ],
+    "bloomLevel": "understand",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 7.2",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "relationship-skills",
+    "representationTags": [
+      "rtag.context.global_voices",
+      "rtag.pedagogy.project_based_relevance",
+      "rtag.identity.intersectional_identities"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge",
+      "criticality"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "ASCD-CFU"
+    ],
+    "lastUpdated": "11/2/25"
+  },
+  {
+    "id": "ela.argument_outline_tree",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Argument Outline Tree (Claim‚ÜíEvidence‚ÜíCounterclaim)",
+    "type": "cognitive",
+    "problemType": "Disorganized essay structure",
+    "targetMisconception": "Arguments develop linearly without counterclaims",
+    "teacherMoves": [
+      "Model branching outline (UDL 3.3)",
+      "Think-aloud how counterarguments reinforce claims (HLP Explicit Instruction)",
+      "Scaffold reason‚Üíevidence links"
+    ],
+    "studentTasks": [
+      "Map claims/evidence/counterclaims",
+      "Identify weak branches",
+      "Revise for balance"
+    ],
+    "supports": [
+      "Tree organizer (UDL 3.3)",
+      "Evidence link chart (UDL 6.3)",
+      "Sample outline (HLP Exemplars)"
+    ],
+    "fadePlan": "Teacher-modeled ‚Üí guided ‚Üí independent outlines.",
+    "whenNotToUse": "For short responses (<150 words) or informal discussions.",
+    "formativeChecks": [
+      "- Check presence of counterclaim branch",
+      "- Peer feedback on organization"
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 6.3",
+      "HLP Explicit Instruction",
+      "HLP Exemplars"
+    ],
+    "selStrand": "responsible-decision-making",
+    "representationTags": [
+      "rtag.media.multimodal_resources",
+      "rtag.context.global_voices"
+    ],
+    "cspTags": [
+      "criticality"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "ASCD-CFU"
+    ],
+    "lastUpdated": "11/2/25"
+  },
+  {
+    "id": "ela.argument_rebuttal_roundtable",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Argument Rebuttal Roundtable",
+    "type": "linguistic",
+    "problemType": "Students state claims but struggle to refute equitably",
+    "targetMisconception": "Refutation is about winning, not truth-building",
+    "teacherMoves": [
+      "Model civil rebuttal language (UDL 5.3)",
+      "Demonstrate evidence triangulation (HLP Explicit Instruction)",
+      "Require listening before response"
+    ],
+    "studentTasks": [
+      "Rotate rebuttal rounds",
+      "Document counterclaims/evidence",
+      "Reflect on changed thinking"
+    ],
+    "supports": [
+      "Rebuttal stems (UDL 5.3)",
+      "Evidence tracker (UDL 3.3)",
+      "Reflection log (HLP Self-Regulation)"
+    ],
+    "fadePlan": "Teacher-facilitated ‚Üí student-moderated ‚Üí independent debate writing.",
+    "whenNotToUse": "When topic is personally sensitive and needs structured dialogue first.",
+    "formativeChecks": [
+      "- Peer rubric for evidence quality + tone",
+      "Reflection: Describe how listening influenced your argument."
+    ],
+    "bloomLevel": "evaluate",
+    "dokLevel": 4,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "HLP Explicit Instruction",
+      "HLP Self-Regulation"
+    ],
+    "selStrand": "relationship-skills",
+    "representationTags": [
+      "rtag.context.global_voices",
+      "rtag.language.inclusive_language"
+    ],
+    "cspTags": [
+      "criticality",
+      "sustain_language"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "ASCD-CFU",
+      "HLP-CEC"
+    ],
+    "lastUpdated": "11/2/25"
+  },
+  {
+    "id": "ela.argument_rubric_self_assessment",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Argument Rubric Self-Assessment",
+    "type": "metacognitive",
+    "problemType": "Students cannot judge their own progress on criteria",
+    "targetMisconception": "Grades are arbitrary rather than criteria-based",
+    "teacherMoves": [
+      "Unpack rubric with examples (UDL 3.1)",
+      "Model self-scoring (HLP Explicit Instruction)",
+      "Require cited evidence for each row"
+    ],
+    "studentTasks": [
+      "Self-assess draft",
+      "highlight supporting sections",
+      "Write next-step goal",
+      "Compare with teacher score"
+    ],
+    "supports": [
+      "Rubric with exemplars (UDL 3.3)",
+      "Self-assessment form (UDL 6.3)",
+      "Goal sheet (HLP Self-Regulation)"
+    ],
+    "fadePlan": "Teacher-facilitated scoring ‚Üí paired scoring ‚Üí independent reflection.",
+    "whenNotToUse": "When rubric criteria are brand new and unfamiliar.",
+    "formativeChecks": [
+      "- Compare student vs teacher scores",
+      "check convergence"
+    ],
+    "bloomLevel": "evaluate",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 6.3",
+      "HLP Self-Regulation",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.pedagogy.student_voice",
+      "rtag.media.graphic_organizers"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "ASCD-CFU"
+    ],
+    "lastUpdated": "11/2/25"
+  },
+  {
+    "id": "ela.argument_writing_structure",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Argument Writing Structure and Strategy",
+    "type": "cognitive",
+    "problemType": "Students write opinions without argumentative structure",
+    "targetMisconception": "Belief that strong feelings make strong arguments",
+    "teacherMoves": [
+      "Teach argument structure: claim, evidence, reasoning, counterclaim, rebuttal (HLP Explicit Instruction)",
+      "Model each component with examples (UDL 6.1)",
+      "Practice building complete arguments (UDL 8.3)",
+      "Address counterarguments as strengthening move (UDL 3.2)"
+    ],
+    "studentTasks": [
+      "Develop clear, debatable claim",
+      "Support with evidence and reasoning",
+      "Address strongest counterargument",
+      "Rebut or acknowledge counterclaim",
+      "Organize for maximum persuasive impact"
+    ],
+    "supports": [
+      "Argument structure guide (UDL 3.3)",
+      "Claim development templates (UDL 5.3)",
+      "Evidence-reasoning connection stems (UDL 5.3)",
+      "Counterclaim-rebuttal guide (UDL 6.2)",
+      "Argument essay rubric (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher models complete argument structure → Phase 2: Guided component practice → Phase 3: Independent argument writing → Phase 4: Natural argumentative writing",
+    "whenNotToUse": "When personal or creative expression is the goal rather than persuasion.",
+    "formativeChecks": [
+      "- Claim clarity and debatability",
+      "- Evidence-reasoning quality",
+      "- Counterargument engagement",
+      "- Overall argument effectiveness"
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 4,
+    "udlHlpTags": [
+      "UDL 3.2",
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.1",
+      "UDL 6.2",
+      "UDL 6.4",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "responsible-decision-making",
+    "representationTags": [
+      "rtag.pedagogy.student_voice",
+      "rtag.media.graphic_organizers",
+      "rtag.language.plain_language_access"
+    ],
+    "cspTags": [
+      "criticality",
+      "sustain_language"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "hlp_wwc_2016_secondary_writing",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "ela.author_purpose_analysis",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Author's Purpose and Craft Analysis",
+    "type": "cognitive",
+    "problemType": "Students don't consider why authors make specific choices",
+    "targetMisconception": "Belief that reading is about understanding what happened not why it's written that way",
+    "teacherMoves": [
+      "Teach author's purpose analysis as reading skill (HLP Explicit Instruction)",
+      "Model asking why questions about authorial choices (UDL 6.1)",
+      "Practice identifying techniques and analyzing effects (UDL 6.2)",
+      "Connect purpose to audience and context (UDL 7.2)"
+    ],
+    "studentTasks": [
+      "Identify author's overall purpose for text",
+      "Analyze specific techniques author uses",
+      "Explain effect of techniques on reader",
+      "Connect techniques to purpose and audience",
+      "Evaluate effectiveness of author's choices"
+    ],
+    "supports": [
+      "Author's purpose framework (UDL 3.3)",
+      "Technique identification guide (UDL 6.2)",
+      "Effect analysis prompts (UDL 5.3)",
+      "Purpose-technique connection template (UDL 6.2)",
+      "Evaluation criteria (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher models purpose and craft analysis → Phase 2: Guided analysis with prompts → Phase 3: Independent craft analysis → Phase 4: Automatic craft-conscious reading",
+    "whenNotToUse": "When focus is on comprehension rather than craft analysis.",
+    "formativeChecks": [
+      "- Purpose identification accuracy",
+      "- Technique identification range",
+      "- Effect analysis depth",
+      "- Purpose-technique connection"
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.1",
+      "UDL 6.2",
+      "UDL 6.4",
+      "UDL 7.2",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.pedagogy.student_voice",
+      "rtag.context.global_voices",
+      "rtag.language.plain_language_access"
+    ],
+    "cspTags": [
+      "sustain_language",
+      "criticality"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "udl_cast_2024_guidelines"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "ela.bilingual_glossary_builders",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Student-Created Bilingual Glossary Builders",
+    "type": "linguistic",
+    "problemType": "No access to disciplinary vocabulary in students‚Äô languages",
+    "targetMisconception": "Glossaries must be monolingual teacher-made",
+    "teacherMoves": [
+      "Model adding translation/examples (UDL 3.1)",
+      "Teach morphology analysis (HLP Explicit Instruction)",
+      "Review for accuracy"
+    ],
+    "studentTasks": [
+      "Create bilingual term entries",
+      "Peer-review clarity",
+      "Apply terms in context"
+    ],
+    "supports": [
+      "Template (UDL 3.3)",
+      "Morphology chart (UDL 6.2)",
+      "Peer review form (HLP Cooperative Learning)"
+    ],
+    "fadePlan": "Teacher starter terms ‚Üí student-added ‚Üí independent digital glossary.",
+    "whenNotToUse": "When class time is extremely limited.",
+    "formativeChecks": [
+      "- Spot-check glossary accuracy/use",
+      "Mini quiz: Define one term in both languages."
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 3.1",
+      "UDL 3.3",
+      "UDL 6.2",
+      "HLP Explicit Instruction",
+      "HLP Cooperative Learning"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.language.home_language",
+      "rtag.media.multimodal_resources"
+    ],
+    "cspTags": [
+      "sustain_language",
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "UDL-CAST-3.0",
+      "HLP-CEC"
+    ],
+    "lastUpdated": "11/2/25"
+  },
+  {
+    "id": "ela.bilingual_sentence_frames",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Bilingual Sentence Frames for Academic Register",
+    "type": "linguistic",
+    "problemType": "Lack of academic argument language",
+    "targetMisconception": "Home language must be suppressed to learn English",
+    "teacherMoves": [
+      "Provide English/L1 frames (UDL 2.1)",
+      "Model clarity/precision use (HLP Explicit Instruction)",
+      "Encourage code-switching to test meaning"
+    ],
+    "studentTasks": [
+      "Compose responses using frames",
+      "Translate back/forth for accuracy",
+      "Share bilingual phrasing examples"
+    ],
+    "supports": [
+      "Frame bank (UDL 5.3)",
+      "Glossary translations (UDL 3.1)",
+      "Discussion stems (HLP Cooperative Learning)"
+    ],
+    "fadePlan": "Full bilingual frames ‚Üí starters ‚Üí independent phrasing.",
+    "whenNotToUse": "When students already show full register control.",
+    "formativeChecks": [
+      "- Track frame use and accuracy of academic terms",
+      "Self-check: Provide one original academic sentence without using the frames."
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 2.1",
+      "UDL 5.3",
+      "HLP Explicit Instruction",
+      "HLP Cooperative Learning"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.language.home_language",
+      "rtag.pedagogy.student_voice"
+    ],
+    "cspTags": [
+      "sustain_language",
+      "co_design_with_community"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "UDL-CAST-3.0",
+      "HLP-CEC"
+    ],
+    "lastUpdated": "11/2/25"
+  },
+  {
+    "id": "ela.cer_paragraph_frame",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Claim‚ÄìEvidence‚ÄìReasoning (CER) Paragraph Frame",
+    "type": "social_collaborative",
+    "problemType": "Students present opinions without evidence or reasoning",
+    "targetMisconception": "Evidence speaks for itself and needs no explanation",
+    "teacherMoves": [
+      "Model CER with color-coding (UDL 6.2)",
+      "Highlight transitions linking claim‚Üíevidence‚Üíreasoning (HLP Explicit Instruction)",
+      "Provide exemplars/non-examples (HLP Exemplars)"
+    ],
+    "studentTasks": [
+      "Draft one CER paragraph",
+      "Use color key to check balance",
+      "Peer-review reasoning clarity"
+    ],
+    "supports": [
+      "CER template (UDL 3.3)",
+      "Color-key legend (UDL 6.2)",
+      "Peer review checklist (HLP Cooperative Learning)"
+    ],
+    "fadePlan": "Full frame ‚Üí transitional prompts only ‚Üí student-generated CER without templates.",
+    "whenNotToUse": "If students already master structured argument paragraphs or in creative writing tasks.",
+    "formativeChecks": [
+      "- Quick rubric (Claim, Evidence, Reasoning)",
+      "- Highlighted drafts: analysis:evidence ratio"
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 6.2",
+      "HLP Explicit Instruction",
+      "HLP Cooperative Learning"
+    ],
+    "selStrand": "responsible-decision-making",
+    "representationTags": [
+      "rtag.media.graphic_organizers",
+      "rtag.media.multimodal_resources",
+      "rtag.pedagogy.student_voice"
+    ],
+    "cspTags": [
+      "criticality"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "ASCD-CFU"
+    ],
+    "lastUpdated": "11/2/25"
+  },
+  {
+    "id": "ela.character_arc_timeline",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Character Arc Timeline",
+    "type": "cognitive",
+    "problemType": "Identifying traits but not development",
+    "targetMisconception": "Characters are static/defined by one label",
+    "teacherMoves": [
+      "Model mapping turning points (UDL 3.2)",
+      "Tie change to conflict resolution (HLP Explicit Instruction)",
+      "Use mentor charts"
+    ],
+    "studentTasks": [
+      "Create timeline of actions/internal changes",
+      "Annotate causes",
+      "Connect to theme"
+    ],
+    "supports": [
+      "Character arc template (UDL 3.3)",
+      "Sample timeline (HLP Exemplars)",
+      "Theme stems (UDL 5.3)"
+    ],
+    "fadePlan": "Modeled ‚Üí guided ‚Üí independent.",
+    "whenNotToUse": "When characters are symbolic rather than dynamic.",
+    "formativeChecks": [
+      "- Collect charts",
+      "evaluate cause‚Äìeffect reasoning"
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.2",
+      "UDL 3.3",
+      "UDL 5.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.pedagogy.student_voice",
+      "rtag.context.global_voices"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "ASCD-CFU"
+    ],
+    "lastUpdated": "11/2/25"
+  },
+  {
+    "id": "ela.character_motivation_chart",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Character Motivation and Change Chart",
+    "type": "social_collaborative",
+    "problemType": "Flat characters with unclear motives",
+    "targetMisconception": "Characters 'just act' without needs or internal conflicts",
+    "teacherMoves": [
+      "Model goal‚Äìbarrier‚Äìdecision cycle (UDL 3.2)",
+      "Connect motives to theme (HLP Explicit Instruction)",
+      "Prompt reflection on choices"
+    ],
+    "studentTasks": [
+      "Identify goals/obstacles/changes",
+      "Annotate draft for consistency",
+      "Revise for motivation clarity"
+    ],
+    "supports": [
+      "Motivation‚ÄìChange chart (UDL 3.3)",
+      "Think-aloud mentor text (HLP Explicit Instruction)",
+      "Peer interview protocol (UDL 6.3)"
+    ],
+    "fadePlan": "Guided charting ‚Üí independent tracking ‚Üí implicit integration.",
+    "whenNotToUse": "When writing experimental fiction focused on style over character.",
+    "formativeChecks": [
+      "- Collect charts",
+      "evaluate cause‚Äìeffect reasoning for character motivation",
+      "Exit check: Explain one character‚Äôs motivation shift."
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.2",
+      "UDL 3.3",
+      "UDL 6.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.pedagogy.student_voice",
+      "rtag.context.global_voices"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "ASCD-CFU"
+    ],
+    "lastUpdated": "11/2/25"
+  },
+  {
+    "id": "ela.characterization_analysis",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Character Analysis and Characterization Study",
+    "type": "cognitive",
+    "problemType": "Students describe characters without analyzing how they're developed",
+    "targetMisconception": "Belief that characters are fixed rather than developed through techniques",
+    "teacherMoves": [
+      "Teach characterization methods (HLP Explicit Instruction)",
+      "Model tracing character development (UDL 6.1)",
+      "Practice identifying and analyzing techniques (UDL 8.3)",
+      "Connect characterization to theme and purpose (UDL 7.2)"
+    ],
+    "studentTasks": [
+      "Identify direct and indirect characterization",
+      "Track character development across text",
+      "Analyze characterization techniques and effects",
+      "Connect character to theme development",
+      "Write character analysis with evidence"
+    ],
+    "supports": [
+      "Characterization methods guide (UDL 3.3)",
+      "Character development tracking template (UDL 6.2)",
+      "Technique-effect analysis prompts (UDL 5.3)",
+      "Character-theme connection guide (UDL 6.2)",
+      "Character analysis writing framework (UDL 6.2)"
+    ],
+    "fadePlan": "Phase 1: Teacher models with explicit technique identification → Phase 2: Guided character analysis → Phase 3: Independent character interpretation → Phase 4: Sophisticated character analysis",
+    "whenNotToUse": "When character description rather than analysis is the goal.",
+    "formativeChecks": [
+      "- Characterization technique identification",
+      "- Development tracking accuracy",
+      "- Technique-effect analysis",
+      "- Analysis writing quality"
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.1",
+      "UDL 6.2",
+      "UDL 7.2",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.pedagogy.student_voice",
+      "rtag.context.global_voices",
+      "rtag.identity.intersectional_identities"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "udl_cast_2024_guidelines"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "ela.choice_reading_pathways",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Choice Reading Pathways",
+    "type": "metacognitive",
+    "problemType": "Low reading engagement and limited autonomy",
+    "targetMisconception": "Only teacher-assigned texts count",
+    "teacherMoves": [
+      "Curate 3‚Äì4 thematic options (UDL 7.2)",
+      "Model selecting by interest/challenge (HLP Explicit Instruction)",
+      "Track choices over time"
+    ],
+    "studentTasks": [
+      "Review options and choose",
+      "Justify selection",
+      "Reflect on connection and difficulty"
+    ],
+    "supports": [
+      "Choice menu (UDL 7.2)",
+      "Interest survey (UDL 3.1)",
+      "Reading goal tracker (HLP Self-Regulation)"
+    ],
+    "fadePlan": "Teacher-curated ‚Üí student-suggested ‚Üí independent selection.",
+    "whenNotToUse": "When a shared anchor text is required for common assessment.",
+    "formativeChecks": [
+      "- Collect rationale entries and interest reflections",
+      "Reflection: Rate your choice‚Äôs difficulty and interest level."
+    ],
+    "bloomLevel": "evaluate",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.1",
+      "UDL 7.2",
+      "HLP Explicit Instruction",
+      "HLP Self-Regulation"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.pedagogy.student_voice",
+      "rtag.pedagogy.project_based_relevance"
+    ],
+    "cspTags": [
+      "co_design_with_community"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "FORMATIVE-IES",
+      "ASCD-CFU"
+    ],
+    "lastUpdated": "11/2/25"
+  },
+  {
+    "id": "ela.close_reading_protocol",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Close Reading Multi-Pass Protocol",
+    "type": "cognitive",
+    "problemType": "Students read texts superficially without deep comprehension",
+    "targetMisconception": "Belief that understanding is achieved in one reading",
+    "teacherMoves": [
+      "Teach close reading as multiple purposeful reads (HLP Explicit Instruction)",
+      "Model each reading pass with different focus (UDL 6.1)",
+      "Provide annotation strategies for each pass (UDL 3.3)",
+      "Build stamina through progressive complexity (UDL 6.4)"
+    ],
+    "studentTasks": [
+      "Complete first read for gist understanding",
+      "Second read for key details and structure",
+      "Third read for analysis of craft and meaning",
+      "Annotate throughout with purpose-specific marks",
+      "Synthesize understanding across readings"
+    ],
+    "supports": [
+      "Close reading protocol guide (UDL 3.3)",
+      "Pass-specific annotation keys (UDL 3.3)",
+      "Reading purpose prompts per pass (UDL 6.2)",
+      "Synthesis question stems (UDL 5.3)",
+      "Self-monitoring comprehension check (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher models each pass with shared text → Phase 2: Guided practice with structured passes → Phase 3: Independent multi-pass reading → Phase 4: Automatic close reading habits",
+    "whenNotToUse": "When quick reading for main idea is appropriate or when text is below challenge level.",
+    "formativeChecks": [
+      "- Annotation quality across passes",
+      "- Comprehension improvement across reads",
+      "- Synthesis quality",
+      "- Self-monitoring accuracy"
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.1",
+      "UDL 6.2",
+      "UDL 6.4",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.language.plain_language_access",
+      "rtag.media.accessible_media",
+      "rtag.pedagogy.student_voice"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "hlp_wwc_2022_reading_interventions",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "ela.code_switching_minilesson",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Code-Switching Mini-Lesson on Audience and Purpose",
+    "type": "linguistic",
+    "problemType": "Difficulty adjusting register across contexts",
+    "targetMisconception": "Formal English is superior to community dialects",
+    "teacherMoves": [
+      "Contrast registers with authentic texts (UDL 3.2)",
+      "Discuss audience impact (HLP Explicit Instruction)",
+      "Affirm linguistic identity (HLP Social Awareness)"
+    ],
+    "studentTasks": [
+      "Rewrite short text for new audience",
+      "Reflect on tone/purpose",
+      "Share revisions"
+    ],
+    "supports": [
+      "Register chart (UDL 3.3)",
+      "Audience checklist (UDL 6.3)",
+      "Sample texts (HLP Exemplars)"
+    ],
+    "fadePlan": "Guided modeling ‚Üí collaborative rewriting ‚Üí independent application.",
+    "whenNotToUse": "When identity judgments not yet safely discussed.",
+    "formativeChecks": [
+      "- Analyze drafts for audience-appropriate language",
+      "Check: Identify how your register changed for a different audience."
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.2",
+      "UDL 3.3",
+      "UDL 6.3",
+      "HLP Explicit Instruction",
+      "HLP Exemplars"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.language.home_language",
+      "rtag.language.inclusive_language",
+      "rtag.context.global_voices"
+    ],
+    "cspTags": [
+      "sustain_language",
+      "criticality"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "HLP-CEC"
+    ],
+    "lastUpdated": "11/2/25"
+  },
+  {
+    "id": "ela.community_critical_inquiry_project",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Community Critical Inquiry Project",
+    "type": "cognitive",
+    "problemType": "Students don‚Äôt apply literacy to real contexts",
+    "targetMisconception": "ELA stops at analysis, not civic action",
+    "teacherMoves": [
+      "Guide inquiry cycle (problem‚Üíresearch‚Üíaction) (UDL 7.2)",
+      "Model multi-genre composition (HLP Explicit Instruction)",
+      "Teach ethical research"
+    ],
+    "studentTasks": [
+      "Research a community issue",
+      "Create multi-genre portfolio",
+      "Present to authentic audience"
+    ],
+    "supports": [
+      "Inquiry planner (UDL 3.3)",
+      "Source credibility rubric (UDL 6.3)",
+      "Presentation guide (HLP Cooperative Learning)"
+    ],
+    "fadePlan": "Teacher-scaffolded inquiry ‚Üí student-led teams ‚Üí independent capstones.",
+    "whenNotToUse": "When local topics require prior approval and it‚Äôs not obtained.",
+    "formativeChecks": [
+      "- Milestone checks on sources and audience analysis",
+      "Progress check: Note one source you evaluated for credibility."
+    ],
+    "bloomLevel": "create",
+    "dokLevel": 4,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 6.3",
+      "UDL 7.2",
+      "HLP Explicit Instruction",
+      "HLP Cooperative Learning"
+    ],
+    "selStrand": "responsible-decision-making",
+    "representationTags": [
+      "rtag.pedagogy.project_based_relevance",
+      "rtag.context.global_voices",
+      "rtag.identity.intersectional_identities"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge",
+      "criticality",
+      "co_design_with_community"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "HLP-CEC"
+    ],
+    "lastUpdated": "11/2/25"
+  },
+  {
+    "id": "ela.community_issue_editorials",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Community Issue Editorials",
+    "type": "cognitive",
+    "problemType": "Students don‚Äôt see writing as social action",
+    "targetMisconception": "Writing is only for grades, not impact",
+    "teacherMoves": [
+      "Model op-eds on local issues (UDL 7.2)",
+      "Teach op-ed structure (HLP Explicit Instruction)",
+      "Connect to authentic audiences"
+    ],
+    "studentTasks": [
+      "Research a community concern",
+      "Draft and revise an op-ed",
+      "Publish or present to audience"
+    ],
+    "supports": [
+      "Op-ed outline (UDL 3.3)",
+      "Audience analysis chart (UDL 6.3)",
+      "Publishing rubric (HLP Cooperative Learning)"
+    ],
+    "fadePlan": "Teacher-curated topics ‚Üí student-chosen ‚Üí independent publication.",
+    "whenNotToUse": "When issues are sensitive and require prior consultation.",
+    "formativeChecks": [
+      "- Check claim‚Äìevidence alignment for the target audience",
+      "Exit check: Provide one counterargument you considered."
+    ],
+    "bloomLevel": "create",
+    "dokLevel": 4,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 6.3",
+      "UDL 7.2",
+      "HLP Explicit Instruction",
+      "HLP Cooperative Learning"
+    ],
+    "selStrand": "responsible-decision-making",
+    "representationTags": [
+      "rtag.pedagogy.project_based_relevance",
+      "rtag.context.global_voices"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge",
+      "criticality"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "HLP-CEC"
+    ],
+    "lastUpdated": "11/2/25"
+  },
+  {
+    "id": "ela.community_reader_showcase",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Community Reader Showcase",
+    "type": "metacognitive",
+    "problemType": "No authentic recognition for reading growth",
+    "targetMisconception": "Achievement exists only through tests/grades",
+    "teacherMoves": [
+      "Organize reading celebration with families/community (UDL 7.2)",
+      "Coach presentation of favorite texts (HLP Explicit Instruction)",
+      "Provide audience feedback tools"
+    ],
+    "studentTasks": [
+      "Select impactful text",
+      "Prepare presentation/reading",
+      "Reflect on audience response"
+    ],
+    "supports": [
+      "Presentation planner (UDL 3.3)",
+      "Invitation template (UDL 6.3)",
+      "Audience feedback form (HLP Cooperative Learning)"
+    ],
+    "fadePlan": "Teacher-run showcase ‚Üí student-led planning.",
+    "whenNotToUse": "When community involvement logistics are infeasible.",
+    "formativeChecks": [
+      "- Post-event reflection on motivation and identity",
+      "Audience survey: Rate how the presentation influenced your reading interest."
+    ],
+    "bloomLevel": "evaluate",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 6.3",
+      "UDL 7.2",
+      "HLP Explicit Instruction",
+      "HLP Cooperative Learning"
+    ],
+    "selStrand": "relationship-skills",
+    "representationTags": [
+      "rtag.pedagogy.project_based_relevance",
+      "rtag.pedagogy.student_voice",
+      "rtag.identity.intersectional_identities"
+    ],
+    "cspTags": [
+      "co_design_with_community",
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "HLP-CEC"
+    ],
+    "lastUpdated": "11/2/25"
+  },
+  {
+    "id": "ela.comparative_analysis_matrix",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Comparative Literary Analysis Matrix",
+    "type": "cognitive",
+    "problemType": "Generalized similarities; missing nuanced contrasts",
+    "targetMisconception": "Comparison equals surface-level likeness only",
+    "teacherMoves": [
+      "Model matrix with two poems (UDL 3.3)",
+      "Show how contrast builds argument (HLP Explicit Instruction)",
+      "Scaffold thematic synthesis"
+    ],
+    "studentTasks": [
+      "Fill matrix with evidence from both texts",
+      "Draft comparative paragraph highlighting contrast",
+      "Peer revise for clarity"
+    ],
+    "supports": [
+      "Comparison matrix (UDL 3.3)",
+      "Thematic stems (UDL 5.3)",
+      "Mentor paragraph (HLP Exemplars)"
+    ],
+    "fadePlan": "Guided template ‚Üí self-created categories ‚Üí independent synthesis.",
+    "whenNotToUse": "When analyzing only one text or during timed tests.",
+    "formativeChecks": [
+      "- Collect matrices",
+      "check quality of contrast reasoning"
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 4,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "HLP Explicit Instruction",
+      "HLP Exemplars"
+    ],
+    "selStrand": "responsible-decision-making",
+    "representationTags": [
+      "rtag.context.global_voices",
+      "rtag.media.multimodal_resources"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge",
+      "criticality"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "ASCD-CFU",
+      "FORMATIVE-IES"
+    ],
+    "lastUpdated": "11/2/25"
+  },
+  {
+    "id": "ela.comparative_literature_analysis",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Comparative Literature Analysis Skills",
+    "type": "cognitive",
+    "problemType": "Students don't effectively compare texts",
+    "targetMisconception": "Belief that comparison means listing parallel features",
+    "teacherMoves": [
+      "Teach comparative analysis as interpretive tool (HLP Explicit Instruction)",
+      "Model developing comparison criteria (UDL 3.2)",
+      "Practice meaningful comparative analysis (UDL 8.3)",
+      "Connect comparison to deeper understanding (UDL 7.2)"
+    ],
+    "studentTasks": [
+      "Develop comparison criteria based on analytical purpose",
+      "Analyze texts through comparative lens",
+      "Identify meaningful similarities and differences",
+      "Explain significance of comparisons",
+      "Write comparative analysis with synthesis"
+    ],
+    "supports": [
+      "Comparative analysis framework (UDL 3.3)",
+      "Criteria development guide (UDL 6.2)",
+      "Comparison matrix template (UDL 6.2)",
+      "Significance analysis prompts (UDL 5.3)",
+      "Comparative writing structure (UDL 6.2)"
+    ],
+    "fadePlan": "Phase 1: Teacher models comparative analysis with criteria → Phase 2: Guided comparison with support → Phase 3: Independent comparative analysis → Phase 4: Natural comparative reading",
+    "whenNotToUse": "When single text depth is the priority.",
+    "formativeChecks": [
+      "- Criteria development quality",
+      "- Comparison meaningfulness",
+      "- Significance explanation",
+      "- Synthesis quality"
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 4,
+    "udlHlpTags": [
+      "UDL 3.2",
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.2",
+      "UDL 7.2",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.context.global_voices",
+      "rtag.identity.intersectional_identities",
+      "rtag.pedagogy.student_voice"
+    ],
+    "cspTags": [
+      "criticality",
+      "sustain_language"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "udl_cast_2024_guidelines"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "ela.conferencing_checklist",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Writing Conference Checklist",
+    "type": "metacognitive",
+    "problemType": "Lack of focused feedback during conferences",
+    "targetMisconception": "Conferencing is about editing rather than growth",
+    "teacherMoves": [
+      "Model 5-minute focused conference (HLP Explicit Instruction)",
+      "Co-create checklists (UDL 6.3)",
+      "Guide students to lead part of the conference"
+    ],
+    "studentTasks": [
+      "Bring a question and goal",
+      "Record feedback",
+      "Plan one concrete revision step"
+    ],
+    "supports": [
+      "Conference checklist (UDL 3.3)",
+      "Goal tracker (UDL 6.3)",
+      "Revision plan sheet (HLP Self-Regulation)"
+    ],
+    "fadePlan": "Teacher-led ‚Üí student-led with checklist ‚Üí independent peer conferences.",
+    "whenNotToUse": "During timed/high-stakes tests where conferencing disrupts pacing.",
+    "formativeChecks": [
+      "- Track completion of revision step",
+      "- Reflection entry post-conference"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 6.3",
+      "HLP Explicit Instruction",
+      "HLP Self-Regulation"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.pedagogy.student_voice",
+      "rtag.media.graphic_organizers"
+    ],
+    "cspTags": [
+      "co_design_with_community"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "ASCD-CFU"
+    ],
+    "lastUpdated": "11/2/25"
+  },
+  {
+    "id": "ela.context_clues_chart",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Context Clues Types Chart",
+    "type": "linguistic",
+    "problemType": "Difficulty inferring word meaning from context in complex sentences",
+    "targetMisconception": "Thinking unfamiliar words must always be looked up rather than deduced from context",
+    "teacherMoves": [
+      "Teach four clue types with think-alouds (UDL 3.1)",
+      "Co-analyze sentences and label the clue type (HLP Explicit Instruction)",
+      "Prompt students to cite words that signaled meaning (UDL 6.1)"
+    ],
+    "studentTasks": [
+      "Identify clue types in passages",
+      "Infer meanings and record evidence phrases",
+      "Compare and revise with partners"
+    ],
+    "supports": [
+      "Clue-type anchor chart (UDL 3.3)",
+      "Practice set with sentence stems (UDL 5.3)",
+      "Partner checking protocol (HLP Cooperative Learning)"
+    ],
+    "fadePlan": "Start with labeled examples and stems ‚Üí remove labels, keep list ‚Üí infer without lists and justify evidence.",
+    "whenNotToUse": "If vocabulary is domain-specific and requires preteaching rather than context inference.",
+    "formativeChecks": [
+      "- 6-item quick check on clue types",
+      "- Notebook spot-check for evidence phrases"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 3.1",
+      "UDL 3.3",
+      "UDL 5.3",
+      "HLP Explicit Instruction",
+      "HLP Cooperative Learning"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.media.multimodal_resources",
+      "rtag.language.plain_language_access",
+      "rtag.pedagogy.student_voice"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "ASCD-CFU",
+      "ROSENSHINE-2012"
+    ],
+    "lastUpdated": "11/2/25"
+  },
+  {
+    "id": "ela.critical_media_literacy",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Critical Media Literacy and Analysis",
+    "type": "cognitive",
+    "problemType": "Students consume media without critical analysis",
+    "targetMisconception": "Belief that media is just entertainment without requiring analysis",
+    "teacherMoves": [
+      "Teach media analysis as literacy skill (HLP Explicit Instruction)",
+      "Model analyzing media texts critically (UDL 6.1)",
+      "Practice with variety of media forms (UDL 8.3)",
+      "Connect to production and consumption (UDL 7.2)"
+    ],
+    "studentTasks": [
+      "Analyze media texts using literacy frameworks",
+      "Identify techniques and their effects",
+      "Examine representation and bias",
+      "Evaluate media messages critically",
+      "Create media with critical awareness"
+    ],
+    "supports": [
+      "Media analysis framework (UDL 3.3)",
+      "Technique identification guide (UDL 6.2)",
+      "Representation analysis prompts (UDL 5.3)",
+      "Critical evaluation criteria (UDL 6.4)",
+      "Media creation project template (UDL 6.2)"
+    ],
+    "fadePlan": "Phase 1: Teacher models critical media analysis → Phase 2: Guided analysis with variety → Phase 3: Independent critical media consumption → Phase 4: Critical media literacy identity",
+    "whenNotToUse": "When media is being used purely for content rather than media literacy.",
+    "formativeChecks": [
+      "- Analysis framework application",
+      "- Technique identification",
+      "- Representation analysis depth",
+      "- Critical evaluation quality"
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.1",
+      "UDL 6.2",
+      "UDL 6.4",
+      "UDL 7.2",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "responsible-decision-making",
+    "representationTags": [
+      "rtag.media.multimodal_resources",
+      "rtag.context.global_voices",
+      "rtag.identity.intersectional_identities"
+    ],
+    "cspTags": [
+      "criticality",
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "udl_cast_2024_guidelines"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "ela.cross_disciplinary_literacy_links",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Cross-Disciplinary Literacy Links",
+    "type": "metacognitive",
+    "problemType": "ELA strategies don‚Äôt transfer to other classes",
+    "targetMisconception": "ELA strategies only apply in English",
+    "teacherMoves": [
+      "Collaborate with content teachers (UDL 7.2)",
+      "Model disciplinary text strategies (HLP Explicit Instruction)",
+      "Co-plan assignments"
+    ],
+    "studentTasks": [
+      "Apply ELA annotation/evidence in another subject",
+      "Reflect on transfer effectiveness",
+      "Share example in class"
+    ],
+    "supports": [
+      "Strategy transfer chart (UDL 3.3)",
+      "Cross-disciplinary texts (UDL 6.2)",
+      "Reflection sheet (HLP Self-Regulation)"
+    ],
+    "fadePlan": "Teacher collaboration ‚Üí student recognition ‚Üí independent transfer.",
+    "whenNotToUse": "When cross-curricular scheduling isn‚Äôt feasible.",
+    "formativeChecks": [
+      "- Collect reflections showing concrete transfer links",
+      "Exit reflection: Describe how ELA strategies helped in another class."
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 6.2",
+      "UDL 7.2",
+      "HLP Explicit Instruction",
+      "HLP Self-Regulation"
+    ],
+    "selStrand": "responsible-decision-making",
+    "representationTags": [
+      "rtag.context.global_voices",
+      "rtag.pedagogy.project_based_relevance"
+    ],
+    "cspTags": [
+      "co_design_with_community"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "FORMATIVE-IES",
+      "ASCD-CFU"
+    ],
+    "lastUpdated": "11/2/25"
+  },
+  {
+    "id": "ela.cross_text_comparison_matrix",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Cross-Text Comparison Matrix",
+    "type": "linguistic",
+    "problemType": "Weak comparative analysis between sources",
+    "targetMisconception": "Comparing texts means listing similarities only",
+    "teacherMoves": [
+      "Model matrix with themes and contrasts (UDL 3.2)",
+      "Highlight how differences build argument (HLP Explicit Instruction)",
+      "Provide sample comparative claims"
+    ],
+    "studentTasks": [
+      "Fill matrix for two texts",
+      "Draft comparative paragraph emphasizing contrast",
+      "Peer revise for clarity and evidence"
+    ],
+    "supports": [
+      "Matrix template (UDL 3.3)",
+      "Analysis sentence starters (UDL 5.3)",
+      "Peer feedback form (HLP Cooperative Learning)"
+    ],
+    "fadePlan": "Full template ‚Üí partial ‚Üí student-made chart categories.",
+    "whenNotToUse": "When analyzing a single text.",
+    "formativeChecks": [
+      "- Check each column includes both texts and at least one contrast",
+      "Exit ticket: Write one contrasting theme with evidence from both texts."
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.2",
+      "UDL 3.3",
+      "UDL 5.3",
+      "HLP Explicit Instruction",
+      "HLP Cooperative Learning"
+    ],
+    "selStrand": "responsible-decision-making",
+    "representationTags": [
+      "rtag.context.global_voices",
+      "rtag.media.multimodal_resources"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "ASCD-CFU",
+      "FORMATIVE-IES"
+    ],
+    "lastUpdated": "11/2/25"
+  },
+  {
+    "id": "ela.cultural_critique_panel",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Cultural Critique Panel Discussion",
+    "type": "linguistic",
+    "problemType": "Texts analyzed without connection to current issues",
+    "targetMisconception": "ELA analysis must be apolitical",
+    "teacherMoves": [
+      "Model civil academic discourse (UDL 6.3)",
+      "Scaffold panel question writing (UDL 5.3)",
+      "Link to news/community"
+    ],
+    "studentTasks": [
+      "Research a current linked issue",
+      "Serve on a panel and cite evidence",
+      "Field audience questions"
+    ],
+    "supports": [
+      "Panel protocol (UDL 6.3)",
+      "Question bank (UDL 5.3)",
+      "Moderator rubric (HLP Cooperative Learning)"
+    ],
+    "fadePlan": "Teacher-moderated ‚Üí student-moderated ‚Üí peer-planned panels.",
+    "whenNotToUse": "When sensitive topics lack preparation and norms.",
+    "formativeChecks": [
+      "- Panel rubric + self-evaluations on evidence and tone",
+      "Peer evaluation: Assess whether evidence used was relevant and respectful."
+    ],
+    "bloomLevel": "evaluate",
+    "dokLevel": 4,
+    "udlHlpTags": [
+      "UDL 5.3",
+      "UDL 6.3",
+      "HLP Cooperative Learning"
+    ],
+    "selStrand": "social-awareness",
+    "representationTags": [
+      "rtag.context.global_voices",
+      "rtag.identity.intersectional_identities",
+      "rtag.pedagogy.project_based_relevance"
+    ],
+    "cspTags": [
+      "criticality",
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "HLP-CEC"
+    ],
+    "lastUpdated": "11/2/25"
+  },
+  {
+    "id": "ela.culturally_relevant_text_connections",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Culturally Relevant Text Connections Organizer",
+    "type": "linguistic",
+    "problemType": "Students can‚Äôt see relevance in canonical texts",
+    "targetMisconception": "Classic literature is universally applicable",
+    "teacherMoves": [
+      "Pair core + contemporary texts (UDL 7.2)",
+      "Model text-to-self/community links (HLP Explicit Instruction)",
+      "Guide discussion of relevance"
+    ],
+    "studentTasks": [
+      "Identify shared themes",
+      "Write comparison showing community relevance",
+      "Discuss findings"
+    ],
+    "supports": [
+      "Connection chart (UDL 3.3)",
+      "Paired texts (UDL 7.2)",
+      "Sentence stems (UDL 5.3)"
+    ],
+    "fadePlan": "Teacher-paired ‚Üí student-chosen pairings.",
+    "whenNotToUse": "When time doesn‚Äôt permit two-text study.",
+    "formativeChecks": [
+      "- Review for specific community references",
+      "Short exit: Share one way the canonical text connects to your community."
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 7.2",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "social-awareness",
+    "representationTags": [
+      "rtag.context.global_voices",
+      "rtag.pedagogy.project_based_relevance",
+      "rtag.identity.intersectional_identities"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge",
+      "criticality"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "HLP-CEC"
+    ],
+    "lastUpdated": "11/2/25"
+  },
+  {
+    "id": "ela.debate_evidence_tracker",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Debate Evidence Tracker",
+    "type": "linguistic",
+    "problemType": "Unsupported claims in academic debate",
+    "targetMisconception": "Performance style outweighs reasoning",
+    "teacherMoves": [
+      "Model use of claim/evidence tracker (UDL 3.3)",
+      "Assign evidence manager role (HLP Cooperative Learning)",
+      "Provide rebuttal sentence stems"
+    ],
+    "studentTasks": [
+      "Record claims/counterclaims/evidence",
+      "Cite sources accurately",
+      "Reflect on reasoning post-debate"
+    ],
+    "supports": [
+      "Evidence tracker sheet (UDL 3.3)",
+      "Rebuttal stems (UDL 5.3)",
+      "Group rubric (HLP Cooperative Learning)"
+    ],
+    "fadePlan": "Scaffolded roles ‚Üí shared management ‚Üí self-tracking evidence.",
+    "whenNotToUse": "When debates are informal/creative without factual grounding.",
+    "formativeChecks": [
+      "- Spot-check logs for accuracy and balance",
+      "Mini quiz: Identify two strong pieces of evidence used in the debate."
+    ],
+    "bloomLevel": "evaluate",
+    "dokLevel": 4,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "HLP Cooperative Learning"
+    ],
+    "selStrand": "responsible-decision-making",
+    "representationTags": [
+      "rtag.pedagogy.collaborative_dialogue",
+      "rtag.context.global_voices"
+    ],
+    "cspTags": [
+      "criticality"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "ASCD-CFU"
+    ],
+    "lastUpdated": "11/2/25"
+  },
+  {
+    "id": "ela.dialogue_punctuation_station",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Dialogue Punctuation Station",
+    "type": "linguistic",
+    "problemType": "Confusion over dialogue formatting and speaker tags",
+    "targetMisconception": "Punctuation rules don‚Äôt apply to creative writing",
+    "teacherMoves": [
+      "Model rules with mentor dialogue (UDL 3.2)",
+      "Color-code tags vs quotes",
+      "Use sentence strips for kinesthetic practice"
+    ],
+    "studentTasks": [
+      "Reassemble dialogue sentences",
+      "Punctuate correctly",
+      "Peer-check clarity"
+    ],
+    "supports": [
+      "Sentence strips (UDL 4.1)",
+      "Color key (UDL 6.2)",
+      "Example/Non-example chart (HLP Exemplars)"
+    ],
+    "fadePlan": "Guided strip practice ‚Üí independent editing ‚Üí implicit application in drafts.",
+    "whenNotToUse": "When focus is content rather than conventions.",
+    "formativeChecks": [
+      "- Exit quiz: punctuate 3 lines correctly"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 3.2",
+      "UDL 4.1",
+      "UDL 6.2",
+      "HLP Exemplars"
+    ],
+    "selStrand": "responsible-decision-making",
+    "representationTags": [
+      "rtag.language.plain_language_access",
+      "rtag.pedagogy.student_voice"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 3,
+    "evidenceCitationKeys": [
+      "ASCD-CFU"
+    ],
+    "lastUpdated": "11/2/25"
+  },
+  {
+    "id": "ela.differentiated_reading_pathways",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Differentiated Reading Pathways",
+    "type": "linguistic",
+    "problemType": "Mixed readiness frustrates whole-class reading",
+    "targetMisconception": "All must read same text at same pace",
+    "teacherMoves": [
+      "Form groups by interest/strategy need (UDL 7.2)",
+      "Offer leveled options around shared theme (HLP Differentiated Support)",
+      "Rotate roles for equity"
+    ],
+    "studentTasks": [
+      "Read assigned text",
+      "Complete shared theme response",
+      "Compare interpretations across groups"
+    ],
+    "supports": [
+      "Group role cards (UDL 5.3)",
+      "Theme synthesis chart (UDL 3.3)",
+      "Comparison graphic (HLP Cooperative Learning)"
+    ],
+    "fadePlan": "Teacher-assigned levels ‚Üí student-selected difficulty.",
+    "whenNotToUse": "During standardized assessments requiring uniform material.",
+    "formativeChecks": [
+      "- Check cross-level theme accuracy",
+      "Exit question: Compare your group‚Äôs theme interpretation with another group‚Äôs."
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 7.2",
+      "HLP Differentiated Support",
+      "HLP Cooperative Learning"
+    ],
+    "selStrand": "relationship-skills",
+    "representationTags": [
+      "rtag.context.global_voices",
+      "rtag.language.plain_language_access"
+    ],
+    "cspTags": [
+      "co_design_with_community"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "UDL-CAST-3.0",
+      "HLP-CEC"
+    ],
+    "lastUpdated": "11/2/25"
+  },
+  {
+    "id": "ela.digital_discussion_forum_scaffold",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Digital Discussion Forum Scaffold",
+    "type": "linguistic",
+    "problemType": "Shallow/off-topic online responses",
+    "targetMisconception": "Digital replies don‚Äôt need evidence or tone awareness",
+    "teacherMoves": [
+      "Model exemplar post/reply (UDL 3.1)",
+      "Co-create digital etiquette norms (UDL 7.2)",
+      "Provide text-evidence reply stems (UDL 5.3)"
+    ],
+    "studentTasks": [
+      "Post initial claim with evidence",
+      "Reply using accountable talk stems",
+      "Self-check tone/evidence before submitting"
+    ],
+    "supports": [
+      "Post/reply template (UDL 3.3)",
+      "Etiquette checklist (UDL 7.2)",
+      "Sentence stem bank (UDL 5.3)"
+    ],
+    "fadePlan": "Template ‚Üí checklist only ‚Üí student-created norms.",
+    "whenNotToUse": "When platform access/moderation isn‚Äôt equitable.",
+    "formativeChecks": [
+      "- Random audit for tone, evidence, engagement",
+      "Self-assessment: Rate your post for evidence use and respectful tone."
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.1",
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 7.2",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "responsible-decision-making",
+    "representationTags": [
+      "rtag.context.global_voices",
+      "rtag.language.inclusive_language",
+      "rtag.pedagogy.student_voice"
+    ],
+    "cspTags": [
+      "sustain_language",
+      "co_design_with_community"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "JIGSAW-ARONSON",
+      "ASCD-CFU"
+    ],
+    "lastUpdated": "11/2/25"
+  },
+  {
+    "id": "ela.disability_representation_analysis",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Disability Representation in Literature Analysis",
+    "type": "cognitive",
+    "problemType": "Students encounter stereotypical or absent disability representation in texts",
+    "targetMisconception": "Belief that disability stories must be inspirational or tragic",
+    "teacherMoves": [
+      "Teach frameworks for analyzing representation quality (UDL 3.2)",
+      "Provide examples of authentic vs stereotypical portrayals (HLP Exemplars)",
+      "Center disabled voices in analysis"
+    ],
+    "studentTasks": [
+      "Identify disability representation in assigned text",
+      "Analyze portrayal using representation rubric",
+      "Compare with #OwnVoices perspectives"
+    ],
+    "supports": [
+      "Representation analysis framework (UDL 3.3)",
+      "Trope identification chart (UDL 6.2)",
+      "#OwnVoices resource list (UDL 7.2)"
+    ],
+    "fadePlan": "Teacher-guided analysis → Partner analysis → Independent critical reading",
+    "whenNotToUse": "When students have not yet established respectful discussion norms",
+    "formativeChecks": [
+      "Written analysis quality",
+      "Discussion contribution"
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.2",
+      "UDL 3.3",
+      "UDL 6.2",
+      "HLP Exemplars"
+    ],
+    "selStrand": "social-awareness",
+    "representationTags": [
+      "rtag.identity.disability_inclusion",
+      "rtag.identity.intersectional_identities",
+      "rtag.pedagogy.student_voice",
+      "rtag.language.inclusive_language"
+    ],
+    "cspTags": [
+      "criticality",
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "csp_ladsonbillings_1995_theory"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "ela.discussion_reflection_journal",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Discussion Reflection Journal",
+    "type": "social_collaborative",
+    "problemType": "Students don‚Äôt internalize feedback from class discussions",
+    "targetMisconception": "Discussion ends when talk stops",
+    "teacherMoves": [
+      "Model reflective journaling post-discussion (UDL 3.2)",
+      "Provide guiding questions linking talk to text (UDL 5.3)",
+      "Review reflections periodically"
+    ],
+    "studentTasks": [
+      "Write reflections on insights/misunderstandings",
+      "Set discussion goals for next session",
+      "Peer-share reflections"
+    ],
+    "supports": [
+      "Reflection question bank (UDL 5.3)",
+      "Example journals (HLP Exemplars)",
+      "Goal tracker (UDL 6.3)"
+    ],
+    "fadePlan": "Guided prompts ‚Üí partial prompts ‚Üí student-generated questions.",
+    "whenNotToUse": "When multiple reflections already assigned that week (fatigue).",
+    "formativeChecks": [
+      "- Collect entries biweekly",
+      "check evidence connections"
+    ],
+    "bloomLevel": "evaluate",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.2",
+      "UDL 5.3",
+      "UDL 6.3",
+      "HLP Exemplars"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.pedagogy.student_voice",
+      "rtag.media.graphic_organizers"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge",
+      "co_design_with_community"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "ASCD-CFU",
+      "FORMATIVE-IES"
+    ],
+    "lastUpdated": "11/2/25"
+  },
+  {
+    "id": "ela.discussion_skills_seminar",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Literature Discussion and Seminar Skills",
+    "type": "social_collaborative",
+    "problemType": "Students don't engage in substantive text-based discussion",
+    "targetMisconception": "Belief that discussion is about stating opinions rather than exploring text",
+    "teacherMoves": [
+      "Teach discussion as collaborative meaning-making (HLP Explicit Instruction)",
+      "Model text-based discussion moves (UDL 6.1)",
+      "Practice with progressively complex texts (UDL 8.3)",
+      "Build student-led discussion capacity (UDL 8.3)"
+    ],
+    "studentTasks": [
+      "Prepare for discussion with textual annotations and questions",
+      "Contribute ideas grounded in text evidence",
+      "Build on others' ideas rather than just adding",
+      "Ask genuine questions to deepen understanding",
+      "Reflect on discussion quality and learning"
+    ],
+    "supports": [
+      "Discussion preparation guide (UDL 3.3)",
+      "Text-based contribution stems (UDL 5.3)",
+      "Building talk moves (UDL 5.3)",
+      "Question generation prompts (UDL 5.3)",
+      "Discussion reflection template (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher facilitates with explicit move modeling → Phase 2: Shared facilitation with coaching → Phase 3: Student-led discussion → Phase 4: Natural discussion habits",
+    "whenNotToUse": "When quick check of understanding is needed rather than extended discussion.",
+    "formativeChecks": [
+      "- Preparation quality",
+      "- Text-grounding in contributions",
+      "- Building on others",
+      "- Self-reflection accuracy"
+    ],
+    "bloomLevel": "evaluate",
+    "dokLevel": 4,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.1",
+      "UDL 6.4",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "relationship-skills",
+    "representationTags": [
+      "rtag.pedagogy.collaborative_dialogue",
+      "rtag.pedagogy.student_voice",
+      "rtag.context.global_voices"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge",
+      "criticality"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "hlp_jenkins_2003_cooperative_learning",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "ela.diverse_voices_curriculum",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Diverse Voices and Perspectives in Literature",
+    "type": "unknown",
+    "problemType": "Literature curriculum excludes diverse voices and experiences",
+    "targetMisconception": "Belief that literary canon is neutral and includes all worthy literature",
+    "teacherMoves": [
+      "Intentionally include diverse authors and perspectives (UDL 7.3)",
+      "Teach literature as reflecting and shaping culture (HLP Explicit Instruction)",
+      "Support critical examination of whose voices are centered (UDL 3.2)",
+      "Connect to students' identities and experiences (UDL 7.2)"
+    ],
+    "studentTasks": [
+      "Read works by authors from diverse backgrounds",
+      "Analyze how identity shapes literary voice and perspective",
+      "Examine whose stories are told and whose are excluded",
+      "Connect literature to own identity and experience",
+      "Advocate for diverse reading materials"
+    ],
+    "supports": [
+      "Diverse author/text bank organized by identity (UDL 7.3)",
+      "Identity-voice analysis prompts (UDL 5.3)",
+      "Canon critique framework (UDL 6.2)",
+      "Personal connection journal (UDL 6.4)",
+      "Advocacy project template (UDL 6.3)"
+    ],
+    "fadePlan": "Phase 1: Teacher provides diverse texts and guides analysis → Phase 2: Student exploration with guidance → Phase 3: Independent diverse reading and analysis → Phase 4: Ongoing diverse reading identity",
+    "whenNotToUse": "Never - diverse voices should be central to all ELA instruction. Adjust texts to context.",
+    "formativeChecks": [
+      "- Engagement with diverse texts",
+      "- Identity-voice analysis quality",
+      "- Canon critique depth",
+      "- Personal connection authenticity"
+    ],
+    "bloomLevel": "evaluate",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.2",
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.2",
+      "UDL 6.3",
+      "UDL 6.4",
+      "UDL 7.2",
+      "UDL 7.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "social-awareness",
+    "representationTags": [
+      "rtag.identity.cultural_authenticity",
+      "rtag.identity.intersectional_identities",
+      "rtag.context.global_voices"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge",
+      "criticality",
+      "co_design_with_community"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "csp_ladsonbillings_1995_theory",
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "sel_jagers_2019_equity"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "ela.drama_text_performance",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Drama Text and Performance Integration",
+    "type": "cognitive",
+    "problemType": "Students don't understand drama as performance text",
+    "targetMisconception": "Belief that drama is read like prose rather than imagined as performance",
+    "teacherMoves": [
+      "Teach drama as performance-oriented text (HLP Explicit Instruction)",
+      "Model reading drama with performance imagination (UDL 6.1)",
+      "Practice performance-based interpretation (UDL 8.3)",
+      "Connect text to staging choices (UDL 7.2)"
+    ],
+    "studentTasks": [
+      "Read drama text imagining performance",
+      "Analyze how staging choices affect meaning",
+      "Make and defend directorial interpretation",
+      "Perform and analyze scenes",
+      "Connect text analysis to performance possibilities"
+    ],
+    "supports": [
+      "Drama reading strategies (UDL 3.3)",
+      "Staging choice analysis guide (UDL 6.2)",
+      "Directorial interpretation template (UDL 6.2)",
+      "Performance preparation protocol (UDL 6.2)",
+      "Text-performance connection prompts (UDL 5.3)"
+    ],
+    "fadePlan": "Phase 1: Teacher models performance-oriented reading → Phase 2: Guided staging analysis → Phase 3: Independent interpretation and performance → Phase 4: Natural drama literacy",
+    "whenNotToUse": "When reading drama for plot or theme without performance focus.",
+    "formativeChecks": [
+      "- Performance imagination in reading",
+      "- Staging choice analysis",
+      "- Interpretation defense",
+      "- Performance quality"
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.1",
+      "UDL 6.2",
+      "UDL 7.2",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.media.multimodal_resources",
+      "rtag.pedagogy.collaborative_dialogue",
+      "rtag.pedagogy.student_voice"
+    ],
+    "cspTags": [
+      "sustain_language",
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "udl_cast_2024_guidelines"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "ela.grammar_context_meaning",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Grammar in Context and Meaning-Making",
+    "type": "cognitive",
+    "problemType": "Students see grammar as arbitrary rules divorced from meaning",
+    "targetMisconception": "Belief that grammar is about right and wrong rather than effective communication",
+    "teacherMoves": [
+      "Teach grammar as meaning-making tool (HLP Explicit Instruction)",
+      "Model how grammar choices affect meaning and style (UDL 6.1)",
+      "Practice grammar in authentic writing contexts (UDL 8.3)",
+      "Connect to reading and writing purposes (UDL 7.2)"
+    ],
+    "studentTasks": [
+      "Analyze how grammar affects meaning in mentor texts",
+      "Practice targeted grammar skills in context",
+      "Apply grammar learning to own writing",
+      "Edit own work for grammar and effect",
+      "Develop grammar sense through reading"
+    ],
+    "supports": [
+      "Grammar-meaning connection guide (UDL 3.3)",
+      "Mentor text grammar analysis (UDL 6.1)",
+      "Targeted practice in context (UDL 8.3)",
+      "Application to own writing guide (UDL 6.2)",
+      "Grammar reading journal (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher models grammar-meaning connections → Phase 2: Guided grammar analysis and practice → Phase 3: Independent grammar application → Phase 4: Natural grammar sense",
+    "whenNotToUse": "When decontextualized grammar practice is appropriate for specific skill building.",
+    "formativeChecks": [
+      "- Grammar-meaning analysis quality",
+      "- Targeted skill improvement",
+      "- Application to writing",
+      "- Grammar sense development"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 6.1",
+      "UDL 6.2",
+      "UDL 6.4",
+      "UDL 7.2",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.language.plain_language_access",
+      "rtag.identity.neurodiversity",
+      "rtag.pedagogy.student_voice"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "hlp_hughes_2017_explicit_instruction",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "ela.home_language_valorization",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Home Language Valorization and Translanguaging",
+    "type": "linguistic",
+    "problemType": "Multilingual students' home languages are devalued in ELA",
+    "targetMisconception": "Belief that English-only is appropriate for English class",
+    "teacherMoves": [
+      "Explicitly value multilingualism as asset (UDL 7.3)",
+      "Allow translanguaging for thinking and processing (UDL 5.3)",
+      "Explore how languages work together (HLP Explicit Instruction)",
+      "Support code-switching awareness (UDL 3.2)"
+    ],
+    "studentTasks": [
+      "Use home language for processing and brainstorming",
+      "Explore connections between languages",
+      "Develop awareness of code-switching purposes",
+      "Create bilingual or multilingual texts",
+      "Reflect on linguistic identity and growth"
+    ],
+    "supports": [
+      "Translanguaging support prompts (UDL 5.3)",
+      "Language connection exploration guide (UDL 3.2)",
+      "Code-switching awareness activities (UDL 3.2)",
+      "Multilingual text examples (UDL 7.3)",
+      "Linguistic identity reflection (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher explicitly validates and models home language use → Phase 2: Structured translanguaging opportunities → Phase 3: Natural translanguaging with awareness → Phase 4: Confident multilingual identity",
+    "whenNotToUse": "Never - home language should always be valued. Adjust visibility and structure as appropriate.",
+    "formativeChecks": [
+      "- Home language use for processing",
+      "- Language connection understanding",
+      "- Code-switching awareness",
+      "- Identity reflection depth"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 3.2",
+      "UDL 5.3",
+      "UDL 6.4",
+      "UDL 7.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.language.home_language",
+      "rtag.identity.cultural_authenticity",
+      "rtag.language.inclusive_language"
+    ],
+    "cspTags": [
+      "sustain_language",
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "csp_ladsonbillings_1995_theory",
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "udl_cast_2024_guidelines"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "ela.informational_text_analysis",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Informational Text Analysis and Evaluation",
+    "type": "cognitive",
+    "problemType": "Students read informational text uncritically or avoid it entirely",
+    "targetMisconception": "Belief that informational text is neutral or less interesting than fiction",
+    "teacherMoves": [
+      "Teach informational text as constructed and purposeful (HLP Explicit Instruction)",
+      "Model critical reading of informational texts (UDL 6.1)",
+      "Practice with variety of informational forms (UDL 8.3)",
+      "Connect to real-world information needs (UDL 7.2)"
+    ],
+    "studentTasks": [
+      "Identify author's purpose and perspective in informational text",
+      "Analyze text structure and organization",
+      "Evaluate evidence quality and sufficiency",
+      "Assess credibility and bias",
+      "Synthesize information across texts"
+    ],
+    "supports": [
+      "Informational text analysis guide (UDL 3.3)",
+      "Structure and purpose analysis (UDL 6.2)",
+      "Evidence evaluation criteria (UDL 6.4)",
+      "Credibility assessment checklist (UDL 6.4)",
+      "Synthesis framework (UDL 6.2)"
+    ],
+    "fadePlan": "Phase 1: Teacher models critical informational reading → Phase 2: Guided analysis with variety → Phase 3: Independent critical reading → Phase 4: Critical informational literacy",
+    "whenNotToUse": "When information is being used for content rather than literacy skills.",
+    "formativeChecks": [
+      "- Purpose identification accuracy",
+      "- Structure analysis quality",
+      "- Evidence evaluation",
+      "- Synthesis across texts"
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 6.1",
+      "UDL 6.2",
+      "UDL 6.4",
+      "UDL 7.2",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "responsible-decision-making",
+    "representationTags": [
+      "rtag.media.accessible_media",
+      "rtag.language.plain_language_access",
+      "rtag.context.global_voices"
+    ],
+    "cspTags": [
+      "criticality",
+      "sustain_language"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "hlp_wwc_2022_reading_interventions"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "ela.lgbtq_inclusive_text_selection",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "LGBTQ+ Inclusive Text Selection and Discussion Guide",
+    "type": "social_collaborative",
+    "problemType": "Students rarely see LGBTQ+ experiences reflected in classroom texts",
+    "targetMisconception": "Belief that LGBTQ+ topics don't belong in academic settings",
+    "teacherMoves": [
+      "Curate diverse text sets including LGBTQ+ voices (UDL 7.2)",
+      "Establish discussion norms for identity conversations (HLP Explicit Instruction)",
+      "Model respectful discourse about identity"
+    ],
+    "studentTasks": [
+      "Engage with LGBTQ+ authored or themed text",
+      "Analyze representation and perspective",
+      "Connect themes to universal human experiences"
+    ],
+    "supports": [
+      "Text selection menu (UDL 7.2)",
+      "Discussion protocol (UDL 6.3)",
+      "Connection reflection template (UDL 5.3)"
+    ],
+    "fadePlan": "Teacher-selected texts → Student-recommended additions → Student-curated collections",
+    "whenNotToUse": "When community context requires prior relationship building and norm setting",
+    "formativeChecks": [
+      "Reflection on perspective-taking",
+      "Discussion quality observation"
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 5.3",
+      "UDL 6.3",
+      "UDL 7.2",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "social-awareness",
+    "representationTags": [
+      "rtag.identity.lgbtqia_inclusion",
+      "rtag.identity.intersectional_identities",
+      "rtag.pedagogy.student_voice"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge",
+      "criticality",
+      "co_design_with_community"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "csp_ladsonbillings_1995_theory"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "ela.listening_comprehension_active",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Active Listening Comprehension Development",
+    "type": "cognitive",
+    "problemType": "Students passively listen without active comprehension strategies",
+    "targetMisconception": "Belief that listening just happens without active effort",
+    "teacherMoves": [
+      "Teach listening as active comprehension process (HLP Explicit Instruction)",
+      "Model note-taking and questioning during listening (UDL 6.1)",
+      "Practice listening comprehension strategies (UDL 8.3)",
+      "Build listening stamina and skill (UDL 6.4)"
+    ],
+    "studentTasks": [
+      "Use active listening strategies during spoken text",
+      "Take effective notes while listening",
+      "Generate questions and connections",
+      "Summarize and evaluate after listening",
+      "Reflect on listening growth"
+    ],
+    "supports": [
+      "Active listening strategies guide (UDL 3.3)",
+      "Listening note-taking template (UDL 6.2)",
+      "Question and connection prompts (UDL 5.3)",
+      "Summary and evaluation protocol (UDL 6.3)",
+      "Listening reflection journal (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher models with explicit strategies → Phase 2: Guided listening practice → Phase 3: Independent listening with strategies → Phase 4: Automatic active listening",
+    "whenNotToUse": "When focus is on speaking or interactive conversation rather than extended listening.",
+    "formativeChecks": [
+      "- Strategy use during listening",
+      "- Note quality",
+      "- Summary accuracy",
+      "- Self-reported listening improvement"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.1",
+      "UDL 6.2",
+      "UDL 6.3",
+      "UDL 6.4",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.identity.disability_inclusion",
+      "rtag.identity.neurodiversity",
+      "rtag.media.accessible_media"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "udl_cast_2024_guidelines"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "ela.literary_analysis_framework",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Literary Analysis Essay Development",
+    "type": "cognitive",
+    "problemType": "Students summarize plot rather than analyze literary techniques",
+    "targetMisconception": "Belief that writing about literature means retelling the story",
+    "teacherMoves": [
+      "Teach analysis as distinct from summary (HLP Explicit Instruction)",
+      "Model developing analytical thesis about literary elements (UDL 6.1)",
+      "Practice body paragraphs that analyze rather than summarize (UDL 8.3)",
+      "Build complete analytical essays (UDL 6.2)"
+    ],
+    "studentTasks": [
+      "Develop analytical thesis about author's craft",
+      "Build body paragraphs with analysis not summary",
+      "Use evidence to support analytical claims",
+      "Connect analysis across paragraphs",
+      "Write conclusion that extends analysis"
+    ],
+    "supports": [
+      "Analysis vs summary distinction guide (UDL 3.3)",
+      "Analytical thesis templates (UDL 5.3)",
+      "Analysis paragraph structure (UDL 6.2)",
+      "Essay organization framework (UDL 6.2)",
+      "Self-evaluation rubric (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher models analytical thinking and writing → Phase 2: Guided paragraph practice → Phase 3: Independent essay writing → Phase 4: Natural analytical approach",
+    "whenNotToUse": "When personal response or creative writing is the goal.",
+    "formativeChecks": [
+      "- Thesis analytical quality",
+      "- Body paragraph analysis depth",
+      "- Evidence analysis not just use",
+      "- Essay coherence"
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 4,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.1",
+      "UDL 6.2",
+      "UDL 6.4",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.pedagogy.student_voice",
+      "rtag.media.graphic_organizers",
+      "rtag.language.plain_language_access"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "hlp_wwc_2016_secondary_writing",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "ela.multimodal_composition",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Multimodal Composition and Digital Literacy",
+    "type": "cognitive",
+    "problemType": "Students only compose in traditional text formats",
+    "targetMisconception": "Belief that legitimate writing is only print text",
+    "teacherMoves": [
+      "Teach multimodal composition as legitimate literacy (HLP Explicit Instruction)",
+      "Model creating with multiple modes (UDL 5.1)",
+      "Practice purposeful mode selection (UDL 5.2)",
+      "Connect multimodal skills to communication purposes (UDL 7.2)"
+    ],
+    "studentTasks": [
+      "Analyze how modes work together in texts",
+      "Select modes appropriate for purpose and audience",
+      "Create multimodal compositions",
+      "Evaluate effectiveness of mode choices",
+      "Develop technical skills for multimodal creation"
+    ],
+    "supports": [
+      "Multimodal analysis framework (UDL 3.3)",
+      "Mode selection guide (UDL 5.1)",
+      "Composition planning template (UDL 6.2)",
+      "Technical skill tutorials (UDL 5.2)",
+      "Effectiveness self-evaluation (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher introduces modes and guides creation → Phase 2: Supported multimodal projects → Phase 3: Independent multimodal composition → Phase 4: Natural multimodal literacy",
+    "whenNotToUse": "When traditional text composition is the specific learning goal.",
+    "formativeChecks": [
+      "- Mode analysis quality",
+      "- Selection rationale",
+      "- Technical execution",
+      "- Effectiveness evaluation"
+    ],
+    "bloomLevel": "create",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.1",
+      "UDL 5.2",
+      "UDL 6.2",
+      "UDL 6.4",
+      "UDL 7.2",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.media.multimodal_resources",
+      "rtag.identity.disability_inclusion",
+      "rtag.pedagogy.student_voice"
+    ],
+    "cspTags": [
+      "sustain_language",
+      "co_design_with_community"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "udl_cast_2024_guidelines",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "ela.narrative_writing_development",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Narrative Writing Skill Development",
+    "type": "cognitive",
+    "problemType": "Students tell rather than show in narrative writing",
+    "targetMisconception": "Belief that narrative writing is just recounting events",
+    "teacherMoves": [
+      "Teach narrative craft techniques explicitly (HLP Explicit Instruction)",
+      "Model show don't tell with before/after examples (UDL 6.1)",
+      "Practice specific narrative techniques (UDL 8.3)",
+      "Build complete narratives using craft (UDL 6.2)"
+    ],
+    "studentTasks": [
+      "Develop narrative arc with conflict and resolution",
+      "Use sensory details to create imagery",
+      "Develop characters through action and dialogue",
+      "Control pacing for effect",
+      "Craft meaningful endings"
+    ],
+    "supports": [
+      "Narrative arc structure guide (UDL 3.3)",
+      "Show don't tell examples and practice (UDL 6.1)",
+      "Dialogue and characterization tips (UDL 6.2)",
+      "Pacing techniques guide (UDL 6.2)",
+      "Narrative rubric (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher models each technique → Phase 2: Focused technique practice → Phase 3: Complete narrative writing → Phase 4: Natural narrative craft",
+    "whenNotToUse": "When informational or argumentative writing is the focus.",
+    "formativeChecks": [
+      "- Narrative arc presence",
+      "- Sensory detail quality",
+      "- Character development",
+      "- Overall narrative effectiveness"
+    ],
+    "bloomLevel": "create",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 6.1",
+      "UDL 6.2",
+      "UDL 6.4",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.pedagogy.student_voice",
+      "rtag.identity.cultural_authenticity",
+      "rtag.media.multimodal_resources"
+    ],
+    "cspTags": [
+      "sustain_language",
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "hlp_wwc_2016_secondary_writing",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "ela.peer_review_effectiveness",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Peer Review Skill Development",
+    "type": "social_collaborative",
+    "problemType": "Students give vague or unhelpful peer feedback",
+    "targetMisconception": "Belief that nice comments are more important than useful feedback",
+    "teacherMoves": [
+      "Teach specific peer review skills (HLP Explicit Instruction)",
+      "Model quality feedback using criteria (UDL 6.1)",
+      "Practice giving and receiving feedback (UDL 8.3)",
+      "Build culture of helpful feedback (UDL 8.3)"
+    ],
+    "studentTasks": [
+      "Review peer work using specific criteria",
+      "Provide specific, actionable feedback",
+      "Receive feedback without defensiveness",
+      "Prioritize and apply feedback to revision",
+      "Reflect on feedback quality growth"
+    ],
+    "supports": [
+      "Peer review protocol with criteria (UDL 3.3)",
+      "Feedback stems for specificity (UDL 5.3)",
+      "Receiving feedback strategies (UDL 6.4)",
+      "Feedback to revision planning (UDL 6.2)",
+      "Reflection on feedback quality (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher models and monitors feedback → Phase 2: Structured peer review with coaching → Phase 3: Independent peer review → Phase 4: Natural peer feedback culture",
+    "whenNotToUse": "When relationship isn't established or when peer feedback might be harmful.",
+    "formativeChecks": [
+      "- Feedback specificity and usefulness",
+      "- Receiving behavior observation",
+      "- Feedback application to revision",
+      "- Feedback quality growth"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.1",
+      "UDL 6.2",
+      "UDL 6.4",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "relationship-skills",
+    "representationTags": [
+      "rtag.pedagogy.collaborative_dialogue",
+      "rtag.pedagogy.student_voice",
+      "rtag.language.inclusive_language"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge",
+      "co_design_with_community"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "fa_wiliam_2011_embedded_FA",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "ela.personal_narrative_authentic",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Authentic Personal Narrative Development",
+    "type": "unknown",
+    "problemType": "Students don't see their stories as worthy of telling",
+    "targetMisconception": "Belief that only dramatic or unusual experiences make good narratives",
+    "teacherMoves": [
+      "Validate all student experiences as narrative-worthy (UDL 7.3)",
+      "Teach personal narrative craft (HLP Explicit Instruction)",
+      "Create safe space for story sharing (UDL 8.3)",
+      "Connect personal narrative to identity (UDL 7.2)"
+    ],
+    "studentTasks": [
+      "Identify personal experiences worthy of narrative",
+      "Develop narrative arc with significance",
+      "Use craft techniques to tell story effectively",
+      "Share with authentic audience",
+      "Reflect on storytelling and identity"
+    ],
+    "supports": [
+      "Narrative-worthy experience exploration (UDL 3.3)",
+      "Significance development guide (UDL 6.2)",
+      "Personal narrative craft techniques (UDL 6.2)",
+      "Safe sharing protocol (UDL 8.3)",
+      "Identity reflection prompts (UDL 5.3)"
+    ],
+    "fadePlan": "Phase 1: Teacher validates experiences and guides selection → Phase 2: Craft instruction with practice → Phase 3: Independent narrative development → Phase 4: Storyteller identity",
+    "whenNotToUse": "When personal narrative might surface trauma without proper support.",
+    "formativeChecks": [
+      "- Experience selection and significance",
+      "- Narrative craft application",
+      "- Sharing participation",
+      "- Identity connection"
+    ],
+    "bloomLevel": "create",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.2",
+      "UDL 7.2",
+      "UDL 7.3",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.identity.cultural_authenticity",
+      "rtag.pedagogy.student_voice",
+      "rtag.identity.intersectional_identities"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge",
+      "sustain_language"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "csp_ladsonbillings_1995_theory",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "ela.plain_language_translation_practice",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Plain Language Translation Practice",
+    "type": "linguistic",
+    "problemType": "Students struggle to communicate complex ideas clearly to diverse audiences",
+    "targetMisconception": "Belief that academic language is always superior to plain language",
+    "teacherMoves": [
+      "Model translating jargon to accessible language (UDL 3.1)",
+      "Teach audience awareness (HLP Explicit Instruction)",
+      "Provide plain language guidelines"
+    ],
+    "studentTasks": [
+      "Identify jargon and complex structures in text",
+      "Translate for specific audience",
+      "Verify clarity with peer from target audience"
+    ],
+    "supports": [
+      "Plain language checklist (UDL 3.3)",
+      "Audience analysis template (UDL 6.3)",
+      "Translation comparison chart (UDL 5.3)"
+    ],
+    "fadePlan": "Teacher modeling → Collaborative translation → Independent plain language writing",
+    "whenNotToUse": "When demonstrating mastery of academic register is the learning goal",
+    "formativeChecks": [
+      "Peer clarity ratings",
+      "Readability score comparison"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.1",
+      "UDL 3.3",
+      "UDL 5.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "social-awareness",
+    "representationTags": [
+      "rtag.language.plain_language_access",
+      "rtag.language.inclusive_language",
+      "rtag.identity.disability_inclusion"
+    ],
+    "cspTags": [
+      "sustain_language",
+      "co_design_with_community"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "udl_cast_2024_guidelines",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "ela.poetry_appreciation_analysis",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Poetry Appreciation and Analysis Development",
+    "type": "unknown",
+    "problemType": "Students feel intimidated by or disconnected from poetry",
+    "targetMisconception": "Belief that poetry is only for certain people or has one right interpretation",
+    "teacherMoves": [
+      "Demystify poetry and validate multiple interpretations (UDL 7.3)",
+      "Teach poetry analysis strategies accessibly (HLP Explicit Instruction)",
+      "Provide diverse poetry including contemporary and culturally relevant (UDL 7.3)",
+      "Connect poetry to emotion and experience (UDL 7.2)"
+    ],
+    "studentTasks": [
+      "Read and respond to diverse poetry",
+      "Use analysis strategies for understanding",
+      "Discuss multiple interpretations respectfully",
+      "Create personal connections to poetry",
+      "Write and share own poetry"
+    ],
+    "supports": [
+      "Poetry reading strategies guide (UDL 3.3)",
+      "Analysis framework accessible (UDL 6.2)",
+      "Diverse poetry collection (UDL 7.3)",
+      "Personal connection prompts (UDL 5.3)",
+      "Poetry writing supports (UDL 5.3)"
+    ],
+    "fadePlan": "Phase 1: Teacher models accessible poetry engagement → Phase 2: Supported analysis and response → Phase 3: Independent poetry reading and writing → Phase 4: Poetry appreciation identity",
+    "whenNotToUse": "When poetry analysis might reinforce intimidation rather than accessibility.",
+    "formativeChecks": [
+      "- Engagement with diverse poetry",
+      "- Analysis strategy use",
+      "- Personal connection depth",
+      "- Poetry writing attempts"
+    ],
+    "bloomLevel": "evaluate",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.2",
+      "UDL 7.2",
+      "UDL 7.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.identity.cultural_authenticity",
+      "rtag.context.global_voices",
+      "rtag.pedagogy.student_voice"
+    ],
+    "cspTags": [
+      "sustain_language",
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "csp_ladsonbillings_1995_theory"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "ela.reader_identity_affirmation",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Reader Identity Affirmation and Development",
+    "type": "unknown",
+    "problemType": "Students don't see themselves as readers",
+    "targetMisconception": "Belief that reading identity is fixed and can't be developed",
+    "teacherMoves": [
+      "Affirm and develop reader identities (UDL 7.3)",
+      "Provide choice in reading (UDL 7.1)",
+      "Create community around reading (HLP Cooperative Learning)",
+      "Connect reading to student interests and identities (UDL 7.2)"
+    ],
+    "studentTasks": [
+      "Explore personal reading history and preferences",
+      "Set personal reading goals aligned with interests",
+      "Engage in sustained reading with choice",
+      "Share reading with peers",
+      "Reflect on growing reader identity"
+    ],
+    "supports": [
+      "Reading identity exploration guide (UDL 3.3)",
+      "Interest-based reading recommendations (UDL 7.1)",
+      "Reading tracking log with reflection (UDL 6.4)",
+      "Reading share protocol (HLP Cooperative Learning)",
+      "Identity growth reflection (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher creates reading community with choice → Phase 2: Supported reader identity development → Phase 3: Independent reading life → Phase 4: Lifelong reader identity",
+    "whenNotToUse": "Never - reader identity should be developed continuously. Adjust choice and support levels.",
+    "formativeChecks": [
+      "- Reading engagement and volume",
+      "- Choice exercise quality",
+      "- Peer sharing participation",
+      "- Identity reflection depth"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 6.4",
+      "UDL 7.1",
+      "UDL 7.2",
+      "UDL 7.3",
+      "HLP Cooperative Learning"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.pedagogy.student_voice",
+      "rtag.identity.cultural_authenticity",
+      "rtag.identity.neurodiversity"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge",
+      "sustain_language"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "udl_cast_2024_guidelines"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "ela.reading_comprehension_monitoring",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Reading Comprehension Monitoring Strategy",
+    "type": "metacognitive",
+    "problemType": "Students continue reading even when comprehension breaks down",
+    "targetMisconception": "Belief that finishing the reading is more important than understanding",
+    "teacherMoves": [
+      "Teach comprehension monitoring as active reading (HLP Explicit Instruction)",
+      "Model recognizing and addressing confusion (UDL 6.1)",
+      "Provide fix-up strategies for confusion (UDL 6.4)",
+      "Build monitoring as automatic habit (UDL 6.4)"
+    ],
+    "studentTasks": [
+      "Monitor understanding while reading",
+      "Recognize when comprehension breaks down",
+      "Apply fix-up strategies: reread, slow down, question, connect",
+      "Continue monitoring after strategy use",
+      "Reflect on reading process and growth"
+    ],
+    "supports": [
+      "Comprehension monitoring self-check (UDL 6.4)",
+      "Confusion recognition signals guide (UDL 3.3)",
+      "Fix-up strategy menu (UDL 6.4)",
+      "Strategy tracking log (UDL 6.4)",
+      "Reading process reflection (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher prompts monitoring at intervals → Phase 2: Self-prompted monitoring with support → Phase 3: Independent monitoring → Phase 4: Automatic monitoring habit",
+    "whenNotToUse": "Never - comprehension monitoring benefits all reading. Adjust frequency and support.",
+    "formativeChecks": [
+      "- Confusion recognition accuracy",
+      "- Strategy selection and use",
+      "- Reading comprehension improvement",
+      "- Self-reflection quality"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 6.1",
+      "UDL 6.4",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.identity.neurodiversity",
+      "rtag.identity.disability_inclusion",
+      "rtag.pedagogy.student_voice"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "hlp_wwc_2022_reading_interventions",
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "udl_cast_2024_guidelines"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "ela.reading_goal_setting",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Reading Goal Setting and Growth Tracking",
+    "type": "metacognitive",
+    "problemType": "Students don't set or track reading goals",
+    "targetMisconception": "Belief that reading growth just happens without intentional effort",
+    "teacherMoves": [
+      "Teach reading goal setting with growth mindset (HLP Explicit Instruction)",
+      "Help students identify reading growth areas (UDL 6.4)",
+      "Support goal-aligned strategy selection (UDL 6.2)",
+      "Build reflection and adjustment habits (UDL 6.4)"
+    ],
+    "studentTasks": [
+      "Assess current reading strengths and growth areas",
+      "Set specific, measurable reading goals",
+      "Select strategies to support goal attainment",
+      "Track progress toward goals",
+      "Adjust goals and strategies based on progress"
+    ],
+    "supports": [
+      "Reading self-assessment tool (UDL 6.4)",
+      "Goal setting template for reading (UDL 3.3)",
+      "Strategy-goal alignment guide (UDL 6.2)",
+      "Progress tracking log (UDL 6.4)",
+      "Reflection and adjustment protocol (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher guides goal setting with assessment → Phase 2: Supported strategy selection and tracking → Phase 3: Independent goal management → Phase 4: Ongoing reading growth habits",
+    "whenNotToUse": "When reading is purely for enjoyment with no skill focus.",
+    "formativeChecks": [
+      "- Goal specificity and measurability",
+      "- Strategy-goal alignment",
+      "- Tracking consistency",
+      "- Adjustment appropriateness"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 6.2",
+      "UDL 6.4",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.pedagogy.student_voice",
+      "rtag.identity.neurodiversity",
+      "rtag.identity.disability_inclusion"
+    ],
+    "cspTags": [
+      "sustain_language",
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "fa_wiliam_2011_embedded_FA",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "ela.reading_group_collaboration",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Reading Group Collaboration Skills",
+    "type": "social_collaborative",
+    "problemType": "Students don't learn effectively in reading groups",
+    "targetMisconception": "Belief that reading is solitary rather than social",
+    "teacherMoves": [
+      "Teach reading group collaboration skills (HLP Cooperative Learning)",
+      "Model effective group discussion (UDL 6.1)",
+      "Assign meaningful roles with accountability (UDL 8.3)",
+      "Build from group to independent application (UDL 6.4)"
+    ],
+    "studentTasks": [
+      "Prepare for group discussion with text annotations and questions",
+      "Fulfill assigned role responsibilities",
+      "Contribute to group meaning-making",
+      "Build on others' ideas",
+      "Reflect on group effectiveness and learning"
+    ],
+    "supports": [
+      "Reading group role descriptions (UDL 3.3)",
+      "Discussion preparation guide (UDL 6.2)",
+      "Role accountability checklist (UDL 6.4)",
+      "Contribution tracking (UDL 6.4)",
+      "Group effectiveness reflection (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher structures groups with explicit roles → Phase 2: Reduced scaffolding with accountability → Phase 3: Student-organized groups → Phase 4: Natural collaborative reading",
+    "whenNotToUse": "When individual reading assessment is needed.",
+    "formativeChecks": [
+      "- Preparation quality",
+      "- Role fulfillment",
+      "- Contribution quality",
+      "- Group effectiveness reflection"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 6.1",
+      "UDL 6.2",
+      "UDL 6.4",
+      "UDL 8.3",
+      "HLP Cooperative Learning"
+    ],
+    "selStrand": "relationship-skills",
+    "representationTags": [
+      "rtag.pedagogy.collaborative_dialogue",
+      "rtag.pedagogy.student_voice",
+      "rtag.language.inclusive_language"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge",
+      "co_design_with_community"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "hlp_jenkins_2003_cooperative_learning",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "ela.research_process_scaffold",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Research Process Scaffolding System",
+    "type": "cognitive",
+    "problemType": "Students don't follow effective research process",
+    "targetMisconception": "Belief that research means finding sources that say what you want",
+    "teacherMoves": [
+      "Teach research as inquiry process (HLP Explicit Instruction)",
+      "Model question development and source seeking (UDL 6.1)",
+      "Practice evaluating and synthesizing sources (UDL 6.2)",
+      "Build from research to argument (UDL 6.2)"
+    ],
+    "studentTasks": [
+      "Develop genuine research question",
+      "Locate credible and relevant sources",
+      "Evaluate sources for reliability and bias",
+      "Synthesize information across sources",
+      "Develop research-based argument or product"
+    ],
+    "supports": [
+      "Research question development guide (UDL 3.3)",
+      "Source evaluation checklist (UDL 6.4)",
+      "Note-taking and tracking system (UDL 6.2)",
+      "Synthesis matrix (UDL 6.2)",
+      "Research to writing bridge (UDL 6.2)"
+    ],
+    "fadePlan": "Phase 1: Teacher guides each research step → Phase 2: Structured research with check-ins → Phase 3: Independent research with support → Phase 4: Natural research habits",
+    "whenNotToUse": "When quick information-finding is needed rather than extended research.",
+    "formativeChecks": [
+      "- Question quality",
+      "- Source evaluation accuracy",
+      "- Synthesis quality",
+      "- Research-argument connection"
+    ],
+    "bloomLevel": "create",
+    "dokLevel": 4,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 6.1",
+      "UDL 6.2",
+      "UDL 6.4",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.media.accessible_media",
+      "rtag.language.plain_language_access",
+      "rtag.pedagogy.student_voice"
+    ],
+    "cspTags": [
+      "criticality",
+      "sustain_language"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "hlp_wwc_2016_secondary_writing",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "ela.revision_strategies_deep",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Deep Revision Strategy Development",
+    "type": "metacognitive",
+    "problemType": "Students revise only for surface errors not content",
+    "targetMisconception": "Belief that revision means editing for spelling and grammar",
+    "teacherMoves": [
+      "Teach revision as rethinking not just editing (HLP Explicit Instruction)",
+      "Model substantive revision with before/after examples (UDL 6.1)",
+      "Practice specific revision moves (UDL 8.3)",
+      "Separate revision from editing in process (UDL 6.2)"
+    ],
+    "studentTasks": [
+      "Revise for global concerns: thesis, organization, development",
+      "Revise for paragraph-level concerns: coherence, transitions",
+      "Save editing for after content revision",
+      "Use revision strategies matched to identified needs",
+      "Evaluate revision effectiveness"
+    ],
+    "supports": [
+      "Revision levels guide: global, paragraph, sentence (UDL 3.3)",
+      "Revision moves menu (UDL 6.2)",
+      "Before/after revision examples (HLP Exemplars)",
+      "Revision tracking tool (UDL 6.4)",
+      "Self-assessment for revision needs (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher guides revision with explicit modeling → Phase 2: Structured revision with feedback → Phase 3: Independent revision with self-assessment → Phase 4: Natural deep revision habits",
+    "whenNotToUse": "When writing is informal or when time doesn't allow for revision process.",
+    "formativeChecks": [
+      "- Revision level appropriateness",
+      "- Substantive changes made",
+      "- Revision effectiveness",
+      "- Growth in revision habits"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 6.1",
+      "UDL 6.2",
+      "UDL 6.4",
+      "UDL 8.3",
+      "HLP Explicit Instruction",
+      "HLP Exemplars"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.pedagogy.student_voice",
+      "rtag.identity.neurodiversity",
+      "rtag.language.plain_language_access"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "hlp_wwc_2016_secondary_writing",
+      "fa_wiliam_2011_embedded_FA"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "ela.rhetorical_analysis_framework",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Rhetorical Analysis Framework Development",
+    "type": "cognitive",
+    "problemType": "Students don't analyze how texts persuade",
+    "targetMisconception": "Belief that persuasion is about manipulation rather than rhetoric",
+    "teacherMoves": [
+      "Teach rhetorical situation and strategies (HLP Explicit Instruction)",
+      "Model analyzing appeals and techniques (UDL 6.1)",
+      "Practice with variety of rhetorical texts (UDL 8.3)",
+      "Connect to own persuasive writing (UDL 6.2)"
+    ],
+    "studentTasks": [
+      "Analyze rhetorical situation: author, audience, purpose, context",
+      "Identify appeals: ethos, pathos, logos",
+      "Analyze specific rhetorical techniques",
+      "Evaluate effectiveness for audience",
+      "Apply rhetorical awareness to own writing"
+    ],
+    "supports": [
+      "Rhetorical situation analysis guide (UDL 3.3)",
+      "Appeals identification framework (UDL 6.2)",
+      "Technique analysis template (UDL 6.2)",
+      "Effectiveness evaluation prompts (UDL 5.3)",
+      "Rhetorical writing application (UDL 6.2)"
+    ],
+    "fadePlan": "Phase 1: Teacher models rhetorical analysis → Phase 2: Guided analysis with variety → Phase 3: Independent rhetorical analysis → Phase 4: Rhetorical awareness in reading and writing",
+    "whenNotToUse": "When text is being read for content rather than persuasion.",
+    "formativeChecks": [
+      "- Rhetorical situation analysis accuracy",
+      "- Appeals identification",
+      "- Technique analysis depth",
+      "- Application to writing"
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 4,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.1",
+      "UDL 6.2",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "responsible-decision-making",
+    "representationTags": [
+      "rtag.context.global_voices",
+      "rtag.pedagogy.student_voice",
+      "rtag.language.plain_language_access"
+    ],
+    "cspTags": [
+      "criticality",
+      "sustain_language"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "hlp_wwc_2016_secondary_writing"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "ela.sentence_variety_fluency",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Sentence Variety and Fluency Development",
+    "type": "cognitive",
+    "problemType": "Students write with repetitive sentence structures",
+    "targetMisconception": "Belief that sentence structure doesn't affect writing quality",
+    "teacherMoves": [
+      "Teach sentence variety as stylistic tool (HLP Explicit Instruction)",
+      "Model sentence combining and manipulation (UDL 6.1)",
+      "Practice varying sentence beginnings, lengths, and structures (UDL 8.3)",
+      "Read aloud to hear rhythm and flow (UDL 6.4)"
+    ],
+    "studentTasks": [
+      "Analyze sentence variety in model texts",
+      "Practice sentence combining techniques",
+      "Vary sentence beginnings purposefully",
+      "Adjust sentence length for effect",
+      "Revise own writing for variety"
+    ],
+    "supports": [
+      "Sentence variety analysis guide (UDL 3.3)",
+      "Sentence combining exercises (UDL 8.3)",
+      "Sentence beginning options (UDL 5.3)",
+      "Length variation techniques (UDL 6.2)",
+      "Read-aloud revision protocol (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher models sentence manipulation → Phase 2: Focused sentence variety practice → Phase 3: Application to own writing → Phase 4: Natural sentence variety habits",
+    "whenNotToUse": "When focus is on generating ideas rather than craft.",
+    "formativeChecks": [
+      "- Sentence variety in writing samples",
+      "- Intentional variation evidence",
+      "- Read-aloud fluency",
+      "- Self-revision for variety"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.1",
+      "UDL 6.2",
+      "UDL 6.4",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.language.plain_language_access",
+      "rtag.identity.neurodiversity",
+      "rtag.pedagogy.student_voice"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "hlp_wwc_2016_secondary_writing",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "ela.social_issues_literature",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Literature and Social Issues Connection",
+    "type": "social_collaborative",
+    "problemType": "Students don't connect literature to contemporary social issues",
+    "targetMisconception": "Belief that literature is separate from real-world concerns",
+    "teacherMoves": [
+      "Connect literature to contemporary issues intentionally (UDL 7.2)",
+      "Teach critical reading for social themes (HLP Explicit Instruction)",
+      "Support discussion of difficult topics safely (UDL 8.3)",
+      "Move from analysis to possible action (UDL 7.2)"
+    ],
+    "studentTasks": [
+      "Identify social issues in literature being studied",
+      "Connect literary treatment to contemporary manifestations",
+      "Analyze how literature illuminates social dynamics",
+      "Discuss issues with civil discourse skills",
+      "Consider action connections if appropriate"
+    ],
+    "supports": [
+      "Literature-society connection guide (UDL 3.3)",
+      "Critical reading for social themes (UDL 6.2)",
+      "Discussion protocol for difficult topics (UDL 8.3)",
+      "Contemporary connection research (UDL 6.2)",
+      "Action connection prompts (UDL 5.3)"
+    ],
+    "fadePlan": "Phase 1: Teacher makes connections and facilitates discussion → Phase 2: Guided connection-making → Phase 3: Independent critical reading → Phase 4: Socially-conscious reading identity",
+    "whenNotToUse": "When issues might cause distress without proper preparation and support.",
+    "formativeChecks": [
+      "- Social issue identification in literature",
+      "- Contemporary connection quality",
+      "- Discussion participation",
+      "- Action thinking"
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 4,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.2",
+      "UDL 7.2",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "social-awareness",
+    "representationTags": [
+      "rtag.context.global_voices",
+      "rtag.identity.intersectional_identities",
+      "rtag.pedagogy.student_voice"
+    ],
+    "cspTags": [
+      "criticality",
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "csp_ladsonbillings_1995_theory",
+      "sel_jagers_2019_equity",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "ela.speaking_presentation_skills",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Speaking and Presentation Skill Development",
+    "type": "cognitive",
+    "problemType": "Students struggle with formal speaking and presentation",
+    "targetMisconception": "Belief that speaking ability is a fixed personality trait",
+    "teacherMoves": [
+      "Teach speaking skills explicitly like writing skills (HLP Explicit Instruction)",
+      "Model effective presentation techniques (UDL 6.1)",
+      "Provide progressive practice opportunities (UDL 8.3)",
+      "Build safe environment for speaking growth (UDL 8.3)"
+    ],
+    "studentTasks": [
+      "Learn components of effective speaking",
+      "Practice specific speaking skills with feedback",
+      "Plan and rehearse presentations",
+      "Present with attention to learned skills",
+      "Reflect on speaking growth"
+    ],
+    "supports": [
+      "Speaking components guide (UDL 3.3)",
+      "Skill-specific practice activities (UDL 8.3)",
+      "Presentation planning template (UDL 6.2)",
+      "Rehearsal protocol (UDL 6.4)",
+      "Speaking reflection journal (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Low-stakes speaking with high support → Phase 2: Structured presentations with feedback → Phase 3: Independent presentation planning → Phase 4: Confident speaking identity",
+    "whenNotToUse": "When anxiety requires additional support before public speaking.",
+    "formativeChecks": [
+      "- Speaking skill improvement",
+      "- Preparation quality",
+      "- Presentation effectiveness",
+      "- Self-reported confidence growth"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 6.1",
+      "UDL 6.2",
+      "UDL 6.4",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.pedagogy.student_voice",
+      "rtag.identity.disability_inclusion",
+      "rtag.language.inclusive_language"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "udl_cast_2024_guidelines"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "ela.symbolism_figurative_analysis",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Symbolism and Figurative Language Analysis",
+    "type": "cognitive",
+    "problemType": "Students interpret figurative language literally or miss symbolism",
+    "targetMisconception": "Belief that texts say exactly what they mean literally",
+    "teacherMoves": [
+      "Teach figurative language and symbolism as meaning-making tools (HLP Explicit Instruction)",
+      "Model interpretation with think-aloud (UDL 6.1)",
+      "Practice with variety of figures and symbols (UDL 8.3)",
+      "Connect to author's purpose and effect (UDL 7.2)"
+    ],
+    "studentTasks": [
+      "Identify figurative language and potential symbols",
+      "Interpret meaning beyond literal level",
+      "Trace symbolic patterns across text",
+      "Analyze effect of figurative choices",
+      "Write about symbolism with evidence"
+    ],
+    "supports": [
+      "Figurative language types guide (UDL 3.3)",
+      "Interpretation strategy guide (UDL 6.2)",
+      "Symbol tracking template (UDL 6.2)",
+      "Effect analysis prompts (UDL 5.3)",
+      "Symbolism writing framework (UDL 6.2)"
+    ],
+    "fadePlan": "Phase 1: Teacher models identification and interpretation → Phase 2: Guided figurative analysis → Phase 3: Independent symbolic interpretation → Phase 4: Sophisticated figurative reading",
+    "whenNotToUse": "When literal comprehension is the appropriate focus.",
+    "formativeChecks": [
+      "- Figurative language identification",
+      "- Interpretation quality",
+      "- Pattern tracking across text",
+      "- Analysis writing depth"
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.1",
+      "UDL 6.2",
+      "UDL 7.2",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.pedagogy.student_voice",
+      "rtag.context.global_voices",
+      "rtag.language.plain_language_access"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "udl_cast_2024_guidelines"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "ela.text_structure_awareness",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Text Structure Awareness and Use",
+    "type": "cognitive",
+    "problemType": "Students don't recognize how text structure affects comprehension",
+    "targetMisconception": "Belief that all texts are read the same way",
+    "teacherMoves": [
+      "Teach text structures as comprehension tools (HLP Explicit Instruction)",
+      "Model identifying and using structure for understanding (UDL 6.1)",
+      "Practice with variety of structures (UDL 8.3)",
+      "Connect structure to writing (UDL 6.2)"
+    ],
+    "studentTasks": [
+      "Identify text structure of reading",
+      "Use structure knowledge to predict and comprehend",
+      "Apply different reading strategies for different structures",
+      "Analyze how structure affects meaning",
+      "Use structures intentionally in writing"
+    ],
+    "supports": [
+      "Text structure types guide (UDL 3.3)",
+      "Structure identification practice (UDL 8.3)",
+      "Structure-strategy matching (UDL 6.2)",
+      "Structure analysis prompts (UDL 5.3)",
+      "Structure in writing guide (UDL 6.2)"
+    ],
+    "fadePlan": "Phase 1: Teacher models structure identification and use → Phase 2: Guided practice with variety → Phase 3: Independent structure awareness → Phase 4: Automatic structure use",
+    "whenNotToUse": "When text structure is not relevant to comprehension goal.",
+    "formativeChecks": [
+      "- Structure identification accuracy",
+      "- Strategy selection appropriateness",
+      "- Structure-meaning analysis",
+      "- Structure use in writing"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.1",
+      "UDL 6.2",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.media.graphic_organizers",
+      "rtag.language.plain_language_access",
+      "rtag.identity.neurodiversity"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "hlp_wwc_2022_reading_interventions",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "ela.textual_evidence_integration",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Textual Evidence Selection and Integration",
+    "type": "cognitive",
+    "problemType": "Students make claims without text support or use evidence without explanation",
+    "targetMisconception": "Belief that any quote supports any claim or that quoting is the same as analyzing",
+    "teacherMoves": [
+      "Teach evidence as support requiring explanation (HLP Explicit Instruction)",
+      "Model selecting relevant evidence and connecting to claims (UDL 6.1)",
+      "Practice embedding and explaining quotes (UDL 5.3)",
+      "Build from single evidence to multiple evidence arguments (UDL 6.2)"
+    ],
+    "studentTasks": [
+      "Identify claim that needs evidence support",
+      "Select most relevant evidence from text",
+      "Embed evidence smoothly with proper attribution",
+      "Explain how evidence supports claim",
+      "Build arguments with multiple evidence points"
+    ],
+    "supports": [
+      "Evidence selection guide (UDL 3.3)",
+      "Evidence embedding templates (UDL 5.3)",
+      "Connection explanation stems (UDL 5.3)",
+      "Multi-evidence argument structure (UDL 6.2)",
+      "Evidence integration rubric (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher models complete evidence integration → Phase 2: Guided practice with templates → Phase 3: Independent evidence use → Phase 4: Natural evidence-based writing",
+    "whenNotToUse": "When brainstorming or when textual evidence is not the learning focus.",
+    "formativeChecks": [
+      "- Evidence relevance",
+      "- Embedding smoothness",
+      "- Explanation quality",
+      "- Multi-evidence coherence"
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.1",
+      "UDL 6.2",
+      "UDL 6.4",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.language.plain_language_access",
+      "rtag.pedagogy.student_voice",
+      "rtag.media.graphic_organizers"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "hlp_wwc_2016_secondary_writing",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "ela.theme_development_analysis",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Theme Identification and Development Analysis",
+    "type": "cognitive",
+    "problemType": "Students identify topics rather than themes or miss theme development",
+    "targetMisconception": "Belief that themes are explicitly stated rather than developed through text",
+    "teacherMoves": [
+      "Teach theme as developed through text elements (HLP Explicit Instruction)",
+      "Model tracing theme development across text (UDL 6.1)",
+      "Practice distinguishing topic from theme (UDL 8.3)",
+      "Connect theme to author's purpose and technique (UDL 7.2)"
+    ],
+    "studentTasks": [
+      "Distinguish topic from theme in texts",
+      "Trace how theme develops through plot, character, symbol",
+      "Identify textual evidence for theme interpretation",
+      "Analyze how author develops theme",
+      "Write about theme with evidence"
+    ],
+    "supports": [
+      "Topic vs theme distinction guide (UDL 3.3)",
+      "Theme development tracking template (UDL 6.2)",
+      "Evidence collection for themes (UDL 6.2)",
+      "Theme-technique connection prompts (UDL 5.3)",
+      "Theme writing framework (UDL 6.2)"
+    ],
+    "fadePlan": "Phase 1: Teacher models with explicit distinction and tracking → Phase 2: Guided theme analysis → Phase 3: Independent theme interpretation → Phase 4: Sophisticated theme analysis",
+    "whenNotToUse": "When plot comprehension is the primary focus rather than theme.",
+    "formativeChecks": [
+      "- Topic-theme distinction accuracy",
+      "- Theme development tracking",
+      "- Evidence quality",
+      "- Theme writing depth"
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.1",
+      "UDL 6.2",
+      "UDL 7.2",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.pedagogy.student_voice",
+      "rtag.context.global_voices",
+      "rtag.language.plain_language_access"
+    ],
+    "cspTags": [
+      "sustain_language",
+      "criticality"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "udl_cast_2024_guidelines"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "ela.vocabulary_context_strategy",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Vocabulary-in-Context Determination Strategy",
+    "type": "cognitive",
+    "problemType": "Students skip unknown words or rely solely on dictionary",
+    "targetMisconception": "Belief that vocabulary comes from memorizing definitions rather than context",
+    "teacherMoves": [
+      "Teach context clue types and strategies (HLP Explicit Instruction)",
+      "Model using context before dictionary (UDL 6.1)",
+      "Practice verifying with dictionary after context guess (UDL 6.2)",
+      "Build word consciousness habits (UDL 6.4)"
+    ],
+    "studentTasks": [
+      "Identify unknown word in context",
+      "Use context clues to make educated guess",
+      "Verify guess with dictionary or discussion",
+      "Record word with context and meaning",
+      "Apply word in new contexts"
+    ],
+    "supports": [
+      "Context clue types guide (UDL 3.3)",
+      "Strategy steps reference (UDL 6.2)",
+      "Vocabulary journal template (UDL 3.3)",
+      "Application sentence stems (UDL 5.3)",
+      "Word consciousness reflection (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher models with think-aloud → Phase 2: Guided practice with feedback → Phase 3: Independent strategy use → Phase 4: Automatic context-first approach",
+    "whenNotToUse": "When word meaning is critical to safety or when no context is available.",
+    "formativeChecks": [
+      "- Context clue identification",
+      "- Guess accuracy before dictionary",
+      "- Application in new contexts",
+      "- Word consciousness growth"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.1",
+      "UDL 6.2",
+      "UDL 6.4",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.language.plain_language_access",
+      "rtag.identity.neurodiversity",
+      "rtag.pedagogy.student_voice"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "hlp_wwc_2022_reading_interventions",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "ela.writer_identity_affirmation",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Writer Identity Affirmation and Development",
+    "type": "unknown",
+    "problemType": "Students don't see themselves as writers",
+    "targetMisconception": "Belief that writer identity is for some people but not them",
+    "teacherMoves": [
+      "Affirm and develop writer identities (UDL 7.3)",
+      "Provide choice in writing topics and forms (UDL 7.1)",
+      "Create community around writing (HLP Cooperative Learning)",
+      "Connect writing to student interests and purposes (UDL 7.2)"
+    ],
+    "studentTasks": [
+      "Explore personal writing history and preferences",
+      "Set personal writing goals aligned with purposes",
+      "Engage in regular writing with choice",
+      "Share writing with authentic audiences",
+      "Reflect on growing writer identity"
+    ],
+    "supports": [
+      "Writer identity exploration guide (UDL 3.3)",
+      "Writing choice and topic options (UDL 7.1)",
+      "Writing tracking log with reflection (UDL 6.4)",
+      "Writing share protocol (HLP Cooperative Learning)",
+      "Identity growth reflection (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher creates writing community with choice → Phase 2: Supported writer identity development → Phase 3: Independent writing life → Phase 4: Lifelong writer identity",
+    "whenNotToUse": "Never - writer identity should be developed continuously. Adjust choice and support levels.",
+    "formativeChecks": [
+      "- Writing engagement and volume",
+      "- Choice exercise quality",
+      "- Peer sharing participation",
+      "- Identity reflection depth"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 6.4",
+      "UDL 7.1",
+      "UDL 7.2",
+      "UDL 7.3",
+      "HLP Cooperative Learning"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.pedagogy.student_voice",
+      "rtag.identity.cultural_authenticity",
+      "rtag.identity.neurodiversity"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge",
+      "sustain_language"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "udl_cast_2024_guidelines"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "ela.writing_process_planning",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Writing Process Planning and Time Management",
+    "type": "metacognitive",
+    "problemType": "Students rush writing without planning or managing time",
+    "targetMisconception": "Belief that good writers just sit down and write",
+    "teacherMoves": [
+      "Teach writing as process requiring planning (HLP Explicit Instruction)",
+      "Model planning and time allocation (UDL 6.1)",
+      "Practice various prewriting strategies (UDL 7.1)",
+      "Build process approach habits (UDL 6.4)"
+    ],
+    "studentTasks": [
+      "Analyze writing task requirements and constraints",
+      "Select appropriate planning strategy",
+      "Create plan before drafting",
+      "Allocate time across writing phases",
+      "Reflect on process effectiveness"
+    ],
+    "supports": [
+      "Writing process stages guide (UDL 3.3)",
+      "Prewriting strategy options (UDL 7.1)",
+      "Planning templates by genre (UDL 3.3)",
+      "Time allocation guide (UDL 6.2)",
+      "Process reflection journal (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher assigns planning with structured support → Phase 2: Self-selected planning with check-ins → Phase 3: Independent process management → Phase 4: Natural writing process habits",
+    "whenNotToUse": "When quick writing is appropriate or when timed writing requires different approach.",
+    "formativeChecks": [
+      "- Planning quality and completeness",
+      "- Time allocation appropriateness",
+      "- Process use evidence",
+      "- Reflection on effectiveness"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 6.1",
+      "UDL 6.2",
+      "UDL 6.4",
+      "UDL 7.1",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.identity.neurodiversity",
+      "rtag.identity.disability_inclusion",
+      "rtag.pedagogy.student_voice"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "hlp_wwc_2016_secondary_writing",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "ela.writing_reflection_growth",
+    "subject": "ela",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Writing Reflection and Growth Documentation",
+    "type": "metacognitive",
+    "problemType": "Students don't reflect on or track writing development",
+    "targetMisconception": "Belief that writing ability is fixed rather than growing through practice",
+    "teacherMoves": [
+      "Teach reflection as tool for writing growth (HLP Explicit Instruction)",
+      "Model self-assessment against criteria (UDL 6.1)",
+      "Build portfolio practice with reflection (UDL 6.4)",
+      "Connect reflection to goal setting (UDL 6.4)"
+    ],
+    "studentTasks": [
+      "Analyze own writing against criteria",
+      "Identify patterns of strength and growth",
+      "Document writing growth over time",
+      "Set goals based on reflection",
+      "Track and celebrate writing development"
+    ],
+    "supports": [
+      "Writing self-assessment rubric (UDL 6.4)",
+      "Pattern identification guide (UDL 6.2)",
+      "Portfolio reflection prompts (UDL 5.3)",
+      "Goal setting from reflection (UDL 6.4)",
+      "Growth celebration protocol (UDL 8.1)"
+    ],
+    "fadePlan": "Phase 1: Teacher guides reflection with explicit criteria → Phase 2: Regular reflection with prompts → Phase 3: Independent reflective practice → Phase 4: Ongoing reflective writing identity",
+    "whenNotToUse": "When writing is informal with no skill development focus.",
+    "formativeChecks": [
+      "- Self-assessment accuracy compared to external",
+      "- Pattern identification quality",
+      "- Growth documentation",
+      "- Goal-reflection connection"
+    ],
+    "bloomLevel": "evaluate",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.1",
+      "UDL 6.2",
+      "UDL 6.4",
+      "UDL 8.1",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.pedagogy.student_voice",
+      "rtag.identity.neurodiversity",
+      "rtag.identity.disability_inclusion"
+    ],
+    "cspTags": [
+      "sustain_language",
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "fa_wiliam_2011_embedded_FA",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  }
+]

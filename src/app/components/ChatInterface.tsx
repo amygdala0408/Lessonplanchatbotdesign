@@ -12,10 +12,11 @@ interface ChatInterfaceProps {
   theme?: 'default' | 'coffee';
   onFinalize?: () => void;
   canFinalize?: boolean;
+  finalizeDisabledReason?: string;
   onReset?: () => void;
 }
 
-export function ChatInterface({ messages, onSendMessage, isTyping, theme = 'default', onFinalize, canFinalize = false, onReset }: ChatInterfaceProps) {
+export function ChatInterface({ messages, onSendMessage, isTyping, theme = 'default', onFinalize, canFinalize = false, finalizeDisabledReason, onReset }: ChatInterfaceProps) {
   const [input, setInput] = useState('');
   const [isClient, setIsClient] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -284,20 +285,23 @@ export function ChatInterface({ messages, onSendMessage, isTyping, theme = 'defa
              <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20 pointer-events-none"></div>
           </button>
           
-          {canFinalize && onFinalize && (
+          {onFinalize && (
             <button
               type="button"
               onClick={onFinalize}
+              disabled={!canFinalize}
+              title={!canFinalize ? finalizeDisabledReason : 'Finalize the lesson plan'}
+              aria-disabled={!canFinalize}
               className={cn(
-                  "h-[70px] px-6 font-['Oswald'] uppercase tracking-widest text-sm font-bold transition-all shadow-[6px_6px_0px_0px_rgba(0,0,0,0.2)] active:translate-y-[2px] active:translate-x-[2px] active:shadow-none border-2 relative overflow-hidden flex items-center gap-2",
-                  theme === 'coffee' 
-                      ? "bg-green-700 text-white hover:bg-green-600 border-green-800" 
-                      : "bg-green-600 text-white hover:bg-green-500 border-green-700"
+                "h-[70px] px-6 font-['Oswald'] uppercase tracking-widest text-sm font-bold transition-all shadow-[6px_6px_0px_0px_rgba(0,0,0,0.2)] active:translate-y-[2px] active:translate-x-[2px] active:shadow-none border-2 relative overflow-hidden flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:active:translate-x-0 disabled:active:translate-y-0 disabled:active:shadow-[6px_6px_0px_0px_rgba(0,0,0,0.2)]",
+                theme === 'coffee'
+                  ? 'bg-green-700 text-white hover:bg-green-600 border-green-800'
+                  : 'bg-green-600 text-white hover:bg-green-500 border-green-700',
               )}
             >
-               <Sparkles size={18} />
-               <span className="relative z-10">Finalize</span>
-               <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20 pointer-events-none"></div>
+              <Sparkles size={18} />
+              <span className="relative z-10">Finalize</span>
+              <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20 pointer-events-none"></div>
             </button>
           )}
         </form>

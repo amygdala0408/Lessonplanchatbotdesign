@@ -1,0 +1,566 @@
+[
+  {
+    "model": "Explicit Instruction",
+    "phase": "Set Purpose",
+    "phaseOrder": 1,
+    "description": "State goal, explain relevance, preview sequence using an advance organizer; post directions in multiple formats.",
+    "exampleTeacherMoves": "â€œToday we willâ€¦ Firstâ€¦, thenâ€¦, finallyâ€¦â€ ; â€œWho can restate our learning target?â€ ; 3â€“5 sec wait-time.",
+    "expectedStrategyTypes": [
+      "Advance organizer",
+      "CFU quick check",
+      "Multimodal directions",
+      "Wait-time",
+      "Response cards",
+      "Think-pair-share"
+    ],
+    "resources": [
+      "link_to_explicit_instruction_onepager.pdf"
+    ]
+  },
+  {
+    "model": "Explicit Instruction",
+    "phase": "Modeling",
+    "phaseOrder": 2,
+    "description": "Model the strategy step-by-step with thinkâ€‘aloud; show examples and non-examples; anchor key steps visibly.",
+    "exampleTeacherMoves": "â€œWatch as Iâ€¦ What did I do first?â€ ; pause for wait-time; â€œWhy did that step matter?â€",
+    "expectedStrategyTypes": [
+      "Thinkâ€‘aloud",
+      "Examples & nonâ€‘examples",
+      "Visual anchor",
+      "Wait-time",
+      "Non-examples",
+      "CFU"
+    ],
+    "resources": [
+      "Rosenshineâ€™s Principles PDF",
+      "Archer & Hughes Explicit Instruction One-Pager"
+    ]
+  },
+  {
+    "model": "Explicit Instruction",
+    "phase": "Guided Practice",
+    "phaseOrder": 3,
+    "description": "Students practice with high teacher support and prompts; feedback is immediate and specific.",
+    "exampleTeacherMoves": "â€œWhatâ€™s the next step?â€ ; â€œWhich cue helped?â€ ; restate task on slide.",
+    "expectedStrategyTypes": [
+      "Prompting",
+      "Immediate feedback",
+      "Sentence frames",
+      "Multimodal directions",
+      "Error correction"
+    ],
+    "resources": [
+      "Hattie Visible Learning (Feedback) Summary"
+    ]
+  },
+  {
+    "model": "Explicit Instruction",
+    "phase": "Independent",
+    "phaseOrder": 4,
+    "description": "Students apply the modeled steps individually with clarity of criteria and options for expression.",
+    "exampleTeacherMoves": "â€œWhich strategy are you using and why?â€ ; â€œWhat will you try next?â€",
+    "expectedStrategyTypes": [
+      "Choice of response mode",
+      "Conferencing",
+      "Success criteria checklist",
+      "Choice of modality"
+    ],
+    "resources": [
+      "Success Criteria Checklist Template"
+    ]
+  },
+  {
+    "model": "Explicit Instruction",
+    "phase": "Closure",
+    "phaseOrder": 5,
+    "description": "Synthesize learning; revisit objective; quick reflective check or exit ticket.",
+    "exampleTeacherMoves": "â€œWhat stuck and whatâ€™s next?â€ ; repeat submission steps; 10â€“15 sec wait-time.",
+    "expectedStrategyTypes": [
+      "Exit ticket",
+      "Reflection prompt",
+      "Retrieval practice"
+    ],
+    "resources": [
+      "Exit Ticket Bank (Retrieval Practice.org)"
+    ]
+  },
+  {
+    "model": "5E Inquiry",
+    "phase": "Set Purpose",
+    "phaseOrder": 1,
+    "description": "Engage with phenomenon; activate prior knowledge; state target and sequence visibly.",
+    "exampleTeacherMoves": "â€œWhat do you notice? What do you wonder?â€ ; â€œWhy might that be?â€",
+    "expectedStrategyTypes": [
+      "Engage prompt",
+      "Advance organizer",
+      "CFU quick check",
+      "Wait-time",
+      "Notice/Wonder",
+      "Think-pair-share"
+    ],
+    "resources": [
+      "link_to_5e_overview.pdf"
+    ]
+  },
+  {
+    "model": "5E Inquiry",
+    "phase": "Modeling",
+    "phaseOrder": 2,
+    "description": "Explain stage formalizes concepts with teacher modeling tied to student ideas; create an anchor chart.",
+    "exampleTeacherMoves": "â€œWho can explain in your own words?â€ ; â€œHereâ€™s how Iâ€™d model itâ€¦â€",
+    "expectedStrategyTypes": [
+      "Concept mapping",
+      "Thinkâ€‘aloud",
+      "Vocabulary clarification",
+      "Anchor chart"
+    ],
+    "resources": [
+      "Concept Formation Anchor Chart Template"
+    ]
+  },
+  {
+    "model": "5E Inquiry",
+    "phase": "Guided Practice",
+    "phaseOrder": 3,
+    "description": "Explore tasks in partners/groups to investigate and test ideas with scaffolds.",
+    "exampleTeacherMoves": "â€œWhat pattern do you see?â€ ; restate transition steps; â€œWhat evidence supports that?â€",
+    "expectedStrategyTypes": [
+      "Inquiry prompt",
+      "Manipulatives/representations",
+      "Sentence frames",
+      "Multimodal directions",
+      "Manipulatives",
+      "Partner talk"
+    ],
+    "resources": [
+      "Explore-Phase Task Cards (Inquiry)"
+    ]
+  },
+  {
+    "model": "5E Inquiry",
+    "phase": "Independent",
+    "phaseOrder": 4,
+    "description": "Elaborate through transfer tasks or choice boards; apply to a novel context.",
+    "exampleTeacherMoves": "â€œHow does this connect to earlier learning?â€ ; â€œDefend your choice.â€",
+    "expectedStrategyTypes": [
+      "Choice board",
+      "Application task",
+      "Graphic organizer"
+    ],
+    "resources": [
+      "Choice Board Template (Elaborate)"
+    ]
+  },
+  {
+    "model": "5E Inquiry",
+    "phase": "Closure",
+    "phaseOrder": 5,
+    "description": "Evaluate understanding via self/peer/teacher checks; reflect on learning gains.",
+    "exampleTeacherMoves": "â€œWhat changed in your thinking?â€ ; repeat turnâ€‘in procedures.",
+    "expectedStrategyTypes": [
+      "Exit ticket",
+      "Selfâ€‘assessment",
+      "Success criteria",
+      "Self-assessment",
+      "Peer feedback"
+    ],
+    "resources": [
+      "Evaluate-Phase Self/Peer Check Templates"
+    ]
+  },
+  {
+    "model": "Project-Based Learning",
+    "phase": "Set Purpose",
+    "phaseOrder": 1,
+    "description": "Entry Event launches authentic context and Driving Question posted in multiple modalities.",
+    "exampleTeacherMoves": "â€œWhy does this matter in our community?â€ ; co-create Needâ€‘toâ€‘Know list.",
+    "expectedStrategyTypes": [
+      "Driving Question",
+      "Phenomenon hook",
+      "Needâ€‘toâ€‘Know",
+      "Multimodal directions"
+    ],
+    "resources": [
+      "link_to_pbl_gold_standard.pdf"
+    ]
+  },
+  {
+    "model": "Project-Based Learning",
+    "phase": "Modeling",
+    "phaseOrder": 2,
+    "description": "Model inquiry behaviors (questioning, source evaluation) and product quality using exemplars and rubrics.",
+    "exampleTeacherMoves": "â€œWhat makes this exemplar strong?â€ ; â€œWhich criteria are we targeting?â€",
+    "expectedStrategyTypes": [
+      "Exemplar analysis",
+      "Rubric unpacking",
+      "Source reliability miniâ€‘lesson"
+    ],
+    "resources": [
+      "Rubric Unpacking Protocol"
+    ]
+  },
+  {
+    "model": "Project-Based Learning",
+    "phase": "Guided Practice",
+    "phaseOrder": 3,
+    "description": "Team planning and early inquiry with teacher coaching; roles, timelines, and checkpoints established.",
+    "exampleTeacherMoves": "â€œWhatâ€™s your first milestone?â€ ; â€œWho is responsible forâ€¦?â€",
+    "expectedStrategyTypes": [
+      "Role cards",
+      "Project checklist",
+      "Conferencing",
+      "Graphic organizer",
+      "Checkpoint CFU"
+    ],
+    "resources": [
+      "Project Planning Checklist + Role Cards"
+    ]
+  },
+  {
+    "model": "Project-Based Learning",
+    "phase": "Independent",
+    "phaseOrder": 4,
+    "description": "Sustained inquiry and product creation with iterative feedback cycles and choice of product mode.",
+    "exampleTeacherMoves": "â€œWhat evidence supports this claim?â€ ; â€œWhat will you revise based on feedback?â€",
+    "expectedStrategyTypes": [
+      "Draftâ€“feedbackâ€“revise cycle",
+      "Conferencing",
+      "Choice of modality",
+      "Draftâ€“revise",
+      "Peer feedback"
+    ],
+    "resources": [
+      "Draftâ€“Feedbackâ€“Revise Cycle Guide"
+    ]
+  },
+  {
+    "model": "Project-Based Learning",
+    "phase": "Closure",
+    "phaseOrder": 5,
+    "description": "Public product presentation and reflection on product/process; set next goals.",
+    "exampleTeacherMoves": "â€œWhat would you improve next time?â€ ; audience Q&A with waitâ€‘time.",
+    "expectedStrategyTypes": [
+      "Authentic audience",
+      "Reflection protocol",
+      "Exit write",
+      "Public presentation"
+    ],
+    "resources": [
+      "Public Product Preparation Guide"
+    ]
+  },
+  {
+    "model": "Cooperative Learning",
+    "phase": "Set Purpose",
+    "phaseOrder": 1,
+    "description": "State objective and norms; assign interdependent roles; display steps and timing.",
+    "exampleTeacherMoves": "â€œWho can paraphrase our roles?â€ ; wait-time before grouping.",
+    "expectedStrategyTypes": [
+      "Roles",
+      "Norms",
+      "Multimodal directions",
+      "Timer/visual schedule"
+    ],
+    "resources": [
+      "link_to_cooperative_learning_brief.pdf"
+    ]
+  },
+  {
+    "model": "Cooperative Learning",
+    "phase": "Modeling",
+    "phaseOrder": 2,
+    "description": "Demonstrate the structure (e.g., Jigsaw/Round Robin) with examples and nonâ€‘examples of quality collaboration.",
+    "exampleTeacherMoves": "â€œWhat did you notice about turnâ€‘taking?â€ ; â€œHow do we use sentence frames?â€",
+    "expectedStrategyTypes": [
+      "Collaboration exemplar",
+      "Sentence frames",
+      "Success criteria",
+      "Fishbowl demo"
+    ],
+    "resources": [
+      "Kagan Structures Quick Reference"
+    ]
+  },
+  {
+    "model": "Cooperative Learning",
+    "phase": "Guided Practice",
+    "phaseOrder": 3,
+    "description": "Groups complete structured tasks with teacher coaching and frequent CFUs.",
+    "exampleTeacherMoves": "â€œWhat evidence supports your groupâ€™s idea?â€ ; restate transition steps.",
+    "expectedStrategyTypes": [
+      "Structured protocols",
+      "CFU",
+      "Prompting",
+      "Feedback",
+      "Jigsaw",
+      "Round Robin"
+    ],
+    "resources": [
+      "Group Work Norms Poster"
+    ]
+  },
+  {
+    "model": "Cooperative Learning",
+    "phase": "Independent",
+    "phaseOrder": 4,
+    "description": "Individuals finalize artifacts or reflections derived from group work.",
+    "exampleTeacherMoves": "â€œHow did your role influence the outcome?â€",
+    "expectedStrategyTypes": [
+      "Independent product",
+      "Reflection stem",
+      "Checklist",
+      "Individual accountability",
+      "Reflection"
+    ],
+    "resources": [
+      "Collaboration Reflection Prompts"
+    ]
+  },
+  {
+    "model": "Cooperative Learning",
+    "phase": "Closure",
+    "phaseOrder": 5,
+    "description": "Group shareâ€‘outs and wholeâ€‘class synthesis; celebrate strategies that supported all learners.",
+    "exampleTeacherMoves": "â€œHow does your groupâ€™s idea connect to another groupâ€™s?â€",
+    "expectedStrategyTypes": [
+      "Gallery walk",
+      "Synthesis chart",
+      "Warm feedback/cool feedback"
+    ],
+    "resources": [
+      "Gallery Walk Protocol"
+    ]
+  },
+  {
+    "model": "Socratic Seminar",
+    "phase": "Set Purpose",
+    "phaseOrder": 1,
+    "description": "Students arrive prepared with annotated texts and guiding questions; norms posted and reviewed.",
+    "exampleTeacherMoves": "â€œWhat question are you bringing to the circle?â€ ; â€œWhy do these norms matter?â€",
+    "expectedStrategyTypes": [
+      "Preparation guide",
+      "Norms",
+      "Multimodal directions"
+    ],
+    "resources": [
+      "link_to_socratic_seminar_guide.pdf"
+    ]
+  },
+  {
+    "model": "Socratic Seminar",
+    "phase": "Modeling",
+    "phaseOrder": 2,
+    "description": "Model evidenceâ€‘based talk using sentence frames; rehearse paraphrasing and building on ideas.",
+    "exampleTeacherMoves": "â€œI agree with __ because __â€ ; â€œCan someone paraphrase?â€",
+    "expectedStrategyTypes": [
+      "Sentence frames",
+      "Talk moves",
+      "Evidence stems",
+      "Paraphrasing"
+    ],
+    "resources": [
+      "Talk Moves / Sentence Frames One-Pager"
+    ]
+  },
+  {
+    "model": "Socratic Seminar",
+    "phase": "Guided Practice",
+    "phaseOrder": 3,
+    "description": "Facilitated dialogue with equitable participation tracking and probing questions.",
+    "exampleTeacherMoves": "â€œWhatâ€™s a counterargument?â€ ; silent wait-time after probes.",
+    "expectedStrategyTypes": [
+      "Equity sticks/trackers",
+      "Probing questions",
+      "Wait-time"
+    ],
+    "resources": [
+      "Equity Sticks / Participation Tracker"
+    ]
+  },
+  {
+    "model": "Socratic Seminar",
+    "phase": "Independent",
+    "phaseOrder": 4,
+    "description": "Postâ€‘seminar writeâ€‘up or organizer consolidates claims, evidence, and counterclaims.",
+    "exampleTeacherMoves": "â€œWhich quote best supports your claim?â€",
+    "expectedStrategyTypes": [
+      "Argument organizer",
+      "Reflection prompt",
+      "Checklist",
+      "Evidence selection"
+    ],
+    "resources": [
+      "Argument Organizer Template"
+    ]
+  },
+  {
+    "model": "Socratic Seminar",
+    "phase": "Closure",
+    "phaseOrder": 5,
+    "description": "Debrief process and content; self/peer assessment against criteria.",
+    "exampleTeacherMoves": "â€œWhat will you try differently next seminar?â€",
+    "expectedStrategyTypes": [
+      "Selfâ€‘assessment",
+      "Peer feedback",
+      "Exit ticket",
+      "Self-assessment"
+    ],
+    "resources": [
+      "Seminar Self/Peer Assessment Rubric"
+    ]
+  },
+  {
+    "model": "Workshop Model",
+    "phase": "Set Purpose",
+    "phaseOrder": 1,
+    "description": "Connect miniâ€‘lesson target to prior learning; post the dayâ€™s â€˜I canâ€¦â€™ statement and steps.",
+    "exampleTeacherMoves": "â€œToday writers/mathematiciansâ€¦ willâ€¦â€ ; â€œWho can restate our goal?â€",
+    "expectedStrategyTypes": [
+      "Learning target",
+      "Advance organizer",
+      "Multimodal directions"
+    ],
+    "resources": [
+      "link_to_workshop_brief.pdf"
+    ]
+  },
+  {
+    "model": "Workshop Model",
+    "phase": "Modeling",
+    "phaseOrder": 2,
+    "description": "Miniâ€‘lesson: model/thinkâ€‘aloud the strategy; brief active engagement to rehearse.",
+    "exampleTeacherMoves": "â€œWatch as Iâ€¦â€ ; â€œTurn and try it onceâ€”what did you notice?â€",
+    "expectedStrategyTypes": [
+      "Thinkâ€‘aloud",
+      "Examples",
+      "Rehearsal prompt",
+      "Think-aloud"
+    ],
+    "resources": [
+      "Think-Aloud Planning Template"
+    ]
+  },
+  {
+    "model": "Workshop Model",
+    "phase": "Guided Practice",
+    "phaseOrder": 3,
+    "description": "Smallâ€‘group table/targeted support during work time based on observed needs.",
+    "exampleTeacherMoves": "â€œLetâ€™s try step 2 together.â€ ; â€œWhich sentence frame fits here?â€",
+    "expectedStrategyTypes": [
+      "Flexible grouping",
+      "Guided practice",
+      "Sentence frames"
+    ],
+    "resources": [
+      "Small-Group Planning Tracker"
+    ]
+  },
+  {
+    "model": "Workshop Model",
+    "phase": "Independent",
+    "phaseOrder": 4,
+    "description": "Sustained work time applying the strategy with conferring and clear criteria.",
+    "exampleTeacherMoves": "â€œWhich strategy are you trying and why?â€ ; â€œWhatâ€™s your goal for the next 10 minutes?â€",
+    "expectedStrategyTypes": [
+      "Conferencing",
+      "Success criteria",
+      "Choice of tools"
+    ],
+    "resources": [
+      "Conferring Notes Template"
+    ]
+  },
+  {
+    "model": "Workshop Model",
+    "phase": "Closure",
+    "phaseOrder": 5,
+    "description": "Share and reflect; connect exemplars to the dayâ€™s objective; preview next steps.",
+    "exampleTeacherMoves": "â€œWho will share how they applied the strategy?â€",
+    "expectedStrategyTypes": [
+      "Share-out",
+      "Reflection prompt",
+      "Exit ticket"
+    ],
+    "resources": [
+      "Share-Out Protocols One-Pager"
+    ]
+  },
+  {
+    "model": "Flipped Classroom",
+    "phase": "Set Purpose",
+    "phaseOrder": 1,
+    "description": "Open with quick CFU on preâ€‘work; address misconceptions; post inâ€‘class goals and workflow.",
+    "exampleTeacherMoves": "â€œWhat did the preâ€‘video clarify?â€ ; â€œWho can restate our goal today?â€",
+    "expectedStrategyTypes": [
+      "Entry ticket",
+      "CFU",
+      "Multimodal directions"
+    ],
+    "resources": [
+      "link_to_flipped_learning_brief.pdf"
+    ]
+  },
+  {
+    "model": "Flipped Classroom",
+    "phase": "Modeling",
+    "phaseOrder": 2,
+    "description": "Brief justâ€‘inâ€‘time modeling to close gaps from preâ€‘work; clarify success criteria.",
+    "exampleTeacherMoves": "â€œHereâ€™s the step weâ€™ll practiceâ€¦â€ ; â€œWhat questions remain?â€",
+    "expectedStrategyTypes": [
+      "Microâ€‘lesson",
+      "Success criteria",
+      "Thinkâ€‘aloud",
+      "Micro-lesson"
+    ],
+    "resources": [
+      "Micro-Lesson Planning Sheet"
+    ]
+  },
+  {
+    "model": "Flipped Classroom",
+    "phase": "Guided Practice",
+    "phaseOrder": 3,
+    "description": "Collaborative problems/cases with teacher coaching and prompts; visible steps and timing.",
+    "exampleTeacherMoves": "â€œWhat strategy did your group chooseâ€”and why?â€ ; â€œShow evidence.â€",
+    "expectedStrategyTypes": [
+      "Cooperative structures",
+      "Prompting",
+      "Feedback",
+      "Wait-time"
+    ],
+    "resources": [
+      "Collaborative Problem-Solving Protocol"
+    ]
+  },
+  {
+    "model": "Flipped Classroom",
+    "phase": "Independent",
+    "phaseOrder": 4,
+    "description": "Individual application or consolidation task; optional extension/challenge.",
+    "exampleTeacherMoves": "â€œApply the method to this new caseâ€¦â€ ; â€œWhat will you do differently next time?â€",
+    "expectedStrategyTypes": [
+      "Independent practice",
+      "Retrieval practice",
+      "Choice of task",
+      "Choice task"
+    ],
+    "resources": [
+      "Retrieval Practice Menu"
+    ]
+  },
+  {
+    "model": "Flipped Classroom",
+    "phase": "Closure",
+    "phaseOrder": 5,
+    "description": "Synthesize key takeaways; exit ticket; preview next preâ€‘class resource.",
+    "exampleTeacherMoves": "â€œWhat stuck? Whatâ€™s your next step?â€ ; repeat submission steps.",
+    "expectedStrategyTypes": [
+      "Exit ticket",
+      "Reflection",
+      "Next-step cue"
+    ],
+    "resources": [
+      "Next-Step Cue Cards"
+    ]
+  }
+]

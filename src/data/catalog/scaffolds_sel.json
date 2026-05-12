@@ -1,0 +1,4513 @@
+[
+  {
+    "id": "sel.academic_integrity_development",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Academic Integrity Understanding and Practice",
+    "type": "metacognitive",
+    "problemType": "Students don't understand academic integrity or see it as arbitrary rules",
+    "targetMisconception": "Belief that academic dishonesty is victimless or that everyone does it",
+    "teacherMoves": [
+      "Explore purposes of academic integrity beyond rule-following (HLP Explicit Instruction)",
+      "Connect integrity to personal values and future success (UDL 7.2)",
+      "Discuss gray areas and how to navigate them (UDL 8.3)",
+      "Build integrity culture rather than just enforcement (UDL 8.3)"
+    ],
+    "studentTasks": [
+      "Explore what academic integrity means and why it matters",
+      "Connect integrity to personal values",
+      "Identify challenging situations and how to navigate them",
+      "Develop personal integrity commitment",
+      "Reflect on integrity experiences and growth"
+    ],
+    "supports": [
+      "Academic integrity purpose exploration (UDL 3.3)",
+      "Values-integrity connection worksheet (UDL 6.2)",
+      "Gray area scenarios and navigation (UDL 8.3)",
+      "Personal commitment template (UDL 6.4)",
+      "Reflection journal (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher explores meaning beyond rules → Phase 2: Scenario navigation with support → Phase 3: Personal commitment development → Phase 4: Internalized integrity culture",
+    "whenNotToUse": "When student is under extreme pressure. Address root causes before integrity focus.",
+    "formativeChecks": [
+      "- Purpose understanding depth",
+      "- Values connection quality",
+      "- Scenario navigation decisions",
+      "- Commitment follow-through"
+    ],
+    "bloomLevel": "evaluate",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 6.2",
+      "UDL 6.4",
+      "UDL 7.2",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "responsible-decision-making",
+    "representationTags": [
+      "rtag.pedagogy.student_voice",
+      "rtag.context.global_voices",
+      "rtag.identity.neurodiversity"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge",
+      "criticality"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "udl_cast_2024_guidelines"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "sel.active_listening_protocol",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Active Listening Protocol",
+    "type": "linguistic",
+    "problemType": "Students interrupt or plan replies instead of listening.",
+    "targetMisconception": "Belief that communication = talking rather than listening.",
+    "teacherMoves": [
+      "Model attentive body language and paraphrasing (UDL 5.1)",
+      "Use listening checklist to demonstrate focus cues (HLP Explicit Instruction)",
+      "Provide guided practice with short dialogues"
+    ],
+    "studentTasks": [
+      "Engage in partner conversations using listening checklist",
+      "Paraphrase partner ideas before responding",
+      "Self-evaluate listening behaviors"
+    ],
+    "supports": [
+      "Listening checklist (UDL 5.1)",
+      "Paraphrasing stems (HLP Explicit Instruction)",
+      "Self-assessment log (UDL 6.4)"
+    ],
+    "fadePlan": "Teacher models protocol; mid-phase guided pairs; final independent or peer-led listening routines.",
+    "whenNotToUse": "Avoid when time constraints prevent reflective debriefs.; Checklist review and quick debrief reflections.",
+    "formativeChecks": [],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 5.1",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "relationship-skills",
+    "representationTags": [
+      "rtag.pedagogy.student_voice",
+      "rtag.media.multimodal_resources"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "HLP-CEC"
+    ],
+    "lastUpdated": "2025-11-02"
+  },
+  {
+    "id": "sel.active_listening_skill_building",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Active Listening Skill Building",
+    "type": "cognitive",
+    "problemType": "Students don't listen deeply or make others feel heard",
+    "targetMisconception": "Belief that waiting to speak is the same as listening",
+    "teacherMoves": [
+      "Teach components of active listening explicitly (HLP Explicit Instruction)",
+      "Model and practice each component (UDL 6.1)",
+      "Provide feedback on listening quality (HLP Cooperative Learning)",
+      "Connect listening skill to relationship outcomes (UDL 7.2)"
+    ],
+    "studentTasks": [
+      "Learn and practice components of active listening",
+      "Demonstrate listening through verbal and nonverbal cues",
+      "Ask clarifying questions that show understanding",
+      "Summarize what speaker shared to verify understanding",
+      "Reflect on listening quality and areas for growth"
+    ],
+    "supports": [
+      "Active listening components guide (UDL 3.3)",
+      "Nonverbal cue checklist (UDL 6.4)",
+      "Clarifying question stems (UDL 5.3)",
+      "Summary sentence frames (UDL 5.3)",
+      "Self-assessment and peer feedback tools (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher models components with practice → Phase 2: Structured practice with feedback → Phase 3: Real conversation application → Phase 4: Natural active listening habits",
+    "whenNotToUse": "When urgent information sharing is needed rather than deep listening.",
+    "formativeChecks": [
+      "- Component demonstration quality",
+      "- Partner feedback on feeling heard",
+      "- Summary accuracy",
+      "- Self-assessment accuracy"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.1",
+      "UDL 6.4",
+      "UDL 7.2",
+      "HLP Explicit Instruction",
+      "HLP Cooperative Learning"
+    ],
+    "selStrand": "relationship-skills",
+    "representationTags": [
+      "rtag.language.inclusive_language",
+      "rtag.pedagogy.collaborative_dialogue",
+      "rtag.pedagogy.student_voice"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "udl_cast_2024_guidelines"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "sel.assertive_communication_development",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Assertive Communication Skill Development",
+    "type": "cognitive",
+    "problemType": "Students communicate passively or aggressively rather than assertively",
+    "targetMisconception": "Belief that assertiveness means aggression or that passive is polite",
+    "teacherMoves": [
+      "Distinguish passive, aggressive, and assertive communication (HLP Explicit Instruction)",
+      "Teach assertive communication components (UDL 3.2)",
+      "Practice with progressively challenging situations (UDL 8.3)",
+      "Connect assertiveness to respect for self and others (UDL 7.2)"
+    ],
+    "studentTasks": [
+      "Learn to distinguish three communication styles",
+      "Identify personal communication patterns",
+      "Practice assertive language and delivery",
+      "Apply assertive communication in real situations",
+      "Reflect on assertiveness growth and challenges"
+    ],
+    "supports": [
+      "Communication style comparison chart (UDL 3.3)",
+      "Assertive communication components guide (UDL 3.2)",
+      "Practice scenario cards (UDL 8.3)",
+      "I-statement templates (UDL 5.3)",
+      "Reflection journal (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher introduces and models with simple scenarios → Phase 2: Practice with lower-stakes situations → Phase 3: Real relationship application → Phase 4: Natural assertive communication",
+    "whenNotToUse": "When power differential makes assertiveness risky without support.",
+    "formativeChecks": [
+      "- Style distinction accuracy",
+      "- Assertive language use in practice",
+      "- Real situation application",
+      "- Self-reported confidence growth"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.2",
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.4",
+      "UDL 7.2",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "relationship-skills",
+    "representationTags": [
+      "rtag.language.inclusive_language",
+      "rtag.pedagogy.student_voice",
+      "rtag.identity.disability_inclusion"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "udl_cast_2024_guidelines"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "sel.bias_reflection_protocol",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Bias Reflection Protocol",
+    "type": "social_collaborative",
+    "problemType": "Students make quick judgments without awareness of bias.",
+    "targetMisconception": "Misconception that bias = intent,\" not an unconscious process.",
+    "teacherMoves": [
+      "Model recognizing personal bias through neutral scenario (UDL 7.2)",
+      "Facilitate structured reflection protocol (HLP Discussion)",
+      "Guide debrief emphasizing learning over guilt"
+    ],
+    "studentTasks": [
+      "Complete bias-reflection prompts",
+      "Discuss insights in small groups",
+      "Identify one strategy to counteract bias"
+    ],
+    "supports": [
+      "Bias-reflection prompt sheet (UDL 7.2)",
+      "Discussion norms poster (HLP Discussion)",
+      "Strategy-tracking log (UDL 6.4)"
+    ],
+    "fadePlan": "Teacher models self-disclosure; mid-phase guided pairs; fade to independent self-reflection routines.",
+    "whenNotToUse": "Avoid when community norms don‚Äôt yet support open\",\" respectful dialogue.; \"Reflection journal content",
+    "formativeChecks": [
+      "debrief observation notes."
+    ],
+    "bloomLevel": "evaluate",
+    "dokLevel": 4,
+    "udlHlpTags": [
+      "UDL 7.2",
+      "HLP Discussion"
+    ],
+    "selStrand": "responsible-decision-making",
+    "representationTags": [
+      "rtag.identity.intersectional_identities",
+      "rtag.context.global_voices"
+    ],
+    "cspTags": [
+      "criticality"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "HLP-CEC"
+    ],
+    "lastUpdated": "2025-11-02"
+  },
+  {
+    "id": "sel.body_awareness_regulation",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Body Awareness and Physical Regulation",
+    "type": "cognitive",
+    "problemType": "Students don't recognize body signals or use physical strategies for regulation",
+    "targetMisconception": "Belief that emotions are purely mental and the body isn't involved",
+    "teacherMoves": [
+      "Teach body-emotion connections with scientific grounding (HLP Explicit Instruction)",
+      "Practice body scanning and awareness regularly (UDL 6.4)",
+      "Model physical regulation strategies (UDL 6.1)",
+      "Connect body awareness to better decision-making (UDL 7.2)"
+    ],
+    "studentTasks": [
+      "Learn to recognize body signals of different emotions",
+      "Practice body scan and awareness techniques",
+      "Identify personal physical regulation strategies",
+      "Apply physical strategies when needed",
+      "Track body awareness growth over time"
+    ],
+    "supports": [
+      "Body-emotion connection map (UDL 3.3)",
+      "Body scan script and audio (UDL 1.3)",
+      "Physical regulation strategy menu (UDL 6.4)",
+      "Strategy application log (UDL 6.4)",
+      "Growth tracking journal (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher leads body awareness activities → Phase 2: Student-selected practice with guidance → Phase 3: Independent strategy application → Phase 4: Natural body awareness integration",
+    "whenNotToUse": "When physical safety concerns require immediate action rather than awareness practice.",
+    "formativeChecks": [
+      "- Body signal recognition accuracy",
+      "- Strategy use frequency and effectiveness",
+      "- Self-report on body awareness growth",
+      "- Application in challenging situations"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 1.3",
+      "UDL 3.3",
+      "UDL 6.1",
+      "UDL 6.4",
+      "UDL 7.2",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.identity.neurodiversity",
+      "rtag.identity.disability_inclusion",
+      "rtag.media.accessible_media"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "udl_cast_2024_guidelines",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "sel.boundary_setting",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Healthy Boundary Setting",
+    "type": "linguistic",
+    "problemType": "Students over-accommodate peers or tolerate disrespect.",
+    "targetMisconception": "Belief that saying no = being rude or selfish.",
+    "teacherMoves": [
+      "Model assertive communication language (UDL 9.1)",
+      "Discuss difference between boundaries and avoidance (HLP Explicit Instruction)",
+      "Facilitate rehearsal through safe-space role-plays"
+    ],
+    "studentTasks": [
+      "Identify personal comfort zones in scenarios",
+      "Practice boundary-setting statements",
+      "Reflect on self-respect and empathy balance"
+    ],
+    "supports": [
+      "Boundary-scenario cards (UDL 9.1)",
+      "Assertive-communication stems (HLP Explicit Instruction)",
+      "Self-reflection guide (UDL 6.4)"
+    ],
+    "fadePlan": "Teacher models scripts; students practice in dyads; fade to self-generated boundary language in authentic settings.",
+    "whenNotToUse": "Avoid when boundaries are being tested in real-time unsafe situations‚Äîrefer to counselor.; \"Student written reflections",
+    "formativeChecks": [
+      "teacher observation checklist."
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 9.1",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "relationship-skills",
+    "representationTags": [
+      "rtag.identity.lgbtqia_inclusion",
+      "rtag.pedagogy.student_voice"
+    ],
+    "cspTags": [
+      "criticality",
+      "sustain_language"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "HLP-CEC"
+    ],
+    "lastUpdated": "2025-11-02"
+  },
+  {
+    "id": "sel.boundary_setting_practice",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Healthy Boundary Setting Practice",
+    "type": "cognitive",
+    "problemType": "Students don't set appropriate boundaries or feel guilty doing so",
+    "targetMisconception": "Belief that setting boundaries is selfish or will damage relationships",
+    "teacherMoves": [
+      "Teach boundaries as self-care and relationship health (HLP Explicit Instruction)",
+      "Distinguish between boundaries and walls (UDL 3.2)",
+      "Practice boundary language (UDL 5.3)",
+      "Affirm right to boundaries (UDL 7.3)"
+    ],
+    "studentTasks": [
+      "Learn what healthy boundaries are and why they matter",
+      "Identify personal boundary needs",
+      "Practice boundary-setting language",
+      "Apply boundary-setting in real relationships",
+      "Reflect on boundary experiences and adjust"
+    ],
+    "supports": [
+      "Boundary types guide (UDL 3.3)",
+      "Personal boundary needs worksheet (UDL 6.4)",
+      "Boundary language stems (UDL 5.3)",
+      "Practice scenarios (UDL 8.3)",
+      "Reflection journal (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher introduces and models with scenarios → Phase 2: Structured practice with coaching → Phase 3: Real situation application → Phase 4: Natural boundary maintenance",
+    "whenNotToUse": "When power differential makes boundary-setting unsafe without support.",
+    "formativeChecks": [
+      "- Boundary identification clarity",
+      "- Language use in practice",
+      "- Real situation application",
+      "- Self-reported relationship health"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.2",
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.4",
+      "UDL 7.3",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "relationship-skills",
+    "representationTags": [
+      "rtag.pedagogy.student_voice",
+      "rtag.identity.lgbtqia_inclusion",
+      "rtag.identity.disability_inclusion"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "udl_cast_2024_guidelines"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "sel.bystander_intervention_training",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Bystander Intervention Skill Building",
+    "type": "cognitive",
+    "problemType": "Students witness harm but don't know how to safely intervene",
+    "targetMisconception": "Belief that intervening is risky or not their responsibility",
+    "teacherMoves": [
+      "Teach bystander intervention options and strategies (HLP Explicit Instruction)",
+      "Practice with safe scenarios (UDL 8.3)",
+      "Discuss safety considerations (UDL 6.2)",
+      "Build collective responsibility norms (UDL 8.3)"
+    ],
+    "studentTasks": [
+      "Learn bystander intervention options: direct, distract, delegate, delay",
+      "Assess situations for safety and appropriate response",
+      "Practice intervention strategies in safe scenarios",
+      "Develop personal intervention commitments",
+      "Reflect on intervention experiences"
+    ],
+    "supports": [
+      "Intervention options guide (UDL 3.3)",
+      "Safety assessment checklist (UDL 6.2)",
+      "Practice scenarios (UDL 8.3)",
+      "Personal commitment template (UDL 6.4)",
+      "Experience reflection journal (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher introduces options and guides practice → Phase 2: Scenario-based practice → Phase 3: Commitment and real situation application → Phase 4: Internalized bystander responsibility",
+    "whenNotToUse": "When situation requires professional intervention not student action.",
+    "formativeChecks": [
+      "- Option knowledge accuracy",
+      "- Safety assessment quality",
+      "- Practice participation",
+      "- Self-reported intervention confidence"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 6.2",
+      "UDL 6.4",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "responsible-decision-making",
+    "representationTags": [
+      "rtag.identity.lgbtqia_inclusion",
+      "rtag.identity.disability_inclusion",
+      "rtag.identity.intersectional_identities"
+    ],
+    "cspTags": [
+      "criticality",
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "sel_jagers_2019_equity",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "sel.civic_responsibility_action",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Civic Responsibility and Action Development",
+    "type": "social_collaborative",
+    "problemType": "Students don't see themselves as having civic responsibility or capacity",
+    "targetMisconception": "Belief that civic action is for adults or doesn't make a difference",
+    "teacherMoves": [
+      "Explore civic rights and responsibilities (HLP Explicit Instruction)",
+      "Examine successful youth civic action examples (UDL 7.3)",
+      "Connect civic action to personal values (UDL 7.2)",
+      "Support actual civic engagement (UDL 7.2)"
+    ],
+    "studentTasks": [
+      "Learn about civic rights and responsibilities",
+      "Explore examples of youth civic action",
+      "Connect civic engagement to personal values",
+      "Take action on civic issue of concern",
+      "Reflect on civic engagement experience"
+    ],
+    "supports": [
+      "Civic rights and responsibilities guide (UDL 3.3)",
+      "Youth civic action examples bank (UDL 7.3)",
+      "Values-civic connection worksheet (UDL 6.2)",
+      "Action planning template (UDL 6.3)",
+      "Engagement reflection journal (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher introduces with examples and supports planning → Phase 2: Supported action implementation → Phase 3: Independent civic engagement → Phase 4: Ongoing civic participation",
+    "whenNotToUse": "When action might put students at risk without appropriate support.",
+    "formativeChecks": [
+      "- Rights and responsibilities knowledge",
+      "- Action plan quality",
+      "- Engagement follow-through",
+      "- Reflection depth on experience"
+    ],
+    "bloomLevel": "create",
+    "dokLevel": 4,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 6.2",
+      "UDL 6.3",
+      "UDL 6.4",
+      "UDL 7.2",
+      "UDL 7.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "responsible-decision-making",
+    "representationTags": [
+      "rtag.pedagogy.project_based_relevance",
+      "rtag.context.global_voices",
+      "rtag.identity.intersectional_identities"
+    ],
+    "cspTags": [
+      "criticality",
+      "sustain_community_knowledge",
+      "co_design_with_community"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "sel_jagers_2019_equity",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "sel.collaboration_skill_building",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Collaboration Skill Building Curriculum",
+    "type": "social_collaborative",
+    "problemType": "Students don't know how to collaborate effectively with diverse others",
+    "targetMisconception": "Belief that collaboration means dividing work or that it's only for some",
+    "teacherMoves": [
+      "Teach collaboration as distinct skill set (HLP Explicit Instruction)",
+      "Practice specific collaboration skills (UDL 8.3)",
+      "Build diverse collaboration experiences (HLP Cooperative Learning)",
+      "Connect collaboration to real-world success (UDL 7.2)"
+    ],
+    "studentTasks": [
+      "Learn components of effective collaboration",
+      "Practice specific collaboration skills in structured activities",
+      "Collaborate with diverse partners on authentic tasks",
+      "Reflect on collaboration effectiveness and areas for growth",
+      "Transfer collaboration skills across contexts"
+    ],
+    "supports": [
+      "Collaboration skills guide (UDL 3.3)",
+      "Skill practice activities (UDL 8.3)",
+      "Group process check-ins (UDL 6.4)",
+      "Reflection protocol (UDL 5.3)",
+      "Transfer planning template (UDL 6.2)"
+    ],
+    "fadePlan": "Phase 1: Teacher structures and closely monitors collaboration → Phase 2: Student-managed collaboration with check-ins → Phase 3: Independent collaboration → Phase 4: Natural collaboration transfer",
+    "whenNotToUse": "When individual assessment is needed rather than collaborative.",
+    "formativeChecks": [
+      "- Skill demonstration in activities",
+      "- Diverse partner work quality",
+      "- Reflection depth",
+      "- Transfer across contexts"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.2",
+      "UDL 6.4",
+      "UDL 7.2",
+      "UDL 8.3",
+      "HLP Explicit Instruction",
+      "HLP Cooperative Learning"
+    ],
+    "selStrand": "relationship-skills",
+    "representationTags": [
+      "rtag.pedagogy.collaborative_dialogue",
+      "rtag.identity.intersectional_identities",
+      "rtag.pedagogy.student_voice"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge",
+      "co_design_with_community"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "hlp_jenkins_2003_cooperative_learning",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "sel.collaborative_roles",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Collaborative Role Structures",
+    "type": "social_collaborative",
+    "problemType": "Students struggle to share responsibility equitably.",
+    "targetMisconception": "Belief that group work = everyone doing the same thing.",
+    "teacherMoves": [
+      "Teach and model rotating team roles (UDL 8.4)",
+      "Scaffold accountability routines (HLP Cooperative Learning)",
+      "Provide visual reminders of role duties"
+    ],
+    "studentTasks": [
+      "Assume and rotate roles (facilitator, recorder,\" etc.)",
+      "Track contributions on checklist",
+      "Reflect on team functioning"
+    ],
+    "supports": [
+      "Role-card set (UDL 8.4)",
+      "Team-accountability chart (HLP Cooperative Learning)",
+      "Reflection journal (UDL 6.3)"
+    ],
+    "fadePlan": "Teacher assigns roles first; later students self-select/rotate; fade to autonomous team management.",
+    "whenNotToUse": "Avoid with projects too brief for rotation or lacking collaboration purpose.; \"Observation notes",
+    "formativeChecks": [
+      "quick team self-ratings."
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 8.4",
+      "HLP Cooperative Learning"
+    ],
+    "selStrand": "relationship-skills",
+    "representationTags": [
+      "rtag.context.global_voices",
+      "rtag.media.multimodal_resources"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "HLP-CEC",
+      "JIGSAW-ARONSON"
+    ],
+    "lastUpdated": "2025-11-02"
+  },
+  {
+    "id": "sel.community_issue_circle",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Community Issue Circle",
+    "type": "social_collaborative",
+    "problemType": "Students have limited understanding of community perspectives.",
+    "targetMisconception": "Belief that social problems exist in isolation from personal experience.",
+    "teacherMoves": [
+      "Introduce local issue case study (UDL 7.3)",
+      "Model respectful turn-taking and listening (HLP Discussion)",
+      "Provide question stems for inquiry"
+    ],
+    "studentTasks": [
+      "Research local/community issue",
+      "Participate in structured circle to discuss findings",
+      "Record insights from differing viewpoints"
+    ],
+    "supports": [
+      "Issue brief packets (UDL 7.3)",
+      "Question stem cards (UDL 5.2)",
+      "Circle protocol chart (HLP Discussion)"
+    ],
+    "fadePlan": "Teacher models protocols; gradually hand off facilitation roles; eventually students lead full circle independently.",
+    "whenNotToUse": "Avoid if issue may polarize without preparation or fact literacy.; \"Teacher observation rubric",
+    "formativeChecks": [
+      "post-circle reflection form."
+    ],
+    "bloomLevel": "evaluate",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 7.3",
+      "HLP Discussion"
+    ],
+    "selStrand": "social-awareness",
+    "representationTags": [
+      "rtag.context.global_voices",
+      "rtag.pedagogy.project_based_relevance"
+    ],
+    "cspTags": [
+      "co_design_with_community",
+      "criticality"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "HLP-CEC"
+    ],
+    "lastUpdated": "2025-11-02"
+  },
+  {
+    "id": "sel.conflict_navigation_skills",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Conflict Navigation Skill Development",
+    "type": "social_collaborative",
+    "problemType": "Students avoid conflict or handle it destructively",
+    "targetMisconception": "Belief that conflict is bad rather than potentially productive",
+    "teacherMoves": [
+      "Reframe conflict as opportunity for understanding (HLP Explicit Instruction)",
+      "Teach conflict navigation steps (UDL 3.2)",
+      "Practice with progressively challenging scenarios (UDL 8.3)",
+      "Model healthy conflict navigation (UDL 6.1)"
+    ],
+    "studentTasks": [
+      "Learn conflict navigation framework",
+      "Identify personal conflict patterns and triggers",
+      "Practice navigation steps with support",
+      "Apply skills to real conflicts",
+      "Reflect on conflict experiences and growth"
+    ],
+    "supports": [
+      "Conflict navigation steps poster (UDL 3.3)",
+      "Personal pattern exploration worksheet (UDL 6.4)",
+      "Practice scenario cards (UDL 8.3)",
+      "Navigation language stems (UDL 5.3)",
+      "Reflection journal (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher guides with structured scenarios → Phase 2: Semi-structured practice with coaching → Phase 3: Real conflict application with support → Phase 4: Independent conflict navigation",
+    "whenNotToUse": "When conflict involves safety concerns requiring adult intervention.",
+    "formativeChecks": [
+      "- Navigation step use in practice",
+      "- Real conflict application quality",
+      "- Outcome improvement in conflicts",
+      "- Self-reported skill growth"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.2",
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.1",
+      "UDL 6.4",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "relationship-skills",
+    "representationTags": [
+      "rtag.language.inclusive_language",
+      "rtag.pedagogy.collaborative_dialogue",
+      "rtag.identity.intersectional_identities"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "hlp_jenkins_2003_cooperative_learning"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "sel.conflict_resolution_steps",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Conflict-Resolution Steps",
+    "type": "linguistic",
+    "problemType": "Students escalate peer conflicts instead of resolving them.",
+    "targetMisconception": "Belief that winning = solving conflict.",
+    "teacherMoves": [
+      "Model calm language and ‚ÄúI‚Äù statements (UDL 9.2)",
+      "Role-play conflict scenarios showing resolution sequence (HLP Modeling)",
+      "Facilitate reflection on emotional triggers"
+    ],
+    "studentTasks": [
+      "Practice scripted conflict-resolution role-plays",
+      "Apply steps to classroom examples",
+      "Reflect on outcomes and emotional control"
+    ],
+    "supports": [
+      "Conflict-resolution flowchart (UDL 9.2)",
+      "Role-play cards (HLP Modeling)",
+      "Reflection form (UDL 6.4)"
+    ],
+    "fadePlan": "Start with teacher-led modeling; co-facilitate role-plays; fade to self-guided use during real conflicts.",
+    "whenNotToUse": "Avoid in acute or unsafe interpersonal disputes needing adult mediation.; \"Observation checklist during role-play",
+    "formativeChecks": [
+      "exit reflection on effectiveness."
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 9.2",
+      "HLP Modeling"
+    ],
+    "selStrand": "relationship-skills",
+    "representationTags": [
+      "rtag.context.global_voices",
+      "rtag.pedagogy.project_based_relevance"
+    ],
+    "cspTags": [
+      "criticality"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "HLP-CEC",
+      "JIGSAW-ARONSON"
+    ],
+    "lastUpdated": "2025-11-02"
+  },
+  {
+    "id": "sel.consequence_anticipation_practice",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Consequence Anticipation and Mapping",
+    "type": "cognitive",
+    "problemType": "Students don't think through consequences before acting",
+    "targetMisconception": "Belief that consequences are unpredictable and not worth considering",
+    "teacherMoves": [
+      "Teach consequence mapping as decision-making tool (HLP Explicit Instruction)",
+      "Practice with hypothetical and real decisions (UDL 8.3)",
+      "Consider short and long-term, self and other consequences (UDL 3.2)",
+      "Connect to values and goals (UDL 7.2)"
+    ],
+    "studentTasks": [
+      "Learn consequence mapping framework",
+      "Practice mapping consequences for hypothetical decisions",
+      "Consider multiple dimensions of consequences",
+      "Apply to real pending decisions",
+      "Reflect on prediction accuracy after decisions"
+    ],
+    "supports": [
+      "Consequence mapping template (UDL 3.3)",
+      "Dimension checklist: time, scope, stakeholders (UDL 6.2)",
+      "Practice scenarios (UDL 8.3)",
+      "Real decision application guide (UDL 7.2)",
+      "Prediction accuracy tracker (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher guides mapping with simple decisions → Phase 2: Independent mapping of complex hypotheticals → Phase 3: Real decision application → Phase 4: Automatic consequence consideration",
+    "whenNotToUse": "When immediate action is required for safety.",
+    "formativeChecks": [
+      "- Mapping completeness across dimensions",
+      "- Prediction accuracy over time",
+      "- Real decision application",
+      "- Reflection quality on outcomes"
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.2",
+      "UDL 3.3",
+      "UDL 6.2",
+      "UDL 6.4",
+      "UDL 7.2",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "responsible-decision-making",
+    "representationTags": [
+      "rtag.pedagogy.student_voice",
+      "rtag.context.global_voices",
+      "rtag.identity.neurodiversity"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "udl_cast_2024_guidelines"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "sel.cultural_humility_development",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Cultural Humility Development Practice",
+    "type": "cognitive",
+    "problemType": "Students approach cultural difference with assumptions or stereotypes",
+    "targetMisconception": "Belief that learning about a culture once means understanding it permanently",
+    "teacherMoves": [
+      "Teach cultural humility as ongoing practice not endpoint (HLP Explicit Instruction)",
+      "Explore own cultural assumptions and biases (UDL 7.3)",
+      "Practice curious rather than judgmental approach (UDL 8.3)",
+      "Build habits of cultural learning (UDL 6.4)"
+    ],
+    "studentTasks": [
+      "Explore own cultural identity and assumptions",
+      "Recognize limits of own cultural knowledge",
+      "Practice asking rather than assuming",
+      "Seek to learn from rather than about cultures",
+      "Reflect on cultural humility growth"
+    ],
+    "supports": [
+      "Cultural humility framework guide (UDL 3.3)",
+      "Self-assumption exploration worksheet (UDL 6.4)",
+      "Curious questioning stems (UDL 5.3)",
+      "Learning from protocol (UDL 5.3)",
+      "Growth reflection journal (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher guides self-exploration and models humility → Phase 2: Structured practice with feedback → Phase 3: Real relationship application → Phase 4: Ongoing cultural humility practice",
+    "whenNotToUse": "When cultural exploration might appropriate or stereotype without proper grounding.",
+    "formativeChecks": [
+      "- Assumption recognition depth",
+      "- Curious questioning quality",
+      "- Learning approach authenticity",
+      "- Self-reported humility growth"
+    ],
+    "bloomLevel": "evaluate",
+    "dokLevel": 4,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.4",
+      "UDL 7.3",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "social-awareness",
+    "representationTags": [
+      "rtag.identity.cultural_authenticity",
+      "rtag.identity.intersectional_identities",
+      "rtag.context.global_voices"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge",
+      "criticality",
+      "co_design_with_community"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "csp_ladsonbillings_1995_theory",
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "sel_jagers_2019_equity"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "sel.cultural_identity_exploration",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Cultural Identity Exploration and Affirmation",
+    "type": "unknown",
+    "problemType": "Students from marginalized backgrounds experience identity conflicts or shame",
+    "targetMisconception": "Belief that cultural identity should be hidden or assimilated in school settings",
+    "teacherMoves": [
+      "Create safe space for identity exploration (UDL 8.3)",
+      "Affirm all cultural identities as valuable (UDL 7.3)",
+      "Support exploration of heritage and traditions (UDL 7.2)",
+      "Connect cultural identity to academic success (HLP Explicit Instruction)"
+    ],
+    "studentTasks": [
+      "Explore dimensions of personal cultural identity",
+      "Research family and community cultural heritage",
+      "Identify how culture shapes perspectives and strengths",
+      "Share cultural identity aspects with trusted peers",
+      "Connect cultural identity to future goals and aspirations"
+    ],
+    "supports": [
+      "Cultural identity wheel template (UDL 3.3)",
+      "Heritage research guide (UDL 6.2)",
+      "Culture-strength connection prompts (UDL 5.3)",
+      "Safe sharing protocol (HLP Cooperative Learning)",
+      "Identity-future connection journal (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher models cultural identity sharing and creates safety → Phase 2: Guided exploration with optional sharing → Phase 3: Student-led identity celebrations → Phase 4: Ongoing cultural pride integration",
+    "whenNotToUse": "When students show distress about cultural identity. Provide individual support before group activities.",
+    "formativeChecks": [
+      "- Identity exploration depth",
+      "- Heritage research quality",
+      "- Culture-strength connections",
+      "- Peer sharing comfort level"
+    ],
+    "bloomLevel": "evaluate",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.2",
+      "UDL 6.4",
+      "UDL 7.2",
+      "UDL 7.3",
+      "UDL 8.3",
+      "HLP Explicit Instruction",
+      "HLP Cooperative Learning"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.identity.cultural_authenticity",
+      "rtag.identity.intersectional_identities",
+      "rtag.context.global_voices"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge",
+      "criticality",
+      "co_design_with_community"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "csp_ladsonbillings_1995_theory",
+      "sel_jagers_2019_equity",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "sel.cultural_lens_analysis",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Cultural Lens Analysis",
+    "type": "unknown",
+    "problemType": "Students misinterpret behaviors due to cultural bias.",
+    "targetMisconception": "Assumption that their culture‚Äôs norms are 'correct' or universal.",
+    "teacherMoves": [
+      "Present anonymized cross-cultural scenarios (UDL 7.2)",
+      "Model neutral observation vs. judgment",
+      "Facilitate class debrief identifying assumptions"
+    ],
+    "studentTasks": [
+      "Analyze short scenarios for cultural interpretation",
+      "Identify personal assumptions in writing",
+      "Share insights about bias and empathy"
+    ],
+    "supports": [
+      "Scenario cards (UDL 7.2)",
+      "Bias-reflection graphic organizer (UDL 6.4)",
+      "Class norms chart (HLP Building Relationships)"
+    ],
+    "fadePlan": "Early phase ‚Äî teacher leads discussion with structured prompts; middle ‚Äî students co-facilitate; final ‚Äî students lead debrief circles.",
+    "whenNotToUse": "Avoid when class lacks psychological safety for open cultural discussion.; \"Written reflections scored with empathy rubric",
+    "formativeChecks": [
+      "group debrief summary notes."
+    ],
+    "bloomLevel": "evaluate",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 7.2",
+      "HLP Building Relationships"
+    ],
+    "selStrand": "social-awareness",
+    "representationTags": [
+      "rtag.identity.intersectional_identities",
+      "rtag.context.global_voices"
+    ],
+    "cspTags": [
+      "criticality",
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "HLP-CEC"
+    ],
+    "lastUpdated": "2025-11-02"
+  },
+  {
+    "id": "sel.digital_citizenship_reflect",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Digital Citizenship Reflection",
+    "type": "linguistic",
+    "problemType": "Students post or share online without considering impact.",
+    "targetMisconception": "Belief that digital space is separate from real-world ethics.",
+    "teacherMoves": [
+      "Model analyzing social-media post consequences (UDL 6.2)",
+      "Provide digital-ethics checklist (HLP Explicit Instruction)",
+      "Use scenario analysis for reflection"
+    ],
+    "studentTasks": [
+      "Evaluate sample posts for empathy and respect",
+      "Apply checklist before posting/commenting",
+      "Write reflection on personal digital footprint"
+    ],
+    "supports": [
+      "Digital-ethics checklist (UDL 6.2)",
+      "Scenario cards (UDL 3.3)",
+      "Reflection log (UDL 5.3)"
+    ],
+    "fadePlan": "Teacher leads guided analyses; students co-evaluate peers; fade to independent digital self-audits.",
+    "whenNotToUse": "Avoid if students lack access to digital platforms or privacy cannot be ensured.; \"Checklist completion",
+    "formativeChecks": [
+      "teacher observes peer-feedback quality."
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 6.2",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "responsible-decision-making",
+    "representationTags": [
+      "rtag.context.global_voices",
+      "rtag.language.inclusive_language"
+    ],
+    "cspTags": [
+      "criticality",
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "HLP-CEC",
+      "UDL-CAST-3.0"
+    ],
+    "lastUpdated": "2025-11-02"
+  },
+  {
+    "id": "sel.digital_wellness_balance",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Digital Wellness and Balance",
+    "type": "metacognitive",
+    "problemType": "Students struggle with technology overuse affecting wellbeing and relationships",
+    "targetMisconception": "Belief that constant connectivity is normal and necessary",
+    "teacherMoves": [
+      "Explore relationship between digital use and wellbeing (HLP Explicit Instruction)",
+      "Audit current digital habits without judgment (UDL 6.4)",
+      "Identify healthy digital boundaries (UDL 6.2)",
+      "Practice intentional technology use (UDL 6.4)"
+    ],
+    "studentTasks": [
+      "Audit personal digital use patterns",
+      "Identify impacts of digital habits on wellbeing",
+      "Set intentional digital boundaries",
+      "Implement digital wellness practices",
+      "Reflect on balance and adjust as needed"
+    ],
+    "supports": [
+      "Digital use audit template (UDL 6.4)",
+      "Impact reflection prompts (UDL 5.3)",
+      "Boundary setting guide (UDL 6.2)",
+      "Practice tracking log (UDL 6.4)",
+      "Balance reflection journal (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Guided audit and boundary exploration → Phase 2: Supported boundary setting → Phase 3: Independent implementation → Phase 4: Sustainable digital wellness habits",
+    "whenNotToUse": "When digital access is required for immediate learning or communication needs.",
+    "formativeChecks": [
+      "- Audit completion and honesty",
+      "- Boundary clarity and feasibility",
+      "- Implementation follow-through",
+      "- Self-reported wellbeing changes"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.2",
+      "UDL 6.4",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.pedagogy.student_voice",
+      "rtag.identity.neurodiversity",
+      "rtag.context.global_voices"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "udl_cast_2024_guidelines",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "sel.disability_identity_pride",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Disability Identity Pride and Advocacy",
+    "type": "unknown",
+    "problemType": "Students with disabilities experience shame or deficit framing of their identities",
+    "targetMisconception": "Belief that disability is only limitation rather than identity with strengths",
+    "teacherMoves": [
+      "Introduce social model of disability and disability pride (HLP Explicit Instruction)",
+      "Connect students with disability community and role models (UDL 7.3)",
+      "Support self-advocacy skill development (UDL 5.3)",
+      "Create affirming classroom culture (UDL 8.3)"
+    ],
+    "studentTasks": [
+      "Explore disability identity through social model lens",
+      "Connect with disability community and role models",
+      "Develop language for self-advocacy",
+      "Build strengths-based understanding of disability",
+      "Advocate for inclusion and accessibility"
+    ],
+    "supports": [
+      "Social model of disability explainer (UDL 3.3)",
+      "Disability community role model bank (UDL 7.3)",
+      "Self-advocacy language stems (UDL 5.3)",
+      "Strengths exploration worksheet (UDL 6.4)",
+      "Advocacy planning template (UDL 6.3)"
+    ],
+    "fadePlan": "Phase 1: Teacher introduces social model and affirms identities → Phase 2: Community and role model connections → Phase 3: Self-advocacy skill building → Phase 4: Student leadership in disability advocacy",
+    "whenNotToUse": "Never - disability affirmation should be ongoing. Adapt approach to individual student needs and preferences.",
+    "formativeChecks": [
+      "- Social model understanding",
+      "- Connection development",
+      "- Self-advocacy skill use",
+      "- Self-reported identity pride"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.3",
+      "UDL 6.4",
+      "UDL 7.3",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.identity.disability_inclusion",
+      "rtag.identity.intersectional_identities",
+      "rtag.language.inclusive_language"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge",
+      "co_design_with_community",
+      "criticality"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "udl_cast_2024_guidelines",
+      "sel_jagers_2019_equity",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "sel.emotion_labeling",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Emotion Labeling Routine",
+    "type": "linguistic",
+    "problemType": "Students struggle to accurately identify and name emotions.",
+    "targetMisconception": "Belief that emotions are binary (happy/sad) rather than nuanced.",
+    "teacherMoves": [
+      "Model naming subtle emotions during class check-in (UDL 3.3)",
+      "Use think-aloud to link body cues to feeling words (HLP Explicit Instruction)",
+      "Reinforce vocabulary through visual emotion wheel (UDL 2.1)"
+    ],
+    "studentTasks": [
+      "Practice labeling emotions in reflection logs",
+      "Match scenarios to nuanced emotion words",
+      "Discuss how physiological cues connect to emotions"
+    ],
+    "supports": [
+      "Emotion wheel poster (UDL 2.1)",
+      "Reflection log template (UDL 5.2)",
+      "Emotion vocabulary cards (HLP Modeling)"
+    ],
+    "fadePlan": "First\",\" teacher models labeling with visuals; then students co-label; finally students self-identify without prompts.",
+    "whenNotToUse": "Avoid when emotional intensity is high or safety cannot be ensured.; \"Exit slip: students name one emotion and trigger",
+    "formativeChecks": [
+      "teacher observes specificity growth."
+    ],
+    "bloomLevel": "understand",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 2.1",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.context.global_voices",
+      "rtag.media.multimodal_resources"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "HLP-CEC"
+    ],
+    "lastUpdated": "2025-11-02"
+  },
+  {
+    "id": "sel.emotion_regulation_toolkit",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Emotion Regulation Strategy Toolkit",
+    "type": "cognitive",
+    "problemType": "Students have limited strategies for managing intense emotions",
+    "targetMisconception": "Belief that emotions are uncontrollable forces that must be endured",
+    "teacherMoves": [
+      "Teach emotion regulation as learnable skill (HLP Explicit Instruction)",
+      "Introduce variety of strategies for different situations (UDL 6.4)",
+      "Model strategy selection and use (UDL 6.1)",
+      "Practice in low-stakes situations before high-stakes (UDL 8.3)"
+    ],
+    "studentTasks": [
+      "Learn multiple emotion regulation strategies",
+      "Identify which strategies work best for which emotions",
+      "Practice strategies in progressively challenging situations",
+      "Build personal regulation toolkit",
+      "Reflect on regulation effectiveness and adjust"
+    ],
+    "supports": [
+      "Strategy explanation cards with examples (UDL 3.3)",
+      "Emotion-strategy matching guide (UDL 6.2)",
+      "Practice situation hierarchy (UDL 8.3)",
+      "Personal toolkit organizer (UDL 6.4)",
+      "Effectiveness reflection journal (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher introduces and models strategies → Phase 2: Guided practice with feedback → Phase 3: Independent strategy selection and use → Phase 4: Automatic regulation with flexible strategy selection",
+    "whenNotToUse": "When intense emotions require immediate support rather than skill practice.",
+    "formativeChecks": [
+      "- Strategy repertoire breadth",
+      "- Strategy-situation matching accuracy",
+      "- Practice attempt frequency",
+      "- Self-reported regulation improvement"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 6.1",
+      "UDL 6.2",
+      "UDL 6.4",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.identity.neurodiversity",
+      "rtag.identity.disability_inclusion",
+      "rtag.pedagogy.student_voice"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "udl_cast_2024_guidelines",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "sel.emotion_vocabulary_expansion",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Emotion Vocabulary Expansion and Nuance",
+    "type": "cognitive",
+    "problemType": "Students use limited emotion vocabulary reducing self-understanding and expression",
+    "targetMisconception": "Belief that basic emotion words (happy sad mad) are sufficient for self-awareness",
+    "teacherMoves": [
+      "Introduce emotion vocabulary beyond basics using visual spectrum (UDL 3.1)",
+      "Model nuanced emotion identification with think-aloud (HLP Explicit Instruction)",
+      "Connect emotion words to physical sensations and situations (UDL 3.2)",
+      "Validate that emotions can be complex and mixed (UDL 7.3)"
+    ],
+    "studentTasks": [
+      "Learn new emotion vocabulary with definitions and examples",
+      "Identify personal emotions using expanded vocabulary",
+      "Distinguish between similar emotions (frustrated vs annoyed)",
+      "Track emotion vocabulary use over time",
+      "Teach new emotion words to peers"
+    ],
+    "supports": [
+      "Emotion vocabulary spectrum poster (UDL 3.3)",
+      "Emotion definition cards with examples (UDL 3.1)",
+      "Emotion-sensation-situation connection map (UDL 3.2)",
+      "Emotion journal with vocabulary prompts (UDL 5.3)",
+      "Peer teaching protocol (HLP Cooperative Learning)"
+    ],
+    "fadePlan": "Phase 1: Teacher introduces vocabulary with explicit instruction → Phase 2: Guided practice identifying nuanced emotions → Phase 3: Independent vocabulary application → Phase 4: Natural nuanced emotion expression",
+    "whenNotToUse": "When student is in acute distress and needs support rather than vocabulary instruction.",
+    "formativeChecks": [
+      "- Emotion vocabulary quiz",
+      "- Journal entries vocabulary richness",
+      "- Peer teaching observation",
+      "- Self-report on emotion understanding depth"
+    ],
+    "bloomLevel": "understand",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 3.1",
+      "UDL 3.2",
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 7.3",
+      "HLP Explicit Instruction",
+      "HLP Cooperative Learning"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.language.plain_language_access",
+      "rtag.identity.neurodiversity",
+      "rtag.pedagogy.student_voice"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "udl_cast_2024_guidelines",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "sel.empathy_development_practice",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Empathy Development and Expression",
+    "type": "cognitive",
+    "problemType": "Students struggle to feel with others or express empathy appropriately",
+    "targetMisconception": "Belief that empathy is a fixed trait rather than developable capacity",
+    "teacherMoves": [
+      "Distinguish cognitive and affective empathy (HLP Explicit Instruction)",
+      "Practice empathic listening and response (UDL 5.3)",
+      "Model empathy expression with appropriate boundaries (UDL 6.1)",
+      "Connect empathy to relationship quality (UDL 7.2)"
+    ],
+    "studentTasks": [
+      "Learn what empathy is and isn't",
+      "Practice recognizing others' emotions",
+      "Develop empathic listening skills",
+      "Practice expressing empathy verbally and nonverbally",
+      "Reflect on empathy's role in relationships"
+    ],
+    "supports": [
+      "Empathy definition and components guide (UDL 3.3)",
+      "Emotion recognition practice materials (UDL 3.2)",
+      "Empathic response stems (UDL 5.3)",
+      "Expression practice activities (UDL 8.3)",
+      "Relationship reflection journal (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher models and guides basic empathy skills → Phase 2: Structured practice opportunities → Phase 3: Real relationship application → Phase 4: Natural empathic response habits",
+    "whenNotToUse": "When student is experiencing their own distress and needs to receive empathy first.",
+    "formativeChecks": [
+      "- Emotion recognition accuracy",
+      "- Empathic listening quality",
+      "- Expression appropriateness",
+      "- Relationship quality changes"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.2",
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.1",
+      "UDL 6.4",
+      "UDL 7.2",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "social-awareness",
+    "representationTags": [
+      "rtag.language.inclusive_language",
+      "rtag.identity.intersectional_identities",
+      "rtag.pedagogy.student_voice"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "udl_cast_2024_guidelines"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "sel.empathy_map_project",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Empathy Mapping Project",
+    "type": "social_collaborative",
+    "problemType": "Students fail to connect emotions to others‚Äô experiences.",
+    "targetMisconception": "Belief that empathy = agreement.",
+    "teacherMoves": [
+      "Model creation of empathy map for a character/person (UDL 3.3)",
+      "Guide students in distinguishing feeling vs. fact",
+      "Use think-aloud to link emotion to context"
+    ],
+    "studentTasks": [
+      "Build empathy map for peer, community member,\" or historical figure",
+      "Identify what the person might think/feel/need/do",
+      "Compare maps in small groups"
+    ],
+    "supports": [
+      "Empathy map template (UDL 3.3)",
+      "Emotion word bank (UDL 2.1)",
+      "Peer review protocol (HLP Cooperative Learning)"
+    ],
+    "fadePlan": "Start with teacher model; then guided group mapping; fade to independent creation and peer feedback.",
+    "whenNotToUse": "Avoid when subjects are personally triggering or too abstract for empathy connection.; \"Empathy map accuracy and depth rubric",
+    "formativeChecks": [
+      "reflection exit ticket."
+    ],
+    "bloomLevel": "understand",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "HLP Cooperative Learning"
+    ],
+    "selStrand": "social-awareness",
+    "representationTags": [
+      "rtag.context.global_voices",
+      "rtag.pedagogy.project_based_relevance"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "HLP-CEC"
+    ],
+    "lastUpdated": "2025-11-02"
+  },
+  {
+    "id": "sel.environmental_responsibility_action",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Environmental Responsibility and Action",
+    "type": "social_collaborative",
+    "problemType": "Students don't see themselves as having environmental responsibility or impact",
+    "targetMisconception": "Belief that individual actions don't matter for environmental issues",
+    "teacherMoves": [
+      "Connect environmental issues to student lives and communities (UDL 7.2)",
+      "Explore individual and collective action possibilities (HLP Explicit Instruction)",
+      "Support actual environmental action (UDL 7.2)",
+      "Build sustainability habits (UDL 6.4)"
+    ],
+    "studentTasks": [
+      "Learn about environmental issues and connections to daily life",
+      "Explore action possibilities at individual and collective levels",
+      "Take environmental action connected to personal values",
+      "Build sustainable habits in daily life",
+      "Reflect on environmental engagement and impact"
+    ],
+    "supports": [
+      "Environmental issues connection guide (UDL 3.3)",
+      "Action level matrix (UDL 6.2)",
+      "Action planning template (UDL 6.3)",
+      "Habit building tracker (UDL 6.4)",
+      "Impact reflection journal (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher connects issues to student lives → Phase 2: Supported action exploration → Phase 3: Independent action implementation → Phase 4: Ongoing environmental citizenship",
+    "whenNotToUse": "When action might cause guilt without agency. Focus on collective action when individual action is limited.",
+    "formativeChecks": [
+      "- Issue understanding depth",
+      "- Action plan feasibility",
+      "- Habit building follow-through",
+      "- Reflection on impact and agency"
+    ],
+    "bloomLevel": "create",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 6.2",
+      "UDL 6.3",
+      "UDL 6.4",
+      "UDL 7.2",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "responsible-decision-making",
+    "representationTags": [
+      "rtag.context.global_voices",
+      "rtag.pedagogy.project_based_relevance",
+      "rtag.identity.intersectional_identities"
+    ],
+    "cspTags": [
+      "criticality",
+      "sustain_community_knowledge",
+      "co_design_with_community"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "sel_jagers_2019_equity",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "sel.ethical_decision_tree",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Ethical Decision Tree",
+    "type": "unknown",
+    "problemType": "Students make impulsive choices without evaluating consequences.",
+    "targetMisconception": "Belief that rules alone define right and wrong.",
+    "teacherMoves": [
+      "Model ethical reasoning with decision-tree diagram (UDL 3.3)",
+      "Think aloud through short moral dilemma (HLP Explicit Instruction)",
+      "Facilitate student critique of different outcomes"
+    ],
+    "studentTasks": [
+      "Apply decision-tree to real or hypothetical situations",
+      "Identify stakeholders and outcomes",
+      "Reflect on alignment with values"
+    ],
+    "supports": [
+      "Ethical-decision-tree graphic (UDL 3.3)",
+      "Stakeholder checklist (HLP Explicit Instruction)",
+      "Reflection worksheet (UDL 6.4)"
+    ],
+    "fadePlan": "Teacher models analysis; students co-create trees; fade to independent use in daily decisions.",
+    "whenNotToUse": "Avoid when emotional intensity prevents rational reflection.; \"Exit ticket explaining reasoning path",
+    "formativeChecks": [
+      "rubric for ethical clarity."
+    ],
+    "bloomLevel": "evaluate",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "responsible-decision-making",
+    "representationTags": [
+      "rtag.context.global_voices",
+      "rtag.pedagogy.project_based_relevance"
+    ],
+    "cspTags": [
+      "criticality"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "HLP-CEC"
+    ],
+    "lastUpdated": "2025-11-02"
+  },
+  {
+    "id": "sel.ethical_reasoning_framework",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Ethical Reasoning Development Framework",
+    "type": "cognitive",
+    "problemType": "Students make decisions without considering ethical dimensions",
+    "targetMisconception": "Belief that right and wrong are always obvious or purely personal opinion",
+    "teacherMoves": [
+      "Introduce ethical reasoning frameworks (HLP Explicit Instruction)",
+      "Practice applying frameworks to dilemmas (UDL 8.3)",
+      "Explore multiple perspectives on ethical questions (UDL 3.2)",
+      "Connect to real decisions students face (UDL 7.2)"
+    ],
+    "studentTasks": [
+      "Learn ethical reasoning frameworks",
+      "Apply frameworks to hypothetical dilemmas",
+      "Consider multiple perspectives on ethical questions",
+      "Apply reasoning to real personal decisions",
+      "Reflect on ethical growth and ongoing questions"
+    ],
+    "supports": [
+      "Ethical frameworks comparison guide (UDL 3.3)",
+      "Dilemma analysis template (UDL 6.2)",
+      "Perspective exploration prompts (UDL 5.3)",
+      "Personal decision application guide (UDL 7.2)",
+      "Reflection journal (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher introduces frameworks with guided practice → Phase 2: Independent dilemma analysis → Phase 3: Real decision application → Phase 4: Internalized ethical consideration",
+    "whenNotToUse": "When urgent action is needed and extended reasoning isn't feasible.",
+    "formativeChecks": [
+      "- Framework application accuracy",
+      "- Perspective consideration breadth",
+      "- Real decision quality",
+      "- Reflection depth"
+    ],
+    "bloomLevel": "evaluate",
+    "dokLevel": 4,
+    "udlHlpTags": [
+      "UDL 3.2",
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.2",
+      "UDL 6.4",
+      "UDL 7.2",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "responsible-decision-making",
+    "representationTags": [
+      "rtag.context.global_voices",
+      "rtag.pedagogy.student_voice",
+      "rtag.identity.intersectional_identities"
+    ],
+    "cspTags": [
+      "criticality",
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "udl_cast_2024_guidelines"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "sel.feedback_exchange",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Constructive Feedback Exchange",
+    "type": "linguistic",
+    "problemType": "Students give vague or hurtful feedback.",
+    "targetMisconception": "Misconception that honesty must be blunt to be useful.",
+    "teacherMoves": [
+      "Model ‚Äúpraise-question-polish‚Äù protocol (UDL 6.4)",
+      "Demonstrate tone and body-language cues (HLP Explicit Instruction)",
+      "Facilitate guided peer-review sessions"
+    ],
+    "studentTasks": [
+      "Use feedback stems in peer work",
+      "Provide specific evidence-based comments",
+      "Reflect on how feedback improved product"
+    ],
+    "supports": [
+      "Feedback-stem cards (UDL 6.4)",
+      "Peer-review form (HLP Cooperative Learning)",
+      "Tone checklist (UDL 5.2)"
+    ],
+    "fadePlan": "Initial teacher-modeled sessions; transition to guided peer reviews; fade to autonomous student exchanges.",
+    "whenNotToUse": "Avoid with sensitive creative work until trust norms established.; \"Peer-review rubric",
+    "formativeChecks": [
+      "student reflection on one feedback change made."
+    ],
+    "bloomLevel": "evaluate",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 6.4",
+      "HLP Cooperative Learning"
+    ],
+    "selStrand": "relationship-skills",
+    "representationTags": [
+      "rtag.pedagogy.student_voice",
+      "rtag.context.global_voices"
+    ],
+    "cspTags": [
+      "sustain_language",
+      "co_design_with_community"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "HLP-CEC",
+      "ASCD-CFU"
+    ],
+    "lastUpdated": "2025-11-02"
+  },
+  {
+    "id": "sel.financial_decision_fundamentals",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Financial Decision-Making Fundamentals",
+    "type": "cognitive",
+    "problemType": "Students lack basic financial literacy for personal decisions",
+    "targetMisconception": "Belief that financial decisions don't need to be made until adulthood",
+    "teacherMoves": [
+      "Teach financial concepts relevant to students now and soon (HLP Explicit Instruction)",
+      "Use real scenarios from student life contexts (UDL 7.2)",
+      "Connect financial decisions to values and goals (UDL 7.2)",
+      "Practice decision-making with realistic constraints (UDL 8.3)"
+    ],
+    "studentTasks": [
+      "Learn fundamental financial concepts",
+      "Apply concepts to realistic scenarios",
+      "Connect financial decisions to personal values and goals",
+      "Practice decision-making with constraints",
+      "Reflect on financial decision patterns and growth"
+    ],
+    "supports": [
+      "Financial concepts guide relevant to students (UDL 3.3)",
+      "Real scenario cards (UDL 8.3)",
+      "Values-money connection worksheet (UDL 6.2)",
+      "Constraint-based practice activities (UDL 8.3)",
+      "Reflection journal (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher introduces concepts with student-relevant examples → Phase 2: Scenario practice with support → Phase 3: Real decision application → Phase 4: Ongoing financial mindfulness",
+    "whenNotToUse": "When student is in financial crisis requiring immediate support rather than education.",
+    "formativeChecks": [
+      "- Concept understanding accuracy",
+      "- Scenario decision quality",
+      "- Values-decision alignment",
+      "- Self-reported financial confidence"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 6.2",
+      "UDL 6.4",
+      "UDL 7.2",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "responsible-decision-making",
+    "representationTags": [
+      "rtag.context.global_voices",
+      "rtag.language.plain_language_access",
+      "rtag.pedagogy.student_voice"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "udl_cast_2024_guidelines"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "sel.focus_attention_building",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Focus and Attention Building Strategies",
+    "type": "cognitive",
+    "problemType": "Students struggle to sustain attention leading to incomplete work and frustration",
+    "targetMisconception": "Belief that attention is fixed capacity rather than trainable skill",
+    "teacherMoves": [
+      "Teach attention as muscle that can be strengthened (HLP Explicit Instruction)",
+      "Introduce variety of focus strategies (UDL 6.4)",
+      "Help students identify attention patterns (UDL 3.2)",
+      "Practice in progressively longer intervals (UDL 8.3)"
+    ],
+    "studentTasks": [
+      "Learn about attention and how it works",
+      "Identify personal attention patterns and challenges",
+      "Build repertoire of focus strategies",
+      "Practice sustained attention with strategies",
+      "Track attention improvement over time"
+    ],
+    "supports": [
+      "Attention explainer with strategies (UDL 3.3)",
+      "Attention pattern log (UDL 6.4)",
+      "Focus strategy cards (UDL 6.4)",
+      "Progressive practice schedule (UDL 8.3)",
+      "Growth tracking chart (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Short focus practice with teacher cues → Phase 2: Longer practice with self-selected strategies → Phase 3: Independent focus with self-monitoring → Phase 4: Natural sustained attention habits",
+    "whenNotToUse": "When attention challenges stem from unmet basic needs requiring other intervention.",
+    "formativeChecks": [
+      "- Focus duration growth over time",
+      "- Strategy use effectiveness",
+      "- Self-monitoring accuracy",
+      "- Work completion improvement"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 3.2",
+      "UDL 3.3",
+      "UDL 6.4",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.identity.neurodiversity",
+      "rtag.identity.disability_inclusion",
+      "rtag.media.accessible_media"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "udl_cast_2024_guidelines",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "sel.frustration_tolerance_build",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Building Frustration Tolerance",
+    "type": "metacognitive",
+    "problemType": "Students give up quickly when challenged.",
+    "targetMisconception": "Belief that struggle = failure rather than growth.",
+    "teacherMoves": [
+      "Model think-aloud showing productive struggle (HLP Modeling)",
+      "Praise effort and strategies over outcome (UDL 8.4)",
+      "Scaffold reflection on coping with frustration"
+    ],
+    "studentTasks": [
+      "Engage in tiered challenge tasks",
+      "Reflect on emotional responses to difficulty",
+      "Apply coping strategies when errors occur"
+    ],
+    "supports": [
+      "Coping-strategy chart (UDL 8.4)",
+      "Reflection prompt cards (HLP Feedback)",
+      "Progress journal (UDL 6.4)"
+    ],
+    "fadePlan": "Teacher models and verbalizes coping; students co-reflect; fade as students self-regulate during challenges.",
+    "whenNotToUse": "Avoid if frustration stems from unmet basic needs or trauma triggers.; Journal review for language shift toward perseverance.",
+    "formativeChecks": [],
+    "bloomLevel": "evaluate",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 8.4",
+      "HLP Modeling"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.pedagogy.student_voice",
+      "rtag.context.global_voices"
+    ],
+    "cspTags": [
+      "criticality"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "HLP-CEC",
+      "FORMATIVE-IES"
+    ],
+    "lastUpdated": "2025-11-02"
+  },
+  {
+    "id": "sel.frustration_tolerance_building",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Frustration Tolerance Capacity Building",
+    "type": "cognitive",
+    "problemType": "Students give up or act out when facing frustration",
+    "targetMisconception": "Belief that frustration should be avoided rather than tolerated and learned from",
+    "teacherMoves": [
+      "Normalize frustration as part of learning and growth (UDL 7.3)",
+      "Teach frustration tolerance as capacity that grows (HLP Explicit Instruction)",
+      "Practice tolerating manageable frustration (UDL 8.3)",
+      "Celebrate persistence through frustration (UDL 8.1)"
+    ],
+    "studentTasks": [
+      "Recognize frustration signs early",
+      "Apply calming strategies before overwhelm",
+      "Persist through manageable frustration",
+      "Reflect on frustration experiences and learning",
+      "Build frustration tolerance through progressive challenges"
+    ],
+    "supports": [
+      "Frustration warning signs guide (UDL 3.3)",
+      "Calming strategy quick-reference (UDL 6.4)",
+      "Persistence encouragement prompts (UDL 5.3)",
+      "Reflection template (UDL 6.4)",
+      "Progressive challenge ladder (UDL 8.3)"
+    ],
+    "fadePlan": "Phase 1: Low-stakes frustration practice with high support → Phase 2: Increased challenge with strategy cues → Phase 3: Real frustration with self-regulation → Phase 4: Natural frustration tolerance",
+    "whenNotToUse": "When frustration stems from legitimate unfairness requiring advocacy not tolerance.",
+    "formativeChecks": [
+      "- Early warning sign recognition",
+      "- Strategy application timing",
+      "- Persistence through frustration instances",
+      "- Self-reported tolerance growth"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.4",
+      "UDL 7.3",
+      "UDL 8.1",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.identity.neurodiversity",
+      "rtag.identity.disability_inclusion",
+      "rtag.pedagogy.student_voice"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "udl_cast_2024_guidelines",
+      "fa_wiliam_2011_embedded_FA"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "sel.future_self_visualization",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Future Self Visualization and Goal Bridge",
+    "type": "unknown",
+    "problemType": "Students lack vision for their futures or don't see path from present to goals",
+    "targetMisconception": "Belief that the future just happens rather than being shaped by present choices",
+    "teacherMoves": [
+      "Guide detailed future self visualization (UDL 7.3)",
+      "Connect present actions to future outcomes (UDL 7.2)",
+      "Share diverse success pathway stories (UDL 7.3)",
+      "Support backward planning from future goals (UDL 6.2)"
+    ],
+    "studentTasks": [
+      "Create detailed vision of future self in 5, 10, 20 years",
+      "Identify values, skills, and qualities in future self",
+      "Map backward from future to present actions",
+      "Identify obstacles and strategies to overcome them",
+      "Create action plan for next steps toward future self"
+    ],
+    "supports": [
+      "Future self visualization guide (UDL 3.3)",
+      "Backward planning template (UDL 6.2)",
+      "Obstacle-strategy matrix (UDL 6.2)",
+      "Action planning template (UDL 6.3)",
+      "Success pathway story bank (UDL 7.3)"
+    ],
+    "fadePlan": "Phase 1: Guided visualization with prompts → Phase 2: Independent visualization with planning support → Phase 3: Action implementation with check-ins → Phase 4: Ongoing vision refinement",
+    "whenNotToUse": "When student is in crisis and basic needs must be addressed first.",
+    "formativeChecks": [
+      "- Vision detail and specificity",
+      "- Backward planning logic",
+      "- Action plan feasibility",
+      "- Follow-through on next steps"
+    ],
+    "bloomLevel": "create",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 6.2",
+      "UDL 6.3",
+      "UDL 7.2",
+      "UDL 7.3"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.pedagogy.student_voice",
+      "rtag.identity.intersectional_identities",
+      "rtag.context.global_voices"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge",
+      "criticality"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "sel_jagers_2019_equity"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "sel.giving_receiving_feedback",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Giving and Receiving Feedback Effectively",
+    "type": "social_collaborative",
+    "problemType": "Students give unhelpful feedback or react defensively to feedback",
+    "targetMisconception": "Belief that feedback is criticism rather than gift for growth",
+    "teacherMoves": [
+      "Teach feedback as skill separate from evaluation (HLP Explicit Instruction)",
+      "Model specific, actionable, kind feedback (UDL 6.1)",
+      "Practice receiving feedback non-defensively (UDL 8.3)",
+      "Create safe culture for feedback exchange (UDL 8.3)"
+    ],
+    "studentTasks": [
+      "Learn components of effective feedback",
+      "Practice giving specific, actionable, kind feedback",
+      "Practice receiving feedback without defensiveness",
+      "Use feedback to improve work and performance",
+      "Reflect on feedback experiences and growth"
+    ],
+    "supports": [
+      "Effective feedback components guide (UDL 3.3)",
+      "Feedback sentence stems (UDL 5.3)",
+      "Receiving feedback strategies (UDL 6.4)",
+      "Practice exchange protocol (UDL 8.3)",
+      "Reflection prompts (UDL 5.3)"
+    ],
+    "fadePlan": "Phase 1: Teacher models and guides structured exchanges → Phase 2: Peer feedback with coaching → Phase 3: Independent feedback exchanges → Phase 4: Natural feedback culture",
+    "whenNotToUse": "When feedback might be harmful without appropriate support or when relationship isn't established.",
+    "formativeChecks": [
+      "- Feedback quality using rubric",
+      "- Receiving behavior observation",
+      "- Feedback use for improvement",
+      "- Relationship quality in feedback exchanges"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.1",
+      "UDL 6.4",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "relationship-skills",
+    "representationTags": [
+      "rtag.pedagogy.collaborative_dialogue",
+      "rtag.pedagogy.student_voice",
+      "rtag.language.inclusive_language"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge",
+      "co_design_with_community"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "fa_wiliam_2011_embedded_FA",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "sel.goal_setting_ladder",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Goal-Setting Ladder",
+    "type": "social_collaborative",
+    "problemType": "Students set vague goals without actionable steps.",
+    "targetMisconception": "Misconception that motivation alone achieves outcomes.",
+    "teacherMoves": [
+      "Model turning a vague goal into laddered sub-steps (UDL 6.2)",
+      "Use class exemplar to show progress monitoring (HLP Explicit Instruction)",
+      "Provide structured feedback on feasibility"
+    ],
+    "studentTasks": [
+      "Create personal goal ladder with 3-4 sub-steps",
+      "Monitor progress weekly",
+      "Revise goals based on reflection data"
+    ],
+    "supports": [
+      "Goal-ladder template (UDL 6.2)",
+      "Progress tracker (UDL 5.3)",
+      "Peer feedback sheet (HLP Feedback)"
+    ],
+    "fadePlan": "Begin with teacher-provided goal examples; shift to co-created goals; fade to independent self-monitoring.",
+    "whenNotToUse": "Avoid when deadlines are externally fixed and no autonomy exists.; \"Progress-tracker review",
+    "formativeChecks": [
+      "short reflection on obstacles."
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 6.2",
+      "HLP Feedback"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.pedagogy.student_voice",
+      "rtag.pedagogy.project_based_relevance"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "HLP-CEC",
+      "FORMATIVE-IES"
+    ],
+    "lastUpdated": "2025-11-02"
+  },
+  {
+    "id": "sel.healthy_coping_repertoire",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Healthy Coping Strategy Repertoire",
+    "type": "cognitive",
+    "problemType": "Students use unhealthy coping or lack coping strategies entirely",
+    "targetMisconception": "Belief that coping just happens naturally without intentional strategy development",
+    "teacherMoves": [
+      "Distinguish healthy from unhealthy coping (HLP Explicit Instruction)",
+      "Introduce variety of healthy coping approaches (UDL 6.4)",
+      "Help students identify what works for them (UDL 7.1)",
+      "Practice before crisis moments (UDL 8.3)"
+    ],
+    "studentTasks": [
+      "Learn difference between healthy and unhealthy coping",
+      "Explore variety of healthy coping strategies",
+      "Identify personal go-to healthy coping strategies",
+      "Practice coping in low-stakes situations",
+      "Build personalized coping plan for challenging times"
+    ],
+    "supports": [
+      "Healthy vs unhealthy coping comparison (UDL 3.3)",
+      "Coping strategy cards by type (UDL 6.4)",
+      "Personal coping preference exploration (UDL 6.4)",
+      "Practice situation log (UDL 6.4)",
+      "Personal coping plan template (UDL 6.2)"
+    ],
+    "fadePlan": "Phase 1: Teacher introduces and models strategies → Phase 2: Guided exploration and practice → Phase 3: Independent coping plan development → Phase 4: Automatic healthy coping habits",
+    "whenNotToUse": "When professional mental health support is needed for serious concerns.",
+    "formativeChecks": [
+      "- Healthy vs unhealthy coping distinction accuracy",
+      "- Strategy repertoire breadth",
+      "- Personal plan quality",
+      "- Strategy use in real situations"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 6.2",
+      "UDL 6.4",
+      "UDL 7.1",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.identity.neurodiversity",
+      "rtag.identity.disability_inclusion",
+      "rtag.pedagogy.student_voice"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "udl_cast_2024_guidelines",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "sel.help_seeking_navigation",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Help-Seeking Navigation and Advocacy",
+    "type": "social_collaborative",
+    "problemType": "Students struggle to identify when and how to seek appropriate help",
+    "targetMisconception": "Belief that needing help is weakness rather than wisdom",
+    "teacherMoves": [
+      "Normalize help-seeking as strength and skill (UDL 7.3)",
+      "Teach how to identify need for help (HLP Explicit Instruction)",
+      "Map available help resources (UDL 3.3)",
+      "Practice help-seeking in safe situations (UDL 8.3)"
+    ],
+    "studentTasks": [
+      "Recognize signs that help is needed",
+      "Identify appropriate help resources for different needs",
+      "Practice asking for help effectively",
+      "Follow through on help received",
+      "Reflect on help-seeking experience and adjust approach"
+    ],
+    "supports": [
+      "When-to-seek-help guide (UDL 3.3)",
+      "Resource map for school and community (UDL 3.3)",
+      "Help-seeking communication stems (UDL 5.3)",
+      "Practice scenarios (UDL 8.3)",
+      "Reflection template (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher guides resource mapping and models asking → Phase 2: Supported help-seeking practice → Phase 3: Independent help-seeking with check-ins → Phase 4: Natural help-seeking habits",
+    "whenNotToUse": "Never - help-seeking should always be supported. Adjust approach based on situation.",
+    "formativeChecks": [
+      "- Resource knowledge accuracy",
+      "- Help-seeking communication quality",
+      "- Follow-through on help received",
+      "- Reflection on experience"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.4",
+      "UDL 7.3",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.pedagogy.student_voice",
+      "rtag.identity.disability_inclusion",
+      "rtag.language.plain_language_access"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge",
+      "co_design_with_community"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "udl_cast_2024_guidelines"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "sel.identity_timeline",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Identity Timeline Reflection",
+    "type": "linguistic",
+    "problemType": "Students find it hard to see identity as evolving.",
+    "targetMisconception": "Belief that identity is static and defined by labels.",
+    "teacherMoves": [
+      "Share teacher example of personal identity shifts (UDL 7.2)",
+      "Model timeline creation using milestones",
+      "Facilitate safe-space discussion protocols (HLP Building Trusting Relationships)"
+    ],
+    "studentTasks": [
+      "Create timeline of personal identity changes",
+      "Annotate moments of growth or conflict",
+      "Present reflections orally or visually"
+    ],
+    "supports": [
+      "Identity timeline template (UDL 7.2)",
+      "Sentence stems for reflection (UDL 6.2)",
+      "Class norms chart (HLP Building Relationships)"
+    ],
+    "fadePlan": "Begin with teacher-modeled example; scaffold with sentence stems; gradually move to independent narrative creation.",
+    "whenNotToUse": "Avoid if students express discomfort with sharing personal information; use anonymous version instead.",
+    "formativeChecks": [
+      "Observation of timeline annotations",
+      "reflective exit ticket on learning about self."
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 7.2",
+      "HLP Building Relationships"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.language.home_language",
+      "rtag.identity.lgbtqia_inclusion"
+    ],
+    "cspTags": [
+      "sustain_language",
+      "co_design_with_community"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "HLP-CEC"
+    ],
+    "lastUpdated": "2025-11-02"
+  },
+  {
+    "id": "sel.impulse_control_development",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Impulse Control Strategy Development",
+    "type": "cognitive",
+    "problemType": "Students act impulsively without pausing to consider consequences",
+    "targetMisconception": "Belief that impulsivity is a fixed personality trait rather than a skill to develop",
+    "teacherMoves": [
+      "Normalize impulse control as developmental skill (UDL 7.3)",
+      "Teach pause-think-act sequence (HLP Explicit Instruction)",
+      "Practice with progressively challenging situations (UDL 8.3)",
+      "Connect impulse control to valued outcomes (UDL 7.2)"
+    ],
+    "studentTasks": [
+      "Learn pause-think-act framework",
+      "Identify personal impulse patterns and triggers",
+      "Practice pausing before acting in structured situations",
+      "Use thinking strategies during the pause",
+      "Reflect on impulse control growth"
+    ],
+    "supports": [
+      "Pause-think-act visual reminder (UDL 3.3)",
+      "Impulse pattern identification worksheet (UDL 6.4)",
+      "Practice situation cards (UDL 8.3)",
+      "Thinking strategy options (UDL 6.2)",
+      "Growth reflection journal (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Explicit teaching with guided practice → Phase 2: Cued practice in real situations → Phase 3: Independent practice with self-monitoring → Phase 4: Automatic pause-think-act habit",
+    "whenNotToUse": "When immediate action is genuinely required for safety.",
+    "formativeChecks": [
+      "- Pause implementation frequency",
+      "- Thinking strategy use quality",
+      "- Outcome improvement with impulse control",
+      "- Self-report on control improvement"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 6.2",
+      "UDL 6.4",
+      "UDL 7.2",
+      "UDL 7.3",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.identity.neurodiversity",
+      "rtag.identity.disability_inclusion",
+      "rtag.pedagogy.student_voice"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "udl_cast_2024_guidelines"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "sel.information_evaluation_decisions",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Information Evaluation for Decision-Making",
+    "type": "cognitive",
+    "problemType": "Students don't critically evaluate information before deciding",
+    "targetMisconception": "Belief that information quality doesn't need to be assessed",
+    "teacherMoves": [
+      "Teach information evaluation criteria (HLP Explicit Instruction)",
+      "Practice evaluating sources for decisions (UDL 8.3)",
+      "Model evaluation process with think-aloud (UDL 6.1)",
+      "Connect to real decisions requiring information (UDL 7.2)"
+    ],
+    "studentTasks": [
+      "Learn information evaluation criteria",
+      "Practice evaluating sources for reliability and relevance",
+      "Identify bias and missing information",
+      "Apply evaluation to real decision-making",
+      "Reflect on evaluation accuracy and growth"
+    ],
+    "supports": [
+      "Information evaluation criteria guide (UDL 3.3)",
+      "Source evaluation checklist (UDL 6.4)",
+      "Bias identification prompts (UDL 5.3)",
+      "Real decision application guide (UDL 7.2)",
+      "Accuracy reflection log (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher models evaluation process → Phase 2: Guided practice with feedback → Phase 3: Independent evaluation → Phase 4: Automatic critical evaluation habit",
+    "whenNotToUse": "When trusted sources are already vetted and provided.",
+    "formativeChecks": [
+      "- Evaluation criteria application",
+      "- Bias and gap identification",
+      "- Real decision information quality",
+      "- Self-report on evaluation habits"
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.1",
+      "UDL 6.4",
+      "UDL 7.2",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "responsible-decision-making",
+    "representationTags": [
+      "rtag.media.accessible_media",
+      "rtag.language.plain_language_access",
+      "rtag.context.global_voices"
+    ],
+    "cspTags": [
+      "criticality",
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "udl_cast_2024_guidelines"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "sel.leadership_circle",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Leadership Circle Reflections",
+    "type": "linguistic",
+    "problemType": "Students view leadership as positional,\" not relational.",
+    "targetMisconception": "Belief that only certain personalities can lead.",
+    "teacherMoves": [
+      "Facilitate circle format highlighting shared leadership (UDL 5.1)",
+      "Model inclusive facilitation language (HLP Building Relationships)",
+      "Provide sentence stems for reflective dialogue"
+    ],
+    "studentTasks": [
+      "Participate in rotating facilitator role",
+      "Reflect on inclusive leadership behaviors",
+      "Give peer feedback on facilitation"
+    ],
+    "supports": [
+      "Leadership-circle protocol (UDL 5.1)",
+      "Facilitator checklist (HLP Building Relationships)",
+      "Feedback stems (UDL 6.4)"
+    ],
+    "fadePlan": "Start with teacher-led circle; mid-phase shared facilitation; fade to student-facilitated reflection circles.",
+    "whenNotToUse": "Avoid when class lacks psychological safety or clear group norms.; \"Observation rubric",
+    "formativeChecks": [
+      "peer feedback summaries."
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 5.1",
+      "HLP Building Relationships"
+    ],
+    "selStrand": "relationship-skills",
+    "representationTags": [
+      "rtag.context.global_voices",
+      "rtag.pedagogy.student_voice"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "HLP-CEC"
+    ],
+    "lastUpdated": "2025-11-02"
+  },
+  {
+    "id": "sel.learning_style_preferences",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Learning Style and Preference Self-Discovery",
+    "type": "metacognitive",
+    "problemType": "Students don't know how they learn best and can't advocate for their needs",
+    "targetMisconception": "Belief that there's one right way to learn rather than individual variation",
+    "teacherMoves": [
+      "Introduce learning variability as natural and valuable (UDL 7.3)",
+      "Provide multiple learning experiences to test preferences (UDL 7.1)",
+      "Model self-advocacy for learning needs (HLP Explicit Instruction)",
+      "Connect preferences to strategy selection (UDL 6.2)"
+    ],
+    "studentTasks": [
+      "Explore different learning modalities and approaches",
+      "Identify personal preferences through structured experiences",
+      "Test preferences in real learning situations",
+      "Document what works best in different contexts",
+      "Advocate for learning needs with teachers and others"
+    ],
+    "supports": [
+      "Learning preferences exploration guide (UDL 3.3)",
+      "Preference testing activities (UDL 7.1)",
+      "Context-preference tracking log (UDL 6.4)",
+      "Self-advocacy language stems (UDL 5.3)",
+      "Teacher communication template (UDL 5.3)"
+    ],
+    "fadePlan": "Phase 1: Teacher provides varied experiences for comparison → Phase 2: Student-led preference exploration → Phase 3: Independent preference application → Phase 4: Natural self-advocacy for learning needs",
+    "whenNotToUse": "When specific learning approach is required for assessment or safety.",
+    "formativeChecks": [
+      "- Preference identification accuracy",
+      "- Context-sensitive preference awareness",
+      "- Self-advocacy attempt quality",
+      "- Learning outcome with preferred approaches"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.2",
+      "UDL 6.4",
+      "UDL 7.1",
+      "UDL 7.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.identity.neurodiversity",
+      "rtag.identity.disability_inclusion",
+      "rtag.pedagogy.student_voice"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge",
+      "co_design_with_community"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "udl_cast_2024_guidelines",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "sel.lgbtq_affirming_classroom_culture",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "LGBTQ+ Affirming Classroom Culture Builder",
+    "type": "unknown",
+    "problemType": "LGBTQ+ students may not feel safe or seen in classroom spaces",
+    "targetMisconception": "Belief that neutrality on LGBTQ+ issues is sufficient for inclusion",
+    "teacherMoves": [
+      "Establish explicit inclusion norms (UDL 7.2)",
+      "Use inclusive language consistently (HLP Explicit Instruction)",
+      "Respond to bias incidents promptly"
+    ],
+    "studentTasks": [
+      "Co-create classroom inclusion agreements",
+      "Practice pronoun protocols and corrections",
+      "Reflect on allyship opportunities"
+    ],
+    "supports": [
+      "Inclusion agreement template (UDL 6.3)",
+      "Language guide (UDL 5.3)",
+      "Allyship reflection journal (UDL 6.4)"
+    ],
+    "fadePlan": "Teacher models inclusive practices → Class co-creates norms → Student leadership of inclusion",
+    "whenNotToUse": "Never - all classrooms should be affirming spaces",
+    "formativeChecks": [
+      "Anonymous climate surveys",
+      "Observation of inclusive language use"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 5.3",
+      "UDL 6.3",
+      "UDL 6.4",
+      "UDL 7.2",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "relationship-skills",
+    "representationTags": [
+      "rtag.identity.lgbtqia_inclusion",
+      "rtag.language.inclusive_language",
+      "rtag.identity.intersectional_identities"
+    ],
+    "cspTags": [
+      "co_design_with_community",
+      "sustain_community_knowledge",
+      "criticality"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "sel_jagers_2019_equity"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "sel.lgbtq_identity_affirmation",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "LGBTQ+ Identity Exploration and Affirmation",
+    "type": "unknown",
+    "problemType": "LGBTQ+ students lack safe spaces for identity exploration and affirmation",
+    "targetMisconception": "Belief that LGBTQ+ identity should be private or is a phase",
+    "teacherMoves": [
+      "Create affirming space with explicit inclusion norms (UDL 8.3)",
+      "Provide access to LGBTQ+ role models and resources (UDL 7.3)",
+      "Support identity exploration without pressure (UDL 7.2)",
+      "Build ally culture that protects all students (HLP Cooperative Learning)"
+    ],
+    "studentTasks": [
+      "Explore identity in safe, affirming environment",
+      "Access LGBTQ+ role models and community",
+      "Develop language and understanding for identity",
+      "Build connections with supportive peers and adults",
+      "Advocate for LGBTQ+ inclusion and safety"
+    ],
+    "supports": [
+      "LGBTQ+ affirming language guide (UDL 3.3)",
+      "Role model and resource bank (UDL 7.3)",
+      "Identity exploration prompts (optional) (UDL 5.3)",
+      "Connection-building activities (HLP Cooperative Learning)",
+      "Advocacy skill-building guide (UDL 5.3)"
+    ],
+    "fadePlan": "Phase 1: Teacher establishes affirming environment → Phase 2: Resource access and optional exploration → Phase 3: Community building with support → Phase 4: Student leadership in inclusion",
+    "whenNotToUse": "Never - LGBTQ+ affirmation should be ongoing. Increase intensity and visibility as safety allows.",
+    "formativeChecks": [
+      "- Environment safety perception",
+      "- Resource access and use",
+      "- Connection development",
+      "- Self-reported affirmation"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 7.2",
+      "UDL 7.3",
+      "UDL 8.3",
+      "HLP Cooperative Learning"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.identity.lgbtqia_inclusion",
+      "rtag.identity.intersectional_identities",
+      "rtag.language.inclusive_language"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge",
+      "co_design_with_community",
+      "criticality"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "sel_jagers_2019_equity",
+      "csp_ladsonbillings_1995_theory",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "sel.long_term_planning",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Long-Term Planning & Consequence Mapping",
+    "type": "social_collaborative",
+    "problemType": "Students undervalue long-term consequences of current choices.",
+    "targetMisconception": "Belief that present actions have little future impact.",
+    "teacherMoves": [
+      "Model backward planning using personal example (UDL 6.3)",
+      "Facilitate class brainstorm of ripple effects",
+      "Coach students in mapping consequences visually"
+    ],
+    "studentTasks": [
+      "Identify long-term goal",
+      "Map short-term steps and potential outcomes",
+      "Reflect on how choices align with goals"
+    ],
+    "supports": [
+      "Consequence-mapping template (UDL 6.3)",
+      "Goal-planning chart (HLP Explicit Instruction)",
+      "Peer feedback guide (UDL 5.3)"
+    ],
+    "fadePlan": "Teacher models and guides mapping; mid-phase co-planning; fade to student independent future-mapping.",
+    "whenNotToUse": "Avoid during high-stress decision points (e.g.\",\" disciplinary situations).; \"Review of maps",
+    "formativeChecks": [
+      "reflection log check."
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 6.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "responsible-decision-making",
+    "representationTags": [
+      "rtag.pedagogy.project_based_relevance",
+      "rtag.pedagogy.student_voice"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "HLP-CEC",
+      "FORMATIVE-IES"
+    ],
+    "lastUpdated": "2025-11-02"
+  },
+  {
+    "id": "sel.media_bias_decode",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Decoding Media Bias",
+    "type": "linguistic",
+    "problemType": "Students accept media messages without evaluating source perspective.",
+    "targetMisconception": "Misconception that news or social media are neutral or fact-only.",
+    "teacherMoves": [
+      "Model analyzing tone and framing in a short article (UDL 3.3)",
+      "Provide bias-indicator checklist (HLP Explicit Instruction)",
+      "Facilitate partner comparison of two contrasting sources"
+    ],
+    "studentTasks": [
+      "Apply bias checklist to articles",
+      "Highlight language showing viewpoint",
+      "Discuss how framing affects perception"
+    ],
+    "supports": [
+      "Bias-indicator checklist (HLP Explicit Instruction)",
+      "Source-comparison organizer (UDL 3.3)",
+      "Discussion protocol (UDL 5.3)"
+    ],
+    "fadePlan": "Begin with explicit teacher demonstration; mid-phase guided partner analysis; fade to student-led bias detection.",
+    "whenNotToUse": "Avoid if students lack basic media-literacy foundations.; \"Bias-analysis worksheet review",
+    "formativeChecks": [
+      "group summary on shared themes."
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "social-awareness",
+    "representationTags": [
+      "rtag.context.global_voices",
+      "rtag.language.inclusive_language"
+    ],
+    "cspTags": [
+      "criticality"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "HLP-CEC"
+    ],
+    "lastUpdated": "2025-11-02"
+  },
+  {
+    "id": "sel.microaggression_recognition_response",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Microaggression Recognition and Response",
+    "type": "cognitive",
+    "problemType": "Students don't recognize microaggressions or know how to respond",
+    "targetMisconception": "Belief that microaggressions are too small to matter or address",
+    "teacherMoves": [
+      "Define microaggressions with specific examples (HLP Explicit Instruction)",
+      "Teach impact vs intent distinction (UDL 3.2)",
+      "Provide response options for recipients and witnesses (UDL 6.4)",
+      "Create safe space to process and practice (UDL 8.3)"
+    ],
+    "studentTasks": [
+      "Learn to recognize different types of microaggressions",
+      "Understand cumulative impact of microaggressions",
+      "Develop response repertoire for different situations",
+      "Practice responses in safe settings",
+      "Reflect on role as recipient, witness, or perpetrator"
+    ],
+    "supports": [
+      "Microaggression types and examples guide (UDL 3.3)",
+      "Impact vs intent explainer (UDL 3.2)",
+      "Response options by situation (UDL 6.4)",
+      "Practice scenario cards (UDL 8.3)",
+      "Reflection journal prompts (UDL 5.3)"
+    ],
+    "fadePlan": "Phase 1: Teacher provides foundation with examples → Phase 2: Guided recognition and response practice → Phase 3: Real situation response → Phase 4: Ongoing vigilance and response",
+    "whenNotToUse": "When student is processing acute microaggression impact and needs support first.",
+    "formativeChecks": [
+      "- Recognition accuracy",
+      "- Response selection appropriateness",
+      "- Practice participation",
+      "- Self-reported confidence in responding"
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.2",
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.4",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "social-awareness",
+    "representationTags": [
+      "rtag.identity.intersectional_identities",
+      "rtag.identity.lgbtqia_inclusion",
+      "rtag.identity.disability_inclusion"
+    ],
+    "cspTags": [
+      "criticality",
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "sel_jagers_2019_equity",
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "csp_ladsonbillings_1995_theory"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "sel.mindful_transition",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Mindful Transition Routine",
+    "type": "unknown",
+    "problemType": "Students struggle to refocus attention between tasks or classes.",
+    "targetMisconception": "Belief that attention automatically resets without effort.",
+    "teacherMoves": [
+      "Model brief mindfulness pause before lesson (UDL 7.3)",
+      "Cue students to notice breath and posture (HLP Explicit Instruction)",
+      "Gradually shorten teacher-led guidance over time"
+    ],
+    "studentTasks": [
+      "Participate in guided breathing or grounding",
+      "Reflect on focus before and after routine",
+      "Lead class in peer-guided transition"
+    ],
+    "supports": [
+      "Mindfulness script (UDL 7.3)",
+      "Visual cue cards (UDL 2.1)",
+      "Reflection tracker (HLP Routine)"
+    ],
+    "fadePlan": "First\", teacher leads full script; next,\" students co-lead; eventually routine becomes self-directed micro-pause.",
+    "whenNotToUse": "Avoid if environment is noisy or unsafe for quiet reflection.; \"Teacher observation of focus change",
+    "formativeChecks": [
+      "student self-rating on readiness scale."
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 7.3",
+      "HLP Routine"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.context.global_voices",
+      "rtag.media.multimodal_resources"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 3,
+    "evidenceCitationKeys": [
+      "HLP-CEC"
+    ],
+    "lastUpdated": "2025-11-02"
+  },
+  {
+    "id": "sel.neurodiversity_strengths_mapping",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Neurodiversity Strengths Mapping",
+    "type": "unknown",
+    "problemType": "Neurodivergent students focus on deficits rather than unique strengths",
+    "targetMisconception": "Belief that neurotypical cognition is the only path to success",
+    "teacherMoves": [
+      "Teach neurodiversity-affirming language (UDL 7.3)",
+      "Share diverse successful neurodiverse role models (HLP Explicit Instruction)",
+      "Reframe challenges as differences"
+    ],
+    "studentTasks": [
+      "Identify personal cognitive strengths and preferences",
+      "Map strengths to academic and career applications",
+      "Create personalized success strategies"
+    ],
+    "supports": [
+      "Strengths inventory (UDL 6.4)",
+      "Role model gallery (UDL 7.3)",
+      "Strategy planning template (UDL 6.3)"
+    ],
+    "fadePlan": "Teacher introduces framework → Individual exploration → Peer strengths sharing",
+    "whenNotToUse": "When individual assessment requires standardized approaches",
+    "formativeChecks": [
+      "Strengths portfolio entries",
+      "Strategy implementation tracking"
+    ],
+    "bloomLevel": "evaluate",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 6.3",
+      "UDL 6.4",
+      "UDL 7.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.identity.neurodiversity",
+      "rtag.identity.disability_inclusion",
+      "rtag.pedagogy.student_voice"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge",
+      "co_design_with_community"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "udl_cast_2024_guidelines"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "sel.organizational_systems_personal",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Personal Organizational System Development",
+    "type": "metacognitive",
+    "problemType": "Students struggle with organization leading to missed deadlines and lost work",
+    "targetMisconception": "Belief that organization is a personality trait rather than a skill system",
+    "teacherMoves": [
+      "Introduce organization as system of habits and tools (HLP Explicit Instruction)",
+      "Show variety of organizational approaches (UDL 7.1)",
+      "Help students design systems that match their styles (UDL 7.1)",
+      "Build in regular system review and adjustment (UDL 6.4)"
+    ],
+    "studentTasks": [
+      "Assess current organizational challenges",
+      "Explore different organizational systems and tools",
+      "Design personal system matching style and needs",
+      "Implement system with accountability check-ins",
+      "Evaluate and adjust system based on results"
+    ],
+    "supports": [
+      "Organizational challenge assessment (UDL 6.4)",
+      "System options guide with examples (UDL 3.3)",
+      "Personal system design template (UDL 6.2)",
+      "Implementation checklist (UDL 6.4)",
+      "Adjustment protocol (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher provides system options with guidance → Phase 2: Student designs system with support → Phase 3: Independent implementation with check-ins → Phase 4: Self-maintaining organizational habits",
+    "whenNotToUse": "When crisis requires immediate task completion rather than system building.",
+    "formativeChecks": [
+      "- System design quality and personalization",
+      "- Implementation consistency",
+      "- Outcome improvements (deadlines, found work)",
+      "- Self-adjustment frequency and quality"
+    ],
+    "bloomLevel": "create",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 6.2",
+      "UDL 6.4",
+      "UDL 7.1",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.identity.neurodiversity",
+      "rtag.identity.disability_inclusion",
+      "rtag.pedagogy.student_voice"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge",
+      "co_design_with_community"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "udl_cast_2024_guidelines",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "sel.peer_mentorship_cycle",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Peer Mentorship Cycle",
+    "type": "social_collaborative",
+    "problemType": "Students lack confidence supporting peers or sharing guidance.",
+    "targetMisconception": "Belief that leadership means authority,\" not service.",
+    "teacherMoves": [
+      "Model mentor-mentee dialogue using growth questions (UDL 5.3)",
+      "Provide feedback stems emphasizing empathy (HLP Cooperative Learning)",
+      "Facilitate reflection after sessions"
+    ],
+    "studentTasks": [
+      "Pair with mentee or mentor partner",
+      "Use feedback stems to support growth",
+      "Reflect on listening and communication outcomes"
+    ],
+    "supports": [
+      "Mentor meeting log (UDL 5.3)",
+      "Feedback stems (HLP Cooperative Learning)",
+      "Reflection sheet (UDL 6.4)"
+    ],
+    "fadePlan": "Teacher models structure; co-facilitates pairs; fade to independently managed mentorship meetings.",
+    "whenNotToUse": "Avoid if mentor–mentee dynamic may trigger confidentiality or boundary issues.; \"Review of mentor logs",
+    "formativeChecks": [
+      "reflection summaries."
+    ],
+    "bloomLevel": "evaluate",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 5.3",
+      "HLP Cooperative Learning"
+    ],
+    "selStrand": "relationship-skills",
+    "representationTags": [
+      "rtag.pedagogy.student_voice",
+      "rtag.context.global_voices"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "HLP-CEC",
+      "JIGSAW-ARONSON"
+    ],
+    "lastUpdated": "2025-11-02"
+  },
+  {
+    "id": "sel.peer_support_network_building",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Peer Support Network Building",
+    "type": "social_collaborative",
+    "problemType": "Students lack supportive peer relationships for wellbeing and success",
+    "targetMisconception": "Belief that peer support happens naturally without intentional building",
+    "teacherMoves": [
+      "Teach value of peer support networks (HLP Explicit Instruction)",
+      "Create structured opportunities for connection (HLP Cooperative Learning)",
+      "Model vulnerability in relationship building (UDL 6.1)",
+      "Support maintenance of connections (UDL 6.4)"
+    ],
+    "studentTasks": [
+      "Identify existing peer support resources",
+      "Build new supportive connections",
+      "Contribute to others' support networks",
+      "Maintain peer support relationships",
+      "Reflect on network health and gaps"
+    ],
+    "supports": [
+      "Peer support mapping activity (UDL 3.3)",
+      "Connection-building activities (HLP Cooperative Learning)",
+      "Contribution opportunities guide (UDL 6.2)",
+      "Maintenance practices checklist (UDL 6.4)",
+      "Network reflection journal (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher structures connection activities → Phase 2: Supported relationship building → Phase 3: Independent network maintenance → Phase 4: Natural peer support culture",
+    "whenNotToUse": "When peer connection might be harmful without screening or support.",
+    "formativeChecks": [
+      "- Network map completeness",
+      "- New connection quality",
+      "- Contribution frequency",
+      "- Self-reported support satisfaction"
+    ],
+    "bloomLevel": "create",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 6.1",
+      "UDL 6.2",
+      "UDL 6.4",
+      "HLP Explicit Instruction",
+      "HLP Cooperative Learning"
+    ],
+    "selStrand": "relationship-skills",
+    "representationTags": [
+      "rtag.pedagogy.collaborative_dialogue",
+      "rtag.pedagogy.student_voice",
+      "rtag.identity.intersectional_identities"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge",
+      "co_design_with_community"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "hlp_jenkins_2003_cooperative_learning",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "sel.personal_triggers_identification",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Personal Trigger Identification and Management",
+    "type": "metacognitive",
+    "problemType": "Students react to triggers without understanding what activates strong emotions",
+    "targetMisconception": "Belief that emotional reactions just happen without identifiable causes",
+    "teacherMoves": [
+      "Normalize having triggers while teaching identification (UDL 7.3)",
+      "Model trigger awareness with appropriate self-disclosure (HLP Explicit Instruction)",
+      "Connect triggers to past experiences and current responses (UDL 3.2)",
+      "Teach response strategies for identified triggers (UDL 6.4)"
+    ],
+    "studentTasks": [
+      "Identify personal emotional triggers through reflection",
+      "Recognize physical and emotional signs of being triggered",
+      "Understand the connection between trigger and reaction",
+      "Develop personalized response strategies",
+      "Practice strategies in low-stakes situations"
+    ],
+    "supports": [
+      "Trigger identification worksheet (UDL 3.3)",
+      "Body-emotion connection guide (UDL 3.2)",
+      "Trigger-reaction-strategy template (UDL 6.2)",
+      "Response strategy menu (UDL 6.4)",
+      "Practice situation hierarchy (UDL 8.3)"
+    ],
+    "fadePlan": "Phase 1: Teacher guides trigger identification with examples → Phase 2: Independent trigger identification with support → Phase 3: Strategy development and practice → Phase 4: Automatic trigger recognition and response",
+    "whenNotToUse": "When student is currently triggered. Provide immediate support before analytical work.",
+    "formativeChecks": [
+      "- Trigger identification accuracy and specificity",
+      "- Strategy selection appropriateness",
+      "- Practice attempt frequency",
+      "- Self-report on trigger management improvement"
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.2",
+      "UDL 3.3",
+      "UDL 6.2",
+      "UDL 6.4",
+      "UDL 7.3",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.identity.neurodiversity",
+      "rtag.identity.disability_inclusion",
+      "rtag.pedagogy.student_voice"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "udl_cast_2024_guidelines"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "sel.personal_values_clarification",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Personal Values Clarification Process",
+    "type": "metacognitive",
+    "problemType": "Students act without awareness of underlying values or experience value conflicts",
+    "targetMisconception": "Belief that values are fixed and inherited rather than chosen and developed",
+    "teacherMoves": [
+      "Introduce values exploration as lifelong process (UDL 7.3)",
+      "Use sorting and ranking activities to surface priorities (UDL 5.1)",
+      "Model values reflection with personal examples (HLP Explicit Instruction)",
+      "Support examination of where values come from (UDL 7.2)"
+    ],
+    "studentTasks": [
+      "Explore range of possible values using provided list",
+      "Identify personal top values through sorting and reflection",
+      "Examine sources of values: family culture community",
+      "Identify value conflicts and how to navigate them",
+      "Connect values to daily decisions and actions"
+    ],
+    "supports": [
+      "Values exploration card deck (UDL 5.1)",
+      "Values ranking template (UDL 3.3)",
+      "Values source reflection prompts (UDL 5.3)",
+      "Value conflict navigation guide (UDL 6.2)",
+      "Values-action connection journal (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Guided values exploration with full support → Phase 2: Independent exploration with reflection prompts → Phase 3: Values application to decisions → Phase 4: Ongoing values awareness",
+    "whenNotToUse": "When values exploration might surface trauma without appropriate support available.",
+    "formativeChecks": [
+      "- Values identification depth and consistency",
+      "- Source examination quality",
+      "- Value-action connection accuracy",
+      "- Conflict navigation reflection"
+    ],
+    "bloomLevel": "evaluate",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.1",
+      "UDL 5.3",
+      "UDL 6.2",
+      "UDL 6.4",
+      "UDL 7.2",
+      "UDL 7.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.identity.cultural_authenticity",
+      "rtag.identity.intersectional_identities",
+      "rtag.pedagogy.student_voice"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge",
+      "criticality"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "sel_jagers_2019_equity"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "sel.perspective_swap",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Perspective-Swap Dialogue",
+    "type": "linguistic",
+    "problemType": "Students struggle to see situations from peers‚Äô points of view.",
+    "targetMisconception": "Belief that their own experience is universal.",
+    "teacherMoves": [
+      "Model paraphrasing another viewpoint before responding (UDL 5.1)",
+      "Use contrasting stories to highlight differing perspectives (HLP Discussion)",
+      "Facilitate sentence-stem practice for empathy statements"
+    ],
+    "studentTasks": [
+      "Engage in structured partner dialogues",
+      "Restate partner‚Äôs idea before giving their own",
+      "Write reflection comparing perspectives"
+    ],
+    "supports": [
+      "Empathy-stem cards (UDL 5.1)",
+      "Dialogue protocol sheet (HLP Discussion)",
+      "Reflection prompt (UDL 6.3)"
+    ],
+    "fadePlan": "Teacher models paraphrasing; mid-phase students practice with stems; later they lead dialogues without scripts.",
+    "whenNotToUse": "Avoid during heated conflict situations before emotional regulation is established.; \"Peer-feedback checklist on paraphrasing accuracy",
+    "formativeChecks": [
+      "reflection journal entry."
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 5.1",
+      "HLP Discussion"
+    ],
+    "selStrand": "social-awareness",
+    "representationTags": [
+      "rtag.context.global_voices",
+      "rtag.pedagogy.student_voice"
+    ],
+    "cspTags": [
+      "criticality"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "HLP-CEC"
+    ],
+    "lastUpdated": "2025-11-02"
+  },
+  {
+    "id": "sel.perspective_taking_scenarios",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Perspective-Taking Through Structured Scenarios",
+    "type": "cognitive",
+    "problemType": "Students struggle to understand others' perspectives different from their own",
+    "targetMisconception": "Belief that one's own perspective is the only valid or possible one",
+    "teacherMoves": [
+      "Teach perspective-taking as cognitive skill (HLP Explicit Instruction)",
+      "Use structured scenarios to practice (UDL 8.3)",
+      "Model thinking through another's eyes (UDL 6.1)",
+      "Connect to real relationships and situations (UDL 7.2)"
+    ],
+    "studentTasks": [
+      "Practice identifying what another might think, feel, and need",
+      "Consider multiple perspectives on the same situation",
+      "Identify factors that shape different perspectives",
+      "Apply perspective-taking to real conflicts or decisions",
+      "Reflect on how perspective-taking changed own understanding"
+    ],
+    "supports": [
+      "Perspective-taking question guide (UDL 3.3)",
+      "Scenario cards with multiple perspectives (UDL 8.3)",
+      "Perspective analysis template (UDL 6.2)",
+      "Real situation application protocol (UDL 7.2)",
+      "Reflection prompts (UDL 5.3)"
+    ],
+    "fadePlan": "Phase 1: Teacher models and guides with simple scenarios → Phase 2: More complex scenarios with support → Phase 3: Real situation application → Phase 4: Automatic perspective consideration",
+    "whenNotToUse": "When scenario might re-traumatize students without proper support.",
+    "formativeChecks": [
+      "- Perspective accuracy in scenarios",
+      "- Multiple perspective identification",
+      "- Real situation application quality",
+      "- Self-reported perspective changes"
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.1",
+      "UDL 6.2",
+      "UDL 7.2",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "social-awareness",
+    "representationTags": [
+      "rtag.identity.intersectional_identities",
+      "rtag.context.global_voices",
+      "rtag.pedagogy.student_voice"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge",
+      "criticality"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "udl_cast_2024_guidelines"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "sel.privilege_positionality_reflection",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Privilege and Positionality Reflection",
+    "type": "metacognitive",
+    "problemType": "Students don't examine their own social position and its effects",
+    "targetMisconception": "Belief that acknowledging privilege negates personal effort or worth",
+    "teacherMoves": [
+      "Introduce privilege as systemic advantage not personal failing (HLP Explicit Instruction)",
+      "Use self-reflection with compassion not shame (UDL 7.3)",
+      "Connect privilege awareness to responsibility (UDL 7.2)",
+      "Model ongoing reflection as practice (UDL 6.1)"
+    ],
+    "studentTasks": [
+      "Learn about different dimensions of privilege",
+      "Reflect on own positionality across dimensions",
+      "Examine how privilege shapes experiences and opportunities",
+      "Consider responsibilities that come with awareness",
+      "Develop ongoing reflection practice"
+    ],
+    "supports": [
+      "Privilege dimensions guide (UDL 3.3)",
+      "Positionality reflection worksheet (UDL 6.4)",
+      "Experience comparison prompts (UDL 5.3)",
+      "Responsibility exploration guide (UDL 6.2)",
+      "Ongoing practice log (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher introduces with care and models reflection → Phase 2: Guided individual reflection → Phase 3: Supported peer dialogue → Phase 4: Ongoing self-examination practice",
+    "whenNotToUse": "When privilege discussion might harm students currently experiencing marginalization.",
+    "formativeChecks": [
+      "- Reflection depth and honesty",
+      "- Connection to responsibility",
+      "- Ongoing practice commitment",
+      "- Behavioral change indicators"
+    ],
+    "bloomLevel": "evaluate",
+    "dokLevel": 4,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.1",
+      "UDL 6.2",
+      "UDL 6.4",
+      "UDL 7.2",
+      "UDL 7.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "social-awareness",
+    "representationTags": [
+      "rtag.identity.intersectional_identities",
+      "rtag.context.global_voices",
+      "rtag.identity.lgbtqia_inclusion"
+    ],
+    "cspTags": [
+      "criticality",
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "sel_jagers_2019_equity",
+      "csp_ladsonbillings_1995_theory",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "sel.problem_solving_loop",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Problem-Solving Loop",
+    "type": "social_collaborative",
+    "problemType": "Students rush to solutions without analyzing causes.",
+    "targetMisconception": "Belief that first idea is best idea.",
+    "teacherMoves": [
+      "Model 4-step problem-solving loop (define, brainstorm, test,\" reflect) (HLP Explicit Instruction)",
+      "Use visual anchor chart",
+      "Scaffold group practice on simple problems"
+    ],
+    "studentTasks": [
+      "Identify a classroom or community problem",
+      "Apply 4-step loop collaboratively",
+      "Present reflection on process and outcome"
+    ],
+    "supports": [
+      "Problem-solving loop chart (UDL 3.3)",
+      "Brainstorm template (HLP Cooperative Learning)",
+      "Reflection guide (UDL 6.4)"
+    ],
+    "fadePlan": "Begin with teacher-modeled loop; mid-phase guided group tasks; fade to independent or peer-led loops.",
+    "whenNotToUse": "Avoid when issue requires professional intervention beyond classroom scope.; \"Teacher observation",
+    "formativeChecks": [
+      "group presentation rubric."
+    ],
+    "bloomLevel": "create",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "HLP Cooperative Learning"
+    ],
+    "selStrand": "responsible-decision-making",
+    "representationTags": [
+      "rtag.pedagogy.student_voice",
+      "rtag.pedagogy.project_based_relevance"
+    ],
+    "cspTags": [
+      "co_design_with_community"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "HLP-CEC",
+      "WWC-MPS-2012"
+    ],
+    "lastUpdated": "2025-11-02"
+  },
+  {
+    "id": "sel.reflective_portfolio",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Reflective Portfolio of SEL Growth",
+    "type": "linguistic",
+    "problemType": "Students see SEL as isolated lessons, not lifelong habits.",
+    "targetMisconception": "Belief that SEL growth cannot be documented or measured.",
+    "teacherMoves": [
+      "Model organizing reflections and artifacts (UDL 6.4)",
+      "Provide exemplar portfolios (HLP Explicit Instruction)",
+      "Guide students in identifying growth evidence"
+    ],
+    "studentTasks": [
+      "Compile journal entries, artifacts,\" and reflections",
+      "Analyze changes in SEL competencies",
+      "Present summary to peers or guardians"
+    ],
+    "supports": [
+      "Portfolio checklist (UDL 6.4)",
+      "Reflection prompts (UDL 7.2)",
+      "Presentation rubric (HLP Explicit Instruction)"
+    ],
+    "fadePlan": "Teacher scaffolds artifact selection; co-reviews samples; fade to autonomous portfolio creation and self-assessment.",
+    "whenNotToUse": "Avoid when privacy or emotional safety concerns arise regarding reflection artifacts.; \"Portfolio rubric",
+    "formativeChecks": [
+      "self-evaluation checklist."
+    ],
+    "bloomLevel": "evaluate",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 6.4",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.context.global_voices",
+      "rtag.language.inclusive_language"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "HLP-CEC",
+      "FORMATIVE-IES"
+    ],
+    "lastUpdated": "2025-11-02"
+  },
+  {
+    "id": "sel.restorative_conversation_practice",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Restorative Conversation Practice Protocol",
+    "type": "social_collaborative",
+    "problemType": "Students don't know how to repair relationships after harm",
+    "targetMisconception": "Belief that apology is enough or that harm permanently breaks relationships",
+    "teacherMoves": [
+      "Introduce restorative practices philosophy (HLP Explicit Instruction)",
+      "Teach restorative conversation structure (UDL 3.2)",
+      "Practice in low-stakes situations (UDL 8.3)",
+      "Model vulnerability in repair (UDL 6.1)"
+    ],
+    "studentTasks": [
+      "Learn restorative conversation framework",
+      "Identify what needs repair in relationships",
+      "Practice restorative conversations with support",
+      "Apply to real relationship repairs",
+      "Reflect on repair experiences and learning"
+    ],
+    "supports": [
+      "Restorative conversation guide (UDL 3.3)",
+      "Preparation worksheet for conversations (UDL 6.2)",
+      "Conversation stems (UDL 5.3)",
+      "Practice scenarios (UDL 8.3)",
+      "Reflection template (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher facilitates structured practice → Phase 2: Coached real repairs → Phase 3: Independent repair attempts → Phase 4: Natural repair as relationship habit",
+    "whenNotToUse": "When harm is severe enough to require professional mediation or intervention.",
+    "formativeChecks": [
+      "- Conversation structure use",
+      "- Real repair attempt quality",
+      "- Relationship outcome after repair",
+      "- Reflection depth on learning"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.2",
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.1",
+      "UDL 6.2",
+      "UDL 6.4",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "relationship-skills",
+    "representationTags": [
+      "rtag.language.inclusive_language",
+      "rtag.pedagogy.collaborative_dialogue",
+      "rtag.identity.intersectional_identities"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge",
+      "co_design_with_community"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "sel_jagers_2019_equity"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "sel.self_care_planning_practice",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Self-Care Planning and Practice",
+    "type": "metacognitive",
+    "problemType": "Students neglect self-care leading to burnout and reduced wellbeing",
+    "targetMisconception": "Belief that self-care is selfish or only for adults",
+    "teacherMoves": [
+      "Teach self-care as necessary not optional (HLP Explicit Instruction)",
+      "Explore multiple dimensions of self-care: physical, emotional, social, intellectual (UDL 3.2)",
+      "Help students identify current self-care gaps (UDL 6.4)",
+      "Build sustainable self-care routines (UDL 6.4)"
+    ],
+    "studentTasks": [
+      "Explore dimensions of self-care",
+      "Assess current self-care practices and gaps",
+      "Build personalized self-care plan",
+      "Implement and track self-care routines",
+      "Adjust plan based on effectiveness and feasibility"
+    ],
+    "supports": [
+      "Self-care dimensions guide (UDL 3.3)",
+      "Self-care assessment (UDL 6.4)",
+      "Plan template by dimension (UDL 6.2)",
+      "Implementation tracker (UDL 6.4)",
+      "Adjustment protocol (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher guides assessment and planning → Phase 2: Supported plan development → Phase 3: Independent implementation with check-ins → Phase 4: Sustainable self-care habits",
+    "whenNotToUse": "When crisis requires immediate action rather than long-term planning.",
+    "formativeChecks": [
+      "- Plan comprehensiveness across dimensions",
+      "- Implementation consistency",
+      "- Wellbeing outcome changes",
+      "- Plan adjustment quality"
+    ],
+    "bloomLevel": "create",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.2",
+      "UDL 3.3",
+      "UDL 6.2",
+      "UDL 6.4",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.pedagogy.student_voice",
+      "rtag.identity.neurodiversity",
+      "rtag.identity.disability_inclusion"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge",
+      "co_design_with_community"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "udl_cast_2024_guidelines",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "sel.self_motivation_cultivation",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Academic Self-Motivation Cultivation",
+    "type": "unknown",
+    "problemType": "Students rely on external motivation and struggle when it's absent",
+    "targetMisconception": "Belief that motivation comes from outside rather than being cultivatable internally",
+    "teacherMoves": [
+      "Teach internal vs external motivation with research (HLP Explicit Instruction)",
+      "Help students identify personal motivators (UDL 7.2)",
+      "Connect tasks to values and goals (UDL 7.2)",
+      "Build intrinsic reward recognition (UDL 8.1)"
+    ],
+    "studentTasks": [
+      "Explore personal motivation sources",
+      "Connect academic tasks to personal values and goals",
+      "Create personalized motivation strategies",
+      "Apply strategies when motivation is low",
+      "Reflect on motivation patterns and growth"
+    ],
+    "supports": [
+      "Motivation source exploration guide (UDL 3.3)",
+      "Value-task connection template (UDL 6.2)",
+      "Strategy menu for low motivation (UDL 6.4)",
+      "Application log (UDL 6.4)",
+      "Pattern reflection journal (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher guides motivation exploration → Phase 2: Supported strategy development → Phase 3: Independent strategy application → Phase 4: Self-sustaining internal motivation",
+    "whenNotToUse": "When external motivation is appropriate (immediate deadlines",
+    "formativeChecks": [
+      "safety concerns).",
+      "- Personal motivator identification depth",
+      "- Value-task connection quality",
+      "- Strategy application frequency",
+      "- Self-reported motivation improvement"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 6.2",
+      "UDL 6.4",
+      "UDL 7.2",
+      "UDL 8.1",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.pedagogy.student_voice",
+      "rtag.identity.neurodiversity",
+      "rtag.context.global_voices"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "udl_cast_2024_guidelines"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "sel.self_talk_reframing",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Reframing Negative Self-Talk",
+    "type": "linguistic",
+    "problemType": "Students engage in harsh or fixed-mindset inner dialogue.",
+    "targetMisconception": "Misbelief that self-talk reflects reality and cannot change.",
+    "teacherMoves": [
+      "Model replacing negative self-talk with growth statements (UDL 9.1)",
+      "Chart common fixed vs. growth statements",
+      "Reinforce reframing during feedback (HLP Explicit Instruction)"
+    ],
+    "studentTasks": [
+      "Identify negative self-talk patterns",
+      "Write and practice alternative affirmations",
+      "Role-play feedback situations applying new language"
+    ],
+    "supports": [
+      "Fixed-to-growth chart (UDL 9.1)",
+      "Affirmation script template (UDL 5.3)",
+      "Peer coaching checklist (HLP Feedback)"
+    ],
+    "fadePlan": "Start with teacher-modeled reframes; move to guided pairs; fade to student-initiated self-corrections.",
+    "whenNotToUse": "Avoid when sarcasm or humor may undercut seriousness of exercise.; \"Checklist completion",
+    "formativeChecks": [
+      "pre/post self-talk survey."
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 9.1",
+      "HLP Feedback"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.pedagogy.student_voice",
+      "rtag.media.multimodal_resources"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "HLP-CEC",
+      "FORMATIVE-IES"
+    ],
+    "lastUpdated": "2025-11-02"
+  },
+  {
+    "id": "sel.service_learning_planning",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Service-Learning Planning",
+    "type": "social_collaborative",
+    "problemType": "Students struggle to connect academic content to community impact.",
+    "targetMisconception": "Belief that service = volunteering only,\" not learning or reflection.",
+    "teacherMoves": [
+      "Model linking curriculum concepts to community needs (UDL 7.3)",
+      "Scaffold project-proposal development (HLP Explicit Instruction)",
+      "Provide reflection prompts connecting service to identity"
+    ],
+    "studentTasks": [
+      "Design service project addressing community issue",
+      "Collaborate on implementation plan",
+      "Present learning reflections to peers/community"
+    ],
+    "supports": [
+      "Project-planning template (UDL 7.3)",
+      "Reflection prompts (UDL 6.4)",
+      "Presentation checklist (HLP Explicit Instruction)"
+    ],
+    "fadePlan": "Teacher leads initial planning workshop; mid-phase guided teams; fade to independent student-led projects.",
+    "whenNotToUse": "Avoid if no authentic community partnership available.; \"Teacher rubric on planning quality",
+    "formativeChecks": [
+      "post-presentation reflection."
+    ],
+    "bloomLevel": "create",
+    "dokLevel": 4,
+    "udlHlpTags": [
+      "UDL 7.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "responsible-decision-making",
+    "representationTags": [
+      "rtag.pedagogy.project_based_relevance",
+      "rtag.context.global_voices"
+    ],
+    "cspTags": [
+      "co_design_with_community"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "HLP-CEC"
+    ],
+    "lastUpdated": "2025-11-02"
+  },
+  {
+    "id": "sel.social_justice_issue_analysis",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Social Justice Issue Analysis Framework",
+    "type": "cognitive",
+    "problemType": "Students lack framework for understanding systemic inequity",
+    "targetMisconception": "Belief that social problems are caused by individual failures rather than systems",
+    "teacherMoves": [
+      "Introduce social justice analysis framework (HLP Explicit Instruction)",
+      "Examine historical and systemic factors (UDL 3.2)",
+      "Connect to students' community experiences (UDL 7.2)",
+      "Move from analysis to action possibilities (UDL 7.2)"
+    ],
+    "studentTasks": [
+      "Learn framework for analyzing social justice issues",
+      "Apply framework to selected issue",
+      "Examine historical roots and systemic factors",
+      "Connect issue to personal and community experience",
+      "Identify action possibilities at different levels"
+    ],
+    "supports": [
+      "Social justice analysis framework (UDL 3.3)",
+      "Historical context research guide (UDL 6.2)",
+      "Community connection prompts (UDL 5.3)",
+      "Action level matrix (UDL 6.2)",
+      "Action planning template (UDL 6.3)"
+    ],
+    "fadePlan": "Phase 1: Teacher guides framework application to selected issue → Phase 2: Supported analysis of student-chosen issue → Phase 3: Independent analysis → Phase 4: Ongoing critical analysis habits",
+    "whenNotToUse": "When issue might cause unprocessed distress without appropriate support.",
+    "formativeChecks": [
+      "- Framework application accuracy",
+      "- Historical understanding depth",
+      "- Personal connection quality",
+      "- Action possibility feasibility"
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 4,
+    "udlHlpTags": [
+      "UDL 3.2",
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.2",
+      "UDL 6.3",
+      "UDL 7.2",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "social-awareness",
+    "representationTags": [
+      "rtag.context.global_voices",
+      "rtag.identity.intersectional_identities",
+      "rtag.pedagogy.project_based_relevance"
+    ],
+    "cspTags": [
+      "criticality",
+      "sustain_community_knowledge",
+      "co_design_with_community"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "sel_jagers_2019_equity",
+      "csp_ladsonbillings_1995_theory",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "sel.strength_mapping",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Personal Strength Mapping",
+    "type": "social_collaborative",
+    "problemType": "Students have difficulty identifying personal strengths.",
+    "targetMisconception": "Assumption that strengths = academic grades only.",
+    "teacherMoves": [
+      "Model thinking aloud about non-academic strengths (UDL 7.2)",
+      "Provide examples from diverse domains",
+      "Facilitate gallery walk of peer strength charts (HLP Cooperative Learning)"
+    ],
+    "studentTasks": [
+      "Complete personal strength map",
+      "Give peer feedback highlighting unique strengths",
+      "Write reflection connecting strengths to goals"
+    ],
+    "supports": [
+      "Strengths mapping chart (UDL 7.2)",
+      "Peer feedback form (HLP Cooperative Learning)",
+      "Reflection guide (UDL 5.3)"
+    ],
+    "fadePlan": "Initially\", teacher supplies examples and categories; later, students self-generate and compare; finally,\" students update maps independently each term.",
+    "whenNotToUse": "Avoid during performance evaluation contexts where comparison may heighten anxiety.; \"Review of maps and reflection journals",
+    "formativeChecks": [
+      "teacher notes shifts in self-concept language."
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 7.2",
+      "HLP Cooperative Learning"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.pedagogy.student_voice",
+      "rtag.identity.intersectional_identities"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "HLP-CEC",
+      "FORMATIVE-IES"
+    ],
+    "lastUpdated": "2025-11-02"
+  },
+  {
+    "id": "sel.strengths_based_self_assessment",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Strengths-Based Self-Assessment Protocol",
+    "type": "metacognitive",
+    "problemType": "Students focus on deficits rather than building on personal strengths",
+    "targetMisconception": "Belief that improvement comes from fixing weaknesses rather than leveraging strengths",
+    "teacherMoves": [
+      "Explicitly teach strengths-based approach with research evidence (HLP Explicit Instruction)",
+      "Use multiple methods to identify strengths: self, peer, teacher, family (UDL 5.1)",
+      "Connect strengths to growth opportunities (UDL 7.2)",
+      "Model strength-to-application thinking (UDL 6.1)"
+    ],
+    "studentTasks": [
+      "Identify personal strengths using multiple sources",
+      "Validate strengths through evidence and examples",
+      "Explore how strengths can be applied in different contexts",
+      "Set goals that leverage strengths",
+      "Track strengths application and growth"
+    ],
+    "supports": [
+      "Strengths inventory with multiple perspectives (UDL 5.1)",
+      "Strength evidence collection template (UDL 3.3)",
+      "Strengths application brainstorm (UDL 6.2)",
+      "Strengths-based goal setting template (UDL 6.4)",
+      "Application tracking log (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher guides multi-source strength identification → Phase 2: Independent exploration with verification → Phase 3: Strengths application planning → Phase 4: Ongoing strengths-based approach",
+    "whenNotToUse": "When accurate weakness assessment is necessary for safety or specific skill development.",
+    "formativeChecks": [
+      "- Strength identification from multiple sources",
+      "- Evidence quality for claimed strengths",
+      "- Application plan feasibility",
+      "- Tracking follow-through"
+    ],
+    "bloomLevel": "evaluate",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.1",
+      "UDL 6.1",
+      "UDL 6.2",
+      "UDL 6.4",
+      "UDL 7.2",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.pedagogy.student_voice",
+      "rtag.identity.neurodiversity",
+      "rtag.identity.disability_inclusion"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge",
+      "co_design_with_community"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "udl_cast_2024_guidelines"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "sel.stress_cycle_mapping",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Mapping the Stress Cycle",
+    "type": "social_collaborative",
+    "problemType": "Students cannot identify early signs of stress or know how to regulate them.",
+    "targetMisconception": "Belief that stress 'just happens' and cannot be interrupted.",
+    "teacherMoves": [
+      "Model identifying stress triggers using personal example (UDL 3.3)",
+      "Demonstrate physiological regulation strategies (HLP Explicit Instruction)",
+      "Chart stress cycles with class collaboratively (UDL 1.2)"
+    ],
+    "studentTasks": [
+      "Record stress triggers and body cues",
+      "Map stress cycle steps in personal logs",
+      "Pair-share coping strategies that worked"
+    ],
+    "supports": [
+      "Stress-cycle chart (UDL 1.2)",
+      "Body-signal checklist (UDL 6.4)",
+      "Coping-strategy menu (HLP Explicit Instruction)"
+    ],
+    "fadePlan": "Initially teacher models mapping and strategy choice; mid-phase co-creation; later students self-map and self-select regulation tools.",
+    "whenNotToUse": "Avoid right after crisis events when students are emotionally flooded.; \"Observation of logs",
+    "formativeChecks": [
+      "student reflection on changed stress responses."
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 1.2",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.media.multimodal_resources",
+      "rtag.context.global_voices"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "HLP-CEC"
+    ],
+    "lastUpdated": "2025-11-02"
+  },
+  {
+    "id": "sel.stress_management_repertoire",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Stress Management Strategy Repertoire",
+    "type": "cognitive",
+    "problemType": "Students experience stress without effective coping strategies",
+    "targetMisconception": "Belief that stress is inherently harmful rather than manageable",
+    "teacherMoves": [
+      "Teach stress physiology: what happens in the body (HLP Explicit Instruction)",
+      "Introduce variety of stress management approaches (UDL 6.4)",
+      "Help students identify personal stress patterns (UDL 3.2)",
+      "Practice strategies before stress is high (UDL 8.3)"
+    ],
+    "studentTasks": [
+      "Learn what stress is and how it affects the body",
+      "Identify personal stress triggers and patterns",
+      "Build repertoire of stress management strategies",
+      "Match strategies to stress types and situations",
+      "Track stress management effectiveness"
+    ],
+    "supports": [
+      "Stress physiology explainer (UDL 3.3)",
+      "Stress pattern identification worksheet (UDL 6.4)",
+      "Strategy cards organized by type (UDL 6.4)",
+      "Strategy-situation matching guide (UDL 6.2)",
+      "Effectiveness tracking log (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher introduces strategies with practice → Phase 2: Student selects and practices strategies → Phase 3: Independent application to real stress → Phase 4: Natural stress management without prompts",
+    "whenNotToUse": "When stress is acute crisis requiring professional support.",
+    "formativeChecks": [
+      "- Strategy repertoire size",
+      "- Pattern identification accuracy",
+      "- Strategy-situation matching",
+      "- Self-reported stress management improvement"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 3.2",
+      "UDL 3.3",
+      "UDL 6.2",
+      "UDL 6.4",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.identity.neurodiversity",
+      "rtag.identity.disability_inclusion",
+      "rtag.pedagogy.student_voice"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "udl_cast_2024_guidelines",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "sel.student_voice_panel",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Student Voice Panel",
+    "type": "linguistic",
+    "problemType": "Students feel their input has little impact on school decisions.",
+    "targetMisconception": "Belief that adults are the only decision-makers in learning spaces.",
+    "teacherMoves": [
+      "Model constructive advocacy language (UDL 9.1)",
+      "Facilitate mock panels with feedback (HLP Discussion)",
+      "Coach students in data-based presentation of opinions"
+    ],
+    "studentTasks": [
+      "Collect peer perspectives via survey/interview",
+      "Prepare talking points for panel",
+      "Participate in panel and debrief reflection"
+    ],
+    "supports": [
+      "Advocacy sentence stems (UDL 9.1)",
+      "Panel planning sheet (HLP Discussion)",
+      "Debrief reflection form (UDL 6.4)"
+    ],
+    "fadePlan": "Begin with teacher-modeled advocacy examples; co-facilitate panel planning; fade to student-run voice panels.",
+    "whenNotToUse": "Avoid if leadership lacks readiness to respond authentically to student voice.; \"Observation notes",
+    "formativeChecks": [
+      "post-panel reflection logs."
+    ],
+    "bloomLevel": "create",
+    "dokLevel": 4,
+    "udlHlpTags": [
+      "UDL 9.1",
+      "HLP Discussion"
+    ],
+    "selStrand": "relationship-skills",
+    "representationTags": [
+      "rtag.pedagogy.student_voice",
+      "rtag.identity.intersectional_identities"
+    ],
+    "cspTags": [
+      "co_design_with_community",
+      "criticality"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "HLP-CEC"
+    ],
+    "lastUpdated": "2025-11-02"
+  },
+  {
+    "id": "sel.time_management_matrix",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Time-Management Matrix",
+    "type": "linguistic",
+    "problemType": "Students misprioritize tasks,\" focusing on urgency over importance.",
+    "targetMisconception": "Misconception that busy = productive.",
+    "teacherMoves": [
+      "Teach Eisenhower-style matrix using class examples (UDL 3.3)",
+      "Model prioritization of academic vs. personal goals",
+      "Guide students in adjusting schedules (HLP Explicit Instruction)"
+    ],
+    "studentTasks": [
+      "Categorize tasks into urgent/important quadrants",
+      "Reflect on time allocation weekly",
+      "Adjust plans based on reflection"
+    ],
+    "supports": [
+      "Time-management matrix graphic (UDL 3.3)",
+      "Planner template (UDL 6.3)",
+      "Peer-review checklist (HLP Cooperative Learning)"
+    ],
+    "fadePlan": "Teacher guides classification at first; co-sorting with peers mid-unit; fade to student self-prioritization.",
+    "whenNotToUse": "Avoid when all tasks are externally mandated and student choice is minimal.; \"Weekly planner checks",
+    "formativeChecks": [
+      "student conference reflections."
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "HLP Cooperative Learning"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.pedagogy.project_based_relevance",
+      "rtag.language.inclusive_language"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "HLP-CEC"
+    ],
+    "lastUpdated": "2025-11-02"
+  },
+  {
+    "id": "sel.time_management_system",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Time Management System Development",
+    "type": "metacognitive",
+    "problemType": "Students struggle to manage time leading to last-minute work and stress",
+    "targetMisconception": "Belief that time management is intuitive rather than a system to learn",
+    "teacherMoves": [
+      "Teach time as finite resource requiring intentional management (HLP Explicit Instruction)",
+      "Introduce variety of time management tools and approaches (UDL 7.1)",
+      "Help students audit current time use (UDL 6.4)",
+      "Build planning habits with regular reflection (UDL 6.4)"
+    ],
+    "studentTasks": [
+      "Audit current time use patterns",
+      "Identify time management challenges and goals",
+      "Select and implement time management tools",
+      "Plan and schedule with buffer time",
+      "Evaluate and adjust time management approach"
+    ],
+    "supports": [
+      "Time audit template (UDL 6.4)",
+      "Tool options guide (UDL 3.3)",
+      "Planning template with buffer prompts (UDL 6.2)",
+      "Weekly review protocol (UDL 6.4)",
+      "Adjustment tracking log (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher provides tools and guides planning → Phase 2: Student selects tools with coaching → Phase 3: Independent planning with check-ins → Phase 4: Self-maintained time management habits",
+    "whenNotToUse": "When deadlines are past and immediate completion is priority over system building.",
+    "formativeChecks": [
+      "- Planning completion rate",
+      "- Plan-to-reality accuracy",
+      "- Deadline meeting improvement",
+      "- Stress level changes"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 6.2",
+      "UDL 6.4",
+      "UDL 7.1",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.identity.neurodiversity",
+      "rtag.identity.disability_inclusion",
+      "rtag.pedagogy.student_voice"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "udl_cast_2024_guidelines",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "sel.values_exploration",
+    "subject": "sel",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Core Values Exploration",
+    "type": "linguistic",
+    "problemType": "Students struggle to connect behavior to personal values.",
+    "targetMisconception": "Misconception that values are fixed or dictated by adults.",
+    "teacherMoves": [
+      "Model ranking and revising personal values (UDL 9.3)",
+      "Facilitate dialogue linking classroom actions to values (HLP Discussion)",
+      "Use case studies for comparison (UDL 3.1)"
+    ],
+    "studentTasks": [
+      "Rank and define top 5 values",
+      "Analyze short scenarios for value alignment",
+      "Journal about moments they acted against/with values"
+    ],
+    "supports": [
+      "Value-cards deck (UDL 9.3)",
+      "Scenario analysis organizer (HLP Discussion)",
+      "Reflection journal (UDL 6.3)"
+    ],
+    "fadePlan": "Early lessons: explicit modeling of ranking; mid-phase: peer dialogue; final: independent self-audit.",
+    "whenNotToUse": "Avoid when students are in emotional distress that may bias reflection.; \"Quick writes comparing decisions to values",
+    "formativeChecks": [
+      "peer-pair share summary."
+    ],
+    "bloomLevel": "evaluate",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 9.3",
+      "HLP Discussion"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.context.global_voices",
+      "rtag.language.inclusive_language"
+    ],
+    "cspTags": [
+      "criticality"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "HLP-CEC"
+    ],
+    "lastUpdated": "2025-11-02"
+  }
+]

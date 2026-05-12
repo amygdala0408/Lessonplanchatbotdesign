@@ -1,0 +1,3282 @@
+[
+  {
+    "id": "exit_argument_claim_dok1",
+    "subject": "ela",
+    "dokFloor": 1,
+    "topicKeyword": "argument",
+    "prompt": "State the author's central claim in today's argumentative text.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response or completely misses argument",
+      "Identifies topic or supporting detail rather than central claim",
+      "Approximates claim but lacks precision on author's actual position",
+      "Accurately states the author's central claim/thesis"
+    ],
+    "misconceptionFlag": "Students confuse the claim with supporting reasons or identify topic rather than position.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_argument_evidence_dok2",
+    "subject": "ela",
+    "dokFloor": 2,
+    "topicKeyword": "argument",
+    "prompt": "Classify the type of evidence the author uses most frequently and explain why it is or is not effective for their audience.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response or no classification",
+      "Classifies evidence type but no evaluation OR evaluation ignores audience",
+      "Classifies and evaluates but reasoning is incomplete or audience consideration superficial",
+      "Accurately classifies evidence and evaluates effectiveness with clear audience-based reasoning"
+    ],
+    "misconceptionFlag": "Students describe evidence without evaluating effectiveness or ignore audience considerations.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_argument_language_dok3",
+    "subject": "ela",
+    "dokFloor": 3,
+    "topicKeyword": "argument",
+    "prompt": "Analyze how the author's use of language (word choice/tone) strengthens or weakens their argument. Provide specific examples.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response or surface description",
+      "Identifies language features but no argumentative connection",
+      "Connects language to argument but analysis lacks specificity or examples",
+      "Analyzes how specific word choices and tone strengthen or weaken argument with clear examples"
+    ],
+    "misconceptionFlag": "Students describe language features without connecting to argumentative effect or confuse tone with topic.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_argument_logic_dok3",
+    "subject": "ela",
+    "dokFloor": 3,
+    "topicKeyword": "argument",
+    "prompt": "Analyze the logical structure of today's argument. Identify any assumptions the author makes that are necessary for the argument to hold.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response or evaluates based on agreement",
+      "Describes argument but misses logical structure OR identifies irrelevant assumptions",
+      "Identifies some logical elements/assumptions but analysis incomplete",
+      "Clearly maps logical structure and identifies key underlying assumptions with explanation of necessity"
+    ],
+    "misconceptionFlag": "Students evaluate arguments on content agreement rather than logical structure or miss implicit assumptions.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_argument_counterargument_dok4",
+    "subject": "ela",
+    "dokFloor": 4,
+    "topicKeyword": "argument",
+    "prompt": "Construct a counterargument to today's text that addresses its strongest points. Then evaluate whose position is better supported. Write one well-developed paragraph.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response or attacks straw man",
+      "Constructs counterargument but ignores text's strong points OR evaluation unfair",
+      "Addresses strong points but counterargument or evaluation underdeveloped",
+      "Constructs counterargument engaging strongest points then fairly evaluates relative support for both positions"
+    ],
+    "misconceptionFlag": "Students attack weak points rather than strongest OR cannot fairly represent opposing view while maintaining their evaluation.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_argument_audience_dok4",
+    "subject": "ela",
+    "dokFloor": 4,
+    "topicKeyword": "argument",
+    "prompt": "Evaluate whose argument from today's texts would be most persuasive to different audiences (experts vs. general public). What does this reveal about the nature of argumentation?",
+    "successCriteria": [],
+    "rubric03": [
+      "No response or assumes universal persuasiveness",
+      "Considers audiences but evaluation based on preference OR insight absent",
+      "Evaluates for different audiences but insight about argumentation underdeveloped",
+      "Thoughtfully evaluates audience-specific persuasiveness revealing insight about how argumentation functions across contexts"
+    ],
+    "misconceptionFlag": "Students assume single best argument for all audiences or evaluate based on personal preference rather than audience analysis.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_evidence_identification_dok1",
+    "subject": "ela",
+    "dokFloor": 1,
+    "topicKeyword": "evidence",
+    "prompt": "List two pieces of textual evidence the author uses to support their main claim.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response or evidence unrelated to text",
+      "Lists one piece of evidence OR lists details not connected to claim",
+      "Lists two pieces but one is weakly connected to claim",
+      "Lists two relevant pieces of evidence directly supporting the claim"
+    ],
+    "misconceptionFlag": "Students select quotations without considering relevance to the claim or confuse evidence with general information.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_evidence_comparison_dok2",
+    "subject": "ela",
+    "dokFloor": 2,
+    "topicKeyword": "evidence",
+    "prompt": "Compare the strength of two pieces of evidence used in today's argument. Which is more convincing and why?",
+    "successCriteria": [],
+    "rubric03": [
+      "No response or no comparison attempted",
+      "States preference without reasoning OR uses irrelevant criteria",
+      "Compares with some reasoning but criteria unclear or superficial",
+      "Evaluates both pieces using clear criteria (relevance/credibility/specificity) with justified conclusion"
+    ],
+    "misconceptionFlag": "Students evaluate evidence based on length or personal agreement rather than relevance/credibility/sufficiency.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_evidence_types_dok2",
+    "subject": "ela",
+    "dokFloor": 2,
+    "topicKeyword": "evidence",
+    "prompt": "Explain the difference between the author's use of facts versus opinions in today's text and why both matter.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response or cannot distinguish",
+      "Defines terms but cannot identify examples OR identifies examples without explaining significance",
+      "Distinguishes with examples but explanation of why both matter is incomplete",
+      "Clearly distinguishes facts from opinions with examples and explains strategic purpose of each"
+    ],
+    "misconceptionFlag": "Students struggle to distinguish fact from opinion or see only one type as legitimate evidence.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_textual_evidence_dok3",
+    "subject": "ela",
+    "dokFloor": 3,
+    "topicKeyword": "evidence",
+    "prompt": "Choose one claim from today’s reading and support it with two pieces of textual evidence.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=claim/evidence mismatched, 2=some evidence connected, 3=clear claim with well-explained evidence",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may quote without explaining how the evidence supports the claim.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_evidence_evaluation_dok3",
+    "subject": "ela",
+    "dokFloor": 3,
+    "topicKeyword": "evidence",
+    "prompt": "Evaluate whether the evidence in today's argument adequately supports the claim. Identify any gaps or weaknesses in the reasoning.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response or simple agreement/disagreement",
+      "Evaluates without identifying specific gaps OR identifies gaps without explaining why they matter",
+      "Identifies some gaps but evaluation incomplete or reasoning underdeveloped",
+      "Systematically evaluates evidence identifying specific gaps/weaknesses with clear explanation of impact on argument"
+    ],
+    "misconceptionFlag": "Students accept evidence at face value without critical evaluation or identify only obvious flaws.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_evidence_design_dok4",
+    "subject": "ela",
+    "dokFloor": 4,
+    "topicKeyword": "evidence",
+    "prompt": "Design a research question related to today's topic and identify what types of evidence would be needed to answer it credibly. Explain your reasoning.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response or question requires no research",
+      "Designs question but evidence types inappropriate OR reasoning absent",
+      "Designs reasonable question with some evidence types but reasoning incomplete",
+      "Designs genuine research question identifying multiple appropriate evidence types with clear reasoning about credibility"
+    ],
+    "misconceptionFlag": "Students design questions answerable by opinion or single source rather than genuine inquiry requiring multiple evidence types.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_evidence_limitations_dok4",
+    "subject": "ela",
+    "dokFloor": 4,
+    "topicKeyword": "evidence",
+    "prompt": "Evaluate the limitations of the evidence available on today's topic. What would stronger evidence look like and why is it difficult to obtain?",
+    "successCriteria": [],
+    "rubric03": [
+      "No response or accepts evidence uncritically",
+      "Identifies limitations but ideal evidence vague OR difficulty unexamined",
+      "Identifies limitations and ideal evidence but analysis of difficulty superficial",
+      "Critically evaluates limitations proposing specific stronger evidence with clear analysis of why it's difficult to obtain"
+    ],
+    "misconceptionFlag": "Students assume available evidence is sufficient or cannot articulate what makes evidence strong in this context.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_inference_basic_dok1",
+    "subject": "ela",
+    "dokFloor": 1,
+    "topicKeyword": "inference",
+    "prompt": "What can you infer about the character's motivation based on their actions in the scene we analyzed?",
+    "successCriteria": [],
+    "rubric03": [
+      "No response or unrelated statement",
+      "Restates explicit information without inference",
+      "Makes inference but without clear connection to textual details",
+      "States logical inference clearly connected to specific character actions"
+    ],
+    "misconceptionFlag": "Students restate explicit text information rather than drawing conclusions from implicit details.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_inference_process_dok2",
+    "subject": "ela",
+    "dokFloor": 2,
+    "topicKeyword": "inference",
+    "prompt": "Explain the reasoning process you used to make your inference about the text. What clues led to your conclusion?",
+    "successCriteria": [],
+    "rubric03": [
+      "No response or cannot explain process",
+      "States inference without explaining reasoning OR cites only personal opinion",
+      "Explains some reasoning but missing key textual clues or logical steps",
+      "Clearly traces inference from specific textual clues through logical reasoning to conclusion"
+    ],
+    "misconceptionFlag": "Students cannot articulate their thinking process or rely on background knowledge rather than textual evidence.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_inference_perspective_dok3",
+    "subject": "ela",
+    "dokFloor": 3,
+    "topicKeyword": "inference",
+    "prompt": "Draw a conclusion about the author's perspective on the issue based on implicit cues in the text. Justify your conclusion with two pieces of evidence.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response or relies entirely on explicit statements",
+      "States conclusion without textual justification OR misreads implicit cues",
+      "Draws reasonable conclusion with some evidence but implicit cues not fully explored",
+      "Draws nuanced conclusion based on implicit cues with two well-reasoned pieces of evidence"
+    ],
+    "misconceptionFlag": "Students rely on explicit statements rather than implicit cues or project their own views onto the author.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_inference_ambiguity_dok3",
+    "subject": "ela",
+    "dokFloor": 3,
+    "topicKeyword": "inference",
+    "prompt": "Analyze what the text leaves unsaid or ambiguous. Why might the author have made this choice? Support with evidence.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response or claims text is complete/clear",
+      "Identifies ambiguity but no analysis of purpose OR misreads ambiguity",
+      "Identifies ambiguity with some analysis but purpose or evidence underdeveloped",
+      "Analyzes specific ambiguity explaining authorial purpose with supporting evidence"
+    ],
+    "misconceptionFlag": "Students expect texts to be fully explicit or interpret ambiguity as flaw rather than craft choice.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_inference_perspective_shift_dok4",
+    "subject": "ela",
+    "dokFloor": 4,
+    "topicKeyword": "inference",
+    "prompt": "Evaluate how your understanding of today's text would change if it were written from a different perspective or in a different time period. What insights emerge from this thought experiment?",
+    "successCriteria": [],
+    "rubric03": [
+      "No response or surface changes only",
+      "Proposes change but analysis of impact superficial OR anachronistic",
+      "Considers perspective shift with some insight but analysis incomplete",
+      "Thoughtfully evaluates how perspective/period shift would change meaning revealing specific insights about text and context"
+    ],
+    "misconceptionFlag": "Students change surface details rather than examining how perspective shapes meaning or make anachronistic assumptions.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_rhetoric_appeals_dok1",
+    "subject": "ela",
+    "dokFloor": 1,
+    "topicKeyword": "rhetoric",
+    "prompt": "Name the rhetorical appeal (ethos/pathos/logos) the author primarily uses in the passage we examined.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response or incorrect term",
+      "Names an appeal but misidentifies which one dominates",
+      "Correctly names the appeal but explanation if given is inaccurate",
+      "Correctly identifies the dominant rhetorical appeal"
+    ],
+    "misconceptionFlag": "Students confuse the three appeals or identify based on surface features rather than function.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_rhetoric_strategies_dok2",
+    "subject": "ela",
+    "dokFloor": 2,
+    "topicKeyword": "rhetoric",
+    "prompt": "Summarize how the author builds their argument in today's text using at least two rhetorical strategies.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response or content summary only",
+      "Names one strategy OR lists strategies without explaining function",
+      "Identifies two strategies with some explanation of function but connection to argument unclear",
+      "Explains how two strategies work together to build the author's argument"
+    ],
+    "misconceptionFlag": "Students list strategies without explaining how they build toward persuasion or confuse strategies with content.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_rhetoric_counterargument_dok3",
+    "subject": "ela",
+    "dokFloor": 3,
+    "topicKeyword": "rhetoric",
+    "prompt": "Analyze how the author anticipates and addresses counterarguments in today's text. Is this strategy effective? Why or why not?",
+    "successCriteria": [],
+    "rubric03": [
+      "No response or does not identify counterargument handling",
+      "Identifies counterargument OR evaluates effectiveness but not both",
+      "Identifies and evaluates but analysis of effectiveness lacks specific reasoning",
+      "Analyzes how author addresses counterarguments and evaluates effectiveness with specific rhetorical reasoning"
+    ],
+    "misconceptionFlag": "Students miss implicit counterargument acknowledgment or evaluate effectiveness based on personal agreement.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_rhetoric_ethos_dok3",
+    "subject": "ela",
+    "dokFloor": 3,
+    "topicKeyword": "rhetoric",
+    "prompt": "Analyze how the author establishes credibility (ethos) in today's text. What specific choices build or undermine trust with the audience?",
+    "successCriteria": [],
+    "rubric03": [
+      "No response or focuses only on author biography",
+      "Identifies some credibility elements but analysis superficial",
+      "Analyzes credibility choices but connection to audience or trust unclear",
+      "Analyzes specific textual choices that build/undermine credibility with clear connection to audience and trust"
+    ],
+    "misconceptionFlag": "Students conflate author credentials with textual ethos-building strategies or ignore audience-specific credibility needs.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_rhetoric_ethics_dok4",
+    "subject": "ela",
+    "dokFloor": 4,
+    "topicKeyword": "rhetoric",
+    "prompt": "Evaluate the ethical implications of the rhetorical strategies used in today's text. When does persuasion cross into manipulation? Apply this to a specific example.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response or sees all rhetoric as equal",
+      "Discusses ethics abstractly without text application OR misidentifies manipulation",
+      "Applies ethical analysis but distinction between persuasion/manipulation unclear or underdeveloped",
+      "Clearly evaluates rhetorical ethics distinguishing persuasion from manipulation with specific well-reasoned text example"
+    ],
+    "misconceptionFlag": "Students see all persuasion as manipulation or fail to distinguish between ethical and manipulative techniques.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_rhetoric_synthesis_dok4",
+    "subject": "ela",
+    "dokFloor": 4,
+    "topicKeyword": "rhetoric",
+    "prompt": "Synthesize the rhetorical strategies from multiple texts we've studied to design your own approach for persuading a skeptical audience on a related topic. Justify your choices.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response or copies single source approach",
+      "Designs approach but not synthesized OR ignores audience skepticism",
+      "Synthesizes with some justification but audience consideration or strategy integration incomplete",
+      "Synthesizes strategies into original approach with clear justification addressing specific audience skepticism"
+    ],
+    "misconceptionFlag": "Students copy single strategy rather than synthesizing or design approach without considering audience skepticism.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_structure_identification_dok1",
+    "subject": "ela",
+    "dokFloor": 1,
+    "topicKeyword": "structure",
+    "prompt": "Identify the organizational structure the author uses in today's passage (chronological/cause-effect/compare-contrast/problem-solution).",
+    "successCriteria": [],
+    "rubric03": [
+      "No response or random guess",
+      "Names a structure but misidentifies the actual pattern used",
+      "Correctly identifies structure but cannot point to any supporting feature",
+      "Correctly identifies structure"
+    ],
+    "misconceptionFlag": "Students guess structure without examining text features or confuse narrative elements with organizational patterns.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_structure_effect_dok2",
+    "subject": "ela",
+    "dokFloor": 2,
+    "topicKeyword": "structure",
+    "prompt": "Explain how the author's structural choice affects the reader's understanding of the central idea.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response or describes structure only",
+      "Names structure and mentions central idea but no connection",
+      "Attempts to explain connection but reasoning is vague or incomplete",
+      "Clearly explains how structural choice shapes/emphasizes/develops reader understanding of central idea"
+    ],
+    "misconceptionFlag": "Students describe structure without connecting to meaning or see form and content as unrelated.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_structure_nonlinear_dok3",
+    "subject": "ela",
+    "dokFloor": 3,
+    "topicKeyword": "structure",
+    "prompt": "Analyze how the author's use of a non-linear structure affects the development of suspense or meaning in today's text.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response or simple description",
+      "Describes non-linear elements but no analysis of effect",
+      "Attempts analysis but connection between structure and suspense/meaning is vague",
+      "Clearly analyzes how specific structural choices create suspense or develop meaning with textual support"
+    ],
+    "misconceptionFlag": "Students describe structure without analyzing effect or conflate chronology with causation in their analysis.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_structure_design_dok4",
+    "subject": "ela",
+    "dokFloor": 4,
+    "topicKeyword": "structure",
+    "prompt": "Design an alternative structural approach for today's text and argue why it would be more or less effective than the author's choice.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response or proposes change without reasoning",
+      "Proposes alternative but argument based on preference not effect",
+      "Proposes alternative with some reasoning but trade-offs or comparison incomplete",
+      "Designs specific alternative structure arguing effectiveness with clear comparison to original and consideration of trade-offs"
+    ],
+    "misconceptionFlag": "Students propose changes without considering trade-offs or evaluate structure based on personal preference rather than rhetorical effect.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_structure_genre_dok4",
+    "subject": "ela",
+    "dokFloor": 4,
+    "topicKeyword": "structure",
+    "prompt": "Evaluate how the formal conventions of the genre shape what the text can and cannot communicate. What would be lost or gained in a different genre?",
+    "successCriteria": [],
+    "rubric03": [
+      "No response or sees genre as irrelevant",
+      "Describes genre features but no analysis of communicative limits",
+      "Analyzes some conventions but lost/gained comparison underdeveloped",
+      "Evaluates how specific conventions enable/constrain meaning with thoughtful genre comparison showing what would change"
+    ],
+    "misconceptionFlag": "Students see genre as arbitrary container rather than meaning-making system or compare genres superficially.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_synthesis_sources_dok1",
+    "subject": "ela",
+    "dokFloor": 1,
+    "topicKeyword": "synthesis",
+    "prompt": "List the two main sources or perspectives we examined today and their key positions.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response or cannot identify sources",
+      "Identifies only one source OR misattributes positions",
+      "Identifies both sources but positions are vague or partially inaccurate",
+      "Correctly identifies both sources and their distinct positions"
+    ],
+    "misconceptionFlag": "Students conflate multiple sources into single position or misattribute ideas to wrong source.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_synthesis_comparison_dok2",
+    "subject": "ela",
+    "dokFloor": 2,
+    "topicKeyword": "synthesis",
+    "prompt": "Summarize where the two sources we read today agree and where they disagree on the issue.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response or summarizes only one source",
+      "Identifies only agreement OR disagreement not both",
+      "Identifies both but areas are vague or mischaracterized",
+      "Clearly identifies specific points of agreement and disagreement between sources"
+    ],
+    "misconceptionFlag": "Students see sources as entirely opposed or entirely aligned rather than identifying nuanced areas of agreement/disagreement.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_synthesis_conclusion_dok3",
+    "subject": "ela",
+    "dokFloor": 3,
+    "topicKeyword": "synthesis",
+    "prompt": "Draw a conclusion about the issue by integrating evidence from both sources we examined. Explain how each source contributes to your conclusion.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response or uses only one source",
+      "References both sources but conclusion favors one without justification",
+      "Integrates sources but contribution of each unclear or conclusion underdeveloped",
+      "Draws clear conclusion explaining how specific evidence from each source contributes to reasoning"
+    ],
+    "misconceptionFlag": "Students favor one source over another without justification or fail to integrate evidence into coherent conclusion.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_synthesis_thesis_dok4",
+    "subject": "ela",
+    "dokFloor": 4,
+    "topicKeyword": "synthesis",
+    "prompt": "Synthesize the sources we've examined to propose an original thesis on the issue that accounts for the complexity revealed by multiple perspectives. Support with evidence from at least two sources.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response or ignores source complexity",
+      "Proposes thesis but oversimplifies OR ignores contradictory evidence",
+      "Proposes thesis acknowledging complexity but integration or support incomplete",
+      "Proposes nuanced original thesis accounting for complexity with well-integrated evidence from multiple sources"
+    ],
+    "misconceptionFlag": "Students oversimplify to resolve tension between sources or propose thesis that ignores contradictory evidence.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_synthesis_methodology_dok4",
+    "subject": "ela",
+    "dokFloor": 4,
+    "topicKeyword": "synthesis",
+    "prompt": "Evaluate how the sources we examined today might each be limited by their perspective or methodology. Design a study that would address these limitations.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response or accepts sources uncritically",
+      "Identifies some limitations but proposed study vague OR introduces obvious new biases",
+      "Identifies limitations with reasonable study design but methodology incomplete",
+      "Critically evaluates perspective/methodology limitations and designs study that specifically addresses them while acknowledging trade-offs"
+    ],
+    "misconceptionFlag": "Students accept source limitations as inevitable rather than designable or propose solutions that introduce new biases.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_theme_identification_dok1",
+    "subject": "ela",
+    "dokFloor": 1,
+    "topicKeyword": "theme",
+    "prompt": "Identify the central theme of today’s text in one clear sentence.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=theme is missing/just topic, 2=theme stated but vague, 3=theme clear and insightful",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students often confuse topic (what it’s about) with theme (the deeper message).",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_theme_conflict_dok2",
+    "subject": "ela",
+    "dokFloor": 2,
+    "topicKeyword": "theme",
+    "prompt": "Explain how the protagonist's central conflict connects to the theme we identified in today's discussion.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response or plot summary only",
+      "Describes conflict OR theme but not connection between them",
+      "Attempts connection but explanation is surface-level or incomplete",
+      "Clearly explains how specific conflict embodies or develops the theme"
+    ],
+    "misconceptionFlag": "Students describe plot events without explaining thematic connection or see conflict and theme as separate elements.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_theme_characters_dok2",
+    "subject": "ela",
+    "dokFloor": 2,
+    "topicKeyword": "theme",
+    "prompt": "Compare how two characters in today's text represent different perspectives on the theme.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response or off-topic",
+      "Describes characters without theme connection OR identifies theme without character analysis",
+      "Connects characters to theme but comparison is incomplete or one character underdeveloped",
+      "Clearly explains how each character represents distinct perspective on theme with specific examples"
+    ],
+    "misconceptionFlag": "Students compare surface character traits rather than thematic significance or describe characters without connecting to theme.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_theme_device_analysis_dok3",
+    "subject": "ela",
+    "dokFloor": 3,
+    "topicKeyword": "theme",
+    "prompt": "Analyze how a specific literary device in today's text develops or complicates the theme. Use two pieces of evidence to support your analysis.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response or surface-level observation",
+      "Identifies device OR theme but not relationship between them",
+      "Attempts analysis with some evidence but connection between device and theme development unclear",
+      "Clearly analyzes how device develops/complicates theme with two well-integrated pieces of evidence"
+    ],
+    "misconceptionFlag": "Students identify device and theme separately without analyzing relationship or provide evidence without explaining connection.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_theme_development_dok3",
+    "subject": "ela",
+    "dokFloor": 3,
+    "topicKeyword": "theme",
+    "prompt": "Analyze how the ending of today's text reinforces/challenges/transforms the theme established earlier. Use evidence from both early and late in the text.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response or discusses only ending",
+      "Describes ending OR earlier theme but not relationship",
+      "Attempts to trace development but connection between early/late text unclear",
+      "Analyzes how ending relates to earlier thematic elements with evidence from multiple points in text"
+    ],
+    "misconceptionFlag": "Students focus only on ending without tracing thematic development or see theme as static throughout.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_theme_synthesis_dok4",
+    "subject": "ela",
+    "dokFloor": 4,
+    "topicKeyword": "theme",
+    "prompt": "Synthesize the thematic messages across multiple texts we've studied this unit. How do they collectively comment on a larger human question? Write one well-developed paragraph.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response or simple plot comparison",
+      "Discusses themes separately without synthesis OR makes vague universal claim",
+      "Attempts synthesis but connection between texts or larger question underdeveloped",
+      "Synthesizes themes across texts into coherent commentary on significant human question with specific textual support"
+    ],
+    "misconceptionFlag": "Students treat themes as isolated rather than in conversation or default to plot comparison rather than thematic synthesis.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_theme_context_dok4",
+    "subject": "ela",
+    "dokFloor": 4,
+    "topicKeyword": "theme",
+    "prompt": "Evaluate how today's text's treatment of its theme reflects or challenges the values of its historical context. What does this reveal about literature's relationship to culture?",
+    "successCriteria": [],
+    "rubric03": [
+      "No response or anachronistic judgment",
+      "Describes historical context OR theme but not relationship",
+      "Connects theme to context but analysis of reflection/challenge or broader insight incomplete",
+      "Evaluates theme-context relationship revealing insight about literature and culture with specific textual support"
+    ],
+    "misconceptionFlag": "Students impose contemporary values anachronistically or describe context without analyzing theme-culture relationship.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_expressions_components_dok1",
+    "subject": "math",
+    "dokFloor": 1,
+    "topicKeyword": "expressions",
+    "prompt": "Identify the terms coefficients and constants in the expression from today. Label each part.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt or major misidentification, 1=identifies one component type correctly, 2=identifies two component types correctly, 3=correctly identifies and labels all terms coefficients and constants",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Confuses terms with factors; misidentifies coefficients of variables with coefficient 1; includes operations as terms",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_expressions_combine_dok1",
+    "subject": "math",
+    "dokFloor": 1,
+    "topicKeyword": "expressions",
+    "prompt": "Write an equivalent expression to today's example by combining like terms. Show which terms you combined.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt or incorrect simplification, 1=partially simplified with errors, 2=correct simplification but work unclear, 3=correctly combines like terms with clear indication of which terms were combined",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Combines unlike terms; adds exponents when combining; confuses coefficient operations",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_expressions_equivalent_dok2",
+    "subject": "math",
+    "dokFloor": 2,
+    "topicKeyword": "expressions",
+    "prompt": "Explain why the two expressions from today are equivalent using properties of operations. Name the property used.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=claims equivalent without justification, 2=justifies but doesn't name properties accurately, 3=clearly explains equivalence citing specific properties (commutative associative distributive) correctly",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Claims expressions are equivalent because they give same value for one input; cannot identify properties",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_expressions_factor_dok2",
+    "subject": "math",
+    "dokFloor": 2,
+    "topicKeyword": "expressions",
+    "prompt": "Factor the expression from today and explain what factoring reveals about the expression's structure.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=incorrect factoring, 2=correct factoring but no structural interpretation, 3=correctly factors AND explains what factored form reveals (common factors zeros or structure)",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Factors incorrectly; doesn't understand factoring as reverse distribution; cannot interpret factored form meaning",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_expressions_error_dok3",
+    "subject": "math",
+    "dokFloor": 3,
+    "topicKeyword": "expressions",
+    "prompt": "Analyze the error in the expression simplification from today. Identify the mistake and show the correct process.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=identifies something wrong but not the actual error, 2=identifies error but correct process incomplete, 3=precisely identifies error AND shows complete correct simplification with proper steps",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Cannot trace multi-step errors; confuses order of operations; accepts incorrect work as valid",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_expressions_form_choice_dok3",
+    "subject": "math",
+    "dokFloor": 3,
+    "topicKeyword": "expressions",
+    "prompt": "Using the expressions from today justify which form (expanded or factored) would be more useful for the given purpose. Explain your reasoning.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=chooses form without reasoning, 2=reasoning present but connection to purpose weak, 3=clearly justifies form choice based on specific mathematical purpose (solving graphing identifying features)",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Believes one form is always better; doesn't connect form choice to mathematical purpose",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_expressions_modeling_dok4",
+    "subject": "math",
+    "dokFloor": 4,
+    "topicKeyword": "expressions",
+    "prompt": "Create an expression that models the scenario from today. Define your variable(s) and justify why your expression accurately represents the situation.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=expression with undefined or inappropriate variables, 2=reasonable expression but justification incomplete, 3=accurate expression with clearly defined variables and thorough justification of each term",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Creates expressions without defined variables; expression doesn't match scenario constraints; ignores units",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_expressions_generalize_dok4",
+    "subject": "math",
+    "dokFloor": 4,
+    "topicKeyword": "expressions",
+    "prompt": "Evaluate whether the algebraic generalization from today holds for all cases. Provide proof or counterexample.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=tests one case and concludes, 2=tests multiple cases but reasoning about all cases weak, 3=either proves algebraically for all cases OR provides valid counterexample with clear explanation of why generalization fails",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Assumes pattern continues; tests insufficient cases; cannot construct counterexamples strategically",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_functions_evaluate_dok1",
+    "subject": "math",
+    "dokFloor": 1,
+    "topicKeyword": "functions",
+    "prompt": "Given f(x) = [expression from today] evaluate f(3). Show your substitution.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt or completely wrong, 1=attempts substitution but calculation error, 2=correct substitution and calculation but notation incomplete, 3=correct substitution shown and correct final answer with proper notation",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Adds 3 to expression instead of substituting; confuses f(3) with 3f(x)",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_functions_domain_range_dok1",
+    "subject": "math",
+    "dokFloor": 1,
+    "topicKeyword": "functions",
+    "prompt": "State the domain and range of the function graphed today. Use interval or inequality notation.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt or both incorrect, 1=one correct, 2=both identified but notation errors, 3=correctly states domain and range with proper notation",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Reverses domain and range; reads vertical extent as domain",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_functions_definition_dok2",
+    "subject": "math",
+    "dokFloor": 2,
+    "topicKeyword": "functions",
+    "prompt": "Explain why the relation from today is or is not a function. Use the definition of function in your explanation.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=correct conclusion but no definitional reasoning, 2=references definition but application incomplete, 3=correctly applies definition (each input has exactly one output) with specific reference to the relation",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Believes all graphs are functions; applies vertical line test incorrectly; confuses one-to-one with function",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_functions_transform_dok2",
+    "subject": "math",
+    "dokFloor": 2,
+    "topicKeyword": "functions",
+    "prompt": "Describe how the transformed function from today differs from the parent function. Identify each transformation in order.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=identifies one transformation correctly, 2=identifies transformations but order or direction errors, 3=correctly identifies all transformations in proper order with accurate directional descriptions",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Confuses horizontal and vertical transformations; reverses direction of horizontal shifts; applies transformations in wrong order",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_functions_behavior_dok3",
+    "subject": "math",
+    "dokFloor": 3,
+    "topicKeyword": "functions",
+    "prompt": "Analyze the function from today's lesson. For what interval(s) is the function increasing? Decreasing? How do you know from the graph or equation?",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=identifies intervals without justification, 2=correct intervals but reasoning conflates value with rate of change, 3=correctly identifies intervals AND explains increasing means output grows as input grows",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Confuses positive values with increasing; reads y-values instead of analyzing slope behavior",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_functions_equivalence_dok3",
+    "subject": "math",
+    "dokFloor": 3,
+    "topicKeyword": "functions",
+    "prompt": "Using the two function representations from today justify whether they represent the same function. What evidence confirms or refutes equivalence?",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=checks single point only, 2=multiple checks but systematic proof incomplete, 3=provides systematic evidence (multiple points algebraic manipulation or transformation analysis) with clear conclusion",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Checks only one point; assumes same shape means same function; doesn't verify algebraic equivalence",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_linear_model_design_dok4",
+    "subject": "math",
+    "dokFloor": 4,
+    "topicKeyword": "functions",
+    "prompt": "Design a real-world situation that can be modeled by a linear function, and write the equation.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=scenario unrelated/incorrect, 2=partially matches linear, 3=scenario realistic with correct equation",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may confuse linear with exponential growth.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_functions_piecewise_design_dok4",
+    "subject": "math",
+    "dokFloor": 4,
+    "topicKeyword": "functions",
+    "prompt": "Design a piecewise function that models the scenario from today. Justify each piece including domain restrictions and why the function changes behavior.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=creates pieces but domains incorrect or pieces disconnected, 2=reasonable piecewise function but justification incomplete, 3=mathematically correct piecewise function with full justification for each piece and boundary conditions",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Creates disconnected pieces; ignores boundary conditions; doesn't justify why behavior changes at breakpoints",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_geometry_properties_dok1",
+    "subject": "math",
+    "dokFloor": 1,
+    "topicKeyword": "geometry",
+    "prompt": "List the properties of the quadrilateral type we studied today. Name at least three properties.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt or no correct properties, 1=one correct specific property, 2=two correct properties, 3=three or more correct properties specific to that quadrilateral type",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Confuses properties of different quadrilateral types; states properties that apply to all quadrilaterals as specific",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_geometry_angles_dok1",
+    "subject": "math",
+    "dokFloor": 1,
+    "topicKeyword": "geometry",
+    "prompt": "Identify the angle relationship in today's diagram and state its property (supplementary complementary vertical or corresponding).",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt or incorrect relationship, 1=correct relationship type but wrong property, 2=correct identification but incomplete property statement, 3=correctly identifies relationship AND states accurate property",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Confuses angle relationship types; misidentifies angles formed by transversals",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_geometry_similarity_dok2",
+    "subject": "math",
+    "dokFloor": 2,
+    "topicKeyword": "geometry",
+    "prompt": "Explain why the two triangles from today are similar. State the similarity criterion and identify corresponding parts.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=claims similar but no criterion, 2=states criterion but corresponding parts incorrect, 3=correctly identifies similarity criterion AND all corresponding parts with proper notation",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Confuses similarity with congruence; identifies wrong corresponding parts; applies criteria incorrectly",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_geometry_transform_compare_dok2",
+    "subject": "math",
+    "dokFloor": 2,
+    "topicKeyword": "geometry",
+    "prompt": "Compare the two geometric transformations from today. How are the image and pre-image related in each case?",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=describes one transformation only, 2=describes both but comparison incomplete, 3=clearly compares both transformations noting what properties are preserved or changed in each",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Confuses rigid vs. non-rigid transformations; doesn't preserve orientation analysis",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_geometry_proof_analysis_dok3",
+    "subject": "math",
+    "dokFloor": 3,
+    "topicKeyword": "geometry",
+    "prompt": "Analyze the proof from today. Identify the logical flaw or missing step and explain how to correct it.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=identifies something wrong but not the key flaw, 2=identifies flaw but correction incomplete, 3=correctly identifies logical flaw AND provides valid correction with proper justification",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Accepts invalid proofs; cannot identify missing justifications; confuses given information with proven statements",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_geometry_construction_dok3",
+    "subject": "math",
+    "dokFloor": 3,
+    "topicKeyword": "geometry",
+    "prompt": "Using the construction from today justify why it produces the intended result. What geometric principles guarantee it works?",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=describes steps without justification, 2=partial justification citing some principles, 3=fully justifies construction connecting each step to relevant geometric principles or theorems",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Follows construction steps without understanding; cannot connect steps to underlying theorems",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_geometry_alt_proof_dok4",
+    "subject": "math",
+    "dokFloor": 4,
+    "topicKeyword": "geometry",
+    "prompt": "Design an alternative proof for the theorem from today using a different approach. Explain why your method also works.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=restates same proof differently, 2=different approach but incomplete or flawed, 3=valid alternative proof method with clear explanation of why it establishes the same conclusion",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Believes only one proof method exists; cannot transfer between proof strategies",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_geometry_modeling_dok4",
+    "subject": "math",
+    "dokFloor": 4,
+    "topicKeyword": "geometry",
+    "prompt": "Evaluate which geometric model best represents the real-world situation from today. Justify your choice and acknowledge limitations.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=chooses model without justification, 2=justifies choice but doesn't address limitations, 3=justifies model choice with clear reasoning AND acknowledges specific limitations or simplifying assumptions",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Applies geometric models without considering real-world constraints; ignores model limitations",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_linear_slope_intercept_dok1",
+    "subject": "math",
+    "dokFloor": 1,
+    "topicKeyword": "linear_equations",
+    "prompt": "Identify the slope and y-intercept in the equation from today's lesson. Write each value.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt or both values incorrect, 1=one value correct but other missing or wrong, 2=both values identified but minor notation error, 3=correctly identifies both slope and y-intercept with proper notation",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Confuses slope with y-intercept; reverses position of m and b in slope-intercept form",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_linear_horiz_vert_dok1",
+    "subject": "math",
+    "dokFloor": 1,
+    "topicKeyword": "linear_equations",
+    "prompt": "Write the equation of a horizontal line and a vertical line. Label which is which.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt or both equations incorrect, 1=one equation correct, 2=both equations correct but labels reversed, 3=correctly writes and labels both equations",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Reverses horizontal (y=k) and vertical (x=k) line equations; confuses slope of zero with undefined slope",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_linear_equation_steps_dok2",
+    "subject": "math",
+    "dokFloor": 2,
+    "topicKeyword": "linear_equations",
+    "prompt": "Solve the linear equation 3x + 5 = 20 and explain the step you used.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=incorrect steps, 2=partially correct solution, 3=solution correct and steps explained",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students often forget to subtract before dividing.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_linear_parallel_dok2",
+    "subject": "math",
+    "dokFloor": 2,
+    "topicKeyword": "linear_equations",
+    "prompt": "Explain why parallel lines have the same slope but different y-intercepts using the example from today's lesson.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=states parallel lines have same slope without explanation, 2=explains same slope but incomplete reasoning about why y-intercepts differ, 3=clearly explains same slope creates same steepness while different y-intercepts shift position without intersection",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Believes parallel lines must have same y-intercept; confuses parallel with perpendicular slope relationships",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_linear_rate_compare_dok2",
+    "subject": "math",
+    "dokFloor": 2,
+    "topicKeyword": "linear_equations",
+    "prompt": "Compare the rates of change in the two linear relationships from today's lesson. Which situation changes faster and how do you know?",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=identifies which is faster but no mathematical justification, 2=correctly compares slopes but explanation incomplete, 3=correctly identifies larger absolute slope as faster rate with clear mathematical reasoning",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Confuses rate of change with starting value; compares y-intercepts instead of slopes",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_linear_context_analysis_dok3",
+    "subject": "math",
+    "dokFloor": 3,
+    "topicKeyword": "linear_equations",
+    "prompt": "Analyze the real-world scenario from today's lesson. Explain what the slope and y-intercept mean in context and whether the model makes sense for all x-values.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=gives context for one parameter only, 2=contextualizes both parameters but doesn't address domain limitations, 3=fully contextualizes slope and y-intercept AND identifies reasonable domain restrictions",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Interprets slope/intercept abstractly without context; fails to recognize domain restrictions in real situations",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_linear_model_justify_dok3",
+    "subject": "math",
+    "dokFloor": 3,
+    "topicKeyword": "linear_equations",
+    "prompt": "Using today's data justify whether a linear model is appropriate. What evidence supports or contradicts linearity?",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=claims linear/nonlinear without evidence, 2=provides some evidence but reasoning incomplete, 3=systematically evaluates constant rate of change or residual patterns with specific data references",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Assumes all data is linear; doesn't check for constant rate of change; ignores residual patterns",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_linear_model_limits_dok4",
+    "subject": "math",
+    "dokFloor": 4,
+    "topicKeyword": "linear_equations",
+    "prompt": "Design a real-world scenario where a linear model would initially apply but eventually break down. Explain the transition point and what model might work better.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=creates scenario but no breakdown analysis, 2=identifies breakdown but alternative model reasoning weak, 3=creates coherent scenario with clear transition point and justified alternative model suggestion",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Believes linear models extend indefinitely; doesn't recognize constraints that cause model breakdown",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_proportions_setup_dok1",
+    "subject": "math",
+    "dokFloor": 1,
+    "topicKeyword": "proportions",
+    "prompt": "Set up the proportion for the problem from today. Do not solve but show the relationship between quantities.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt or proportion incorrectly structured, 1=proportion attempted but wrong quantities compared, 2=correct quantities but ratio setup error, 3=correctly structured proportion with corresponding quantities aligned",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Sets up inverted proportion; confuses which quantities correspond; mixes units incorrectly",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_proportions_identify_dok1",
+    "subject": "math",
+    "dokFloor": 1,
+    "topicKeyword": "proportions",
+    "prompt": "Identify whether today's relationship is proportional or not. State one piece of evidence.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt or wrong conclusion with no evidence, 1=correct conclusion but wrong evidence, 2=correct conclusion with weak evidence, 3=correctly identifies proportional/non-proportional with valid evidence (constant ratio or passes through origin)",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Assumes all linear relationships are proportional; confuses proportional with any increasing pattern",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_proportions_constant_dok2",
+    "subject": "math",
+    "dokFloor": 2,
+    "topicKeyword": "proportions",
+    "prompt": "Explain what the constant of proportionality means in today's context. Include units in your explanation.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=states k value but no context, 2=contextual explanation but units missing or wrong, 3=clearly explains constant of proportionality in context with correct units and interpretation",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Calculates k but cannot interpret contextually; omits or confuses units",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_proportions_compare_dok2",
+    "subject": "math",
+    "dokFloor": 2,
+    "topicKeyword": "proportions",
+    "prompt": "Compare the two proportional relationships from today. Which represents a greater rate and how can you tell from the equation or graph?",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=identifies greater rate without justification, 2=compares but reasoning contains errors, 3=correctly identifies greater rate with clear justification from k values or graph steepness",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Compares y-values instead of rates; misreads steepness; confuses larger numbers with greater rate",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_proportions_percent_dok3",
+    "subject": "math",
+    "dokFloor": 3,
+    "topicKeyword": "proportions",
+    "prompt": "Analyze why the percent increase from today's problem is not the same as the percent decrease to return to the original. Use specific numbers to justify.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=states they differ but no explanation, 2=attempts numeric example but reasoning incomplete, 3=clearly demonstrates with specific numbers how the base changes causing different percentages",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Believes percent increase and decrease are reversible; doesn't recognize base change",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_proportions_scale_dok3",
+    "subject": "math",
+    "dokFloor": 3,
+    "topicKeyword": "proportions",
+    "prompt": "Using today's scale drawing determine if the proposed measurements are proportionally accurate. Justify with calculations.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=checks one measurement only, 2=checks multiple but inconsistent method, 3=systematically verifies proportionality across multiple measurements with consistent scale factor calculation",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Checks only one measurement; calculates scale inconsistently; rounds inappropriately losing proportionality",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_proportions_allocation_dok4",
+    "subject": "math",
+    "dokFloor": 4,
+    "topicKeyword": "proportions",
+    "prompt": "Design a solution to the resource allocation problem from today that maintains proportional fairness. Defend why your distribution is equitable.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=provides distribution without proportional reasoning, 2=uses proportional reasoning but defense incomplete, 3=designs proportionally fair solution with clear mathematical and ethical justification",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Applies equal division instead of proportional; doesn't connect proportional reasoning to fairness criteria",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_statistics_central_dok1",
+    "subject": "math",
+    "dokFloor": 1,
+    "topicKeyword": "statistics",
+    "prompt": "Calculate the mean and median of the dataset from today. Show your work.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt or both wrong, 1=one measure correct, 2=both correct but work incomplete or minor error, 3=both measures correct with clear work shown",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Confuses mean and median procedures; forgets to order data for median; divides by wrong n for mean",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_statistics_fivenumber_dok1",
+    "subject": "math",
+    "dokFloor": 1,
+    "topicKeyword": "statistics",
+    "prompt": "Identify the five-number summary from the box plot we analyzed today.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt or fewer than 3 values correct, 1=3 values correct, 2=4 values correct, 3=all five values correctly identified (min Q1 median Q3 max)",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Confuses quartiles with equal data division; misreads whisker endpoints as outliers",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_statistics_mean_median_dok2",
+    "subject": "math",
+    "dokFloor": 2,
+    "topicKeyword": "statistics",
+    "prompt": "Explain why the mean and median differ for today's dataset. What does this difference tell us about the distribution?",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=notes they differ without explanation, 2=mentions skewness but explanation incomplete, 3=clearly explains how outliers or skewness pull mean away from median with specific reference to the data",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Believes mean always equals median; doesn't connect difference to skewness",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_statistics_variability_dok2",
+    "subject": "math",
+    "dokFloor": 2,
+    "topicKeyword": "statistics",
+    "prompt": "Compare the variability of the two datasets from today using a measure of spread. Which has more consistency and why?",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=comparison without using spread measure, 2=uses spread measure but interpretation incomplete, 3=correctly compares using standard deviation or IQR with clear interpretation of what values mean for consistency",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Compares only centers ignoring spread; confuses range with IQR interpretation; larger numbers assumed more variable",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_statistics_correlation_dok3",
+    "subject": "math",
+    "dokFloor": 3,
+    "topicKeyword": "statistics",
+    "prompt": "Analyze whether the correlation from today's lesson implies causation. What alternative explanations could account for the relationship?",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=correctly states correlation ≠ causation but no alternatives, 2=provides one alternative explanation, 3=clearly distinguishes correlation from causation AND provides multiple plausible alternative explanations",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Assumes correlation proves causation; cannot generate confounding variables or alternative explanations",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_statistics_outliers_dok3",
+    "subject": "math",
+    "dokFloor": 3,
+    "topicKeyword": "statistics",
+    "prompt": "Using today's data determine if there are any outliers using the IQR method. Justify whether they should be included in analysis.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=identifies outliers without IQR method, 2=correctly applies IQR method but no contextual justification for inclusion/exclusion, 3=correctly identifies outliers using 1.5×IQR AND provides reasoned argument for inclusion or exclusion based on context",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Removes all outliers automatically; calculates IQR fences incorrectly; doesn't consider context for outlier decisions",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_statistics_claim_eval_dok4",
+    "subject": "math",
+    "dokFloor": 4,
+    "topicKeyword": "statistics",
+    "prompt": "Evaluate the statistical claim from today's reading. What additional information would you need to determine if the conclusion is valid?",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=accepts or rejects without analysis, 2=identifies one limitation or needed information, 3=systematically evaluates claim identifying multiple factors (sample size method bias generalizability) needed for validity",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Accepts statistics at face value; doesn't question sample size sampling method or generalizability",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_statistics_study_design_dok4",
+    "subject": "math",
+    "dokFloor": 4,
+    "topicKeyword": "statistics",
+    "prompt": "Design a study to investigate the question from today's lesson. Address sampling method variables to measure and potential confounds.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=basic design but major methodological flaws, 2=reasonable design but incomplete addressing of confounds, 3=well-designed study with clear sampling method identified variables AND strategies to address confounding",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Designs biased samples; doesn't identify or control confounding variables; confuses correlation study with experiment",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_chemistry_subatomic_dok1",
+    "subject": "science",
+    "dokFloor": 1,
+    "topicKeyword": "chemistry",
+    "prompt": "List the three subatomic particles and their charges.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=fewer than 2 correct, 2=names particles but wrong charges, 3=proton (+) neutron (0) electron (−) all correct",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students often confuse proton/electron charges or forget neutrons are neutral.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_chemistry_reaction_def_dok1",
+    "subject": "science",
+    "dokFloor": 1,
+    "topicKeyword": "chemistry",
+    "prompt": "Define what a chemical reaction is in your own words.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=describes physical change, 2=vague definition, 3=process where substances interact to form new substances with different properties",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may confuse physical and chemical changes.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_chemistry_conservation_dok2",
+    "subject": "science",
+    "dokFloor": 2,
+    "topicKeyword": "chemistry",
+    "prompt": "Explain why the mass of reactants equals the mass of products in a chemical reaction.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=says mass changes, 2=states conservation but can't explain, 3=atoms are rearranged not created or destroyed so total mass stays constant (Law of Conservation of Mass)",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may think mass is gained or lost when new substances form.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_chemistry_bonds_dok2",
+    "subject": "science",
+    "dokFloor": 2,
+    "topicKeyword": "chemistry",
+    "prompt": "Compare ionic and covalent bonds in terms of how electrons are involved.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=confuses bond types, 2=describes one correctly, 3=ionic means electrons transferred",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students often confuse sharing versus transferring electrons.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_chemistry_rate_temp_dok3",
+    "subject": "science",
+    "dokFloor": 3,
+    "topicKeyword": "chemistry",
+    "prompt": "Analyze why increasing temperature generally increases the rate of a chemical reaction.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=vague about heat, 2=mentions particles but incomplete mechanism, 3=higher temperature means faster particle movement which means more frequent and energetic collisions leading to faster reaction",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may not connect to particle motion and collision frequency.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_chemistry_periodic_dok3",
+    "subject": "science",
+    "dokFloor": 3,
+    "topicKeyword": "chemistry",
+    "prompt": "Using the periodic table justify why elements in the same group have similar chemical properties.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=says they're close together, 2=mentions electrons but not valence, 3=same group means same number of valence electrons which means similar reactivity and bonding behavior",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may focus on atomic number sequence rather than electron configuration.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_chemistry_rate_experiment_dok4",
+    "subject": "science",
+    "dokFloor": 4,
+    "topicKeyword": "chemistry",
+    "prompt": "Design an experiment to test how concentration affects reaction rate including your hypothesis and variables.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=lacks variables or measurement, 2=includes variables but incomplete design, 3=testable hypothesis with controlled variables (same temp and volume) and valid rate measurement (time to completion or gas produced)",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may not properly isolate variables or may not have a valid rate measurement.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_ecosystems_abiotic_dok1",
+    "subject": "science",
+    "dokFloor": 1,
+    "topicKeyword": "ecosystems",
+    "prompt": "List three examples of abiotic factors in an ecosystem.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=lists biotic factors, 2=mix of abiotic and biotic, 3=three correct abiotic factors (temperature water sunlight soil)",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students often confuse abiotic (non-living) with biotic (living) factors.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_ecosystems_carrying_dok1",
+    "subject": "science",
+    "dokFloor": 1,
+    "topicKeyword": "ecosystems",
+    "prompt": "Define the term 'carrying capacity' in your own words.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=defines incorrectly, 2=partially correct but misses resource connection, 3=maximum population an environment can sustain based on available resources",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may confuse with population size or not understand resource limitation.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_ecosystems_energy_matter_dok2",
+    "subject": "science",
+    "dokFloor": 2,
+    "topicKeyword": "ecosystems",
+    "prompt": "Explain how energy flows differently than matter cycles through an ecosystem.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=confuses energy and matter movement, 2=partial explanation of one, 3=clearly explains energy flows (one direction lost as heat) while matter cycles (recycled through decomposition)",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students often think energy and matter both cycle or both flow one way.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_ecosystems_foodweb_dok2",
+    "subject": "science",
+    "dokFloor": 2,
+    "topicKeyword": "ecosystems",
+    "prompt": "Summarize what would happen to a food web if a primary producer population decreased significantly.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=only mentions one level affected, 2=mentions multiple levels but incomplete logic, 3=explains reduced energy for all trophic levels with potential population crashes",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may only consider direct predators without understanding cascade effects.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_predator_removal_dok3",
+    "subject": "science",
+    "dokFloor": 3,
+    "topicKeyword": "ecosystems",
+    "prompt": "Explain how removing one predator from an ecosystem could affect population balance.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=very limited reasoning, 2=partially explains impact, 3=clear, multi-step explanation",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may think only prey increases without considering ripple effects.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_ecosystems_energy_transfer_dok3",
+    "subject": "science",
+    "dokFloor": 3,
+    "topicKeyword": "ecosystems",
+    "prompt": "Analyze why only about 10% of energy transfers between trophic levels in an ecosystem.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=says energy disappears, 2=mentions some loss but not mechanism, 3=explains energy lost as heat through metabolism at each level",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may think energy just disappears rather than understanding metabolic loss.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_ecosystems_biodiversity_dok3",
+    "subject": "science",
+    "dokFloor": 3,
+    "topicKeyword": "ecosystems",
+    "prompt": "Justify why biodiversity is important for ecosystem stability using evidence from today's lesson.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=lists benefits without connection, 2=connects to stability but weak reasoning, 3=explains diverse species provide redundancy and multiple pathways for ecosystem functions",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may list benefits without connecting to stability or resilience.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_ecosystems_conservation_dok4",
+    "subject": "science",
+    "dokFloor": 4,
+    "topicKeyword": "ecosystems",
+    "prompt": "Evaluate two proposed solutions for protecting an endangered species considering both ecological and human factors.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=evaluates only one solution or one factor, 2=addresses both solutions but superficial, 3=weighs ecological needs and human impacts with trade-offs for both solutions",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may focus only on the animal without considering ecosystem relationships or practicality.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_energy_categories_dok1",
+    "subject": "science",
+    "dokFloor": 1,
+    "topicKeyword": "energy",
+    "prompt": "List the two main categories of energy with one example of each.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=lists random energy types, 2=one category with example, 3=kinetic (motion) and potential (stored) with appropriate examples",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may list specific types without understanding the kinetic/potential distinction.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_energy_conservation_dok1",
+    "subject": "science",
+    "dokFloor": 1,
+    "topicKeyword": "energy",
+    "prompt": "Define the Law of Conservation of Energy in one sentence.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=incorrect definition, 2=partially correct, 3=energy cannot be created or destroyed only transformed from one form to another",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may think energy can be created or destroyed in chemical reactions.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_energy_transformation_dok2",
+    "subject": "science",
+    "dokFloor": 2,
+    "topicKeyword": "energy",
+    "prompt": "Explain what happens to the kinetic energy of a ball as it rolls up a hill and comes to a stop at the top.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=says energy is lost, 2=mentions transformation but incomplete, 3=kinetic energy transforms to gravitational potential energy as height increases",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may think energy disappears rather than transforms.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_energy_renewable_dok2",
+    "subject": "science",
+    "dokFloor": 2,
+    "topicKeyword": "energy",
+    "prompt": "Compare renewable and nonrenewable energy sources in terms of their availability over time.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=only lists examples, 2=defines one type correctly, 3=renewable replenishes naturally in human timeframes",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may focus only on environmental impact without addressing regeneration rate.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_energy_efficiency_dok3",
+    "subject": "science",
+    "dokFloor": 3,
+    "topicKeyword": "energy",
+    "prompt": "Analyze why the efficiency of an energy transfer is never 100% using a specific example from today's lesson.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=states inefficiency without explaining why, 2=mentions heat loss vaguely, 3=explains energy transforms to thermal energy at each step which is difficult to recover and disperses",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may not connect inefficiency to thermal energy dissipation.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_energy_car_diagram_dok3",
+    "subject": "science",
+    "dokFloor": 3,
+    "topicKeyword": "energy",
+    "prompt": "Draw and explain an energy flow diagram for a car showing the transformations from fuel to motion.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=missing major transformations, 2=shows main path but omits waste, 3=chemical to thermal to mechanical with waste heat shown at each stage",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may omit waste heat or not show the sequence of transformations.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_energy_evaluation_dok4",
+    "subject": "science",
+    "dokFloor": 4,
+    "topicKeyword": "energy",
+    "prompt": "Evaluate the trade-offs between two energy sources for a community considering efficiency and environmental impact.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=addresses only one factor, 2=addresses factors but no synthesis, 3=weighs efficiency and environmental factors with reasoned conclusion about trade-offs",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may oversimplify to one factor without weighing multiple criteria.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_forces_newton1_dok1",
+    "subject": "science",
+    "dokFloor": 1,
+    "topicKeyword": "forces",
+    "prompt": "State Newton's First Law of Motion in your own words.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=incomplete or incorrect statement, 2=describes rest or motion but not both, 3=objects at rest stay at rest and objects in motion stay in motion unless acted on by unbalanced force",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students often forget the balanced forces condition or only describe one part (rest or motion).",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_forces_gravity_factors_dok1",
+    "subject": "science",
+    "dokFloor": 1,
+    "topicKeyword": "forces",
+    "prompt": "Identify the two factors that determine the gravitational force between two objects.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=incorrect factors, 2=one correct factor, 3=correctly identifies mass of objects and distance between them",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may only name mass or only distance but not both.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_forces_balanced_dok2",
+    "subject": "science",
+    "dokFloor": 2,
+    "topicKeyword": "forces",
+    "prompt": "Explain why a book resting on a table is experiencing balanced forces even though forces are acting on it.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=says no forces acting, 2=mentions gravity but not normal force, 3=explains gravity pulls down while table pushes up equally (normal force)",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students think stationary means no forces rather than balanced forces.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_forces_mass_weight_dok2",
+    "subject": "science",
+    "dokFloor": 2,
+    "topicKeyword": "forces",
+    "prompt": "Compare the mass and weight of an astronaut on Earth versus on the Moon.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=says both change or both stay same, 2=correctly identifies one but not the other, 3=mass stays constant",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students confuse mass (constant) with weight (varies with gravity).",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_forces_terminal_dok3",
+    "subject": "science",
+    "dokFloor": 3,
+    "topicKeyword": "forces",
+    "prompt": "Analyze why a skydiver reaches terminal velocity rather than continuing to accelerate throughout their fall.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=says gravity decreases, 2=mentions air resistance but not equilibrium, 3=explains air resistance increases with speed until it equals gravitational force creating balanced forces",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may think gravity stops or decreases rather than understanding air resistance equilibrium.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_forces_newton3_dok3",
+    "subject": "science",
+    "dokFloor": 3,
+    "topicKeyword": "forces",
+    "prompt": "Using Newton's Third Law justify why pushing against a wall causes you to move backward if you are on a skateboard.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=incomplete force pair, 2=identifies forces but doesn't explain movement, 3=wall pushes back with equal force",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may not connect action-reaction pairs or may think forces cancel out.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_forces_egg_drop_dok4",
+    "subject": "science",
+    "dokFloor": 4,
+    "topicKeyword": "forces",
+    "prompt": "Design a device that would allow an egg to survive a 2-meter drop and explain the physics principles involved.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=describes device without physics, 2=mentions cushioning but weak physics, 3=explains increasing time of impact or distributing force over larger area reduces peak force on egg",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may focus only on cushioning without explaining force distribution over time.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_genetics_bases_dok1",
+    "subject": "science",
+    "dokFloor": 1,
+    "topicKeyword": "genetics",
+    "prompt": "List the four nitrogen bases found in DNA.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=fewer than 2 correct, 2=two to three correct, 3=all four correct (adenine thymine guanine cytosine)",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may confuse RNA bases (uracil) or forget one of the four.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_genetics_inherited_dok1",
+    "subject": "science",
+    "dokFloor": 1,
+    "topicKeyword": "genetics",
+    "prompt": "Identify whether a trait is inherited or acquired: A scar on your knee from falling.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=says inherited, 2=says acquired but can't explain, 3=correctly identifies as acquired because it resulted from environmental event not DNA",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students confuse traits you're born with versus traits you develop from environment.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_genetics_variation_dok2",
+    "subject": "science",
+    "dokFloor": 2,
+    "topicKeyword": "genetics",
+    "prompt": "Explain why offspring of the same parents can look different from each other.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=vague or incorrect explanation, 2=mentions genes but not randomness, 3=explains random assortment of chromosomes and crossing over create unique combinations",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may not understand random chromosome assortment during meiosis.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_genetics_hierarchy_dok2",
+    "subject": "science",
+    "dokFloor": 2,
+    "topicKeyword": "genetics",
+    "prompt": "Summarize the relationship between genes and chromosomes and DNA.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=incorrect relationship, 2=partial understanding, 3=DNA makes up genes",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students often confuse the hierarchy or think these are separate things.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_genetics_mutation_dok3",
+    "subject": "science",
+    "dokFloor": 3,
+    "topicKeyword": "genetics",
+    "prompt": "Analyze why a mutation in a body cell would not be passed to offspring but a mutation in a reproductive cell would.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=says all mutations pass or none do, 2=identifies difference but can't explain mechanism, 3=only reproductive cells (gametes) combine to form offspring",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may think all mutations are heritable or none are.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_genetics_punnett_dok3",
+    "subject": "science",
+    "dokFloor": 3,
+    "topicKeyword": "genetics",
+    "prompt": "Using a Punnett square justify why two brown-eyed parents could have a blue-eyed child.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=says it's impossible, 2=mentions recessive but incomplete reasoning, 3=both parents are Bb (heterozygous)",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may think dominant traits always appear or don't understand heterozygous carriers.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_genetics_ethics_dok4",
+    "subject": "science",
+    "dokFloor": 4,
+    "topicKeyword": "genetics",
+    "prompt": "Evaluate the ethical considerations of using genetic testing to screen for inherited diseases before a child is born.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=only lists benefits or concerns, 2=mentions both sides but no synthesis, 3=weighs medical benefits against privacy and discrimination risks with reasoned position",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may consider only medical benefits without weighing ethical complexities.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_photosynthesis_products_dok1",
+    "subject": "science",
+    "dokFloor": 1,
+    "topicKeyword": "photosynthesis",
+    "prompt": "List the two main products of photosynthesis.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=lists reactants instead, 2=one correct product, 3=both correct products",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may confuse products (glucose + oxygen) with reactants (carbon dioxide + water).",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_photosynthesis_reactants_dok1",
+    "subject": "science",
+    "dokFloor": 1,
+    "topicKeyword": "photosynthesis",
+    "prompt": "List the two main reactants that plants use in photosynthesis.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=lists products instead of reactants, 2=one correct reactant, 3=both correct reactants (carbon dioxide and water)",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students confuse reactants (CO₂ + H₂O) with products (glucose + O₂).",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_photosynthesis_location_dok1",
+    "subject": "science",
+    "dokFloor": 1,
+    "topicKeyword": "photosynthesis",
+    "prompt": "Where in the plant cell does photosynthesis take place?",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=incorrect organelle or vague response, 2=says leaves but not chloroplast, 3=correctly identifies chloroplast",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may say 'the cell' generically without understanding organelle function.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_photosynthesis_producers_dok2",
+    "subject": "science",
+    "dokFloor": 2,
+    "topicKeyword": "photosynthesis",
+    "prompt": "Explain why plants are considered producers in an ecosystem.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=vague or circular explanation, 2=explains food production but not energy conversion, 3=explains plants convert light energy to chemical energy usable by consumers",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may focus only on making food without connecting to energy flow.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_photosynthesis_respiration_dok2",
+    "subject": "science",
+    "dokFloor": 2,
+    "topicKeyword": "photosynthesis",
+    "prompt": "Compare how photosynthesis and cellular respiration are related in terms of inputs and outputs.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=describes only one process, 2=describes both but doesn't connect inputs/outputs, 3=clearly shows outputs of one become inputs of the other",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students often see these as unrelated or opposite rather than complementary cycles.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_photosynthesis_dark_dok3",
+    "subject": "science",
+    "dokFloor": 3,
+    "topicKeyword": "photosynthesis",
+    "prompt": "Predict what will happen to a plant's glucose production if placed in a dark room for several days and explain why.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=incorrect prediction, 2=correct prediction but weak reasoning, 3=explains light is required for photosynthesis so glucose production stops while stored glucose may be used",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may think plants can still make glucose in the dark or confuse stored energy with production.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_photosynthesis_co2_dok3",
+    "subject": "science",
+    "dokFloor": 3,
+    "topicKeyword": "photosynthesis",
+    "prompt": "Analyze why increasing carbon dioxide might initially boost plant growth but cause problems at very high concentrations.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=only mentions increased growth, 2=mentions benefit but vague on limits, 3=explains CO₂ as limiting factor up to a point with other factors becoming limiting",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students often oversimplify the relationship as always positive (more CO₂ equals more growth).",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_photosynthesis_experiment_dok4",
+    "subject": "science",
+    "dokFloor": 4,
+    "topicKeyword": "photosynthesis",
+    "prompt": "Design an experiment to test which color of light is most effective for photosynthesis. Include your hypothesis and variables.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=lacks variables or measurement, 2=includes variables but incomplete design, 3=testable hypothesis with controlled variables and valid measurement method (O₂ production or growth rate)",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may not control variables properly or may not understand how to measure photosynthesis rate.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_cause_effect_list_causes_dok1",
+    "subject": "social_studies",
+    "dokFloor": 1,
+    "topicKeyword": "cause_effect",
+    "prompt": "List two causes of the historical event we studied today.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=lists effects or unrelated facts, 2=one accurate cause, 3=two accurate causes clearly stated",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may list effects instead of causes or confuse correlation with causation.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_cause_effect_immediate_dok1",
+    "subject": "social_studies",
+    "dokFloor": 1,
+    "topicKeyword": "cause_effect",
+    "prompt": "Identify one immediate effect of the policy or event from today's lesson.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=states cause instead of effect, 2=effect is vague or partially accurate, 3=immediate effect is specific and accurate",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students often confuse short-term effects with long-term consequences.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_revolution_cause_effect_dok2",
+    "subject": "social_studies",
+    "dokFloor": 2,
+    "topicKeyword": "cause_effect",
+    "prompt": "Identify one cause and one effect of the American Revolution.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=unrelated facts, 2=partial cause/effect, 3=accurate cause-effect link",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may list multiple facts without linking cause and effect.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_cause_effect_explain_dok2",
+    "subject": "social_studies",
+    "dokFloor": 2,
+    "topicKeyword": "cause_effect",
+    "prompt": "Explain why one cause led to the historical effect we discussed today.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=describes sequence without causation, 2=partial explanation of mechanism, 3=clear explanation of how cause produced effect",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may describe sequence without explaining the causal mechanism.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_cause_effect_compare_dok2",
+    "subject": "social_studies",
+    "dokFloor": 2,
+    "topicKeyword": "cause_effect",
+    "prompt": "Compare the short-term and long-term effects of the event from today's lesson.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=confuses timeframes or one category only, 2=addresses both but comparison unclear, 3=clearly distinguishes and compares both short and long-term effects",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students often conflate timeframes or only address one temporal category.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_cause_effect_multicausal_dok3",
+    "subject": "social_studies",
+    "dokFloor": 3,
+    "topicKeyword": "cause_effect",
+    "prompt": "Analyze how multiple causes interacted to produce the outcome we studied today. Use specific evidence.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=lists causes without interaction, 2=mentions interaction but analysis weak, 3=clear analysis of how causes combined with specific evidence",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students often treat causes as independent rather than interconnected.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_cause_effect_significance_dok3",
+    "subject": "social_studies",
+    "dokFloor": 3,
+    "topicKeyword": "cause_effect",
+    "prompt": "Draw a conclusion about which cause was most significant and justify your reasoning with evidence.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=opinion without justification, 2=justification but weak evidence, 3=clear conclusion with well-reasoned evidence-based justification",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may state opinion without evidence-based justification or consider only one criterion.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_cause_effect_synthesis_dok4",
+    "subject": "social_studies",
+    "dokFloor": 4,
+    "topicKeyword": "cause_effect",
+    "prompt": "Synthesize evidence from multiple sources to construct your own interpretation of why the event we studied happened.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=summarizes sources without interpretation, 2=interpretation present but weak synthesis, 3=original interpretation clearly synthesizing multiple sources",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may summarize sources rather than construct an original interpretation.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_cause_effect_contingency_dok4",
+    "subject": "social_studies",
+    "dokFloor": 4,
+    "topicKeyword": "cause_effect",
+    "prompt": "Evaluate whether the historical outcome we studied was inevitable or contingent. Defend your position in one paragraph.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=assertion without defense, 2=defense but limited consideration of alternatives, 3=well-defended position considering contingency and inevitability",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students often assume inevitability without considering alternative possibilities.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_civic_rights_list_dok1",
+    "subject": "social_studies",
+    "dokFloor": 1,
+    "topicKeyword": "civic_engagement",
+    "prompt": "Name two rights protected by the constitutional amendment we studied today.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=incorrect amendment or confused rights, 2=one accurate right, 3=two accurate rights correctly attributed",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students often confuse rights across amendments or mix rights with responsibilities.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_civic_participation_dok1",
+    "subject": "social_studies",
+    "dokFloor": 1,
+    "topicKeyword": "civic_engagement",
+    "prompt": "List three ways citizens can participate in the democratic process.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=only one method or vague responses, 2=two valid participation methods, 3=three specific participation methods",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may only think of voting and miss other civic participation forms.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_civic_community_impact_dok2",
+    "subject": "social_studies",
+    "dokFloor": 2,
+    "topicKeyword": "civic_engagement",
+    "prompt": "Explain why the civic action or policy we discussed matters for a specific community.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=abstract statement without community connection, 2=partial connection to community, 3=specific explanation of community impact",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may state importance abstractly without connecting to concrete community impact.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_civic_debate_summary_dok2",
+    "subject": "social_studies",
+    "dokFloor": 2,
+    "topicKeyword": "civic_engagement",
+    "prompt": "Summarize the main arguments on both sides of the civic debate from today's lesson.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=one side only or biased summary, 2=both sides but missing key arguments, 3=fair summary of main arguments from both perspectives",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students often favor one side or miss key arguments from the opposing view.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_civic_differential_impact_dok3",
+    "subject": "social_studies",
+    "dokFloor": 3,
+    "topicKeyword": "civic_engagement",
+    "prompt": "Analyze how the civic issue we discussed affects different groups in society differently.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=uniform impact assumed, 2=mentions difference but analysis weak, 3=specific analysis of differential impacts across groups",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may assume uniform impact or focus on only one group.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_civic_effectiveness_dok3",
+    "subject": "social_studies",
+    "dokFloor": 3,
+    "topicKeyword": "civic_engagement",
+    "prompt": "Draw a conclusion about the effectiveness of the civic action we studied. Support with specific evidence.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=judgment without criteria or evidence, 2=some evidence but criteria implicit, 3=clear conclusion with explicit criteria and specific supporting evidence",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students often judge effectiveness without defining criteria or citing specific outcomes.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_civic_action_proposal_dok4",
+    "subject": "social_studies",
+    "dokFloor": 4,
+    "topicKeyword": "civic_engagement",
+    "prompt": "Propose a civic action addressing the issue we studied and evaluate its potential effectiveness and trade-offs.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=proposal without evaluation, 2=evaluation present but incomplete, 3=specific proposal with thoughtful evaluation of effectiveness and trade-offs",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may propose action without considering feasibility or unintended consequences.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_civic_common_good_dok4",
+    "subject": "social_studies",
+    "dokFloor": 4,
+    "topicKeyword": "civic_engagement",
+    "prompt": "Synthesize perspectives from today's lesson to argue what approach would best serve the common good.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=one perspective without synthesis, 2=synthesis attempted but common good undefined, 3=genuine synthesis with clear argument for common good",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may favor one perspective without genuinely synthesizing or defining common good.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_economic_concept_define_dok1",
+    "subject": "social_studies",
+    "dokFloor": 1,
+    "topicKeyword": "economic_reasoning",
+    "prompt": "Define the economic concept we focused on today in your own words.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=unrelated or confused definition, 2=partial definition missing key element, 3=accurate definition in student's own words",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students often repeat textbook definitions without demonstrating understanding.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_economic_example_dok1",
+    "subject": "social_studies",
+    "dokFloor": 1,
+    "topicKeyword": "economic_reasoning",
+    "prompt": "Identify one example of the economic principle from today's lesson in everyday life.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=example doesn't match principle, 2=example is vague or partially connected, 3=specific real-world example demonstrating principle",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may struggle to connect abstract concepts to concrete examples.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_economic_tradeoff_dok2",
+    "subject": "social_studies",
+    "dokFloor": 2,
+    "topicKeyword": "economic_reasoning",
+    "prompt": "Explain the trade-off involved in the economic decision we analyzed today.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=describes benefit only without trade-off, 2=mentions cost but trade-off unclear, 3=clear explanation of what was gained and sacrificed",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students often identify benefits without acknowledging opportunity costs.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_economic_context_compare_dok2",
+    "subject": "social_studies",
+    "dokFloor": 2,
+    "topicKeyword": "economic_reasoning",
+    "prompt": "Compare how the economic concept applies differently in two contexts from our lesson.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=describes concept without context comparison, 2=partial comparison of applications, 3=clear comparison showing how context affects application",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may describe the concept without showing how context changes application.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_economic_incentives_dok3",
+    "subject": "social_studies",
+    "dokFloor": 3,
+    "topicKeyword": "economic_reasoning",
+    "prompt": "Analyze how incentives shaped the economic behavior we studied today. Provide specific examples.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=describes behavior without incentive connection, 2=mentions incentives but analysis incomplete, 3=specific analysis linking incentives to observed behaviors",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students often describe behavior without connecting to underlying incentive structures.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_economic_distributional_dok3",
+    "subject": "social_studies",
+    "dokFloor": 3,
+    "topicKeyword": "economic_reasoning",
+    "prompt": "Draw a conclusion about who benefits and who loses from the economic policy we analyzed. Justify with evidence.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=one group only or no justification, 2=both mentioned but justification weak, 3=balanced analysis with evidence-based justification for both winners and losers",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may focus on intended beneficiaries without considering unintended consequences.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_economic_policy_evaluation_dok4",
+    "subject": "social_studies",
+    "dokFloor": 4,
+    "topicKeyword": "economic_reasoning",
+    "prompt": "Evaluate the economic policy we studied by designing criteria and applying them to predict long-term outcomes.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=prediction without criteria, 2=criteria present but prediction weak, 3=explicit criteria with well-reasoned predictions across multiple dimensions",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may predict outcomes without explicit criteria or consider only one dimension.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_economic_solution_design_dok4",
+    "subject": "social_studies",
+    "dokFloor": 4,
+    "topicKeyword": "economic_reasoning",
+    "prompt": "Synthesize economic concepts from this unit to propose a solution to a real-world problem and evaluate its trade-offs.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=solution without economic grounding, 2=grounding present but trade-offs incomplete, 3=concept-grounded solution with thoughtful evaluation of trade-offs",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may propose solutions without grounding in economic concepts or considering trade-offs.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_evaluation_bias_define_dok1",
+    "subject": "social_studies",
+    "dokFloor": 1,
+    "topicKeyword": "evaluation",
+    "prompt": "Define the term 'bias' as it applies to historical sources.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=defines as lying or wrong, 2=partial definition missing perspective element, 3=accurate definition including perspective/partiality",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students often think bias means a source is useless rather than requiring critical reading.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_evaluation_perspective_dok1",
+    "subject": "social_studies",
+    "dokFloor": 1,
+    "topicKeyword": "evaluation",
+    "prompt": "Identify the perspective or point of view of the author we studied today.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=restates topic rather than perspective, 2=vague reference to perspective, 3=specific identification of author's viewpoint/position",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students confuse topic/subject with author's perspective or stance.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_evaluation_evidence_claim_dok2",
+    "subject": "social_studies",
+    "dokFloor": 2,
+    "topicKeyword": "evaluation",
+    "prompt": "Explain how the evidence we examined supports or challenges the claim from today's lesson.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=describes evidence without connection, 2=vague connection to claim, 3=clear explanation of how evidence supports/challenges claim",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may describe evidence without explicitly connecting to the claim.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_evaluation_compare_perspectives_dok2",
+    "subject": "social_studies",
+    "dokFloor": 2,
+    "topicKeyword": "evaluation",
+    "prompt": "Compare the perspectives of two groups or individuals we studied today on the same issue.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=describes one perspective only, 2=describes both but no explicit comparison, 3=clear comparison identifying similarities and/or differences",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may describe each perspective without explicit comparison.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_evaluation_argument_analysis_dok3",
+    "subject": "social_studies",
+    "dokFloor": 3,
+    "topicKeyword": "evaluation",
+    "prompt": "Analyze the strengths and weaknesses of the argument or interpretation we examined today.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=states agreement/disagreement only, 2=identifies one dimension but analysis incomplete, 3=balanced analysis of both strengths and weaknesses",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students often focus on content agreement rather than argument quality.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_evaluation_evidence_quality_dok3",
+    "subject": "social_studies",
+    "dokFloor": 3,
+    "topicKeyword": "evaluation",
+    "prompt": "Justify which piece of evidence from today's lesson is most convincing and explain why.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=choice without justification, 2=justification but criteria unclear, 3=clear justification using evidence quality criteria",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may choose based on preference rather than evidence quality criteria.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_historical_leader_eval_dok4",
+    "subject": "social_studies",
+    "dokFloor": 4,
+    "topicKeyword": "evaluation",
+    "prompt": "Compare two historical leaders studied this week and evaluate whose policies had greater long-term impact.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=descriptive only, 2=some comparison but weak evaluation, 3=clear comparison with justified evaluation",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may only summarize without evaluation.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_evaluation_interpretation_dok4",
+    "subject": "social_studies",
+    "dokFloor": 4,
+    "topicKeyword": "evaluation",
+    "prompt": "Evaluate which historical interpretation we studied is most valid and construct an argument defending your choice.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=preference without argument, 2=argument present but evidence weak, 3=well-constructed argument with strong evidence defending interpretation choice",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may state preference without constructing evidence-based argument.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_evaluation_criteria_design_dok4",
+    "subject": "social_studies",
+    "dokFloor": 4,
+    "topicKeyword": "evaluation",
+    "prompt": "Design criteria for evaluating claims about the topic we studied and apply them to one claim from today.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=no clear criteria, 2=criteria present but application weak, 3=clear criteria systematically applied to evaluate specific claim",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may create vague criteria or not apply them systematically.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_sourcing_type_dok1",
+    "subject": "social_studies",
+    "dokFloor": 1,
+    "topicKeyword": "sourcing",
+    "prompt": "Name the type of source (primary or secondary) we analyzed today and give one example.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=incorrect classification, 2=correct type but no example, 3=correct classification with valid example",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students often misclassify sources or confuse proximity to event with source type.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_sourcing_questions_dok1",
+    "subject": "social_studies",
+    "dokFloor": 1,
+    "topicKeyword": "sourcing",
+    "prompt": "List two questions a historian would ask about the source we examined today.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=questions about content only, 2=one valid sourcing question, 3=two valid sourcing questions (author/date/purpose/audience)",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may focus on content rather than authorship/context/purpose questions.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_sourcing_purpose_reliability_dok2",
+    "subject": "social_studies",
+    "dokFloor": 2,
+    "topicKeyword": "sourcing",
+    "prompt": "Explain how the author's purpose affects the reliability of the source we analyzed.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=states purpose without connection to reliability, 2=partial connection between purpose and reliability, 3=clear explanation of how purpose shapes what to trust or question",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may assume purpose automatically invalidates rather than contextualizes a source.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_sourcing_context_dok2",
+    "subject": "social_studies",
+    "dokFloor": 2,
+    "topicKeyword": "sourcing",
+    "prompt": "Summarize what the source from today reveals about its historical context in 2-3 sentences.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=summarizes content only, 2=mentions context but connection unclear, 3=clear summary linking source content to historical context",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students often summarize content without connecting to broader context.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_sourcing_limitations_dok3",
+    "subject": "social_studies",
+    "dokFloor": 3,
+    "topicKeyword": "sourcing",
+    "prompt": "Analyze how the source's limitations affect what conclusions we can draw from it. Be specific.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=dismisses source without analysis, 2=identifies limitations but unclear connection to conclusions, 3=specific analysis of how limitations shape valid conclusions",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students often dismiss limited sources entirely rather than identifying what can still be learned.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_sourcing_corroboration_dok3",
+    "subject": "social_studies",
+    "dokFloor": 3,
+    "topicKeyword": "sourcing",
+    "prompt": "Corroborate a claim from today using evidence from at least two different sources. Explain how they connect.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=one source only or sources don't connect, 2=two sources but connection unclear, 3=clear corroboration showing how different sources support claim",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may cite sources without explaining how evidence from different sources supports the same conclusion.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_sourcing_missing_voices_dok4",
+    "subject": "social_studies",
+    "dokFloor": 4,
+    "topicKeyword": "sourcing",
+    "prompt": "Evaluate whose voice is missing from the sources we examined today and design a question to investigate that perspective.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=no missing voice identified, 2=missing voice but question weak, 3=specific missing voice with well-designed investigation question",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may identify missing voices without formulating productive research questions.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_sourcing_new_inquiry_dok4",
+    "subject": "social_studies",
+    "dokFloor": 4,
+    "topicKeyword": "sourcing",
+    "prompt": "Synthesize what you learned from today's sources to propose a new historical question worth investigating.",
+    "successCriteria": [],
+    "rubric03": [
+      "no attempt, 1=restates content without new question, 2=question present but derivative, 3=original historically-grounded question emerging from source synthesis",
+      "",
+      "",
+      ""
+    ],
+    "misconceptionFlag": "Students may restate lesson content rather than generate original inquiry.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_decision_making_dok1_a",
+    "subject": "sel",
+    "dokFloor": 1,
+    "topicKeyword": "decision_making",
+    "prompt": "Identify the problem and one possible solution discussed in today's scenario.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response",
+      "Identifies only a solution or describes symptoms rather than the core problem",
+      "Identifies the problem OR a solution but not both",
+      "Clearly identifies both the problem and one relevant solution"
+    ],
+    "misconceptionFlag": "Students conflate symptoms with root problems or jump to solutions without articulating the problem.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_decision_making_dok2_a",
+    "subject": "sel",
+    "dokFloor": 2,
+    "topicKeyword": "decision_making",
+    "prompt": "Explain why considering long-term consequences matters when making the type of decision we discussed today.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response",
+      "Lists consequences without distinguishing short/long-term",
+      "Identifies long-term consequences but doesn't explain why this perspective matters",
+      "Explains how long-term thinking reveals impacts not visible immediately and leads to better outcomes"
+    ],
+    "misconceptionFlag": "Students focus only on immediate outcomes or describe consequences without explaining why long-term thinking is valuable.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_decision_making_dok2_b",
+    "subject": "sel",
+    "dokFloor": 2,
+    "topicKeyword": "decision_making",
+    "prompt": "Summarize the ethical considerations on both sides of the dilemma we analyzed today.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response",
+      "Presents only one side or uses preference language ('I think')",
+      "Presents both sides but one is superficial or misrepresented",
+      "Accurately summarizes legitimate ethical considerations supporting both positions"
+    ],
+    "misconceptionFlag": "Students present only one side or conflate personal preference with ethical reasoning.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_decision_making_dok3_a",
+    "subject": "sel",
+    "dokFloor": 3,
+    "topicKeyword": "decision_making",
+    "prompt": "Analyze how cognitive biases discussed today might have affected a past decision you made. Identify the bias and its impact.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response",
+      "Cannot identify a bias in own thinking or describes bad outcome without bias identification",
+      "Identifies a bias but impact analysis is superficial or speculative",
+      "Identifies specific bias, explains how it operated in their thinking, and analyzes its impact on the decision"
+    ],
+    "misconceptionFlag": "Students cannot identify biases in their own thinking or confuse poor outcomes with biased thinking.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_decision_making_dok3_b",
+    "subject": "sel",
+    "dokFloor": 3,
+    "topicKeyword": "decision_making",
+    "prompt": "Justify what additional information you would need before making the decision presented in today's scenario. Explain why each piece matters.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response",
+      "Makes decision without identifying information needs",
+      "Identifies information needs but doesn't explain why each matters",
+      "Identifies specific information needs and articulates how each would change decision calculus"
+    ],
+    "misconceptionFlag": "Students jump to decisions without information-gathering or request information without explaining its relevance.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_decision_making_dok4_a",
+    "subject": "sel",
+    "dokFloor": 4,
+    "topicKeyword": "decision_making",
+    "prompt": "Evaluate a significant decision you made using the ethical framework from today's lesson. In hindsight, would you decide differently? Argue your position with evidence.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response",
+      "Describes decision without applying framework or judges by outcome alone",
+      "Applies framework but evaluation is superficial or argument lacks evidence",
+      "Applies framework systematically, distinguishes decision quality from outcome, and argues position with specific evidence"
+    ],
+    "misconceptionFlag": "Students apply framework superficially or confuse outcome quality with decision quality.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_relationship_skills_dok1_a",
+    "subject": "sel",
+    "dokFloor": 1,
+    "topicKeyword": "relationship_skills",
+    "prompt": "List two active listening behaviors you demonstrated during today's partner work.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response",
+      "Lists speaking behaviors or vague responses like 'paid attention'",
+      "Lists one specific active listening behavior",
+      "Lists two specific behaviors (e.g., eye contact, nodding, paraphrasing, asking clarifying questions)"
+    ],
+    "misconceptionFlag": "Students confuse passive hearing with active listening or cannot distinguish listening behaviors from speaking behaviors.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_relationship_skills_dok2_a",
+    "subject": "sel",
+    "dokFloor": 2,
+    "topicKeyword": "relationship_skills",
+    "prompt": "Explain how the conflict resolution step we practiced today prevents escalation. Why does it work?",
+    "successCriteria": [],
+    "rubric03": [
+      "No response",
+      "Restates the step without explaining mechanism",
+      "Gives general benefit without specific explanation of how it prevents escalation",
+      "Explains specific mechanism (e.g., 'I-statements reduce defensiveness by focusing on impact not blame')"
+    ],
+    "misconceptionFlag": "Students describe the step without explaining its function or confuse de-escalation with avoidance.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_relationship_skills_dok2_b",
+    "subject": "sel",
+    "dokFloor": 2,
+    "topicKeyword": "relationship_skills",
+    "prompt": "Compare giving feedback using an 'I-statement' versus a 'you-statement.' What difference does the language make?",
+    "successCriteria": [],
+    "rubric03": [
+      "No response",
+      "Describes format difference only",
+      "Notes one creates less conflict but doesn't explain why",
+      "Explains how language framing affects the receiver's defensiveness and openness to hearing the message"
+    ],
+    "misconceptionFlag": "Students understand the format difference but not the relational impact or believe the content matters more than the framing.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_relationship_skills_dok3_a",
+    "subject": "sel",
+    "dokFloor": 3,
+    "topicKeyword": "relationship_skills",
+    "prompt": "Analyze what makes giving feedback across a power difference (age, authority, status) more challenging. How would you navigate this?",
+    "successCriteria": [],
+    "rubric03": [
+      "No response",
+      "Focuses on feedback content without addressing power dynamics",
+      "Acknowledges difficulty but strategies are generic",
+      "Analyzes specific challenges (fear of consequences, credibility, face-saving) and articulates context-appropriate navigation strategies"
+    ],
+    "misconceptionFlag": "Students focus only on the content of feedback rather than relational dynamics or believe directness works equally in all contexts.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_relationship_skills_dok3_b",
+    "subject": "sel",
+    "dokFloor": 3,
+    "topicKeyword": "relationship_skills",
+    "prompt": "Analyze a situation where maintaining a relationship requires tolerating disagreement. When is this healthy and when is it harmful?",
+    "successCriteria": [],
+    "rubric03": [
+      "No response",
+      "Views disagreement as always negative or always acceptable",
+      "Distinguishes but criteria for healthy vs. harmful are vague",
+      "Articulates clear criteria (e.g., disagreement on preferences vs. values, mutual respect present, harm to self or others) for distinguishing healthy tolerance from harmful accommodation"
+    ],
+    "misconceptionFlag": "Students view all disagreement as negative or believe relationships require full agreement; cannot distinguish healthy tolerance from harmful accommodation.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_relationship_skills_dok4_a",
+    "subject": "sel",
+    "dokFloor": 4,
+    "topicKeyword": "relationship_skills",
+    "prompt": "Design a process for rebuilding trust after a significant breach in a relationship. Evaluate what conditions must be present for this process to succeed.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response",
+      "Describes apology only or single action rather than process",
+      "Designs process but doesn't evaluate conditions for success",
+      "Designs multi-step process including accountability and changed behavior, and evaluates necessary conditions (genuine remorse, commitment to change, time, safety)"
+    ],
+    "misconceptionFlag": "Students focus on apology alone or design processes without considering conditions for success.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_self_awareness_dok1_a",
+    "subject": "sel",
+    "dokFloor": 1,
+    "topicKeyword": "self_awareness",
+    "prompt": "List two emotions you experienced during today's activity and identify where you felt them in your body.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response or unrelated answer",
+      "Lists emotions but no body connection OR lists sensations without emotion labels",
+      "Identifies one emotion with body location accurately",
+      "Identifies two distinct emotions with specific body locations"
+    ],
+    "misconceptionFlag": "Students confuse physical sensations with emotions themselves or cannot distinguish between similar emotions (e.g., frustration vs. anger).",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_self_awareness_dok1_b",
+    "subject": "sel",
+    "dokFloor": 1,
+    "topicKeyword": "self_awareness",
+    "prompt": "Identify one personal strength you used during today's collaborative work.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response",
+      "Names an achievement or external outcome rather than a strength",
+      "Names a general strength without connection to today's activity",
+      "Names a specific personal strength with clear connection to how it was applied"
+    ],
+    "misconceptionFlag": "Students conflate external achievements with internal strengths or cannot distinguish between skills and character strengths.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_self_awareness_dok2_a",
+    "subject": "sel",
+    "dokFloor": 2,
+    "topicKeyword": "self_awareness",
+    "prompt": "Explain how your emotional response to today's challenge affected your participation. What was the connection between what you felt and what you did?",
+    "successCriteria": [],
+    "rubric03": [
+      "No response",
+      "Describes emotion OR behavior but not the connection",
+      "Describes both but connection is vague or implied",
+      "Explicitly explains how the emotion influenced specific behaviors with clear cause-effect reasoning"
+    ],
+    "misconceptionFlag": "Students describe emotions and behaviors separately without articulating the causal link or confuse correlation with causation.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_self_awareness_dok2_b",
+    "subject": "sel",
+    "dokFloor": 2,
+    "topicKeyword": "self_awareness",
+    "prompt": "Compare how you felt at the beginning of today's activity versus the end. What caused the shift?",
+    "successCriteria": [],
+    "rubric03": [
+      "No response",
+      "Describes only one state or denies any change",
+      "Describes both states but cause is vague or external attribution only",
+      "Identifies both states and explains internal or interactive factors that caused the shift"
+    ],
+    "misconceptionFlag": "Students describe states without explaining the change mechanism or attribute shifts to external factors only.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_self_awareness_dok3_a",
+    "subject": "sel",
+    "dokFloor": 3,
+    "topicKeyword": "self_awareness",
+    "prompt": "Analyze how your identity (culture, background, experiences) influenced your response to today's topic. Provide a specific example.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response",
+      "Denies influence or gives generic answer without specifics",
+      "Identifies identity factor but connection to response is vague",
+      "Identifies specific identity factor and articulates clear connection to specific aspect of their response"
+    ],
+    "misconceptionFlag": "Students give generic answers or fail to connect specific identity factors to specific responses; may claim identity had no influence.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_self_awareness_dok3_b",
+    "subject": "sel",
+    "dokFloor": 3,
+    "topicKeyword": "self_awareness",
+    "prompt": "Analyze a time when your self-perception differed from how others saw you. What created this gap and what did you learn from it?",
+    "successCriteria": [],
+    "rubric03": [
+      "No response",
+      "Describes self-perception OR others' perception but not the gap",
+      "Describes the gap but doesn't analyze what created it or what was learned",
+      "Analyzes factors creating the perception gap and articulates insight gained"
+    ],
+    "misconceptionFlag": "Students struggle to hold multiple perspectives simultaneously or describe the gap without analyzing contributing factors.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_self_awareness_dok4_a",
+    "subject": "sel",
+    "dokFloor": 4,
+    "topicKeyword": "self_awareness",
+    "prompt": "Reflect on how your understanding of your own emotional patterns has evolved this semester. Design one practice you will continue to build this awareness.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response",
+      "Describes current self-knowledge without evolution or designs unrelated practice",
+      "Describes evolution OR designs practice but not both connected",
+      "Articulates specific evolution in self-awareness and designs practice clearly connected to continuing that growth"
+    ],
+    "misconceptionFlag": "Students describe static self-knowledge rather than evolution or design practices without clear connection to awareness-building.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_self_management_dok1_a",
+    "subject": "sel",
+    "dokFloor": 1,
+    "topicKeyword": "self_management",
+    "prompt": "Name the self-regulation strategy you used (or could have used) when you felt frustrated during today's lesson.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response",
+      "Describes avoidance or gives vague answer like 'calmed down'",
+      "Names a strategy but unclear if appropriate for the situation",
+      "Names a specific appropriate strategy (e.g., deep breathing, positive self-talk, taking a break)"
+    ],
+    "misconceptionFlag": "Students confuse avoidance behaviors with regulation strategies or cannot recall specific strategy names.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_self_management_dok2_a",
+    "subject": "sel",
+    "dokFloor": 2,
+    "topicKeyword": "self_management",
+    "prompt": "Explain why the goal-setting strategy we practiced today would help you complete a challenging assignment.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response",
+      "Restates the strategy without explaining its function",
+      "Gives general benefit (e.g., 'helps you focus') without specific mechanism",
+      "Explains specific mechanism (e.g., 'breaking into steps makes large tasks feel manageable and shows progress')"
+    ],
+    "misconceptionFlag": "Students describe what the strategy is without explaining how it creates change or confuse motivation with mechanism.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_self_management_dok2_b",
+    "subject": "sel",
+    "dokFloor": 2,
+    "topicKeyword": "self_management",
+    "prompt": "Summarize the steps you would take to manage your stress before a high-stakes test using strategies from today's lesson.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response",
+      "Lists one strategy or describes reactive rather than proactive approach",
+      "Lists multiple strategies but sequence is illogical or missing preparation phase",
+      "Describes sequenced plan including preparation strategies before and regulation strategies during"
+    ],
+    "misconceptionFlag": "Students list strategies without sequencing or confuse in-the-moment strategies with preparation strategies.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_self_management_dok3_a",
+    "subject": "sel",
+    "dokFloor": 3,
+    "topicKeyword": "self_management",
+    "prompt": "Analyze why a strategy that works for managing one type of stress might not work for another. Use examples from your experience.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response",
+      "Claims strategies work for everything or gives no examples",
+      "Gives examples but analysis of why fit matters is superficial",
+      "Analyzes specific match between stress types (acute vs. chronic, controllable vs. uncontrollable) and appropriate strategies"
+    ],
+    "misconceptionFlag": "Students treat all stress as identical or all strategies as universally applicable without considering fit.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_self_management_dok3_b",
+    "subject": "sel",
+    "dokFloor": 3,
+    "topicKeyword": "self_management",
+    "prompt": "Justify which self-management strategy from today's lesson would be most effective for YOU given your specific challenges. Explain your reasoning.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response",
+      "Chooses without justification or based on ease alone",
+      "Provides reasoning but doesn't connect to personal challenges specifically",
+      "Articulates specific personal challenges and explains why chosen strategy addresses those challenges"
+    ],
+    "misconceptionFlag": "Students choose strategies based on ease rather than effectiveness or cannot articulate why one fits their situation better.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_self_management_dok4_a",
+    "subject": "sel",
+    "dokFloor": 4,
+    "topicKeyword": "self_management",
+    "prompt": "Design a personalized self-management system for a recurring challenge you face. Explain how each component addresses a specific barrier and evaluate potential limitations of your system.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response",
+      "Describes generic strategy without system design or personal fit",
+      "Designs system but doesn't connect components to specific barriers OR doesn't evaluate limitations",
+      "Designs personalized system with components matched to specific barriers and evaluates realistic limitations"
+    ],
+    "misconceptionFlag": "Students create generic plans without personalization or cannot anticipate limitations.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_social_awareness_dok1_a",
+    "subject": "sel",
+    "dokFloor": 1,
+    "topicKeyword": "social_awareness",
+    "prompt": "Identify one perspective different from your own that was shared during today's discussion.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response",
+      "Restates own perspective or identifies disagreement without articulating the other view",
+      "Identifies another perspective but inaccurately represents it",
+      "Accurately identifies and represents a perspective different from their own"
+    ],
+    "misconceptionFlag": "Students restate their own view or confuse agreement/disagreement with perspective-taking.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_social_awareness_dok2_a",
+    "subject": "sel",
+    "dokFloor": 2,
+    "topicKeyword": "social_awareness",
+    "prompt": "Explain why someone in the scenario we discussed might have reacted the way they did even though you would have reacted differently.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response",
+      "Judges behavior as wrong without explaining motivation OR projects own reaction",
+      "Attempts explanation but relies on stereotypes or shallow reasoning",
+      "Explains behavior through the person's likely perspective, context, or emotional state"
+    ],
+    "misconceptionFlag": "Students project their own motivations onto others or explain behavior as 'wrong' rather than understandable given context.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_social_awareness_dok2_b",
+    "subject": "sel",
+    "dokFloor": 2,
+    "topicKeyword": "social_awareness",
+    "prompt": "Compare how two different people in today's case study experienced the same situation. What factors created different experiences?",
+    "successCriteria": [],
+    "rubric03": [
+      "No response",
+      "States reactions were different without explaining why",
+      "Identifies factors but oversimplifies (e.g., 'different personalities')",
+      "Identifies specific contextual factors (background, prior experience, identity, relationships) that shaped different experiences"
+    ],
+    "misconceptionFlag": "Students describe different reactions without identifying contributing factors or attribute differences to personality only.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_social_awareness_dok3_a",
+    "subject": "sel",
+    "dokFloor": 3,
+    "topicKeyword": "social_awareness",
+    "prompt": "Analyze how systemic factors (beyond individual choices) contributed to the inequity we examined today. Provide two specific examples.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response",
+      "Attributes outcomes to individual choices only",
+      "Acknowledges systemic factors but examples are vague or only one is provided",
+      "Identifies specific systemic factors with two clear examples of how they create or maintain inequity"
+    ],
+    "misconceptionFlag": "Students attribute outcomes entirely to individual choices or identify systems but cannot give specific examples.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_social_awareness_dok3_b",
+    "subject": "sel",
+    "dokFloor": 3,
+    "topicKeyword": "social_awareness",
+    "prompt": "Analyze why empathy alone is insufficient to address the situation we discussed. What else is needed and why?",
+    "successCriteria": [],
+    "rubric03": [
+      "No response",
+      "Argues empathy is sufficient or doesn't distinguish empathy from action",
+      "Identifies that action is needed but doesn't analyze why empathy alone falls short",
+      "Analyzes limits of empathy (awareness vs. action) and identifies specific additional elements needed (skills, resources, power, courage)"
+    ],
+    "misconceptionFlag": "Students conflate empathy with action or believe understanding automatically leads to change.",
+    "timeMinutes": 5
+  },
+  {
+    "id": "exit_social_awareness_dok4_a",
+    "subject": "sel",
+    "dokFloor": 4,
+    "topicKeyword": "social_awareness",
+    "prompt": "Evaluate whose responsibility it is to address the inequity we discussed today. Consider individuals, institutions, and systems in your argument.",
+    "successCriteria": [],
+    "rubric03": [
+      "No response",
+      "Assigns responsibility to one level only without considering others",
+      "Considers multiple levels but argument is one-sided without counter-considerations",
+      "Evaluates responsibility across levels, acknowledges tensions and trade-offs, and presents nuanced argument"
+    ],
+    "misconceptionFlag": "Students assign responsibility to only one level or argue without considering trade-offs and counter-arguments.",
+    "timeMinutes": 5
+  }
+]

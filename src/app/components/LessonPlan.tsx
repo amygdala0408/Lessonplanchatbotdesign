@@ -1,8 +1,32 @@
 import React, { forwardRef, useMemo } from 'react';
 import { cn } from '../../lib/utils';
-import { LessonPlanData } from '../../types';
-import { ExternalLink, Volume2, BookOpen, Target, CheckCircle2 } from 'lucide-react';
+import { LessonPlanData, Objective, Standard, LESSON_PHASE_ORDER, LessonPhaseId } from '../../types';
+import type { LessonPackagePayload } from '../../store/useStore';
+import { ExternalLink, Volume2, BookOpen, Target, CheckCircle2, AlertTriangle, Languages, Quote, ShieldCheck } from 'lucide-react';
 import { QRCodeSVG } from 'qrcode.react';
+
+const PHASE_DISPLAY: Record<LessonPhaseId, string> = {
+  launch: 'Launch',
+  model: 'Model',
+  guided_practice: 'Guided Practice',
+  independent_practice: 'Independent Practice',
+  exit_slip: 'Exit Slip',
+};
+
+function getObjectiveText(o: string | Objective): string {
+  return typeof o === 'string' ? o : o.text;
+}
+
+function getObjectiveDOK(o: string | Objective): number | null {
+  if (typeof o === 'object' && o.dok) return o.dok;
+  return null;
+}
+
+function getStandardText(s: string | Standard | undefined): string {
+  if (!s) return '';
+  if (typeof s === 'string') return s;
+  return [s.code, s.description].filter(Boolean).join(' — ');
+}
 
 // Generate a stable reference ID based on lesson content
 function generateStableRefId(title: string, subject: string, gradeLevel: string): string {
@@ -93,15 +117,28 @@ const FormattedText = ({ text, className = "" }: { text: string; className?: str
   );
 };
 
-export const LessonPlan = forwardRef<HTMLDivElement, LessonPlanData>(({ 
-  title, 
-  gradeLevel, 
-  subject, 
+type LessonPlanRenderProps = LessonPlanData & {
+  lessonPackage?: LessonPackagePayload | null;
+  /**
+   * Penny-emitted student materials (sentence frames, reading passages, etc.)
+   * extracted from the chat stream. Used as a fallback when the catalog-
+   * resolved lessonPackage does not cover the sentence-frame slot.
+   */
+  studentMaterials?: {
+    sentenceFrames?: { purpose?: string; frames: string[] }[];
+    readingPassages?: { title: string; source: string; url: string; lexile?: string; content?: string }[];
+  };
+};
+
+export const LessonPlan = forwardRef<HTMLDivElement, LessonPlanRenderProps>(({
+  title,
+  gradeLevel,
+  subject,
   duration,
   standard,
-  objectives, 
-  materials, 
-  procedure, 
+  objectives,
+  materials,
+  procedure,
   assessment,
   successCriteria,
   supports,
@@ -110,6 +147,8 @@ export const LessonPlan = forwardRef<HTMLDivElement, LessonPlanData>(({
   rubric,
   textOptions,
   teacherModifications,
+  lessonPackage,
+  studentMaterials,
 }, ref) => {
   // Generate stable reference ID
   const refId = useMemo(() => 
@@ -117,9 +156,18 @@ export const LessonPlan = forwardRef<HTMLDivElement, LessonPlanData>(({
     [title, subject, gradeLevel]
   );
 
-  // Extract sentence frames from supports for dynamic display
+  // Build sentence-frame display list. Prefers parser-extracted student
+  // material frames (structured by purpose) and falls back to scanning
+  // `supports` for inline frames so legacy outputs still render.
   const extractedSentenceFrames = useMemo(() => {
     const frames: string[] = [];
+    if (studentMaterials?.sentenceFrames && studentMaterials.sentenceFrames.length > 0) {
+      for (const slot of studentMaterials.sentenceFrames) {
+        if (slot.purpose) frames.push(`__purpose__:${slot.purpose}`);
+        for (const f of slot.frames ?? []) frames.push(f);
+      }
+      return frames;
+    }
     if (supports?.all) {
       supports.all.forEach(s => {
         if (s.includes('"') || s.includes('"') || s.includes('___')) {
@@ -135,7 +183,7 @@ export const LessonPlan = forwardRef<HTMLDivElement, LessonPlanData>(({
       });
     }
     return frames;
-  }, [supports]);
+  }, [studentMaterials, supports]);
 
   return (
     <div ref={ref} className="bg-[#f0ece2] text-[#1a1a1a] p-12 min-h-screen font-['DM_Sans'] relative overflow-hidden print:p-8 print:shadow-none print:bg-white print:text-black">
@@ -188,7 +236,7 @@ export const LessonPlan = forwardRef<HTMLDivElement, LessonPlanData>(({
         {standard && (
           <div className="mt-4 text-sm">
             <span className="font-bold uppercase tracking-widest text-xs opacity-60">Standard: </span>
-            <span className="italic">{standard}</span>
+            <span className="italic">{getStandardText(standard)}</span>
           </div>
         )}
       </header>
@@ -205,12 +253,13 @@ export const LessonPlan = forwardRef<HTMLDivElement, LessonPlanData>(({
                 </h3>
                 <ul className="space-y-3 text-sm leading-relaxed print:text-xs">
                     {objectives.map((obj, i) => {
-                        const dokLevel = extractDOKLevel(obj);
+                        const text = getObjectiveText(obj);
+                        const dokLevel = getObjectiveDOK(obj) ?? extractDOKLevel(text);
                         return (
                           <li key={i} className="flex items-start gap-2">
                             <CheckCircle2 size={16} className="text-green-600 mt-0.5 flex-shrink-0 print:hidden" />
                             <div className="flex-1">
-                              <span>{obj}</span>
+                              <span>{text}</span>
                               {dokLevel && (
                                 <span className={cn(
                                   "ml-2 text-[10px] font-bold uppercase px-1.5 py-0.5 rounded print:border print:border-black",
@@ -493,11 +542,23 @@ export const LessonPlan = forwardRef<HTMLDivElement, LessonPlanData>(({
                       <div className="space-y-6">
                           {/* Dynamic frames from lesson supports */}
                           {extractedSentenceFrames.length > 0 ? (
-                            extractedSentenceFrames.map((frame, i) => (
-                              <div key={i} className="p-4 bg-[#f5f5f0] border-l-4 border-[#1a1a1a] print:bg-white">
-                                <p className="text-sm italic">{frame}</p>
-                              </div>
-                            ))
+                            extractedSentenceFrames.map((frame, i) => {
+                              if (frame.startsWith('__purpose__:')) {
+                                return (
+                                  <p
+                                    key={i}
+                                    className="font-bold uppercase tracking-widest text-[10px] mt-3 mb-1 print:font-mono"
+                                  >
+                                    {frame.replace('__purpose__:', '')}
+                                  </p>
+                                );
+                              }
+                              return (
+                                <div key={i} className="p-4 bg-[#f5f5f0] border-l-4 border-[#1a1a1a] print:bg-white">
+                                  <p className="text-sm italic">{frame}</p>
+                                </div>
+                              );
+                            })
                           ) : (
                             <>
                               <div className="p-4 bg-[#f5f5f0] border-l-4 border-[#1a1a1a] print:bg-white">
@@ -584,6 +645,113 @@ export const LessonPlan = forwardRef<HTMLDivElement, LessonPlanData>(({
                         ))}
                       </div>
                   </div>
+              </div>
+            )}
+
+            {/* PAGE BREAK: Differentiation Map (resolved accommodations by phase) */}
+            {lessonPackage?.accommodationsByPhase && Object.values(lessonPackage.accommodationsByPhase).some((arr) => arr && arr.length > 0) && (
+              <div className="print:break-before-page mt-8 print:mt-0 print:pt-8">
+                <div className="border-2 border-[#1a1a1a] p-8 bg-white shadow-sm relative print:border-2 print:border-black print:shadow-none print:min-h-[90vh]">
+                  <div className="absolute top-4 left-4 text-xs font-mono opacity-50 flex items-center gap-1"><ShieldCheck size={12} /> Differentiation Map</div>
+                  <h3 className="text-center font-bold text-lg mt-6 mb-2 uppercase tracking-widest print:font-mono">Differentiation Map</h3>
+                  <p className="text-center text-sm mb-6 italic opacity-70">Curated accommodations grouped by lesson phase. Pull what fits today; archive what doesn&apos;t.</p>
+                  <div className="space-y-5 text-sm">
+                    {LESSON_PHASE_ORDER.map((phase) => {
+                      const items = lessonPackage.accommodationsByPhase?.[phase] ?? [];
+                      if (items.length === 0) return null;
+                      return (
+                        <div key={phase} className="border-l-4 border-[#1a1a1a] pl-3 print:border-black">
+                          <h5 className="font-['Oswald'] font-bold uppercase tracking-widest text-xs mb-2 print:font-mono">{PHASE_DISPLAY[phase]}</h5>
+                          <ul className="space-y-3 print:text-xs">
+                            {items.map((a) => (
+                              <li key={a.id} className="leading-relaxed">
+                                <div className="font-bold">{a.name || a.id}</div>
+                                <div className="opacity-80"><span className="font-bold">Teacher move:</span> {a.teacherPrompt}</div>
+                                {a.studentMicrocopy && (
+                                  <div className="opacity-80 italic">&ldquo;{a.studentMicrocopy}&rdquo;</div>
+                                )}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* PAGE BREAK: Misconception Alerts */}
+            {lessonPackage?.misconceptions && lessonPackage.misconceptions.length > 0 && (
+              <div className="print:break-before-page mt-8 print:mt-0 print:pt-8">
+                <div className="border-2 border-[#1a1a1a] p-8 bg-white shadow-sm relative print:border-2 print:border-black print:shadow-none print:min-h-[90vh]">
+                  <div className="absolute top-4 left-4 text-xs font-mono opacity-50 flex items-center gap-1"><AlertTriangle size={12} /> Misconception Alerts</div>
+                  <h3 className="text-center font-bold text-lg mt-6 mb-2 uppercase tracking-widest print:font-mono">Likely Misconceptions</h3>
+                  <p className="text-center text-sm mb-6 italic opacity-70">Anticipate, probe, and respond. Catch these before they harden into &ldquo;I&apos;m bad at this&rdquo; stories.</p>
+                  <ul className="space-y-4 text-sm print:text-xs">
+                    {lessonPackage.misconceptions.map((m) => (
+                      <li key={m.id} className="border border-[#1a1a1a]/40 p-3 bg-[#fafafa] print:bg-white print:border-black">
+                        <div className="font-bold mb-1">⚠ {m.misconception}</div>
+                        <div className="mb-1"><span className="font-bold uppercase tracking-widest text-[10px]">Probe:</span> <em>{m.probe}</em></div>
+                        {m.teacherMove && (
+                          <div><span className="font-bold uppercase tracking-widest text-[10px]">Teacher move:</span> {m.teacherMove}</div>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            )}
+
+            {/* PAGE BREAK: Bilingual Glossary */}
+            {lessonPackage?.glossary && lessonPackage.glossary.length > 0 && (
+              <div className="print:break-before-page mt-8 print:mt-0 print:pt-8">
+                <div className="border-2 border-[#1a1a1a] p-8 bg-white shadow-sm relative print:border-2 print:border-black print:shadow-none print:min-h-[90vh]">
+                  <div className="absolute top-4 left-4 text-xs font-mono opacity-50 flex items-center gap-1"><Languages size={12} /> Bilingual Glossary</div>
+                  <h3 className="text-center font-bold text-lg mt-6 mb-2 uppercase tracking-widest print:font-mono">Bilingual Glossary</h3>
+                  <p className="text-center text-sm mb-6 italic opacity-70">Pre-teach or hand to students who need home-language access.</p>
+                  <table className="w-full text-sm print:text-xs border-collapse">
+                    <thead>
+                      <tr className="border-b-2 border-[#1a1a1a] print:border-black">
+                        <th className="text-left p-2 font-['Oswald'] uppercase tracking-widest text-[10px]">Term</th>
+                        <th className="text-left p-2 font-['Oswald'] uppercase tracking-widest text-[10px]">Lang</th>
+                        <th className="text-left p-2 font-['Oswald'] uppercase tracking-widest text-[10px]">Definition</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {lessonPackage.glossary.map((g) => (
+                        <tr key={g.id} className="border-b border-[#1a1a1a]/20 align-top print:border-black">
+                          <td className="p-2 font-bold">{g.term}</td>
+                          <td className="p-2 uppercase font-mono text-xs">{g.language}</td>
+                          <td className="p-2 leading-snug">{g.definition}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            )}
+
+            {/* PAGE BREAK: Citations / Evidence Base */}
+            {lessonPackage?.citations && lessonPackage.citations.length > 0 && (
+              <div className="print:break-before-page mt-8 print:mt-0 print:pt-8">
+                <div className="border-2 border-[#1a1a1a] p-8 bg-white shadow-sm relative print:border-2 print:border-black print:shadow-none">
+                  <div className="absolute top-4 left-4 text-xs font-mono opacity-50 flex items-center gap-1"><Quote size={12} /> Evidence Base</div>
+                  <h3 className="text-center font-bold text-lg mt-6 mb-2 uppercase tracking-widest print:font-mono">Evidence Base</h3>
+                  <p className="text-center text-sm mb-6 italic opacity-70">Research grounding the moves and scaffolds in this lesson.</p>
+                  <ol className="list-decimal pl-6 space-y-2 text-sm print:text-xs">
+                    {lessonPackage.citations.map((c) => (
+                      <li key={c.id} className="leading-snug">
+                        <span>{c.reference}</span>
+                        {c.url && (
+                          <a href={c.url} className="ml-1 text-blue-700 underline print:text-black" target="_blank" rel="noreferrer">
+                            link
+                          </a>
+                        )}
+                      </li>
+                    ))}
+                  </ol>
+                </div>
               </div>
             )}
 

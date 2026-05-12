@@ -1,0 +1,86 @@
+[
+  {
+    "id": "launch",
+    "order": 1,
+    "hasTimer": false,
+    "hasGrouping": false,
+    "hasAssessmentItems": false,
+    "textSlots": [
+      "direction_steps",
+      "vocab_preview",
+      "hook_text",
+      "prior_knowledge_probe",
+      "learning_intention",
+      "success_criteria_preview"
+    ],
+    "defaultMinutesMin": 3,
+    "defaultMinutesMax": 5
+  },
+  {
+    "id": "model",
+    "order": 2,
+    "hasTimer": false,
+    "hasGrouping": false,
+    "hasAssessmentItems": false,
+    "textSlots": [
+      "direction_steps",
+      "frames_box",
+      "read_aloud_cue",
+      "captions",
+      "think_aloud_script",
+      "teacher_say_prompts",
+      "metacognitive_markers"
+    ],
+    "defaultMinutesMin": 6,
+    "defaultMinutesMax": 10
+  },
+  {
+    "id": "guided_practice",
+    "order": 3,
+    "hasTimer": false,
+    "hasGrouping": true,
+    "hasAssessmentItems": true,
+    "textSlots": [
+      "roles_strip",
+      "sentence_frames",
+      "leveled_summary_box",
+      "break_icon_points",
+      "alt_response_box",
+      "calculator_icons",
+      "glossary_box"
+    ],
+    "defaultMinutesMin": 10,
+    "defaultMinutesMax": 15
+  },
+  {
+    "id": "independent_practice",
+    "order": 4,
+    "hasTimer": true,
+    "hasGrouping": false,
+    "hasAssessmentItems": true,
+    "textSlots": [
+      "reduced_items_lane",
+      "alt_response_box",
+      "break_icon_points",
+      "sentence_frames",
+      "glossary_box",
+      "leveled_summary_box"
+    ],
+    "defaultMinutesMin": 8,
+    "defaultMinutesMax": 15
+  },
+  {
+    "id": "exit_slip",
+    "order": 5,
+    "hasTimer": true,
+    "hasGrouping": false,
+    "hasAssessmentItems": true,
+    "textSlots": [
+      "sentence_frames",
+      "reduced_items_lane",
+      "timing_print"
+    ],
+    "defaultMinutesMin": 3,
+    "defaultMinutesMax": 5
+  }
+]

@@ -1,0 +1,903 @@
+[
+  {
+    "id": "ela_argument_realworld_01",
+    "subject": "ela",
+    "topicKeyword": "argumentative_writing",
+    "dokFloor": 2,
+    "openerType": "real_world_connection",
+    "hookText": "Claudette Colvin was arrested for refusing to give up her bus seat nine months before Rosa Parks. She was 15. Why did the movement choose Parks as the face of the boycott—and what does that choice reveal about how arguments are built?",
+    "priorKnowledgeProbe": "What are the three components of a strong argument: claim, evidence, and what else?",
+    "learningIntentionStem": "I can construct a claim supported by strategically selected evidence",
+    "timeMinutes": 4,
+    "researchTags": [
+      "CRP_Relevance",
+      "CRP_CulturalConnection"
+    ]
+  },
+  {
+    "id": "ela_rhetoric_realworld_02",
+    "subject": "ela",
+    "topicKeyword": "rhetorical_analysis",
+    "dokFloor": 3,
+    "openerType": "real_world_connection",
+    "hookText": "Dolores Huerta's 'Sí se puede' became a rallying cry that outlived its moment. Barack Obama borrowed it. What makes some phrases stick in the public mind for decades while others vanish?",
+    "priorKnowledgeProbe": "Name the three rhetorical appeals and identify which one 'Sí se puede' relies on most.",
+    "learningIntentionStem": "I can analyze how speakers craft language for lasting rhetorical impact",
+    "timeMinutes": 4,
+    "researchTags": [
+      "CRP_Relevance",
+      "CRP_CulturalConnection",
+      "Rosenshine_Review"
+    ]
+  },
+  {
+    "id": "ela_poetry_anchor_01",
+    "subject": "ela",
+    "topicKeyword": "poetry_analysis",
+    "dokFloor": 3,
+    "openerType": "anchor_text_preview",
+    "hookText": "Naomi Shihab Nye wrote 'Gate A-4' after witnessing an act of kindness between strangers in an airport. Before we read it—what do airports make you feel? Why might a poet choose that setting?",
+    "priorKnowledgeProbe": "What is the difference between a poem's subject and its theme?",
+    "learningIntentionStem": "I can analyze how a poet's setting choices contribute to meaning",
+    "timeMinutes": 4,
+    "researchTags": [
+      "UDL_Recruiting_Interest",
+      "Hattie_LearningIntentions"
+    ]
+  },
+  {
+    "id": "ela_theme_essential_01",
+    "subject": "ela",
+    "topicKeyword": "theme_development",
+    "dokFloor": 3,
+    "openerType": "essential_question",
+    "hookText": "Toni Morrison said: 'If there's a book you want to read but it hasn't been written yet, then you must write it.' What does it mean when entire communities don't see their stories reflected anywhere?",
+    "priorKnowledgeProbe": "How does a theme differ from a topic? Give an example of each from a text we've read.",
+    "learningIntentionStem": "I can trace how an author develops a theme across a text",
+    "timeMinutes": 5,
+    "researchTags": [
+      "UbD_EssentialQuestions",
+      "CRP_CulturalConnection"
+    ]
+  },
+  {
+    "id": "ela_characterization_phenomenon_01",
+    "subject": "ela",
+    "topicKeyword": "characterization",
+    "dokFloor": 2,
+    "openerType": "phenomenon_hook",
+    "hookText": "In 'The House on Mango Street,' Sandra Cisneros never tells us Esperanza is Latina. We figure it out through details: comadres, tamales, the way her father cries when abuelito dies. How does showing beat telling?",
+    "priorKnowledgeProbe": "What are two methods authors use to reveal character indirectly?",
+    "learningIntentionStem": "I can analyze how authors develop characters through indirect characterization",
+    "timeMinutes": 4,
+    "researchTags": [
+      "5E_Engage",
+      "CRP_CulturalConnection"
+    ]
+  },
+  {
+    "id": "ela_informational_data_01",
+    "subject": "ela",
+    "topicKeyword": "informational_text",
+    "dokFloor": 3,
+    "openerType": "data_puzzle",
+    "hookText": "This graph shows that students who read for 20 minutes daily encounter 1.8 million words per year. Students who read 1 minute daily encounter 8,000. But the graph doesn't tell us who gets those 20 minutes—or who doesn't. What's missing?",
+    "priorKnowledgeProbe": "What are two questions you ask to evaluate whether data tells the full story?",
+    "learningIntentionStem": "I can evaluate the reasoning and evidence in informational texts for what is present and absent",
+    "timeMinutes": 5,
+    "researchTags": [
+      "Formative_Elicit",
+      "CRP_Relevance"
+    ]
+  },
+  {
+    "id": "ela_narrative_misconception_01",
+    "subject": "ela",
+    "topicKeyword": "narrative_writing",
+    "dokFloor": 2,
+    "openerType": "misconception_probe",
+    "hookText": "Quick poll: The best way to start a story is with action—something happening right away. Raise your hand if you agree. Now let's look at how Jesmyn Ward and Ocean Vuong actually begin their novels.",
+    "priorKnowledgeProbe": "What are three elements of narrative structure beyond plot?",
+    "learningIntentionStem": "I can craft a narrative using purposeful structural choices",
+    "timeMinutes": 4,
+    "researchTags": [
+      "Formative_Elicit",
+      "CRP_CulturalConnection"
+    ]
+  },
+  {
+    "id": "ela_synthesis_essential_02",
+    "subject": "ela",
+    "topicKeyword": "synthesis_writing",
+    "dokFloor": 3,
+    "openerType": "essential_question",
+    "hookText": "James Baldwin and Ta-Nehisi Coates both wrote about being Black in America, decades apart. If you were writing about justice today using both their voices—whose argument would frame yours, and why?",
+    "priorKnowledgeProbe": "What is the difference between summarizing sources and synthesizing them into your own argument?",
+    "learningIntentionStem": "I can synthesize multiple sources to develop an original, evidence-based argument",
+    "timeMinutes": 5,
+    "researchTags": [
+      "UbD_EssentialQuestions",
+      "CRP_CulturalConnection"
+    ]
+  },
+  {
+    "id": "ela_vocabulary_retrieval_01",
+    "subject": "ela",
+    "topicKeyword": "academic_vocabulary",
+    "dokFloor": 2,
+    "openerType": "retrieval_practice",
+    "hookText": "Gloria Anzaldúa invented the term 'mestiza consciousness' to describe thinking that crosses borders. In 30 seconds, write a sentence using that concept to describe your own experience navigating different worlds.",
+    "priorKnowledgeProbe": "Define 'code-switching' and give one example from your own life.",
+    "learningIntentionStem": "I can use academic vocabulary precisely to articulate complex ideas",
+    "timeMinutes": 3,
+    "researchTags": [
+      "Rosenshine_Review",
+      "CRP_CulturalConnection"
+    ]
+  },
+  {
+    "id": "ela_drama_anchor_02",
+    "subject": "ela",
+    "topicKeyword": "dramatic_literature",
+    "dokFloor": 3,
+    "openerType": "anchor_text_preview",
+    "hookText": "In Lorraine Hansberry's 'A Raisin in the Sun,' the Younger family argues about what to do with a $10,000 insurance check. Before we read—if your family received unexpected money, whose voice would dominate that decision? Why?",
+    "priorKnowledgeProbe": "How do playwrights reveal conflict differently than novelists?",
+    "learningIntentionStem": "I can analyze how dramatic structure creates meaning through conflict",
+    "timeMinutes": 4,
+    "researchTags": [
+      "UDL_Recruiting_Interest",
+      "CRP_CulturalConnection"
+    ]
+  },
+  {
+    "id": "ela_satire_realworld_02",
+    "subject": "ela",
+    "topicKeyword": "satire_analysis",
+    "dokFloor": 3,
+    "openerType": "real_world_connection",
+    "hookText": "When 'The Onion' published 'No Way to Prevent This, Says Only Nation Where This Regularly Happens,' the article went viral. What makes satire hit harder than a straightforward editorial—and when does it fail?",
+    "priorKnowledgeProbe": "What distinguishes satire from mockery or insult?",
+    "learningIntentionStem": "I can analyze how satire uses irony and humor to critique social issues",
+    "timeMinutes": 4,
+    "researchTags": [
+      "CRP_Relevance",
+      "UDL_Engagement"
+    ]
+  },
+  {
+    "id": "ela_memoir_essential_03",
+    "subject": "ela",
+    "topicKeyword": "memoir_writing",
+    "dokFloor": 3,
+    "openerType": "essential_question",
+    "hookText": "José Olivarez writes: 'I'm suspicious of writers who claim to remember everything.' When you write your own story, what do you do when memory fails—and how do you tell the truth anyway?",
+    "priorKnowledgeProbe": "What distinguishes memoir from autobiography?",
+    "learningIntentionStem": "I can craft memoir that uses selective detail to reveal larger truths",
+    "timeMinutes": 5,
+    "researchTags": [
+      "UbD_EssentialQuestions",
+      "UDL_Engagement"
+    ]
+  },
+  {
+    "id": "ela_research_data_02",
+    "subject": "ela",
+    "topicKeyword": "research_skills",
+    "dokFloor": 2,
+    "openerType": "data_puzzle",
+    "hookText": "These three websites all discuss the same Supreme Court case. One is a law school, one is a news outlet, one is an advocacy group. All cite the same ruling—but they reach opposite conclusions. Now what?",
+    "priorKnowledgeProbe": "What are the steps in evaluating whether a source's interpretation is credible?",
+    "learningIntentionStem": "I can evaluate sources for credibility, bias, and relevance",
+    "timeMinutes": 4,
+    "researchTags": [
+      "Formative_Elicit",
+      "Rosenshine_SmallSteps"
+    ]
+  },
+  {
+    "id": "ela_grammar_retrieval_02",
+    "subject": "ela",
+    "topicKeyword": "grammar_conventions",
+    "dokFloor": 1,
+    "openerType": "retrieval_practice",
+    "hookText": "This is an email a student sent to a college admissions officer. It contains three errors that could cost them the interview. Find them in 60 seconds—then we'll discuss why these particular errors matter.",
+    "priorKnowledgeProbe": "What is the rule for using semicolons versus colons?",
+    "learningIntentionStem": "I can apply grammar conventions strategically in high-stakes writing",
+    "timeMinutes": 3,
+    "researchTags": [
+      "Rosenshine_Review",
+      "CRP_Relevance"
+    ]
+  },
+  {
+    "id": "ela_media_misconception_02",
+    "subject": "ela",
+    "topicKeyword": "media_literacy",
+    "dokFloor": 3,
+    "openerType": "misconception_probe",
+    "hookText": "Poll: You can tell a deepfake from a real video if you look closely enough. Let's test that assumption with five clips—vote on which are real before I reveal the answers.",
+    "priorKnowledgeProbe": "What are two strategies for verifying whether video content is authentic?",
+    "learningIntentionStem": "I can evaluate digital media for authenticity and manipulation",
+    "timeMinutes": 5,
+    "researchTags": [
+      "Formative_Elicit",
+      "UDL_Engagement"
+    ]
+  },
+  {
+    "id": "math_quadratic_phenomenon_01",
+    "subject": "math",
+    "topicKeyword": "quadratic_functions",
+    "dokFloor": 2,
+    "openerType": "phenomenon_hook",
+    "hookText": "A football punter's hang time depends on the same equation that describes a firework's arc and a fountain's spray. Watch these three clips—what curve do they all share, and why does physics keep drawing the same shape?",
+    "priorKnowledgeProbe": "What are the key features of a parabola: vertex, axis of symmetry, and what else?",
+    "learningIntentionStem": "I can model real-world situations using quadratic functions",
+    "timeMinutes": 4,
+    "researchTags": [
+      "5E_Engage",
+      "UDL_Recruiting_Interest"
+    ]
+  },
+  {
+    "id": "math_linear_retrieval_01",
+    "subject": "math",
+    "topicKeyword": "linear_equations",
+    "dokFloor": 2,
+    "openerType": "retrieval_practice",
+    "hookText": "A landscaper charges a flat fee plus an hourly rate. After 3 hours, the bill is $180. After 7 hours, it's $340. Before you touch your calculator—write the equation that models this. You have 90 seconds.",
+    "priorKnowledgeProbe": "What do the slope and y-intercept represent in a real-world linear equation?",
+    "learningIntentionStem": "I can write and interpret linear equations from contextual information",
+    "timeMinutes": 3,
+    "researchTags": [
+      "Rosenshine_Review",
+      "CRP_Relevance"
+    ]
+  },
+  {
+    "id": "math_statistics_data_01",
+    "subject": "math",
+    "topicKeyword": "statistical_reasoning",
+    "dokFloor": 3,
+    "openerType": "data_puzzle",
+    "hookText": "These two headlines describe the same study: 'Coffee Drinkers Live Longer' and 'Coffee Linked to Lifestyle Factors That Increase Lifespan.' Same data. Opposite implications. What's the difference between correlation and causation here?",
+    "priorKnowledgeProbe": "What is the difference between correlation and causation?",
+    "learningIntentionStem": "I can interpret statistical claims and identify misleading presentations",
+    "timeMinutes": 5,
+    "researchTags": [
+      "Formative_Elicit",
+      "UDL_Engagement"
+    ]
+  },
+  {
+    "id": "math_exponential_realworld_01",
+    "subject": "math",
+    "topicKeyword": "exponential_functions",
+    "dokFloor": 2,
+    "openerType": "real_world_connection",
+    "hookText": "Navajo mathematician Dr. Freda Porter uses exponential models to track disease spread in rural communities with limited healthcare access. If cases double every 3 days, how does early intervention change outcomes?",
+    "priorKnowledgeProbe": "How do you distinguish exponential growth from linear growth in a table of values?",
+    "learningIntentionStem": "I can model real-world situations using exponential functions and interpret growth rates",
+    "timeMinutes": 4,
+    "researchTags": [
+      "CRP_Relevance",
+      "CRP_CulturalConnection"
+    ]
+  },
+  {
+    "id": "math_geometry_misconception_01",
+    "subject": "math",
+    "topicKeyword": "geometric_proof",
+    "dokFloor": 3,
+    "openerType": "misconception_probe",
+    "hookText": "A student tested 50 triangles and found that all their angles summed to 180°. Is that a proof? Why do mathematicians demand something different—and what does that demand protect us from?",
+    "priorKnowledgeProbe": "What is the difference between inductive reasoning and deductive proof?",
+    "learningIntentionStem": "I can construct valid geometric proofs using deductive reasoning",
+    "timeMinutes": 5,
+    "researchTags": [
+      "Formative_Elicit",
+      "Rosenshine_Review"
+    ]
+  },
+  {
+    "id": "math_rational_phenomenon_02",
+    "subject": "math",
+    "topicKeyword": "rational_expressions",
+    "dokFloor": 2,
+    "openerType": "phenomenon_hook",
+    "hookText": "A nurse calculates that a patient needs 500mg of medication dissolved in 250mL of saline. The pharmacy sends a different concentration. One decimal error could be fatal. Where in this calculation do errors hide?",
+    "priorKnowledgeProbe": "What happens to a fraction's value when you multiply numerator and denominator by the same number?",
+    "learningIntentionStem": "I can simplify and operate with rational expressions in applied contexts",
+    "timeMinutes": 4,
+    "researchTags": [
+      "5E_Engage",
+      "CRP_Relevance"
+    ]
+  },
+  {
+    "id": "math_trig_essential_01",
+    "subject": "math",
+    "topicKeyword": "trigonometry",
+    "dokFloor": 3,
+    "openerType": "essential_question",
+    "hookText": "Ancient Polynesian navigators crossed thousands of miles of open ocean using stars, waves, and the angles between them. How can three ratios from a right triangle map the entire curved surface of Earth?",
+    "priorKnowledgeProbe": "What are sine, cosine, and tangent, and how are they defined in a right triangle?",
+    "learningIntentionStem": "I can apply trigonometric ratios to solve real-world navigation and measurement problems",
+    "timeMinutes": 5,
+    "researchTags": [
+      "UbD_EssentialQuestions",
+      "CRP_CulturalConnection"
+    ]
+  },
+  {
+    "id": "math_polynomial_retrieval_02",
+    "subject": "math",
+    "topicKeyword": "polynomial_operations",
+    "dokFloor": 2,
+    "openerType": "retrieval_practice",
+    "hookText": "Expand (2x - 3)(x + 5) and factor x² - 4x - 21 completely. No notes, no calculator. 90 seconds. These operations are the foundation for everything we build this week.",
+    "priorKnowledgeProbe": "What patterns do you look for when factoring a quadratic expression?",
+    "learningIntentionStem": "I can perform operations with polynomials fluently",
+    "timeMinutes": 3,
+    "researchTags": [
+      "Rosenshine_Review",
+      "Hattie_PriorKnowledge"
+    ]
+  },
+  {
+    "id": "math_probability_data_02",
+    "subject": "math",
+    "topicKeyword": "probability",
+    "dokFloor": 3,
+    "openerType": "data_puzzle",
+    "hookText": "A basketball player has made 80% of her free throws all season. She just missed four in a row. A commentator says she's 'due' for a make. Your friend says the next shot is still 80%. Who's right—and what's the mathematical name for the commentator's error?",
+    "priorKnowledgeProbe": "What does it mean for events to be independent?",
+    "learningIntentionStem": "I can analyze probability situations and identify common reasoning errors",
+    "timeMinutes": 5,
+    "researchTags": [
+      "Formative_Elicit",
+      "CRP_Relevance"
+    ]
+  },
+  {
+    "id": "math_systems_realworld_02",
+    "subject": "math",
+    "topicKeyword": "systems_equations",
+    "dokFloor": 2,
+    "openerType": "real_world_connection",
+    "hookText": "A community organizer needs to rent tables and chairs for an event. Tables cost $15 and seat 8. Chairs cost $3 each. With a $500 budget and 200 guests, what combinations work? What's the most cost-effective option?",
+    "priorKnowledgeProbe": "What are two methods for solving a system of linear equations?",
+    "learningIntentionStem": "I can solve systems of equations and interpret solutions in real-world contexts",
+    "timeMinutes": 4,
+    "researchTags": [
+      "CRP_Relevance",
+      "Rosenshine_SmallSteps"
+    ]
+  },
+  {
+    "id": "math_function_phenomenon_03",
+    "subject": "math",
+    "topicKeyword": "function_transformations",
+    "dokFloor": 2,
+    "openerType": "phenomenon_hook",
+    "hookText": "I'll show you one parent function. Then I'll shift it left 3, stretch it vertically by 2, and flip it. Before I graph the result—predict where the new vertex will be. Write your prediction, then we'll check.",
+    "priorKnowledgeProbe": "What transformations can you apply to a parent function, and how do they appear in the equation?",
+    "learningIntentionStem": "I can predict how transformations affect a function's graph",
+    "timeMinutes": 4,
+    "researchTags": [
+      "5E_Engage",
+      "Formative_Elicit"
+    ]
+  },
+  {
+    "id": "math_logarithm_essential_02",
+    "subject": "math",
+    "topicKeyword": "logarithms",
+    "dokFloor": 3,
+    "openerType": "essential_question",
+    "hookText": "The Richter scale measures earthquakes logarithmically because the range of earthquake energies spans millions of magnitudes. What problem does logarithmic scaling solve—and where else do we need it?",
+    "priorKnowledgeProbe": "What is the relationship between logarithmic and exponential functions?",
+    "learningIntentionStem": "I can use logarithms to solve exponential equations and interpret logarithmic scales",
+    "timeMinutes": 5,
+    "researchTags": [
+      "UbD_EssentialQuestions",
+      "CRP_Relevance"
+    ]
+  },
+  {
+    "id": "math_sequence_retrieval_03",
+    "subject": "math",
+    "topicKeyword": "sequences_series",
+    "dokFloor": 2,
+    "openerType": "retrieval_practice",
+    "hookText": "Write the explicit formula for this sequence: 5, 11, 17, 23... Now write the explicit formula for this one: 3, 6, 12, 24... You have 2 minutes. Identify which type each sequence is before you write the formula.",
+    "priorKnowledgeProbe": "What distinguishes an arithmetic sequence from a geometric sequence?",
+    "learningIntentionStem": "I can identify, extend, and write explicit formulas for arithmetic and geometric sequences",
+    "timeMinutes": 4,
+    "researchTags": [
+      "Rosenshine_Review",
+      "Hattie_PriorKnowledge"
+    ]
+  },
+  {
+    "id": "math_inequalities_misconception_02",
+    "subject": "math",
+    "topicKeyword": "inequalities",
+    "dokFloor": 2,
+    "openerType": "misconception_probe",
+    "hookText": "A student solved -2x > 6 and got x > -3. Test their answer by substituting x = 0. Does it work? What rule did they forget, and why does that rule exist mathematically?",
+    "priorKnowledgeProbe": "When do you flip the inequality sign, and why?",
+    "learningIntentionStem": "I can solve and graph compound inequalities correctly",
+    "timeMinutes": 4,
+    "researchTags": [
+      "Formative_Elicit",
+      "Rosenshine_Review"
+    ]
+  },
+  {
+    "id": "math_modeling_anchor_01",
+    "subject": "math",
+    "topicKeyword": "mathematical_modeling",
+    "dokFloor": 3,
+    "openerType": "anchor_text_preview",
+    "hookText": "NASA mathematician Katherine Johnson calculated orbital trajectories by hand for the Mercury missions. Her models had to account for variables that didn't appear in textbooks. What makes real-world modeling messier than classroom problems?",
+    "priorKnowledgeProbe": "What are the steps of the mathematical modeling cycle?",
+    "learningIntentionStem": "I can develop, test, and refine mathematical models for complex situations",
+    "timeMinutes": 5,
+    "researchTags": [
+      "UDL_Recruiting_Interest",
+      "CRP_CulturalConnection"
+    ]
+  },
+  {
+    "id": "science_evolution_misconception_01",
+    "subject": "science",
+    "topicKeyword": "natural_selection",
+    "dokFloor": 3,
+    "openerType": "misconception_probe",
+    "hookText": "Quick poll: Do humans share a common ancestor with chimpanzees, or did humans evolve from chimpanzees? These are different claims. Let's examine what the fossil and genetic evidence actually supports.",
+    "priorKnowledgeProbe": "What is the difference between 'evolved from' and 'share a common ancestor with'?",
+    "learningIntentionStem": "I can use multiple lines of evidence to explain evolutionary relationships",
+    "timeMinutes": 5,
+    "researchTags": [
+      "Formative_Elicit",
+      "Rosenshine_Review"
+    ]
+  },
+  {
+    "id": "science_chemistry_phenomenon_01",
+    "subject": "science",
+    "topicKeyword": "chemical_reactions",
+    "dokFloor": 2,
+    "openerType": "phenomenon_hook",
+    "hookText": "I'm mixing two clear liquids. Both are room temperature. Watch closely. [Exothermic reaction produces heat and color change] Where did that heat come from—and where did it go? Nothing was plugged in.",
+    "priorKnowledgeProbe": "What evidence indicates that a chemical reaction has occurred?",
+    "learningIntentionStem": "I can predict products and explain energy changes in chemical reactions",
+    "timeMinutes": 4,
+    "researchTags": [
+      "5E_Engage",
+      "UDL_Recruiting_Interest"
+    ]
+  },
+  {
+    "id": "science_physics_data_01",
+    "subject": "science",
+    "topicKeyword": "motion_forces",
+    "dokFloor": 3,
+    "openerType": "data_puzzle",
+    "hookText": "This position-time graph curves upward. This one is a straight diagonal line. Before I tell you anything—which object is accelerating, and how do you know just from looking at the shape of the graph?",
+    "priorKnowledgeProbe": "What is the difference between constant velocity and constant acceleration?",
+    "learningIntentionStem": "I can analyze motion graphs to determine velocity and acceleration",
+    "timeMinutes": 5,
+    "researchTags": [
+      "Formative_Elicit",
+      "UDL_Engagement"
+    ]
+  },
+  {
+    "id": "science_ecology_realworld_01",
+    "subject": "science",
+    "topicKeyword": "ecosystem_dynamics",
+    "dokFloor": 2,
+    "openerType": "real_world_connection",
+    "hookText": "When wolves returned to Yellowstone after 70 years, rivers literally changed course. Elk behavior shifted. Willow trees grew back. Erosion patterns reversed. How does one predator reshape an entire landscape?",
+    "priorKnowledgeProbe": "What is a trophic cascade?",
+    "learningIntentionStem": "I can trace how changes in one population affect an entire ecosystem",
+    "timeMinutes": 4,
+    "researchTags": [
+      "CRP_Relevance",
+      "5E_Engage"
+    ]
+  },
+  {
+    "id": "science_genetics_essential_01",
+    "subject": "science",
+    "topicKeyword": "dna_heredity",
+    "dokFloor": 3,
+    "openerType": "essential_question",
+    "hookText": "Your DNA is 99.9% identical to every other human. That 0.1% creates all human diversity. What does that tell us about how we categorize difference—and what does DNA actually explain versus what we assume it explains?",
+    "priorKnowledgeProbe": "What is the relationship between genes, chromosomes, and DNA?",
+    "learningIntentionStem": "I can explain genetic inheritance and evaluate claims about what genetics determines",
+    "timeMinutes": 5,
+    "researchTags": [
+      "UbD_EssentialQuestions",
+      "CRP_CulturalConnection"
+    ]
+  },
+  {
+    "id": "science_climate_phenomenon_02",
+    "subject": "science",
+    "topicKeyword": "climate_systems",
+    "dokFloor": 2,
+    "openerType": "phenomenon_hook",
+    "hookText": "This time-lapse shows Arctic sea ice from 1979 to today. Before I say anything—describe exactly what you observe. What patterns do you notice? What questions does this data raise for you?",
+    "priorKnowledgeProbe": "What is the difference between weather and climate?",
+    "learningIntentionStem": "I can analyze evidence of climate change and evaluate its effects on Earth systems",
+    "timeMinutes": 4,
+    "researchTags": [
+      "5E_Engage",
+      "UDL_Recruiting_Interest"
+    ]
+  },
+  {
+    "id": "science_cells_retrieval_01",
+    "subject": "science",
+    "topicKeyword": "cell_biology",
+    "dokFloor": 2,
+    "openerType": "retrieval_practice",
+    "hookText": "Sketch a eukaryotic cell from memory. Label at least six organelles and write one function for each. Two minutes. This is the foundation for everything we study in molecular biology.",
+    "priorKnowledgeProbe": "What is the difference between prokaryotic and eukaryotic cells?",
+    "learningIntentionStem": "I can relate cell structure to cellular function",
+    "timeMinutes": 3,
+    "researchTags": [
+      "Rosenshine_Review",
+      "Hattie_PriorKnowledge"
+    ]
+  },
+  {
+    "id": "science_energy_data_02",
+    "subject": "science",
+    "topicKeyword": "energy_transfer",
+    "dokFloor": 3,
+    "openerType": "data_puzzle",
+    "hookText": "This Sankey diagram shows energy flow through a car engine. Only 25% reaches the wheels. The other 75% becomes heat. If energy is conserved, why can't we capture that 75% and reuse it?",
+    "priorKnowledgeProbe": "What does the law of conservation of energy state?",
+    "learningIntentionStem": "I can trace energy transformations and explain efficiency losses",
+    "timeMinutes": 5,
+    "researchTags": [
+      "Formative_Elicit",
+      "UDL_Engagement"
+    ]
+  },
+  {
+    "id": "science_astronomy_phenomenon_03",
+    "subject": "science",
+    "topicKeyword": "stellar_evolution",
+    "dokFloor": 2,
+    "openerType": "phenomenon_hook",
+    "hookText": "Betelgeuse is 700 light-years away. The light we see tonight left that star when the Mongol Empire was rising. If Betelgeuse exploded 600 years ago, would we know yet? How does distance create time travel?",
+    "priorKnowledgeProbe": "What is a light-year measuring: distance or time?",
+    "learningIntentionStem": "I can explain stellar evolution and how distance affects astronomical observation",
+    "timeMinutes": 4,
+    "researchTags": [
+      "5E_Engage",
+      "UDL_Recruiting_Interest"
+    ]
+  },
+  {
+    "id": "science_chemistry_misconception_02",
+    "subject": "science",
+    "topicKeyword": "atomic_structure",
+    "dokFloor": 2,
+    "openerType": "misconception_probe",
+    "hookText": "Draw what you think an atom looks like. [Collects drawings] Most of us drew electrons orbiting like planets. That model helped Bohr in 1913—but quantum mechanics showed it's beautiful and wrong. What does the evidence actually suggest?",
+    "priorKnowledgeProbe": "What are the three subatomic particles and their locations in an atom?",
+    "learningIntentionStem": "I can explain how the quantum model differs from earlier atomic models",
+    "timeMinutes": 5,
+    "researchTags": [
+      "Formative_Elicit",
+      "Rosenshine_Review"
+    ]
+  },
+  {
+    "id": "science_biology_realworld_02",
+    "subject": "science",
+    "topicKeyword": "protein_synthesis",
+    "dokFloor": 3,
+    "openerType": "real_world_connection",
+    "hookText": "Dr. Kizzmekia Corbett led the team that developed the Moderna COVID vaccine. Her work required understanding exactly how mRNA instructs cells to make proteins. How did her team write genetic instructions that your ribosomes could read?",
+    "priorKnowledgeProbe": "What is the central dogma of molecular biology: DNA to RNA to what?",
+    "learningIntentionStem": "I can explain how genetic information flows from DNA to RNA to protein",
+    "timeMinutes": 4,
+    "researchTags": [
+      "CRP_Relevance",
+      "CRP_CulturalConnection"
+    ]
+  },
+  {
+    "id": "science_physics_essential_02",
+    "subject": "science",
+    "topicKeyword": "wave_properties",
+    "dokFloor": 3,
+    "openerType": "essential_question",
+    "hookText": "Sound can shatter glass. Light can cut steel. Microwaves cook food. Radio waves carry your voice across continents. How can invisible waves—things you cannot touch—carry such different amounts of energy?",
+    "priorKnowledgeProbe": "What are wavelength, frequency, and amplitude, and how do they relate to energy?",
+    "learningIntentionStem": "I can explain how wave properties determine energy transfer and applications",
+    "timeMinutes": 5,
+    "researchTags": [
+      "UbD_EssentialQuestions",
+      "UDL_Engagement"
+    ]
+  },
+  {
+    "id": "science_earth_phenomenon_04",
+    "subject": "science",
+    "topicKeyword": "plate_tectonics",
+    "dokFloor": 2,
+    "openerType": "phenomenon_hook",
+    "hookText": "This map shows every major earthquake from the past 50 years. They're not random—they follow lines across the globe. What's creating this pattern, and what can it predict about where earthquakes will strike next?",
+    "priorKnowledgeProbe": "What are the three types of plate boundaries?",
+    "learningIntentionStem": "I can explain how plate tectonics shapes Earth's surface and causes geological events",
+    "timeMinutes": 4,
+    "researchTags": [
+      "5E_Engage",
+      "UDL_Recruiting_Interest"
+    ]
+  },
+  {
+    "id": "science_environmental_data_03",
+    "subject": "science",
+    "topicKeyword": "human_impact",
+    "dokFloor": 3,
+    "openerType": "data_puzzle",
+    "hookText": "Global plastic production has increased 200x since 1950. But ocean plastic has increased only 5x. Where is the rest of the plastic going—and is that better or worse for ecosystems?",
+    "priorKnowledgeProbe": "What are the primary pathways through which plastic enters ecosystems?",
+    "learningIntentionStem": "I can analyze data to evaluate human impact on environmental systems",
+    "timeMinutes": 5,
+    "researchTags": [
+      "Formative_Elicit",
+      "CRP_Relevance"
+    ]
+  },
+  {
+    "id": "science_genetics_retrieval_02",
+    "subject": "science",
+    "topicKeyword": "mendelian_genetics",
+    "dokFloor": 2,
+    "openerType": "retrieval_practice",
+    "hookText": "Set up a Punnett square for a cross between two heterozygous parents (Aa x Aa). Calculate genotypic and phenotypic ratios. Two minutes, no notes. This skill unlocks everything we do with inheritance patterns.",
+    "priorKnowledgeProbe": "What is the difference between genotype and phenotype?",
+    "learningIntentionStem": "I can predict inheritance patterns using Punnett squares and probability",
+    "timeMinutes": 3,
+    "researchTags": [
+      "Rosenshine_Review",
+      "Hattie_PriorKnowledge"
+    ]
+  },
+  {
+    "id": "ss_democracy_essential_01",
+    "subject": "social_studies",
+    "topicKeyword": "democratic_principles",
+    "dokFloor": 3,
+    "openerType": "essential_question",
+    "hookText": "When the Constitution was ratified, only 6% of Americans could vote. Today we call it the foundation of democracy. Can a document written to exclude most people still be a democratic document—and who gets to decide?",
+    "priorKnowledgeProbe": "What are the core principles of constitutional democracy?",
+    "learningIntentionStem": "I can analyze the tensions between founding ideals and historical exclusions",
+    "timeMinutes": 5,
+    "researchTags": [
+      "UbD_EssentialQuestions",
+      "CRP_CulturalConnection"
+    ]
+  },
+  {
+    "id": "ss_economics_realworld_01",
+    "subject": "social_studies",
+    "topicKeyword": "economic_systems",
+    "dokFloor": 2,
+    "openerType": "real_world_connection",
+    "hookText": "The average pair of athletic shoes costs $100. The worker in Vietnam who assembled them earned about $2.50 for that pair. Trace the other $97.50—where does it go, and whose labor is valued most?",
+    "priorKnowledgeProbe": "What are the basic components of a supply chain?",
+    "learningIntentionStem": "I can analyze economic relationships and labor dynamics in global supply chains",
+    "timeMinutes": 4,
+    "researchTags": [
+      "CRP_Relevance",
+      "CRP_CulturalConnection"
+    ]
+  },
+  {
+    "id": "ss_civil_rights_essential_02",
+    "subject": "social_studies",
+    "topicKeyword": "civil_rights_movement",
+    "dokFloor": 3,
+    "openerType": "essential_question",
+    "hookText": "The Voting Rights Act passed in 1965. The Supreme Court gutted key provisions in 2013. Shelby County v. Holder. Now states pass new voting laws yearly. Did the movement win—and if so, why are we still fighting?",
+    "priorKnowledgeProbe": "What legal strategies did civil rights activists use to challenge segregation?",
+    "learningIntentionStem": "I can evaluate the long-term trajectory and contested legacy of civil rights legislation",
+    "timeMinutes": 5,
+    "researchTags": [
+      "UbD_EssentialQuestions",
+      "CRP_CulturalConnection"
+    ]
+  },
+  {
+    "id": "ss_primary_source_retrieval_01",
+    "subject": "social_studies",
+    "topicKeyword": "historical_analysis",
+    "dokFloor": 2,
+    "openerType": "retrieval_practice",
+    "hookText": "Examine this 1898 political cartoon about the Spanish-American War. In 90 seconds: identify the historical context, the cartoonist's argument, and one symbol they're using. What perspective is missing?",
+    "priorKnowledgeProbe": "What are the steps for analyzing a primary source: sourcing, contextualization, and what else?",
+    "learningIntentionStem": "I can interpret primary sources and identify whose perspectives they represent and omit",
+    "timeMinutes": 4,
+    "researchTags": [
+      "Rosenshine_Review",
+      "CRP_CulturalConnection"
+    ]
+  },
+  {
+    "id": "ss_geography_phenomenon_01",
+    "subject": "social_studies",
+    "topicKeyword": "human_geography",
+    "dokFloor": 2,
+    "openerType": "phenomenon_hook",
+    "hookText": "These satellite images show Lagos, Nigeria in 1990 and today. The urban area has tripled. Millions of people moved. Farmland vanished. What forces drive this transformation—and who benefits or loses?",
+    "priorKnowledgeProbe": "What push and pull factors drive urbanization?",
+    "learningIntentionStem": "I can analyze how human activity shapes and is shaped by geography",
+    "timeMinutes": 4,
+    "researchTags": [
+      "5E_Engage",
+      "CRP_CulturalConnection"
+    ]
+  },
+  {
+    "id": "ss_constitution_misconception_01",
+    "subject": "social_studies",
+    "topicKeyword": "constitutional_law",
+    "dokFloor": 3,
+    "openerType": "misconception_probe",
+    "hookText": "Quick poll: Does the Constitution explicitly guarantee your right to vote? Read the 15th Amendment carefully: 'The right of citizens... shall not be denied or abridged.' Does 'shall not be denied' mean 'is granted'? The difference matters.",
+    "priorKnowledgeProbe": "What is the difference between rights explicitly stated and rights protected from infringement?",
+    "learningIntentionStem": "I can distinguish between enumerated, implied, and protected rights in constitutional law",
+    "timeMinutes": 5,
+    "researchTags": [
+      "Formative_Elicit",
+      "Rosenshine_Review"
+    ]
+  },
+  {
+    "id": "ss_globalization_realworld_02",
+    "subject": "social_studies",
+    "topicKeyword": "globalization",
+    "dokFloor": 2,
+    "openerType": "real_world_connection",
+    "hookText": "Your smartphone contains cobalt from Congo, rare earths from China, was designed in California, assembled in Vietnam, and shipped through Singapore. Trace who benefits at each step—and who bears the costs.",
+    "priorKnowledgeProbe": "What are the primary drivers of economic globalization?",
+    "learningIntentionStem": "I can evaluate the costs and benefits of globalization for different stakeholders",
+    "timeMinutes": 4,
+    "researchTags": [
+      "CRP_Relevance",
+      "CRP_CulturalConnection"
+    ]
+  },
+  {
+    "id": "ss_revolution_essential_03",
+    "subject": "social_studies",
+    "topicKeyword": "political_revolution",
+    "dokFloor": 3,
+    "openerType": "essential_question",
+    "hookText": "Fannie Lou Hamer asked: 'Is this America?' Frederick Douglass asked: 'What to the slave is the Fourth of July?' When people demand that a nation live up to its ideals, is that patriotism or revolution—and who decides?",
+    "priorKnowledgeProbe": "What conditions have historically preceded major social and political movements?",
+    "learningIntentionStem": "I can analyze the causes, processes, and contested legacies of movements for justice",
+    "timeMinutes": 5,
+    "researchTags": [
+      "UbD_EssentialQuestions",
+      "CRP_CulturalConnection"
+    ]
+  },
+  {
+    "id": "ss_media_data_01",
+    "subject": "social_studies",
+    "topicKeyword": "media_influence",
+    "dokFloor": 3,
+    "openerType": "data_puzzle",
+    "hookText": "In 1968, three TV networks reached 90% of Americans with roughly similar news. Today, there are thousands of news sources, and we share less common ground. Are we more informed or less—and how would you measure that?",
+    "priorKnowledgeProbe": "How do you evaluate bias and reliability in news sources?",
+    "learningIntentionStem": "I can analyze how media fragmentation affects democratic discourse and public knowledge",
+    "timeMinutes": 5,
+    "researchTags": [
+      "Formative_Elicit",
+      "CRP_Relevance"
+    ]
+  },
+  {
+    "id": "ss_indigenous_realworld_03",
+    "subject": "social_studies",
+    "topicKeyword": "indigenous_perspectives",
+    "dokFloor": 3,
+    "openerType": "real_world_connection",
+    "hookText": "This map shows treaty boundaries from the 1800s. This one shows current reservation lands. The difference represents broken promises, court cases, and ongoing resistance. What happened—and what's still being fought for today?",
+    "priorKnowledgeProbe": "What legal concepts govern the relationship between tribal nations and the federal government?",
+    "learningIntentionStem": "I can analyze historical and contemporary issues affecting Indigenous sovereignty and rights",
+    "timeMinutes": 4,
+    "researchTags": [
+      "CRP_CulturalConnection",
+      "UDL_Recruiting_Interest"
+    ]
+  },
+  {
+    "id": "sel_growth_mindset_realworld_01",
+    "subject": "sel",
+    "topicKeyword": "growth_mindset",
+    "dokFloor": 2,
+    "openerType": "real_world_connection",
+    "hookText": "Mae Jemison was rejected from NASA twice before becoming the first Black woman in space. What she said about those rejections reveals something important about how we interpret setbacks. What story do you tell yourself when you fail?",
+    "priorKnowledgeProbe": "What is the difference between a fixed mindset and a growth mindset?",
+    "learningIntentionStem": "I can recognize fixed mindset patterns and reframe setbacks productively",
+    "timeMinutes": 4,
+    "researchTags": [
+      "CRP_CulturalConnection",
+      "UDL_Engagement"
+    ]
+  },
+  {
+    "id": "sel_conflict_realworld_02",
+    "subject": "sel",
+    "topicKeyword": "conflict_resolution",
+    "dokFloor": 2,
+    "openerType": "real_world_connection",
+    "hookText": "Two students haven't spoken in a month over something that started as a misread text message. How do small misunderstandings become lasting ruptures—and what does repair actually require?",
+    "priorKnowledgeProbe": "What are the components of active listening?",
+    "learningIntentionStem": "I can apply conflict resolution strategies to repair and strengthen relationships",
+    "timeMinutes": 4,
+    "researchTags": [
+      "CRP_Relevance",
+      "UDL_Recruiting_Interest"
+    ]
+  },
+  {
+    "id": "sel_identity_essential_01",
+    "subject": "sel",
+    "topicKeyword": "identity_development",
+    "dokFloor": 3,
+    "openerType": "essential_question",
+    "hookText": "Audre Lorde wrote: 'If I didn't define myself for myself, I would be crunched into other people's fantasies for me and eaten alive.' What parts of who you are did you choose—and what parts were chosen for you?",
+    "priorKnowledgeProbe": "What factors shape personal identity?",
+    "learningIntentionStem": "I can reflect on how multiple factors contribute to my identity and how I define myself",
+    "timeMinutes": 5,
+    "researchTags": [
+      "UbD_EssentialQuestions",
+      "CRP_CulturalConnection"
+    ]
+  },
+  {
+    "id": "sel_stress_phenomenon_01",
+    "subject": "sel",
+    "topicKeyword": "stress_management",
+    "dokFloor": 2,
+    "openerType": "phenomenon_hook",
+    "hookText": "Your heart races. Your palms sweat. Your brain screams 'danger.' But you're just taking a test. Your body can't tell the difference between a tiger and a pop quiz. Why does your nervous system react the same way—and can you intervene?",
+    "priorKnowledgeProbe": "What happens in your body during the fight-or-flight response?",
+    "learningIntentionStem": "I can recognize my stress signals and apply evidence-based regulation strategies",
+    "timeMinutes": 4,
+    "researchTags": [
+      "5E_Engage",
+      "UDL_Engagement"
+    ]
+  },
+  {
+    "id": "sel_decision_realworld_02",
+    "subject": "sel",
+    "topicKeyword": "decision_making",
+    "dokFloor": 2,
+    "openerType": "real_world_connection",
+    "hookText": "You're accepted to two colleges. One is your dream school but costs $30,000 more per year. The other offered a full scholarship. The deposit deadline is Friday. How do you make a decision you won't regret in ten years?",
+    "priorKnowledgeProbe": "What are the steps of a structured decision-making process?",
+    "learningIntentionStem": "I can apply a systematic process to make complex, high-stakes decisions",
+    "timeMinutes": 4,
+    "researchTags": [
+      "CRP_Relevance",
+      "Rosenshine_SmallSteps"
+    ]
+  }
+]

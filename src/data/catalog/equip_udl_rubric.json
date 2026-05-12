@@ -1,0 +1,140 @@
+{
+  "passThreshold": {
+    "averageMin": 2.5,
+    "noCategoryAt": 0
+  },
+  "criteria": [
+    {
+      "id": "alignment_coherence",
+      "title": "Alignment & Coherence",
+      "levels": [
+        {
+          "score": 0,
+          "descriptor": "Misaligned."
+        },
+        {
+          "score": 1,
+          "descriptor": "Significant gaps or unclear alignment."
+        },
+        {
+          "score": 2,
+          "descriptor": "Minor gaps; mostly aligned."
+        },
+        {
+          "score": 3,
+          "descriptor": "Objectives, tasks, and assessment align tightly to the standard; canonical ID shown."
+        }
+      ]
+    },
+    {
+      "id": "instructional_design",
+      "title": "Instructional Design (Model Fidelity)",
+      "levels": [
+        {
+          "score": 0,
+          "descriptor": "No coherent structure."
+        },
+        {
+          "score": 1,
+          "descriptor": "Structure weak; minimal checks."
+        },
+        {
+          "score": 2,
+          "descriptor": "Structure present with occasional drift."
+        },
+        {
+          "score": 3,
+          "descriptor": "Clear I‑We‑You or 5E/PBL structure with checks for understanding."
+        }
+      ]
+    },
+    {
+      "id": "access_supports",
+      "title": "Access & Supports (UDL/HLP)",
+      "levels": [
+        {
+          "score": 0,
+          "descriptor": "No supports."
+        },
+        {
+          "score": 1,
+          "descriptor": "Generic supports; not personalized."
+        },
+        {
+          "score": 2,
+          "descriptor": "Supports present but inconsistent or weak rationale."
+        },
+        {
+          "score": 3,
+          "descriptor": "At least one scaffold per flagged student; rationale (HLP/UDL) shown."
+        }
+      ]
+    },
+    {
+      "id": "assessment_for_learning",
+      "title": "Assessment for Learning",
+      "levels": [
+        {
+          "score": 0,
+          "descriptor": "Missing or unusable."
+        },
+        {
+          "score": 1,
+          "descriptor": "Low‑value prompt; no criteria."
+        },
+        {
+          "score": 2,
+          "descriptor": "Slip present, missing one element."
+        },
+        {
+          "score": 3,
+          "descriptor": "Exit slip includes DOK + misconception + 0–3 criteria; drives next steps."
+        }
+      ]
+    },
+    {
+      "id": "materials_licensing",
+      "title": "Materials & Licensing",
+      "levels": [
+        {
+          "score": 0,
+          "descriptor": "Unlicensed/unknown sources."
+        },
+        {
+          "score": 1,
+          "descriptor": "Mixed sources; unclear licensing."
+        },
+        {
+          "score": 2,
+          "descriptor": "OER with incomplete metadata."
+        },
+        {
+          "score": 3,
+          "descriptor": "OER only; TASL printed; accessibility noted."
+        }
+      ]
+    },
+    {
+      "id": "tone_clarity",
+      "title": "Professional Tone & Clarity",
+      "levels": [
+        {
+          "score": 0,
+          "descriptor": "Unusable."
+        },
+        {
+          "score": 1,
+          "descriptor": "Vague; requires guessing."
+        },
+        {
+          "score": 2,
+          "descriptor": "Mostly clear; some ambiguity."
+        },
+        {
+          "score": 3,
+          "descriptor": "Clear microcopy; actionable steps; teacher‑ready."
+        }
+      ]
+    }
+  ]
+}

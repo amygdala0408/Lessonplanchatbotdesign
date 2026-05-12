@@ -1,0 +1,5452 @@
+[
+  {
+    "id": "math.affective_belonging_classroom",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "fostering classroom belonging",
+    "type": "social_collaborative",
+    "problemType": "students feel isolated or excluded during math collaboration.",
+    "targetMisconception": "belief that belonging is unrelated to academic success.",
+    "teacherMoves": [
+      "establish norms of mutual respect (udl 8.3)",
+      "facilitate cooperative structures ensuring all voices (hlp cooperative learning)",
+      "conduct regular community-building check-ins (udl 9.3)"
+    ],
+    "studentTasks": [
+      "engage in rotating partner or group tasks.",
+      "contribute at least one idea per discussion.",
+      "reflect on group collaboration climate."
+    ],
+    "supports": [
+      "group norm anchor chart (udl 8.3)",
+      "rotating-role cards (hlp cooperative learning)",
+      "belonging reflection slip (udl 9.3)"
+    ],
+    "fadePlan": "teacher leads community routines. • gradually delegate role assignment to students. • fade as culture becomes self-sustaining.",
+    "whenNotToUse": "avoid when addressing confidential or individual assessment feedback.",
+    "formativeChecks": [
+      "- peer feedback on group climate. - teacher observation logs."
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "udl 8.3",
+      "udl 9.3",
+      "hlp cooperative learning"
+    ],
+    "selStrand": "relationship-skills",
+    "representationTags": [
+      "rtag.language.inclusive_language",
+      "rtag.identity.intersectional_identities",
+      "rtag.identity.lgbtqia_inclusion",
+      "rtag.identity.disability_inclusion"
+    ],
+    "cspTags": [
+      "co_design_with_community"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "HLP-CEC",
+      "UDL-CAST-3.0"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.affective_collaborative_resilience",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "collaborative resilience circles",
+    "type": "linguistic",
+    "problemType": "groups falter after initial failure on challenging tasks.",
+    "targetMisconception": "belief that peers cannot help when stuck.",
+    "teacherMoves": [
+      "facilitate quick reflection huddles mid-task (udl 8.3)",
+      "provide structure for collective problem-solving (hlp cooperative learning)",
+      "model language for requesting help (udl 2.1)"
+    ],
+    "studentTasks": [
+      "participate in short resilience check-ins.",
+      "share what was tried and what next.",
+      "revise plan collaboratively."
+    ],
+    "supports": [
+      "resilience circle protocol card (hlp cooperative learning)",
+      "group progress tracker (udl 6.3)",
+      "help-request sentence stems (udl 2.1)"
+    ],
+    "fadePlan": "teacher initiates structured huddles. • students later self-initiate check-ins without card prompts.",
+    "whenNotToUse": "avoid with very short activities lacking collaboration.",
+    "formativeChecks": [
+      "- observation rubric of group persistence. - student self-rating of collaboration."
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "udl 8.3",
+      "udl 2.1",
+      "udl 6.3",
+      "hlp cooperative learning"
+    ],
+    "selStrand": "relationship-skills",
+    "representationTags": [
+      "rtag.language.inclusive_language",
+      "rtag.identity.intersectional_identities",
+      "rtag.identity.lgbtqia_inclusion",
+      "rtag.identity.disability_inclusion"
+    ],
+    "cspTags": [
+      "co_design_with_community"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "HLP-CEC",
+      "UDL-CAST-3.0"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.affective_goal_setting",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "academic goal-setting and reflection",
+    "type": "metacognitive",
+    "problemType": "students lack ownership of learning targets.",
+    "targetMisconception": "belief that grades are outside of personal control.",
+    "teacherMoves": [
+      "model setting smart math goals (udl 6.4)",
+      "confer individually to refine measurable criteria (hlp feedback)",
+      "celebrate incremental progress (udl 9.1)"
+    ],
+    "studentTasks": [
+      "draft and track personal math goals.",
+      "monitor progress using evidence.",
+      "reflect on strategy adjustments."
+    ],
+    "supports": [
+      "goal-tracker template (udl 6.4)",
+      "progress thermometer chart (udl 9.1)",
+      "reflection checklist (hlp feedback)"
+    ],
+    "fadePlan": "teacher models and monitors initial goals. • reduce scaffolds as students self-track and adjust independently.",
+    "whenNotToUse": "avoid when class is completing externally-scored standardized testing.",
+    "formativeChecks": [
+      "- review goal trackers biweekly. - reflection conference notes."
+    ],
+    "bloomLevel": "evaluate",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "udl 6.4",
+      "udl 9.1",
+      "hlp feedback"
+    ],
+    "selStrand": "responsible-decision-making",
+    "representationTags": [
+      "rtag.language.inclusive_language",
+      "rtag.identity.neurodiversity",
+      "rtag.context.global_voices"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "HLP-CEC",
+      "ROSENSHINE-2012"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.affective_growth_mindset_talks",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "growth-mindset language and feedback",
+    "type": "linguistic",
+    "problemType": "students express fixed beliefs about math ability.",
+    "targetMisconception": "belief that intelligence is static and success means innate talent.",
+    "teacherMoves": [
+      "use process-focused feedback (udl 8.1)",
+      "share brain plasticity mini-lessons (hlp motivation)",
+      "model vulnerability discussing own struggles (udl 7.3)"
+    ],
+    "studentTasks": [
+      "rephrase negative self-talk statements.",
+      "write reflection on one mistake that led to growth.",
+      "encourage peers using growth-oriented feedback."
+    ],
+    "supports": [
+      "feedback stem cards (udl 8.1)",
+      "reflection prompt sheet (udl 6.4)",
+      "poster of mindset statements (hlp motivation)"
+    ],
+    "fadePlan": "teacher models language first. • students practice with prompts. • fade supports as positive self-talk becomes habitual.",
+    "whenNotToUse": "avoid when time is needed for procedural fluency practice only.",
+    "formativeChecks": [
+      "- collect language samples pre/post. - student self-rating of confidence."
+    ],
+    "bloomLevel": "understand",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "udl 8.1",
+      "udl 7.3",
+      "udl 6.4",
+      "hlp motivation"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.language.inclusive_language",
+      "rtag.identity.intersectional_identities",
+      "rtag.identity.lgbtqia_inclusion"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "HLP-CEC",
+      "ROSENSHINE-2012"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.affective_math_anxiety_reduction",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "reducing math anxiety through predictable routines",
+    "type": "unknown",
+    "problemType": "students freeze or avoid participation in math due to anxiety.",
+    "targetMisconception": "belief that mistakes in math are proof of low ability.",
+    "teacherMoves": [
+      "establish consistent warm-up routine with low-stakes entry (udl 7.2)",
+      "model self-talk reframing errors as data (hlp social/emotional support)",
+      "provide calm feedback emphasizing progress (udl 9.1)"
+    ],
+    "studentTasks": [
+      "complete predictable daily warm-up.",
+      "reflect on effort rather than correctness.",
+      "share one learning gain per week."
+    ],
+    "supports": [
+      "warm-up template (udl 7.2)",
+      "growth-reflection log (udl 9.1)",
+      "emotion check-in scale (hlp sel integration)"
+    ],
+    "fadePlan": "teacher leads structured warm-ups and reflection prompts. • gradually shorten teacher cueing as students internalize routine.",
+    "whenNotToUse": "avoid during summative test preparation windows requiring timed pacing.",
+    "formativeChecks": [
+      "- student self-report on anxiety levels. - teacher notes of participation change."
+    ],
+    "bloomLevel": "understand",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "udl 7.2",
+      "udl 9.1",
+      "hlp social/emotional support",
+      "hlp sel integration"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.identity.neurodiversity",
+      "rtag.identity.disability_inclusion",
+      "rtag.language.inclusive_language"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "HLP-CEC",
+      "UDL-CAST-3.0"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.affective_math_identity",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "building positive math identity",
+    "type": "unknown",
+    "problemType": "students do not see themselves as 'math people'.",
+    "targetMisconception": "belief that math identity belongs only to high achievers.",
+    "teacherMoves": [
+      "display diverse mathematician stories (udl 7.3)",
+      "invite students to connect math to personal interests (hlp relevance)",
+      "use reflective journaling on math self-concept (udl 6.4)"
+    ],
+    "studentTasks": [
+      "research mathematicians from varied backgrounds.",
+      "write connection between math and own life.",
+      "share reflections in small groups."
+    ],
+    "supports": [
+      "identity journal (udl 6.4)",
+      "mathematician biography cards (udl 7.3)",
+      "interest-connection template (hlp relevance)"
+    ],
+    "fadePlan": "begin with structured biography prompts. • shift to student-selected role models and self-connections.",
+    "whenNotToUse": "avoid when lesson time is limited to procedural test prep.",
+    "formativeChecks": [
+      "- review identity journals for self-concept change. - peer sharing feedback."
+    ],
+    "bloomLevel": "evaluate",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "udl 7.3",
+      "udl 6.4",
+      "hlp relevance"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.context.global_voices",
+      "rtag.identity.intersectional_identities",
+      "rtag.identity.lgbtqia_inclusion",
+      "rtag.context.global_voices",
+      "rtag.identity.disability_inclusion"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge",
+      "criticality"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "HLP-CEC",
+      "WWC-MPS-2012"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.affective_productive_struggle_norms",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "normalizing productive struggle",
+    "type": "unknown",
+    "problemType": "students give up quickly when problems feel hard.",
+    "targetMisconception": "belief that speed equals intelligence.",
+    "teacherMoves": [
+      "share examples of productive struggle and recovery (udl 7.2)",
+      "model think-aloud showing perseverance (hlp modeling)",
+      "praise effort strategies explicitly (udl 8.1)"
+    ],
+    "studentTasks": [
+      "document thinking steps even when incomplete.",
+      "discuss what was learned from struggle.",
+      "try alternative approach before asking for help."
+    ],
+    "supports": [
+      "struggle log sheet (udl 6.4)",
+      "perseverance rubric (hlp feedback)",
+      "anchor chart of effort strategies (udl 8.1)"
+    ],
+    "fadePlan": "teacher models and guides reflection. • reduce prompts gradually; students self-record perseverance evidence.",
+    "whenNotToUse": "avoid in timed fluency practice with fixed algorithms.",
+    "formativeChecks": [
+      "- review struggle logs. - observation of persistence behaviors."
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "udl 7.2",
+      "udl 8.1",
+      "udl 6.4",
+      "hlp modeling",
+      "hlp feedback"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.language.inclusive_language",
+      "rtag.identity.neurodiversity",
+      "rtag.identity.disability_inclusion"
+    ],
+    "cspTags": [
+      "criticality"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "ROSENSHINE-2012",
+      "HLP-CEC"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.affective_relevance_connections",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "connecting math to real-life relevance",
+    "type": "social_collaborative",
+    "problemType": "students see math as disconnected from their lives.",
+    "targetMisconception": "belief that math has no social or personal value.",
+    "teacherMoves": [
+      "integrate culturally relevant contexts (udl 7.2)",
+      "invite students to contribute examples (hlp relevance)",
+      "facilitate discussion on societal applications (udl 8.4)"
+    ],
+    "studentTasks": [
+      "research real-world issues involving quantitative reasoning.",
+      "present how math can inform decisions.",
+      "reflect on personal connection."
+    ],
+    "supports": [
+      "real-world context template (udl 7.2)",
+      "student-generated example board (hlp relevance)",
+      "discussion stems on social applications (udl 8.4)"
+    ],
+    "fadePlan": "teacher models first relevant context. • students generate own examples. • fade teacher selection; sustain student ownership.",
+    "whenNotToUse": "avoid when lesson objective is isolated skill fluency only.",
+    "formativeChecks": [
+      "- exit reflection: “how did this connect to your world?” - peer discussion notes."
+    ],
+    "bloomLevel": "create",
+    "dokLevel": 4,
+    "udlHlpTags": [
+      "udl 7.2",
+      "udl 8.4",
+      "hlp relevance"
+    ],
+    "selStrand": "social-awareness",
+    "representationTags": [
+      "rtag.pedagogy.project_based_relevance",
+      "rtag.context.global_voices",
+      "rtag.context.global_voices",
+      "rtag.identity.cultural_authenticity"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge",
+      "criticality"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "WWC-MPS-2012",
+      "HLP-CEC"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.collaborative_problem_solving",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Collaborative Mathematical Problem Solving",
+    "type": "social_collaborative",
+    "problemType": "Students solve math individually without peer collaboration benefits",
+    "targetMisconception": "Belief that math is individual rather than collaborative",
+    "teacherMoves": [
+      "Teach mathematical collaboration skills (HLP Cooperative Learning)",
+      "Model productive mathematical discourse (UDL 6.1)",
+      "Structure collaborative problem-solving (UDL 8.3)",
+      "Build mathematical discussion norms (UDL 8.3)"
+    ],
+    "studentTasks": [
+      "Share mathematical thinking with partners",
+      "Build on others' mathematical ideas",
+      "Ask clarifying questions about approaches",
+      "Compare and evaluate different strategies",
+      "Synthesize group thinking into solutions"
+    ],
+    "supports": [
+      "Mathematical collaboration norms (UDL 8.3)",
+      "Thinking sharing protocol (UDL 5.3)",
+      "Building talk moves for math (UDL 5.3)",
+      "Strategy comparison template (UDL 6.2)",
+      "Group solution synthesis guide (UDL 6.2)"
+    ],
+    "fadePlan": "Phase 1: Teacher structures collaboration with explicit roles → Phase 2: Reduced structure with collaboration norms → Phase 3: Independent collaborative work → Phase 4: Natural mathematical collaboration",
+    "whenNotToUse": "When individual assessment is needed.",
+    "formativeChecks": [
+      "- Collaboration participation",
+      "- Building on others' ideas",
+      "- Strategy comparison quality",
+      "- Group synthesis quality"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.1",
+      "UDL 6.2",
+      "UDL 8.3",
+      "HLP Cooperative Learning"
+    ],
+    "selStrand": "relationship-skills",
+    "representationTags": [
+      "rtag.pedagogy.collaborative_dialogue",
+      "rtag.pedagogy.student_voice",
+      "rtag.language.inclusive_language"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge",
+      "co_design_with_community"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "hlp_jenkins_2003_cooperative_learning",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "math.conceptual_absolute_value",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "meaning of absolute value",
+    "type": "linguistic",
+    "problemType": "confusion interpreting absolute value as 'always positive' rather than distance",
+    "targetMisconception": "belief that absolute value just removes negatives without meaning.",
+    "teacherMoves": [
+      "model distance on number line from zero (udl 1.1)",
+      "use real-life contexts (e.g., temperature difference) (udl 7.2)",
+      "question to elicit meaning beyond sign (hlp questioning)"
+    ],
+    "studentTasks": [
+      "plot numbers and their distances from zero.",
+      "represent scenarios showing magnitude difference.",
+      "explain meaning of each absolute value."
+    ],
+    "supports": [
+      "number line manipulatives (udl 1.1)",
+      "context cards (udl 7.2)",
+      "sentence stems for definition building (udl 2.1)"
+    ],
+    "fadePlan": "teacher models distance examples. - students complete guided context problems. - finally, define and apply without models.",
+    "whenNotToUse": "avoid during symbolic equation drills only.",
+    "formativeChecks": [
+      "- verbal check: define absolute value in own words. - context matching mini-quiz."
+    ],
+    "bloomLevel": "understand",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "udl 1.1",
+      "udl 7.2",
+      "udl 2.1",
+      "hlp questioning"
+    ],
+    "selStrand": "social-awareness",
+    "representationTags": [
+      "rtag.pedagogy.project_based_relevance",
+      "rtag.media.accessible_media",
+      "rtag.language.home_language"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "UDL-CAST-3.0",
+      "ROSENSHINE-2012"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.conceptual_distributive_property",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "distributive property conceptual scaffold",
+    "type": "linguistic",
+    "problemType": "confusion applying distributive property to expressions",
+    "targetMisconception": "assuming only multiplication over addition applies in limited forms.",
+    "teacherMoves": [
+      "model area representation linking to algebraic expansion (udl 3.3)",
+      "highlight common factors visually before distribution (hlp representation)",
+      "encourage verbal reasoning for each term produced (udl 6.1)"
+    ],
+    "studentTasks": [
+      "build algebra tiles or rectangles showing distribution.",
+      "write equivalent expressions step by step.",
+      "explain meaning of each distributed term."
+    ],
+    "supports": [
+      "algebra tiles (udl 3.3)",
+      "color coding for factors (udl 2.5)",
+      "sentence frames for term explanation (udl 2.1)"
+    ],
+    "fadePlan": "start concrete (tiles), move to pictorial, end symbolic only. - teacher gradually withholds color and frames.",
+    "whenNotToUse": "avoid during timed symbolic drills where conceptual depth isn’t goal.",
+    "formativeChecks": [
+      "- spot-check tile models for accuracy. - written reflection: why distribute?"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "udl 3.3",
+      "udl 6.1",
+      "udl 2.5",
+      "udl 2.1",
+      "hlp representation"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.media.accessible_media",
+      "rtag.language.home_language",
+      "rtag.identity.neurodiversity"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "ROSENSHINE-2012",
+      "UDL-CAST-3.0"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.conceptual_equivalence_balance",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "equation balance and equality",
+    "type": "metacognitive",
+    "problemType": "misunderstanding equality as 'the answer is' instead of a relationship",
+    "targetMisconception": "believing the equal sign means 'do something' not 'two sides are same value'.",
+    "teacherMoves": [
+      "use balance scale model to represent equations (udl 1.1)",
+      "think-aloud maintaining balance when performing operations (hlp explicit instruction)",
+      "prompt students to check balance after each step (hlp feedback)"
+    ],
+    "studentTasks": [
+      "model algebraic steps with balance visuals.",
+      "write matching expressions to maintain equality.",
+      "reflect on how operations preserve equivalence."
+    ],
+    "supports": [
+      "virtual or physical balance tool (udl 5.2)",
+      "step-tracking organizer (udl 6.3)",
+      "peer check protocol for equivalence (hlp peer collaboration)"
+    ],
+    "fadePlan": "teacher demonstrates with scale imagery. - gradually remove visuals while students justify symbolically. - final stage: students self-check without models.",
+    "whenNotToUse": "avoid in pure numeric fluency drills without conceptual aim.",
+    "formativeChecks": [
+      "- quick write: explain why adding to both sides keeps balance. - observation during partner checks."
+    ],
+    "bloomLevel": "understand",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "udl 1.1",
+      "udl 5.2",
+      "udl 6.3",
+      "hlp explicit instruction",
+      "hlp feedback",
+      "hlp peer collaboration"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.media.accessible_media",
+      "rtag.identity.neurodiversity",
+      "rtag.identity.disability_inclusion"
+    ],
+    "cspTags": [
+      "criticality"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "ROSENSHINE-2012",
+      "WWC-MPS-2012"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.conceptual_exponent_meaning",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "meaning of exponents as repeated multiplication",
+    "type": "linguistic",
+    "problemType": "difficulty interpreting exponent notation conceptually",
+    "targetMisconception": "thinking exponents mean multiplication by the base times the exponent.",
+    "teacherMoves": [
+      "demonstrate repeated multiplication with concrete visuals (udl 3.3)",
+      "compare additive vs. multiplicative growth examples (udl 7.2)",
+      "prompt students to verbalize meaning of power notation (hlp language supports)"
+    ],
+    "studentTasks": [
+      "expand exponential expressions concretely.",
+      "create tables showing exponential growth.",
+      "explain contrast between linear and exponential change."
+    ],
+    "supports": [
+      "base-exponent chart (udl 2.5)",
+      "growth comparison graph (udl 1.2)",
+      "verbal stem cards (“___ to the power of ___ means...”) (hlp language supports)"
+    ],
+    "fadePlan": "teacher models first two examples with visuals. - then students complete partially filled charts. - finally, students interpret notation without aids.",
+    "whenNotToUse": "avoid if class already transitioning to logarithmic operations mastery.",
+    "formativeChecks": [
+      "- quick graph sketch to show difference in growth. - oral check using stem cards."
+    ],
+    "bloomLevel": "understand",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "udl 3.3",
+      "udl 7.2",
+      "udl 2.5",
+      "udl 1.2",
+      "hlp language supports"
+    ],
+    "selStrand": "social-awareness",
+    "representationTags": [
+      "rtag.media.accessible_media",
+      "rtag.language.home_language",
+      "rtag.identity.neurodiversity"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "UDL-CAST-3.0",
+      "WWC-MPS-2012"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.conceptual_function_meaning",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "understanding functions as mappings",
+    "type": "linguistic",
+    "problemType": "difficulty interpreting a function as an input-output relationship",
+    "targetMisconception": "thinking a function must always increase or be linear.",
+    "teacherMoves": [
+      "demonstrate mapping diagrams with varied patterns (udl 3.3)",
+      "ask students to predict outputs before revealing rule (hlp questioning)",
+      "highlight non-linear examples to challenge assumption (udl 8.3)"
+    ],
+    "studentTasks": [
+      "match inputs and outputs using arrows or tables.",
+      "identify whether relations qualify as functions.",
+      "explain verbally what makes each relation functional."
+    ],
+    "supports": [
+      "function mapping cards (udl 2.5)",
+      "color-coded input-output mats (udl 1.2)",
+      "frayer model for “function” (udl 3.1)"
+    ],
+    "fadePlan": "start with direct teacher modeling. - move to collaborative classification. - end with independent generation of examples and counterexamples.",
+    "whenNotToUse": "avoid when students are practicing advanced transformations already mastered.",
+    "formativeChecks": [
+      "- quick sort of function vs. non-function cards. - oral explanation checkpoint."
+    ],
+    "bloomLevel": "understand",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "udl 3.3",
+      "udl 8.3",
+      "udl 2.5",
+      "udl 1.2",
+      "udl 3.1",
+      "hlp questioning"
+    ],
+    "selStrand": "responsible-decision-making",
+    "representationTags": [
+      "rtag.media.accessible_media",
+      "rtag.language.home_language",
+      "rtag.identity.neurodiversity"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "WWC-MPS-2012",
+      "UDL-CAST-3.0"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.conceptual_linear_relationships",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "concept of linear relationships",
+    "type": "linguistic",
+    "problemType": "misunderstanding slope as rise-over-run only without context",
+    "targetMisconception": "believing slope only represents steepness, not rate of change.",
+    "teacherMoves": [
+      "model real-world contexts linking rate to slope (udl 7.2)",
+      "use double-number lines to compare units (udl 1.2)",
+      "facilitate discussion connecting graph to table and context (hlp multiple representations)"
+    ],
+    "studentTasks": [
+      "build and interpret tables of values.",
+      "describe what slope means in context.",
+      "match graphs to verbal situations."
+    ],
+    "supports": [
+      "rate of change organizer (udl 5.3)",
+      "unit-rate double number line (udl 2.5)",
+      "sentence stems (“for every ___, ___ changes by ___”) (hlp multiple representations)"
+    ],
+    "fadePlan": "teacher leads with context-rich modeling. - gradually remove organizers as students generate interpretations independently.",
+    "whenNotToUse": "avoid when working purely on symbolic slope calculations.",
+    "formativeChecks": [
+      "- oral reasoning check. - quick graph-context match card."
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "udl 7.2",
+      "udl 1.2",
+      "udl 5.3",
+      "udl 2.5",
+      "hlp multiple representations"
+    ],
+    "selStrand": "responsible-decision-making",
+    "representationTags": [
+      "rtag.pedagogy.project_based_relevance",
+      "rtag.identity.cultural_authenticity",
+      "rtag.media.accessible_media"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "WWC-MPS-2012",
+      "ROSENSHINE-2012"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.conceptual_polynomial_structure",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "polynomial structure recognition",
+    "type": "linguistic",
+    "problemType": "difficulty identifying components and hierarchy of polynomials",
+    "targetMisconception": "believing polynomials are random strings of letters and numbers.",
+    "teacherMoves": [
+      "highlight structure using color and grouping (udl 3.3)",
+      "compare polynomial forms through pattern sorting (hlp comparison)",
+      "model degree and term identification aloud (udl 6.1)"
+    ],
+    "studentTasks": [
+      "sort expressions by number of terms or degree.",
+      "label coefficients, variables, and exponents.",
+      "explain pattern differences verbally."
+    ],
+    "supports": [
+      "color-coding organizer (udl 2.5)",
+      "polynomial sort cards (udl 3.3)",
+      "sentence stems for structure talk (udl 2.1)"
+    ],
+    "fadePlan": "start with modeled color-coded sorts. - gradually remove color cues and stems. - end with independent structural analysis.",
+    "whenNotToUse": "avoid when students are only practicing operations fluency.",
+    "formativeChecks": [
+      "- sorting observation rubric. - quick oral naming check."
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "udl 3.3",
+      "udl 6.1",
+      "udl 2.5",
+      "hlp comparison"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.media.accessible_media",
+      "rtag.language.home_language",
+      "rtag.identity.neurodiversity"
+    ],
+    "cspTags": [
+      "criticality"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "WWC-MPS-2012",
+      "UDL-CAST-3.0"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.conceptual_quadratic_visual",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "quadratic relationships through area models",
+    "type": "metacognitive",
+    "problemType": "difficulty linking quadratic equations to geometric meaning",
+    "targetMisconception": "thinking squared terms are purely symbolic.",
+    "teacherMoves": [
+      "use area models to show x², 2x, and constant regions (udl 3.3)",
+      "highlight symmetry visually (hlp explicit instruction)",
+      "connect to graph shape through pattern observation (udl 6.3)"
+    ],
+    "studentTasks": [
+      "build area representations using manipulatives.",
+      "record dimensions and areas.",
+      "predict graph shape from pattern."
+    ],
+    "supports": [
+      "algebra tiles (udl 3.3)",
+      "dynamic graphing tool (udl 5.2)",
+      "area diagram template (udl 1.2)"
+    ],
+    "fadePlan": "move from physical tiles to drawn diagrams to symbolic representation. - remove templates once students justify area-based reasoning independently.",
+    "whenNotToUse": "avoid when focus is factoring fluency only.",
+    "formativeChecks": [
+      "- exit ticket: sketch area model and label terms."
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "udl 3.3",
+      "udl 6.3",
+      "udl 5.2",
+      "udl 1.2",
+      "hlp explicit instruction"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.media.accessible_media",
+      "rtag.identity.neurodiversity"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "WWC-MPS-2012",
+      "UDL-CAST-3.0"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.conceptual_ratio_models",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "visual ratio models for proportional reasoning",
+    "type": "linguistic",
+    "problemType": "difficulty connecting concrete ratio models to symbolic equations",
+    "targetMisconception": "belief that proportions only exist when numbers are whole.",
+    "teacherMoves": [
+      "model ratio reasoning with visual bars before symbolic notation (udl 3.3)",
+      "use a think-aloud to show unit comparison across contexts (udl 6.1)",
+      "guide students to verbalize multiplicative relationships (hlp scaffolding)"
+    ],
+    "studentTasks": [
+      "build and label ratio tables from visuals.",
+      "explain how one quantity changes with another.",
+      "convert a visual ratio into a proportion statement."
+    ],
+    "supports": [
+      "ratio table template (udl 5.1)",
+      "color-coded bar models (udl 2.5)",
+      "sentence stems for comparative language (udl 2.1)"
+    ],
+    "fadePlan": "teacher fully models visual→symbol connection. - next: students complete partially filled visuals with prompts. - finally: students create and justify visuals independently.",
+    "whenNotToUse": "avoid when students already show proportional reasoning fluency or when time-pressured procedural review is the goal.",
+    "formativeChecks": [
+      "- observe reasoning during conversion. - exit ticket: explain a proportional relationship verbally."
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "udl 3.3",
+      "udl 6.1",
+      "udl 5.1",
+      "udl 2.5",
+      "udl 2.1",
+      "hlp scaffolding"
+    ],
+    "selStrand": "social-awareness",
+    "representationTags": [
+      "rtag.media.accessible_media",
+      "rtag.language.home_language",
+      "rtag.identity.neurodiversity"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "ROSENSHINE-2012",
+      "UDL-CAST-3.0"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.conceptual_systems_multiple_rep",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "systems of equations across representations",
+    "type": "linguistic",
+    "problemType": "struggle connecting graphical, algebraic, and contextual forms",
+    "targetMisconception": "belief that each representation is unrelated.",
+    "teacherMoves": [
+      "demonstrate solving same system three ways (udl 3.3)",
+      "facilitate side-by-side comparison discussion (hlp representation)",
+      "prompt students to justify equivalence of intersection point (udl 8.4)"
+    ],
+    "studentTasks": [
+      "solve systems graphically, algebraically, contextually.",
+      "explain why each yields same solution.",
+      "create a context matching given equations."
+    ],
+    "supports": [
+      "triple-representation template (udl 3.3)",
+      "graphing calculator or desmos activity (udl 5.2)",
+      "sentence stems connecting forms (udl 2.1)"
+    ],
+    "fadePlan": "teacher models tri-rep connections. - gradually removes template supports. - students articulate independently across forms.",
+    "whenNotToUse": "avoid if students already proficiently interconnect representations.",
+    "formativeChecks": [
+      "- comparison chart check. - oral reasoning prompt: 'how do you know all forms agree?'"
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "udl 3.3",
+      "udl 8.4",
+      "udl 5.2",
+      "udl 2.1",
+      "hlp representation"
+    ],
+    "selStrand": "relationship-skills",
+    "representationTags": [
+      "rtag.media.accessible_media",
+      "rtag.context.global_voices",
+      "rtag.identity.neurodiversity"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "WWC-MPS-2012",
+      "ROSENSHINE-2012"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.cultural_community_data_projects",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "community data projects",
+    "type": "social_collaborative",
+    "problemType": "students see math as detached from real issues",
+    "targetMisconception": "belief that math has no application to community improvement.",
+    "teacherMoves": [
+      "introduce local data relevant to students’ community (udl 7.2)",
+      "guide question formulation about real-world issues (hlp inquiry)",
+      "model data analysis as civic reasoning (udl 8.4)"
+    ],
+    "studentTasks": [
+      "collect or research local data.",
+      "analyze patterns using statistical tools.",
+      "present findings proposing community actions."
+    ],
+    "supports": [
+      "community data set (udl 7.2)",
+      "inquiry planning template (hlp inquiry)",
+      "presentation rubric for civic reasoning (udl 8.4)"
+    ],
+    "fadePlan": "teacher models first local issue analysis → students plan group investigations with guidance → fade to independent, student-chosen projects.",
+    "whenNotToUse": "avoid when curriculum pacing restricts open inquiry.",
+    "formativeChecks": [
+      "- review research questions for relevance. - presentation peer feedback."
+    ],
+    "bloomLevel": "create",
+    "dokLevel": 4,
+    "udlHlpTags": [
+      "udl 7.2",
+      "udl 8.4",
+      "hlp inquiry"
+    ],
+    "selStrand": "responsible-decision-making",
+    "representationTags": [
+      "rtag.pedagogy.project_based_relevance",
+      "rtag.context.global_voices",
+      "rtag.context.global_voices",
+      "rtag.identity.cultural_authenticity"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge",
+      "criticality"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "WWC-MPS-2012",
+      "HLP-CEC"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.cultural_critical_data_analysis",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "critical data analysis and equity discussions",
+    "type": "social_collaborative",
+    "problemType": "students interpret data without questioning bias",
+    "targetMisconception": "belief that graphs and statistics are neutral.",
+    "teacherMoves": [
+      "provide biased and unbiased data examples (udl 8.4)",
+      "facilitate discussion on representation and framing (hlp discourse)",
+      "prompt critique of missing voices (udl 7.3)"
+    ],
+    "studentTasks": [
+      "compare data sets for bias indicators.",
+      "discuss whose perspectives are represented.",
+      "propose alternative data collection methods."
+    ],
+    "supports": [
+      "bias detection checklist (udl 8.4)",
+      "data critique sentence stems (udl 2.1)",
+      "reflection journal (udl 6.4)"
+    ],
+    "fadePlan": "teacher models bias identification → then supports small-group critiques → fade scaffolds as students independently identify bias.",
+    "whenNotToUse": "avoid when lesson objective is purely computational.",
+    "formativeChecks": [
+      "- exit slip: identify bias in new data. - group discussion notes."
+    ],
+    "bloomLevel": "evaluate",
+    "dokLevel": 4,
+    "udlHlpTags": [
+      "udl 8.4",
+      "udl 7.3",
+      "udl 2.1",
+      "udl 6.4",
+      "hlp discourse"
+    ],
+    "selStrand": "social-awareness",
+    "representationTags": [
+      "rtag.context.global_voices",
+      "rtag.context.global_voices",
+      "rtag.identity.cultural_authenticity",
+      "rtag.language.inclusive_language"
+    ],
+    "cspTags": [
+      "criticality"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "WWC-MPS-2012",
+      "HLP-CEC"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.cultural_ethnomath_connections",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "ethnomathematics connections",
+    "type": "cognitive",
+    "problemType": "students think math was invented only by western cultures.",
+    "targetMisconception": "belief that mathematical ideas belong to a single culture.",
+    "teacherMoves": [
+      "share global mathematical contributions (udl 7.2)",
+      "facilitate research on cultural math practices (hlp inquiry)",
+      "discuss cultural influence on problem-solving methods (udl 8.3)"
+    ],
+    "studentTasks": [
+      "research a non-western mathematical contribution.",
+      "present comparison to modern practice.",
+      "reflect on what remains relevant today."
+    ],
+    "supports": [
+      "cultural math resource cards (udl 7.2)",
+      "comparison chart template (udl 6.3)",
+      "presentation rubric (udl 8.3)"
+    ],
+    "fadePlan": "teacher introduces exemplar cultures → groups research and present with minimal direction.",
+    "whenNotToUse": "avoid in units requiring strict curriculum pacing.",
+    "formativeChecks": [
+      "- evaluate depth of cultural connection. - peer feedback via rubric."
+    ],
+    "bloomLevel": "understand",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "udl 7.2",
+      "udl 8.3",
+      "udl 6.3",
+      "hlp inquiry"
+    ],
+    "selStrand": "social-awareness",
+    "representationTags": [
+      "rtag.context.global_voices",
+      "rtag.identity.cultural_authenticity",
+      "rtag.context.global_voices",
+      "rtag.identity.intersectional_identities"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "HLP-CEC",
+      "WWC-MPS-2012"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.cultural_math_in_social_justice",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "quantitative social justice investigations",
+    "type": "social_collaborative",
+    "problemType": "students fail to connect math with social issues.",
+    "targetMisconception": "belief that numbers are neutral and apolitical.",
+    "teacherMoves": [
+      "provide social issue datasets (udl 7.2)",
+      "model data interrogation and context framing (hlp inquiry)",
+      "facilitate dialogue on findings and implications (udl 8.4)"
+    ],
+    "studentTasks": [
+      "analyze data related to equity or sustainability.",
+      "graph and interpret results.",
+      "discuss implications and potential actions."
+    ],
+    "supports": [
+      "social-justice data set (udl 7.2)",
+      "data-analysis guide (udl 6.4)",
+      "discussion protocol (udl 8.4)"
+    ],
+    "fadePlan": "teacher models analysis of one dataset → students conduct guided mini-inquiries → fade scaffolds to independent group projects.",
+    "whenNotToUse": "avoid when class requires purely procedural review.",
+    "formativeChecks": [
+      "- review reasoning in presentations. - reflection: “what story do the numbers tell?”"
+    ],
+    "bloomLevel": "evaluate",
+    "dokLevel": 4,
+    "udlHlpTags": [
+      "udl 7.2",
+      "udl 8.4",
+      "udl 6.4",
+      "hlp inquiry"
+    ],
+    "selStrand": "responsible-decision-making",
+    "representationTags": [
+      "rtag.context.global_voices",
+      "rtag.context.global_voices",
+      "rtag.identity.cultural_authenticity",
+      "rtag.language.inclusive_language",
+      "rtag.identity.lgbtqia_inclusion"
+    ],
+    "cspTags": [
+      "criticality"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "WWC-MPS-2012",
+      "HLP-CEC"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.cultural_math_in_the_arts",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "mathematics in art and design",
+    "type": "metacognitive",
+    "problemType": "students fail to see creativity in math.",
+    "targetMisconception": "belief that math and art are unrelated.",
+    "teacherMoves": [
+      "show geometric art from diverse cultures (udl 7.3)",
+      "model pattern and symmetry analysis (hlp representation)",
+      "encourage student creation using math principles (udl 5.1)"
+    ],
+    "studentTasks": [
+      "analyze artworks for mathematical structure.",
+      "create designs using geometric concepts.",
+      "explain math relationships in art."
+    ],
+    "supports": [
+      "geometric art exemplars (udl 7.3)",
+      "design template grid (udl 5.1)",
+      "symmetry reflection tool (udl 3.3)"
+    ],
+    "fadePlan": "teacher demonstrates initial example → students co-create designs → fade structure to open creative expression.",
+    "whenNotToUse": "avoid when focus is algebraic fluency without conceptual linkage.",
+    "formativeChecks": [
+      "- gallery walk peer feedback. - quick reflection: “where’s the math in my design?”"
+    ],
+    "bloomLevel": "create",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "udl 7.3",
+      "udl 5.1",
+      "udl 3.3",
+      "hlp representation"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.context.global_voices",
+      "rtag.identity.cultural_authenticity",
+      "rtag.identity.intersectional_identities",
+      "rtag.media.accessible_media"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "WWC-MPS-2012",
+      "UDL-CAST-3.0"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.cultural_math_through_storytelling",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "mathematical storytelling circles",
+    "type": "social_collaborative",
+    "problemType": "students disengage from abstract concept explanations.",
+    "targetMisconception": "belief that storytelling is unrelated to mathematics.",
+    "teacherMoves": [
+      "model mathematical storytelling (udl 7.3)",
+      "encourage oral and written math narratives (hlp discourse)",
+      "connect stories to problem-solving experiences (udl 6.4)"
+    ],
+    "studentTasks": [
+      "write or tell stories illustrating problem-solving journeys.",
+      "include emotional and logical elements.",
+      "share in circle discussions."
+    ],
+    "supports": [
+      "story planning template (udl 6.4)",
+      "story circle discussion norms (udl 7.3)",
+      "reflection log (udl 8.1)"
+    ],
+    "fadePlan": "teacher models first math story → students co-create guided narratives → fade supports; students self-lead story circles.",
+    "whenNotToUse": "avoid when time is limited or high content load.",
+    "formativeChecks": [
+      "- evaluate clarity and math accuracy. - peer storytelling feedback."
+    ],
+    "bloomLevel": "create",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "udl 7.3",
+      "udl 6.4",
+      "udl 8.1",
+      "hlp discourse"
+    ],
+    "selStrand": "relationship-skills",
+    "representationTags": [
+      "rtag.context.global_voices",
+      "rtag.language.home_language",
+      "rtag.language.inclusive_language",
+      "rtag.identity.cultural_authenticity"
+    ],
+    "cspTags": [
+      "co_design_with_community"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "HLP-CEC",
+      "HLP-CEC"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.cultural_relevant_contexts",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "recontextualizing word problems for cultural relevance",
+    "type": "social_collaborative",
+    "problemType": "word problems use unfamiliar cultural contexts.",
+    "targetMisconception": "belief that only textbook examples count as 'real math'.",
+    "teacherMoves": [
+      "replace textbook contexts with local examples (udl 7.2)",
+      "co-design problems with students (hlp co-design)",
+      "validate all community examples shared (udl 8.3)"
+    ],
+    "studentTasks": [
+      "identify culturally relevant contexts for target concepts.",
+      "rewrite sample problems with those contexts.",
+      "solve and compare outcomes."
+    ],
+    "supports": [
+      "local context brainstorming sheet (udl 7.2)",
+      "co-design checklist (hlp co-design)",
+      "example problem bank (udl 8.3)"
+    ],
+    "fadePlan": "teacher models redesign of one example → students co-design under guidance → fade to student-initiated replacements.",
+    "whenNotToUse": "avoid when uniform benchmark contexts are required by assessment.",
+    "formativeChecks": [
+      "- review redesigned problems. - student feedback on relevance."
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "udl 7.2",
+      "udl 8.3",
+      "hlp co-design"
+    ],
+    "selStrand": "relationship-skills",
+    "representationTags": [
+      "rtag.pedagogy.project_based_relevance",
+      "rtag.identity.cultural_authenticity",
+      "rtag.context.global_voices",
+      "rtag.language.inclusive_language"
+    ],
+    "cspTags": [
+      "co_design_with_community"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "HLP-CEC",
+      "UDL-CAST-3.0"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.cultural_story_problems_from_life",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "student-created story problems",
+    "type": "linguistic",
+    "problemType": "students view problems as teacher-generated only",
+    "targetMisconception": "belief that personal experiences are irrelevant to math.",
+    "teacherMoves": [
+      "model creation of story problems from daily contexts (udl 7.3)",
+      "highlight structure behind authentic scenarios (hlp modeling)",
+      "encourage multilingual drafts first (udl 2.1)"
+    ],
+    "studentTasks": [
+      "write math problems using personal or community contexts.",
+      "exchange and solve peers’ problems.",
+      "reflect on realism and math accuracy."
+    ],
+    "supports": [
+      "story problem template (udl 7.3)",
+      "peer feedback checklist (hlp feedback)",
+      "bilingual problem frame sheet (udl 2.1)"
+    ],
+    "fadePlan": "teacher co-creates first few examples → students author with scaffolds → fade to independent creation and translation.",
+    "whenNotToUse": "avoid during high-stakes standardized review periods.",
+    "formativeChecks": [
+      "- collect peer-review notes. - evaluate realism and math alignment."
+    ],
+    "bloomLevel": "create",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "udl 7.3",
+      "udl 2.1",
+      "hlp modeling",
+      "hlp feedback"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.pedagogy.project_based_relevance",
+      "rtag.language.home_language",
+      "rtag.identity.cultural_authenticity",
+      "rtag.language.inclusive_language"
+    ],
+    "cspTags": [
+      "co_design_with_community"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "UDL-CAST-3.0",
+      "HLP-CEC"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.culturally_sustaining_math",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Culturally Sustaining Mathematics Practices",
+    "type": "social_collaborative",
+    "problemType": "Mathematics curriculum excludes non-Western mathematical contributions and practices",
+    "targetMisconception": "Belief that mathematics has only one history and one approach",
+    "teacherMoves": [
+      "Include diverse mathematical traditions and contributions (UDL 7.3)",
+      "Teach mathematics as human cultural practice (HLP Explicit Instruction)",
+      "Connect to students' cultural mathematical knowledge (UDL 7.2)",
+      "Challenge Eurocentric narratives about mathematics (UDL 3.2)"
+    ],
+    "studentTasks": [
+      "Learn about diverse mathematical traditions and contributions",
+      "Connect mathematical concepts to cultural practices",
+      "Examine how culture shapes mathematical approaches",
+      "Bring own cultural mathematical knowledge to class",
+      "Advocate for inclusive mathematics"
+    ],
+    "supports": [
+      "Diverse mathematics traditions guide (UDL 3.3)",
+      "Cultural-mathematical connection exploration (UDL 7.2)",
+      "Culture and math approach analysis (UDL 6.2)",
+      "Cultural knowledge sharing protocol (UDL 5.3)",
+      "Advocacy reflection prompts (UDL 5.3)"
+    ],
+    "fadePlan": "Phase 1: Teacher provides diverse mathematical history and validates traditions → Phase 2: Guided exploration of cultural connections → Phase 3: Student-led cultural math sharing → Phase 4: Ongoing culturally sustaining practice",
+    "whenNotToUse": "When specific mathematical skill focus doesn't allow for cultural exploration time.",
+    "formativeChecks": [
+      "- Diverse tradition knowledge",
+      "- Cultural connection quality",
+      "- Narrative critique depth",
+      "- Advocacy participation"
+    ],
+    "bloomLevel": "understand",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.2",
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.2",
+      "UDL 7.2",
+      "UDL 7.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "social-awareness",
+    "representationTags": [
+      "rtag.identity.cultural_authenticity",
+      "rtag.context.global_voices",
+      "rtag.identity.intersectional_identities"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge",
+      "criticality",
+      "co_design_with_community"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "csp_ladsonbillings_1995_theory",
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "sel_jagers_2019_equity"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "math.culture_argumentation_routines",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Structured Argumentation Routines",
+    "type": "linguistic",
+    "problemType": "Students struggle to critique reasoning constructively.",
+    "targetMisconception": "Belief that disagreement is disrespectful.",
+    "teacherMoves": [
+      "Teach “Claim-Evidence-Reasoning” routine (UDL 6.4)",
+      "Model respectful critique language (HLP Discourse)",
+      "Facilitate pair argument exchanges (UDL 8.3)"
+    ],
+    "studentTasks": [
+      "Write mathematical claims with evidence.",
+      "Engage in partner critique rounds.",
+      "Revise reasoning based on feedback."
+    ],
+    "supports": [
+      "CER template (UDL 6.4)",
+      "Critique sentence stems (UDL 2.1)",
+      "Feedback protocol sheet (HLP Discourse)"
+    ],
+    "fadePlan": "Teacher leads structured CERs first. • Students later lead peer critiques independently.",
+    "whenNotToUse": "Avoid for rapid-fire recall activities.",
+    "formativeChecks": [
+      "Evaluate use of evidence and tone. • Reflection log on feedback use."
+    ],
+    "bloomLevel": "evaluate",
+    "dokLevel": 4,
+    "udlHlpTags": [
+      "UDL 6.4",
+      "HLP Discourse"
+    ],
+    "selStrand": "relationship-skills",
+    "representationTags": [
+      "rtag.pedagogy.collaborative_dialogue",
+      "rtag.language.inclusive_language"
+    ],
+    "cspTags": [
+      "criticality"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "WWC-MPS-2012",
+      "HLP-CEC"
+    ],
+    "lastUpdated": "11/1/25"
+  },
+  {
+    "id": "math.culture_equitable_discourse_norms",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Establishing Equitable Discussion Norms",
+    "type": "linguistic",
+    "problemType": "Some voices dominate class talk; others stay silent.",
+    "targetMisconception": "Belief that math talk is only for students who know the answer.",
+    "teacherMoves": [
+      "Co-create discussion norms emphasizing respect and wait time (UDL 8.3)",
+      "Model inviting quieter voices (HLP Discourse)",
+      "Reinforce idea contributions over correctness (UDL 9.3)"
+    ],
+    "studentTasks": [
+      "Participate in norm-setting.",
+      "Practice inviting peers into talk.",
+      "Reflect on discussion equity."
+    ],
+    "supports": [
+      "Discussion norms chart (UDL 8.3)",
+      "Turn-and-talk timer (UDL 7.3)",
+      "Reflection checklist (HLP Discourse)"
+    ],
+    "fadePlan": "Teacher facilitates structured norm-building. • Students internalize and self-monitor equity. • Fade teacher prompts as norms sustain peer-to-peer.",
+    "whenNotToUse": "Avoid during test review or independent work days.",
+    "formativeChecks": [
+      "Equity-of-voice tracker. • Student reflection slips."
+    ],
+    "bloomLevel": "understand",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 8.3",
+      "HLP Discourse"
+    ],
+    "selStrand": "relationship-skills",
+    "representationTags": [
+      "rtag.context.global_voices",
+      "rtag.pedagogy.collaborative_dialogue"
+    ],
+    "cspTags": [
+      "co_design_with_community"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "HLP-CEC",
+      "WWC-MPS-2012"
+    ],
+    "lastUpdated": "11/1/25"
+  },
+  {
+    "id": "math.culture_group_roles_accountability",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Group Roles and Accountability",
+    "type": "social_collaborative",
+    "problemType": "Group work leads to unequal participation.",
+    "targetMisconception": "Belief that collaboration means one person does the work.",
+    "teacherMoves": [
+      "Define roles (recorder, facilitator, reporter) (UDL 8.3)",
+      "Rotate roles regularly (HLP Cooperative Learning)",
+      "Monitor accountability using checklists (UDL 6.3)"
+    ],
+    "studentTasks": [
+      "Assume rotating roles in group tasks.",
+      "Complete accountability forms.",
+      "Reflect on contributions."
+    ],
+    "supports": [
+      "Role cards (HLP Cooperative Learning)",
+      "Accountability checklist (UDL 6.3)",
+      "Reflection template (UDL 8.1)"
+    ],
+    "fadePlan": "Teacher enforces structured roles first. • Gradually removes checklists as students self-manage.",
+    "whenNotToUse": "Avoid during brief pair-share interactions.",
+    "formativeChecks": [
+      "Review checklists for equity. • Observe balanced participation."
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 6.3",
+      "HLP Cooperative Learning"
+    ],
+    "selStrand": "relationship-skills",
+    "representationTags": [
+      "rtag.pedagogy.collaborative_dialogue",
+      "rtag.context.global_voices"
+    ],
+    "cspTags": [
+      "co_design_with_community"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "HLP-CEC",
+      "WWC-MPS-2012"
+    ],
+    "lastUpdated": "11/1/25"
+  },
+  {
+    "id": "math.culture_math_talk_moves",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Math Talk Moves for Reasoning",
+    "type": "linguistic",
+    "problemType": "Students give short answers without elaboration.",
+    "targetMisconception": "Belief that explaining thinking is optional.",
+    "teacherMoves": [
+      "Model talk moves (“revoice,” “press for reasoning”) (UDL 2.1)",
+      "Use sentence stems to scaffold explanations (HLP Discourse)",
+      "Provide positive feedback on elaboration (UDL 8.1)"
+    ],
+    "studentTasks": [
+      "Use talk-move stems in discussion.",
+      "Revoice peers’ ideas.",
+      "Press for reasoning in small groups."
+    ],
+    "supports": [
+      "Talk-move stem cards (UDL 2.1)",
+      "Peer-talk rubric (HLP Discourse)",
+      "Example dialogue transcripts (UDL 3.3)"
+    ],
+    "fadePlan": "Teacher demonstrates talk moves. • Students practice in triads. • Fade stems as moves become spontaneous.",
+    "whenNotToUse": "Avoid when class is focused on silent independent assessment.",
+    "formativeChecks": [
+      "Observation checklist of reasoning statements. • Peer feedback notes."
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 2.1",
+      "HLP Discourse"
+    ],
+    "selStrand": "relationship-skills",
+    "representationTags": [
+      "rtag.pedagogy.collaborative_dialogue",
+      "rtag.pedagogy.student_voice"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "WWC-MPS-2012",
+      "UDL-CAST-3.0"
+    ],
+    "lastUpdated": "11/1/25"
+  },
+  {
+    "id": "math.error_analysis_learning",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Mathematical Error Analysis and Learning",
+    "type": "metacognitive",
+    "problemType": "Students don't learn from mathematical errors",
+    "targetMisconception": "Belief that errors are failures rather than learning opportunities",
+    "teacherMoves": [
+      "Teach errors as valuable learning information (UDL 7.3)",
+      "Model productive error analysis (HLP Explicit Instruction)",
+      "Practice analyzing different error types (UDL 8.3)",
+      "Build error analysis habit (UDL 6.4)"
+    ],
+    "studentTasks": [
+      "Identify error type: conceptual, procedural, careless",
+      "Analyze what thinking led to error",
+      "Identify correct approach and why it works",
+      "Apply learning to similar problems",
+      "Track error patterns for targeted improvement"
+    ],
+    "supports": [
+      "Error type identification guide (UDL 3.3)",
+      "Error analysis protocol (UDL 6.2)",
+      "Correct approach development (UDL 6.2)",
+      "Application practice selection (UDL 8.3)",
+      "Error pattern tracker (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher guides error analysis explicitly → Phase 2: Structured error analysis with support → Phase 3: Independent error analysis → Phase 4: Automatic productive error response",
+    "whenNotToUse": "When student is frustrated and needs support before analysis.",
+    "formativeChecks": [
+      "- Error type identification accuracy",
+      "- Analysis depth",
+      "- Correct approach understanding",
+      "- Pattern tracking use"
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 6.2",
+      "UDL 6.4",
+      "UDL 7.3",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.identity.neurodiversity",
+      "rtag.pedagogy.student_voice",
+      "rtag.identity.disability_inclusion"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "fa_wiliam_2011_embedded_FA",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "math.error_analysis_protocol",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Mathematical Error Analysis Protocol",
+    "type": "cognitive",
+    "problemType": "Students repeat same errors without understanding why",
+    "targetMisconception": "Belief that wrong answers are failures rather than learning opportunities",
+    "teacherMoves": [
+      "Model analyzing worked examples with errors (UDL 3.2)",
+      "Categorize common error types (HLP Explicit Instruction)",
+      "Celebrate productive mistakes"
+    ],
+    "studentTasks": [
+      "Identify the specific error in worked problem",
+      "Classify error type using categories",
+      "Correct and explain the fix"
+    ],
+    "supports": [
+      "Error type chart (UDL 3.3)",
+      "Error analysis template (UDL 6.3)",
+      "Correction explanation stems (UDL 5.3)"
+    ],
+    "fadePlan": "Teacher-provided errors → Partner error exchange → Self-error analysis",
+    "whenNotToUse": "During initial concept introduction before students have attempts to analyze",
+    "formativeChecks": [
+      "Error analysis quiz",
+      "Self-correction accuracy tracking"
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.2",
+      "UDL 3.3",
+      "UDL 5.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.media.graphic_organizers",
+      "rtag.pedagogy.student_voice",
+      "rtag.identity.neurodiversity"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge",
+      "criticality"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "fa_wiliam_2011_embedded_FA",
+      "hlp_wwc_2015_algebra"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "math.estimation_verification_routine",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Estimation and Verification Routine",
+    "type": "cognitive",
+    "problemType": "Students accept unreasonable answers without checking",
+    "targetMisconception": "Belief that calculator answers are always correct",
+    "teacherMoves": [
+      "Model estimation strategies before calculating (UDL 6.1)",
+      "Teach reasonableness checks (HLP Explicit Instruction)",
+      "Practice with deliberately wrong examples"
+    ],
+    "studentTasks": [
+      "Estimate answer before solving",
+      "Solve using chosen method",
+      "Verify answer against estimate and context"
+    ],
+    "supports": [
+      "Estimation strategy bank (UDL 3.3)",
+      "Reasonableness checklist (UDL 6.4)",
+      "Context verification prompts (UDL 5.3)"
+    ],
+    "fadePlan": "Teacher models estimation thinking → Collaborative estimation → Independent habit",
+    "whenNotToUse": "During pure procedural fluency practice",
+    "formativeChecks": [
+      "Quick estimate check",
+      "Reasonableness explanation"
+    ],
+    "bloomLevel": "evaluate",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.1",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "responsible-decision-making",
+    "representationTags": [
+      "rtag.media.graphic_organizers",
+      "rtag.pedagogy.student_voice",
+      "rtag.context.global_voices"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge",
+      "criticality"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "hlp_wwc_2015_algebra",
+      "fa_wiliam_2011_embedded_FA"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "math.explicit_problem_solving_steps",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Explicit Problem-Solving Steps Protocol",
+    "type": "cognitive",
+    "problemType": "Students attempt problems without a systematic approach",
+    "targetMisconception": "Belief that math talent means knowing answers instantly without process",
+    "teacherMoves": [
+      "Model step-by-step think-aloud (UDL 6.1)",
+      "Name and post each problem-solving phase (HLP Explicit Instruction)",
+      "Provide worked examples with annotations"
+    ],
+    "studentTasks": [
+      "Follow posted steps for new problem",
+      "Annotate own thinking at each step",
+      "Compare approach with partner"
+    ],
+    "supports": [
+      "Step poster (UDL 3.3)",
+      "Think-aloud template (UDL 6.2)",
+      "Worked example bank (HLP Exemplars)"
+    ],
+    "fadePlan": "Full teacher modeling → Partial completion → Independent with checklist → Automaticity",
+    "whenNotToUse": "When reviewing previously mastered procedures",
+    "formativeChecks": [
+      "Exit ticket: Show all steps for one problem",
+      "Peer comparison of approaches"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 6.1",
+      "UDL 6.2",
+      "HLP Explicit Instruction",
+      "HLP Exemplars"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.media.graphic_organizers",
+      "rtag.language.plain_language_access",
+      "rtag.identity.neurodiversity"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "hlp_hughes_2017_explicit_instruction",
+      "hlp_wwc_2015_algebra"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "math.home_language_math_support",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Home Language Mathematics Support",
+    "type": "linguistic",
+    "problemType": "Multilingual students' home languages are underused in math",
+    "targetMisconception": "Belief that math should be English-only",
+    "teacherMoves": [
+      "Explicitly value multilingual assets in mathematics (UDL 7.3)",
+      "Allow home language for mathematical processing (UDL 5.3)",
+      "Provide bilingual math vocabulary support (UDL 3.1)",
+      "Connect to diverse mathematical traditions (UDL 7.3)"
+    ],
+    "studentTasks": [
+      "Use home language for mathematical thinking and processing",
+      "Access bilingual math vocabulary resources",
+      "Make connections between languages for math concepts",
+      "Share mathematical thinking in preferred language",
+      "Reflect on multilingual mathematical identity"
+    ],
+    "supports": [
+      "Multilingual math processing permission and encouragement (UDL 7.3)",
+      "Bilingual math vocabulary reference (UDL 3.1)",
+      "Cross-linguistic math connection guide (UDL 3.2)",
+      "Multilingual sharing protocol (UDL 5.3)",
+      "Identity reflection prompts (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher explicitly encourages home language use → Phase 2: Structured translanguaging opportunities → Phase 3: Natural language use for math → Phase 4: Confident multilingual mathematical identity",
+    "whenNotToUse": "Never - home language should always be valued in math. Adjust visibility as appropriate.",
+    "formativeChecks": [
+      "- Home language use for processing",
+      "- Vocabulary resource use",
+      "- Cross-linguistic connection quality",
+      "- Identity reflection depth"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 3.1",
+      "UDL 3.2",
+      "UDL 5.3",
+      "UDL 6.4",
+      "UDL 7.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.language.home_language",
+      "rtag.identity.cultural_authenticity",
+      "rtag.language.inclusive_language"
+    ],
+    "cspTags": [
+      "sustain_language",
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "csp_ladsonbillings_1995_theory",
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "udl_cast_2024_guidelines"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "math.language_graphical_argument",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "graphical argument and counterargument",
+    "type": "linguistic",
+    "problemType": "students state claims from graphs but do not justify",
+    "targetMisconception": "belief that a visible trend is self-explanatory.",
+    "teacherMoves": [
+      "model claim–evidence–reasoning with graph excerpts (udl 3.3)",
+      "provide counterclaim prompts (hlp explicit instruction)",
+      "facilitate rebuttal language practice (hlp discourse)"
+    ],
+    "studentTasks": [
+      "write a graph-based claim with cited evidence.",
+      "draft a fair counterclaim.",
+      "write a rebuttal with reasoning."
+    ],
+    "supports": [
+      "cer graphic frame (udl 3.3)",
+      "counterclaim stems (udl 5.1)",
+      "rebuttal stems (hlp discourse)"
+    ],
+    "fadePlan": "teacher-model cer → guided counterclaim drafting → independent rebuttal writing.",
+    "whenNotToUse": "avoid when students have not learned to read graphs.",
+    "formativeChecks": [
+      "- cer rubric check. - rebuttal clarity spot-check."
+    ],
+    "bloomLevel": "evaluate",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "udl 3.3",
+      "udl 5.1",
+      "hlp explicit instruction",
+      "hlp discourse"
+    ],
+    "selStrand": "responsible-decision-making",
+    "representationTags": [
+      "rtag.language.inclusive_language",
+      "rtag.media.accessible_media",
+      "rtag.context.global_voices"
+    ],
+    "cspTags": [
+      "criticality"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "WWC-MPS-2012",
+      "UDL-CAST-3.0"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.language_home_language_asset",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "using home language as an asset in math",
+    "type": "linguistic",
+    "problemType": "els avoid participation in english-only discussions",
+    "targetMisconception": "belief that math must be learned only in english.",
+    "teacherMoves": [
+      "encourage translanguaging for idea generation (udl 2.1)",
+      "provide bilingual sentence stems for explanations (hlp cooperative learning)",
+      "model code-switching for precision (hlp language supports)"
+    ],
+    "studentTasks": [
+      "brainstorm solutions in home language.",
+      "translate key ideas collaboratively.",
+      "present final explanation in english with math vocabulary."
+    ],
+    "supports": [
+      "bilingual stems (udl 2.1)",
+      "translation glossary (udl 3.3)",
+      "peer-translator protocol (hlp cooperative learning)"
+    ],
+    "fadePlan": "teacher-facilitated bilingual supports → peer-managed translation → independent choice of language supports.",
+    "whenNotToUse": "avoid when translation resources are unavailable or confidentiality prohibits translation.",
+    "formativeChecks": [
+      "- accuracy spot-check of translated terms. - peer feedback on clarity in final explanation."
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "udl 2.1",
+      "udl 3.3",
+      "hlp cooperative learning",
+      "hlp language supports"
+    ],
+    "selStrand": "relationship-skills",
+    "representationTags": [
+      "rtag.language.home_language",
+      "rtag.context.global_voices",
+      "rtag.language.inclusive_language"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "UDL-CAST-3.0",
+      "WWC-MPS-2012"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.language_math_vocabulary",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "academic math vocabulary",
+    "type": "linguistic",
+    "problemType": "students misuse or avoid math vocabulary",
+    "targetMisconception": "belief that vocabulary is separate from reasoning.",
+    "teacherMoves": [
+      "model precise vocabulary in context (udl 3.3)",
+      "provide morphology/cognate links (hlp language supports)",
+      "facilitate usage practice in pairs (hlp cooperative learning)"
+    ],
+    "studentTasks": [
+      "build a personal vocabulary bank.",
+      "use terms in explanations.",
+      "check usage with a peer."
+    ],
+    "supports": [
+      "vocabulary bank template (udl 3.3)",
+      "morphology/cognate chart (hlp language supports)",
+      "peer usage checklist (hlp cooperative learning)"
+    ],
+    "fadePlan": "teacher modeling → guided pair work → independent usage logging.",
+    "whenNotToUse": "avoid when conceptual understanding is still forming; pair with concept scaffold.",
+    "formativeChecks": [
+      "- random usage check in explanations. - quick cognate/morphology quiz."
+    ],
+    "bloomLevel": "understand",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "udl 3.3",
+      "hlp language supports",
+      "hlp cooperative learning"
+    ],
+    "selStrand": "relationship-skills",
+    "representationTags": [
+      "rtag.language.home_language",
+      "rtag.language.inclusive_language",
+      "rtag.media.accessible_media"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "UDL-CAST-3.0",
+      "WWC-MPS-2012"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.language_sentence_stems_reasoning",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "sentence stems for reasoning",
+    "type": "linguistic",
+    "problemType": "students struggle to express reasoning verbally",
+    "targetMisconception": "belief that answers don’t require explanation.",
+    "teacherMoves": [
+      "model academic stems for connectives (udl 5.3)",
+      "provide bank of reasoning stems (hlp language supports)",
+      "feedback on precision (hlp feedback)"
+    ],
+    "studentTasks": [
+      "use stems in pair talk/writing.",
+      "replace stems with own phrasing over time.",
+      "reflect on clarity gains."
+    ],
+    "supports": [
+      "reasoning stem bank (hlp language supports)",
+      "pair-talk protocol (udl 5.3)",
+      "precision checklist (hlp feedback)"
+    ],
+    "fadePlan": "teacher-modeled stems → guided with stems → independent phrasing.",
+    "whenNotToUse": "avoid when the focus is pure computation check (no discussion time).",
+    "formativeChecks": [
+      "- audit stem usage early. - check clarity/precision later."
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "udl 5.3",
+      "hlp language supports",
+      "hlp feedback"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.language.inclusive_language",
+      "rtag.language.home_language",
+      "rtag.media.accessible_media"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "UDL-CAST-3.0",
+      "WWC-MPS-2012"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.language_symbol_decoding",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "decoding and interpreting math symbols",
+    "type": "linguistic",
+    "problemType": "students guess at symbols without meaning",
+    "targetMisconception": "belief that symbols are arbitrary marks.",
+    "teacherMoves": [
+      "model symbol decoding with examples/non-examples (udl 3.3)",
+      "provide symbol-to-meaning chart (hlp explicit instruction)",
+      "prompt translation to words (hlp language supports)"
+    ],
+    "studentTasks": [
+      "decode symbols in examples.",
+      "translate to words and back.",
+      "explain the symbol’s role in context."
+    ],
+    "supports": [
+      "symbol chart (udl 5.1)",
+      "translation stems (hlp language supports)",
+      "example/non-example set (hlp explicit instruction)"
+    ],
+    "fadePlan": "teacher modeling → guided decoding → independent symbol translations.",
+    "whenNotToUse": "avoid when the concept has not been introduced; preview concept first.",
+    "formativeChecks": [
+      "- spot-check correct translation. - one-sentence symbol role explanation."
+    ],
+    "bloomLevel": "understand",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "udl 3.3",
+      "udl 5.1",
+      "hlp explicit instruction",
+      "hlp language supports"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.language.inclusive_language",
+      "rtag.language.home_language",
+      "rtag.media.accessible_media"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "UDL-CAST-3.0",
+      "ROSENSHINE-2012"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.language_table_to_expression",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "from tables to expressions",
+    "type": "linguistic",
+    "problemType": "students cannot translate tables into algebraic expressions",
+    "targetMisconception": "belief that tables only show numbers, not structure.",
+    "teacherMoves": [
+      "model recognizing patterns and writing expressions (udl 3.3)",
+      "highlight rate/initial value through think-aloud (hlp explicit instruction)",
+      "provide sentence frames for generalization (hlp language supports)"
+    ],
+    "studentTasks": [
+      "identify pattern in table.",
+      "write expression for nth term or function rule.",
+      "justify the expression’s parts in words."
+    ],
+    "supports": [
+      "pattern spotter template (udl 5.1)",
+      "generalization stems (hlp language supports)",
+      "check-your-expression guide (udl 6.3)"
+    ],
+    "fadePlan": "teacher models → guided pattern finding → independent generalization with stems removed.",
+    "whenNotToUse": "avoid when tables are random or noisy without clear patterns.",
+    "formativeChecks": [
+      "- mini-check: label which term is the rate vs. initial value. - quick explanation sentence linking table to expression."
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "udl 3.3",
+      "udl 5.1",
+      "udl 6.3",
+      "hlp explicit instruction",
+      "hlp language supports"
+    ],
+    "selStrand": "responsible-decision-making",
+    "representationTags": [
+      "rtag.media.accessible_media",
+      "rtag.language.home_language",
+      "rtag.language.inclusive_language"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "ROSENSHINE-2012",
+      "WWC-MPS-2012"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.language_visual_manipulatives",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "connecting manipulatives to symbolic notation",
+    "type": "linguistic",
+    "problemType": "students use manipulatives without connecting to symbols",
+    "targetMisconception": "belief that manipulatives are just toys or visuals.",
+    "teacherMoves": [
+      "model mapping between manipulative actions and algebra steps (udl 3.3)",
+      "provide a side-by-side mapping chart (hlp representation)",
+      "prompt metacognitive “what does this step mean?” (hlp questioning)"
+    ],
+    "studentTasks": [
+      "perform manipulative step.",
+      "record symbolic equivalent.",
+      "explain meaning of each symbolic move."
+    ],
+    "supports": [
+      "mapping chart (udl 5.1)",
+      "symbolic step stems (udl 6.3)",
+      "“what it means” prompt cards (hlp questioning)"
+    ],
+    "fadePlan": "teacher-led mapping → guided mapping → independent symbolic recording and meaning.",
+    "whenNotToUse": "avoid if manipulatives are inaccessible or lesson is pure symbolic fluency.",
+    "formativeChecks": [
+      "- collect mapping charts. - spot-check symbolic meaning sentences."
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "udl 3.3",
+      "udl 5.1",
+      "udl 6.3",
+      "hlp representation",
+      "hlp questioning"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.media.accessible_media",
+      "rtag.identity.disability_inclusion",
+      "rtag.identity.neurodiversity"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "UDL-CAST-3.0",
+      "ROSENSHINE-2012"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.language_visual_proofs",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "visual proofs and reasoning",
+    "type": "linguistic",
+    "problemType": "students memorize proofs without understanding",
+    "targetMisconception": "belief that proof is only symbolic manipulation.",
+    "teacherMoves": [
+      "model a visual proof (area/tiling) and narrate reasoning (udl 3.3)",
+      "provide structure prompts (claim–warrant–evidence) (hlp explicit instruction)",
+      "invite multiple perspectives on elegance/clarity (hlp discourse)"
+    ],
+    "studentTasks": [
+      "recreate a visual proof.",
+      "annotate each structural step.",
+      "present and critique peer proofs."
+    ],
+    "supports": [
+      "visual proof exemplars (udl 1.1)",
+      "c–w–e stems (udl 5.1)",
+      "peer critique rubric (hlp discourse)"
+    ],
+    "fadePlan": "teacher-modeled visual proof → guided annotation → independent proof presentation.",
+    "whenNotToUse": "avoid when time is too limited for discussion and critique.",
+    "formativeChecks": [
+      "- rubric on clarity and correctness. - exit: one suggestion to improve a peer proof."
+    ],
+    "bloomLevel": "evaluate",
+    "dokLevel": 4,
+    "udlHlpTags": [
+      "udl 3.3",
+      "udl 1.1",
+      "udl 5.1",
+      "hlp explicit instruction",
+      "hlp discourse"
+    ],
+    "selStrand": "social-awareness",
+    "representationTags": [
+      "rtag.media.accessible_media",
+      "rtag.identity.intersectional_identities",
+      "rtag.language.inclusive_language"
+    ],
+    "cspTags": [
+      "criticality"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "WWC-MPS-2012",
+      "UDL-CAST-3.0"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.language_visualization_graphs",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "interpreting graphs with visual language",
+    "type": "linguistic",
+    "problemType": "students misread graphs and misinterpret trends",
+    "targetMisconception": "believing graphs speak for themselves without analysis.",
+    "teacherMoves": [
+      "model stepwise reading of graph axes, labels, and trends (udl 3.3)",
+      "provide annotated exemplar graphs (udl 1.1)",
+      "scaffold question stems for analysis (hlp explicit instruction)"
+    ],
+    "studentTasks": [
+      "annotate axes, units, and variables.",
+      "identify trend patterns and anomalies.",
+      "answer guided questions about relationships."
+    ],
+    "supports": [
+      "annotated graph set (udl 1.1)",
+      "graph analysis checklist (udl 5.1)",
+      "question stem cards (hlp explicit instruction)"
+    ],
+    "fadePlan": "teacher models analysis → guided practice with partial prompts → independent graph analysis.",
+    "whenNotToUse": "avoid when graphs are too simple or students have mastered graph reading.",
+    "formativeChecks": [
+      "- collect annotated graphs and responses",
+      "check accuracy and completeness."
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "udl 3.3",
+      "udl 1.1",
+      "udl 5.1",
+      "hlp explicit instruction"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.media.accessible_media",
+      "rtag.language.inclusive_language",
+      "rtag.identity.neurodiversity"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "WWC-MPS-2012",
+      "UDL-CAST-3.0"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.language_word_problem_translation",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "translating word problems to math language",
+    "type": "linguistic",
+    "problemType": "students copy numbers or miss relationships",
+    "targetMisconception": "belief that every word maps one-to-one to symbols.",
+    "teacherMoves": [
+      "model identifying quantities and relationships (udl 3.3)",
+      "provide translation frames (hlp explicit instruction)",
+      "prompt unit/relationship checks (hlp questioning)"
+    ],
+    "studentTasks": [
+      "identify quantities/relationships.",
+      "translate to math statements.",
+      "check units/relationships."
+    ],
+    "supports": [
+      "quantity/relationship map (udl 5.1)",
+      "translation frames (hlp explicit instruction)",
+      "unit-check stems (hlp questioning)"
+    ],
+    "fadePlan": "teacher modeling → guided translation → independent with unit checks.",
+    "whenNotToUse": "avoid when text complexity is too high; pre-teach vocabulary.",
+    "formativeChecks": [
+      "- collect maps for a sample item. - one-sentence unit/relationship check."
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "udl 3.3",
+      "udl 5.1",
+      "hlp explicit instruction",
+      "hlp questioning"
+    ],
+    "selStrand": "responsible-decision-making",
+    "representationTags": [
+      "rtag.language.inclusive_language",
+      "rtag.language.home_language",
+      "rtag.media.accessible_media"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "WWC-MPS-2012",
+      "UDL-CAST-3.0"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.math_anxiety_management",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Math Anxiety Recognition and Management",
+    "type": "unknown",
+    "problemType": "Students experience anxiety that interferes with math performance",
+    "targetMisconception": "Belief that anxiety means lack of math ability",
+    "teacherMoves": [
+      "Normalize math anxiety and teach it's manageable (UDL 7.3)",
+      "Teach anxiety as physiological response (HLP Explicit Instruction)",
+      "Provide specific coping strategies for math contexts (UDL 6.4)",
+      "Create low-stakes practice opportunities (UDL 8.3)"
+    ],
+    "studentTasks": [
+      "Recognize personal math anxiety triggers and symptoms",
+      "Apply coping strategies before and during math",
+      "Create optimal conditions for math engagement",
+      "Track anxiety and strategy effectiveness",
+      "Build math confidence through success experiences"
+    ],
+    "supports": [
+      "Math anxiety information and normalization (UDL 3.3)",
+      "Coping strategy menu for math (UDL 6.4)",
+      "Optimal conditions exploration (UDL 6.4)",
+      "Anxiety-strategy tracking log (UDL 6.4)",
+      "Success documentation portfolio (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher guides anxiety recognition and strategy introduction → Phase 2: Supported strategy practice → Phase 3: Independent anxiety management → Phase 4: Confident math engagement",
+    "whenNotToUse": "When anxiety is severe enough to require professional support.",
+    "formativeChecks": [
+      "- Anxiety recognition accuracy",
+      "- Strategy use before/during math",
+      "- Tracking consistency",
+      "- Self-reported anxiety changes"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 6.4",
+      "UDL 7.3",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.identity.neurodiversity",
+      "rtag.identity.disability_inclusion",
+      "rtag.pedagogy.student_voice"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "udl_cast_2024_guidelines",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "math.mathematical_argumentation",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Mathematical Argumentation and Justification",
+    "type": "cognitive",
+    "problemType": "Students make claims without mathematical justification",
+    "targetMisconception": "Belief that getting the right answer is sufficient without explanation",
+    "teacherMoves": [
+      "Teach mathematical argumentation as core practice (HLP Explicit Instruction)",
+      "Model constructing and critiquing arguments (UDL 6.1)",
+      "Practice justification using mathematical reasoning (UDL 8.3)",
+      "Build argumentation as habit (UDL 6.4)"
+    ],
+    "studentTasks": [
+      "Make mathematical claims with evidence",
+      "Support claims with mathematical reasoning",
+      "Critique others' mathematical arguments",
+      "Respond to critique constructively",
+      "Develop strong mathematical arguments"
+    ],
+    "supports": [
+      "Mathematical argumentation structure (UDL 3.3)",
+      "Evidence and reasoning guide (UDL 6.2)",
+      "Critique protocol for math (UDL 5.3)",
+      "Responding to critique stems (UDL 5.3)",
+      "Argument evaluation criteria (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher models argumentation explicitly → Phase 2: Guided argumentation practice → Phase 3: Independent mathematical argument → Phase 4: Natural argumentation habits",
+    "whenNotToUse": "When skill practice rather than justification is the goal.",
+    "formativeChecks": [
+      "- Claim-evidence quality",
+      "- Reasoning soundness",
+      "- Critique quality",
+      "- Argument improvement"
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 4,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.1",
+      "UDL 6.2",
+      "UDL 6.4",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "responsible-decision-making",
+    "representationTags": [
+      "rtag.pedagogy.collaborative_dialogue",
+      "rtag.pedagogy.student_voice",
+      "rtag.language.plain_language_access"
+    ],
+    "cspTags": [
+      "criticality",
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "udl_cast_2024_guidelines"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "math.mathematical_conjecture_testing",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Mathematical Conjecture Making and Testing",
+    "type": "cognitive",
+    "problemType": "Students don't engage in mathematical exploration through conjecture",
+    "targetMisconception": "Belief that math is about following procedures not making discoveries",
+    "teacherMoves": [
+      "Teach conjecture as mathematical practice (HLP Explicit Instruction)",
+      "Model making and testing conjectures (UDL 6.1)",
+      "Practice systematic conjecture testing (UDL 8.3)",
+      "Build conjecture habit (UDL 6.4)"
+    ],
+    "studentTasks": [
+      "Make conjectures based on observations and patterns",
+      "Test conjectures with multiple examples",
+      "Look for counterexamples",
+      "Refine conjectures based on testing",
+      "Move from conjecture toward proof"
+    ],
+    "supports": [
+      "Conjecture formation guide (UDL 3.3)",
+      "Systematic testing protocol (UDL 6.2)",
+      "Counterexample search strategies (UDL 6.2)",
+      "Refinement process template (UDL 6.2)",
+      "Conjecture-to-proof connection (UDL 6.2)"
+    ],
+    "fadePlan": "Phase 1: Teacher models conjecture process → Phase 2: Guided conjecture making and testing → Phase 3: Independent conjecture exploration → Phase 4: Natural conjecture habits",
+    "whenNotToUse": "When verified procedures are being learned.",
+    "formativeChecks": [
+      "- Conjecture quality and creativity",
+      "- Testing systematicity",
+      "- Refinement process",
+      "- Movement toward proof"
+    ],
+    "bloomLevel": "create",
+    "dokLevel": 4,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 6.1",
+      "UDL 6.2",
+      "UDL 6.4",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.pedagogy.student_voice",
+      "rtag.identity.neurodiversity",
+      "rtag.media.graphic_organizers"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "udl_cast_2024_guidelines"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "math.mathematical_discourse_community",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Mathematical Discourse Community Building",
+    "type": "social_collaborative",
+    "problemType": "Classroom doesn't function as mathematical learning community",
+    "targetMisconception": "Belief that math class is about individual performance not community",
+    "teacherMoves": [
+      "Establish mathematical discourse norms (HLP Cooperative Learning)",
+      "Model valuing all mathematical contributions (UDL 8.3)",
+      "Build on student thinking publicly (UDL 3.3)",
+      "Create culture where risk-taking is valued (UDL 8.3)"
+    ],
+    "studentTasks": [
+      "Contribute mathematical thinking to community",
+      "Build on classmates' mathematical ideas",
+      "Value different approaches and perspectives",
+      "Take risks in sharing mathematical thinking",
+      "Support peers' mathematical growth"
+    ],
+    "supports": [
+      "Mathematical discourse norms co-created (UDL 8.3)",
+      "Contribution and building talk moves (UDL 5.3)",
+      "Different approaches celebration (UDL 8.1)",
+      "Risk-taking support strategies (UDL 7.3)",
+      "Peer support protocol (UDL 8.3)"
+    ],
+    "fadePlan": "Phase 1: Teacher establishes norms and models community → Phase 2: Shared responsibility for community → Phase 3: Student-maintained community → Phase 4: Strong mathematical learning community",
+    "whenNotToUse": "Never - mathematical community should be built continuously. Adjust approach based on needs.",
+    "formativeChecks": [
+      "- Participation patterns equity",
+      "- Building on others evidence",
+      "- Risk-taking in sharing",
+      "- Support given and received"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 7.3",
+      "UDL 8.1",
+      "UDL 8.3",
+      "HLP Cooperative Learning"
+    ],
+    "selStrand": "relationship-skills",
+    "representationTags": [
+      "rtag.pedagogy.collaborative_dialogue",
+      "rtag.pedagogy.student_voice",
+      "rtag.language.inclusive_language"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge",
+      "co_design_with_community"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "hlp_jenkins_2003_cooperative_learning",
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "sel_jagers_2019_equity"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "math.mathematical_identity_building",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Mathematical Identity Affirmation and Development",
+    "type": "unknown",
+    "problemType": "Students don't see themselves as math capable",
+    "targetMisconception": "Belief that some people are math people and others aren't",
+    "teacherMoves": [
+      "Challenge fixed math ability beliefs explicitly (HLP Explicit Instruction)",
+      "Celebrate mathematical thinking not just answers (UDL 8.1)",
+      "Connect students to mathematicians who share identities (UDL 7.3)",
+      "Build success experiences that develop identity (UDL 8.3)"
+    ],
+    "studentTasks": [
+      "Explore personal history with mathematics",
+      "Challenge fixed ability beliefs with evidence",
+      "Connect mathematical strengths to identity",
+      "Document mathematical growth and success",
+      "Develop positive mathematical identity narrative"
+    ],
+    "supports": [
+      "Math history reflection guide (UDL 3.3)",
+      "Growth mindset evidence for math (UDL 7.3)",
+      "Diverse mathematician profiles (UDL 7.3)",
+      "Growth documentation portfolio (UDL 6.4)",
+      "Identity narrative development (UDL 5.3)"
+    ],
+    "fadePlan": "Phase 1: Teacher explicitly challenges beliefs and affirms → Phase 2: Supported identity exploration → Phase 3: Independent identity development → Phase 4: Strong mathematical identity",
+    "whenNotToUse": "Never - mathematical identity should be developed continuously. Adjust intensity as needed.",
+    "formativeChecks": [
+      "- Belief change evidence",
+      "- Growth documentation",
+      "- Identity narrative quality",
+      "- Self-reported math confidence"
+    ],
+    "bloomLevel": "evaluate",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.4",
+      "UDL 7.3",
+      "UDL 8.1",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.identity.intersectional_identities",
+      "rtag.identity.lgbtqia_inclusion",
+      "rtag.identity.disability_inclusion"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge",
+      "criticality",
+      "co_design_with_community"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "sel_jagers_2019_equity",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "math.mathematical_modeling_process",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Mathematical Modeling Process Development",
+    "type": "cognitive",
+    "problemType": "Students don't know how to model real situations mathematically",
+    "targetMisconception": "Belief that math applies only to abstract problems",
+    "teacherMoves": [
+      "Teach mathematical modeling as process (HLP Explicit Instruction)",
+      "Model the full modeling cycle (UDL 6.1)",
+      "Practice with authentic modeling problems (UDL 7.2)",
+      "Build modeling skills progressively (UDL 6.4)"
+    ],
+    "studentTasks": [
+      "Identify situation to be modeled mathematically",
+      "Make simplifying assumptions explicitly",
+      "Create mathematical model of situation",
+      "Solve and interpret in context",
+      "Evaluate model and refine as needed"
+    ],
+    "supports": [
+      "Mathematical modeling cycle guide (UDL 3.3)",
+      "Assumption articulation template (UDL 6.2)",
+      "Model development framework (UDL 6.2)",
+      "Interpretation in context prompts (UDL 5.3)",
+      "Model evaluation criteria (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher models full cycle explicitly → Phase 2: Guided modeling with support → Phase 3: Independent modeling projects → Phase 4: Natural modeling approach",
+    "whenNotToUse": "When routine problem-solving is the goal rather than modeling.",
+    "formativeChecks": [
+      "- Situation identification quality",
+      "- Assumption articulation",
+      "- Model appropriateness",
+      "- Evaluation and refinement"
+    ],
+    "bloomLevel": "create",
+    "dokLevel": 4,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.1",
+      "UDL 6.2",
+      "UDL 6.4",
+      "UDL 7.2",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "responsible-decision-making",
+    "representationTags": [
+      "rtag.pedagogy.project_based_relevance",
+      "rtag.context.global_voices",
+      "rtag.media.graphic_organizers"
+    ],
+    "cspTags": [
+      "criticality",
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "hlp_wwc_2012_problem_solving",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "math.mathematical_persistence_building",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Mathematical Persistence and Struggle Capacity",
+    "type": "unknown",
+    "problemType": "Students give up quickly on challenging problems",
+    "targetMisconception": "Belief that not knowing immediately means inability",
+    "teacherMoves": [
+      "Teach productive struggle as part of mathematical learning (UDL 7.3)",
+      "Model persistence with think-aloud during struggle (HLP Explicit Instruction)",
+      "Provide strategies for when stuck (UDL 6.4)",
+      "Celebrate persistence not just success (UDL 8.1)"
+    ],
+    "studentTasks": [
+      "Recognize struggle as normal part of learning",
+      "Apply strategies when stuck",
+      "Persist through challenge with support",
+      "Reflect on productive struggle experiences",
+      "Build tolerance for mathematical uncertainty"
+    ],
+    "supports": [
+      "Productive struggle explainer (UDL 3.3)",
+      "Strategies for when stuck (UDL 6.4)",
+      "Struggle tolerance building activities (UDL 8.3)",
+      "Persistence celebration protocol (UDL 8.1)",
+      "Struggle reflection journal (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher normalizes struggle with high support → Phase 2: Supported persistence with strategy cues → Phase 3: Independent persistence with reflection → Phase 4: Productive struggle identity",
+    "whenNotToUse": "When struggle stems from missing prerequisite knowledge requiring reteaching.",
+    "formativeChecks": [
+      "- Time spent before giving up",
+      "- Strategy use when stuck",
+      "- Reflection quality on struggle",
+      "- Self-reported persistence growth"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 6.4",
+      "UDL 7.3",
+      "UDL 8.1",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.identity.neurodiversity",
+      "rtag.pedagogy.student_voice",
+      "rtag.identity.disability_inclusion"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "udl_cast_2024_guidelines"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "math.mathematical_reading_comprehension",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Mathematical Text Reading Comprehension",
+    "type": "linguistic",
+    "problemType": "Students struggle to comprehend mathematical texts and problems",
+    "targetMisconception": "Belief that reading math is the same as reading other texts",
+    "teacherMoves": [
+      "Teach mathematical reading as specialized skill (HLP Explicit Instruction)",
+      "Model reading mathematical text with think-aloud (UDL 6.1)",
+      "Practice decoding mathematical symbols and structures (UDL 3.2)",
+      "Build math reading fluency (UDL 6.4)"
+    ],
+    "studentTasks": [
+      "Read mathematical text for structure and meaning",
+      "Decode symbols and notation accurately",
+      "Identify mathematical claims and relationships",
+      "Connect text to mathematical representations",
+      "Monitor comprehension while reading math"
+    ],
+    "supports": [
+      "Mathematical reading strategies guide (UDL 3.3)",
+      "Symbol and notation reference (UDL 3.1)",
+      "Claim identification prompts (UDL 6.2)",
+      "Text-representation connection template (UDL 6.2)",
+      "Math reading comprehension check (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher models math reading explicitly → Phase 2: Guided math reading practice → Phase 3: Independent math reading → Phase 4: Fluent mathematical reading",
+    "whenNotToUse": "When mathematical content is presented verbally rather than in text.",
+    "formativeChecks": [
+      "- Reading strategy use",
+      "- Symbol decoding accuracy",
+      "- Claim identification",
+      "- Text-representation connection"
+    ],
+    "bloomLevel": "understand",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 3.1",
+      "UDL 3.2",
+      "UDL 3.3",
+      "UDL 6.1",
+      "UDL 6.2",
+      "UDL 6.4",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.language.plain_language_access",
+      "rtag.identity.neurodiversity",
+      "rtag.identity.disability_inclusion"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "hlp_wwc_2022_reading_interventions",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "math.mathematical_vocabulary_precision",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Mathematical Vocabulary Precision Development",
+    "type": "linguistic",
+    "problemType": "Students use imprecise language that reflects or causes conceptual confusion",
+    "targetMisconception": "Belief that mathematical vocabulary is unnecessary or interchangeable",
+    "teacherMoves": [
+      "Teach mathematical vocabulary as precision tool (HLP Explicit Instruction)",
+      "Model precise mathematical language (UDL 6.1)",
+      "Practice vocabulary in context of problem-solving (UDL 8.3)",
+      "Build vocabulary as ongoing practice (UDL 6.4)"
+    ],
+    "studentTasks": [
+      "Learn precise mathematical vocabulary for current content",
+      "Use vocabulary accurately in speaking and writing",
+      "Distinguish between similar mathematical terms",
+      "Develop personal vocabulary reference",
+      "Apply vocabulary in problem-solving contexts"
+    ],
+    "supports": [
+      "Mathematical vocabulary guide with examples (UDL 3.3)",
+      "Precise language sentence frames (UDL 5.3)",
+      "Commonly confused terms guide (UDL 6.2)",
+      "Personal vocabulary log (UDL 6.4)",
+      "Vocabulary in problem-solving prompts (UDL 5.3)"
+    ],
+    "fadePlan": "Phase 1: Teacher models and requires precise language → Phase 2: Prompted vocabulary use → Phase 3: Independent precise language → Phase 4: Natural mathematical precision",
+    "whenNotToUse": "When exploring ideas and precision would inhibit thinking.",
+    "formativeChecks": [
+      "- Vocabulary accuracy in use",
+      "- Similar term distinction",
+      "- Vocabulary log quality",
+      "- Problem-solving vocabulary use"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.1",
+      "UDL 6.2",
+      "UDL 6.4",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.language.plain_language_access",
+      "rtag.identity.neurodiversity",
+      "rtag.language.inclusive_language"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "udl_cast_2024_guidelines"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "math.mathematical_writing_development",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Mathematical Writing Skill Development",
+    "type": "linguistic",
+    "problemType": "Students can't write mathematically beyond showing calculations",
+    "targetMisconception": "Belief that mathematics doesn't involve writing",
+    "teacherMoves": [
+      "Teach mathematical writing as communication skill (HLP Explicit Instruction)",
+      "Model different forms of mathematical writing (UDL 6.1)",
+      "Practice writing explanations, proofs, and reflections (UDL 8.3)",
+      "Build mathematical writing habits (UDL 6.4)"
+    ],
+    "studentTasks": [
+      "Write clear mathematical explanations",
+      "Construct written mathematical arguments",
+      "Use appropriate mathematical notation in writing",
+      "Revise mathematical writing for clarity",
+      "Develop mathematical writing voice"
+    ],
+    "supports": [
+      "Mathematical writing types guide (UDL 3.3)",
+      "Explanation writing templates (UDL 5.3)",
+      "Argument construction framework (UDL 6.2)",
+      "Notation style guide (UDL 3.3)",
+      "Revision checklist for math writing (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher models mathematical writing → Phase 2: Guided writing practice with feedback → Phase 3: Independent mathematical writing → Phase 4: Natural mathematical writing",
+    "whenNotToUse": "When quick calculation is appropriate rather than written explanation.",
+    "formativeChecks": [
+      "- Explanation clarity",
+      "- Argument construction quality",
+      "- Notation accuracy",
+      "- Revision effectiveness"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.1",
+      "UDL 6.2",
+      "UDL 6.4",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.language.plain_language_access",
+      "rtag.pedagogy.student_voice",
+      "rtag.identity.neurodiversity"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "hlp_wwc_2016_secondary_writing",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "math.multiple_representation_connector",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Multiple Representation Connector",
+    "type": "cognitive",
+    "problemType": "Students use one representation without connecting to others",
+    "targetMisconception": "Belief that graphs tables and equations are separate unrelated things",
+    "teacherMoves": [
+      "Model translating between representations (UDL 3.3)",
+      "Highlight what each representation reveals (HLP Explicit Instruction)",
+      "Use color-coding across forms"
+    ],
+    "studentTasks": [
+      "Create same relationship in 3+ representations",
+      "Explain advantages of each form",
+      "Identify which representation best answers specific questions"
+    ],
+    "supports": [
+      "Representation connection map (UDL 3.3)",
+      "Translation checklist (UDL 6.2)",
+      "Representation comparison chart (UDL 5.1)"
+    ],
+    "fadePlan": "Teacher models all connections → Students complete one representation given another → Independent multi-rep creation",
+    "whenNotToUse": "When working on purely symbolic manipulation",
+    "formativeChecks": [
+      "Quick check: Match representations",
+      "Explain why you chose specific representation"
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.1",
+      "UDL 6.2",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.media.multimodal_resources",
+      "rtag.media.graphic_organizers",
+      "rtag.media.accessible_media"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "hlp_wwc_2015_algebra",
+      "udl_cast_2024_guidelines"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "math.multiple_representations_fluency",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Multiple Representations Fluency Building",
+    "type": "cognitive",
+    "problemType": "Students get stuck in one representation when others might help",
+    "targetMisconception": "Belief that there's one right way to represent mathematical ideas",
+    "teacherMoves": [
+      "Teach multiple representations as fundamental mathematical skill (HLP Explicit Instruction)",
+      "Model translating between representations (UDL 5.1)",
+      "Practice choosing representations strategically (UDL 7.1)",
+      "Build fluency in moving between representations (UDL 6.4)"
+    ],
+    "studentTasks": [
+      "Represent problems using multiple forms: verbal, symbolic, graphical, tabular",
+      "Translate between representations fluently",
+      "Choose representations strategically for different purposes",
+      "Explain connections between representations",
+      "Use multiple representations to verify solutions"
+    ],
+    "supports": [
+      "Representation translation guide (UDL 3.3)",
+      "Multiple representation workspace (UDL 5.1)",
+      "Strategic representation selection prompts (UDL 6.2)",
+      "Connection explanation stems (UDL 5.3)",
+      "Verification using representations (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher models with explicit translation → Phase 2: Guided representation practice → Phase 3: Independent representation choice → Phase 4: Natural representation fluency",
+    "whenNotToUse": "When specific representation practice is the learning goal.",
+    "formativeChecks": [
+      "- Representation variety in solutions",
+      "- Translation accuracy",
+      "- Strategic selection reasoning",
+      "- Connection explanations"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.1",
+      "UDL 5.3",
+      "UDL 6.1",
+      "UDL 6.2",
+      "UDL 6.4",
+      "UDL 7.1",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.media.multimodal_resources",
+      "rtag.identity.neurodiversity",
+      "rtag.media.graphic_organizers"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "hlp_wwc_2012_problem_solving",
+      "udl_cast_2024_guidelines"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "math.neuro_attention_signaling",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "attention signaling routines (exec function)",
+    "type": "metacognitive",
+    "problemType": "students miss instructions or forget multi-part directions",
+    "targetMisconception": "belief that attention automatically follows spoken instruction.",
+    "teacherMoves": [
+      "establish consistent visual/auditory attention cues (udl 7.3)",
+      "model stop-look-listen and chunked directives (hlp explicit instruction)",
+      "provide written anchor for steps (udl 6.3)"
+    ],
+    "studentTasks": [
+      "respond to attention cue.",
+      "repeat or paraphrase the directive.",
+      "check off steps as they are completed."
+    ],
+    "supports": [
+      "visual cue card set (udl 2.1)",
+      "step anchor card (udl 6.3)",
+      "paraphrase stems (hlp explicit instruction)"
+    ],
+    "fadePlan": "teacher-led cues with explicit modeling → guided cue-response with paraphrase → independent attention/self-cueing.",
+    "whenNotToUse": "avoid when students are in crisis or sensory overload; use calmer routine first.",
+    "formativeChecks": [
+      "- quick check: students paraphrase directions accurately. - observation: response time to cues."
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "udl 7.3",
+      "udl 2.1",
+      "udl 6.3",
+      "hlp explicit instruction"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.identity.neurodiversity",
+      "rtag.identity.disability_inclusion",
+      "rtag.media.accessible_media"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "UDL-CAST-3.0",
+      "HLP-CEC"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.neuro_executive_function_checklist",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "executive function checklist",
+    "type": "metacognitive",
+    "problemType": "students forget materials, steps, or goals across a lesson",
+    "targetMisconception": "belief that organization is purely willpower.",
+    "teacherMoves": [
+      "co-create checklist for materials/steps/goals (udl 6.3)",
+      "model self-check routine (hlp explicit instruction)",
+      "celebrate consistent use (hlp feedback)"
+    ],
+    "studentTasks": [
+      "use checklist at start/mid/end.",
+      "tick/annotate completion.",
+      "reflect on one improvement weekly."
+    ],
+    "supports": [
+      "ef checklist (udl 6.3)",
+      "visual reminder card (udl 2.1)",
+      "reflection stems (hlp feedback)"
+    ],
+    "fadePlan": "teacher-created lists → co-created → student-generated and self-managed.",
+    "whenNotToUse": "avoid during high-stakes assessment segments where checklists aren’t permitted.",
+    "formativeChecks": [
+      "- checklist completion rates. - weekly ef reflection entry."
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "udl 6.3",
+      "udl 2.1",
+      "hlp explicit instruction",
+      "hlp feedback"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.identity.neurodiversity",
+      "rtag.identity.disability_inclusion",
+      "rtag.media.accessible_media"
+    ],
+    "cspTags": [
+      "co_design_with_community"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "HLP-CEC",
+      "UDL-CAST-3.0"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.neuro_memory_retrieval_practice",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "retrieval practice routines",
+    "type": "metacognitive",
+    "problemType": "students reread notes instead of retrieving",
+    "targetMisconception": "belief that learning equals re-reading.",
+    "teacherMoves": [
+      "teach short, spaced retrieval cycles (udl 6.4)",
+      "model self-quiz design (hlp explicit instruction)",
+      "provide error log and fix-up strategies (hlp feedback)"
+    ],
+    "studentTasks": [
+      "create and use retrieval prompts.",
+      "self-quiz in short intervals.",
+      "log errors and fix-ups."
+    ],
+    "supports": [
+      "retrieval prompt templates (udl 5.1)",
+      "error log sheet (hlp feedback)",
+      "spacing scheduler (udl 6.4)"
+    ],
+    "fadePlan": "teacher-led retrieval sessions → guided self-quiz design → independent spaced retrieval.",
+    "whenNotToUse": "avoid cramming situations that demand new content, not recall.",
+    "formativeChecks": [
+      "- error log improvements over time. - spot check self-quiz quality."
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "udl 6.4",
+      "udl 5.1",
+      "hlp explicit instruction",
+      "hlp feedback"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.identity.neurodiversity",
+      "rtag.media.accessible_media",
+      "rtag.language.inclusive_language"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "ROSENSHINE-2012",
+      "UDL-CAST-3.0"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.neuro_multisensory_instruction",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "multisensory instruction pack",
+    "type": "metacognitive",
+    "problemType": "students benefit from visual, auditory, and kinesthetic inputs",
+    "targetMisconception": "belief that one modality fits all learners.",
+    "teacherMoves": [
+      "model concept with visual, verbal, and tactile elements (udl 1.1/2.1/3.1)",
+      "provide choice of input modality (udl 7.2)",
+      "coach students to choose and reflect (hlp self-regulation)"
+    ],
+    "studentTasks": [
+      "try at least two modalities for a concept.",
+      "record which helped and why.",
+      "present explanation in chosen modality."
+    ],
+    "supports": [
+      "visuals/manipulatives kit (udl 1.1)",
+      "audio/closed captions (udl 1.2)",
+      "modality reflection sheet (hlp self-regulation)"
+    ],
+    "fadePlan": "teacher-curated multisensory demo → student choice with guidance → independent modality selection.",
+    "whenNotToUse": "avoid when environment or materials limit modality access.",
+    "formativeChecks": [
+      "- reflection: which modality supported understanding and why? - peer explanation in chosen modality."
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "udl 1.1",
+      "udl 1.2",
+      "udl 3.1",
+      "udl 7.2",
+      "hlp self-regulation"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.identity.disability_inclusion",
+      "rtag.identity.neurodiversity",
+      "rtag.media.accessible_media"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "UDL-CAST-3.0",
+      "WWC-MPS-2012"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.neuro_processing_speed_scaffold",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "processing speed scaffold",
+    "type": "metacognitive",
+    "problemType": "students rush or stall on long items without strategy",
+    "targetMisconception": "belief that pacing is innate and cannot be adjusted.",
+    "teacherMoves": [
+      "model timeboxing for sub-steps (udl 6.3)",
+      "provide “good-enough now, refine later” heuristic (hlp explicit instruction)",
+      "coach peer-timed practice (hlp cooperative learning)"
+    ],
+    "studentTasks": [
+      "break task into timed sub-steps.",
+      "use heuristic to move forward.",
+      "reflect on pacing effectiveness."
+    ],
+    "supports": [
+      "timeboxing sheet (udl 6.3)",
+      "heuristic prompt card (udl 5.3)",
+      "peer timing protocol (hlp cooperative learning)"
+    ],
+    "fadePlan": "teacher-led timeboxing → guided peer timing → independent self-pacing.",
+    "whenNotToUse": "avoid during summative testing with fixed timing rules.",
+    "formativeChecks": [
+      "- compare planned vs. actual times. - reflection on one pacing adjustment."
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "udl 6.3",
+      "udl 5.3",
+      "hlp explicit instruction",
+      "hlp cooperative learning"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.identity.neurodiversity",
+      "rtag.identity.disability_inclusion",
+      "rtag.media.accessible_media"
+    ],
+    "cspTags": [
+      "criticality"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "HLP-CEC",
+      "UDL-CAST-3.0"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.neuro_scaffold_note_system",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "structured note systems",
+    "type": "metacognitive",
+    "problemType": "students’ notes are incomplete or unusable for studying",
+    "targetMisconception": "belief that good notes mean copying everything.",
+    "teacherMoves": [
+      "model cornell/structure-first notes (udl 6.3)",
+      "provide cue columns and summary prompts (hlp explicit instruction)",
+      "teach weekly “tidy + reflect” routine (hlp feedback)"
+    ],
+    "studentTasks": [
+      "take structured notes with cues.",
+      "summarize key ideas at end.",
+      "review/tidy weekly with reflection."
+    ],
+    "supports": [
+      "cornell template (udl 6.3)",
+      "summary stems (udl 5.3)",
+      "weekly tidy checklist (hlp feedback)"
+    ],
+    "fadePlan": "teacher-modeled structure → guided notes with prompts → independent structured notes.",
+    "whenNotToUse": "avoid for very short tasks where note-taking is unnecessary.",
+    "formativeChecks": [
+      "- random spot-check for summary accuracy. - reflection on how notes improved recall."
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "udl 6.3",
+      "udl 5.3",
+      "hlp explicit instruction",
+      "hlp feedback"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.identity.neurodiversity",
+      "rtag.media.accessible_media",
+      "rtag.language.inclusive_language"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "ROSENSHINE-2012",
+      "UDL-CAST-3.0"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.neuro_visual_sequence_maps",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "visual sequence maps",
+    "type": "metacognitive",
+    "problemType": "students lose track of procedure order or skip steps",
+    "targetMisconception": "belief that steps are arbitrary and order doesn’t matter.",
+    "teacherMoves": [
+      "model flowchart mapping of multi-step procedures (udl 5.1)",
+      "color-code decision points (udl 2.5)",
+      "prompt “why this step now?” (hlp questioning)"
+    ],
+    "studentTasks": [
+      "build a flowchart for a target procedure.",
+      "use it while solving.",
+      "explain why step order matters."
+    ],
+    "supports": [
+      "procedure flowchart (udl 5.1)",
+      "color key (udl 2.5)",
+      "step-why stems (hlp questioning)"
+    ],
+    "fadePlan": "teacher-created flowcharts → guided additions → student-created flowcharts.",
+    "whenNotToUse": "avoid when the task genuinely has flexible order (focus on strategy selection instead).",
+    "formativeChecks": [
+      "- flowchart completeness/accuracy check. - one-sentence step justification."
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "udl 5.1",
+      "udl 2.5",
+      "hlp questioning"
+    ],
+    "selStrand": "responsible-decision-making",
+    "representationTags": [
+      "rtag.identity.neurodiversity",
+      "rtag.media.accessible_media",
+      "rtag.identity.disability_inclusion"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "WWC-MPS-2012",
+      "UDL-CAST-3.0"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.neuro_working_memory_chunking",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "chunking multi-step problems (exec function)",
+    "type": "metacognitive",
+    "problemType": "students lose procedural steps or fail to monitor progress",
+    "targetMisconception": "belief that long problems must be solved in one go.",
+    "teacherMoves": [
+      "model chunk–check routine with timers (udl 6.3)",
+      "provide visual step planner (hlp explicit instruction)",
+      "prompt self-talk for next-step planning (hlp feedback)"
+    ],
+    "studentTasks": [
+      "break a long problem into chunks.",
+      "set a goal per chunk and monitor completion.",
+      "reflect on which chunk needed a strategy."
+    ],
+    "supports": [
+      "visual step planner (udl 6.3)",
+      "timer cues (udl 1.2)",
+      "self-talk prompt list (hlp feedback)"
+    ],
+    "fadePlan": "teacher-led chunking → guided chunk-and-check → independent chunking with self-monitor.",
+    "whenNotToUse": "avoid when problems are intentionally short/one-step practice.",
+    "formativeChecks": [
+      "- planner completeness check. - reflections cite one chunk and strategy used."
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "udl 6.3",
+      "udl 1.2",
+      "hlp explicit instruction",
+      "hlp feedback"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.identity.neurodiversity",
+      "rtag.identity.disability_inclusion",
+      "rtag.media.accessible_media"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "UDL-CAST-3.0",
+      "ROSENSHINE-2012"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.pattern_recognition_generalization",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Pattern Recognition and Generalization Skills",
+    "type": "cognitive",
+    "problemType": "Students don't recognize or generalize mathematical patterns",
+    "targetMisconception": "Belief that each math problem is unique rather than connected by patterns",
+    "teacherMoves": [
+      "Teach pattern recognition as mathematical practice (HLP Explicit Instruction)",
+      "Model identifying and extending patterns (UDL 6.1)",
+      "Practice generalizing from specific cases (UDL 6.2)",
+      "Connect patterns to formal mathematical concepts (UDL 7.2)"
+    ],
+    "studentTasks": [
+      "Identify patterns in mathematical situations",
+      "Extend patterns using evidence-based reasoning",
+      "Generalize patterns into mathematical rules or formulas",
+      "Test generalizations with new cases",
+      "Connect patterns to formal mathematics"
+    ],
+    "supports": [
+      "Pattern recognition strategies (UDL 3.3)",
+      "Pattern extension guide (UDL 6.2)",
+      "Generalization development template (UDL 6.2)",
+      "Testing generalization protocol (UDL 6.4)",
+      "Formal connection prompts (UDL 5.3)"
+    ],
+    "fadePlan": "Phase 1: Teacher models pattern recognition and generalization → Phase 2: Guided pattern work → Phase 3: Independent pattern recognition → Phase 4: Natural pattern-seeking habits",
+    "whenNotToUse": "When specific procedural fluency is the goal.",
+    "formativeChecks": [
+      "- Pattern identification accuracy",
+      "- Extension reasoning quality",
+      "- Generalization validity",
+      "- Formal connection depth"
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.1",
+      "UDL 6.2",
+      "UDL 6.4",
+      "UDL 7.2",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.media.graphic_organizers",
+      "rtag.pedagogy.student_voice",
+      "rtag.identity.neurodiversity"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "hlp_wwc_2012_problem_solving",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "math.peer_explanation_teaching",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Mathematical Peer Explanation and Teaching",
+    "type": "social_collaborative",
+    "problemType": "Students don't learn from explaining to or teaching peers",
+    "targetMisconception": "Belief that explaining to others takes time away from own learning",
+    "teacherMoves": [
+      "Teach peer explanation as learning tool for explainer (HLP Cooperative Learning)",
+      "Model effective mathematical explanations (UDL 6.1)",
+      "Structure peer teaching opportunities (UDL 8.3)",
+      "Build explanation skills progressively (UDL 6.4)"
+    ],
+    "studentTasks": [
+      "Prepare to explain mathematical concepts to peers",
+      "Explain using multiple representations and examples",
+      "Check peer understanding and adjust explanation",
+      "Learn from teaching attempts",
+      "Reflect on explaining as learning"
+    ],
+    "supports": [
+      "Explanation preparation guide (UDL 3.3)",
+      "Multiple representation explanation (UDL 5.1)",
+      "Understanding check prompts (UDL 5.3)",
+      "Learning from teaching reflection (UDL 6.4)",
+      "Explanation skill tracking (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher models explanations with structure → Phase 2: Supported peer teaching → Phase 3: Independent peer explanation → Phase 4: Natural peer teaching culture",
+    "whenNotToUse": "When content is new to everyone and peer teaching isn't appropriate.",
+    "formativeChecks": [
+      "- Explanation preparation quality",
+      "- Multiple representation use",
+      "- Understanding check effectiveness",
+      "- Reflection on teaching learning"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.1",
+      "UDL 5.3",
+      "UDL 6.1",
+      "UDL 6.4",
+      "UDL 8.3",
+      "HLP Cooperative Learning"
+    ],
+    "selStrand": "relationship-skills",
+    "representationTags": [
+      "rtag.pedagogy.collaborative_dialogue",
+      "rtag.pedagogy.student_voice",
+      "rtag.identity.intersectional_identities"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge",
+      "co_design_with_community"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "hlp_jenkins_2003_cooperative_learning",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "math.problem_understanding_protocol",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Problem Understanding and Entry Protocol",
+    "type": "cognitive",
+    "problemType": "Students start calculating before understanding problems",
+    "targetMisconception": "Belief that math is about quickly finding answers rather than understanding",
+    "teacherMoves": [
+      "Teach problem understanding as essential first step (HLP Explicit Instruction)",
+      "Model reading problems multiple times (UDL 6.1)",
+      "Practice identifying what's given and what's asked (UDL 6.2)",
+      "Build habit of pausing before solving (UDL 6.4)"
+    ],
+    "studentTasks": [
+      "Read problem multiple times for understanding",
+      "Identify what's given and what's being asked",
+      "Restate problem in own words",
+      "Identify relevant mathematical concepts",
+      "Plan solution approach before calculating"
+    ],
+    "supports": [
+      "Problem understanding checklist (UDL 6.4)",
+      "Given/Asked organizer (UDL 3.3)",
+      "Problem restatement stems (UDL 5.3)",
+      "Concept connection guide (UDL 6.2)",
+      "Solution planning template (UDL 6.2)"
+    ],
+    "fadePlan": "Phase 1: Teacher models understanding protocol explicitly → Phase 2: Prompted understanding before solving → Phase 3: Independent understanding protocol → Phase 4: Automatic understanding habit",
+    "whenNotToUse": "When problem is routine and understanding is already automatic.",
+    "formativeChecks": [
+      "- Understanding checklist completion",
+      "- Restatement accuracy",
+      "- Concept identification accuracy",
+      "- Solution approach appropriateness"
+    ],
+    "bloomLevel": "understand",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.1",
+      "UDL 6.2",
+      "UDL 6.4",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.language.plain_language_access",
+      "rtag.identity.neurodiversity",
+      "rtag.media.graphic_organizers"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "hlp_wwc_2012_problem_solving",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "math.procedural_exponent_rules",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "applying exponent rules (fluency)",
+    "type": "linguistic",
+    "problemType": "students memorize rules without understanding",
+    "targetMisconception": "belief that rules are arbitrary patterns.",
+    "teacherMoves": [
+      "connect rules to repeated multiplication visuals (udl 3.3)",
+      "contrast similar-looking rules with examples/non-examples (hlp explicit instruction)",
+      "prompt verbalization of rule meaning (hlp language supports)"
+    ],
+    "studentTasks": [
+      "complete contrast sets (e.g., product vs. power rules).",
+      "explain each step’s meaning.",
+      "repair a wrong application in a sample."
+    ],
+    "supports": [
+      "visual rule cards (udl 2.5)",
+      "contrast pair set (udl 1.2)",
+      "explanation stems (hlp language supports)"
+    ],
+    "fadePlan": "full modeling. • guided contrasts. • independent practice with repair tasks.",
+    "whenNotToUse": "avoid when exponential meaning has not been introduced conceptually.",
+    "formativeChecks": [
+      "- quick fix-a-rule item. - one explanation sentence per problem."
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "udl 3.3",
+      "udl 2.5",
+      "udl 1.2",
+      "hlp explicit instruction",
+      "hlp language supports"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.language.inclusive_language",
+      "rtag.media.accessible_media",
+      "rtag.identity.neurodiversity"
+    ],
+    "cspTags": [
+      "criticality"
+    ],
+    "equityScore": 3,
+    "evidenceCitationKeys": [
+      "ROSENSHINE-2012",
+      "WWC-MPS-2012"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.procedural_factoring_quadratics",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "factoring quadratics fluency",
+    "type": "linguistic",
+    "problemType": "students memorize patterns without structural understanding",
+    "targetMisconception": "belief that factoring is trial-and-error only.",
+    "teacherMoves": [
+      "model structure-first factor recognition (udl 3.3)",
+      "color-code factor pairs (udl 2.5)",
+      "prompt articulation of why factors produce terms (hlp explicit instruction)"
+    ],
+    "studentTasks": [
+      "sort expressions into factorable forms.",
+      "factor and check by expansion.",
+      "explain why chosen factors work."
+    ],
+    "supports": [
+      "pattern sort cards (udl 3.3)",
+      "color code guide (udl 2.5)",
+      "why-this-factor stems (udl 2.1)"
+    ],
+    "fadePlan": "teacher-led modeling. - guided sort and factor. - independent factoring with explanation.",
+    "whenNotToUse": "avoid when concept is new (teach conceptual scaffold first).",
+    "formativeChecks": [
+      "- exit: justify factor choice on one problem. - self-check expansion matches original."
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "udl 3.3",
+      "udl 2.5",
+      "udl 2.1",
+      "hlp explicit instruction"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.media.accessible_media",
+      "rtag.identity.neurodiversity"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "WWC-MPS-2012",
+      "ROSENSHINE-2012"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.procedural_fraction_operations",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "operations with fractions (fluency)",
+    "type": "metacognitive",
+    "problemType": "students rely on calculators or avoid fraction operations",
+    "targetMisconception": "belief that fraction operations are arbitrary tricks.",
+    "teacherMoves": [
+      "model common denominator reasoning (udl 3.3)",
+      "verbalize numerator/denominator roles (hlp explicit instruction)",
+      "provide error analysis mini-sets (hlp feedback)"
+    ],
+    "studentTasks": [
+      "complete practice sets emphasizing structure and error correction.",
+      "explain step choices in pairs.",
+      "reflect on a frequent error and a fix."
+    ],
+    "supports": [
+      "practice set with error items (udl 5.1)",
+      "step tracker (udl 6.3)",
+      "error analysis stems (hlp feedback)"
+    ],
+    "fadePlan": "full modeling. - guided sets with trackers. - independent sets with self-correction.",
+    "whenNotToUse": "avoid when the focus is conceptual understanding (use conceptual scaffold first).",
+    "formativeChecks": [
+      "- mini-quiz with two error items to repair. - pair explanation spot-checks."
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "udl 3.3",
+      "udl 6.3",
+      "udl 5.1",
+      "hlp explicit instruction",
+      "hlp feedback"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.media.accessible_media",
+      "rtag.identity.neurodiversity"
+    ],
+    "cspTags": [
+      "criticality"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "UDL-CAST-3.0",
+      "ROSENSHINE-2012"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.procedural_linear_equations",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "stepwise solving linear equations",
+    "type": "metacognitive",
+    "problemType": "procedural fluency without reasoning about inverse operations",
+    "targetMisconception": "belief that solving is just crossing out.",
+    "teacherMoves": [
+      "model inverse operations while verbalizing balance reasoning (udl 3.3)",
+      "write and highlight each transformation step (udl 6.3)",
+      "prompt partner explanation for each step (hlp peer collaboration)"
+    ],
+    "studentTasks": [
+      "solve curated problems and check balance after each step.",
+      "explain each operation’s effect.",
+      "annotate solution steps with reasoning."
+    ],
+    "supports": [
+      "worked example set (udl 1.1)",
+      "step-by-step tracker (udl 6.3)",
+      "partner explanation stems (hlp peer collaboration)"
+    ],
+    "fadePlan": "teacher-led worked examples. - fade to guided practice with trackers. - independent solving with self-check.",
+    "whenNotToUse": "avoid when focus is conceptual exploration (use conceptual scaffold instead).",
+    "formativeChecks": [
+      "- spot-check partner explanations for correctness. - quick exit: identify which step preserved balance."
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "udl 3.3",
+      "udl 6.3",
+      "udl 1.1",
+      "hlp peer collaboration"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.media.accessible_media",
+      "rtag.identity.neurodiversity",
+      "rtag.identity.disability_inclusion"
+    ],
+    "cspTags": [
+      "criticality"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "ROSENSHINE-2012",
+      "WWC-MPS-2012"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.procedural_linear_transformations",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "transformations between linear forms",
+    "type": "linguistic",
+    "problemType": "students convert forms without understanding structure",
+    "targetMisconception": "belief that form changes are arbitrary.",
+    "teacherMoves": [
+      "model converting between slope-intercept and standard form with structure notes (udl 3.3)",
+      "provide align/transform checklist (hlp explicit instruction)",
+      "prompt explanation of parameter effects (hlp questioning)"
+    ],
+    "studentTasks": [
+      "convert between forms accurately.",
+      "annotate structure changes.",
+      "explain parameter effects on graphs."
+    ],
+    "supports": [
+      "transform checklist (udl 6.3)",
+      "structure notes (udl 2.5)",
+      "parameter-effect stems (hlp questioning)"
+    ],
+    "fadePlan": "teacher modeling. • guided transform with notes. • independent transforms with explanation.",
+    "whenNotToUse": "avoid before students can read graphs/parameters.",
+    "formativeChecks": [
+      "- spot-check structure notes. - one-sentence parameter-effect reasoning."
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "udl 3.3",
+      "udl 6.3",
+      "udl 2.5",
+      "hlp explicit instruction",
+      "hlp questioning"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.language.inclusive_language",
+      "rtag.media.accessible_media",
+      "rtag.identity.neurodiversity"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "WWC-MPS-2012",
+      "UDL-CAST-3.0"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.procedural_radical_simplify",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "simplifying radicals (fluency)",
+    "type": "metacognitive",
+    "problemType": "students treat radicals like integers",
+    "targetMisconception": "belief that √(a+b) = √a + √b.",
+    "teacherMoves": [
+      "model structure and counterexamples (udl 3.3)",
+      "provide prime factor tree technique (hlp explicit instruction)",
+      "prompt “why valid?” checks (hlp feedback)"
+    ],
+    "studentTasks": [
+      "generate prime factor trees.",
+      "simplify radicals step-by-step.",
+      "write a note on why simplification is valid."
+    ],
+    "supports": [
+      "prime tree worksheet (udl 5.1)",
+      "step tracker (udl 6.3)",
+      "validity stems (hlp feedback)"
+    ],
+    "fadePlan": "teacher-led examples. • guided practice with trackers. • independent sets.",
+    "whenNotToUse": "avoid when square roots are brand new (teach concept first).",
+    "formativeChecks": [
+      "- quick counterexample identification. - exit: explain why √(a+b) ≠ √a+√b."
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "udl 3.3",
+      "udl 5.1",
+      "udl 6.3",
+      "hlp explicit instruction",
+      "hlp feedback"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.media.accessible_media",
+      "rtag.identity.neurodiversity",
+      "rtag.language.inclusive_language"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "UDL-CAST-3.0",
+      "ROSENSHINE-2012"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.procedural_slope_intercept",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "fluency with slope-intercept form",
+    "type": "linguistic",
+    "problemType": "students memorize y=mx+b steps but can’t apply flexibly",
+    "targetMisconception": "belief that slope-intercept works the same in any context.",
+    "teacherMoves": [
+      "model identifying slope and intercepts from multiple representations (udl 3.3)",
+      "provide quick transforms to/from standard form (hlp explicit instruction)",
+      "prompt explanation of how parameters change graphs (hlp questioning)"
+    ],
+    "studentTasks": [
+      "extract m and b from graphs/tables.",
+      "convert between forms.",
+      "explain graph changes for parameter tweaks."
+    ],
+    "supports": [
+      "form transform cheat-sheet (udl 3.3)",
+      "m/b extractor (udl 2.5)",
+      "“change-in-m/b” stems (hlp questioning)"
+    ],
+    "fadePlan": "teacher modeling. - guided transform practice. - independent parameter reasoning.",
+    "whenNotToUse": "avoid when lesson focus is conceptual rate meaning (use conceptual scaffold).",
+    "formativeChecks": [
+      "- quick transform check. - one-sentence reasoning of parameter change."
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "udl 3.3",
+      "udl 2.5",
+      "hlp explicit instruction",
+      "hlp questioning"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.media.accessible_media",
+      "rtag.language.home_language",
+      "rtag.identity.neurodiversity"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "ROSENSHINE-2012",
+      "UDL-CAST-3.0"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.procedural_systems_elimination",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "elimination method fluency",
+    "type": "metacognitive",
+    "problemType": "students add equations without aligning terms or understanding why it works",
+    "targetMisconception": "belief that elimination is a trick unrelated to substitution.",
+    "teacherMoves": [
+      "model term alignment and multiplying by constants (udl 3.3)",
+      "think-aloud justification of elimination step (hlp explicit instruction)",
+      "prompt “why this combination” reflections (hlp feedback)"
+    ],
+    "studentTasks": [
+      "align terms, choose multipliers, eliminate and solve.",
+      "explain why the step preserves equality.",
+      "compare with substitution on one example."
+    ],
+    "supports": [
+      "alignment template (udl 3.3)",
+      "multiplier guide (udl 2.5)",
+      "why-this-step stems (hlp feedback)"
+    ],
+    "fadePlan": "teacher-led demonstration. - guided practice with template. - independent elimination with justification.",
+    "whenNotToUse": "avoid when conceptual connections among methods haven’t been introduced.",
+    "formativeChecks": [
+      "- spot-check justification sentences. - quick compare/contrast note vs substitution."
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "udl 3.3",
+      "udl 2.5",
+      "hlp explicit instruction",
+      "hlp feedback"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.media.accessible_media",
+      "rtag.identity.neurodiversity"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "ROSENSHINE-2012",
+      "WWC-MPS-2012"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.real_world_math_connections",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Real-World Mathematics Connection Building",
+    "type": "unknown",
+    "problemType": "Students don't see relevance of mathematics to their lives",
+    "targetMisconception": "Belief that math is abstract and disconnected from reality",
+    "teacherMoves": [
+      "Connect mathematical content to real applications (UDL 7.2)",
+      "Use authentic problems from student contexts (UDL 7.2)",
+      "Explore careers using mathematics (UDL 7.3)",
+      "Support student-identified connections (UDL 8.3)"
+    ],
+    "studentTasks": [
+      "Identify real-world applications of concepts being learned",
+      "Explore mathematics in areas of personal interest",
+      "Research careers that use current mathematical content",
+      "Create personally meaningful math connections",
+      "Share relevance discoveries with peers"
+    ],
+    "supports": [
+      "Real-world application guide by topic (UDL 3.3)",
+      "Interest-math connection exploration (UDL 7.2)",
+      "Career-math research guide (UDL 6.2)",
+      "Personal connection template (UDL 5.3)",
+      "Sharing protocol (HLP Cooperative Learning)"
+    ],
+    "fadePlan": "Phase 1: Teacher provides connections and guides exploration → Phase 2: Supported connection discovery → Phase 3: Independent relevance finding → Phase 4: Natural math-world connections",
+    "whenNotToUse": "When abstract mathematical development is appropriate learning goal.",
+    "formativeChecks": [
+      "- Application identification breadth",
+      "- Personal connection quality",
+      "- Career research depth",
+      "- Peer sharing participation"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.2",
+      "UDL 7.2",
+      "UDL 7.3",
+      "UDL 8.3",
+      "HLP Cooperative Learning"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.pedagogy.project_based_relevance",
+      "rtag.context.global_voices",
+      "rtag.identity.intersectional_identities"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge",
+      "criticality"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "udl_cast_2024_guidelines"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "math.reasoning_error_analysis",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "error analysis for reasoning",
+    "type": "metacognitive",
+    "problemType": "students see errors as failure not feedback",
+    "targetMisconception": "belief that correctness is the only measure.",
+    "teacherMoves": [
+      "model categorizing and repairing errors (udl 3.3)",
+      "facilitate debate on borderline cases (hlp discourse)",
+      "prompt “what changed your mind?” (hlp feedback)"
+    ],
+    "studentTasks": [
+      "classify and repair errors with explanations.",
+      "debate edge cases.",
+      "write a reflection on a repaired misconception."
+    ],
+    "supports": [
+      "error card set (udl 5.1)",
+      "repair checklist (udl 6.3)",
+      "debate stems (hlp discourse)"
+    ],
+    "fadePlan": "teacher-led classification → guided repair → independent error analysis.",
+    "whenNotToUse": "avoid when current unit is foundational and time is short.",
+    "formativeChecks": [
+      "- mini-rubric on justification quality. - reflection cites one misconception repair."
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "udl 3.3",
+      "udl 5.1",
+      "udl 6.3",
+      "hlp discourse",
+      "hlp feedback"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.language.inclusive_language",
+      "rtag.media.accessible_media",
+      "rtag.identity.neurodiversity"
+    ],
+    "cspTags": [
+      "criticality"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "ROSENSHINE-2012",
+      "UDL-CAST-3.0"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.reasoning_estimation_sense",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "developing estimation sense",
+    "type": "metacognitive",
+    "problemType": "students rely solely on exact calculation",
+    "targetMisconception": "belief that estimation is guessing.",
+    "teacherMoves": [
+      "model front-end and rounding strategies (udl 3.3)",
+      "provide estimation checkpoints (hlp explicit instruction)",
+      "prompt reasonableness reflection (hlp feedback)"
+    ],
+    "studentTasks": [
+      "estimate before calculating.",
+      "compare estimate to exact.",
+      "reflect on error size and method."
+    ],
+    "supports": [
+      "estimation checkpoint cards (udl 5.1)",
+      "strategy menu (udl 6.2)",
+      "reasonableness stems (hlp feedback)"
+    ],
+    "fadePlan": "teacher modeling. • guided estimation with checkpoints. • independent estimation use.",
+    "whenNotToUse": "avoid when exact computation is the explicit objective.",
+    "formativeChecks": [
+      "- exit: compare/justify estimate vs exact on one item. - reflection on best-fit strategy."
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "udl 3.3",
+      "udl 5.1",
+      "udl 6.2",
+      "hlp explicit instruction",
+      "hlp feedback"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.language.inclusive_language",
+      "rtag.media.accessible_media",
+      "rtag.identity.neurodiversity"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "WWC-MPS-2012",
+      "UDL-CAST-3.0"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.reasoning_metacognitive_reflection",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "metacognitive reflection in math",
+    "type": "metacognitive",
+    "problemType": "students don’t connect strategy to outcome",
+    "targetMisconception": "belief that success/failure is random.",
+    "teacherMoves": [
+      "model brief reflection after tasks (udl 6.4)",
+      "provide question stems linking strategy→result (hlp explicit instruction)",
+      "encourage peer share of strategies (hlp cooperative learning)"
+    ],
+    "studentTasks": [
+      "write short reflection after tasks.",
+      "identify which strategy helped and why.",
+      "share one strategy in peer group."
+    ],
+    "supports": [
+      "reflection stem bank (udl 6.4)",
+      "strategy log (udl 5.1)",
+      "peer share protocol (hlp cooperative learning)"
+    ],
+    "fadePlan": "teacher-modeled reflections → guided entries → independent reflections.",
+    "whenNotToUse": "avoid when time is too short to write (consider oral reflection).",
+    "formativeChecks": [
+      "- review reflections for strategy–result link. - peer share quality spot-check."
+    ],
+    "bloomLevel": "evaluate",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "udl 6.4",
+      "udl 5.1",
+      "hlp explicit instruction",
+      "hlp cooperative learning"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.language.inclusive_language",
+      "rtag.identity.neurodiversity",
+      "rtag.media.accessible_media"
+    ],
+    "cspTags": [
+      "co_design_with_community"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "ROSENSHINE-2012",
+      "UDL-CAST-3.0"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.reasoning_modeling_contexts",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "modeling real-world contexts",
+    "type": "social_collaborative",
+    "problemType": "students compute without interpreting parameters",
+    "targetMisconception": "belief that models are just equations unrelated to context.",
+    "teacherMoves": [
+      "model interpreting parameters in context (udl 3.3)",
+      "provide structure notes for assumptions/limits (hlp explicit instruction)",
+      "facilitate peer critique of model choices (hlp discourse)"
+    ],
+    "studentTasks": [
+      "fit a model to a context.",
+      "interpret parameters and limits.",
+      "critique a peer model."
+    ],
+    "supports": [
+      "assumptions/limits sheet (udl 6.3)",
+      "parameter interpretation stems (udl 5.1)",
+      "critique rubric (hlp discourse)"
+    ],
+    "fadePlan": "teacher-led modeling → guided interpretation/limits → independent modeling + critique.",
+    "whenNotToUse": "avoid when context knowledge is missing; preview context first.",
+    "formativeChecks": [
+      "- check parameter interpretations. - critique notes quality."
+    ],
+    "bloomLevel": "create",
+    "dokLevel": 4,
+    "udlHlpTags": [
+      "udl 3.3",
+      "udl 6.3",
+      "udl 5.1",
+      "hlp explicit instruction",
+      "hlp discourse"
+    ],
+    "selStrand": "responsible-decision-making",
+    "representationTags": [
+      "rtag.pedagogy.project_based_relevance",
+      "rtag.context.global_voices",
+      "rtag.context.global_voices",
+      "rtag.identity.cultural_authenticity"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "WWC-MPS-2012",
+      "ROSENSHINE-2012"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.reasoning_multiple_strategies",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "exploring multiple strategies",
+    "type": "metacognitive",
+    "problemType": "students stick to one procedure even when inefficient",
+    "targetMisconception": "belief that there is only one right way.",
+    "teacherMoves": [
+      "model alternative strategies on one task (udl 3.3)",
+      "facilitate compare/contrast discussion (hlp discourse)",
+      "prompt metacognitive choice of strategy (hlp self-regulation)"
+    ],
+    "studentTasks": [
+      "solve a task using two strategies.",
+      "compare efficiency/clarity.",
+      "justify choice of strategy next time."
+    ],
+    "supports": [
+      "strategy cards (udl 5.1)",
+      "compare/contrast frame (udl 2.5)",
+      "reflection sheet (hlp self-regulation)"
+    ],
+    "fadePlan": "teacher-led exploration → guided compare/contrast → independent strategy choice.",
+    "whenNotToUse": "avoid when time is only for fluency drills.",
+    "formativeChecks": [
+      "- quick compare/contrast note. - reflection on chosen strategy."
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "udl 3.3",
+      "udl 5.1",
+      "udl 2.5",
+      "hlp discourse",
+      "hlp self-regulation"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.language.inclusive_language",
+      "rtag.media.accessible_media",
+      "rtag.identity.neurodiversity"
+    ],
+    "cspTags": [
+      "criticality"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "WWC-MPS-2012",
+      "ROSENSHINE-2012"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.reasoning_open_tasks",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "engaging with open-ended tasks",
+    "type": "metacognitive",
+    "problemType": "students avoid non-routine tasks",
+    "targetMisconception": "belief that tasks must have one right path.",
+    "teacherMoves": [
+      "model multiple entry points and success criteria (udl 3.3)",
+      "provide low-floor/high-ceiling prompts (hlp inquiry)",
+      "facilitate share-explain-compare routine (hlp discourse)"
+    ],
+    "studentTasks": [
+      "tackle open tasks with a chosen entry point.",
+      "explain approach and compare with peers.",
+      "reflect on flexibility/efficiency."
+    ],
+    "supports": [
+      "open-task prompt bank (hlp inquiry)",
+      "solution comparison frame (udl 5.1)",
+      "reflection stems (hlp discourse)"
+    ],
+    "fadePlan": "teacher-led entry-point modeling → guided sharing → independent open-task work.",
+    "whenNotToUse": "avoid when objective is timed fluency only.",
+    "formativeChecks": [
+      "- collect solution comparisons. - reflection on flexibility."
+    ],
+    "bloomLevel": "create",
+    "dokLevel": 4,
+    "udlHlpTags": [
+      "udl 3.3",
+      "udl 5.1",
+      "hlp inquiry",
+      "hlp discourse"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.language.inclusive_language",
+      "rtag.identity.intersectional_identities",
+      "rtag.media.accessible_media"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "WWC-MPS-2012",
+      "ROSENSHINE-2012"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.reasoning_problem_decomposition",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "decomposing complex problems",
+    "type": "metacognitive",
+    "problemType": "students attempt problems as a single block",
+    "targetMisconception": "belief that all steps must be discovered at once.",
+    "teacherMoves": [
+      "model problem decomposition with sub-goals (udl 3.3)",
+      "provide sub-goal template (hlp explicit instruction)",
+      "coach monitor-and-adjust (hlp feedback)"
+    ],
+    "studentTasks": [
+      "break the problem into sub-goals.",
+      "solve per sub-goal.",
+      "adjust plan and note why."
+    ],
+    "supports": [
+      "sub-goal planner (udl 6.3)",
+      "monitor checklist (udl 5.3)",
+      "feedback stems (hlp feedback)"
+    ],
+    "fadePlan": "teacher-modeled decomposition → guided sub-goals → independent decomposition.",
+    "whenNotToUse": "avoid when the target is a short, single-step task.",
+    "formativeChecks": [
+      "- sub-goal plan quality check. - one adjustment justified."
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "udl 3.3",
+      "udl 6.3",
+      "udl 5.3",
+      "hlp explicit instruction",
+      "hlp feedback"
+    ],
+    "selStrand": "responsible-decision-making",
+    "representationTags": [
+      "rtag.identity.neurodiversity",
+      "rtag.identity.disability_inclusion",
+      "rtag.media.accessible_media"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "ROSENSHINE-2012",
+      "UDL-CAST-3.0"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.reasoning_proof_argument",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "constructing mathematical arguments",
+    "type": "linguistic",
+    "problemType": "students assert without justification",
+    "targetMisconception": "belief that a claim stands without evidence.",
+    "teacherMoves": [
+      "model claim–evidence–reasoning in math context (udl 3.3)",
+      "provide justification frames (hlp explicit instruction)",
+      "facilitate rebuttal routine (hlp discourse)"
+    ],
+    "studentTasks": [
+      "write a claim with evidence.",
+      "justify with reasoning frames.",
+      "provide/defend a rebuttal."
+    ],
+    "supports": [
+      "cer frame (udl 3.3)",
+      "justification stems (udl 5.1)",
+      "rebuttal stems (hlp discourse)"
+    ],
+    "fadePlan": "teacher-modeled arguments → guided frames → independent arguments.",
+    "whenNotToUse": "avoid when formal proof language has not been introduced.",
+    "formativeChecks": [
+      "- argument rubric check. - one defended rebuttal required."
+    ],
+    "bloomLevel": "evaluate",
+    "dokLevel": 4,
+    "udlHlpTags": [
+      "udl 3.3",
+      "udl 5.1",
+      "hlp explicit instruction",
+      "hlp discourse"
+    ],
+    "selStrand": "responsible-decision-making",
+    "representationTags": [
+      "rtag.language.inclusive_language",
+      "rtag.identity.intersectional_identities",
+      "rtag.media.accessible_media"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "WWC-MPS-2012",
+      "UDL-CAST-3.0"
+    ],
+    "lastUpdated": "2025-11-01"
+  },
+  {
+    "id": "math.self_monitoring_accuracy",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Mathematical Self-Monitoring for Accuracy",
+    "type": "metacognitive",
+    "problemType": "Students don't check work or recognize unreasonable answers",
+    "targetMisconception": "Belief that first answer is final answer",
+    "teacherMoves": [
+      "Teach self-monitoring as essential math practice (HLP Explicit Instruction)",
+      "Model checking strategies (UDL 6.1)",
+      "Practice catching common error types (UDL 8.3)",
+      "Build checking habit (UDL 6.4)"
+    ],
+    "studentTasks": [
+      "Estimate answers before calculating",
+      "Check work using alternative method",
+      "Evaluate whether answer is reasonable",
+      "Identify and correct errors before submitting",
+      "Reflect on monitoring effectiveness"
+    ],
+    "supports": [
+      "Estimation strategies by problem type (UDL 3.3)",
+      "Alternative checking methods guide (UDL 6.2)",
+      "Reasonableness evaluation checklist (UDL 6.4)",
+      "Error correction protocol (UDL 6.2)",
+      "Monitoring reflection log (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher prompts checking at each step → Phase 2: Self-prompted checking with support → Phase 3: Independent monitoring habit → Phase 4: Automatic checking behavior",
+    "whenNotToUse": "When time pressure prevents thorough checking (adapt to quick checks).",
+    "formativeChecks": [
+      "- Estimation-calculation comparison",
+      "- Alternative method use",
+      "- Error caught before submission",
+      "- Monitoring reflection quality"
+    ],
+    "bloomLevel": "evaluate",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 6.1",
+      "UDL 6.2",
+      "UDL 6.4",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.identity.neurodiversity",
+      "rtag.pedagogy.student_voice",
+      "rtag.identity.disability_inclusion"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "hlp_wwc_2012_problem_solving",
+      "hlp_aceves_kennedy_2024_hlp_framework",
+      "fa_wiliam_2011_embedded_FA"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "math.social_justice_mathematics",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Mathematics for Social Justice Applications",
+    "type": "social_collaborative",
+    "problemType": "Students don't see mathematics as tool for understanding and addressing injustice",
+    "targetMisconception": "Belief that mathematics is neutral and disconnected from social issues",
+    "teacherMoves": [
+      "Connect mathematical analysis to social justice issues (UDL 7.2)",
+      "Use authentic data about equity issues (HLP Explicit Instruction)",
+      "Support critical mathematical analysis (UDL 3.2)",
+      "Move from analysis to potential action (UDL 7.2)"
+    ],
+    "studentTasks": [
+      "Use mathematics to analyze social justice issues",
+      "Apply statistical and quantitative reasoning to equity data",
+      "Critique uses and misuses of mathematics",
+      "Create mathematical arguments about issues",
+      "Consider action based on mathematical analysis"
+    ],
+    "supports": [
+      "Social justice math connections guide (UDL 3.3)",
+      "Equity data analysis protocol (UDL 6.2)",
+      "Critical math analysis framework (UDL 6.2)",
+      "Mathematical argument template (UDL 5.3)",
+      "Action consideration prompts (UDL 5.3)"
+    ],
+    "fadePlan": "Phase 1: Teacher provides issues and guides analysis → Phase 2: Supported issue exploration → Phase 3: Independent social justice math → Phase 4: Critical mathematical citizenship",
+    "whenNotToUse": "When mathematical skill building is the primary focus.",
+    "formativeChecks": [
+      "- Issue analysis mathematical quality",
+      "- Critical analysis depth",
+      "- Argument strength",
+      "- Action connection quality"
+    ],
+    "bloomLevel": "analyze",
+    "dokLevel": 4,
+    "udlHlpTags": [
+      "UDL 3.2",
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.2",
+      "UDL 7.2",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "responsible-decision-making",
+    "representationTags": [
+      "rtag.context.global_voices",
+      "rtag.identity.intersectional_identities",
+      "rtag.pedagogy.project_based_relevance"
+    ],
+    "cspTags": [
+      "criticality",
+      "sustain_community_knowledge",
+      "co_design_with_community"
+    ],
+    "equityScore": 5,
+    "evidenceCitationKeys": [
+      "sel_jagers_2019_equity",
+      "csp_ladsonbillings_1995_theory",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "math.solution_process_communication",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Mathematical Solution Process Communication",
+    "type": "cognitive",
+    "problemType": "Students show final answers without explaining reasoning",
+    "targetMisconception": "Belief that math is about getting right answers not explaining thinking",
+    "teacherMoves": [
+      "Teach mathematical communication as essential skill (HLP Explicit Instruction)",
+      "Model explaining reasoning with think-aloud (UDL 6.1)",
+      "Practice writing mathematical explanations (UDL 5.3)",
+      "Build habit of justifying steps (UDL 6.4)"
+    ],
+    "studentTasks": [
+      "Show all work with logical organization",
+      "Explain why each step makes sense mathematically",
+      "Justify solution strategy selection",
+      "Communicate solution clearly to others",
+      "Evaluate clarity of mathematical explanations"
+    ],
+    "supports": [
+      "Solution communication rubric (UDL 6.4)",
+      "Step justification prompts (UDL 5.3)",
+      "Strategy explanation stems (UDL 5.3)",
+      "Peer explanation protocol (HLP Cooperative Learning)",
+      "Self-evaluation checklist (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher models explicit explanation → Phase 2: Guided explanation practice → Phase 3: Independent solution communication → Phase 4: Natural mathematical communication",
+    "whenNotToUse": "When speed is prioritized over explanation (timed assessments).",
+    "formativeChecks": [
+      "- Work shown completeness",
+      "- Justification quality",
+      "- Communication clarity",
+      "- Self-evaluation accuracy"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.1",
+      "UDL 6.4",
+      "HLP Explicit Instruction",
+      "HLP Cooperative Learning"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.language.plain_language_access",
+      "rtag.pedagogy.student_voice",
+      "rtag.identity.neurodiversity"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "hlp_wwc_2016_secondary_writing",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "math.strategy_selection_metacognition",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Problem-Solving Strategy Selection Metacognition",
+    "type": "metacognitive",
+    "problemType": "Students use same approach for all problems regardless of type",
+    "targetMisconception": "Belief that there's one way to solve math problems",
+    "teacherMoves": [
+      "Teach strategic thinking about problem-solving approaches (HLP Explicit Instruction)",
+      "Model strategy selection with rationale (UDL 6.1)",
+      "Practice matching strategies to problem types (UDL 6.2)",
+      "Build strategic flexibility (UDL 7.1)"
+    ],
+    "studentTasks": [
+      "Identify problem type and characteristics",
+      "Consider multiple possible strategies",
+      "Select strategy with reasoning",
+      "Monitor strategy effectiveness during solving",
+      "Reflect on strategy choice and adjust for future"
+    ],
+    "supports": [
+      "Strategy repertoire reference (UDL 3.3)",
+      "Problem-strategy matching guide (UDL 6.2)",
+      "Strategy selection rationale template (UDL 5.3)",
+      "Effectiveness monitoring prompts (UDL 6.4)",
+      "Strategy reflection log (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher models strategy selection with thinking → Phase 2: Guided strategy selection with feedback → Phase 3: Independent strategic thinking → Phase 4: Natural strategic flexibility",
+    "whenNotToUse": "When specific strategy practice is the learning goal.",
+    "formativeChecks": [
+      "- Strategy repertoire breadth",
+      "- Selection rationale quality",
+      "- Monitoring behavior",
+      "- Strategy adjustment when needed"
+    ],
+    "bloomLevel": "evaluate",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.3",
+      "UDL 6.1",
+      "UDL 6.2",
+      "UDL 6.4",
+      "UDL 7.1",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.identity.neurodiversity",
+      "rtag.pedagogy.student_voice",
+      "rtag.media.graphic_organizers"
+    ],
+    "cspTags": [
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "hlp_wwc_2012_problem_solving",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "math.technology_tools_integration",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Mathematical Technology Tool Integration",
+    "type": "cognitive",
+    "problemType": "Students don't know how to use technology effectively for math",
+    "targetMisconception": "Belief that technology does the thinking rather than supporting it",
+    "teacherMoves": [
+      "Teach strategic technology use for mathematics (HLP Explicit Instruction)",
+      "Model when and how to use different tools (UDL 5.2)",
+      "Practice technology for exploration and verification (UDL 8.3)",
+      "Build discernment about technology use (UDL 6.4)"
+    ],
+    "studentTasks": [
+      "Select appropriate technology tool for task",
+      "Use technology to explore mathematical ideas",
+      "Verify solutions using technology strategically",
+      "Create mathematical products using technology",
+      "Evaluate when technology helps vs hinders"
+    ],
+    "supports": [
+      "Technology tool selection guide (UDL 3.3)",
+      "Exploration with technology protocol (UDL 5.2)",
+      "Verification strategies using tech (UDL 6.2)",
+      "Product creation guidelines (UDL 5.2)",
+      "Technology use reflection (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher introduces tools and guides selection → Phase 2: Supported technology exploration → Phase 3: Independent strategic technology use → Phase 4: Discerning technology integration",
+    "whenNotToUse": "When technology-free assessment or skill building is the goal.",
+    "formativeChecks": [
+      "- Tool selection appropriateness",
+      "- Exploration quality",
+      "- Verification effectiveness",
+      "- Reflection on technology value"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 5.2",
+      "UDL 6.2",
+      "UDL 6.4",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.media.multimodal_resources",
+      "rtag.identity.disability_inclusion",
+      "rtag.media.accessible_media"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "udl_cast_2024_guidelines",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "math.visual_mathematical_thinking",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Visual-Spatial Mathematical Thinking Development",
+    "type": "cognitive",
+    "problemType": "Students rely only on symbolic approaches without visual thinking",
+    "targetMisconception": "Belief that visual thinking is less legitimate than symbolic",
+    "teacherMoves": [
+      "Teach visual-spatial thinking as mathematical tool (HLP Explicit Instruction)",
+      "Model creating and using visual representations (UDL 1.2)",
+      "Practice visual problem-solving strategies (UDL 8.3)",
+      "Connect visual and symbolic approaches (UDL 5.1)"
+    ],
+    "studentTasks": [
+      "Create visual representations of mathematical ideas",
+      "Use visual thinking to develop understanding",
+      "Solve problems using visual approaches",
+      "Connect visual and symbolic representations",
+      "Develop visual mathematical intuition"
+    ],
+    "supports": [
+      "Visual representation guide by concept (UDL 3.3)",
+      "Visual problem-solving strategies (UDL 6.2)",
+      "Visual-symbolic connection template (UDL 5.1)",
+      "Visual intuition building activities (UDL 8.3)",
+      "Visual thinking reflection (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher models visual thinking explicitly → Phase 2: Guided visual representation → Phase 3: Independent visual thinking → Phase 4: Integrated visual-symbolic fluency",
+    "whenNotToUse": "When purely symbolic approach is the learning goal.",
+    "formativeChecks": [
+      "- Visual representation quality",
+      "- Visual problem-solving use",
+      "- Connection to symbolic work",
+      "- Visual intuition development"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 1.2",
+      "UDL 3.3",
+      "UDL 5.1",
+      "UDL 6.2",
+      "UDL 6.4",
+      "UDL 8.3",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-awareness",
+    "representationTags": [
+      "rtag.media.multimodal_resources",
+      "rtag.identity.neurodiversity",
+      "rtag.media.graphic_organizers"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "udl_cast_2024_guidelines",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "math.word_problem_approach",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Word Problem Strategic Approach System",
+    "type": "cognitive",
+    "problemType": "Students struggle to translate word problems into mathematical work",
+    "targetMisconception": "Belief that word problems are unfair tricks rather than applications",
+    "teacherMoves": [
+      "Teach systematic approach to word problems (HLP Explicit Instruction)",
+      "Model translation from words to math (UDL 6.1)",
+      "Practice identifying relevant information (UDL 6.2)",
+      "Connect to real mathematical applications (UDL 7.2)"
+    ],
+    "studentTasks": [
+      "Read and understand problem context",
+      "Identify known and unknown quantities",
+      "Determine mathematical relationships",
+      "Set up and solve mathematical model",
+      "Verify answer makes sense in context"
+    ],
+    "supports": [
+      "Word problem approach steps (UDL 3.3)",
+      "Known/unknown organizer (UDL 6.2)",
+      "Relationship identification guide (UDL 6.2)",
+      "Mathematical modeling template (UDL 6.2)",
+      "Context verification checklist (UDL 6.4)"
+    ],
+    "fadePlan": "Phase 1: Teacher models each step explicitly → Phase 2: Guided practice with step prompts → Phase 3: Independent word problem approach → Phase 4: Natural word problem strategy",
+    "whenNotToUse": "When problems are routine and systematic approach would slow fluent students.",
+    "formativeChecks": [
+      "- Step completion for complex problems",
+      "- Relationship identification accuracy",
+      "- Model appropriateness",
+      "- Context verification quality"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 3,
+    "udlHlpTags": [
+      "UDL 3.3",
+      "UDL 6.1",
+      "UDL 6.2",
+      "UDL 6.4",
+      "UDL 7.2",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.language.plain_language_access",
+      "rtag.media.graphic_organizers",
+      "rtag.identity.neurodiversity"
+    ],
+    "cspTags": [
+      "sustain_language"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "hlp_wwc_2012_problem_solving",
+      "hlp_aceves_kennedy_2024_hlp_framework"
+    ],
+    "lastUpdated": "12/21/25"
+  },
+  {
+    "id": "math.word_problem_translation_scaffold",
+    "subject": "math",
+    "gradeBands": [
+      "9–12"
+    ],
+    "name": "Word Problem Translation Scaffold",
+    "type": "cognitive",
+    "problemType": "Students struggle to convert word problems into mathematical expressions",
+    "targetMisconception": "Belief that word problems are tricks designed to confuse",
+    "teacherMoves": [
+      "Teach keyword strategies with caveats (UDL 3.1)",
+      "Model complete translation process (HLP Explicit Instruction)",
+      "Highlight problem structure over keywords"
+    ],
+    "studentTasks": [
+      "Identify knowns unknowns and relationships",
+      "Translate sentences into expressions",
+      "Write complete equation and verify meaning matches"
+    ],
+    "supports": [
+      "Translation template (UDL 3.3)",
+      "Relationship identifier (UDL 6.2)",
+      "Meaning verification checklist (UDL 6.3)"
+    ],
+    "fadePlan": "Full scaffolded template → Partial prompts → Independent translation",
+    "whenNotToUse": "When working on pure computation or formula application",
+    "formativeChecks": [
+      "Translation accuracy check",
+      "Peer verification of meaning"
+    ],
+    "bloomLevel": "apply",
+    "dokLevel": 2,
+    "udlHlpTags": [
+      "UDL 3.1",
+      "UDL 3.3",
+      "UDL 6.2",
+      "HLP Explicit Instruction"
+    ],
+    "selStrand": "self-management",
+    "representationTags": [
+      "rtag.language.plain_language_access",
+      "rtag.media.graphic_organizers",
+      "rtag.identity.neurodiversity"
+    ],
+    "cspTags": [
+      "sustain_language",
+      "sustain_community_knowledge"
+    ],
+    "equityScore": 4,
+    "evidenceCitationKeys": [
+      "hlp_wwc_2015_algebra",
+      "hlp_hughes_2017_explicit_instruction"
+    ],
+    "lastUpdated": "12/21/25"
+  }
+]

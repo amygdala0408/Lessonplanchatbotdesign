@@ -1,0 +1,2798 @@
+[
+  {
+    "id": "CCSS.ELA-LITERACY.CCRA.R.1",
+    "subject": "ela",
+    "strand": "Anchor Standards for Reading",
+    "description": "Read closely to determine what the text says explicitly and to make logical inferences from it; cite specific textual evidence when writing or speaking to support conclusions drawn from the text."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.CCRA.R.2",
+    "subject": "ela",
+    "strand": "Anchor Standards for Reading",
+    "description": "Determine central ideas or themes of a text and analyze their development; summarize the key supporting details and ideas."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.CCRA.R.3",
+    "subject": "ela",
+    "strand": "Anchor Standards for Reading",
+    "description": "Analyze how and why individuals, events, or ideas develop and interact over the course of a text."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.CCRA.R.4",
+    "subject": "ela",
+    "strand": "Anchor Standards for Reading",
+    "description": "Interpret words and phrases as they are used in a text, including determining technical, connotative, and figurative meanings, and analyze how specific word choices shape meaning or tone."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.CCRA.R.5",
+    "subject": "ela",
+    "strand": "Anchor Standards for Reading",
+    "description": "Analyze the structure of texts, including how specific sentences, paragraphs, and larger portions of the text (e.g., a section, chapter, scene, or stanza) relate to each other and the whole."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.CCRA.R.6",
+    "subject": "ela",
+    "strand": "Anchor Standards for Reading",
+    "description": "Assess how point of view or purpose shapes the content and style of a text."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.CCRA.R.7",
+    "subject": "ela",
+    "strand": "Anchor Standards for Reading",
+    "description": "Integrate and evaluate content presented in diverse media and formats, including visually and quantitatively, as well as in words."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.CCRA.R.8",
+    "subject": "ela",
+    "strand": "Anchor Standards for Reading",
+    "description": "Delineate and evaluate the argument and specific claims in a text, including the validity of the reasoning as well as the relevance and sufficiency of the evidence."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.CCRA.R.9",
+    "subject": "ela",
+    "strand": "Anchor Standards for Reading",
+    "description": "Analyze how two or more texts address similar themes or topics in order to build knowledge or to compare the approaches the authors take."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.CCRA.R.10",
+    "subject": "ela",
+    "strand": "Anchor Standards for Reading",
+    "description": "Read and comprehend complex literary and informational texts independently and proficiently."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.CCRA.W.1",
+    "subject": "ela",
+    "strand": "Anchor Standards for Writing",
+    "description": "Write arguments to support claims in an analysis of substantive topics or texts using valid reasoning and relevant and sufficient evidence."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.CCRA.W.2",
+    "subject": "ela",
+    "strand": "Anchor Standards for Writing",
+    "description": "Write informative/explanatory texts to examine and convey complex ideas and information clearly and accurately through the effective selection organization and analysis of content."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.CCRA.W.3",
+    "subject": "ela",
+    "strand": "Anchor Standards for Writing",
+    "description": "Write narratives to develop real or imagined experiences or events using effective technique, well-chosen details, and well-structured event sequences."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.CCRA.W.4",
+    "subject": "ela",
+    "strand": "Anchor Standards for Writing",
+    "description": "Produce clear and coherent writing in which the development, organization, and style are appropriate to task, purpose, and audience."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.CCRA.W.5",
+    "subject": "ela",
+    "strand": "Anchor Standards for Writing",
+    "description": "Develop and strengthen writing as needed by planning, revising, editing, rewriting, or trying a new approach."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.CCRA.W.6",
+    "subject": "ela",
+    "strand": "Anchor Standards for Writing",
+    "description": "Use technology, including the Internet, to produce and publish writing and to interact and collaborate with others."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.CCRA.W.7",
+    "subject": "ela",
+    "strand": "Anchor Standards for Writing",
+    "description": "Conduct short as well as more sustained research projects based on focused questions, demonstrating understanding of the subject under investigation."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.CCRA.W.8",
+    "subject": "ela",
+    "strand": "Anchor Standards for Writing",
+    "description": "Gather relevant information from multiple print and digital sources, assess the credibility and accuracy of each source, and integrate the information while avoiding plagiarism."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.CCRA.W.9",
+    "subject": "ela",
+    "strand": "Anchor Standards for Writing",
+    "description": "Draw evidence from literary or informational texts to support analysis, reflection, and research."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.CCRA.W.10",
+    "subject": "ela",
+    "strand": "Anchor Standards for Writing",
+    "description": "Write routinely over extended time frames (time for research, reflection, and revision) and shorter time frames (a single sitting or a day or two) for a range of tasks, purposes, and audiences."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.CCRA.SL.1",
+    "subject": "ela",
+    "strand": "Anchor Standards for Speaking & Listening",
+    "description": "Prepare for and participate effectively in a range of conversations and collaborations with diverse partners, building on others' ideas and expressing their own clearly and persuasively."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.CCRA.SL.2",
+    "subject": "ela",
+    "strand": "Anchor Standards for Speaking & Listening",
+    "description": "Integrate and evaluate information presented in diverse media and formats, including visually, quantitatively, and orally."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.CCRA.SL.3",
+    "subject": "ela",
+    "strand": "Anchor Standards for Speaking & Listening",
+    "description": "Evaluate a speaker's point of view, reasoning, and use of evidence and rhetoric."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.CCRA.SL.4",
+    "subject": "ela",
+    "strand": "Anchor Standards for Speaking & Listening",
+    "description": "Present information, findings, and supporting evidence such that listeners can follow the line of reasoning and the organization, development, and style are appropriate to task, purpose, and audience."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.CCRA.SL.5",
+    "subject": "ela",
+    "strand": "Anchor Standards for Speaking & Listening",
+    "description": "Make strategic use of digital media and visual displays of data to express information and enhance understanding of presentations."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.CCRA.SL.6",
+    "subject": "ela",
+    "strand": "Anchor Standards for Speaking & Listening",
+    "description": "Adapt speech to a variety of contexts and communicative tasks, demonstrating command of formal English when indicated or appropriate."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.CCRA.L.1",
+    "subject": "ela",
+    "strand": "Anchor Standards for Language",
+    "description": "Demonstrate command of the conventions of standard English grammar and usage when writing or speaking."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.CCRA.L.2",
+    "subject": "ela",
+    "strand": "Anchor Standards for Language",
+    "description": "Demonstrate command of the conventions of standard English capitalization, punctuation, and spelling when writing."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.CCRA.L.3",
+    "subject": "ela",
+    "strand": "Anchor Standards for Language",
+    "description": "Apply knowledge of language to understand how language functions in different contexts, to make effective choices for meaning or style, and to comprehend more fully when reading or listening."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.CCRA.L.4",
+    "subject": "ela",
+    "strand": "Anchor Standards for Language",
+    "description": "Determine or clarify the meaning of unknown and multiple-meaning words and phrases by using context clues, analyzing meaningful word parts, and consulting general and specialized reference materials, as appropriate."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.CCRA.L.5",
+    "subject": "ela",
+    "strand": "Anchor Standards for Language",
+    "description": "Demonstrate understanding of figurative language, word relationships, and nuances in word meanings."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.CCRA.L.6",
+    "subject": "ela",
+    "strand": "Anchor Standards for Language",
+    "description": "Acquire and use accurately a range of general academic and domain-specific words and phrases sufficient for reading, writing, speaking, and listening at the college and career readiness level; demonstrate independence in gathering vocabulary knowledge when encountering an unknown term important to comprehension or expression."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.RL.9-10.1",
+    "subject": "ela",
+    "strand": "Reading Literature",
+    "description": "Cite strong and thorough textual evidence to support analysis of what the text says explicitly as well as inferences drawn from the text."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.RL.9-10.2",
+    "subject": "ela",
+    "strand": "Reading Literature",
+    "description": "Determine a theme or central idea of a text and analyze in detail its development over the course of the text, including how it emerges and is shaped and refined by specific details; provide an objective summary of the text."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.RL.9-10.3",
+    "subject": "ela",
+    "strand": "Reading Literature",
+    "description": "Analyze how complex characters (e.g., those with multiple or conflicting motivations) develop over the course of a text, interact with other characters, and advance the plot or develop the theme."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.RL.9-10.4",
+    "subject": "ela",
+    "strand": "Reading Literature",
+    "description": "Determine the meaning of words and phrases as they are used in the text, including figurative and connotative meanings; analyze the cumulative impact of specific word choices on meaning and tone (e.g., how the language evokes a sense of time and place; how it sets a formal or informal tone)."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.RL.9-10.5",
+    "subject": "ela",
+    "strand": "Reading Literature",
+    "description": "Analyze how an author's choices concerning how to structure a text, order events within it (e.g., parallel plots), and manipulate time (e.g., pacing, flashbacks) create such effects as mystery, tension, or surprise."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.RL.9-10.6",
+    "subject": "ela",
+    "strand": "Reading Literature",
+    "description": "Analyze a particular point of view or cultural experience reflected in a work of literature from outside the United States, drawing on a wide reading of world literature."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.RL.9-10.7",
+    "subject": "ela",
+    "strand": "Reading Literature",
+    "description": "Analyze the representation of a subject or a key scene in two different artistic mediums, including what is emphasized or absent in each treatment."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.RL.9-10.9",
+    "subject": "ela",
+    "strand": "Reading Literature",
+    "description": "Analyze how an author draws on and transforms source material in a specific work (e.g., how Shakespeare treats a theme or topic from Ovid or the Bible or how a later author draws on a play by Shakespeare)."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.RL.9-10.10",
+    "subject": "ela",
+    "strand": "Reading Literature",
+    "description": "By the end of grade 9, read and comprehend literature, including stories, dramas, and poems, in the grades 9-10 text complexity band proficiently, with scaffolding as needed at the high end of the range. By the end of grade 10, read and comprehend literature, including stories, dramas, and poems, at the high end of the grades 9-10 text complexity band independently and proficiently."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.RL.11-12.1",
+    "subject": "ela",
+    "strand": "Reading Literature",
+    "description": "Cite strong and thorough textual evidence to support analysis of what the text says explicitly as well as inferences drawn from the text, including determining where the text leaves matters uncertain."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.RL.11-12.2",
+    "subject": "ela",
+    "strand": "Reading Literature",
+    "description": "Determine two or more themes or central ideas of a text and analyze their development over the course of the text, including how they interact and build on one another to produce a complex account; provide an objective summary of the text."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.RL.11-12.3",
+    "subject": "ela",
+    "strand": "Reading Literature",
+    "description": "Analyze the impact of the author's choices regarding how to develop and relate elements of a story or drama (e.g., where a story is set, how the action is ordered, how the characters are introduced and developed)."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.RL.11-12.4",
+    "subject": "ela",
+    "strand": "Reading Literature",
+    "description": "Determine the meaning of words and phrases as they are used in the text, including figurative and connotative meanings; analyze the impact of specific word choices on meaning and tone, including words with multiple meanings or language that is particularly fresh, engaging, or beautiful."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.RL.11-12.5",
+    "subject": "ela",
+    "strand": "Reading Literature",
+    "description": "Analyze how an author's choices concerning how to structure specific parts of a text (e.g., the choice of where to begin or end a story, the choice to provide a comedic or tragic resolution) contribute to its overall structure and meaning as well as its aesthetic impact."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.RL.11-12.6",
+    "subject": "ela",
+    "strand": "Reading Literature",
+    "description": "Analyze a case in which grasping a point of view requires distinguishing what is directly stated in a text from what is really meant (e.g., satire, sarcasm, irony, or understatement)."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.RL.11-12.7",
+    "subject": "ela",
+    "strand": "Reading Literature",
+    "description": "Analyze multiple interpretations of a story, drama, or poem (e.g., recorded or live production of a play or recorded novel or poetry), evaluating how each version interprets the source text."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.RL.11-12.9",
+    "subject": "ela",
+    "strand": "Reading Literature",
+    "description": "Demonstrate knowledge of eighteenth-, nineteenth- and early-twentieth-century foundational works of American literature, including how two or more texts from the same period treat similar themes or topics."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.RL.11-12.10",
+    "subject": "ela",
+    "strand": "Reading Literature",
+    "description": "By the end of grade 11, read and comprehend literature, including stories, dramas, and poems, in the grades 11-CCR text complexity band proficiently, with scaffolding as needed at the high end of the range. By the end of grade 12, read and comprehend literature, including stories, dramas, and poems, at the high end of the grades 11-CCR text complexity band independently and proficiently."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.RI.9-10.1",
+    "subject": "ela",
+    "strand": "Reading Informational Text",
+    "description": "Cite strong and thorough textual evidence to support analysis of what the text says explicitly as well as inferences drawn from the text."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.RI.9-10.2",
+    "subject": "ela",
+    "strand": "Reading Informational Text",
+    "description": "Determine a central idea of a text and analyze its development over the course of the text, including how it emerges and is shaped and refined by specific details; provide an objective summary of the text."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.RI.9-10.3",
+    "subject": "ela",
+    "strand": "Reading Informational Text",
+    "description": "Analyze how the author unfolds an analysis or series of ideas or events, including the order in which the points are made, how they are introduced and developed, and the connections that are drawn between them."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.RI.9-10.4",
+    "subject": "ela",
+    "strand": "Reading Informational Text",
+    "description": "Determine the meaning of words and phrases as they are used in a text, including figurative, connotative, and technical meanings; analyze the cumulative impact of specific word choices on meaning and tone (e.g., how the language of a court opinion differs from that of a newspaper)."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.RI.9-10.5",
+    "subject": "ela",
+    "strand": "Reading Informational Text",
+    "description": "Analyze in detail how an author's ideas or claims are developed and refined by particular sentences, paragraphs, or larger portions of a text (e.g., a section or chapter)."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.RI.9-10.6",
+    "subject": "ela",
+    "strand": "Reading Informational Text",
+    "description": "Determine an author's point of view or purpose in a text and analyze how an author uses rhetoric to advance that point of view or purpose."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.RI.9-10.7",
+    "subject": "ela",
+    "strand": "Reading Informational Text",
+    "description": "Analyze various accounts of a subject told in different mediums (e.g., a person's life story in both print and multimedia), determining which details are emphasized in each account."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.RI.9-10.8",
+    "subject": "ela",
+    "strand": "Reading Informational Text",
+    "description": "Delineate and evaluate the argument and specific claims in a text, assessing whether the reasoning is valid and the evidence is relevant and sufficient; identify false statements and fallacious reasoning."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.RI.9-10.9",
+    "subject": "ela",
+    "strand": "Reading Informational Text",
+    "description": "Analyze seminal U.S. documents of historical and literary significance (e.g., Washington's Farewell Address, the Gettysburg Address, Roosevelt's Four Freedoms speech, King's Letter from Birmingham Jail), including how they address related themes and concepts."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.RI.9-10.10",
+    "subject": "ela",
+    "strand": "Reading Informational Text",
+    "description": "By the end of grade 9, read and comprehend literary nonfiction in the grades 9-10 text complexity band proficiently, with scaffolding as needed at the high end of the range. By the end of grade 10, read and comprehend literary nonfiction at the high end of the grades 9-10 text complexity band independently and proficiently."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.RI.11-12.1",
+    "subject": "ela",
+    "strand": "Reading Informational Text",
+    "description": "Cite strong and thorough textual evidence to support analysis of what the text says explicitly as well as inferences drawn from the text, including determining where the text leaves matters uncertain."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.RI.11-12.2",
+    "subject": "ela",
+    "strand": "Reading Informational Text",
+    "description": "Determine two or more central ideas of a text and analyze their development over the course of the text, including how they interact and build on one another to produce a complex account; provide an objective summary of the text."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.RI.11-12.3",
+    "subject": "ela",
+    "strand": "Reading Informational Text",
+    "description": "Analyze a complex set of ideas or sequence of events and explain how specific individuals, ideas, or events interact and develop over the course of the text."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.RI.11-12.4",
+    "subject": "ela",
+    "strand": "Reading Informational Text",
+    "description": "Determine the meaning of words and phrases as they are used in a text, including figurative, connotative, and technical meanings; analyze how an author uses and refines the meaning of a key term or terms over the course of a text (e.g., how Madison defines faction in Federalist No. 10)."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.RI.11-12.5",
+    "subject": "ela",
+    "strand": "Reading Informational Text",
+    "description": "Analyze and evaluate the effectiveness of the structure an author uses in his or her exposition or argument, including whether the structure makes points clear, convincing, and engaging."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.RI.11-12.6",
+    "subject": "ela",
+    "strand": "Reading Informational Text",
+    "description": "Determine an author's point of view or purpose in a text in which the rhetoric is particularly effective, analyzing how style and content contribute to the power, persuasiveness, or beauty of the text."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.RI.11-12.7",
+    "subject": "ela",
+    "strand": "Reading Informational Text",
+    "description": "Integrate and evaluate multiple sources of information presented in different media and formats (e.g., visually, quantitatively) in order to make informed decisions and solve problems, evaluating the credibility and accuracy of each source and noting any discrepancies among the data."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.RI.11-12.8",
+    "subject": "ela",
+    "strand": "Reading Informational Text",
+    "description": "Delineate and evaluate the reasoning in seminal U.S. texts, including the application of constitutional principles and use of legal reasoning (e.g., U.S. Supreme Court majority opinions and dissents) and the premises, purposes, and arguments in works of public advocacy (e.g., The Federalist, presidential addresses)."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.RI.11-12.9",
+    "subject": "ela",
+    "strand": "Reading Informational Text",
+    "description": "Analyze seventeenth-, eighteenth-, and nineteenth-century foundational U.S. documents of historical and literary significance (including The Declaration of Independence, the Preamble to the Constitution, the Bill of Rights, and Lincoln's Second Inaugural Address) for their themes, purposes, and rhetorical features."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.RI.11-12.10",
+    "subject": "ela",
+    "strand": "Reading Informational Text",
+    "description": "By the end of grade 11, read and comprehend literary nonfiction in the grades 11-CCR text complexity band proficiently, with scaffolding as needed at the high end of the range. By the end of grade 12, read and comprehend literary nonfiction at the high end of the grades 11-CCR text complexity band independently and proficiently."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.W.9-10.1",
+    "subject": "ela",
+    "strand": "Writing",
+    "description": "Write arguments to support claims in an analysis of substantive topics or texts, using valid reasoning and relevant and sufficient evidence."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.W.9-10.2",
+    "subject": "ela",
+    "strand": "Writing",
+    "description": "Write informative/explanatory texts to examine and convey complex ideas, concepts, and information clearly and accurately through the effective selection, organization, and analysis of content."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.W.9-10.3",
+    "subject": "ela",
+    "strand": "Writing",
+    "description": "Write narratives to develop real or imagined experiences or events using effective technique, well-chosen details, and well-structured event sequences."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.W.9-10.4",
+    "subject": "ela",
+    "strand": "Writing",
+    "description": "Produce clear and coherent writing in which the development, organization, and style are appropriate to task, purpose, and audience."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.W.9-10.5",
+    "subject": "ela",
+    "strand": "Writing",
+    "description": "Develop and strengthen writing as needed by planning, revising, editing, rewriting, or trying a new approach, focusing on addressing what is most significant for a specific purpose and audience."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.W.9-10.6",
+    "subject": "ela",
+    "strand": "Writing",
+    "description": "Use technology, including the Internet, to produce, publish, and update individual or shared writing products, taking advantage of technology's capacity to link to other information and to display information flexibly and dynamically."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.W.9-10.7",
+    "subject": "ela",
+    "strand": "Writing",
+    "description": "Conduct short as well as more sustained research projects to answer a question (including a self-generated question) or solve a problem; narrow or broaden the inquiry when appropriate; synthesize multiple sources on the subject, demonstrating understanding of the subject under investigation."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.W.9-10.8",
+    "subject": "ela",
+    "strand": "Writing",
+    "description": "Gather relevant information from multiple authoritative print and digital sources, using advanced searches effectively; assess the usefulness of each source in answering the research question; integrate information into the text selectively to maintain the flow of ideas, avoiding plagiarism and following a standard format for citation."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.W.9-10.9",
+    "subject": "ela",
+    "strand": "Writing",
+    "description": "Draw evidence from literary or informational texts to support analysis, reflection, and research."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.W.9-10.10",
+    "subject": "ela",
+    "strand": "Writing",
+    "description": "Write routinely over extended time frames (time for research, reflection, and revision) and shorter time frames (a single sitting or a day or two) for a range of tasks, purposes, and audiences."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.W.11-12.1",
+    "subject": "ela",
+    "strand": "Writing",
+    "description": "Write arguments to support claims in an analysis of substantive topics or texts, using valid reasoning and relevant and sufficient evidence."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.W.11-12.2",
+    "subject": "ela",
+    "strand": "Writing",
+    "description": "Write informative/explanatory texts to examine and convey complex ideas, concepts, and information clearly and accurately through the effective selection, organization, and analysis of content."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.W.11-12.3",
+    "subject": "ela",
+    "strand": "Writing",
+    "description": "Write narratives to develop real or imagined experiences or events using effective technique, well-chosen details, and well-structured event sequences."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.W.11-12.4",
+    "subject": "ela",
+    "strand": "Writing",
+    "description": "Produce clear and coherent writing in which the development, organization, and style are appropriate to task, purpose, and audience."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.W.11-12.5",
+    "subject": "ela",
+    "strand": "Writing",
+    "description": "Develop and strengthen writing as needed by planning, revising, editing, rewriting, or trying a new approach, focusing on addressing what is most significant for a specific purpose and audience."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.W.11-12.6",
+    "subject": "ela",
+    "strand": "Writing",
+    "description": "Use technology, including the Internet, to produce, publish, and update individual or shared writing products in response to ongoing feedback, including new arguments or information."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.W.11-12.7",
+    "subject": "ela",
+    "strand": "Writing",
+    "description": "Conduct short as well as more sustained research projects to answer a question (including a self-generated question) or solve a problem; narrow or broaden the inquiry when appropriate; synthesize multiple sources on the subject, demonstrating understanding of the subject under investigation."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.W.11-12.8",
+    "subject": "ela",
+    "strand": "Writing",
+    "description": "Gather relevant information from multiple authoritative print and digital sources, using advanced searches effectively; assess the strengths and limitations of each source in terms of the task, purpose, and audience; integrate information into the text selectively to maintain the flow of ideas, avoiding plagiarism and overreliance on any one source and following a standard format for citation."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.W.11-12.9",
+    "subject": "ela",
+    "strand": "Writing",
+    "description": "Draw evidence from literary or informational texts to support analysis, reflection, and research."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.W.11-12.10",
+    "subject": "ela",
+    "strand": "Writing",
+    "description": "Write routinely over extended time frames (time for research, reflection, and revision) and shorter time frames (a single sitting or a day or two) for a range of tasks, purposes, and audiences."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.SL.9-10.1",
+    "subject": "ela",
+    "strand": "Speaking & Listening",
+    "description": "Initiate and participate effectively in a range of collaborative discussions (one-on-one, in groups, and teacher-led) with diverse partners on grades 9-10 topics, texts, and issues, building on others' ideas and expressing their own clearly and persuasively."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.SL.9-10.2",
+    "subject": "ela",
+    "strand": "Speaking & Listening",
+    "description": "Integrate multiple sources of information presented in diverse media and formats (e.g., visually, quantitatively, orally) evaluating the credibility and accuracy of each source."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.SL.9-10.3",
+    "subject": "ela",
+    "strand": "Speaking & Listening",
+    "description": "Evaluate a speaker's point of view, reasoning, and use of evidence and rhetoric, identifying any fallacious reasoning or exaggerated or distorted evidence."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.SL.9-10.4",
+    "subject": "ela",
+    "strand": "Speaking & Listening",
+    "description": "Present information, findings, and supporting evidence clearly, concisely, and logically such that listeners can follow the line of reasoning and the organization, development, substance, and style are appropriate to purpose, audience, and task."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.SL.9-10.5",
+    "subject": "ela",
+    "strand": "Speaking & Listening",
+    "description": "Make strategic use of digital media (e.g., textual, graphical, audio, visual, and interactive elements) in presentations to enhance understanding of findings, reasoning, and evidence and to add interest."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.SL.9-10.6",
+    "subject": "ela",
+    "strand": "Speaking & Listening",
+    "description": "Adapt speech to a variety of contexts and tasks, demonstrating command of formal English when indicated or appropriate."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.SL.11-12.1",
+    "subject": "ela",
+    "strand": "Speaking & Listening",
+    "description": "Initiate and participate effectively in a range of collaborative discussions (one-on-one, in groups, and teacher-led) with diverse partners on grades 11-12 topics, texts, and issues, building on others' ideas and expressing their own clearly and persuasively."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.SL.11-12.2",
+    "subject": "ela",
+    "strand": "Speaking & Listening",
+    "description": "Integrate multiple sources of information presented in diverse formats and media (e.g., visually, quantitatively, orally) in order to make informed decisions and solve problems, evaluating the credibility and accuracy of each source and noting any discrepancies among the data."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.SL.11-12.3",
+    "subject": "ela",
+    "strand": "Speaking & Listening",
+    "description": "Evaluate a speaker's point of view, reasoning, and use of evidence and rhetoric, assessing the stance, premises, links among ideas, word choice, points of emphasis, and tone used."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.SL.11-12.4",
+    "subject": "ela",
+    "strand": "Speaking & Listening",
+    "description": "Present information, findings, and supporting evidence, conveying a clear and distinct perspective, such that listeners can follow the line of reasoning and the organization, development, substance, and style are appropriate to purpose, audience, and a range of formal and informal tasks."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.SL.11-12.5",
+    "subject": "ela",
+    "strand": "Speaking & Listening",
+    "description": "Make strategic use of digital media (e.g., textual, graphical, audio, visual, and interactive elements) in presentations to enhance understanding of findings, reasoning, and evidence and to add interest."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.SL.11-12.6",
+    "subject": "ela",
+    "strand": "Speaking & Listening",
+    "description": "Adapt speech to a variety of contexts and tasks, demonstrating a command of formal English when indicated or appropriate."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.L.9-10.1",
+    "subject": "ela",
+    "strand": "Language",
+    "description": "Demonstrate command of the conventions of standard English grammar and usage when writing or speaking."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.L.9-10.2",
+    "subject": "ela",
+    "strand": "Language",
+    "description": "Demonstrate command of the conventions of standard English capitalization, punctuation, and spelling when writing."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.L.9-10.3",
+    "subject": "ela",
+    "strand": "Language",
+    "description": "Apply knowledge of language to understand how language functions in different contexts, to make effective choices for meaning or style, and to comprehend more fully when reading or listening."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.L.9-10.4",
+    "subject": "ela",
+    "strand": "Language",
+    "description": "Determine or clarify the meaning of unknown and multiple-meaning words and phrases based on grades 9-10 reading and content, choosing flexibly from a range of strategies."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.L.9-10.5",
+    "subject": "ela",
+    "strand": "Language",
+    "description": "Demonstrate understanding of figurative language, word relationships, and nuances in word meanings."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.L.9-10.6",
+    "subject": "ela",
+    "strand": "Language",
+    "description": "Acquire and use accurately general academic and domain-specific words and phrases, sufficient for reading, writing, speaking, and listening at the college and career readiness level; demonstrate independence in gathering vocabulary knowledge when considering a word or phrase important to comprehension or expression."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.L.11-12.1",
+    "subject": "ela",
+    "strand": "Language",
+    "description": "Demonstrate command of the conventions of standard English grammar and usage when writing or speaking."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.L.11-12.2",
+    "subject": "ela",
+    "strand": "Language",
+    "description": "Demonstrate command of the conventions of standard English capitalization, punctuation, and spelling when writing."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.L.11-12.3",
+    "subject": "ela",
+    "strand": "Language",
+    "description": "Apply knowledge of language to understand how language functions in different contexts, to make effective choices for meaning or style, and to comprehend more fully when reading or listening."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.L.11-12.4",
+    "subject": "ela",
+    "strand": "Language",
+    "description": "Determine or clarify the meaning of unknown and multiple-meaning words and phrases based on grades 11-12 reading and content, choosing flexibly from a range of strategies."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.L.11-12.5",
+    "subject": "ela",
+    "strand": "Language",
+    "description": "Demonstrate understanding of figurative language, word relationships, and nuances in word meanings."
+  },
+  {
+    "id": "CCSS.ELA-LITERACY.L.11-12.6",
+    "subject": "ela",
+    "strand": "Language",
+    "description": "Acquire and use accurately general academic and domain-specific words and phrases, sufficient for reading, writing, speaking, and listening at the college and career readiness level; demonstrate independence in gathering vocabulary knowledge when encountering an unknown term important to comprehension or expression."
+  },
+  {
+    "id": "HSN.RN.1",
+    "subject": "math",
+    "strand": "Number & Quantity",
+    "description": "Explain how rational exponents extend from properties of integer exponents."
+  },
+  {
+    "id": "HSN.RN.2",
+    "subject": "math",
+    "strand": "Number & Quantity",
+    "description": "Rewrite expressions involving rational exponents."
+  },
+  {
+    "id": "HSN.RN.3",
+    "subject": "math",
+    "strand": "Number & Quantity",
+    "description": "Explain why sums and products of rational and irrational numbers behave as they do."
+  },
+  {
+    "id": "HSN.Q.1",
+    "subject": "math",
+    "strand": "Number & Quantity",
+    "description": "Use units to understand problems and guide solution."
+  },
+  {
+    "id": "HSN.Q.2",
+    "subject": "math",
+    "strand": "Number & Quantity",
+    "description": "Define appropriate quantities for descriptive modeling."
+  },
+  {
+    "id": "HSN.Q.3",
+    "subject": "math",
+    "strand": "Number & Quantity",
+    "description": "Choose and interpret units in formulas and data displays."
+  },
+  {
+    "id": "HSN.CN.1",
+    "subject": "math",
+    "strand": "Number & Quantity",
+    "description": "Know there is a complex number i such that i² = -1, and every complex number has the form a + bi."
+  },
+  {
+    "id": "HSN.CN.2",
+    "subject": "math",
+    "strand": "Number & Quantity",
+    "description": "Use complex numbers in algebraic operations."
+  },
+  {
+    "id": "HSN.CN.3",
+    "subject": "math",
+    "strand": "Number & Quantity",
+    "description": "(+) Find conjugates; use conjugates to find moduli and quotients."
+  },
+  {
+    "id": "HSN.CN.4",
+    "subject": "math",
+    "strand": "Number & Quantity",
+    "description": "(+) Represent complex numbers on the complex plane in rectangular and polar form."
+  },
+  {
+    "id": "HSN.CN.5",
+    "subject": "math",
+    "strand": "Number & Quantity",
+    "description": "(+) Represent complex number operations geometrically on the complex plane."
+  },
+  {
+    "id": "HSN.CN.6",
+    "subject": "math",
+    "strand": "Number & Quantity",
+    "description": "(+) Calculate distance and midpoint in the complex plane."
+  },
+  {
+    "id": "HSN.CN.7",
+    "subject": "math",
+    "strand": "Number & Quantity",
+    "description": "Solve quadratic equations with real coefficients that have complex solutions."
+  },
+  {
+    "id": "HSN.CN.8",
+    "subject": "math",
+    "strand": "Number & Quantity",
+    "description": "(+) Extend polynomial identities to complex numbers."
+  },
+  {
+    "id": "HSN.CN.9",
+    "subject": "math",
+    "strand": "Number & Quantity",
+    "description": "(+) Know the Fundamental Theorem of Algebra; show it for quadratic polynomials."
+  },
+  {
+    "id": "HSN.VM.1",
+    "subject": "math",
+    "strand": "Number & Quantity",
+    "description": "(+) Recognize vector quantities as having magnitude and direction."
+  },
+  {
+    "id": "HSN.VM.2",
+    "subject": "math",
+    "strand": "Number & Quantity",
+    "description": "(+) Find vector components by subtracting coordinates."
+  },
+  {
+    "id": "HSN.VM.3",
+    "subject": "math",
+    "strand": "Number & Quantity",
+    "description": "(+) Solve problems involving velocity and other vector quantities."
+  },
+  {
+    "id": "HSN.VM.4",
+    "subject": "math",
+    "strand": "Number & Quantity",
+    "description": "(+) Add and subtract vectors."
+  },
+  {
+    "id": "HSN.VM.5",
+    "subject": "math",
+    "strand": "Number & Quantity",
+    "description": "(+) Multiply a vector by a scalar."
+  },
+  {
+    "id": "HSN.VM.6",
+    "subject": "math",
+    "strand": "Number & Quantity",
+    "description": "(+) Use matrices to represent and manipulate data."
+  },
+  {
+    "id": "HSN.VM.7",
+    "subject": "math",
+    "strand": "Number & Quantity",
+    "description": "(+) Multiply matrices by scalars."
+  },
+  {
+    "id": "HSN.VM.8",
+    "subject": "math",
+    "strand": "Number & Quantity",
+    "description": "(+) Add, subtract, and multiply matrices."
+  },
+  {
+    "id": "HSN.VM.9",
+    "subject": "math",
+    "strand": "Number & Quantity",
+    "description": "(+) Understand matrix multiplication is not commutative but is associative and distributive."
+  },
+  {
+    "id": "HSN.VM.10",
+    "subject": "math",
+    "strand": "Number & Quantity",
+    "description": "(+) Understand zero and identity matrices."
+  },
+  {
+    "id": "HSN.VM.11",
+    "subject": "math",
+    "strand": "Number & Quantity",
+    "description": "(+) Multiply a vector by a matrix to produce another vector."
+  },
+  {
+    "id": "HSN.VM.12",
+    "subject": "math",
+    "strand": "Number & Quantity",
+    "description": "(+) Work with 2×2 matrices as transformations; interpret determinant as area."
+  },
+  {
+    "id": "HSA.SSE.1",
+    "subject": "math",
+    "strand": "Algebra",
+    "description": "Interpret expressions in terms of context."
+  },
+  {
+    "id": "HSA.SSE.2",
+    "subject": "math",
+    "strand": "Algebra",
+    "description": "Rewrite expressions (factoring, completing the square)."
+  },
+  {
+    "id": "HSA.SSE.3",
+    "subject": "math",
+    "strand": "Algebra",
+    "description": "Choose equivalent forms to reveal properties of expressions."
+  },
+  {
+    "id": "HSA.SSE.4",
+    "subject": "math",
+    "strand": "Algebra",
+    "description": "Derive and use formula for sum of finite geometric series."
+  },
+  {
+    "id": "HSA.APR.1",
+    "subject": "math",
+    "strand": "Algebra",
+    "description": "Add, subtract, and multiply polynomials."
+  },
+  {
+    "id": "HSA.APR.2",
+    "subject": "math",
+    "strand": "Algebra",
+    "description": "Know and apply the Remainder Theorem."
+  },
+  {
+    "id": "HSA.APR.3",
+    "subject": "math",
+    "strand": "Algebra",
+    "description": "Identify zeros of polynomials; use zeros to graph."
+  },
+  {
+    "id": "HSA.APR.4",
+    "subject": "math",
+    "strand": "Algebra",
+    "description": "Prove polynomial identities and describe numerical relationships."
+  },
+  {
+    "id": "HSA.APR.5",
+    "subject": "math",
+    "strand": "Algebra",
+    "description": "(+) Know and apply the Binomial Theorem."
+  },
+  {
+    "id": "HSA.APR.6",
+    "subject": "math",
+    "strand": "Algebra",
+    "description": "Rewrite simple rational expressions in different forms."
+  },
+  {
+    "id": "HSA.APR.7",
+    "subject": "math",
+    "strand": "Algebra",
+    "description": "(+) Add, subtract, multiply, and divide rational expressions."
+  },
+  {
+    "id": "HSA.CED.1",
+    "subject": "math",
+    "strand": "Algebra",
+    "description": "Create equations and inequalities in one variable to solve problems."
+  },
+  {
+    "id": "HSA.CED.2",
+    "subject": "math",
+    "strand": "Algebra",
+    "description": "Create equations in two or more variables; graph on coordinate axes."
+  },
+  {
+    "id": "HSA.CED.3",
+    "subject": "math",
+    "strand": "Algebra",
+    "description": "Represent constraints by equations/inequalities; interpret solutions in context."
+  },
+  {
+    "id": "HSA.CED.4",
+    "subject": "math",
+    "strand": "Algebra",
+    "description": "Rearrange formulas to highlight a quantity of interest."
+  },
+  {
+    "id": "HSA.REI.1",
+    "subject": "math",
+    "strand": "Algebra",
+    "description": "Explain each step in solving equations; justify solution methods."
+  },
+  {
+    "id": "HSA.REI.2",
+    "subject": "math",
+    "strand": "Algebra",
+    "description": "Solve rational and radical equations; identify extraneous solutions."
+  },
+  {
+    "id": "HSA.REI.3",
+    "subject": "math",
+    "strand": "Algebra",
+    "description": "Solve linear equations and inequalities in one variable."
+  },
+  {
+    "id": "HSA.REI.4",
+    "subject": "math",
+    "strand": "Algebra",
+    "description": "Solve quadratic equations in one variable."
+  },
+  {
+    "id": "HSA.REI.5",
+    "subject": "math",
+    "strand": "Algebra",
+    "description": "Prove that replacing one equation with a linear combination preserves solutions."
+  },
+  {
+    "id": "HSA.REI.6",
+    "subject": "math",
+    "strand": "Algebra",
+    "description": "Solve systems of linear equations in two variables."
+  },
+  {
+    "id": "HSA.REI.7",
+    "subject": "math",
+    "strand": "Algebra",
+    "description": "Solve systems consisting of linear and quadratic equations."
+  },
+  {
+    "id": "HSA.REI.8",
+    "subject": "math",
+    "strand": "Algebra",
+    "description": "(+) Represent systems as matrix equations."
+  },
+  {
+    "id": "HSA.REI.9",
+    "subject": "math",
+    "strand": "Algebra",
+    "description": "(+) Find matrix inverses; use to solve systems."
+  },
+  {
+    "id": "HSA.REI.10",
+    "subject": "math",
+    "strand": "Algebra",
+    "description": "Understand that graphs represent solution sets of equations."
+  },
+  {
+    "id": "HSA.REI.11",
+    "subject": "math",
+    "strand": "Algebra",
+    "description": "Explain why intersection points represent solutions to f(x) = g(x)."
+  },
+  {
+    "id": "HSA.REI.12",
+    "subject": "math",
+    "strand": "Algebra",
+    "description": "Graph solutions to linear inequalities and systems of inequalities."
+  },
+  {
+    "id": "HSF.IF.1",
+    "subject": "math",
+    "strand": "Functions",
+    "description": "Understand functions as mappings from domain to range; use f(x) notation."
+  },
+  {
+    "id": "HSF.IF.2",
+    "subject": "math",
+    "strand": "Functions",
+    "description": "Use function notation; evaluate functions; interpret statements in context."
+  },
+  {
+    "id": "HSF.IF.3",
+    "subject": "math",
+    "strand": "Functions",
+    "description": "Recognize sequences as functions with integer domains."
+  },
+  {
+    "id": "HSF.IF.4",
+    "subject": "math",
+    "strand": "Functions",
+    "description": "Interpret key features of functions from graphs and tables."
+  },
+  {
+    "id": "HSF.IF.5",
+    "subject": "math",
+    "strand": "Functions",
+    "description": "Relate domain to graph and quantitative relationship."
+  },
+  {
+    "id": "HSF.IF.6",
+    "subject": "math",
+    "strand": "Functions",
+    "description": "Calculate and interpret average rate of change."
+  },
+  {
+    "id": "HSF.IF.7",
+    "subject": "math",
+    "strand": "Functions",
+    "description": "Graph functions (linear, quadratic, exponential)."
+  },
+  {
+    "id": "HSF.IF.8",
+    "subject": "math",
+    "strand": "Functions",
+    "description": "Write functions in equivalent forms to reveal properties."
+  },
+  {
+    "id": "HSF.IF.9",
+    "subject": "math",
+    "strand": "Functions",
+    "description": "Compare functions represented in different ways."
+  },
+  {
+    "id": "HSF.BF.1",
+    "subject": "math",
+    "strand": "Functions",
+    "description": "Build functions that model relationships between quantities."
+  },
+  {
+    "id": "HSF.BF.2",
+    "subject": "math",
+    "strand": "Functions",
+    "description": "Write arithmetic and geometric sequences recursively and explicitly."
+  },
+  {
+    "id": "HSF.BF.3",
+    "subject": "math",
+    "strand": "Functions",
+    "description": "Identify the effect of transformations on functions."
+  },
+  {
+    "id": "HSF.BF.4",
+    "subject": "math",
+    "strand": "Functions",
+    "description": "Find inverse functions."
+  },
+  {
+    "id": "HSF.BF.5",
+    "subject": "math",
+    "strand": "Functions",
+    "description": "(+) Understand inverse relationship between exponents and logarithms."
+  },
+  {
+    "id": "HSF.LE.1",
+    "subject": "math",
+    "strand": "Functions",
+    "description": "Distinguish between linear and exponential situations."
+  },
+  {
+    "id": "HSF.LE.2",
+    "subject": "math",
+    "strand": "Functions",
+    "description": "Construct and compare linear and exponential models."
+  },
+  {
+    "id": "HSF.LE.3",
+    "subject": "math",
+    "strand": "Functions",
+    "description": "Observe exponential growth eventually exceeds polynomial growth."
+  },
+  {
+    "id": "HSF.LE.4",
+    "subject": "math",
+    "strand": "Functions",
+    "description": "Express exponential model solutions as logarithms."
+  },
+  {
+    "id": "HSF.LE.5",
+    "subject": "math",
+    "strand": "Functions",
+    "description": "Interpret parameters in linear or exponential functions in context."
+  },
+  {
+    "id": "HSF.TF.1",
+    "subject": "math",
+    "strand": "Functions",
+    "description": "Understand radian measure as arc length on unit circle."
+  },
+  {
+    "id": "HSF.TF.2",
+    "subject": "math",
+    "strand": "Functions",
+    "description": "Explain how unit circle extends trigonometric functions to all real numbers."
+  },
+  {
+    "id": "HSF.TF.3",
+    "subject": "math",
+    "strand": "Functions",
+    "description": "(+) Use special triangles to find trig values for π/3, π/4, π/6."
+  },
+  {
+    "id": "HSF.TF.4",
+    "subject": "math",
+    "strand": "Functions",
+    "description": "(+) Use unit circle to explain symmetry and periodicity of trig functions."
+  },
+  {
+    "id": "HSF.TF.5",
+    "subject": "math",
+    "strand": "Functions",
+    "description": "Model periodic phenomena with trig functions (amplitude, frequency, midline)."
+  },
+  {
+    "id": "HSF.TF.6",
+    "subject": "math",
+    "strand": "Functions",
+    "description": "(+) Understand restricting domain allows inverse trig functions."
+  },
+  {
+    "id": "HSF.TF.7",
+    "subject": "math",
+    "strand": "Functions",
+    "description": "(+) Use inverse trig functions to solve equations in modeling contexts."
+  },
+  {
+    "id": "HSF.TF.8",
+    "subject": "math",
+    "strand": "Functions",
+    "description": "(+) Prove and use the Pythagorean identity sin²θ + cos²θ = 1."
+  },
+  {
+    "id": "HSF.TF.9",
+    "subject": "math",
+    "strand": "Functions",
+    "description": "(+) Prove and use addition and subtraction formulas for sine and cosine."
+  },
+  {
+    "id": "HSG.CO.1",
+    "subject": "math",
+    "strand": "Geometry",
+    "description": "Know precise definitions of angle, circle, perpendicular, parallel, line segment."
+  },
+  {
+    "id": "HSG.CO.2",
+    "subject": "math",
+    "strand": "Geometry",
+    "description": "Describe transformations to explain congruence."
+  },
+  {
+    "id": "HSG.CO.3",
+    "subject": "math",
+    "strand": "Geometry",
+    "description": "Describe rotations and reflections that carry rectangles, parallelograms, regular polygons onto themselves."
+  },
+  {
+    "id": "HSG.CO.4",
+    "subject": "math",
+    "strand": "Geometry",
+    "description": "Define rotations, reflections, translations in terms of geometric properties."
+  },
+  {
+    "id": "HSG.CO.5",
+    "subject": "math",
+    "strand": "Geometry",
+    "description": "Draw transformed figures; specify sequences of transformations."
+  },
+  {
+    "id": "HSG.CO.6",
+    "subject": "math",
+    "strand": "Geometry",
+    "description": "Use rigid motions to define congruence."
+  },
+  {
+    "id": "HSG.CO.7",
+    "subject": "math",
+    "strand": "Geometry",
+    "description": "Show two triangles are congruent iff corresponding sides and angles are congruent."
+  },
+  {
+    "id": "HSG.CO.8",
+    "subject": "math",
+    "strand": "Geometry",
+    "description": "Explain how ASA, SAS, SSS follow from rigid motion definition."
+  },
+  {
+    "id": "HSG.CO.9",
+    "subject": "math",
+    "strand": "Geometry",
+    "description": "Prove geometric theorems about lines and angles."
+  },
+  {
+    "id": "HSG.CO.10",
+    "subject": "math",
+    "strand": "Geometry",
+    "description": "Prove geometric theorems about triangles."
+  },
+  {
+    "id": "HSG.CO.11",
+    "subject": "math",
+    "strand": "Geometry",
+    "description": "Prove geometric theorems about parallelograms."
+  },
+  {
+    "id": "HSG.CO.12",
+    "subject": "math",
+    "strand": "Geometry",
+    "description": "Make formal geometric constructions with various tools."
+  },
+  {
+    "id": "HSG.CO.13",
+    "subject": "math",
+    "strand": "Geometry",
+    "description": "Construct equilateral triangle, square, regular hexagon inscribed in circle."
+  },
+  {
+    "id": "HSG.SRT.1",
+    "subject": "math",
+    "strand": "Geometry",
+    "description": "Verify properties of dilations given center and scale factor."
+  },
+  {
+    "id": "HSG.SRT.2",
+    "subject": "math",
+    "strand": "Geometry",
+    "description": "Use similarity transformations to decide if figures are similar."
+  },
+  {
+    "id": "HSG.SRT.3",
+    "subject": "math",
+    "strand": "Geometry",
+    "description": "Establish AA criterion for triangle similarity."
+  },
+  {
+    "id": "HSG.SRT.4",
+    "subject": "math",
+    "strand": "Geometry",
+    "description": "Prove theorems about similar triangles."
+  },
+  {
+    "id": "HSG.SRT.5",
+    "subject": "math",
+    "strand": "Geometry",
+    "description": "Use congruence and similarity criteria to solve problems and prove relationships."
+  },
+  {
+    "id": "HSG.SRT.6",
+    "subject": "math",
+    "strand": "Geometry",
+    "description": "Understand trigonometric ratios as properties of angles in right triangles."
+  },
+  {
+    "id": "HSG.SRT.7",
+    "subject": "math",
+    "strand": "Geometry",
+    "description": "Explain relationship between sine and cosine of complementary angles."
+  },
+  {
+    "id": "HSG.SRT.8",
+    "subject": "math",
+    "strand": "Geometry",
+    "description": "Use trigonometric ratios to solve right triangles."
+  },
+  {
+    "id": "HSG.SRT.9",
+    "subject": "math",
+    "strand": "Geometry",
+    "description": "(+) Derive formula A = (1/2)ab sin(C) for triangle area."
+  },
+  {
+    "id": "HSG.SRT.10",
+    "subject": "math",
+    "strand": "Geometry",
+    "description": "(+) Prove Laws of Sines and Cosines; use to solve problems."
+  },
+  {
+    "id": "HSG.SRT.11",
+    "subject": "math",
+    "strand": "Geometry",
+    "description": "(+) Apply Laws of Sines and Cosines to find unknown measurements."
+  },
+  {
+    "id": "HSG.C.1",
+    "subject": "math",
+    "strand": "Geometry",
+    "description": "Prove all circles are similar."
+  },
+  {
+    "id": "HSG.C.2",
+    "subject": "math",
+    "strand": "Geometry",
+    "description": "Identify relationships among inscribed angles, radii, chords."
+  },
+  {
+    "id": "HSG.C.3",
+    "subject": "math",
+    "strand": "Geometry",
+    "description": "Construct inscribed and circumscribed circles of triangles."
+  },
+  {
+    "id": "HSG.C.4",
+    "subject": "math",
+    "strand": "Geometry",
+    "description": "(+) Construct tangent line from external point to circle."
+  },
+  {
+    "id": "HSG.C.5",
+    "subject": "math",
+    "strand": "Geometry",
+    "description": "Derive radian measure and sector area formula using similarity."
+  },
+  {
+    "id": "HSG.GPE.1",
+    "subject": "math",
+    "strand": "Geometry",
+    "description": "Derive equation of circle using Pythagorean Theorem; complete the square."
+  },
+  {
+    "id": "HSG.GPE.2",
+    "subject": "math",
+    "strand": "Geometry",
+    "description": "Derive equation of parabola given focus and directrix."
+  },
+  {
+    "id": "HSG.GPE.3",
+    "subject": "math",
+    "strand": "Geometry",
+    "description": "(+) Derive equations of ellipses and hyperbolas given foci."
+  },
+  {
+    "id": "HSG.GPE.4",
+    "subject": "math",
+    "strand": "Geometry",
+    "description": "Use coordinates to prove simple geometric theorems algebraically."
+  },
+  {
+    "id": "HSG.GPE.5",
+    "subject": "math",
+    "strand": "Geometry",
+    "description": "Prove slope criteria for parallel and perpendicular lines."
+  },
+  {
+    "id": "HSG.GPE.6",
+    "subject": "math",
+    "strand": "Geometry",
+    "description": "Find point that partitions a segment in a given ratio."
+  },
+  {
+    "id": "HSG.GPE.7",
+    "subject": "math",
+    "strand": "Geometry",
+    "description": "Use coordinates to compute perimeters and areas."
+  },
+  {
+    "id": "HSG.GMD.1",
+    "subject": "math",
+    "strand": "Geometry",
+    "description": "Give informal arguments for circumference, area, volume formulas."
+  },
+  {
+    "id": "HSG.GMD.2",
+    "subject": "math",
+    "strand": "Geometry",
+    "description": "(+) Use Cavalieri's principle to argue volume formulas."
+  },
+  {
+    "id": "HSG.GMD.3",
+    "subject": "math",
+    "strand": "Geometry",
+    "description": "Apply volume formulas in modeling situations."
+  },
+  {
+    "id": "HSG.GMD.4",
+    "subject": "math",
+    "strand": "Geometry",
+    "description": "Identify cross-sections of 3D objects; identify solids of revolution."
+  },
+  {
+    "id": "HSG.MG.1",
+    "subject": "math",
+    "strand": "Geometry",
+    "description": "Apply geometric concepts to real-world problems."
+  },
+  {
+    "id": "HSG.MG.2",
+    "subject": "math",
+    "strand": "Geometry",
+    "description": "Apply density concepts based on area and volume."
+  },
+  {
+    "id": "HSG.MG.3",
+    "subject": "math",
+    "strand": "Geometry",
+    "description": "Apply geometric methods to solve design problems."
+  },
+  {
+    "id": "HSS.ID.1",
+    "subject": "math",
+    "strand": "Statistics & Probability",
+    "description": "Represent data with dot plots, histograms, box plots."
+  },
+  {
+    "id": "HSS.ID.2",
+    "subject": "math",
+    "strand": "Statistics & Probability",
+    "description": "Use statistics to compare center and spread of distributions."
+  },
+  {
+    "id": "HSS.ID.3",
+    "subject": "math",
+    "strand": "Statistics & Probability",
+    "description": "Interpret differences in shape, center, spread; account for outliers."
+  },
+  {
+    "id": "HSS.ID.4",
+    "subject": "math",
+    "strand": "Statistics & Probability",
+    "description": "Fit data to normal distribution; estimate population percentages."
+  },
+  {
+    "id": "HSS.ID.5",
+    "subject": "math",
+    "strand": "Statistics & Probability",
+    "description": "Summarize categorical data in two-way frequency tables."
+  },
+  {
+    "id": "HSS.ID.6",
+    "subject": "math",
+    "strand": "Statistics & Probability",
+    "description": "Fit a function to data; interpret slope and intercept."
+  },
+  {
+    "id": "HSS.ID.7",
+    "subject": "math",
+    "strand": "Statistics & Probability",
+    "description": "Interpret slope and intercept of linear model in context."
+  },
+  {
+    "id": "HSS.ID.8",
+    "subject": "math",
+    "strand": "Statistics & Probability",
+    "description": "Compute and interpret correlation coefficient of a linear fit."
+  },
+  {
+    "id": "HSS.ID.9",
+    "subject": "math",
+    "strand": "Statistics & Probability",
+    "description": "Distinguish between correlation and causation."
+  },
+  {
+    "id": "HSS.IC.1",
+    "subject": "math",
+    "strand": "Statistics & Probability",
+    "description": "Understand statistics as making inferences from random samples."
+  },
+  {
+    "id": "HSS.IC.2",
+    "subject": "math",
+    "strand": "Statistics & Probability",
+    "description": "Decide if model is consistent with data-generating process using simulation."
+  },
+  {
+    "id": "HSS.IC.3",
+    "subject": "math",
+    "strand": "Statistics & Probability",
+    "description": "Recognize purposes of surveys, experiments, observational studies."
+  },
+  {
+    "id": "HSS.IC.4",
+    "subject": "math",
+    "strand": "Statistics & Probability",
+    "description": "Estimate population mean/proportion; develop margin of error."
+  },
+  {
+    "id": "HSS.IC.5",
+    "subject": "math",
+    "strand": "Statistics & Probability",
+    "description": "Compare treatments using randomized experiments and simulations."
+  },
+  {
+    "id": "HSS.IC.6",
+    "subject": "math",
+    "strand": "Statistics & Probability",
+    "description": "Evaluate reports based on data."
+  },
+  {
+    "id": "HSS.CP.1",
+    "subject": "math",
+    "strand": "Statistics & Probability",
+    "description": "Describe events as subsets using unions, intersections, complements."
+  },
+  {
+    "id": "HSS.CP.2",
+    "subject": "math",
+    "strand": "Statistics & Probability",
+    "description": "Understand independence and conditional probability."
+  },
+  {
+    "id": "HSS.CP.3",
+    "subject": "math",
+    "strand": "Statistics & Probability",
+    "description": "Understand conditional probability P(A|B) = P(A and B)/P(B)."
+  },
+  {
+    "id": "HSS.CP.4",
+    "subject": "math",
+    "strand": "Statistics & Probability",
+    "description": "Construct and interpret two-way frequency tables."
+  },
+  {
+    "id": "HSS.CP.5",
+    "subject": "math",
+    "strand": "Statistics & Probability",
+    "description": "Recognize conditional probability and independence in everyday situations."
+  },
+  {
+    "id": "HSS.CP.6",
+    "subject": "math",
+    "strand": "Statistics & Probability",
+    "description": "Find conditional probability as fraction of outcomes."
+  },
+  {
+    "id": "HSS.CP.7",
+    "subject": "math",
+    "strand": "Statistics & Probability",
+    "description": "Apply Addition Rule and interpret in context."
+  },
+  {
+    "id": "HSS.CP.8",
+    "subject": "math",
+    "strand": "Statistics & Probability",
+    "description": "(+) Apply general Multiplication Rule and interpret in context."
+  },
+  {
+    "id": "HSS.CP.9",
+    "subject": "math",
+    "strand": "Statistics & Probability",
+    "description": "(+) Use permutations and combinations to compute probabilities."
+  },
+  {
+    "id": "HSS.MD.1",
+    "subject": "math",
+    "strand": "Statistics & Probability",
+    "description": "(+) Define random variable; graph probability distribution."
+  },
+  {
+    "id": "HSS.MD.2",
+    "subject": "math",
+    "strand": "Statistics & Probability",
+    "description": "(+) Calculate expected value of random variable."
+  },
+  {
+    "id": "HSS.MD.3",
+    "subject": "math",
+    "strand": "Statistics & Probability",
+    "description": "(+) Develop probability distribution for theoretical probabilities; find expected value."
+  },
+  {
+    "id": "HSS.MD.4",
+    "subject": "math",
+    "strand": "Statistics & Probability",
+    "description": "(+) Develop probability distribution for empirical probabilities; find expected value."
+  },
+  {
+    "id": "HSS.MD.5",
+    "subject": "math",
+    "strand": "Statistics & Probability",
+    "description": "(+) Weigh outcomes by assigning probabilities and finding expected values."
+  },
+  {
+    "id": "HSS.MD.6",
+    "subject": "math",
+    "strand": "Statistics & Probability",
+    "description": "(+) Use probabilities to make fair decisions."
+  },
+  {
+    "id": "HSS.MD.7",
+    "subject": "math",
+    "strand": "Statistics & Probability",
+    "description": "Use probability to evaluate outcomes of decisions."
+  },
+  {
+    "id": "HS-PS1-1",
+    "subject": "science",
+    "strand": "Physical Science",
+    "description": "Use the periodic table to predict relative properties of elements based on electron patterns."
+  },
+  {
+    "id": "HS-PS1-2",
+    "subject": "science",
+    "strand": "Physical Science",
+    "description": "Construct and revise an explanation for outcomes of simple chemical reactions based on electron states and periodic trends."
+  },
+  {
+    "id": "HS-PS1-3",
+    "subject": "science",
+    "strand": "Physical Science",
+    "description": "Plan and conduct an investigation to compare structure of substances at bulk scale to infer electrical forces between particles."
+  },
+  {
+    "id": "HS-PS1-4",
+    "subject": "science",
+    "strand": "Physical Science",
+    "description": "Develop a model to illustrate that energy release or absorption in chemical reactions depends on changes in total bond energy."
+  },
+  {
+    "id": "HS-PS1-5",
+    "subject": "science",
+    "strand": "Physical Science",
+    "description": "Apply scientific principles to explain effects of changing temperature or concentration on reaction rates."
+  },
+  {
+    "id": "HS-PS1-6",
+    "subject": "science",
+    "strand": "Physical Science",
+    "description": "Refine the design of a chemical system by specifying conditions that would produce increased products at equilibrium."
+  },
+  {
+    "id": "HS-PS1-7",
+    "subject": "science",
+    "strand": "Physical Science",
+    "description": "Use mathematical representations to support the claim that atoms and mass are conserved during chemical reactions."
+  },
+  {
+    "id": "HS-PS1-8",
+    "subject": "science",
+    "strand": "Physical Science",
+    "description": "Develop models to illustrate changes in nuclear composition and energy released during fission fusion and radioactive decay."
+  },
+  {
+    "id": "HS-PS2-1",
+    "subject": "science",
+    "strand": "Physical Science",
+    "description": "Analyze data to support the claim that Newton's second law describes the relationship among net force mass and acceleration."
+  },
+  {
+    "id": "HS-PS2-2",
+    "subject": "science",
+    "strand": "Physical Science",
+    "description": "Use mathematical representations to support the claim that total momentum is conserved when there is no net force on the system."
+  },
+  {
+    "id": "HS-PS2-3",
+    "subject": "science",
+    "strand": "Physical Science",
+    "description": "Apply scientific and engineering ideas to design evaluate and refine a device that minimizes force during a collision."
+  },
+  {
+    "id": "HS-PS2-4",
+    "subject": "science",
+    "strand": "Physical Science",
+    "description": "Use mathematical representations of Newton's Law of Gravitation and Coulomb's Law to describe and predict forces between objects."
+  },
+  {
+    "id": "HS-PS2-5",
+    "subject": "science",
+    "strand": "Physical Science",
+    "description": "Plan and conduct an investigation to provide evidence that electric current can produce a magnetic field and vice versa."
+  },
+  {
+    "id": "HS-PS2-6",
+    "subject": "science",
+    "strand": "Physical Science",
+    "description": "Communicate scientific and technical information about why molecular-level structure is important in designed materials."
+  },
+  {
+    "id": "HS-PS3-1",
+    "subject": "science",
+    "strand": "Physical Science",
+    "description": "Create a computational model to calculate the change in energy of one component when other components and energy flows are known."
+  },
+  {
+    "id": "HS-PS3-2",
+    "subject": "science",
+    "strand": "Physical Science",
+    "description": "Develop and use models to illustrate that energy at macroscopic scale can be accounted for as motions and positions of particles."
+  },
+  {
+    "id": "HS-PS3-3",
+    "subject": "science",
+    "strand": "Physical Science",
+    "description": "Design build and refine a device that works within given constraints to convert one form of energy into another."
+  },
+  {
+    "id": "HS-PS3-4",
+    "subject": "science",
+    "strand": "Physical Science",
+    "description": "Plan and conduct an investigation to provide evidence that thermal energy transfer results in more uniform energy distribution."
+  },
+  {
+    "id": "HS-PS3-5",
+    "subject": "science",
+    "strand": "Physical Science",
+    "description": "Develop and use a model of two objects interacting through electric or magnetic fields to illustrate forces and energy changes."
+  },
+  {
+    "id": "HS-PS4-1",
+    "subject": "science",
+    "strand": "Physical Science",
+    "description": "Use mathematical representations to support claims regarding relationships among frequency wavelength and speed of waves."
+  },
+  {
+    "id": "HS-PS4-2",
+    "subject": "science",
+    "strand": "Physical Science",
+    "description": "Evaluate questions about the advantages of using digital transmission and storage of information."
+  },
+  {
+    "id": "HS-PS4-3",
+    "subject": "science",
+    "strand": "Physical Science",
+    "description": "Evaluate claims evidence and reasoning that electromagnetic radiation can be described by wave or particle models."
+  },
+  {
+    "id": "HS-PS4-4",
+    "subject": "science",
+    "strand": "Physical Science",
+    "description": "Evaluate the validity and reliability of claims about effects of different frequencies of electromagnetic radiation on matter."
+  },
+  {
+    "id": "HS-PS4-5",
+    "subject": "science",
+    "strand": "Physical Science",
+    "description": "Communicate technical information about how technological devices use wave behavior to transmit and capture information and energy."
+  },
+  {
+    "id": "HS-LS1-1",
+    "subject": "science",
+    "strand": "Life Science",
+    "description": "Construct an explanation for how DNA structure determines protein structure which carries out essential functions through specialized cells."
+  },
+  {
+    "id": "HS-LS1-2",
+    "subject": "science",
+    "strand": "Life Science",
+    "description": "Develop and use a model to illustrate the hierarchical organization of interacting systems that provide specific functions in organisms."
+  },
+  {
+    "id": "HS-LS1-3",
+    "subject": "science",
+    "strand": "Life Science",
+    "description": "Plan and conduct an investigation to provide evidence that feedback mechanisms maintain homeostasis."
+  },
+  {
+    "id": "HS-LS1-4",
+    "subject": "science",
+    "strand": "Life Science",
+    "description": "Use a model to illustrate the role of cellular division and differentiation in producing and maintaining complex organisms."
+  },
+  {
+    "id": "HS-LS1-5",
+    "subject": "science",
+    "strand": "Life Science",
+    "description": "Use a model to illustrate how photosynthesis transforms light energy into stored chemical energy."
+  },
+  {
+    "id": "HS-LS1-6",
+    "subject": "science",
+    "strand": "Life Science",
+    "description": "Construct and revise an explanation for how carbon hydrogen and oxygen from sugar molecules combine to form other large molecules."
+  },
+  {
+    "id": "HS-LS1-7",
+    "subject": "science",
+    "strand": "Life Science",
+    "description": "Use a model to illustrate that cellular respiration is a chemical process with net transfer of energy."
+  },
+  {
+    "id": "HS-LS2-1",
+    "subject": "science",
+    "strand": "Life Science",
+    "description": "Use mathematical and computational representations to support explanations of factors that affect carrying capacity of ecosystems."
+  },
+  {
+    "id": "HS-LS2-2",
+    "subject": "science",
+    "strand": "Life Science",
+    "description": "Use mathematical representations to support and revise explanations about factors affecting biodiversity and populations in ecosystems."
+  },
+  {
+    "id": "HS-LS2-3",
+    "subject": "science",
+    "strand": "Life Science",
+    "description": "Construct and revise an explanation for the cycling of matter and flow of energy in aerobic and anaerobic conditions."
+  },
+  {
+    "id": "HS-LS2-4",
+    "subject": "science",
+    "strand": "Life Science",
+    "description": "Use mathematical representations to support claims for the cycling of matter and flow of energy among organisms in an ecosystem."
+  },
+  {
+    "id": "HS-LS2-5",
+    "subject": "science",
+    "strand": "Life Science",
+    "description": "Develop a model to illustrate the role of photosynthesis and cellular respiration in the cycling of carbon among Earth spheres."
+  },
+  {
+    "id": "HS-LS2-6",
+    "subject": "science",
+    "strand": "Life Science",
+    "description": "Evaluate claims evidence and reasoning that complex ecosystem interactions maintain consistent numbers and types of organisms."
+  },
+  {
+    "id": "HS-LS2-7",
+    "subject": "science",
+    "strand": "Life Science",
+    "description": "Design evaluate and refine a solution for reducing the impacts of human activities on the environment and biodiversity."
+  },
+  {
+    "id": "HS-LS2-8",
+    "subject": "science",
+    "strand": "Life Science",
+    "description": "Evaluate the evidence for the role of group behavior on individual and species chances to survive and reproduce."
+  },
+  {
+    "id": "HS-LS3-1",
+    "subject": "science",
+    "strand": "Life Science",
+    "description": "Ask questions to clarify relationships about the role of DNA and chromosomes in coding instructions for characteristic traits."
+  },
+  {
+    "id": "HS-LS3-2",
+    "subject": "science",
+    "strand": "Life Science",
+    "description": "Make and defend a claim that inheritable genetic variations may result from meiosis replication errors or environmental mutations."
+  },
+  {
+    "id": "HS-LS3-3",
+    "subject": "science",
+    "strand": "Life Science",
+    "description": "Apply concepts of statistics and probability to explain the variation and distribution of expressed traits in a population."
+  },
+  {
+    "id": "HS-LS4-1",
+    "subject": "science",
+    "strand": "Life Science",
+    "description": "Communicate scientific information that common ancestry and biological evolution are supported by multiple lines of evidence."
+  },
+  {
+    "id": "HS-LS4-2",
+    "subject": "science",
+    "strand": "Life Science",
+    "description": "Construct an explanation that evolution primarily results from four factors: reproduction potential genetic variation competition and survival."
+  },
+  {
+    "id": "HS-LS4-3",
+    "subject": "science",
+    "strand": "Life Science",
+    "description": "Apply statistics and probability to support explanations that organisms with advantageous traits increase in proportion."
+  },
+  {
+    "id": "HS-LS4-4",
+    "subject": "science",
+    "strand": "Life Science",
+    "description": "Construct an explanation for how natural selection leads to adaptation of populations."
+  },
+  {
+    "id": "HS-LS4-5",
+    "subject": "science",
+    "strand": "Life Science",
+    "description": "Evaluate evidence supporting claims that environmental changes may increase some species cause new species or cause extinctions."
+  },
+  {
+    "id": "HS-LS4-6",
+    "subject": "science",
+    "strand": "Life Science",
+    "description": "Create or revise a simulation to test a solution to mitigate adverse impacts of human activity on biodiversity."
+  },
+  {
+    "id": "HS-ESS1-1",
+    "subject": "science",
+    "strand": "Earth & Space Science",
+    "description": "Develop a model based on evidence to illustrate the life span of the sun and the role of nuclear fusion in releasing energy."
+  },
+  {
+    "id": "HS-ESS1-2",
+    "subject": "science",
+    "strand": "Earth & Space Science",
+    "description": "Construct an explanation of the Big Bang theory based on astronomical evidence of light spectra motion of galaxies and matter composition."
+  },
+  {
+    "id": "HS-ESS1-3",
+    "subject": "science",
+    "strand": "Earth & Space Science",
+    "description": "Communicate scientific ideas about the way stars over their life cycle produce elements."
+  },
+  {
+    "id": "HS-ESS1-4",
+    "subject": "science",
+    "strand": "Earth & Space Science",
+    "description": "Use mathematical or computational representations to predict the motion of orbiting objects in the solar system."
+  },
+  {
+    "id": "HS-ESS1-5",
+    "subject": "science",
+    "strand": "Earth & Space Science",
+    "description": "Evaluate evidence of continental and oceanic crust movements and plate tectonics theory to explain ages of crustal rocks."
+  },
+  {
+    "id": "HS-ESS1-6",
+    "subject": "science",
+    "strand": "Earth & Space Science",
+    "description": "Apply scientific reasoning and evidence from ancient Earth materials meteorites and planetary surfaces to construct Earth's formation account."
+  },
+  {
+    "id": "HS-ESS2-1",
+    "subject": "science",
+    "strand": "Earth & Space Science",
+    "description": "Develop a model to illustrate how Earth's internal and surface processes operate at different scales to form land and ocean features."
+  },
+  {
+    "id": "HS-ESS2-2",
+    "subject": "science",
+    "strand": "Earth & Space Science",
+    "description": "Analyze geoscience data to make the claim that one change to Earth's surface can create feedbacks that cause changes to other systems."
+  },
+  {
+    "id": "HS-ESS2-3",
+    "subject": "science",
+    "strand": "Earth & Space Science",
+    "description": "Develop a model based on evidence of Earth's interior to describe the cycling of matter by thermal convection."
+  },
+  {
+    "id": "HS-ESS2-4",
+    "subject": "science",
+    "strand": "Earth & Space Science",
+    "description": "Use a model to describe how variations in energy flow into and out of Earth's systems result in climate changes."
+  },
+  {
+    "id": "HS-ESS2-5",
+    "subject": "science",
+    "strand": "Earth & Space Science",
+    "description": "Plan and conduct an investigation of the properties of water and its effects on Earth materials and surface processes."
+  },
+  {
+    "id": "HS-ESS2-6",
+    "subject": "science",
+    "strand": "Earth & Space Science",
+    "description": "Develop a quantitative model to describe the cycling of carbon among the hydrosphere atmosphere geosphere and biosphere."
+  },
+  {
+    "id": "HS-ESS2-7",
+    "subject": "science",
+    "strand": "Earth & Space Science",
+    "description": "Construct an argument based on evidence about the simultaneous coevolution of Earth's systems and life on Earth."
+  },
+  {
+    "id": "HS-ESS3-1",
+    "subject": "science",
+    "strand": "Earth & Space Science",
+    "description": "Construct an explanation for how natural resources natural hazards and climate changes have influenced human activity."
+  },
+  {
+    "id": "HS-ESS3-2",
+    "subject": "science",
+    "strand": "Earth & Space Science",
+    "description": "Evaluate competing design solutions for developing managing and utilizing energy and mineral resources based on cost-benefit ratios."
+  },
+  {
+    "id": "HS-ESS3-3",
+    "subject": "science",
+    "strand": "Earth & Space Science",
+    "description": "Create a computational simulation to illustrate relationships among natural resource management human sustainability and biodiversity."
+  },
+  {
+    "id": "HS-ESS3-4",
+    "subject": "science",
+    "strand": "Earth & Space Science",
+    "description": "Evaluate or refine a technological solution that reduces impacts of human activities on natural systems."
+  },
+  {
+    "id": "HS-ESS3-5",
+    "subject": "science",
+    "strand": "Earth & Space Science",
+    "description": "Analyze geoscience data and climate models to make an evidence-based forecast of global or regional climate change and impacts."
+  },
+  {
+    "id": "HS-ESS3-6",
+    "subject": "science",
+    "strand": "Earth & Space Science",
+    "description": "Use a computational representation to illustrate relationships among Earth systems and how human activity modifies them."
+  },
+  {
+    "id": "HS-ETS1-1",
+    "subject": "science",
+    "strand": "Engineering Design",
+    "description": "Analyze a major global challenge to specify qualitative and quantitative criteria and constraints for solutions."
+  },
+  {
+    "id": "HS-ETS1-2",
+    "subject": "science",
+    "strand": "Engineering Design",
+    "description": "Design a solution to a complex real-world problem by breaking it down into smaller more manageable problems."
+  },
+  {
+    "id": "HS-ETS1-3",
+    "subject": "science",
+    "strand": "Engineering Design",
+    "description": "Evaluate a solution to a complex real-world problem based on prioritized criteria and trade-offs including cost safety and reliability."
+  },
+  {
+    "id": "HS-ETS1-4",
+    "subject": "science",
+    "strand": "Engineering Design",
+    "description": "Use a computer simulation to model the impact of proposed solutions on interactions within and between systems."
+  },
+  {
+    "id": "D1.1.9-12",
+    "subject": "social_studies",
+    "strand": "Inquiry",
+    "description": "Explain how a question reflects an enduring issue in the field."
+  },
+  {
+    "id": "D1.2.9-12",
+    "subject": "social_studies",
+    "strand": "Inquiry",
+    "description": "Explain points of agreement and disagreement experts have about interpretations and applications of disciplinary concepts and ideas associated with a compelling question."
+  },
+  {
+    "id": "D1.3.9-12",
+    "subject": "social_studies",
+    "strand": "Inquiry",
+    "description": "Explain points of agreement and disagreement experts have about interpretations and applications of disciplinary concepts and ideas associated with a supporting question."
+  },
+  {
+    "id": "D1.4.9-12",
+    "subject": "social_studies",
+    "strand": "Inquiry",
+    "description": "Explain how supporting questions contribute to an inquiry and how through engaging source work new compelling and supporting questions emerge."
+  },
+  {
+    "id": "D1.5.9-12",
+    "subject": "social_studies",
+    "strand": "Inquiry",
+    "description": "Determine the kinds of sources that will be helpful in answering compelling and supporting questions taking into consideration multiple points of views represented in the sources."
+  },
+  {
+    "id": "D2.Civ.1.9-12",
+    "subject": "social_studies",
+    "strand": "Civics",
+    "description": "Distinguish the powers and responsibilities of local state tribal national and international civic and political institutions."
+  },
+  {
+    "id": "D2.Civ.2.9-12",
+    "subject": "social_studies",
+    "strand": "Civics",
+    "description": "Analyze the role of citizens in the U.S. political system with attention to various theories of democracy changes in Americans participation over time and alternative models from other countries past and present."
+  },
+  {
+    "id": "D2.Civ.3.9-12",
+    "subject": "social_studies",
+    "strand": "Civics",
+    "description": "Analyze the impact of constitutions laws treaties and international agreements on the maintenance of national and international order."
+  },
+  {
+    "id": "D2.Civ.4.9-12",
+    "subject": "social_studies",
+    "strand": "Civics",
+    "description": "Explain how the U.S. Constitution establishes a system of government that has powers responsibilities and limits that have changed over time and that are still contested."
+  },
+  {
+    "id": "D2.Civ.5.9-12",
+    "subject": "social_studies",
+    "strand": "Civics",
+    "description": "Evaluate citizens and institutions effectiveness in addressing social and political problems at the local state tribal national and international level."
+  },
+  {
+    "id": "D2.Civ.6.9-12",
+    "subject": "social_studies",
+    "strand": "Civics",
+    "description": "Critique relationships among governments civil societies and economic markets."
+  },
+  {
+    "id": "D2.Civ.7.9-12",
+    "subject": "social_studies",
+    "strand": "Civics",
+    "description": "Apply civic virtues and democratic principles when working with others."
+  },
+  {
+    "id": "D2.Civ.8.9-12",
+    "subject": "social_studies",
+    "strand": "Civics",
+    "description": "Evaluate social and political systems in different contexts times and places that promote civic virtues and enact democratic principles."
+  },
+  {
+    "id": "D2.Civ.9.9-12",
+    "subject": "social_studies",
+    "strand": "Civics",
+    "description": "Use appropriate deliberative processes in multiple settings."
+  },
+  {
+    "id": "D2.Civ.10.9-12",
+    "subject": "social_studies",
+    "strand": "Civics",
+    "description": "Analyze the impact and the appropriate roles of personal interests and perspectives on the application of civic virtues democratic principles constitutional rights and human rights."
+  },
+  {
+    "id": "D2.Civ.11.9-12",
+    "subject": "social_studies",
+    "strand": "Civics",
+    "description": "Evaluate multiple procedures for making governmental decisions at the local state national and international levels in terms of the civic purposes achieved."
+  },
+  {
+    "id": "D2.Civ.12.9-12",
+    "subject": "social_studies",
+    "strand": "Civics",
+    "description": "Analyze how people use and challenge local state national and international laws to address a variety of public issues."
+  },
+  {
+    "id": "D2.Civ.13.9-12",
+    "subject": "social_studies",
+    "strand": "Civics",
+    "description": "Evaluate public policies in terms of intended and unintended outcomes and related consequences."
+  },
+  {
+    "id": "D2.Civ.14.9-12",
+    "subject": "social_studies",
+    "strand": "Civics",
+    "description": "Analyze historical contemporary and emerging means of changing societies promoting the common good and protecting rights."
+  },
+  {
+    "id": "D2.Eco.1.9-12",
+    "subject": "social_studies",
+    "strand": "Economics",
+    "description": "Analyze how incentives influence choices that may result in policies with a range of costs and benefits for different groups."
+  },
+  {
+    "id": "D2.Eco.2.9-12",
+    "subject": "social_studies",
+    "strand": "Economics",
+    "description": "Use marginal benefits and marginal costs to construct an argument for or against an approach or solution to an economic issue."
+  },
+  {
+    "id": "D2.Eco.3.9-12",
+    "subject": "social_studies",
+    "strand": "Economics",
+    "description": "Analyze the ways in which incentives influence what is produced and distributed in a market system."
+  },
+  {
+    "id": "D2.Eco.4.9-12",
+    "subject": "social_studies",
+    "strand": "Economics",
+    "description": "Evaluate the extent to which competition among sellers and among buyers exists in specific markets."
+  },
+  {
+    "id": "D2.Eco.5.9-12",
+    "subject": "social_studies",
+    "strand": "Economics",
+    "description": "Describe the consequences of competition in specific markets."
+  },
+  {
+    "id": "D2.Eco.6.9-12",
+    "subject": "social_studies",
+    "strand": "Economics",
+    "description": "Generate possible explanations for a government role in markets when market inefficiencies exist."
+  },
+  {
+    "id": "D2.Eco.7.9-12",
+    "subject": "social_studies",
+    "strand": "Economics",
+    "description": "Use benefits and costs to evaluate the effectiveness of government policies to improve market outcomes."
+  },
+  {
+    "id": "D2.Eco.8.9-12",
+    "subject": "social_studies",
+    "strand": "Economics",
+    "description": "Describe the possible consequences both intended and unintended of government policies to improve market outcomes."
+  },
+  {
+    "id": "D2.Eco.9.9-12",
+    "subject": "social_studies",
+    "strand": "Economics",
+    "description": "Describe the roles of institutions such as clearly defined property rights and the rule of law in a market economy."
+  },
+  {
+    "id": "D2.Eco.10.9-12",
+    "subject": "social_studies",
+    "strand": "Economics",
+    "description": "Use current data to explain the influence of changes in spending production and the money supply on various economic conditions."
+  },
+  {
+    "id": "D2.Eco.11.9-12",
+    "subject": "social_studies",
+    "strand": "Economics",
+    "description": "Use economic indicators to analyze the current and future state of the economy."
+  },
+  {
+    "id": "D2.Eco.12.9-12",
+    "subject": "social_studies",
+    "strand": "Economics",
+    "description": "Evaluate the selection of monetary and fiscal policies in a variety of economic conditions."
+  },
+  {
+    "id": "D2.Eco.13.9-12",
+    "subject": "social_studies",
+    "strand": "Economics",
+    "description": "Explain why advancements in technology and investments in capital goods and human capital increase economic growth and standards of living."
+  },
+  {
+    "id": "D2.Eco.14.9-12",
+    "subject": "social_studies",
+    "strand": "Economics",
+    "description": "Analyze the role of comparative advantage in international trade of goods and services."
+  },
+  {
+    "id": "D2.Eco.15.9-12",
+    "subject": "social_studies",
+    "strand": "Economics",
+    "description": "Explain how current globalization trends and policies affect economic growth labor markets rights of citizens the environment and resource and income distribution in different nations."
+  },
+  {
+    "id": "D2.Geo.1.9-12",
+    "subject": "social_studies",
+    "strand": "Geography",
+    "description": "Use geospatial and related technologies to create maps to display and explain the spatial patterns of cultural and environmental characteristics."
+  },
+  {
+    "id": "D2.Geo.2.9-12",
+    "subject": "social_studies",
+    "strand": "Geography",
+    "description": "Use maps satellite images photographs and other representations to explain relationships between the locations of places and regions and their political cultural and economic dynamics."
+  },
+  {
+    "id": "D2.Geo.3.9-12",
+    "subject": "social_studies",
+    "strand": "Geography",
+    "description": "Use geographic data to analyze variations in the spatial patterns of cultural and environmental characteristics at multiple scales."
+  },
+  {
+    "id": "D2.Geo.4.9-12",
+    "subject": "social_studies",
+    "strand": "Geography",
+    "description": "Analyze relationships and interactions within and between human and physical systems to explain reciprocal influences that occur among them."
+  },
+  {
+    "id": "D2.Geo.5.9-12",
+    "subject": "social_studies",
+    "strand": "Geography",
+    "description": "Evaluate how political and economic decisions throughout time have influenced cultural and environmental characteristics of various places and regions."
+  },
+  {
+    "id": "D2.Geo.6.9-12",
+    "subject": "social_studies",
+    "strand": "Geography",
+    "description": "Evaluate the impact of human settlement activities on the environmental and cultural characteristics of specific places and regions."
+  },
+  {
+    "id": "D2.Geo.7.9-12",
+    "subject": "social_studies",
+    "strand": "Geography",
+    "description": "Analyze the reciprocal nature of how historical events and the spatial diffusion of ideas technologies and cultural practices have influenced migration patterns and the distribution of human population."
+  },
+  {
+    "id": "D2.Geo.8.9-12",
+    "subject": "social_studies",
+    "strand": "Geography",
+    "description": "Evaluate the impact of economic activities and political decisions on spatial patterns within and among urban suburban and rural regions."
+  },
+  {
+    "id": "D2.Geo.9.9-12",
+    "subject": "social_studies",
+    "strand": "Geography",
+    "description": "Evaluate the influence of long-term climate variability on human migration and settlement patterns resource use and land uses at local-to-global scales."
+  },
+  {
+    "id": "D2.Geo.10.9-12",
+    "subject": "social_studies",
+    "strand": "Geography",
+    "description": "Evaluate how changes in the environmental and cultural characteristics of a place or region influence spatial patterns of trade and land use."
+  },
+  {
+    "id": "D2.Geo.11.9-12",
+    "subject": "social_studies",
+    "strand": "Geography",
+    "description": "Evaluate how economic globalization and the expanding use of scarce resources contribute to conflict and cooperation within and among countries."
+  },
+  {
+    "id": "D2.Geo.12.9-12",
+    "subject": "social_studies",
+    "strand": "Geography",
+    "description": "Evaluate the consequences of human-made and natural catastrophes on global trade politics and human migration."
+  },
+  {
+    "id": "D2.His.1.9-12",
+    "subject": "social_studies",
+    "strand": "History",
+    "description": "Evaluate how historical events and developments were shaped by unique circumstances of time and place as well as broader historical contexts."
+  },
+  {
+    "id": "D2.His.2.9-12",
+    "subject": "social_studies",
+    "strand": "History",
+    "description": "Analyze change and continuity in historical eras."
+  },
+  {
+    "id": "D2.His.3.9-12",
+    "subject": "social_studies",
+    "strand": "History",
+    "description": "Use questions generated about individuals and groups to assess how the significance of their actions changes over time and is shaped by the historical context."
+  },
+  {
+    "id": "D2.His.4.9-12",
+    "subject": "social_studies",
+    "strand": "History",
+    "description": "Analyze complex and interacting factors that influenced the perspectives of people during different historical eras."
+  },
+  {
+    "id": "D2.His.5.9-12",
+    "subject": "social_studies",
+    "strand": "History",
+    "description": "Analyze how historical contexts shaped and continue to shape peoples perspectives."
+  },
+  {
+    "id": "D2.His.6.9-12",
+    "subject": "social_studies",
+    "strand": "History",
+    "description": "Analyze the ways in which the perspectives of those writing history shaped the history that they produced."
+  },
+  {
+    "id": "D2.His.7.9-12",
+    "subject": "social_studies",
+    "strand": "History",
+    "description": "Explain how the perspectives of people in the present shape interpretations of the past."
+  },
+  {
+    "id": "D2.His.8.9-12",
+    "subject": "social_studies",
+    "strand": "History",
+    "description": "Analyze how current interpretations of the past are limited by the extent to which available historical sources represent perspectives of people at the time."
+  },
+  {
+    "id": "D2.His.9.9-12",
+    "subject": "social_studies",
+    "strand": "History",
+    "description": "Analyze the relationship between historical sources and the secondary interpretations made from them."
+  },
+  {
+    "id": "D2.His.10.9-12",
+    "subject": "social_studies",
+    "strand": "History",
+    "description": "Detect possible limitations in various kinds of historical evidence and differing secondary interpretations."
+  },
+  {
+    "id": "D2.His.11.9-12",
+    "subject": "social_studies",
+    "strand": "History",
+    "description": "Critique the usefulness of historical sources for a specific historical inquiry based on their maker date place of origin intended audience and purpose."
+  },
+  {
+    "id": "D2.His.12.9-12",
+    "subject": "social_studies",
+    "strand": "History",
+    "description": "Use questions generated about multiple historical sources to pursue further inquiry and investigate additional sources."
+  },
+  {
+    "id": "D2.His.13.9-12",
+    "subject": "social_studies",
+    "strand": "History",
+    "description": "Critique the appropriateness of the historical sources used in a secondary interpretation."
+  },
+  {
+    "id": "D2.His.14.9-12",
+    "subject": "social_studies",
+    "strand": "History",
+    "description": "Analyze multiple and complex causes and effects of events in the past."
+  },
+  {
+    "id": "D2.His.15.9-12",
+    "subject": "social_studies",
+    "strand": "History",
+    "description": "Distinguish between long-term causes and triggering events in developing a historical argument."
+  },
+  {
+    "id": "D2.His.16.9-12",
+    "subject": "social_studies",
+    "strand": "History",
+    "description": "Integrate evidence from multiple relevant historical sources and interpretations into a reasoned argument about the past."
+  },
+  {
+    "id": "D2.His.17.9-12",
+    "subject": "social_studies",
+    "strand": "History",
+    "description": "Critique the central arguments in secondary works of history on related topics in multiple media in terms of their historical accuracy."
+  },
+  {
+    "id": "D3.1.9-12",
+    "subject": "social_studies",
+    "strand": "Inquiry",
+    "description": "Gather relevant information from multiple sources representing a wide range of views while using the origin authority structure context and corroborative value of the sources to guide the selection."
+  },
+  {
+    "id": "D3.2.9-12",
+    "subject": "social_studies",
+    "strand": "Inquiry",
+    "description": "Evaluate the credibility of a source by examining how experts value the source."
+  },
+  {
+    "id": "D3.3.9-12",
+    "subject": "social_studies",
+    "strand": "Inquiry",
+    "description": "Identify evidence that draws information directly and substantively from multiple sources to detect inconsistencies in evidence in order to revise or strengthen claims."
+  },
+  {
+    "id": "D3.4.9-12",
+    "subject": "social_studies",
+    "strand": "Inquiry",
+    "description": "Refine claims and counterclaims attending to precision significance and knowledge conveyed through the claim while pointing out the strengths and limitations of both."
+  },
+  {
+    "id": "D4.1.9-12",
+    "subject": "social_studies",
+    "strand": "Inquiry",
+    "description": "Construct arguments using precise and knowledgeable claims with evidence from multiple sources while acknowledging counterclaims and evidentiary weaknesses."
+  },
+  {
+    "id": "D4.2.9-12",
+    "subject": "social_studies",
+    "strand": "Inquiry",
+    "description": "Construct explanations using sound reasoning correct sequence examples and details with significant and pertinent information and data while acknowledging the strengths and weaknesses of the explanation given its purpose."
+  },
+  {
+    "id": "D4.3.9-12",
+    "subject": "social_studies",
+    "strand": "Inquiry",
+    "description": "Present adaptations of arguments and explanations that feature evocative ideas and perspectives on issues and topics to reach a range of audiences and venues outside the classroom using print oral and digital technologies."
+  },
+  {
+    "id": "D4.4.9-12",
+    "subject": "social_studies",
+    "strand": "Inquiry",
+    "description": "Critique the use of claims and evidence in arguments for credibility."
+  },
+  {
+    "id": "D4.5.9-12",
+    "subject": "social_studies",
+    "strand": "Inquiry",
+    "description": "Critique the use of the reasoning sequencing and supporting details of explanations."
+  },
+  {
+    "id": "D4.6.9-12",
+    "subject": "social_studies",
+    "strand": "Inquiry",
+    "description": "Use disciplinary and interdisciplinary lenses to understand the characteristics and causes of local regional and global problems and challenges and opportunities faced by those trying to address these problems over time and place."
+  },
+  {
+    "id": "D4.7.9-12",
+    "subject": "social_studies",
+    "strand": "Inquiry",
+    "description": "Assess options for individual and collective action to address local regional and global problems by engaging in self-reflection strategy identification and complex causal reasoning."
+  },
+  {
+    "id": "D4.8.9-12",
+    "subject": "social_studies",
+    "strand": "Inquiry",
+    "description": "Apply a range of deliberative and democratic strategies and procedures to make decisions and take action in their classrooms schools and out-of-school civic contexts."
+  },
+  {
+    "id": "SEL.SA.1",
+    "subject": "sel",
+    "strand": "Self-Awareness",
+    "description": "Identify and accurately label personal emotions and their triggers, recognizing how feelings influence thoughts and behaviors across contexts."
+  },
+  {
+    "id": "SEL.SA.2",
+    "subject": "sel",
+    "strand": "Self-Awareness",
+    "description": "Integrate personal and social identities, including cultural, ethnic, and linguistic backgrounds, to develop a coherent sense of self."
+  },
+  {
+    "id": "SEL.SA.3",
+    "subject": "sel",
+    "strand": "Self-Awareness",
+    "description": "Recognize personal strengths, assets, and areas for growth with a well-grounded sense of confidence and realistic self-assessment."
+  },
+  {
+    "id": "SEL.SA.4",
+    "subject": "sel",
+    "strand": "Self-Awareness",
+    "description": "Identify and leverage personal, cultural, and linguistic assets as resources for learning and community contribution."
+  },
+  {
+    "id": "SEL.SA.5",
+    "subject": "sel",
+    "strand": "Self-Awareness",
+    "description": "Analyze how personal values, beliefs, and experiences shape perceptions, decisions, and interactions with others."
+  },
+  {
+    "id": "SEL.SA.6",
+    "subject": "sel",
+    "strand": "Self-Awareness",
+    "description": "Examine personal biases and prejudices, considering their origins and impact on interpersonal relationships and decision-making."
+  },
+  {
+    "id": "SEL.SA.7",
+    "subject": "sel",
+    "strand": "Self-Awareness",
+    "description": "Demonstrate honesty and integrity by aligning actions with stated values and taking responsibility for personal choices."
+  },
+  {
+    "id": "SEL.SA.8",
+    "subject": "sel",
+    "strand": "Self-Awareness",
+    "description": "Experience and articulate self-efficacy by recognizing one's capacity to accomplish goals and overcome challenges."
+  },
+  {
+    "id": "SEL.SA.9",
+    "subject": "sel",
+    "strand": "Self-Awareness",
+    "description": "Apply a growth mindset by viewing abilities as developable through effort, feedback, and strategic learning."
+  },
+  {
+    "id": "SEL.SA.10",
+    "subject": "sel",
+    "strand": "Self-Awareness",
+    "description": "Develop and articulate personal interests, passions, and sense of purpose that connect to future aspirations and community contribution."
+  },
+  {
+    "id": "SEL.SM.1",
+    "subject": "sel",
+    "strand": "Self-Management",
+    "description": "Regulate emotions effectively in high-stress situations using appropriate strategies such as mindfulness, reframing, or self-talk."
+  },
+  {
+    "id": "SEL.SM.2",
+    "subject": "sel",
+    "strand": "Self-Management",
+    "description": "Exhibit self-discipline and self-motivation by persisting through challenges and maintaining focus on long-term objectives."
+  },
+  {
+    "id": "SEL.SM.3",
+    "subject": "sel",
+    "strand": "Self-Management",
+    "description": "Identify and apply stress-management strategies appropriate to different contexts, including academic, social, and personal situations."
+  },
+  {
+    "id": "SEL.SM.4",
+    "subject": "sel",
+    "strand": "Self-Management",
+    "description": "Set challenging but achievable personal and academic goals with specific criteria for success and timelines for completion."
+  },
+  {
+    "id": "SEL.SM.5",
+    "subject": "sel",
+    "strand": "Self-Management",
+    "description": "Apply planning and organizational skills to manage multiple responsibilities, including time management and prioritization strategies."
+  },
+  {
+    "id": "SEL.SM.6",
+    "subject": "sel",
+    "strand": "Self-Management",
+    "description": "Demonstrate initiative by identifying opportunities and taking action without external prompting, even when facing uncertainty."
+  },
+  {
+    "id": "SEL.SM.7",
+    "subject": "sel",
+    "strand": "Self-Management",
+    "description": "Exercise personal and collective agency by advocating for oneself and working with others to effect positive change."
+  },
+  {
+    "id": "SEL.SM.8",
+    "subject": "sel",
+    "strand": "Self-Management",
+    "description": "Manage impulses and delay gratification to achieve more significant long-term goals and outcomes."
+  },
+  {
+    "id": "SEL.SM.9",
+    "subject": "sel",
+    "strand": "Self-Management",
+    "description": "Adapt behavior and emotional responses appropriately to different environments, including classroom, workplace, and community settings."
+  },
+  {
+    "id": "SEL.SM.10",
+    "subject": "sel",
+    "strand": "Self-Management",
+    "description": "Develop and maintain healthy habits and routines that support physical, emotional, and academic well-being."
+  },
+  {
+    "id": "SEL.SOC.1",
+    "subject": "sel",
+    "strand": "Social Awareness",
+    "description": "Demonstrate perspective-taking by considering situations from multiple viewpoints, including those different from one's own."
+  },
+  {
+    "id": "SEL.SOC.2",
+    "subject": "sel",
+    "strand": "Social Awareness",
+    "description": "Recognize and appreciate the strengths, contributions, and perspectives of individuals from diverse backgrounds and experiences."
+  },
+  {
+    "id": "SEL.SOC.3",
+    "subject": "sel",
+    "strand": "Social Awareness",
+    "description": "Show empathy and compassion for others by understanding and responding appropriately to their emotional states and circumstances."
+  },
+  {
+    "id": "SEL.SOC.4",
+    "subject": "sel",
+    "strand": "Social Awareness",
+    "description": "Demonstrate genuine concern for the feelings and well-being of others through words and actions."
+  },
+  {
+    "id": "SEL.SOC.5",
+    "subject": "sel",
+    "strand": "Social Awareness",
+    "description": "Understand and express gratitude, recognizing how others contribute to personal and collective success."
+  },
+  {
+    "id": "SEL.SOC.6",
+    "subject": "sel",
+    "strand": "Social Awareness",
+    "description": "Identify and critically evaluate diverse social norms, including recognizing and challenging unjust practices and systems."
+  },
+  {
+    "id": "SEL.SOC.7",
+    "subject": "sel",
+    "strand": "Social Awareness",
+    "description": "Recognize situational demands and adapt behavior appropriately while maintaining personal integrity and values."
+  },
+  {
+    "id": "SEL.SOC.8",
+    "subject": "sel",
+    "strand": "Social Awareness",
+    "description": "Analyze how organizations, institutions, and systems influence individual and group behavior, opportunities, and outcomes."
+  },
+  {
+    "id": "SEL.SOC.9",
+    "subject": "sel",
+    "strand": "Social Awareness",
+    "description": "Demonstrate cultural humility by approaching diverse cultures, identities, and perspectives with respect and openness to learning."
+  },
+  {
+    "id": "SEL.SOC.10",
+    "subject": "sel",
+    "strand": "Social Awareness",
+    "description": "Identify and access family, school, and community resources that can provide support in various situations."
+  },
+  {
+    "id": "SEL.RS.1",
+    "subject": "sel",
+    "strand": "Relationship Skills",
+    "description": "Communicate clearly and effectively using active listening, appropriate body language, and adaptive communication styles."
+  },
+  {
+    "id": "SEL.RS.2",
+    "subject": "sel",
+    "strand": "Relationship Skills",
+    "description": "Initiate, develop, and maintain healthy relationships with diverse individuals, including peers, adults, and community members."
+  },
+  {
+    "id": "SEL.RS.3",
+    "subject": "sel",
+    "strand": "Relationship Skills",
+    "description": "Demonstrate cultural competency by interacting respectfully and effectively with people from different backgrounds and perspectives."
+  },
+  {
+    "id": "SEL.RS.4",
+    "subject": "sel",
+    "strand": "Relationship Skills",
+    "description": "Practice teamwork and collaborative problem-solving by contributing constructively to group goals while valuing diverse contributions."
+  },
+  {
+    "id": "SEL.RS.5",
+    "subject": "sel",
+    "strand": "Relationship Skills",
+    "description": "Resolve conflicts constructively using negotiation, mediation, and de-escalation strategies that preserve relationships."
+  },
+  {
+    "id": "SEL.RS.6",
+    "subject": "sel",
+    "strand": "Relationship Skills",
+    "description": "Resist negative social pressure by asserting personal boundaries and making choices aligned with personal values and well-being."
+  },
+  {
+    "id": "SEL.RS.7",
+    "subject": "sel",
+    "strand": "Relationship Skills",
+    "description": "Demonstrate leadership in groups by motivating others, delegating tasks, and facilitating inclusive participation."
+  },
+  {
+    "id": "SEL.RS.8",
+    "subject": "sel",
+    "strand": "Relationship Skills",
+    "description": "Seek or offer help and support when needed, recognizing interdependence as a strength rather than a weakness."
+  },
+  {
+    "id": "SEL.RS.9",
+    "subject": "sel",
+    "strand": "Relationship Skills",
+    "description": "Stand up for the rights of others through advocacy, allyship, and bystander intervention when witnessing unfair treatment."
+  },
+  {
+    "id": "SEL.RS.10",
+    "subject": "sel",
+    "strand": "Relationship Skills",
+    "description": "Navigate settings with differing social and cultural expectations while maintaining authenticity and building positive connections."
+  },
+  {
+    "id": "SEL.RDM.1",
+    "subject": "sel",
+    "strand": "Responsible Decision-Making",
+    "description": "Demonstrate curiosity and open-mindedness by considering new ideas and perspectives before forming conclusions."
+  },
+  {
+    "id": "SEL.RDM.2",
+    "subject": "sel",
+    "strand": "Responsible Decision-Making",
+    "description": "Identify problems accurately by gathering relevant information and distinguishing between facts and assumptions."
+  },
+  {
+    "id": "SEL.RDM.3",
+    "subject": "sel",
+    "strand": "Responsible Decision-Making",
+    "description": "Generate and evaluate multiple solutions to personal and social problems using critical thinking and creativity."
+  },
+  {
+    "id": "SEL.RDM.4",
+    "subject": "sel",
+    "strand": "Responsible Decision-Making",
+    "description": "Make reasoned judgments by analyzing information, weighing evidence, and considering multiple perspectives."
+  },
+  {
+    "id": "SEL.RDM.5",
+    "subject": "sel",
+    "strand": "Responsible Decision-Making",
+    "description": "Anticipate and evaluate the short-term and long-term consequences of decisions for self and others."
+  },
+  {
+    "id": "SEL.RDM.6",
+    "subject": "sel",
+    "strand": "Responsible Decision-Making",
+    "description": "Apply ethical standards, including honesty, fairness, and respect for others, when making personal and social decisions."
+  },
+  {
+    "id": "SEL.RDM.7",
+    "subject": "sel",
+    "strand": "Responsible Decision-Making",
+    "description": "Consider safety concerns and risk factors when evaluating options and making choices."
+  },
+  {
+    "id": "SEL.RDM.8",
+    "subject": "sel",
+    "strand": "Responsible Decision-Making",
+    "description": "Reflect on one's role in promoting personal, family, and community well-being through everyday choices and actions."
+  },
+  {
+    "id": "SEL.RDM.9",
+    "subject": "sel",
+    "strand": "Responsible Decision-Making",
+    "description": "Evaluate the impact of decisions on personal, interpersonal, community, and institutional levels."
+  },
+  {
+    "id": "SEL.RDM.10",
+    "subject": "sel",
+    "strand": "Responsible Decision-Making",
+    "description": "Apply critical thinking skills to real-world situations, recognizing their relevance both inside and outside academic settings."
+  }
+]

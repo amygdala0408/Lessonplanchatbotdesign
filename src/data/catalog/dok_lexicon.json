@@ -1,0 +1,569 @@
+[
+  {
+    "subject": "ela",
+    "dokLevel": 1,
+    "verb": "define",
+    "signal": "rote memory",
+    "notes": "state meaning of words or terms"
+  },
+  {
+    "subject": "ela",
+    "dokLevel": 1,
+    "verb": "identify",
+    "signal": "single-correct recall",
+    "notes": "facts, definitions, locate"
+  },
+  {
+    "subject": "ela",
+    "dokLevel": 1,
+    "verb": "list",
+    "signal": "short, factual response",
+    "notes": "surface-level retrieval; no reasoning required"
+  },
+  {
+    "subject": "ela",
+    "dokLevel": 2,
+    "verb": "categorize",
+    "signal": "group by trait",
+    "notes": "organize details into categories"
+  },
+  {
+    "subject": "ela",
+    "dokLevel": 2,
+    "verb": "compare",
+    "signal": "relationships visible",
+    "notes": "show similarities/differences; simple reasoning"
+  },
+  {
+    "subject": "ela",
+    "dokLevel": 2,
+    "verb": "paraphrase",
+    "signal": "restated meaning",
+    "notes": "restate information in own words"
+  },
+  {
+    "subject": "ela",
+    "dokLevel": 2,
+    "verb": "summarize",
+    "signal": "transform info",
+    "notes": "own words; gist; central idea"
+  },
+  {
+    "subject": "ela",
+    "dokLevel": 3,
+    "verb": "analyze",
+    "signal": "pattern finding",
+    "notes": "break into parts; explain relationships"
+  },
+  {
+    "subject": "ela",
+    "dokLevel": 3,
+    "verb": "critique",
+    "signal": "reasoned judgment",
+    "notes": "evaluate strengths/weaknesses of argument"
+  },
+  {
+    "subject": "ela",
+    "dokLevel": 3,
+    "verb": "formulate",
+    "signal": "develops hypothesis or thesis",
+    "notes": "Use across subjects when students create testable questions or arguable claims."
+  },
+  {
+    "subject": "ela",
+    "dokLevel": 3,
+    "verb": "justify",
+    "signal": "requires reasoning",
+    "notes": "text evidence + claim; multiple steps"
+  },
+  {
+    "subject": "ela",
+    "dokLevel": 3,
+    "verb": "trace",
+    "signal": "examine development",
+    "notes": "follow an idea or theme across text"
+  },
+  {
+    "subject": "ela",
+    "dokLevel": 4,
+    "verb": "argue",
+    "signal": "extended reasoning",
+    "notes": "construct sustained evidence-based argument"
+  },
+  {
+    "subject": "ela",
+    "dokLevel": 4,
+    "verb": "design",
+    "signal": "create product",
+    "notes": "develop new text or media integrating ideas"
+  },
+  {
+    "subject": "ela",
+    "dokLevel": 4,
+    "verb": "evaluate",
+    "signal": "judgment with criteria",
+    "notes": "apply standards to assess quality or value"
+  },
+  {
+    "subject": "ela",
+    "dokLevel": 4,
+    "verb": "integrate",
+    "signal": "combines information from sources",
+    "notes": "Use across subjects when students synthesize ideas from multiple texts or data sets."
+  },
+  {
+    "subject": "ela",
+    "dokLevel": 4,
+    "verb": "synthesize",
+    "signal": "across sources/time",
+    "notes": "combine multiple texts or products"
+  },
+  {
+    "subject": "math",
+    "dokLevel": 1,
+    "verb": "compute",
+    "signal": "procedure known",
+    "notes": "basic facts/algorithm recall"
+  },
+  {
+    "subject": "math",
+    "dokLevel": 1,
+    "verb": "identify",
+    "signal": "recognition",
+    "notes": "recognize shapes, numbers, properties"
+  },
+  {
+    "subject": "math",
+    "dokLevel": 1,
+    "verb": "recall",
+    "signal": "rote memory",
+    "notes": "definitions, formulas, properties"
+  },
+  {
+    "subject": "math",
+    "dokLevel": 2,
+    "verb": "classify",
+    "signal": "apply concept",
+    "notes": "sort, organize by property"
+  },
+  {
+    "subject": "math",
+    "dokLevel": 2,
+    "verb": "estimate",
+    "signal": "approximate solution",
+    "notes": "reasonable answer without exact calculation"
+  },
+  {
+    "subject": "math",
+    "dokLevel": 2,
+    "verb": "interpret",
+    "signal": "connect representation",
+    "notes": "tables, graphs, equations"
+  },
+  {
+    "subject": "math",
+    "dokLevel": 2,
+    "verb": "represent",
+    "signal": "convert form",
+    "notes": "express relationship in equations, graphs"
+  },
+  {
+    "subject": "math",
+    "dokLevel": 3,
+    "verb": "differentiate",
+    "signal": "distinguishes between similar concepts",
+    "notes": "Use across subjects when students identify distinctions between related ideas."
+  },
+  {
+    "subject": "math",
+    "dokLevel": 3,
+    "verb": "formulate",
+    "signal": "strategy development",
+    "notes": "develop an equation or plan"
+  },
+  {
+    "subject": "math",
+    "dokLevel": 3,
+    "verb": "generalize",
+    "signal": "non-routine plan",
+    "notes": "apply strategy to new situation"
+  },
+  {
+    "subject": "math",
+    "dokLevel": 3,
+    "verb": "justify",
+    "signal": "multi-step reasoning",
+    "notes": "explain why solution method works"
+  },
+  {
+    "subject": "math",
+    "dokLevel": 3,
+    "verb": "prove",
+    "signal": "logical chain",
+    "notes": "construct informal or formal proof"
+  },
+  {
+    "subject": "math",
+    "dokLevel": 4,
+    "verb": "model",
+    "signal": "extended investigation",
+    "notes": "design and refine representation with constraints"
+  },
+  {
+    "subject": "math",
+    "dokLevel": 4,
+    "verb": "optimize",
+    "signal": "refine solution",
+    "notes": "select best solution given conditions"
+  },
+  {
+    "subject": "math",
+    "dokLevel": 4,
+    "verb": "prove",
+    "signal": "formal argument",
+    "notes": "build logical chain; extended reasoning"
+  },
+  {
+    "subject": "math",
+    "dokLevel": 4,
+    "verb": "synthesize",
+    "signal": "combine strategies",
+    "notes": "integrate multiple approaches"
+  },
+  {
+    "subject": "science",
+    "dokLevel": 1,
+    "verb": "define",
+    "signal": "basic recall",
+    "notes": "terms, symbols, units"
+  },
+  {
+    "subject": "science",
+    "dokLevel": 1,
+    "verb": "label",
+    "signal": "match name/object",
+    "notes": "simple identification"
+  },
+  {
+    "subject": "science",
+    "dokLevel": 1,
+    "verb": "list",
+    "signal": "rote enumeration",
+    "notes": "name steps, parts, facts"
+  },
+  {
+    "subject": "science",
+    "dokLevel": 2,
+    "verb": "classify",
+    "signal": "categorize by property",
+    "notes": "grouping based on criteria"
+  },
+  {
+    "subject": "science",
+    "dokLevel": 2,
+    "verb": "explain",
+    "signal": "show cause/effect",
+    "notes": "describe relationships; simple reasoning"
+  },
+  {
+    "subject": "science",
+    "dokLevel": 2,
+    "verb": "relate",
+    "signal": "connect variables",
+    "notes": "show connection between two concepts"
+  },
+  {
+    "subject": "science",
+    "dokLevel": 2,
+    "verb": "summarize",
+    "signal": "condense process",
+    "notes": "state main points of experiment or system"
+  },
+  {
+    "subject": "science",
+    "dokLevel": 3,
+    "verb": "analyze",
+    "signal": "interpret data",
+    "notes": "spot trends; control for error"
+  },
+  {
+    "subject": "science",
+    "dokLevel": 3,
+    "verb": "construct",
+    "signal": "develop model",
+    "notes": "build explanation or diagram from evidence"
+  },
+  {
+    "subject": "science",
+    "dokLevel": 3,
+    "verb": "design",
+    "signal": "requires planning",
+    "notes": "plan an experiment; multiple variables"
+  },
+  {
+    "subject": "science",
+    "dokLevel": 3,
+    "verb": "justify",
+    "signal": "supports claims with reasoning",
+    "notes": "Use across subjects when students provide evidence-based warrants for conclusions."
+  },
+  {
+    "subject": "science",
+    "dokLevel": 3,
+    "verb": "predict",
+    "signal": "use evidence",
+    "notes": "forecast results based on patterns"
+  },
+  {
+    "subject": "science",
+    "dokLevel": 4,
+    "verb": "design",
+    "signal": "iterative plan",
+    "notes": "refine investigation or engineering solution"
+  },
+  {
+    "subject": "science",
+    "dokLevel": 4,
+    "verb": "evaluate",
+    "signal": "critique design",
+    "notes": "consider validity, reliability, bias"
+  },
+  {
+    "subject": "science",
+    "dokLevel": 4,
+    "verb": "investigate",
+    "signal": "sustained inquiry",
+    "notes": "multi-step, long-term study"
+  },
+  {
+    "subject": "science",
+    "dokLevel": 4,
+    "verb": "model",
+    "signal": "creates representation of system",
+    "notes": "Use across subjects when students build conceptual or physical representations."
+  },
+  {
+    "subject": "science",
+    "dokLevel": 4,
+    "verb": "synthesize",
+    "signal": "integrate across domains",
+    "notes": "combine biology/chemistry/physics concepts"
+  },
+  {
+    "subject": "sel",
+    "dokLevel": 1,
+    "verb": "label",
+    "signal": "names feelings or strengths",
+    "notes": "Use when students identify and categorize their personal qualities or emotions."
+  },
+  {
+    "subject": "sel",
+    "dokLevel": 1,
+    "verb": "recognize",
+    "signal": "identifies emotions or triggers",
+    "notes": "Use when students name their own emotional states or stress responses."
+  },
+  {
+    "subject": "sel",
+    "dokLevel": 2,
+    "verb": "describe",
+    "signal": "explains perspective or context",
+    "notes": "Use when students articulate another person's viewpoint or situation."
+  },
+  {
+    "subject": "sel",
+    "dokLevel": 2,
+    "verb": "monitor",
+    "signal": "tracks progress toward goals",
+    "notes": "Use when students self-check their behavior or emotional state over time."
+  },
+  {
+    "subject": "sel",
+    "dokLevel": 2,
+    "verb": "regulate",
+    "signal": "manages emotional responses deliberately",
+    "notes": "Use when students apply strategies to modulate their emotions or impulses."
+  },
+  {
+    "subject": "sel",
+    "dokLevel": 3,
+    "verb": "advocate",
+    "signal": "speaks up for self or others",
+    "notes": "Use when students assert needs or support others' rights respectfully."
+  },
+  {
+    "subject": "sel",
+    "dokLevel": 3,
+    "verb": "anticipate",
+    "signal": "predicts consequences of choices",
+    "notes": "Use when students think ahead to evaluate potential decision outcomes."
+  },
+  {
+    "subject": "sel",
+    "dokLevel": 3,
+    "verb": "negotiate",
+    "signal": "reaches agreement through dialogue",
+    "notes": "Use when students work through conflict to find mutually acceptable solutions."
+  },
+  {
+    "subject": "sel",
+    "dokLevel": 4,
+    "verb": "design",
+    "signal": "creates systems for self-management",
+    "notes": "Use when students develop personalized structures for emotional regulation."
+  },
+  {
+    "subject": "sel",
+    "dokLevel": 4,
+    "verb": "evaluate",
+    "signal": "judges ethical implications thoughtfully",
+    "notes": "Use when students assess the moral dimensions of decisions or actions."
+  },
+  {
+    "subject": "social_studies",
+    "dokLevel": 1,
+    "verb": "identify",
+    "signal": "match detail",
+    "notes": "basic recognition"
+  },
+  {
+    "subject": "social_studies",
+    "dokLevel": 1,
+    "verb": "list",
+    "signal": "enumerate facts",
+    "notes": "surface-level content knowledge"
+  },
+  {
+    "subject": "social_studies",
+    "dokLevel": 1,
+    "verb": "recall",
+    "signal": "fact retrieval",
+    "notes": "dates, people, places"
+  },
+  {
+    "subject": "social_studies",
+    "dokLevel": 2,
+    "verb": "categorize",
+    "signal": "sort by theme",
+    "notes": "organize evidence/events"
+  },
+  {
+    "subject": "social_studies",
+    "dokLevel": 2,
+    "verb": "compare",
+    "signal": "contrast perspectives",
+    "notes": "find similarities/differences in sources"
+  },
+  {
+    "subject": "social_studies",
+    "dokLevel": 2,
+    "verb": "contextualize",
+    "signal": "places events in historical setting",
+    "notes": "Use when students situate information within its time period or circumstances."
+  },
+  {
+    "subject": "social_studies",
+    "dokLevel": 2,
+    "verb": "explain",
+    "signal": "describe relationships",
+    "notes": "connect cause/effect"
+  },
+  {
+    "subject": "social_studies",
+    "dokLevel": 2,
+    "verb": "summarize",
+    "signal": "condense info",
+    "notes": "main idea from a source"
+  },
+  {
+    "subject": "social_studies",
+    "dokLevel": 2,
+    "verb": "trace",
+    "signal": "follows development over time",
+    "notes": "Use when students track changes or continuities across historical periods."
+  },
+  {
+    "subject": "social_studies",
+    "dokLevel": 3,
+    "verb": "analyze",
+    "signal": "multiple perspectives",
+    "notes": "interpret evidence, context"
+  },
+  {
+    "subject": "social_studies",
+    "dokLevel": 3,
+    "verb": "corroborate",
+    "signal": "confirms claims across sources",
+    "notes": "Use when students verify information by cross-referencing multiple primary sources."
+  },
+  {
+    "subject": "social_studies",
+    "dokLevel": 3,
+    "verb": "critique",
+    "signal": "evaluate source",
+    "notes": "judge reliability, perspective"
+  },
+  {
+    "subject": "social_studies",
+    "dokLevel": 3,
+    "verb": "explain causation",
+    "signal": "reasoned account",
+    "notes": "link multiple causes to event"
+  },
+  {
+    "subject": "social_studies",
+    "dokLevel": 3,
+    "verb": "interpret",
+    "signal": "reason from sources",
+    "notes": "draw conclusions across documents"
+  },
+  {
+    "subject": "social_studies",
+    "dokLevel": 3,
+    "verb": "source",
+    "signal": "evaluates origin and perspective",
+    "notes": "Use when students assess authorship, purpose, and reliability of evidence."
+  },
+  {
+    "subject": "social_studies",
+    "dokLevel": 4,
+    "verb": "argue",
+    "signal": "evidence-based case",
+    "notes": "sustain position using sources"
+  },
+  {
+    "subject": "social_studies",
+    "dokLevel": 4,
+    "verb": "construct",
+    "signal": "builds historical narrative",
+    "notes": "Use when students create evidence-based accounts synthesizing multiple sources."
+  },
+  {
+    "subject": "social_studies",
+    "dokLevel": 4,
+    "verb": "defend",
+    "signal": "supports position with evidence",
+    "notes": "Use when students provide warranted justification for historical arguments."
+  },
+  {
+    "subject": "social_studies",
+    "dokLevel": 4,
+    "verb": "design",
+    "signal": "extended project",
+    "notes": "create model, plan, or presentation"
+  },
+  {
+    "subject": "social_studies",
+    "dokLevel": 4,
+    "verb": "evaluate",
+    "signal": "judgment with evidence",
+    "notes": "assess credibility, impact"
+  },
+  {
+    "subject": "social_studies",
+    "dokLevel": 4,
+    "verb": "synthesize",
+    "signal": "connect across time/themes",
+    "notes": "build overarching narrative"
+  }
+]

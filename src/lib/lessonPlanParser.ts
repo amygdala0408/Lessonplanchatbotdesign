@@ -1,50 +1,100 @@
-import { LessonPlanData, StudentMaterialsData } from '../types';
+import {
+  type LessonPlanData,
+  type StudentMaterialsData,
+  type LessonPhaseId,
+  type DOKLevel,
+  type ChatTurnResult,
+  type Objective,
+  LESSON_PHASE_LABELS,
+  INSTRUCTIONAL_MODELS,
+} from '../types';
 
 /**
  * Cleans up extracted text - removes markdown formatting and validates content
  */
 function cleanExtractedText(text: string | undefined, maxLength: number = 100): string {
   if (!text) return '';
-  
+
   let cleaned = text
-    .replace(/\*\*/g, '')           // Remove bold markers
-    .replace(/\*/g, '')             // Remove italic markers
-    .replace(/`/g, '')              // Remove code markers
-    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1') // Convert links to text
-    .replace(/^#+\s*/g, '')         // Remove heading markers
-    .replace(/\s+/g, ' ')           // Normalize whitespace
+    .replace(/\*\*/g, '')
+    .replace(/\*/g, '')
+    .replace(/`/g, '')
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+    .replace(/^#+\s*/g, '')
+    .replace(/\s+/g, ' ')
     .trim();
-  
-  // Truncate if too long
+
   if (cleaned.length > maxLength) {
     cleaned = cleaned.substring(0, maxLength).trim();
   }
-  
+
   return cleaned;
 }
 
-/**
- * Validates that a field looks like valid content (not garbage)
- */
 function isValidField(text: string | undefined, minLength: number = 2): boolean {
   if (!text) return false;
   const cleaned = cleanExtractedText(text);
-  
-  // Reject if too short, too long, or contains suspicious patterns
   if (cleaned.length < minLength || cleaned.length > 150) return false;
-  if (/^[\*\#\-\•\s]+$/.test(cleaned)) return false; // Only formatting chars
-  if (/^\d+$/.test(cleaned)) return false; // Only numbers
-  if (cleaned.split(' ').length > 20) return false; // Too many words for a field
-  
+  if (/^[\*\#\-\•\s]+$/.test(cleaned)) return false;
+  if (/^\d+$/.test(cleaned)) return false;
+  if (cleaned.split(' ').length > 20) return false;
   return true;
 }
 
 /**
- * Extracts structured lesson plan JSON from Penny's response
- * Looks for JSON between [LESSON_PLAN_JSON] tags or attempts to parse markdown structure
+ * Map a free-text phase label (Penny may write "Set Purpose (10 min)" or "I Do")
+ * to the canonical lesson_phase_manifest id.
+ */
+export function detectLessonPhaseId(label: string): LessonPhaseId | null {
+  const normalized = label.toLowerCase();
+  for (const [phaseId, labels] of Object.entries(LESSON_PHASE_LABELS) as [LessonPhaseId, string[]][]) {
+    if (labels.some((l) => normalized.includes(l.toLowerCase()))) {
+      return phaseId;
+    }
+  }
+  return null;
+}
+
+/**
+ * Extract a DOK level from an objective string. Prefer explicit "DOK 3"
+ * markers, fall back to verb signals from the dok_lexicon spirit (the full
+ * lexicon validation happens in P1).
+ */
+export function extractDOKLevel(text: string): DOKLevel | null {
+  const explicit = text.match(/DOK\s*([1-4])/i);
+  if (explicit) return Number(explicit[1]) as DOKLevel;
+
+  const lower = text.toLowerCase();
+  const dok4 = ['design', 'synthesize', 'integrate', 'argue', 'investigate over time', 'connect across', 'apply across'];
+  const dok3 = ['analyze', 'critique', 'justify', 'evaluate', 'compare', 'contrast', 'formulate', 'trace', 'differentiate', 'explain why'];
+  const dok2 = ['summarize', 'paraphrase', 'classify', 'categorize', 'estimate', 'interpret', 'represent', 'describe'];
+  const dok1 = ['define', 'identify', 'list', 'recall', 'recognize', 'compute'];
+
+  if (dok4.some((k) => lower.includes(k))) return 4;
+  if (dok3.some((k) => lower.includes(k))) return 3;
+  if (dok2.some((k) => lower.includes(k))) return 2;
+  if (dok1.some((k) => lower.includes(k))) return 1;
+  return null;
+}
+
+export function detectInstructionalModel(text: string): typeof INSTRUCTIONAL_MODELS[number] | null {
+  const lower = text.toLowerCase();
+  for (const model of INSTRUCTIONAL_MODELS) {
+    if (lower.includes(model.toLowerCase())) return model;
+  }
+  // Synonyms
+  if (lower.includes('gradual release') || lower.includes('i do, we do, you do')) return 'Explicit Instruction';
+  if (lower.includes('inquiry')) return '5E Inquiry';
+  if (lower.includes('jigsaw') || lower.includes('group roles')) return 'Cooperative Learning';
+  if (lower.includes('seminar') || lower.includes('socratic')) return 'Socratic Seminar';
+  return null;
+}
+
+/**
+ * Extracts structured lesson plan JSON from Penny's response.
+ * Looks for JSON between [LESSON_PLAN_JSON] tags or attempts to parse markdown structure.
  */
 export function extractLessonPlanFromResponse(response: string): Partial<LessonPlanData> | null {
-  // First, try to find explicit JSON tags
   const jsonMatch = response.match(/\[LESSON_PLAN_JSON\]([\s\S]*?)\[\/LESSON_PLAN_JSON\]/);
   if (jsonMatch) {
     try {
@@ -55,7 +105,6 @@ export function extractLessonPlanFromResponse(response: string): Partial<LessonP
     }
   }
 
-  // Try to find JSON code block
   const codeBlockMatch = response.match(/```json\s*([\s\S]*?)```/);
   if (codeBlockMatch) {
     try {
@@ -66,7 +115,6 @@ export function extractLessonPlanFromResponse(response: string): Partial<LessonP
     }
   }
 
-  // Fallback: Try to extract structured data from markdown
   return extractFromMarkdown(response);
 }
 
@@ -76,7 +124,6 @@ export function extractLessonPlanFromResponse(response: string): Partial<LessonP
 function normalizeLessonPlanData(data: Record<string, unknown>): Partial<LessonPlanData> {
   const normalized: Partial<LessonPlanData> = {};
 
-  // Map common field variations
   if (data.title) normalized.title = String(data.title);
   if (data.gradeLevel || data.grade_level || data.grade) {
     normalized.gradeLevel = String(data.gradeLevel || data.grade_level || data.grade);
@@ -89,140 +136,169 @@ function normalizeLessonPlanData(data: Record<string, unknown>): Partial<LessonP
     normalized.standard = String(data.standard || data.standards);
   }
 
-  // Objectives
-  if (Array.isArray(data.objectives)) {
-    normalized.objectives = data.objectives.map(String);
-  } else if (data.objective) {
-    normalized.objectives = [String(data.objective)];
-  } else if (data.learningObjective || data.learning_objective) {
-    const obj = data.learningObjective || data.learning_objective;
-    if (typeof obj === 'string') {
-      normalized.objectives = [obj];
-    } else if (typeof obj === 'object' && obj !== null) {
-      const objData = obj as Record<string, unknown>;
-      normalized.objectives = [String(objData.text || objData.objective || obj)];
-    }
+  // Objectives — capture DOK if present, otherwise infer.
+  const rawObjectives = Array.isArray(data.objectives)
+    ? data.objectives
+    : data.objective
+      ? [data.objective]
+      : data.learningObjective || data.learning_objective
+        ? [data.learningObjective || data.learning_objective]
+        : [];
+
+  if (rawObjectives.length > 0) {
+    normalized.objectives = rawObjectives.map((obj: unknown): string | Objective => {
+      if (typeof obj === 'string') {
+        const dok = extractDOKLevel(obj);
+        return dok ? { text: obj, dok } : obj;
+      }
+      if (typeof obj === 'object' && obj !== null) {
+        const o = obj as Record<string, unknown>;
+        const text = String(o.text || o.objective || o.statement || obj);
+        const dok = (o.dok || o.DOK || o.dok_level) as DOKLevel | undefined;
+        return {
+          text,
+          dok: (dok ?? extractDOKLevel(text) ?? 2) as DOKLevel,
+          verb: o.verb ? String(o.verb) : undefined,
+          isExtension: Boolean(o.isExtension || o.is_extension || o.extension),
+        };
+      }
+      return String(obj);
+    });
   }
 
-  // Materials
   if (Array.isArray(data.materials)) {
     normalized.materials = data.materials.map(String);
   }
 
-  // Procedure/Phases
+  // Procedure: detect canonical phase id from label.
   if (Array.isArray(data.procedure)) {
     normalized.procedure = data.procedure.map((step: unknown) => {
       if (typeof step === 'string') {
-        return { step: step, description: '' };
+        return { step, description: '', phase: detectLessonPhaseId(step) ?? undefined };
       }
-      const stepData = step as Record<string, unknown>;
+      const s = step as Record<string, unknown>;
+      const label = String(s.step || s.name || s.phase || '');
+      const phase = (s.phase && typeof s.phase === 'string'
+        ? detectLessonPhaseId(s.phase)
+        : null) ?? detectLessonPhaseId(label);
       return {
-        step: String(stepData.step || stepData.name || stepData.phase || ''),
-        description: String(stepData.description || stepData.content || stepData.details || ''),
-        accommodations: stepData.accommodations ? String(stepData.accommodations) : undefined,
+        step: label,
+        description: String(s.description || s.content || s.details || ''),
+        accommodations: s.accommodations ? String(s.accommodations) : undefined,
+        scaffoldIds: Array.isArray(s.scaffoldIds) ? s.scaffoldIds.map(String) : undefined,
+        accommodationIds: Array.isArray(s.accommodationIds) ? s.accommodationIds.map(String) : undefined,
+        durationMin: typeof s.durationMin === 'number' ? s.durationMin : undefined,
+        durationMax: typeof s.durationMax === 'number' ? s.durationMax : undefined,
+        phase: phase ?? undefined,
       };
     });
   } else if (Array.isArray(data.phases)) {
     normalized.procedure = (data.phases as unknown[]).map((phase: unknown) => {
-      const phaseData = phase as Record<string, unknown>;
+      const p = phase as Record<string, unknown>;
+      const label = String(p.name || p.phase || p.step || '');
       return {
-        step: String(phaseData.name || phaseData.phase || phaseData.step || ''),
-        description: String(phaseData.teacherMove || phaseData.description || '') + 
-                    (phaseData.studentMove ? `\n\nStudent: ${phaseData.studentMove}` : ''),
-        accommodations: phaseData.accommodations ? JSON.stringify(phaseData.accommodations) : undefined,
+        step: label,
+        description: String(p.teacherMove || p.description || '')
+          + (p.studentMove ? `\n\nStudent: ${p.studentMove}` : ''),
+        accommodations: p.accommodations ? JSON.stringify(p.accommodations) : undefined,
+        phase: detectLessonPhaseId(label) ?? undefined,
       };
     });
   }
 
-  // Assessment
-  if (data.assessment) {
-    normalized.assessment = String(data.assessment);
-  }
+  if (data.assessment) normalized.assessment = String(data.assessment);
 
-  // Success Criteria
   const successCriteriaData = data.successCriteria || data.success_criteria;
   if (Array.isArray(successCriteriaData)) {
     normalized.successCriteria = successCriteriaData.map((s: unknown) => String(s));
   }
 
-  // Supports
   if (data.supports && typeof data.supports === 'object') {
-    const supportsData = data.supports as Record<string, unknown>;
-    const allSupports = supportsData.all;
-    const elSupports = supportsData.el || supportsData.EL;
-    const iepSupports = supportsData.iep504 || supportsData['IEP/504'] || supportsData.iep;
-    
+    const s = data.supports as Record<string, unknown>;
+    const all = s.all;
+    const el = s.el || s.EL;
+    const iep = s.iep504 || s['IEP/504'] || s.iep;
     normalized.supports = {
-      all: Array.isArray(allSupports) ? allSupports.map((s: unknown) => String(s)) : [],
-      el: Array.isArray(elSupports) ? elSupports.map((s: unknown) => String(s)) : [],
-      iep504: Array.isArray(iepSupports) ? iepSupports.map((s: unknown) => String(s)) : [],
+      all: Array.isArray(all) ? all.map(String) : [],
+      el: Array.isArray(el) ? el.map(String) : [],
+      iep504: Array.isArray(iep) ? iep.map(String) : [],
     };
   }
 
-  // Equity Notes
   if (data.equityNotes || data.equity_notes || data.equity) {
-    const equity = data.equityNotes || data.equity_notes || data.equity;
-    if (typeof equity === 'string') {
-      normalized.equityNotes = equity;
-    } else if (typeof equity === 'object') {
-      normalized.equityNotes = JSON.stringify(equity);
-    }
+    const e = data.equityNotes || data.equity_notes || data.equity;
+    normalized.equityNotes = typeof e === 'string' ? e : JSON.stringify(e);
   }
 
-  // Exit Slip
   if (data.exitSlip || data.exit_slip || data.exitTicket) {
-    const exitSlip = data.exitSlip || data.exit_slip || data.exitTicket;
-    if (typeof exitSlip === 'string') {
-      normalized.exitSlip = exitSlip;
-    } else if (typeof exitSlip === 'object' && exitSlip !== null) {
-      const exitData = exitSlip as Record<string, unknown>;
-      normalized.exitSlip = String(exitData.prompt || exitData.question || exitSlip);
+    const e = data.exitSlip || data.exit_slip || data.exitTicket;
+    if (typeof e === 'string') normalized.exitSlip = e;
+    else if (typeof e === 'object' && e !== null) {
+      const ed = e as Record<string, unknown>;
+      normalized.exitSlip = String(ed.prompt || ed.question || e);
     }
   }
 
-  // Rubric
   if (Array.isArray(data.rubric)) {
     normalized.rubric = (data.rubric as unknown[]).map((item: unknown) => {
-      const itemData = item as Record<string, unknown>;
+      const i = item as Record<string, unknown>;
+      const score = Number(i.score || 0);
       return {
-        score: Number(itemData.score || 0),
-        description: String(itemData.description || itemData.criteria || ''),
+        score: (score >= 0 && score <= 3 ? score : 0) as 0 | 1 | 2 | 3,
+        description: String(i.description || i.criteria || ''),
       };
     });
   }
 
-  // Teacher Modifications
   const teacherMods = data.teacherModifications || data.teacher_modifications || data.modifications;
   if (Array.isArray(teacherMods)) {
     normalized.teacherModifications = teacherMods.map((m: unknown) => String(m));
   }
 
-  // Text Options
   const textOpts = data.textOptions || data.text_options || data.texts;
   if (Array.isArray(textOpts)) {
     normalized.textOptions = textOpts.map((text: unknown) => {
-      const textData = text as Record<string, unknown>;
+      const t = text as Record<string, unknown>;
       return {
-        title: String(textData.title || ''),
-        source: String(textData.source || ''),
-        lexile: String(textData.lexile || textData.level || ''),
-        url: String(textData.url || textData.link || ''),
-        rationale: String(textData.rationale || ''),
-        selected: Boolean(textData.selected),
+        title: String(t.title || ''),
+        source: String(t.source || ''),
+        lexile: String(t.lexile || t.level || ''),
+        url: String(t.url || t.link || ''),
+        rationale: String(t.rationale || ''),
+        selected: Boolean(t.selected),
+        resourceId: t.resourceId ? String(t.resourceId) : undefined,
+        representationTags: Array.isArray(t.representationTags) ? t.representationTags.map(String) : undefined,
       };
     });
+  }
+
+  if (data.instructionalModel || data.instructional_model || data.model) {
+    const m = String(data.instructionalModel || data.instructional_model || data.model);
+    const matched = INSTRUCTIONAL_MODELS.find(
+      (im) => im.toLowerCase() === m.toLowerCase(),
+    );
+    if (matched) normalized.instructionalModel = matched;
+  }
+
+  if (Array.isArray(data.resourceIds)) normalized.resourceIds = data.resourceIds.map(String);
+  if (data.exitSlipId) normalized.exitSlipId = String(data.exitSlipId);
+  if (data.openerId) normalized.openerId = String(data.openerId);
+  if (Array.isArray(data.misconceptionIds)) normalized.misconceptionIds = data.misconceptionIds.map(String);
+  if (Array.isArray(data.evidenceCitationKeys)) {
+    normalized.evidenceCitationKeys = data.evidenceCitationKeys.map(String);
   }
 
   return normalized;
 }
 
 /**
- * Attempts to extract lesson plan data from markdown-formatted response
+ * Attempts to extract lesson plan data from markdown-formatted response.
+ * Same heuristics as before; left intact so demos keep working when Penny
+ * forgets to emit the JSON block.
  */
 function extractFromMarkdown(response: string): Partial<LessonPlanData> | null {
   const result: Partial<LessonPlanData> = {};
-  
-  // Extract title - multiple patterns
+
   const titlePatterns = [
     /^#\s+(.+)$/m,
     /\*\*Title[:\s]*\*\*\s*(.+)/i,
@@ -239,7 +315,6 @@ function extractFromMarkdown(response: string): Partial<LessonPlanData> | null {
     }
   }
 
-  // Extract grade level - multiple patterns
   const gradePatterns = [
     /(?:Grade\s*Level|Grade)[:\s]*(\d+(?:th|st|nd|rd)?(?:\s*-\s*\d+(?:th|st|nd|rd)?)?)/i,
     /(\d+(?:th|st|nd|rd)\s+Grade)/i,
@@ -256,15 +331,13 @@ function extractFromMarkdown(response: string): Partial<LessonPlanData> | null {
     }
   }
 
-  // Extract subject - look for known subjects
-  const knownSubjects = ['ELA', 'English Language Arts', 'English', 'Math', 'Mathematics', 'Science', 'Biology', 'Chemistry', 'Physics', 'History', 'Social Studies', 'Geography', 'Government', 'Economics', 'Art', 'Music', 'PE', 'Health'];
+  const knownSubjects = ['ELA', 'English Language Arts', 'English', 'Math', 'Mathematics', 'Science', 'Biology', 'Chemistry', 'Physics', 'History', 'Social Studies', 'Geography', 'Government', 'Economics', 'Art', 'Music', 'PE', 'Health', 'SEL'];
   for (const subj of knownSubjects) {
     if (response.toLowerCase().includes(subj.toLowerCase())) {
       result.subject = subj;
       break;
     }
   }
-  // Fallback to pattern matching if no known subject found
   if (!result.subject) {
     const subjectMatch = response.match(/(?:Subject|Content\s+Area|Course)[:\s]*([A-Za-z\s]+?)(?:\n|,|\|)/i);
     if (subjectMatch && subjectMatch[1]) {
@@ -275,7 +348,6 @@ function extractFromMarkdown(response: string): Partial<LessonPlanData> | null {
     }
   }
 
-  // Extract duration - look for time patterns
   const durationPatterns = [
     /(\d+[-–]\d+\s*(?:minutes?|mins?))/i,
     /(\d+\s*(?:minutes?|mins?|hours?|hrs?))/i,
@@ -293,7 +365,6 @@ function extractFromMarkdown(response: string): Partial<LessonPlanData> | null {
     }
   }
 
-  // Extract standard
   const standardPatterns = [
     /(?:Standard|CCSS|NGSS)[:\s]*([^\n]+)/i,
     /(CCSS\.[A-Z\-\.0-9]+)/i,
@@ -306,29 +377,29 @@ function extractFromMarkdown(response: string): Partial<LessonPlanData> | null {
     }
   }
 
-  // Extract objectives - more flexible patterns
   const objectivePatterns = [
     /(?:Learning\s+)?Objectives?[:\s]*\n((?:[-•*\d.]\s*.+\n?)+)/i,
     /(?:Learning\s+)?Objectives?[:\s]*\n?((?:\*\*.+\*\*\n?)+)/i,
     /Students?\s+will\s+(?:be\s+able\s+to\s+)?(.+?)(?:\n|$)/gi,
     /SWBAT\s+(.+?)(?:\n|$)/gi,
   ];
-  
   for (const pattern of objectivePatterns) {
     const match = response.match(pattern);
     if (match && match[1]) {
       const objectives = match[1]
         .split('\n')
-        .map(line => line.replace(/^[-•*\d.]\s*/, '').replace(/\*\*/g, '').trim())
-        .filter(line => line.length > 10);
+        .map((line) => line.replace(/^[-•*\d.]\s*/, '').replace(/\*\*/g, '').trim())
+        .filter((line) => line.length > 10);
       if (objectives.length > 0) {
-        result.objectives = objectives;
+        result.objectives = objectives.map((o) => {
+          const dok = extractDOKLevel(o);
+          return dok ? { text: o, dok } : o;
+        });
         break;
       }
     }
   }
 
-  // Extract materials
   const materialsPatterns = [
     /Materials?[:\s]*\n((?:[-•*\d.]\s*.+\n?)+)/i,
     /(?:You(?:'ll)?\s+need|Required)[:\s]*\n((?:[-•*\d.]\s*.+\n?)+)/i,
@@ -338,16 +409,14 @@ function extractFromMarkdown(response: string): Partial<LessonPlanData> | null {
     if (match && match[1]) {
       result.materials = match[1]
         .split('\n')
-        .map(line => line.replace(/^[-•*\d.]\s*/, '').trim())
+        .map((line) => line.replace(/^[-•*\d.]\s*/, '').trim())
         .filter(Boolean);
       break;
     }
   }
 
-  // Extract procedure/phases
   const phaseNames = ['Set Purpose', 'Modeling', 'Guided Practice', 'Independent Practice', 'Closure'];
-  const procedure: { step: string; description: string }[] = [];
-  
+  const procedure: { step: string; description: string; phase?: LessonPhaseId }[] = [];
   for (const phase of phaseNames) {
     const phasePattern = new RegExp(`(?:\\*\\*)?${phase}(?:\\*\\*)?[:\\s]*(?:\\(\\d+\\s*min(?:utes?)?\\))?[:\\s]*([^]*?)(?=(?:\\*\\*)?(?:${phaseNames.join('|')})|$)`, 'i');
     const match = response.match(phasePattern);
@@ -355,15 +424,12 @@ function extractFromMarkdown(response: string): Partial<LessonPlanData> | null {
       procedure.push({
         step: phase,
         description: match[1].trim().substring(0, 1000),
+        phase: detectLessonPhaseId(phase) ?? undefined,
       });
     }
   }
-  
-  if (procedure.length > 0) {
-    result.procedure = procedure;
-  }
+  if (procedure.length > 0) result.procedure = procedure;
 
-  // Extract assessment
   const assessmentPatterns = [
     /Assessment[:\s]*\n?([^]*?)(?=\n(?:##|\*\*(?:Exit|Rubric|Support)))/i,
     /Assessment[:\s]*([^\n]+)/i,
@@ -376,13 +442,11 @@ function extractFromMarkdown(response: string): Partial<LessonPlanData> | null {
     }
   }
 
-  // Extract exit slip
   const exitSlipMatch = response.match(/Exit\s+Slip[:\s]*\n?([^]*?)(?=\n(?:##|\*\*Rubric))/i);
   if (exitSlipMatch && exitSlipMatch[1]) {
     result.exitSlip = exitSlipMatch[1].trim().substring(0, 300);
   }
 
-  // Return if we found at least a title or objectives (more lenient)
   if (result.title || (result.objectives && result.objectives.length > 0) || result.procedure) {
     return result;
   }
@@ -401,14 +465,13 @@ export function extractStudentMaterials(response: string): Partial<StudentMateri
     sentenceFrames: [],
   };
 
-  // Look for sentence frames/stems
   const sentenceFrameMatches = response.matchAll(/(?:Sentence (?:Frame|Stem|Starter)s?)[:\s]*\n((?:[-•*]\s*.+\n?)+)/gi);
   for (const match of sentenceFrameMatches) {
     const frames = match[1]
       .split('\n')
-      .map(line => line.replace(/^[-•*]\s*/, '').trim())
+      .map((line) => line.replace(/^[-•*]\s*/, '').trim())
       .filter(Boolean);
-    
+
     if (frames.length > 0) {
       materials.sentenceFrames!.push({
         purpose: 'General support',
@@ -418,7 +481,6 @@ export function extractStudentMaterials(response: string): Partial<StudentMateri
     }
   }
 
-  // Look for reading passages/texts
   const textMatches = response.matchAll(/(?:Text|Reading)[:\s]*\[([^\]]+)\]\(([^)]+)\)/gi);
   for (const match of textMatches) {
     materials.readingPassages!.push({
@@ -429,12 +491,11 @@ export function extractStudentMaterials(response: string): Partial<StudentMateri
     });
   }
 
-  // Only return if we found materials
   if (
-    materials.sentenceFrames!.length > 0 ||
-    materials.readingPassages!.length > 0 ||
-    materials.worksheets!.length > 0 ||
-    materials.graphicOrganizers!.length > 0
+    materials.sentenceFrames!.length > 0
+    || materials.readingPassages!.length > 0
+    || materials.worksheets!.length > 0
+    || materials.graphicOrganizers!.length > 0
   ) {
     return materials;
   }
@@ -443,8 +504,7 @@ export function extractStudentMaterials(response: string): Partial<StudentMateri
 }
 
 /**
- * Detects if Penny's response contains a draft lesson plan
- * Used to determine when to show the Finalize button
+ * Detects if Penny's response contains a draft lesson plan.
  */
 export function containsLessonPlanDraft(response: string): boolean {
   const draftIndicators = [
@@ -457,32 +517,54 @@ export function containsLessonPlanDraft(response: string): boolean {
     /success\s+criteria/i,
     /DOK\s+[234]/i,
   ];
-  
-  return draftIndicators.filter(pattern => pattern.test(response)).length >= 3;
+  return draftIndicators.filter((pattern) => pattern.test(response)).length >= 3;
 }
 
 /**
- * Checks if Penny is presenting text options and waiting for selection
+ * Returns true when Penny is presenting 3 text options and waiting for the
+ * teacher to choose one. Tightened from the original heuristic to require
+ * three numbered options + an interrogative ("which would you like").
  */
 export function isWaitingForTextSelection(response: string): boolean {
-  const textSelectionIndicators = [
-    /option\s+[123]/i,
+  // Look for three distinct option markers (Option 1/2/3 or 📚 markers).
+  const optionMatches = response.match(/(?:option\s*[1-3]|📚\s*\*?\*?option\s*[1-3])/gi) ?? [];
+  const distinctOptions = new Set(optionMatches.map((m) => m.match(/[1-3]/)?.[0])).size;
+  if (distinctOptions < 3) return false;
+
+  // Must be asking the teacher to choose.
+  const askingPatterns = [
     /which\s+text\s+would\s+you/i,
-    /choose\s+your\s+text/i,
-    /select.*text/i,
-    /📚.*option/i,
-    /text\s+selection/i,
+    /which\s+(?:option\s+)?would\s+you\s+(?:like|prefer|choose)/i,
+    /choose\s+(?:your|a|one)\s+text/i,
+    /pick\s+(?:your|a|one)/i,
+    /shall\s+I\s+build\s+the\s+lesson/i,
+    /let\s+me\s+know\s+which/i,
   ];
-  
-  const waitingIndicators = [
-    /which.*would\s+you\s+(like|prefer)/i,
-    /let\s+me\s+know/i,
-    /what.*choice/i,
-  ];
-  
-  const hasTextOptions = textSelectionIndicators.filter(p => p.test(response)).length >= 2;
-  const isAsking = waitingIndicators.some(p => p.test(response));
-  const hasFullLesson = containsLessonPlanDraft(response);
-  
-  return hasTextOptions && isAsking && !hasFullLesson;
+  const isAsking = askingPatterns.some((p) => p.test(response));
+  if (!isAsking) return false;
+
+  // If a full lesson plan JSON is already in the response, we're past selection.
+  if (/\[LESSON_PLAN_JSON\]/i.test(response)) return false;
+
+  return true;
+}
+
+/**
+ * Single entry point used by app/page.tsx#handleSendMessage. Returns a typed
+ * envelope describing what we extracted plus signals the phase machine needs.
+ */
+export function parseTurn(rawResponse: string): ChatTurnResult {
+  const extractedPlan = extractLessonPlanFromResponse(rawResponse);
+  const hasJsonBlock = /\[LESSON_PLAN_JSON\]/i.test(rawResponse) || /```json/i.test(rawResponse);
+
+  return {
+    ok: true,
+    plan: extractedPlan ?? undefined,
+    rawResponse,
+    signals: {
+      isWaitingForTextSelection: isWaitingForTextSelection(rawResponse),
+      containsLessonPlanDraft: containsLessonPlanDraft(rawResponse),
+      hasJsonBlock,
+    },
+  };
 }

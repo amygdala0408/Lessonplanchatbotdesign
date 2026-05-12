@@ -1,0 +1,970 @@
+[
+  {
+    "id": "ela.inference.1",
+    "subject": "ela",
+    "standardKeyword": "inference",
+    "misconception": "Students think inference means guessing without evidence.",
+    "probe": "What is the character feeling? Use one clue from the text to support your answer.",
+    "exemplarRationale": "Inference is not random guessing; it’s drawing a conclusion supported by text evidence. Students must link feelings to textual clues."
+  },
+  {
+    "id": "ela.argument.2",
+    "subject": "ela",
+    "standardKeyword": "argument",
+    "misconception": "Students believe an opinion alone is sufficient for an argument.",
+    "probe": "Why is it not enough to just state your opinion in an argumentative essay?",
+    "exemplarRationale": "Arguments require claims backed by reasoning and evidence. Opinion without support lacks persuasiveness and rigor."
+  },
+  {
+    "id": "math.fractions.3",
+    "subject": "math",
+    "standardKeyword": "fractions",
+    "misconception": "Students think that multiplying fractions makes numbers larger.",
+    "probe": "What is 1/2 × 1/3? Explain why the product is smaller than both factors.",
+    "exemplarRationale": "Multiplying fractions finds a part of a part, which produces a smaller number unless one factor >1. Clarifying this helps students reason about size."
+  },
+  {
+    "id": "math.linear_equations.4",
+    "subject": "math",
+    "standardKeyword": "linear_equations",
+    "misconception": "Students treat slope as just the y-intercept.",
+    "probe": "If slope = 2 and y-intercept = 3, what is the equation of the line?",
+    "exemplarRationale": "Students must distinguish slope (rate of change) from y-intercept (starting value). Confusion leads to incorrect equations."
+  },
+  {
+    "id": "science.photosynthesis.5",
+    "subject": "science",
+    "standardKeyword": "photosynthesis",
+    "misconception": "Students think plants get their food directly from soil.",
+    "probe": "Where does the glucose in plants come from?",
+    "exemplarRationale": "Glucose is produced in leaves from photosynthesis using sunlight, CO₂, and water. Soil provides nutrients but not food energy."
+  },
+  {
+    "id": "science.forces.6",
+    "subject": "science",
+    "standardKeyword": "forces",
+    "misconception": "Students confuse mass with weight.",
+    "probe": "If you travel to the moon, what happens to your weight and what happens to your mass?",
+    "exemplarRationale": "Mass is constant; weight depends on gravity. Students often interchange them, but distinguishing clarifies physics principles."
+  },
+  {
+    "id": "social_studies.cause_effect.7",
+    "subject": "social_studies",
+    "standardKeyword": "cause_effect",
+    "misconception": "Students believe historical events have one single cause.",
+    "probe": "What were two different causes of the Civil War?",
+    "exemplarRationale": "Events are multi-causal; teaching students to see economic, political, and social factors deepens historical reasoning."
+  },
+  {
+    "id": "social_studies.primary_sources.8",
+    "subject": "social_studies",
+    "standardKeyword": "primary_sources",
+    "misconception": "Students think primary sources are always reliable.",
+    "probe": "Why might two primary sources about the same event give different perspectives?",
+    "exemplarRationale": "Primary sources reflect perspective and bias. Reliability must be evaluated by corroboration, not assumed."
+  },
+  {
+    "id": "sel.self_management.9",
+    "subject": "sel",
+    "standardKeyword": "self_management",
+    "misconception": "Students confuse self-management with ignoring emotions.",
+    "probe": "If you feel angry during group work, what’s a healthy way to manage it?",
+    "exemplarRationale": "Self-management means regulating and expressing emotions constructively, not suppressing or ignoring them."
+  },
+  {
+    "id": "social_studies.cause_effect.10",
+    "subject": "social_studies",
+    "standardKeyword": "cause_effect",
+    "misconception": "Students believe historical events have one main cause rather than multiple interacting factors",
+    "probe": "Which factor caused World War I: (a) Assassination of Archduke Franz Ferdinand, (b) System of alliances, (c) Imperialism, or (d) All of these together? Explain your choice.",
+    "exemplarRationale": "Historical events result from multiple interacting causes across economic, political, social, and cultural dimensions. Students develop monocausal thinking because personal/intentional explanations are cognitively easier than abstract structural analysis, and textbooks often present causes as simple lists. Addressing this requires explicit teaching of causal classification frameworks and mapping tools showing how causes interact."
+  },
+  {
+    "id": "social_studies.cause_effect.11",
+    "subject": "social_studies",
+    "standardKeyword": "cause_effect",
+    "misconception": "Students think causes happen in a chain—first one thing, then another—rather than simultaneously influencing each other",
+    "probe": "Create a diagram showing how nationalism, imperialism, and militarism influenced the outbreak of WWI. Can causes influence each other at the same time?",
+    "exemplarRationale": "Historical causation is often non-linear with multiple factors operating simultaneously and influencing each other through feedback loops. Students develop linear thinking because narrative textbook structure suggests chronological causation, and it's cognitively demanding to understand simultaneous abstract processes. Use bidirectional causal maps and explicit modeling to show reciprocal relationships."
+  },
+  {
+    "id": "social_studies.cause_effect.12",
+    "subject": "social_studies",
+    "standardKeyword": "cause_effect",
+    "misconception": "Students think the event that started something was the most important cause",
+    "probe": "The assassination of Archduke Franz Ferdinand triggered World War I. Does this mean it was the most important cause? Why or why not?",
+    "exemplarRationale": "Triggers start processes but underlying preconditions determine whether triggers have effect—a match only causes fire if conditions are dry. Students confuse triggers with most important causes because triggers are more visible and dramatic, and recent events are more memorable. Teaching the match/forest fire analogy and Chapman's framework (triggers vs. catalysts vs. preconditions) addresses this."
+  },
+  {
+    "id": "social_studies.cause_effect.13",
+    "subject": "social_studies",
+    "standardKeyword": "cause_effect",
+    "misconception": "Students think all causes of an event are equally important",
+    "probe": "You listed five causes of the Civil War. Are they all equally important? How would you decide which matters most?",
+    "exemplarRationale": "Causes differ in scope, duration, directness, and counterfactual weight—some are more significant than others based on evaluable criteria. Students view causes as undifferentiated because they lack criteria for assessing significance and fear being 'wrong' about importance. Diamond ranking activities and explicit significance criteria (scope, duration, counterfactual reasoning) build evaluative skills."
+  },
+  {
+    "id": "social_studies.cause_effect.14",
+    "subject": "social_studies",
+    "standardKeyword": "cause_effect",
+    "misconception": "Students explain history mainly through what leaders and famous people wanted and did",
+    "probe": "Why did Hitler come to power? Is it mainly because he was a persuasive speaker, or were there other factors?",
+    "exemplarRationale": "Historical outcomes result from individual agency embedded within structural conditions (economic, political, social) that limit, motivate, and guide action. Students overemphasize personal factors because individuals are easier to understand than abstract systems, and textbooks focus on leaders. Agent-structure linkage strategies and role-play with constraint cards help students connect personal action to structural context."
+  },
+  {
+    "id": "social_studies.cause_effect.15",
+    "subject": "social_studies",
+    "standardKeyword": "cause_effect",
+    "misconception": "Students think historical events were bound to happen the way they did",
+    "probe": "After learning about causes of WWI, do you think the war was inevitable, or could it have been prevented? What evidence supports your view?",
+    "exemplarRationale": "History involves contingency—different choices at key decision points could have led to different outcomes. Students accept inevitability due to hindsight bias (knowing the outcome makes it seem predetermined) and textbook narratives presenting linear progress. Counterfactual reasoning exercises and decision-point analysis help students see alternative pathways."
+  },
+  {
+    "id": "social_studies.cause_effect.16",
+    "subject": "social_studies",
+    "standardKeyword": "cause_effect",
+    "misconception": "Students cannot distinguish between causes that built up over decades versus months versus days",
+    "probe": "Sort these causes of the American Revolution into long-term (decades before), medium-term (years before), short-term (months before), and trigger (immediate): Enlightenment ideas, Stamp Act, Boston Tea Party, British debt from French-Indian War.",
+    "exemplarRationale": "Historical causes operate across different time scales—long-term conditions, medium-term developments, short-term pressures, and immediate triggers—each playing distinct roles. Students struggle because textbooks present all causes in the same section without temporal differentiation. Layered timelines with color-coding for different temporal dimensions build this understanding."
+  },
+  {
+    "id": "social_studies.historical_thinking.17",
+    "subject": "social_studies",
+    "standardKeyword": "historical_thinking",
+    "misconception": "Students judge people from the past as bad or stupid for not thinking like we do today",
+    "probe": "When studying the founding fathers who owned slaves, some students say 'They were evil racists.' Others say 'We can't judge them by today's standards.' How should historians approach this?",
+    "exemplarRationale": "Historical understanding requires analyzing actions within their temporal, spatial, and social context before making moral judgments from an informed position. Students apply presentist judgment because modern context feels invisible while past context seems 'backwards,' and it's cognitively easier to apply familiar moral frameworks. Two-step instruction (understand context THEN evaluate) addresses this."
+  },
+  {
+    "id": "social_studies.historical_thinking.18",
+    "subject": "social_studies",
+    "standardKeyword": "historical_thinking",
+    "misconception": "Students think people in the past were less intelligent or rational than we are today",
+    "probe": "Some students say medieval people believed in trial by ordeal because they were stupid or superstitious. Do you agree? What other explanations might there be?",
+    "exemplarRationale": "Past practices made sense within their worldview and available knowledge—people were not less intelligent but operated with different information and beliefs. Students develop this 'deficit thinking' because textbooks create bleak pictures of the past and technological progress gets conflated with moral/intellectual progress. Providing context that makes past practices coherent within their worldview addresses this."
+  },
+  {
+    "id": "social_studies.source_analysis.19",
+    "subject": "social_studies",
+    "standardKeyword": "source_analysis",
+    "misconception": "Students think all historical sources are basically the same kind of evidence",
+    "probe": "Which would be more useful for understanding the Battle of Gettysburg: a soldier's letter during the battle, a 2020 textbook, or a photograph from the battle? Explain why your answer might depend on what question you're asking.",
+    "exemplarRationale": "Different source types (primary vs. secondary; documents vs. artifacts vs. images) serve different purposes and answer different historical questions. Students lack schema for source classification because textbooks present all sources similarly without explicit instruction on source types. Regular use of document analysis protocols (observe, reflect, question) builds source literacy habits."
+  },
+  {
+    "id": "social_studies.source_analysis.20",
+    "subject": "social_studies",
+    "standardKeyword": "source_analysis",
+    "misconception": "Students think primary sources automatically tell the truth because they're first-hand accounts",
+    "probe": "A Confederate general wrote in his diary that slavery was 'beneficial to negroes.' Is this a reliable source about enslaved people's experiences? Why or why not?",
+    "exemplarRationale": "Primary sources reflect their creator's perspective, purpose, and audience—first-hand does not mean truthful or complete. Students misunderstand 'first-hand' as 'truthful' without exposure to source criticism concepts. Explicit sourcing routines (Who created it? When? Why? For whom?) and cognitive modeling of expert source analysis address this."
+  },
+  {
+    "id": "social_studies.source_analysis.21",
+    "subject": "social_studies",
+    "standardKeyword": "source_analysis",
+    "misconception": "Students read sources to find facts rather than questioning and interrogating them as evidence",
+    "probe": "You read two accounts of the Boston Massacre—one by a British soldier, one by a colonist. They disagree about what happened. How do you figure out what really happened?",
+    "exemplarRationale": "Sources are evidence requiring critical interrogation through corroboration, sourcing, and contextualization—not transparent windows to truth. Students treat sources as information containers because textbook reading habits assume text tells truth, and they lack exposure to conflicting accounts. Providing multiple conflicting sources and teaching explicit corroboration strategies develops critical interrogation skills."
+  },
+  {
+    "id": "social_studies.source_analysis.22",
+    "subject": "social_studies",
+    "standardKeyword": "source_analysis",
+    "misconception": "Students note when a source was created but don't think about how that time period influenced what was written",
+    "probe": "This play about abolitionist John Brown was written in 1936. What was happening in 1936 that might influence how the authors portrayed Brown?",
+    "exemplarRationale": "Contextualization requires connecting documents to their historical moment—understanding how contemporary events, values, and concerns shaped the source. Students note dates but don't consider significance because contextualization is cognitively demanding and requires substantive knowledge of the period. Scaffolded steps (What's the date? What else was happening? How might that influence this?) build the skill."
+  },
+  {
+    "id": "social_studies.source_analysis.23",
+    "subject": "social_studies",
+    "standardKeyword": "source_analysis",
+    "misconception": "Students think a biased source is useless and should be ignored",
+    "probe": "This source shows bias. Does that mean we should ignore it? Why or why not?",
+    "exemplarRationale": "All sources have perspective (inevitable viewpoint based on position) while bias (problematic distortion) requires identification but doesn't make sources invalid. Students conflate perspective with bias because simplified instruction ('identify bias') lacks nuance, and textbooks are presented as objective while primary sources are 'biased.' Teaching explicit distinction between perspective and bias, and using perspective productively, addresses this."
+  },
+  {
+    "id": "social_studies.source_analysis.24",
+    "subject": "social_studies",
+    "standardKeyword": "source_analysis",
+    "misconception": "Students try to assess a source's perspective without understanding who created it and why",
+    "probe": "A wealthy Southern plantation owner wrote this letter defending slavery in 1850. What aspects of his position—economic, social, political—might influence his views?",
+    "exemplarRationale": "Perspective assessment requires understanding the author's positionality—their economic interests, social status, political affiliations, geographic location, and historical moment. Students lack substantive knowledge about historical groups and have difficulty imagining worldviews different from their own. Explicit positionality analysis frameworks connecting position to perspective build this skill."
+  },
+  {
+    "id": "social_studies.data_analysis.25",
+    "subject": "social_studies",
+    "standardKeyword": "data_analysis",
+    "misconception": "Students think 'correlation doesn't equal causation' means correlation CAN'T indicate any causal relationship",
+    "probe": "A study found states with more education spending have lower crime rates. A researcher says we can't conclude education causes lower crime because it's correlational. Does this mean there's NO causal relationship? Explain.",
+    "exemplarRationale": "Correlation cannot prove causation direction, but correlation often DOES reflect causal relationships—we just can't determine direction from correlation alone. Students overcorrect because instruction emphasizes avoiding false causation (with silly examples like ice cream and shark attacks) without teaching that correlation can suggest causation. Three-part framework (related? yes; direction proven? no; likely causal? often yes) addresses this."
+  },
+  {
+    "id": "social_studies.data_analysis.26",
+    "subject": "social_studies",
+    "standardKeyword": "data_analysis",
+    "misconception": "Students have trouble thinking of other factors that might explain why two things are connected",
+    "probe": "Studies show people who drink coffee live longer. Your friend says 'Coffee makes you live longer!' What else might explain why coffee drinking and longer life are connected?",
+    "exemplarRationale": "Correlations may be explained by confounding variables—third factors that influence both observed variables. Students struggle because identifying what's NOT present requires abstract thinking, and they lack practice with systematic alternative-explanation analysis. Template-based practice ('What else might cause BOTH X and Y?') with varied examples builds this skill."
+  },
+  {
+    "id": "social_studies.data_analysis.27",
+    "subject": "social_studies",
+    "standardKeyword": "data_analysis",
+    "misconception": "Students confuse whether something is needed for an outcome versus whether it's enough by itself to cause the outcome",
+    "probe": "Oxygen is necessary for fire. Does this mean oxygen causes fires? Why do we need oxygen but also other factors?",
+    "exemplarRationale": "Necessary conditions must be present but aren't sufficient alone; sufficient conditions guarantee outcomes independently. Most historical causes are necessary but not sufficient. Students struggle because these are abstract logical concepts using words ('necessary') that have different everyday vs. technical meanings. Fire triangle analogy (oxygen + fuel + heat: each necessary, all sufficient) transfers to historical causation."
+  },
+  {
+    "id": "social_studies.data_analysis.28",
+    "subject": "social_studies",
+    "standardKeyword": "data_analysis",
+    "misconception": "Students see patterns and assume they must be caused by something specific when they might be coincidence",
+    "probe": "A student carries a lucky charm to all tests and gets good grades. Does the charm cause good grades? How would you test whether the charm actually helps?",
+    "exemplarRationale": "Causal connections require evidence of consistency, temporal precedence, plausible mechanism, and controlled comparison—not just pattern observation. Humans have cognitive bias toward pattern-finding and confirmation bias reinforces perceived connections. Teaching scientific thinking (What happens WITHOUT the supposed cause?) and counterfactual analysis addresses causal illusions."
+  },
+  {
+    "id": "social_studies.historical_thinking.29",
+    "subject": "social_studies",
+    "standardKeyword": "historical_thinking",
+    "misconception": "Students think understanding why someone did something means agreeing with or approving of their actions",
+    "probe": "A historian tries to understand why Confederate soldiers fought. Does this mean she agrees with slavery? Why or why not?",
+    "exemplarRationale": "Historical empathy means understanding experiences, decisions, and actions of people within their context—it's cognitive analysis, not moral approval. Students confuse empathy with sympathy because everyday language conflates the terms, and there's moral discomfort with 'empathizing' with wrongdoers. Explicit distinction (understand within context THEN evaluate morally) addresses this."
+  },
+  {
+    "id": "social_studies.historical_thinking.30",
+    "subject": "social_studies",
+    "standardKeyword": "historical_thinking",
+    "misconception": "Students struggle to understand historical perspectives without knowing enough about what life was like then",
+    "probe": "Why might German citizens have supported Hitler? First, list what you need to know about 1930s Germany to even answer this question.",
+    "exemplarRationale": "Historical empathy requires substantive knowledge—you cannot 'step into shoes' without knowing the economic conditions, political situation, social norms, and available information people faced. Students struggle because perspective-taking seems intuitive but actually depends on detailed contextual knowledge. Providing rich historical context BEFORE empathy tasks, not after, addresses this."
+  },
+  {
+    "id": "social_studies.historical_thinking.31",
+    "subject": "social_studies",
+    "standardKeyword": "historical_thinking",
+    "misconception": "Students project their modern values onto people from the past when trying to understand their perspective",
+    "probe": "Based on what we've learned about medieval worldview, what would a peasant notice or value in daily life that we might not think about today?",
+    "exemplarRationale": "Effective perspective-taking requires setting aside modern context and grounding empathy in historical evidence about period-specific beliefs and values. Students naturally use their own values as reference points, and affective engagement can override historical contextualization. Evidence-based empathy anchored in primary sources showing period worldview, rather than open-ended 'imagine you are...' prompts, addresses this."
+  },
+  {
+    "id": "social_studies.historical_thinking.32",
+    "subject": "social_studies",
+    "standardKeyword": "historical_thinking",
+    "misconception": "Students think nothing important happened in history unless a famous person made it happen",
+    "probe": "The Civil Rights Movement succeeded because of Martin Luther King Jr. True or false? Explain your reasoning.",
+    "exemplarRationale": "Historical change results from collective agency and social movements, not just individual 'great men'—leaders emerge from and are enabled by broader structural conditions. Students focus on individuals because textbooks emphasize leaders, individuals are easier to remember than movements, and there's limited exposure to social history. Explicit study of movements and ordinary people's roles addresses this."
+  },
+  {
+    "id": "social_studies.historical_thinking.33",
+    "subject": "social_studies",
+    "standardKeyword": "historical_thinking",
+    "misconception": "Students think events are historically significant mainly because they're famous or everybody knows about them",
+    "probe": "Why is the Civil War significant? Is it because everybody learns about it, because textbooks cover it, because it had major long-term consequences, or because it was dramatic?",
+    "exemplarRationale": "Historical significance should be evaluated by criteria (consequential, exemplary, symbolic, profound) rather than fame—significance is attributed based on evidence, not inherited from collective memory. Students use circular reasoning (significant because famous, famous because significant) without criteria for assessment. Teaching Seixas' significance criteria and applying them to less famous events builds evaluative capacity."
+  },
+  {
+    "id": "social_studies.historical_thinking.34",
+    "subject": "social_studies",
+    "standardKeyword": "historical_thinking",
+    "misconception": "Students think dramatic events like wars and assassinations are more historically significant than gradual changes",
+    "probe": "Which is more historically significant: the development of agriculture over thousands of years, or the assassination of Abraham Lincoln? Explain your reasoning.",
+    "exemplarRationale": "Gradual long-term processes (agricultural revolution, industrialization, demographic transitions) often shaped daily life more fundamentally than dramatic single events. Students privilege dramatic events because they're more memorable, textbook chapters are organized around them, and popular media focuses on them. Comparative significance tasks and explicit study of long-term processes address this."
+  },
+  {
+    "id": "social_studies.chronology.35",
+    "subject": "social_studies",
+    "standardKeyword": "chronology",
+    "misconception": "Students assume that because one thing happened before another, the first thing caused the second",
+    "probe": "The Renaissance began in Italy in the 1300s. Columbus arrived in the Americas in 1492. Did the Renaissance cause Columbus's voyage? How would you decide?",
+    "exemplarRationale": "Temporal sequence does not prove causation—we need evidence of mechanism showing HOW earlier events influenced later ones, not just that they happened first. Students make this 'post hoc ergo propter hoc' fallacy because narrative structure suggests causation and distinguishing correlation from causation is difficult. Explicit teaching that 'happened before' ≠ 'caused' with mechanism analysis addresses this."
+  },
+  {
+    "id": "social_studies.chronology.36",
+    "subject": "social_studies",
+    "standardKeyword": "chronology",
+    "misconception": "Students see only what changed OR only what stayed the same, not both happening at once",
+    "probe": "After the Civil War, what changed for African Americans? What stayed the same? How were change and continuity happening at the same time?",
+    "exemplarRationale": "Historical periods involve both continuity and change simultaneously—some things transform while others persist, and understanding requires seeing both dimensions together. Students struggle because textbooks organize by periods (emphasizing change) or themes (emphasizing continuity), making it hard to hold both in mind. Color-coded timelines showing changes and continuities interwoven address this."
+  },
+  {
+    "id": "sel.emotion_regulation.37",
+    "subject": "sel",
+    "standardKeyword": "emotion_regulation",
+    "misconception": "Students think they need to 'let it all out' (punch a pillow, scream, vent) when angry to feel better",
+    "probe": "After you've vented your anger by yelling or hitting something, describe what happens to your body and emotions over the next 10 minutes. Do you feel calmer or more fired up?",
+    "exemplarRationale": "Venting anger often increases physiological arousal (heart rate, muscle tension) rather than decreasing it. Students develop this misconception because media and peers portray explosive release as therapeutic, and the 'pressure cooker' metaphor feels intuitively correct. Teaching the distinction between strategies that 'heat up' versus 'cool down' the nervous system helps students recognize that calm-down techniques actually reset their stress response."
+  },
+  {
+    "id": "sel.self_management.38",
+    "subject": "sel",
+    "standardKeyword": "self_management",
+    "misconception": "Students think being good at self-management means not showing feelings and keeping them inside",
+    "probe": "If you feel like crying but act like everything is fine, what do you think happens to that feeling over time? Explain your reasoning.",
+    "exemplarRationale": "Self-management involves noticing emotions and choosing healthy responses, not suppressing or hiding them. Students confuse suppression with regulation because cultural messages equate strength with stoicism, and showing vulnerability risks social judgment. The key insight is teaching 'name it to tame it'—labeling emotions actually reduces their intensity, while suppression leaves emotional 'temperature' elevated internally."
+  },
+  {
+    "id": "sel.self_awareness.39",
+    "subject": "sel",
+    "standardKeyword": "self_awareness",
+    "misconception": "Students think they can't change how they feel because they're 'just an anxious person' or 'just an angry person'",
+    "probe": "Do you believe some people are born 'hot-headed' and can't really learn to stay calm? Explain what evidence supports your view.",
+    "exemplarRationale": "Emotional regulation is a trainable skill that strengthens with practice, not a fixed personality trait. Students develop this fixed mindset about emotions when they experience intense feelings repeatedly and receive labels from family or peers ('You're the dramatic one'). Teaching that repeated use of regulation strategies actually builds neural pathways—like training for a sport—helps students see emotions as manageable rather than defining."
+  },
+  {
+    "id": "sel.self_awareness.40",
+    "subject": "sel",
+    "standardKeyword": "self_awareness",
+    "misconception": "Students think if they feel stupid, bad, or unsafe, that means they actually are stupid, bad, or unsafe",
+    "probe": "Can someone feel like a terrible friend even if they didn't actually do anything wrong? Describe a situation where this might happen and explain why.",
+    "exemplarRationale": "Feelings are real experiences but not always reliable facts about reality. Students confuse 'I feel this way' with 'It is this way' because emotions arrive with conviction and the brain treats them as evidence. Teaching students to separate the 'feeling column' from the 'evidence column' through fact-checking before acting helps them recognize emotions as data points to examine rather than truths to accept."
+  },
+  {
+    "id": "sel.empathy.41",
+    "subject": "sel",
+    "standardKeyword": "empathy",
+    "misconception": "Students think that empathizing with someone they disagree with means they're taking that person's side or betraying their own opinion",
+    "probe": "Can you understand why someone did something hurtful and still believe it was wrong? Give an example of how this would work.",
+    "exemplarRationale": "Empathy means understanding how someone arrived at their perspective; it does not require agreeing with or excusing their behavior. Students conflate understanding with endorsement because they think in binary 'sides' and fear that perspective-taking means surrendering their own position. The key distinction is 'Understanding = seeing how they got there' versus 'Agreeing = thinking they are correct.'"
+  },
+  {
+    "id": "sel.empathy.42",
+    "subject": "sel",
+    "standardKeyword": "empathy",
+    "misconception": "Students think being empathetic means they have to fix the other person's problem or make them stop feeling upset",
+    "probe": "When a friend is crying about something you can't change, what should you do? Explain why just listening might be more helpful than offering solutions.",
+    "exemplarRationale": "Empathy begins with emotional support—being present and validating feelings—not problem-solving or cheering someone up. Students rush to fix because sitting with another's pain is uncomfortable, and they've learned that 'good friends' give advice. Teaching that phrases like 'That sounds really hard' or 'I'm here with you' often help more than solutions shows students that being heard is itself therapeutic."
+  },
+  {
+    "id": "sel.social_awareness.43",
+    "subject": "sel",
+    "standardKeyword": "social_awareness",
+    "misconception": "Students think that being really empathetic means they must feel the other person's pain just as intensely, which will burn them out",
+    "probe": "Do you ever avoid sad or stressed friends because their mood 'sticks' to you? Describe what happens and how it makes you feel afterward.",
+    "exemplarRationale": "Compassionate empathy means caring about someone's pain while staying grounded, rather than drowning in emotional contagion. Students confuse absorbing others' emotions with caring because they experience feelings as 'catching' and conclude that's what empathy requires. Teaching the metaphor 'Be a life jacket, not a sponge' with concrete grounding techniques helps students maintain caring boundaries without feeling guilty."
+  },
+  {
+    "id": "sel.relationship_skills.44",
+    "subject": "sel",
+    "standardKeyword": "relationship_skills",
+    "misconception": "Students think that if they argue or fight with someone, it means they aren't good friends or it's a bad relationship",
+    "probe": "If you and a close friend have a big argument, does that mean your friendship is falling apart? Explain what you think happens to friendships after conflict.",
+    "exemplarRationale": "Conflict in relationships is normal and can actually strengthen bonds when handled constructively through 'rupture and repair.' Students see conflict as catastrophic because media shows relationships as drama-free ideals, and past experiences with unhealthy conflict make all disagreement feel dangerous. Teaching that repair—listening, apologizing, setting boundaries—is what defines healthy relationships, not the absence of disagreement."
+  },
+  {
+    "id": "sel.conflict_resolution.45",
+    "subject": "sel",
+    "standardKeyword": "conflict_resolution",
+    "misconception": "Students think that in an argument, someone has to win and someone has to lose, and if they compromise, they've lost",
+    "probe": "When you're in a disagreement with someone, what is your main goal—to prove them wrong or something else? Explain what 'winning' an argument means to you.",
+    "exemplarRationale": "Many conflicts can result in outcomes where both parties' underlying needs are met through interest-based negotiation. Students view conflicts as zero-sum competitions because they equate 'standing up for yourself' with refusing to yield, and past compromises may have felt one-sided. Teaching the difference between positions (what people say they want) and interests (deeper needs) opens creative solutions beyond win-lose."
+  },
+  {
+    "id": "sel.relationship_skills.46",
+    "subject": "sel",
+    "standardKeyword": "relationship_skills",
+    "misconception": "Students think that forgiving someone means what they did was okay or that they have to trust that person again immediately",
+    "probe": "Can you forgive someone but also decide not to be close friends with them anymore? Explain how that would work.",
+    "exemplarRationale": "Forgiveness means releasing ongoing resentment for your own wellbeing; it does not require reconciliation or instant restoration of trust. Students conflate these concepts because they've been pressured to 'forgive and forget' before feeling ready, making forgiveness feel like erasing consequences. Teaching that trust rebuilds slowly through consistent behavior—separate from the choice to stop carrying anger—empowers students to forgive without feeling vulnerable."
+  },
+  {
+    "id": "sel.self_management.47",
+    "subject": "sel",
+    "standardKeyword": "self_management",
+    "misconception": "Students think growth mindset means if they try hard enough they'll succeed, and if they fail it's because they didn't try hard enough",
+    "probe": "If you fail a test after studying for hours, what does that tell you? Is more effort always the answer?",
+    "exemplarRationale": "Success requires effort combined with effective strategies and appropriate support, not effort alone. Students develop 'false growth mindset' because simplified messages praise effort without emphasizing strategy shifts or help-seeking. Teaching the 'effort + strategy + support' triangle ensures students don't blame themselves for failures that actually require different approaches or resources rather than just more hours."
+  },
+  {
+    "id": "sel.self_awareness.48",
+    "subject": "sel",
+    "standardKeyword": "self_awareness",
+    "misconception": "Students think growth mindset means they can do literally anything they want as long as they believe in themselves",
+    "probe": "If you worked very hard at basketball for one month, would you expect to make the varsity team? Explain what growth mindset actually promises and what it doesn't.",
+    "exemplarRationale": "Growth mindset means abilities can develop meaningfully over time with practice and good strategies, not that any goal is instantly achievable. Students interpret motivational slogans as literal guarantees and then conclude 'mindset doesn't work' when they fail unrealistic goals. Introducing 'Not Yet' language with goal ladders showing incremental steps helps students embrace growth within realistic timeframes and constraints."
+  },
+  {
+    "id": "sel.social_awareness.49",
+    "subject": "sel",
+    "standardKeyword": "social_awareness",
+    "misconception": "Students think everyone notices their mistakes and awkward moments as much as they do",
+    "probe": "When you walk into the cafeteria, what percentage of people do you think are paying attention to what you're wearing or doing? Now estimate what percentage of yesterday's outfits you can remember seeing. What does the difference tell you?",
+    "exemplarRationale": "People dramatically overestimate how much others notice and remember about them—this is called the spotlight effect. Adolescent egocentrism and social media metrics amplify the sense of being constantly observed. The quick proof that students can't recall what three classmates wore yesterday demonstrates that others are equally focused on themselves, reducing social anxiety through concrete evidence rather than reassurance."
+  },
+  {
+    "id": "sel.self_management.50",
+    "subject": "sel",
+    "standardKeyword": "self_management",
+    "misconception": "Students think being strong or resilient means handling everything by themselves and not needing help from anyone",
+    "probe": "Who shows more strength: someone who struggles alone until they collapse, or someone who asks for help early and follows through? Explain your reasoning.",
+    "exemplarRationale": "Resilience means bouncing back with support, not suffering in silence until breaking. Students equate independence with strength because cultural messages praise self-reliance, and past help-seeking may have been met with shame. Using examples of elite athletes and leaders who rely on coaches and teams normalizes help-seeking as a strategic strength, while structured practice with help-seeking sentence stems builds the skill."
+  },
+  {
+    "id": "sel.social_awareness.51",
+    "subject": "sel",
+    "standardKeyword": "social_awareness",
+    "misconception": "Students think that if they show their flaws or admit they're struggling, people will lose respect for them",
+    "probe": "When a friend admits they're scared or made a mistake, do you usually respect them less or feel closer to them? Now consider: would others react to your vulnerability the same way?",
+    "exemplarRationale": "People tend to view others' vulnerability as brave and honest while judging their own vulnerability harshly—this is called the 'beautiful mess effect.' Students fear showing struggle because school social dynamics can be harsh and past openness may have led to mockery. Teaching this asymmetry directly—that what feels like weakness to you often looks like courage to others—along with choosing safe contexts for sharing, reduces the perceived risk of authenticity."
+  },
+  {
+    "id": "science.forces_motion.52",
+    "subject": "science",
+    "standardKeyword": "forces_motion",
+    "misconception": "Students think objects need a continuous force pushing them to keep moving",
+    "probe": "A hockey puck slides across frictionless ice at constant speed. What horizontal forces act on the puck while it slides? Explain your reasoning.",
+    "exemplarRationale": "Objects in motion remain in motion without any net force (Newton's First Law). Students develop this misconception because everyday experience with friction makes objects stop when pushing stops—they attribute stopping to 'running out of force' rather than friction. Address by using low-friction demonstrations to create cognitive conflict."
+  },
+  {
+    "id": "science.gravity.53",
+    "subject": "science",
+    "standardKeyword": "gravity",
+    "misconception": "Students think heavier objects fall faster than lighter ones in all situations",
+    "probe": "A bowling ball and a basketball are dropped from the same height in a vacuum chamber. Which lands first and why?",
+    "exemplarRationale": "In a vacuum, all objects accelerate at the same rate (g ≈ 9.8 m/s²) regardless of mass because a = F/m = mg/m = g. Students conflate mass effects with air resistance from everyday observations where rocks fall faster than feathers. Use Apollo 15 hammer-feather demonstration and vacuum tube experiments to distinguish free fall from air resistance scenarios."
+  },
+  {
+    "id": "science.forces_motion.54",
+    "subject": "science",
+    "standardKeyword": "forces_motion",
+    "misconception": "Students think balanced forces always mean an object is not moving",
+    "probe": "A car travels down a straight highway at a steady 60 mph. What can you say about the horizontal forces acting on the car? Explain.",
+    "exemplarRationale": "Balanced forces (net force = 0) mean zero acceleration, not zero velocity—objects can move at constant velocity with balanced forces. Students associate equilibrium only with stationary objects. Use paired examples: a book at rest on a table AND a car at constant speed both have balanced forces."
+  },
+  {
+    "id": "science.newton_laws.55",
+    "subject": "science",
+    "standardKeyword": "newton_laws",
+    "misconception": "Students think action-reaction force pairs cancel each other out so nothing moves",
+    "probe": "When you push against a wall, the wall pushes back on you with equal force. If the forces are equal and opposite, why don't they cancel out?",
+    "exemplarRationale": "Newton's third law force pairs act on different objects, so they cannot cancel—cancellation only occurs for forces on the same object. Students conflate balanced forces on one body with action-reaction pairs across two bodies. Always have students identify the two separate interacting objects and draw separate free-body diagrams for each."
+  },
+  {
+    "id": "science.projectile_motion.56",
+    "subject": "science",
+    "standardKeyword": "projectile_motion",
+    "misconception": "Students think objects always move in the same direction as the net force acting on them",
+    "probe": "A ball is thrown straight upward. At the very top of its path when it's momentarily at rest, what is the direction of the net force on the ball? Explain.",
+    "exemplarRationale": "Force determines acceleration, not velocity directly—an object can move in a different direction than the net force (like a ball rising while gravity pulls down). Students overgeneralize from pushing objects forward. Have students sketch force, velocity, and acceleration vectors at multiple points along a projectile path to see they differ."
+  },
+  {
+    "id": "science.energy_conservation.57",
+    "subject": "science",
+    "standardKeyword": "energy_conservation",
+    "misconception": "Students think energy is used up or disappears when something happens",
+    "probe": "When a moving car brakes to a stop, what happens to its kinetic energy? Where does it go?",
+    "exemplarRationale": "Energy is always conserved—it transforms between forms but is never created or destroyed. Students develop this misconception from everyday language ('using up energy,' 'saving energy') and focusing only on the object rather than the whole system. Use energy bar charts tracing energy into thermal, sound, and other forms in the surroundings."
+  },
+  {
+    "id": "science.potential_energy.58",
+    "subject": "science",
+    "standardKeyword": "potential_energy",
+    "misconception": "Students think kinetic energy cannot be greater than total mechanical energy",
+    "probe": "A particle has total mechanical energy E = 2 J. At some point, its potential energy is U = -3 J. What is its kinetic energy at that point? Explain your calculation.",
+    "exemplarRationale": "The zero point of potential energy is arbitrary, so PE can be negative—only energy differences are physically meaningful. Total energy E = KE + PE, so KE = E - PE = 2 - (-3) = 5 J. Students misinterpret 'total' as a maximum cap. Use energy vs. position graphs showing negative PE regions and connect to binding energies."
+  },
+  {
+    "id": "science.work_energy.59",
+    "subject": "science",
+    "standardKeyword": "work_energy",
+    "misconception": "Students think work equals force times distance regardless of the angle between them",
+    "probe": "You carry a 20 kg box at constant height across a room for 10 meters. How much work do you do on the box with your lifting force? Explain.",
+    "exemplarRationale": "Work is the dot product W = Fd cos θ; when force is perpendicular to displacement, work is zero regardless of effort exerted. Students memorize W = Fd without vector context and classroom problems often use parallel force/motion. Connect work to energy change: if an object's mechanical energy doesn't change, net work on it is zero."
+  },
+  {
+    "id": "science.thermal_energy.60",
+    "subject": "science",
+    "standardKeyword": "thermal_energy",
+    "misconception": "Students think heat and temperature are the same thing",
+    "probe": "Ice is melting at exactly 0°C. Is heat being transferred to the ice? Explain the difference between heat and temperature.",
+    "exemplarRationale": "Heat is energy transferred due to temperature difference; temperature is a measure of average particle kinetic energy. Students conflate them because everyday language uses both loosely ('adding heat raises temperature'). Use melting ice at constant temperature to show heat transfer without temperature change—the energy goes into breaking bonds, not increasing particle motion."
+  },
+  {
+    "id": "science.chemical_reactions.61",
+    "subject": "science",
+    "standardKeyword": "chemical_reactions",
+    "misconception": "Students think breaking chemical bonds releases energy",
+    "probe": "In a chemical reaction, does breaking bonds release energy or require energy? Explain what actually releases energy.",
+    "exemplarRationale": "Breaking bonds requires energy input; forming new bonds releases energy. The overall reaction releases energy only if energy released from forming new bonds exceeds energy required to break old bonds. Students absorb this misconception from media misstatements. Use analogies: separating magnets or Velcro requires work; snapping them together releases energy."
+  },
+  {
+    "id": "science.heredity.62",
+    "subject": "science",
+    "standardKeyword": "heredity",
+    "misconception": "Students think each trait is controlled by a single gene with dominant and recessive alleles",
+    "probe": "How is human height determined? Is it controlled by one gene, a few genes, or many factors?",
+    "exemplarRationale": "Most traits including height are polygenic (many genes) and influenced by environmental factors—Mendelian single-gene inheritance is a special case. Students overgeneralize from introductory examples like Mendel's peas. Use distributions of continuous traits (height, skin color) as evidence of polygenic inheritance, contrasting with rare truly Mendelian disorders."
+  },
+  {
+    "id": "science.gene_expression.63",
+    "subject": "science",
+    "standardKeyword": "gene_expression",
+    "misconception": "Students think genes directly create traits without any intermediate steps",
+    "probe": "How do genes influence eye color? Describe the steps between gene and trait.",
+    "exemplarRationale": "Genes code for proteins, and those proteins produce the visible trait—the pathway is gene → mRNA → protein → trait. Students develop this misconception from simplified language like 'gene for blue eyes' that skips the protein level. Map one concrete example (melanin synthesis for eye color) showing the protein explicitly as the causal mechanism."
+  },
+  {
+    "id": "science.inheritance.64",
+    "subject": "science",
+    "standardKeyword": "inheritance",
+    "misconception": "Students think DNA sequence is the only thing inherited from parents",
+    "probe": "What can be inherited from parents to offspring? Is DNA the only thing that gets passed on?",
+    "exemplarRationale": "Beyond DNA sequences, organisms inherit epigenetic marks (methylation patterns), aspects of microbiomes (during birth and nursing), and some learned behaviors. The strong emphasis on DNA as 'the blueprint' obscures other inheritance mechanisms. Introduce epigenetic inheritance and maternal microbiome transfer as examples of non-DNA inheritance."
+  },
+  {
+    "id": "science.cell_structure.65",
+    "subject": "science",
+    "standardKeyword": "cell_structure",
+    "misconception": "Students think genes and chromosomes are the same thing or interchangeable terms",
+    "probe": "What is the relationship between genes and chromosomes? Are they the same structure?",
+    "exemplarRationale": "Genes are segments of DNA that code for specific products; chromosomes are structures made of DNA that contain many genes along their length. Students conflate them because both are introduced together without clear structural hierarchy. Use scale models or nested diagrams: base pairs → gene → chromosome → genome, like letters → words → chapters → book."
+  },
+  {
+    "id": "science.meiosis.66",
+    "subject": "science",
+    "standardKeyword": "meiosis",
+    "misconception": "Students think meiosis is only about cutting chromosome number in half",
+    "probe": "What are the two main purposes of meiosis? Why is it important beyond just making cells with fewer chromosomes?",
+    "exemplarRationale": "Meiosis both reduces chromosome number (diploid to haploid) AND generates genetic variation through crossing over and independent assortment. Instruction over-emphasizes the diploid → haploid outcome while treating variation mechanisms as minor details. Model crossing over with physical manipulatives and calculate 2^n gamete combinations to make variation concrete."
+  },
+  {
+    "id": "science.climate_change.67",
+    "subject": "science",
+    "standardKeyword": "climate_change",
+    "misconception": "Students think the ozone hole causes global warming",
+    "probe": "How are the ozone hole and climate change related? Do they have the same cause?",
+    "exemplarRationale": "Ozone depletion and global warming are different phenomena: ozone depletion occurs in the stratosphere from CFCs reducing UV protection, while global warming occurs in the troposphere from greenhouse gases trapping infrared radiation. Both are atmospheric problems with negative consequences, so students conflate them. Use comparison tables distinguishing layer, gases, and primary effects."
+  },
+  {
+    "id": "science.carbon_cycle.68",
+    "subject": "science",
+    "standardKeyword": "carbon_cycle",
+    "misconception": "Students think cutting emissions in half will quickly lower atmospheric CO₂ levels",
+    "probe": "If global fossil fuel emissions were suddenly cut by 50%, what would happen to atmospheric CO₂ levels over the next few decades?",
+    "exemplarRationale": "Atmospheric CO₂ is a stock with inflows (emissions) and slow outflows (natural sinks); cutting inflows by half means levels continue rising, just more slowly—they wouldn't fall until emissions drop below what natural sinks can absorb. Students apply 'tap and drain' intuition incorrectly. Teach stock-and-flow thinking: turning down the faucet slows filling but doesn't empty the bathtub."
+  },
+  {
+    "id": "ela.theme.69",
+    "subject": "ela",
+    "standardKeyword": "theme",
+    "misconception": "Students believe a theme is just one word like 'love' or 'friendship' rather than a complete statement about life",
+    "probe": "Read this short story about two friends who sacrifice for each other. What is the theme? Explain your answer in a complete sentence.",
+    "exemplarRationale": "A theme is a complete statement about life or human experience (e.g., 'True friendship requires sacrifice'), not a single-word topic. Students develop this misconception because early instruction often asks for 'the big idea in one word,' cementing topic-level thinking. The key intervention is teaching the frame: Topic + What about it? = Theme."
+  },
+  {
+    "id": "ela.symbolism.70",
+    "subject": "ela",
+    "standardKeyword": "symbolism",
+    "misconception": "Students think symbols can mean anything personal to them without needing text evidence",
+    "probe": "The green light appears multiple times in The Great Gatsby. A student claims it represents their grandmother's garden because green reminds them of her. Is this interpretation valid? Why or why not?",
+    "exemplarRationale": "Symbolic interpretation must be grounded in textual evidence, not purely personal association. Students develop this misconception when past tasks rewarded clever guesses without requiring textual warrant, and when they conflate image, metaphor, and symbol as all 'hidden meaning.' Requiring multiple textual references to support symbolic claims addresses this."
+  },
+  {
+    "id": "ela.inference.71",
+    "subject": "ela",
+    "standardKeyword": "inference",
+    "misconception": "Students think inference and prediction are the same thing—both are guessing what happens next",
+    "probe": "The narrator describes a character with trembling hands and darting eyes as she enters the courtroom. Based on this, what can you figure out? Is your answer an inference or a prediction? Explain the difference.",
+    "exemplarRationale": "Inference draws meaning from what has already happened using text clues plus background knowledge, while prediction looks forward to future events. Students confuse these because instruction sometimes uses the terms interchangeably and both involve 'guessing.' Teaching that inference looks back/inward (meaning) while prediction looks forward (events) clarifies the distinction."
+  },
+  {
+    "id": "ela.narrative_structure.72",
+    "subject": "ela",
+    "standardKeyword": "narrative_structure",
+    "misconception": "Students believe the protagonist must be the 'good guy' and the antagonist must be the 'bad guy'",
+    "probe": "Is Macbeth the protagonist or antagonist of the play Macbeth? Explain your reasoning based on his role in the plot.",
+    "exemplarRationale": "Protagonist refers to the character whose goals drive the plot (the 'prime mover'), regardless of morality; antagonist is the opposing force. Students develop this misconception through exposure to simplified hero/villain narratives and confuse plot role with moral alignment. Using texts with morally complex protagonists (antiheroes) helps students separate these concepts."
+  },
+  {
+    "id": "ela.tone.73",
+    "subject": "ela",
+    "standardKeyword": "tone",
+    "misconception": "Students think tone and mood are the same thing or that tone means how a character feels",
+    "probe": "Read this funeral scene with 'garish flowers and loud fake weeping.' What is the author's TONE toward this scene? What MOOD does it create for you as a reader? Explain how these differ.",
+    "exemplarRationale": "Tone is the author's attitude toward the subject (how they 'sound'), while mood is the emotional atmosphere the reader experiences (the 'vibe'). Students conflate these because both involve emotion, and they often project their own feelings onto the author. The heuristic 'Tone = Voice, Mood = Vibe' helps distinguish them."
+  },
+  {
+    "id": "ela.plot_structure.74",
+    "subject": "ela",
+    "standardKeyword": "plot_structure",
+    "misconception": "Students believe the climax is the most exciting or action-packed moment rather than the turning point that decides the conflict",
+    "probe": "In Cinderella, is the climax when she dances at the ball or when the slipper fits? Explain what makes something a climax.",
+    "exemplarRationale": "The climax is the structural turning point where the central conflict is decided or resolved, typically near the end—not necessarily the most exciting scene. Students develop this misconception from oversimplified plot diagrams and confusing excitement with structural function. Teaching climax as the 'Point of No Return' or 'Decision Moment' corrects this."
+  },
+  {
+    "id": "ela.point_of_view.75",
+    "subject": "ela",
+    "standardKeyword": "point_of_view",
+    "misconception": "Students assume the first-person narrator or speaker IS the author expressing their personal beliefs",
+    "probe": "In a poem written in first person, is the 'I' always the poet? How would you determine if the speaker is the author or a character they created?",
+    "exemplarRationale": "The speaker (poetry) or narrator (prose) is a constructed voice that may differ from the author's own perspective. Students transfer habits from social media where 'I' literally means the poster, and they lack understanding of narrative distance and persona. Enforcing vocabulary distinctions and having students write as fictional 'I' voices builds this understanding."
+  },
+  {
+    "id": "ela.characterization.76",
+    "subject": "ela",
+    "standardKeyword": "characterization",
+    "misconception": "Students focus only on listing character traits and miss how characters change throughout a story",
+    "probe": "Choose a main character and describe how they are DIFFERENT at the end of the story compared to the beginning. What specific events caused this change?",
+    "exemplarRationale": "Strong character analysis traces development and transformation over time, not just static traits. Students focus on trait lists because they're easier than tracking development, and assignments often stop at 'describe the character' rather than 'how does the character develop?' Character trajectory charts mapping beliefs at beginning, turning points, and end address this."
+  },
+  {
+    "id": "ela.author_purpose.77",
+    "subject": "ela",
+    "standardKeyword": "author_purpose",
+    "misconception": "Students reduce author's purpose to only 'Persuade, Inform, or Entertain' (PIE) without more specific analysis",
+    "probe": "Two articles both argue about climate policy but take opposite positions. If both have the purpose 'to persuade,' how is that answer incomplete? What else should we specify?",
+    "exemplarRationale": "Author's purpose requires specificity: who is the audience, what specific claim, and what strategies are used. Students over-extend elementary PIE frameworks because they stop at broad categories without examining audience, stance, or nuanced functions like satirize or qualify. The frame 'To [verb] [audience] that [claim] by [strategy]' builds sophistication."
+  },
+  {
+    "id": "ela.argument.78",
+    "subject": "ela",
+    "standardKeyword": "argument",
+    "misconception": "Students think an argument means a fight or debate where one side must 'win' rather than a reasoned position supported by evidence",
+    "probe": "Does including the opposing viewpoint in your essay make your argument weaker or stronger? Explain your reasoning.",
+    "exemplarRationale": "Academic argument is a reasoned position with claim, evidence, and engagement with counter-claims—not a personal conflict. Students hold this misconception because everyday 'argument' means quarrel, and they may have been rewarded for strong stances while ignoring opposing views. Teaching that addressing counter-arguments strengthens credibility reframes the concept."
+  },
+  {
+    "id": "ela.argument.79",
+    "subject": "ela",
+    "standardKeyword": "argument",
+    "misconception": "Students believe any opinion automatically counts as an argument regardless of evidence",
+    "probe": "Look at these three statements: A) 'Uniforms are bad.' B) 'Uniforms are bad because they limit expression.' C) 'Uniforms limit expression, as shown by surveys where 73% of students felt less creative.' Which is an opinion and which is an argument? Why?",
+    "exemplarRationale": "An argument requires evidence and reasoning to support a claim, while an opinion is merely a stance without justification. Students conflate these because of emphasis on personal expression and voice without equal emphasis on evidence requirements. Teaching the hierarchy Opinion → Claim → Argument (with reasons + evidence) clarifies expectations."
+  },
+  {
+    "id": "ela.rhetoric.80",
+    "subject": "ela",
+    "standardKeyword": "rhetoric",
+    "misconception": "Students think ethos only means having a famous name or impressive job title rather than credibility built within the text",
+    "probe": "Read this paragraph by an unknown author. Without knowing who wrote it, identify TWO ways the writer builds credibility in their own words.",
+    "exemplarRationale": "Ethos includes both extrinsic credibility (credentials) and intrinsic credibility built through fair language, concessions, citations, and shared values within the discourse itself. Students focus only on external authority because examples often highlight titles and fame. Having students identify ethos markers in texts by unknown authors develops this understanding."
+  },
+  {
+    "id": "ela.rhetoric.81",
+    "subject": "ela",
+    "standardKeyword": "rhetoric",
+    "misconception": "Students believe pathos is always manipulation or 'making people cry' and therefore a logical fallacy",
+    "probe": "Is using an emotional example in an argument always a fallacy? Compare MLK's 'I Have a Dream' speech to a manipulative advertisement. What makes one legitimate and the other manipulative?",
+    "exemplarRationale": "Pathos legitimately aligns arguments with audience values and concerns through emotional connection, distinct from manipulation that bypasses reasoning entirely. Students develop suspicion of all emotion because of overexposure to simplistic examples like tear-jerking commercials. Analyzing how great speeches use pathos to support rather than replace reasoning corrects this."
+  },
+  {
+    "id": "ela.rhetoric.82",
+    "subject": "ela",
+    "standardKeyword": "rhetoric",
+    "misconception": "Students think logos just means using statistics and numbers rather than logical reasoning that connects evidence to claims",
+    "probe": "An article includes the statistic '60% of teens use smartphones.' Does including this number automatically mean the article uses logos? What else is needed?",
+    "exemplarRationale": "Logos encompasses the logical reasoning patterns—cause-effect, analogy, generalization—that connect evidence to claims, not merely the presence of statistics. Students focus on numbers because graphic examples often highlight statistics under logos. Using the Toulmin model to identify the 'invisible because' between evidence and claim builds true logos understanding."
+  },
+  {
+    "id": "ela.research.83",
+    "subject": "ela",
+    "standardKeyword": "research",
+    "misconception": "Students think research means finding quotes that support what they already believe and ignoring contradictory evidence",
+    "probe": "If you find a credible source that disagrees with your thesis, what should you do with it? Explain your reasoning.",
+    "exemplarRationale": "Strong research tests claims against counter-evidence and addresses opposing viewpoints, strengthening credibility through engagement. Students show confirmation bias because prior tasks asked them to 'find evidence to support your opinion' without 'test your opinion.' Requiring counter-claims with rebuttals and 'opposite day' assignments address this pattern."
+  },
+  {
+    "id": "ela.informational_text.84",
+    "subject": "ela",
+    "standardKeyword": "informational_text",
+    "misconception": "Students assume that if two things happen together one must cause the other without considering alternative explanations",
+    "probe": "Ice cream sales and drowning deaths both increase in summer. Does ice cream cause drowning? What other explanation might account for this pattern?",
+    "exemplarRationale": "Correlation does not imply causation—a third variable may explain both phenomena, or the relationship may be coincidental. Students apply post hoc reasoning because everyday narratives imply simple cause-effect and they lack schema for confounding variables. Teaching 'third variable' thinking explicitly and having students rewrite causal claims as correlational claims builds critical analysis."
+  },
+  {
+    "id": "ela.informational_text.85",
+    "subject": "ela",
+    "standardKeyword": "informational_text",
+    "misconception": "Students believe textbooks and news articles are objective truth without any author choices or bias",
+    "probe": "Is a history textbook completely neutral? What choices does the textbook author make that reflect a perspective?",
+    "exemplarRationale": "All texts involve rhetorical choices in selection, emphasis, and omission that reflect authorial perspective. Students assume nonfiction equals objectivity because school framing positions nonfiction as 'truth' versus literature as 'made up.' Side-by-side article comparisons on the same event reveal how different sources make different rhetorical choices."
+  },
+  {
+    "id": "ela.textual_evidence.86",
+    "subject": "ela",
+    "standardKeyword": "textual_evidence",
+    "misconception": "Students believe that listing quotes or facts is sufficient without explaining how the evidence supports their claim",
+    "probe": "Here is a paragraph with a claim and three quotes but no analysis. Is this paragraph complete? What is missing between the evidence and the conclusion?",
+    "exemplarRationale": "Evidence requires explicit commentary explaining how it proves the claim—readers don't automatically share the writer's inferences. Students skip analysis because prior grading rewarded evidence presence over reasoning, and they assume connections are obvious. The 'Quote Sandwich' (Introduce, Cite, Explain) with minimum ratios of commentary to evidence addresses this."
+  },
+  {
+    "id": "ela.textual_evidence.87",
+    "subject": "ela",
+    "standardKeyword": "textual_evidence",
+    "misconception": "Students drop quotes into their writing as standalone sentences without grammatically integrating them",
+    "probe": "Revise this passage: 'The character is angry. \\I hate you.\\\" This shows anger.' What is wrong with how the quote is used?\"",
+    "exemplarRationale": "Quotations must be grammatically integrated into the writer's own sentences using signal phrases, that-clauses, or embedded snippets. Students drop quotes because they're uncertain about embedding quotations grammatically and were taught to 'find a quote' without modeling integration. Teaching the three integration patterns with color-coding and sentence combining drills builds this skill."
+  },
+  {
+    "id": "ela.textual_evidence.88",
+    "subject": "ela",
+    "standardKeyword": "textual_evidence",
+    "misconception": "Students select any quote mentioning the topic rather than evidence that specifically supports their claim",
+    "probe": "Claim: 'Cell phones improve learning.' Evidence A: '90% of teens own smartphones.' Evidence B: 'Students using phones for practice scored 15% higher.' Which SUPPORTS the claim versus just being RELATED to phones?",
+    "exemplarRationale": "Relevant evidence directly proves the specific claim, not merely mentions the same topic. Students use keyword matching rather than conceptual alignment because rubrics often just check for 'at least one quote.' Evidence sorting activities and requiring students to reject at least one piece of evidence with explanation builds selection skills."
+  },
+  {
+    "id": "ela.writing.89",
+    "subject": "ela",
+    "standardKeyword": "writing",
+    "misconception": "Students believe longer essays with bigger words are automatically more sophisticated and academic",
+    "probe": "Compare: A) 'The protagonist experienced a significant amount of melancholy regarding the situation.' B) 'The protagonist felt sad about what happened.' Which is clearer? Which is better academic writing? Why?",
+    "exemplarRationale": "Academic writing values precision and clarity over length and complex vocabulary. Students equate length with quality because they misread teacher praise for depth as praise for length, and misuse thesauruses to 'sound smart.' Practicing 'pruning' exercises and studying economical prose models (like Orwell) reframes sophistication as clarity."
+  },
+  {
+    "id": "ela.literary_analysis.90",
+    "subject": "ela",
+    "standardKeyword": "literary_analysis",
+    "misconception": "Students believe literary interpretation is purely subjective so no interpretation can be wrong",
+    "probe": "Someone claims this love poem is about the dangers of technology. Is it possible for a literary interpretation to be wrong? What would make an interpretation valid or invalid?",
+    "exemplarRationale": "Interpretations exist on a spectrum of supported to unsupported based on textual evidence—not right/wrong but strong/weak. Students develop radical subjectivity when prompts like 'What does this mean to you?' don't require textual grounding. Shifting language to 'supported/unsupported' and requiring specific textual evidence for all interpretations addresses this."
+  },
+  {
+    "id": "ela.writing.91",
+    "subject": "ela",
+    "standardKeyword": "writing",
+    "misconception": "Students believe essays must be exactly five paragraphs with the thesis as the last sentence of the introduction",
+    "probe": "Can an effective argument essay have four or seven paragraphs? Can the thesis appear in the first sentence? Analyze a published op-ed and describe its structure.",
+    "exemplarRationale": "Essay structure should respond to rhetorical needs—complex arguments may require more paragraphs; thesis placement varies by purpose. Students treat the five-paragraph form as law because it's presented as 'the way to write' rather than as scaffolding. Framing it as 'training wheels' and having students design outlines from claim/evidence first, counting paragraphs last, builds flexibility."
+  },
+  {
+    "id": "ela.writing.92",
+    "subject": "ela",
+    "standardKeyword": "writing",
+    "misconception": "Students think revision means fixing grammar and spelling rather than rethinking ideas and organization",
+    "probe": "What is the first thing you do when revising a draft? Is changing commas the same as revising? What's the difference between revision and editing?",
+    "exemplarRationale": "Revision involves global changes to ideas, organization, and evidence, while editing addresses surface-level correctness. Students conflate these because of time pressure and grading that emphasizes surface correctness over substantive improvement. Separating revision days from editing days and requiring 'revision memos' explaining global changes distinguishes the processes."
+  },
+  {
+    "id": "ela.writing.93",
+    "subject": "ela",
+    "standardKeyword": "writing",
+    "misconception": "Students believe introductions must start with a rhetorical question or dictionary definition",
+    "probe": "Write three different essay openings that do NOT use 'Have you ever wondered...?' or 'Webster defines X as...' Why might those formulaic hooks be weak?",
+    "exemplarRationale": "Effective introductions can use many strategies: startling statistics, brief anecdotes, vivid scenarios, or bold claims. Students rely on formulaic hooks because they were taught these as simplistic starting strategies without developing a repertoire of authentic rhetorical openings. Banning these hooks temporarily and teaching alternative moves expands their toolkit."
+  },
+  {
+    "id": "ela.grammar.94",
+    "subject": "ela",
+    "standardKeyword": "grammar",
+    "misconception": "Students believe passive voice is always a grammatical error that must be corrected to active voice",
+    "probe": "Is the sentence 'The experiment was conducted in a laboratory' wrong? When might passive voice be the better choice?",
+    "exemplarRationale": "Passive voice is a grammatical tool appropriate when the agent is unknown, unimportant, or when emphasizing the receiver of action. Students treat it as an error because of over-simplified advice ('Never use passive') and confusion between correctness and stylistic effectiveness. Teaching students to ask 'Do we need to know who did this?' reveals when passive serves rhetorical purpose."
+  },
+  {
+    "id": "math.integers.95",
+    "subject": "math",
+    "standardKeyword": "integers",
+    "misconception": "Students think negative signs are just subtraction symbols that can be ignored or detached from numbers",
+    "probe": "Solve: -4 + 7. Explain your thinking step by step.",
+    "exemplarRationale": "The minus sign serves two functions: as a binary operator (subtraction) and as a unary operator (negative indicator). Students develop this misconception because they first encounter minus only as subtraction, creating a schema that persists. Using colored chip models helps students see -4 as a single entity rather than a command to subtract."
+  },
+  {
+    "id": "math.integers.96",
+    "subject": "math",
+    "standardKeyword": "integers",
+    "misconception": "Students believe two negatives always make a positive regardless of the operation",
+    "probe": "Solve: -5 + (-3). How did you get your answer?",
+    "exemplarRationale": "The rule 'negative times negative equals positive' applies only to multiplication, not addition. Students overgeneralize this catchy rule to all operations involving negative numbers. Contextual models like debt (adding a debt to a debt increases total debt) help students distinguish when the rule applies."
+  },
+  {
+    "id": "math.integers.97",
+    "subject": "math",
+    "standardKeyword": "integers",
+    "misconception": "Students think -9 is larger than -2 because 9 is bigger than 2",
+    "probe": "Circle the larger number and explain why: A) -8 or B) -1",
+    "exemplarRationale": "Negative numbers have an inverse relationship between magnitude and value—larger absolute values mean smaller actual values. Students apply whole-number magnitude ordering because it served them well for years. Vertical number lines with thermometer or elevation contexts help visualize that 'further down' means smaller."
+  },
+  {
+    "id": "math.expressions.98",
+    "subject": "math",
+    "standardKeyword": "expressions",
+    "misconception": "Students believe the negative sign stays outside when substituting into expressions like x²",
+    "probe": "If x = -3, evaluate x². Show your work.",
+    "exemplarRationale": "When squaring a negative number, the entire value including the sign must be squared: (-3)² = 9. Students fail to bracket negative substitutions because they view the negative as separate from the number. Teaching 'pocket substitution'—always placing parentheses around the variable before substituting—prevents this error."
+  },
+  {
+    "id": "math.expressions.99",
+    "subject": "math",
+    "standardKeyword": "expressions",
+    "misconception": "Students interpret variables as labels for objects rather than unknown quantities",
+    "probe": "What does 8y mean in mathematics? Explain in your own words.",
+    "exemplarRationale": "Variables represent unknown quantities, not abbreviations for objects (8y means 8 times the value of y, not '8 yogurts'). This 'fruit salad algebra' develops because early algebra often uses letters that match object names. The box metaphor—y is whatever number is inside the box—helps students reconceptualize variables."
+  },
+  {
+    "id": "math.expressions.100",
+    "subject": "math",
+    "standardKeyword": "expressions",
+    "misconception": "Students feel compelled to combine unlike terms into a single answer",
+    "probe": "Simplify: 3x + 2. Can this be simplified further? Explain.",
+    "exemplarRationale": "Unlike terms (3x and 2) cannot be combined because they represent different quantities. Students develop this misconception because earlier math always produced single-number answers, creating discomfort with expressions as final answers. Area models showing 3x and 2 as distinct non-overlapping regions make the impossibility of combining visible."
+  },
+  {
+    "id": "math.equations.101",
+    "subject": "math",
+    "standardKeyword": "equations",
+    "misconception": "Students view the equals sign as a command to calculate rather than a statement of balance",
+    "probe": "Fill in the blank: 3 + 4 = ___ + 5. Explain how you found your answer.",
+    "exemplarRationale": "The equals sign indicates equivalence—both sides must have the same value (answer: 2). Years of problems like '3 + 4 = ___' train students to see equals as 'write the answer here.' Physical or digital balance scales demonstrate that both sides must maintain the same 'weight.'"
+  },
+  {
+    "id": "math.expressions.102",
+    "subject": "math",
+    "standardKeyword": "expressions",
+    "misconception": "Students multiply only the first term when distributing across parentheses",
+    "probe": "Expand: 2(x + 5). Show each step.",
+    "exemplarRationale": "Distribution requires multiplying every term inside parentheses by the outside factor: 2(x + 5) = 2x + 10. Students make this error due to left-to-right reading habits and cognitive load. Grid multiplication methods force systematic interaction between every term, preventing the 'forgotten' second term."
+  },
+  {
+    "id": "math.logarithms.103",
+    "subject": "math",
+    "standardKeyword": "logarithms",
+    "misconception": "Students believe log(A + B) equals log A + log B",
+    "probe": "True or False: log(A + B) = log A + log B. Prove your answer with numbers.",
+    "exemplarRationale": "Logarithm properties apply to products and quotients, not sums: log(AB) = log A + log B, but log(A + B) has no simple form. Students inappropriately extend the distributive property because it works so broadly elsewhere. Counter-example evaluation with simple numbers (log(10 + 100) vs. log 10 + log 100) disproves the misconception."
+  },
+  {
+    "id": "math.logarithms.104",
+    "subject": "math",
+    "standardKeyword": "logarithms",
+    "misconception": "Students drop the log notation in equations without applying inverse operations",
+    "probe": "Solve: log₂(x) = 3. Show all steps and explain each one.",
+    "exemplarRationale": "The logarithm is a function that requires its inverse (exponentiation) to 'undo' it, not simply dropping the notation. Students treat 'log' as a command rather than a mathematical object because function notation feels different from numbers. Comparing log to square root—you cannot just drop the radical symbol—helps students see logs as persistent operators."
+  },
+  {
+    "id": "math.exponents.105",
+    "subject": "math",
+    "standardKeyword": "exponents",
+    "misconception": "Students think negative exponents produce negative results",
+    "probe": "Evaluate: 2⁻³. Explain what the negative exponent means.",
+    "exemplarRationale": "Negative exponents indicate reciprocals, not negative values: 2⁻³ = 1/2³ = 1/8. Students conflate the negative sign in the exponent with the sign of the result because both involve 'negative.' Pattern extension tables (2³=8, 2²=4, 2¹=2, 2⁰=1, 2⁻¹=?) reveal that each step divides by 2, leading naturally to fractions."
+  },
+  {
+    "id": "math.exponents.106",
+    "subject": "math",
+    "standardKeyword": "exponents",
+    "misconception": "Students add exponents when they should multiply them in power-of-a-power problems",
+    "probe": "Simplify: (x³)⁴. Explain why your answer is correct.",
+    "exemplarRationale": "When raising a power to a power, exponents multiply: (x³)⁴ = x¹². Students confuse this with the product rule (xᵃ · xᵇ = xᵃ⁺ᵇ) because both involve combining exponents. Writing out the full expansion—(x·x·x)·(x·x·x)·(x·x·x)·(x·x·x)—makes the 12 factors visible and memorable."
+  },
+  {
+    "id": "math.ratios.107",
+    "subject": "math",
+    "standardKeyword": "ratios",
+    "misconception": "Students use additive reasoning when multiplicative reasoning is required",
+    "probe": "Eel A is 10cm and eats 2g of food. Eel B is 15cm. How much should Eel B eat if food scales with length? Explain your reasoning.",
+    "exemplarRationale": "Proportional relationships require multiplicative reasoning: 15cm is 1.5 times 10cm, so food should be 1.5 × 2g = 3g. Students default to additive reasoning ('15 is 5 more than 10, so add 5') because addition is learned first and feels intuitive. Ratio tables showing the constant multiplier help students see that differences vary while ratios remain constant."
+  },
+  {
+    "id": "math.ratios.108",
+    "subject": "math",
+    "standardKeyword": "ratios",
+    "misconception": "Students think doubling a shape's dimensions doubles its area",
+    "probe": "A 6-inch pizza costs $5. Is a 12-inch pizza for $10 a fair deal? Explain your reasoning.",
+    "exemplarRationale": "Area scales with the square of linear dimensions: doubling diameter quadruples area (a 12-inch pizza has 4× the area of a 6-inch). This 'illusion of linearity' persists because linear scaling is intuitive and area scaling is not. Drawing four small pizzas fitting inside the large pizza provides concrete visual proof."
+  },
+  {
+    "id": "math.ratios.109",
+    "subject": "math",
+    "standardKeyword": "ratios",
+    "misconception": "Students compare ratios by examining numerators and denominators separately",
+    "probe": "Which is stronger—Drink A (2 spoons sugar, 5 spoons water) or Drink B (3 spoons sugar, 7 spoons water)? Explain your comparison.",
+    "exemplarRationale": "Ratios must be compared as relationships, not by comparing components separately. Students 'cherry-pick' because comparing individual numbers is simpler than comparing relationships. Converting to common bases (sugar per 1 spoon of water: 0.4 vs. 0.43) or percentages makes valid comparison possible."
+  },
+  {
+    "id": "math.probability.110",
+    "subject": "math",
+    "standardKeyword": "probability",
+    "misconception": "Students believe all outcomes are equally likely in any random process",
+    "probe": "Two dice are rolled. Which sum is more likely: 2 or 7? Explain why.",
+    "exemplarRationale": "Different outcomes can have different probabilities based on the number of ways they can occur: sum of 7 has 6 combinations while sum of 2 has only 1. Students equate 'random' with 'equally likely' because everyday language conflates these concepts. Mapping all 36 outcomes in a sample space grid reveals the frequency differences."
+  },
+  {
+    "id": "math.statistics.111",
+    "subject": "math",
+    "standardKeyword": "statistics",
+    "misconception": "Students think small samples are just as reliable as large samples",
+    "probe": "Small hospital: 15 births/day. Large hospital: 45 births/day. Which is more likely to have over 60% boys on a given day? Explain.",
+    "exemplarRationale": "Smaller samples show more variability—extreme results are more likely in small samples (answer: small hospital). Students ignore sample size because the 'law of small numbers' feels intuitively true—a sample should represent its population. Having students compare coin flip percentages from 10 vs. 100 flips demonstrates small-sample volatility."
+  },
+  {
+    "id": "math.probability.112",
+    "subject": "math",
+    "standardKeyword": "probability",
+    "misconception": "Students judge probability by how random a sequence looks",
+    "probe": "Coin flips: Which is more likely—Sequence A (HTHTHH) or Sequence B (HHHHHH)? Explain.",
+    "exemplarRationale": "Every specific sequence of independent events has equal probability (both = 1/64 for 6 flips). Students reject 'patterned' sequences as unlikely because they violate expectations of what 'random' should look like. Walking through probability trees shows that each unique path has identical probability regardless of pattern."
+  },
+  {
+    "id": "math.statistics.113",
+    "subject": "math",
+    "standardKeyword": "statistics",
+    "misconception": "Students interpret p-values as the probability that a hypothesis is true",
+    "probe": "True or False: A p-value of 0.01 means there is a 99% chance the treatment works. Explain your reasoning.",
+    "exemplarRationale": "P-values indicate how surprising data would be IF the null hypothesis were true, not the probability that the hypothesis is true or false. Students make this error because probability of hypothesis seems like what we want to know. 'Null Hypothesis World' simulations show p-values measure data weirdness, not hypothesis truth."
+  },
+  {
+    "id": "math.functions.114",
+    "subject": "math",
+    "standardKeyword": "functions",
+    "misconception": "Students interpret graphs as literal pictures of situations",
+    "probe": "A speed-time graph shows a line going up, then flat, then down. A student says 'The car went up a hill, then flat, then down.' Is this correct? Explain.",
+    "exemplarRationale": "Graphs represent abstract relationships between variables, not physical pictures of motion paths. Students develop 'graph-as-picture' thinking because visual similarity feels meaningful and abstraction is cognitively demanding. Kinesthetic graphing with motion detectors helps students connect body movement to abstract representation."
+  },
+  {
+    "id": "math.functions.115",
+    "subject": "math",
+    "standardKeyword": "functions",
+    "misconception": "Students believe graphs can never touch or cross asymptotes",
+    "probe": "Can the graph of y = sin(x)/x ever cross y = 0? Explain what you know about asymptotes.",
+    "exemplarRationale": "Horizontal asymptotes describe end behavior, not barriers—functions can cross horizontal asymptotes (y = sin(x)/x crosses y = 0 infinitely often). Students learn asymptotes as 'lines you can't touch,' which is only true for vertical asymptotes. Reframing questions as 'What happens to y as x gets huge?' shifts focus to behavior, not boundaries."
+  },
+  {
+    "id": "math.functions.116",
+    "subject": "math",
+    "standardKeyword": "functions",
+    "misconception": "Students believe every function must be defined by a single continuous formula",
+    "probe": "Is a graph showing two separate line segments a function? Explain your reasoning.",
+    "exemplarRationale": "Functions require exactly one output for each input—piecewise definitions with multiple formulas can still be functions. Students resist piecewise functions because they expect mathematical objects to have unified, elegant descriptions. The 'function machine' metaphor—if each button press gives exactly one output, it's a function regardless of internal complexity—clarifies the definition."
+  },
+  {
+    "id": "math.functions.117",
+    "subject": "math",
+    "standardKeyword": "functions",
+    "misconception": "Students confuse the visible viewing window with the actual domain of a function",
+    "probe": "The graph of y = x² is shown from x = -2 to x = 2. What is the domain of this function? Explain.",
+    "exemplarRationale": "Domain refers to all possible inputs where the function is defined, not the portion currently displayed (domain of y = x² is all real numbers). Students confuse what they see with what exists because the screen creates artificial boundaries. Distinguishing 'viewing window' (what we see) from 'world' (where the function lives) addresses this directly."
+  },
+  {
+    "id": "math.proof.118",
+    "subject": "math",
+    "standardKeyword": "proof",
+    "misconception": "Students accept visual appearance as proof of geometric properties",
+    "probe": "A triangle looks isosceles but has angles of 70° and 71°. Is it isosceles? How do you know?",
+    "exemplarRationale": "Geometric properties must be established through logical deduction from definitions, not visual estimation. Students trust perception because measurement feels reliable and proof feels redundant. Dynamic geometry software where 'dragging' reveals whether properties hold under transformation demonstrates why visual appearance is insufficient."
+  },
+  {
+    "id": "math.proof.119",
+    "subject": "math",
+    "standardKeyword": "proof",
+    "misconception": "Students believe checking examples constitutes mathematical proof",
+    "probe": "A student measured 100 triangles and found all angle sums equal 180°. Is this a proof that all triangles have angles summing to 180°? Explain.",
+    "exemplarRationale": "Proof requires logical argument from axioms that covers all cases, not empirical verification of samples. Students equate evidence with proof because science uses evidence and math uses proof, but the distinction is subtle. Showing patterns that hold for cases 1-99 but fail at 1000 (like circle division) demonstrates that examples cannot guarantee universality."
+  },
+  {
+    "id": "math.proof.120",
+    "subject": "math",
+    "standardKeyword": "proof",
+    "misconception": "Students assume that if A implies B, then B must imply A",
+    "probe": "If it rains, the grass is wet. The grass is wet. Did it rain? Explain your logic.",
+    "exemplarRationale": "Conditionals are not reversible—the converse of a true statement may be false (wet grass could be from sprinklers). Students assume reversibility because many everyday relationships feel symmetric. Venn diagrams showing 'Squares' as a subset of 'Rectangles' illustrate that being in the outer set doesn't guarantee the inner set."
+  },
+  {
+    "id": "math.proof.121",
+    "subject": "math",
+    "standardKeyword": "proof",
+    "misconception": "Students see proof as confirming obvious facts rather than explaining why they are true",
+    "probe": "Why do mathematicians prove the Pythagorean theorem if everyone already knows it's true?",
+    "exemplarRationale": "Proof explains WHY something is true, reveals underlying structure, and extends to new situations—not merely confirms known facts. Students view proof as busywork because they first encounter it for things that already seem obvious. Shifting focus from 'proving that' to 'explaining why' through visual rearrangement proofs transforms proof into a tool for understanding."
+  }
+]
