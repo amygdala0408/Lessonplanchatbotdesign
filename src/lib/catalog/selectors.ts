@@ -153,7 +153,12 @@ export interface SelectedResource extends ResourceRecord {
   format: string;
 }
 
-export function inferResourceFormat(resource: Pick<ResourceRecord, 'title' | 'source' | 'url' | 'accessibility'>): string {
+export function inferResourceFormat(resource: {
+  title?: string;
+  source?: string;
+  url?: string;
+  accessibility?: string;
+}): string {
   const haystack = [resource.title, resource.source, resource.url, resource.accessibility]
     .filter(Boolean)
     .join(' ')
