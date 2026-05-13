@@ -28,6 +28,139 @@ function getStandardText(s: string | Standard | undefined): string {
   return [s.code, s.description].filter(Boolean).join(' — ');
 }
 
+// -- Print-pack template selection ------------------------------------------
+
+type GraphicOrganizerKind =
+  | 'cer'
+  | 'compare-contrast'
+  | 'sequence'
+  | 'cause-effect'
+  | 'problem-solution'
+  | 'concept-map';
+
+/**
+ * Pick the right graphic organizer template based on the dominant cognitive
+ * action in the lesson's objectives. We dispatch on the verbs the curated
+ * `dok_lexicon` catalog has trained the team to use, so the printed organizer
+ * actually scaffolds the work students will do — not a generic 4-box grid.
+ */
+function pickGraphicOrganizerKind(
+  subject: string | undefined,
+  objectives: (string | Objective)[] | undefined,
+): GraphicOrganizerKind {
+  const haystack = (objectives ?? [])
+    .map((o) => (typeof o === 'string' ? o : o.text))
+    .join(' ')
+    .toLowerCase();
+  const subj = (subject || '').toLowerCase();
+
+  // CER for cite/analyze/argue/justify/evaluate — the ELA/SocStud/Sci default
+  if (/\b(cite|analyz|argue|justif|claim|evidence|evaluate|critique|defend|prove|support)\b/.test(haystack)) {
+    return 'cer';
+  }
+  if (/\b(compare|contrast|distinguish|differentiate)\b/.test(haystack)) {
+    return 'compare-contrast';
+  }
+  if (/\b(cause|effect|impact|consequence|because|infer why|explain why)\b/.test(haystack)) {
+    return 'cause-effect';
+  }
+  if (/\b(model|sequence|step|process|procedure|order|phases|stages|describe how)\b/.test(haystack)) {
+    return 'sequence';
+  }
+  if (/\b(problem|solv|design|engineer|fix|address)\b/.test(haystack) && /math|science|engineering|stem/.test(subj)) {
+    return 'problem-solution';
+  }
+  return 'concept-map';
+}
+
+/**
+ * Heuristic: when we have an objective that demands citing evidence /
+ * argument from a text, the during-reading task should look like a CER
+ * note-catcher. Otherwise default to a general "facts + inferences" frame.
+ */
+function pickReadingTaskKind(
+  objectives: (string | Objective)[] | undefined,
+): 'cer' | 'facts-inferences' | 'process' {
+  const haystack = (objectives ?? [])
+    .map((o) => (typeof o === 'string' ? o : o.text))
+    .join(' ')
+    .toLowerCase();
+  if (/\b(cite|claim|evidence|argue|justif|defend|critique|prove)\b/.test(haystack)) return 'cer';
+  if (/\b(model|sequence|step|process|procedure|describe how)\b/.test(haystack)) return 'process';
+  return 'facts-inferences';
+}
+
+function getSelectedTextOption(
+  textOptions: { title: string; source: string; lexile?: string; url?: string; rationale?: string; selected: boolean }[] | undefined,
+) {
+  if (!textOptions || textOptions.length === 0) return null;
+  return textOptions.find((t) => t.selected) ?? textOptions[0];
+}
+
+/**
+ * Friendly platform metadata for the "How to access" panel. We surface ONLY
+ * the platforms actually present in the lesson's textOptions so teachers
+ * don't see irrelevant instructions for sources they aren't using.
+ */
+const PLATFORM_GUIDES: { match: RegExp; name: string; instructions: string; url: string }[] = [
+  {
+    match: /commonlit/i,
+    name: 'CommonLit',
+    instructions: 'Free teacher account required. Sign up at commonlit.org for full texts, audio read-aloud, and guided reading features.',
+    url: 'https://www.commonlit.org',
+  },
+  {
+    match: /newsela/i,
+    name: 'Newsela',
+    instructions: 'Free teacher account required. Same article available at multiple Lexile levels for differentiation.',
+    url: 'https://newsela.com',
+  },
+  {
+    match: /readworks/i,
+    name: 'ReadWorks',
+    instructions: 'Free account required. Audio read-aloud and comprehension questions built in.',
+    url: 'https://www.readworks.org',
+  },
+  {
+    match: /gutenberg|public domain/i,
+    name: 'Project Gutenberg / Public Domain',
+    instructions: 'No account needed. Free access to classic texts at gutenberg.org.',
+    url: 'https://www.gutenberg.org',
+  },
+  {
+    match: /phet/i,
+    name: 'PhET Interactive Simulations',
+    instructions: 'No account needed. Browser-based simulations from University of Colorado Boulder. Keyboard-navigable.',
+    url: 'https://phet.colorado.edu',
+  },
+  {
+    match: /khan/i,
+    name: 'Khan Academy',
+    instructions: 'Free account optional. Videos, practice problems, and mastery-based progressions.',
+    url: 'https://www.khanacademy.org',
+  },
+  {
+    match: /youtube|ted-?ed|tedx/i,
+    name: 'Video Resource',
+    instructions: 'No account needed for viewing. Enable closed captions for accessibility.',
+    url: '',
+  },
+];
+
+function pickPlatformGuides(sources: string[]): typeof PLATFORM_GUIDES {
+  const seen = new Set<string>();
+  const out: typeof PLATFORM_GUIDES = [];
+  for (const s of sources) {
+    for (const g of PLATFORM_GUIDES) {
+      if (g.match.test(s) && !seen.has(g.name)) {
+        seen.add(g.name);
+        out.push(g);
+      }
+    }
+  }
+  return out;
+}
+
 // Generate a stable reference ID based on lesson content
 function generateStableRefId(title: string, subject: string, gradeLevel: string): string {
   const input = `${title}-${subject}-${gradeLevel}`.toLowerCase();
@@ -58,35 +191,61 @@ function extractDOKLevel(objective: string): number | null {
 }
 
 // Helper to format text with proper line breaks for steps, bullets, numbered items
+/**
+ * Strip markdown formatting that occasionally leaks into JSON string values
+ * (Penny is a Markdown-native model and sometimes writes **bold** / `code`
+ * mid-description). We render the lesson plan as proper structured layout, so
+ * literal `**` characters in body text are always a bug surface.
+ *
+ * Conservative: only strips emphasis/heading/code/link syntax. Leaves the
+ * substantive content intact.
+ */
+function stripInlineMarkdown(raw: string): string {
+  if (!raw) return '';
+  return raw
+    .replace(/\*\*([^*]+)\*\*/g, '$1')
+    .replace(/\*\*/g, '')
+    .replace(/__([^_]+)__/g, '$1')
+    .replace(/_(?=\S)([^_]+?)(?<=\S)_/g, '$1')
+    .replace(/(^|\s)\*(?=\S)([^*\n]+?)(?<=\S)\*(?=\s|$|[.,;:!?])/g, '$1$2')
+    .replace(/`([^`]+)`/g, '$1')
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+    .replace(/^#{1,6}\s+/gm, '')
+    .replace(/\s+\*\s*$/g, '')
+    .replace(/\u00A0/g, ' ')
+    .trim();
+}
+
 const FormattedText = ({ text, className = "" }: { text: string; className?: string }) => {
   if (!text) return null;
-  
+
+  const cleaned = stripInlineMarkdown(text);
+  if (!cleaned) return null;
+
   // Split by common delimiters: numbered items (1. 2. etc), bullets (- or •), or double newlines
-  const lines = text
+  const lines = cleaned
     .split(/(?=\d+\.\s)|(?=[-•]\s)|(?:\n\n)|\n(?=[A-Z])/)
-    .map(line => line.trim())
+    .map(line => stripInlineMarkdown(line.trim()))
     .filter(line => line.length > 0);
-  
+
   if (lines.length <= 1) {
     // Check if it's a single block that should be split by sentences for teacher moves
-    const sentences = text.split(/(?<=[.!?])\s+(?=[A-Z])/);
+    const sentences = cleaned.split(/(?<=[.!?])\s+(?=[A-Z])/);
     if (sentences.length > 2) {
       return (
         <div className={className}>
           {sentences.map((sentence, i) => (
-            <p key={i} className="mb-2 last:mb-0">{sentence.trim()}</p>
+            <p key={i} className="mb-2 last:mb-0">{stripInlineMarkdown(sentence.trim())}</p>
           ))}
         </div>
       );
     }
-    return <p className={className}>{text}</p>;
+    return <p className={className}>{cleaned}</p>;
   }
-  
-  // Check if it's a numbered list
+
   const isNumberedList = lines.some(line => /^\d+\./.test(line));
-  // Check if it's a bulleted list
   const isBulletedList = lines.some(line => /^[-•]/.test(line));
-  
+
   if (isNumberedList) {
     return (
       <ol className={cn("list-decimal pl-5 space-y-2", className)}>
@@ -96,7 +255,7 @@ const FormattedText = ({ text, className = "" }: { text: string; className?: str
       </ol>
     );
   }
-  
+
   if (isBulletedList) {
     return (
       <ul className={cn("list-disc pl-5 space-y-2", className)}>
@@ -106,8 +265,7 @@ const FormattedText = ({ text, className = "" }: { text: string; className?: str
       </ul>
     );
   }
-  
-  // Default: render as paragraphs
+
   return (
     <div className={className}>
       {lines.map((line, i) => (
@@ -456,78 +614,289 @@ export const LessonPlan = forwardRef<HTMLDivElement, LessonPlanRenderProps>(({
             )}
 
             {/* Student Facing Materials Section - Each on its own page for print */}
-            
+
             {/* PAGE BREAK: Exit Slip Worksheet */}
-            <div className="print:break-before-page mt-12 pt-12 border-t-4 border-dashed border-[#1a1a1a] print:mt-0 print:pt-8 print:border-t-0">
-                <div className="border-2 border-[#1a1a1a] p-8 bg-white shadow-sm relative print:border-2 print:border-black print:shadow-none print:min-h-[90vh]">
+            {(() => {
+              const taskKind = pickReadingTaskKind(objectives);
+              return (
+                <div className="print:break-before-page mt-12 pt-12 border-t-4 border-dashed border-[#1a1a1a] print:mt-0 print:pt-8 print:border-t-0">
+                  <div className="border-2 border-[#1a1a1a] p-8 bg-white shadow-sm relative print:border-2 print:border-black print:shadow-none print:min-h-[90vh]">
                     <div className="absolute top-4 right-4 text-xs font-mono border border-[#1a1a1a] p-1 print:border-black">Name: _________________</div>
                     <div className="absolute top-4 left-4 text-xs font-mono opacity-50">Exit Slip</div>
-                    
-                    <h3 className="text-center font-bold text-lg mt-8 mb-4 uppercase tracking-widest print:font-mono">{title || "Lesson"}</h3>
-                    <p className="text-center text-sm mb-8 italic opacity-70">Exit Slip - Check for Understanding</p>
-                    
-                    <div className="space-y-6">
-                        {exitSlip ? (
-                          <div className="p-4 bg-[#f5f5f0] border border-[#1a1a1a] mb-6 print:bg-white">
-                            <p className="font-medium text-sm">{exitSlip}</p>
-                          </div>
-                        ) : (
-                          <div className="p-4 bg-[#f5f5f0] border border-[#1a1a1a] mb-6 print:bg-white">
-                            <p className="font-medium text-sm">Respond to the prompt below:</p>
-                          </div>
-                        )}
-                        
-                        <div className="space-y-4">
-                            <div className="h-16 border-b border-[#1a1a1a] opacity-50 print:border-black"></div>
-                            <div className="h-16 border-b border-[#1a1a1a] opacity-50 print:border-black"></div>
-                            <div className="h-16 border-b border-[#1a1a1a] opacity-50 print:border-black"></div>
-                            <div className="h-16 border-b border-[#1a1a1a] opacity-50 print:border-black"></div>
-                        </div>
-                        
-                        {rubric && rubric.length > 0 && (
-                          <div className="mt-8 pt-4 border-t border-dashed border-[#1a1a1a]/30">
-                            <p className="text-xs font-bold uppercase tracking-widest mb-2 opacity-60">Scoring Guide</p>
-                            <div className="flex gap-2 text-xs">
-                              {rubric.map((r, i) => (
-                                <div key={i} className="flex-1 text-center p-2 border border-[#1a1a1a]/30">
-                                  <span className="font-bold">{r.score}</span>: {r.description}
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-                        )}
-                    </div>
-                </div>
-            </div>
 
-            {/* PAGE BREAK: Graphic Organizer */}
-            <div className="print:break-before-page mt-8 print:mt-0 print:pt-8">
-                <div className="border-2 border-[#1a1a1a] p-8 bg-white shadow-sm relative print:border-2 print:border-black print:shadow-none print:min-h-[90vh]">
+                    <h3 className="text-center font-bold text-lg mt-8 mb-1 uppercase tracking-widest print:font-mono">{title || "Lesson"}</h3>
+                    <p className="text-center text-xs mb-6 italic opacity-70">Exit Slip · Check for Understanding</p>
+
+                    {/* Success-criteria checklist drives student self-assessment */}
+                    {successCriteria && successCriteria.length > 0 && (
+                      <div className="mb-4 p-3 border border-[#1a1a1a] bg-[#fafafa] print:bg-white print:border-black">
+                        <div className="text-[10px] font-mono uppercase tracking-widest mb-2">Before you write — check yourself</div>
+                        <ul className="space-y-1 text-xs">
+                          {successCriteria.map((c, i) => (
+                            <li key={i} className="flex items-start gap-2">
+                              <span className="inline-block w-3 h-3 border border-[#1a1a1a] flex-shrink-0 mt-0.5 print:border-black"></span>
+                              <span>{c}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    {/* The prompt itself */}
+                    <div className="p-4 bg-[#f5f5f0] border-2 border-[#1a1a1a] mb-4 print:bg-white print:border-black">
+                      <div className="text-[10px] font-mono uppercase tracking-widest mb-1">Prompt</div>
+                      <p className="font-medium text-sm">
+                        {exitSlip || 'What is the most important thing you learned today? How do you know it?'}
+                      </p>
+                    </div>
+
+                    {/* Structured response area — CER for analyze/cite/argue objectives, otherwise lined */}
+                    {taskKind === 'cer' ? (
+                      <div className="space-y-3 text-xs">
+                        <div className="p-3 border border-[#1a1a1a] print:border-black">
+                          <div className="text-[10px] font-mono uppercase tracking-widest mb-2">My Claim</div>
+                          <div className="h-8 border-b border-[#1a1a1a]/40 print:border-black"></div>
+                          <div className="h-8 border-b border-[#1a1a1a]/40 print:border-black"></div>
+                        </div>
+                        <div className="p-3 border border-[#1a1a1a] print:border-black">
+                          <div className="text-[10px] font-mono uppercase tracking-widest mb-2">Evidence (cite the text)</div>
+                          <div className="h-8 border-b border-[#1a1a1a]/40 print:border-black"></div>
+                          <div className="h-8 border-b border-[#1a1a1a]/40 print:border-black"></div>
+                          <div className="h-8 border-b border-[#1a1a1a]/40 print:border-black"></div>
+                        </div>
+                        <div className="p-3 border border-[#1a1a1a] print:border-black">
+                          <div className="text-[10px] font-mono uppercase tracking-widest mb-2">Reasoning — why does this evidence support your claim?</div>
+                          <div className="h-8 border-b border-[#1a1a1a]/40 print:border-black"></div>
+                          <div className="h-8 border-b border-[#1a1a1a]/40 print:border-black"></div>
+                          <div className="h-8 border-b border-[#1a1a1a]/40 print:border-black"></div>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="space-y-3">
+                        <div className="h-12 border-b border-[#1a1a1a]/60 print:border-black"></div>
+                        <div className="h-12 border-b border-[#1a1a1a]/60 print:border-black"></div>
+                        <div className="h-12 border-b border-[#1a1a1a]/60 print:border-black"></div>
+                        <div className="h-12 border-b border-[#1a1a1a]/60 print:border-black"></div>
+                        <div className="h-12 border-b border-[#1a1a1a]/60 print:border-black"></div>
+                      </div>
+                    )}
+
+                    {/* Self-assessment + rubric */}
+                    <div className="mt-6 pt-3 border-t border-dashed border-[#1a1a1a]/40 print:border-black">
+                      <div className="flex items-center gap-3 mb-3 text-xs">
+                        <span className="font-bold uppercase tracking-widest text-[10px]">How I&apos;m feeling about this:</span>
+                        <span className="inline-flex items-center gap-2">
+                          <span className="w-5 h-5 border border-[#1a1a1a] flex items-center justify-center print:border-black">1</span>
+                          <span className="text-[10px]">Lost</span>
+                        </span>
+                        <span className="inline-flex items-center gap-2">
+                          <span className="w-5 h-5 border border-[#1a1a1a] flex items-center justify-center print:border-black">2</span>
+                          <span className="text-[10px]">Getting it</span>
+                        </span>
+                        <span className="inline-flex items-center gap-2">
+                          <span className="w-5 h-5 border border-[#1a1a1a] flex items-center justify-center print:border-black">3</span>
+                          <span className="text-[10px]">Solid</span>
+                        </span>
+                        <span className="inline-flex items-center gap-2">
+                          <span className="w-5 h-5 border border-[#1a1a1a] flex items-center justify-center print:border-black">4</span>
+                          <span className="text-[10px]">Could teach it</span>
+                        </span>
+                      </div>
+                      {rubric && rubric.length > 0 && (
+                        <>
+                          <p className="text-[10px] font-bold uppercase tracking-widest mb-2 opacity-60">Scoring Guide (teacher)</p>
+                          <div className="grid grid-cols-4 gap-2 text-[10px]">
+                            {rubric.map((r, i) => (
+                              <div key={i} className="text-center p-2 border border-[#1a1a1a]/40 print:border-black">
+                                <div className="font-bold text-sm">{r.score}</div>
+                                <div className="opacity-80">{r.description}</div>
+                              </div>
+                            ))}
+                          </div>
+                        </>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              );
+            })()}
+
+            {/* PAGE BREAK: Graphic Organizer — content-aware template */}
+            {(() => {
+              const kind = pickGraphicOrganizerKind(subject, objectives);
+              const labelByKind: Record<GraphicOrganizerKind, string> = {
+                cer: 'Claim · Evidence · Reasoning',
+                'compare-contrast': 'Compare & Contrast',
+                sequence: 'Sequence / Process',
+                'cause-effect': 'Cause & Effect',
+                'problem-solution': 'Problem · Solution',
+                'concept-map': 'Concept Map',
+              };
+              return (
+                <div className="print:break-before-page mt-8 print:mt-0 print:pt-8">
+                  <div className="border-2 border-[#1a1a1a] p-8 bg-white shadow-sm relative print:border-2 print:border-black print:shadow-none print:min-h-[90vh]">
                     <div className="absolute top-4 right-4 text-xs font-mono border border-[#1a1a1a] p-1 print:border-black">Name: _________________</div>
                     <div className="absolute top-4 left-4 text-xs font-mono opacity-50">Graphic Organizer</div>
-                    
-                    <h3 className="text-center font-bold text-lg mt-8 mb-8 uppercase tracking-widest print:font-mono">{title || "Lesson"} - Graphic Organizer</h3>
-                    
-                    <div className="grid grid-cols-2 gap-4">
-                        <div className="border-2 border-[#1a1a1a] p-4 min-h-[200px] print:border-black">
-                            <p className="font-bold text-sm mb-2 print:font-mono">Key Concept 1</p>
-                            <div className="h-full"></div>
+
+                    <h3 className="text-center font-bold text-lg mt-8 mb-1 uppercase tracking-widest print:font-mono">
+                      {labelByKind[kind]}
+                    </h3>
+                    <p className="text-center text-xs mb-6 italic opacity-70">
+                      Use this organizer to structure your thinking before you write or share.
+                    </p>
+
+                    {kind === 'cer' && (
+                      <div className="space-y-4 text-xs">
+                        <div className="border-2 border-[#1a1a1a] p-3 print:border-black">
+                          <div className="text-[10px] font-mono uppercase tracking-widest mb-1">Claim — what do you think is true?</div>
+                          <p className="italic opacity-70 text-[11px] mb-2">Try: &ldquo;The text shows that ___.&rdquo;</p>
+                          <div className="h-12 border-b border-[#1a1a1a]/40 print:border-black"></div>
+                          <div className="h-12 border-b border-[#1a1a1a]/40 print:border-black"></div>
                         </div>
-                        <div className="border-2 border-[#1a1a1a] p-4 min-h-[200px] print:border-black">
-                            <p className="font-bold text-sm mb-2 print:font-mono">Key Concept 2</p>
-                            <div className="h-full"></div>
+                        <div className="grid grid-cols-2 gap-4">
+                          <div className="border-2 border-[#1a1a1a] p-3 print:border-black">
+                            <div className="text-[10px] font-mono uppercase tracking-widest mb-1">Evidence #1 (quote + location)</div>
+                            <p className="italic opacity-70 text-[11px] mb-2">&ldquo;___ ,&rdquo; (line/paragraph ___)</p>
+                            {[1, 2, 3].map((n) => (
+                              <div key={n} className="h-8 border-b border-[#1a1a1a]/40 print:border-black"></div>
+                            ))}
+                          </div>
+                          <div className="border-2 border-[#1a1a1a] p-3 print:border-black">
+                            <div className="text-[10px] font-mono uppercase tracking-widest mb-1">Evidence #2 (quote + location)</div>
+                            <p className="italic opacity-70 text-[11px] mb-2">&ldquo;___ ,&rdquo; (line/paragraph ___)</p>
+                            {[1, 2, 3].map((n) => (
+                              <div key={n} className="h-8 border-b border-[#1a1a1a]/40 print:border-black"></div>
+                            ))}
+                          </div>
                         </div>
-                        <div className="col-span-2 border-2 border-[#1a1a1a] p-4 min-h-[150px] print:border-black">
-                            <p className="font-bold text-sm mb-2 print:font-mono">Connection / Main Idea</p>
-                            <div className="h-full"></div>
+                        <div className="border-2 border-[#1a1a1a] p-3 print:border-black">
+                          <div className="text-[10px] font-mono uppercase tracking-widest mb-1">Reasoning — why does this evidence support your claim?</div>
+                          <p className="italic opacity-70 text-[11px] mb-2">Try: &ldquo;This evidence shows ___ because ___.&rdquo;</p>
+                          {[1, 2, 3, 4].map((n) => (
+                            <div key={n} className="h-8 border-b border-[#1a1a1a]/40 print:border-black"></div>
+                          ))}
                         </div>
-                        <div className="col-span-2 border-2 border-[#1a1a1a] p-4 min-h-[100px] print:border-black">
-                            <p className="font-bold text-sm mb-2 print:font-mono">Evidence from Text</p>
-                            <div className="h-full"></div>
+                      </div>
+                    )}
+
+                    {kind === 'compare-contrast' && (
+                      <div className="text-xs">
+                        <div className="grid grid-cols-2 gap-2 mb-3 text-[10px] font-mono uppercase tracking-widest">
+                          <div className="text-center">Item A</div>
+                          <div className="text-center">Item B</div>
                         </div>
-                    </div>
+                        <div className="grid grid-cols-2 gap-2 mb-4">
+                          <div className="h-8 border border-[#1a1a1a] print:border-black"></div>
+                          <div className="h-8 border border-[#1a1a1a] print:border-black"></div>
+                        </div>
+                        <div className="border-2 border-[#1a1a1a] p-3 mb-3 print:border-black">
+                          <div className="text-[10px] font-mono uppercase tracking-widest mb-2">Only A (unique)</div>
+                          {[1, 2, 3].map((n) => <div key={n} className="h-8 border-b border-[#1a1a1a]/40 print:border-black"></div>)}
+                        </div>
+                        <div className="border-2 border-[#1a1a1a] p-3 mb-3 bg-[#fafafa] print:bg-white print:border-black">
+                          <div className="text-[10px] font-mono uppercase tracking-widest mb-2">Both share</div>
+                          {[1, 2, 3].map((n) => <div key={n} className="h-8 border-b border-[#1a1a1a]/40 print:border-black"></div>)}
+                        </div>
+                        <div className="border-2 border-[#1a1a1a] p-3 mb-3 print:border-black">
+                          <div className="text-[10px] font-mono uppercase tracking-widest mb-2">Only B (unique)</div>
+                          {[1, 2, 3].map((n) => <div key={n} className="h-8 border-b border-[#1a1a1a]/40 print:border-black"></div>)}
+                        </div>
+                        <div className="border-2 border-[#1a1a1a] p-3 print:border-black">
+                          <div className="text-[10px] font-mono uppercase tracking-widest mb-1">So what? — what does this comparison reveal?</div>
+                          {[1, 2, 3].map((n) => <div key={n} className="h-8 border-b border-[#1a1a1a]/40 print:border-black"></div>)}
+                        </div>
+                      </div>
+                    )}
+
+                    {kind === 'sequence' && (
+                      <div className="space-y-3 text-xs">
+                        <p className="opacity-80 mb-2">Capture each step in order. Use one box per step.</p>
+                        {[1, 2, 3, 4, 5].map((n) => (
+                          <div key={n} className="flex items-start gap-3">
+                            <div className="flex-shrink-0 w-10 h-10 border-2 border-[#1a1a1a] flex items-center justify-center font-bold print:border-black">
+                              {n}
+                            </div>
+                            <div className="flex-1 border-2 border-[#1a1a1a] p-3 print:border-black">
+                              <div className="text-[10px] font-mono uppercase tracking-widest mb-1">Step {n}</div>
+                              <div className="h-8 border-b border-[#1a1a1a]/40 print:border-black"></div>
+                              <div className="h-8 border-b border-[#1a1a1a]/40 print:border-black"></div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+
+                    {kind === 'cause-effect' && (
+                      <div className="space-y-4 text-xs">
+                        <div className="grid grid-cols-2 gap-3">
+                          <div className="border-2 border-[#1a1a1a] p-3 print:border-black">
+                            <div className="text-[10px] font-mono uppercase tracking-widest mb-2">Cause #1</div>
+                            {[1, 2, 3].map((n) => <div key={n} className="h-8 border-b border-[#1a1a1a]/40 print:border-black"></div>)}
+                          </div>
+                          <div className="border-2 border-[#1a1a1a] p-3 print:border-black">
+                            <div className="text-[10px] font-mono uppercase tracking-widest mb-2">Cause #2</div>
+                            {[1, 2, 3].map((n) => <div key={n} className="h-8 border-b border-[#1a1a1a]/40 print:border-black"></div>)}
+                          </div>
+                        </div>
+                        <div className="text-center text-2xl font-bold opacity-50">↓</div>
+                        <div className="border-2 border-[#1a1a1a] p-3 bg-[#fafafa] print:bg-white print:border-black">
+                          <div className="text-[10px] font-mono uppercase tracking-widest mb-2">Effect / Outcome</div>
+                          {[1, 2, 3, 4].map((n) => <div key={n} className="h-8 border-b border-[#1a1a1a]/40 print:border-black"></div>)}
+                        </div>
+                        <div className="border-2 border-[#1a1a1a] p-3 print:border-black">
+                          <div className="text-[10px] font-mono uppercase tracking-widest mb-2">Explain the connection</div>
+                          {[1, 2, 3].map((n) => <div key={n} className="h-8 border-b border-[#1a1a1a]/40 print:border-black"></div>)}
+                        </div>
+                      </div>
+                    )}
+
+                    {kind === 'problem-solution' && (
+                      <div className="space-y-4 text-xs">
+                        <div className="border-2 border-[#1a1a1a] p-3 print:border-black">
+                          <div className="text-[10px] font-mono uppercase tracking-widest mb-2">Problem (what's hard?)</div>
+                          {[1, 2, 3].map((n) => <div key={n} className="h-8 border-b border-[#1a1a1a]/40 print:border-black"></div>)}
+                        </div>
+                        <div className="border-2 border-[#1a1a1a] p-3 print:border-black">
+                          <div className="text-[10px] font-mono uppercase tracking-widest mb-2">What I know / have</div>
+                          {[1, 2, 3].map((n) => <div key={n} className="h-8 border-b border-[#1a1a1a]/40 print:border-black"></div>)}
+                        </div>
+                        <div className="border-2 border-[#1a1a1a] p-3 print:border-black">
+                          <div className="text-[10px] font-mono uppercase tracking-widest mb-2">Strategy / approach</div>
+                          {[1, 2, 3].map((n) => <div key={n} className="h-8 border-b border-[#1a1a1a]/40 print:border-black"></div>)}
+                        </div>
+                        <div className="border-2 border-[#1a1a1a] p-3 bg-[#fafafa] print:bg-white print:border-black">
+                          <div className="text-[10px] font-mono uppercase tracking-widest mb-2">Solution + check</div>
+                          {[1, 2, 3, 4].map((n) => <div key={n} className="h-8 border-b border-[#1a1a1a]/40 print:border-black"></div>)}
+                        </div>
+                      </div>
+                    )}
+
+                    {kind === 'concept-map' && (
+                      <div className="text-xs">
+                        <div className="border-2 border-[#1a1a1a] p-3 mb-4 bg-[#fafafa] print:bg-white print:border-black">
+                          <div className="text-[10px] font-mono uppercase tracking-widest mb-2 text-center">Big Idea</div>
+                          {[1, 2].map((n) => <div key={n} className="h-8 border-b border-[#1a1a1a]/40 print:border-black"></div>)}
+                        </div>
+                        <div className="grid grid-cols-3 gap-3">
+                          {[1, 2, 3].map((n) => (
+                            <div key={n} className="border-2 border-[#1a1a1a] p-3 print:border-black">
+                              <div className="text-[10px] font-mono uppercase tracking-widest mb-2">Supporting Idea {n}</div>
+                              {[1, 2, 3, 4].map((m) => (
+                                <div key={m} className="h-8 border-b border-[#1a1a1a]/40 print:border-black"></div>
+                              ))}
+                            </div>
+                          ))}
+                        </div>
+                        <div className="border-2 border-[#1a1a1a] p-3 mt-4 print:border-black">
+                          <div className="text-[10px] font-mono uppercase tracking-widest mb-2">How are these connected?</div>
+                          {[1, 2, 3].map((n) => <div key={n} className="h-8 border-b border-[#1a1a1a]/40 print:border-black"></div>)}
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 </div>
-            </div>
+              );
+            })()}
 
             {/* PAGE BREAK: Sentence Frames (if supports exist) */}
             {supports && (supports.el?.length > 0 || supports.all?.length > 0) && (
@@ -755,90 +1124,262 @@ export const LessonPlan = forwardRef<HTMLDivElement, LessonPlanRenderProps>(({
               </div>
             )}
 
-            {/* PAGE BREAK: How to Use This Lesson Pack */}
-            <div className="print:break-before-page mt-8 print:mt-0 print:pt-8">
-                <div className="border-2 border-[#1a1a1a] p-8 bg-white shadow-sm relative print:border-2 print:border-black print:shadow-none">
+            {/* PAGE BREAK: How to Use This Lesson Pack — only platforms actually used */}
+            {(() => {
+              const sourcesUsed = (textOptions ?? []).map((t) => t.source).filter(Boolean);
+              const guides = pickPlatformGuides(sourcesUsed);
+              return (
+                <div className="print:break-before-page mt-8 print:mt-0 print:pt-8">
+                  <div className="border-2 border-[#1a1a1a] p-8 bg-white shadow-sm relative print:border-2 print:border-black print:shadow-none">
                     <div className="text-center mb-6">
-                        <h4 className="font-['Oswald'] font-bold uppercase tracking-widest text-lg border-b-2 border-[#1a1a1a] inline-block pb-1 print:font-mono print:border-black">How to Use This Lesson Pack</h4>
+                      <h4 className="font-['Oswald'] font-bold uppercase tracking-widest text-lg border-b-2 border-[#1a1a1a] inline-block pb-1 print:font-mono print:border-black">
+                        How to Use This Lesson Pack
+                      </h4>
                     </div>
-                    
+
                     <div className="space-y-6 text-sm">
+                      {guides.length > 0 && (
                         <section>
-                            <h5 className="font-bold uppercase tracking-widest text-xs mb-2 border-b border-[#1a1a1a]/30 pb-1">📚 Accessing Text Sources</h5>
-                            <div className="space-y-3 pl-4">
-                                <div>
-                                    <p className="font-semibold">CommonLit</p>
-                                    <p className="text-xs opacity-80">Free teacher account required. Sign up at commonlit.org to access full texts, audio versions, and guided reading features.</p>
-                                </div>
-                                <div>
-                                    <p className="font-semibold">Newsela</p>
-                                    <p className="text-xs opacity-80">Free teacher account required. Texts available at multiple Lexile levels. Sign up at newsela.com.</p>
-                                </div>
-                                <div>
-                                    <p className="font-semibold">ReadWorks</p>
-                                    <p className="text-xs opacity-80">Free account required. Includes audio support and comprehension questions. Visit readworks.org.</p>
-                                </div>
-                                <div>
-                                    <p className="font-semibold">Project Gutenberg / Public Domain</p>
-                                    <p className="text-xs opacity-80">No account needed. Free access to classic texts at gutenberg.org.</p>
-                                </div>
-                            </div>
+                          <h5 className="font-bold uppercase tracking-widest text-xs mb-2 border-b border-[#1a1a1a]/30 pb-1 print:border-black">
+                            Accessing Today&apos;s Source{guides.length > 1 ? 's' : ''}
+                          </h5>
+                          <div className="space-y-3 pl-4">
+                            {guides.map((g) => (
+                              <div key={g.name}>
+                                <p className="font-semibold">{g.name}</p>
+                                <p className="text-xs opacity-80">{g.instructions}</p>
+                                {g.url && (
+                                  <p className="text-xs opacity-60">
+                                    <a
+                                      href={g.url}
+                                      target="_blank"
+                                      rel="noreferrer"
+                                      className="underline print:no-underline"
+                                    >
+                                      {g.url}
+                                    </a>
+                                  </p>
+                                )}
+                              </div>
+                            ))}
+                          </div>
                         </section>
+                      )}
 
-                        <section>
-                            <h5 className="font-bold uppercase tracking-widest text-xs mb-2 border-b border-[#1a1a1a]/30 pb-1">🔊 Audio Versions</h5>
-                            <p className="pl-4 text-xs opacity-80">
-                                Most text sources include built-in audio read-aloud features. Look for the speaker/audio icon on the source website. 
-                                For texts without audio, consider using browser extensions like "Read Aloud" or your device's built-in accessibility features.
-                            </p>
-                        </section>
+                      <section>
+                        <h5 className="font-bold uppercase tracking-widest text-xs mb-2 border-b border-[#1a1a1a]/30 pb-1 print:border-black">
+                          Built-in Accessibility
+                        </h5>
+                        <ul className="pl-8 text-xs opacity-80 list-disc space-y-1">
+                          <li>Audio read-aloud is available on most source sites — look for the speaker icon, or use your browser&apos;s built-in &ldquo;Read aloud&rdquo;.</li>
+                          <li>QR codes go directly to the source page from any phone camera; no app needed.</li>
+                          <li>This pack uses high-contrast type and dyslexia-friendly spacing; reformat if a student needs different fonts.</li>
+                        </ul>
+                      </section>
 
-                        <section>
-                            <h5 className="font-bold uppercase tracking-widest text-xs mb-2 border-b border-[#1a1a1a]/30 pb-1">📱 QR Codes</h5>
-                            <p className="pl-4 text-xs opacity-80">
-                                Students can scan QR codes with their phone cameras to access texts directly. 
-                                No special app needed on most modern smartphones — just point the camera at the code.
-                            </p>
-                        </section>
+                      <section>
+                        <h5 className="font-bold uppercase tracking-widest text-xs mb-2 border-b border-[#1a1a1a]/30 pb-1 print:border-black">
+                          Printing
+                        </h5>
+                        <ul className="pl-8 text-xs opacity-80 list-disc space-y-1">
+                          <li>Each student handout starts on a new page — print one per student.</li>
+                          <li>The Reading Companion + Graphic Organizer are designed to be stapled together.</li>
+                          <li>The Sentence Frames sheet can be projected or printed as a reference.</li>
+                        </ul>
+                      </section>
 
-                        <section>
-                            <h5 className="font-bold uppercase tracking-widest text-xs mb-2 border-b border-[#1a1a1a]/30 pb-1">🖨️ Printing Tips</h5>
-                            <ul className="pl-4 text-xs opacity-80 list-disc pl-8 space-y-1">
-                                <li>Each student worksheet starts on a new page for easy copying</li>
-                                <li>Print the Exit Slip and Graphic Organizer as needed for your class size</li>
-                                <li>The Sentence Frames page can be displayed or printed as a reference</li>
-                                <li>Consider printing the Text Sources page for students without device access</li>
-                            </ul>
-                        </section>
-
-                        <section>
-                            <h5 className="font-bold uppercase tracking-widest text-xs mb-2 border-b border-[#1a1a1a]/30 pb-1">✏️ Customization</h5>
-                            <p className="pl-4 text-xs opacity-80">
-                                This lesson was designed with UDL principles and equity in mind. Feel free to modify materials based on your students' needs. 
-                                The Teacher Modifications section includes suggested adaptations. Use the Teacher Notes space to add your own adjustments.
-                            </p>
-                        </section>
-                    </div>
-                </div>
-            </div>
-
-            {/* PAGE BREAK: Reading Passage Placeholder (for teachers to attach text) */}
-            <div className="print:break-before-page mt-8 print:mt-0 print:pt-8">
-                <div className="border-2 border-[#1a1a1a] border-dashed p-8 bg-[#fafafa] shadow-sm relative print:border-2 print:border-black print:shadow-none print:min-h-[85vh]">
-                    <div className="absolute top-4 right-4 text-xs font-mono border border-[#1a1a1a] p-1 print:border-black">Name: _________________</div>
-                    <div className="absolute top-4 left-4 text-xs font-mono opacity-50">Reading Passage</div>
-                    
-                    <h3 className="text-center font-bold text-lg mt-8 mb-4 uppercase tracking-widest print:font-mono">Reading Passage</h3>
-                    <p className="text-center text-sm mb-8 italic opacity-70">Attach or paste the selected text here for student copies</p>
-                    
-                    <div className="border border-[#1a1a1a]/30 border-dashed min-h-[60vh] p-4 bg-white print:border-black">
-                        <p className="text-xs text-center opacity-40 mt-8">
-                            [Teacher: Print or copy the selected text from the source and attach here, 
-                            or have students access digitally via the QR code on the Text Sources page]
+                      <section>
+                        <h5 className="font-bold uppercase tracking-widest text-xs mb-2 border-b border-[#1a1a1a]/30 pb-1 print:border-black">
+                          Customizing for Your Class
+                        </h5>
+                        <p className="pl-4 text-xs opacity-80">
+                          This pack was built from research-cited scaffolds and the curated accommodations in Penny&apos;s catalog. The Teacher
+                          Modifications section flags safe substitutions; the Differentiation Map shows which accommodations belong to which phase.
+                          Use the Teacher Notes space to record what you adapted and why.
                         </p>
+                      </section>
                     </div>
+                  </div>
                 </div>
-            </div>
+              );
+            })()}
+
+            {/* PAGE BREAK: Reading Passage — real catalog-driven text card + reading note-catcher */}
+            {(() => {
+              const selected = getSelectedTextOption(textOptions);
+              if (!selected) return null;
+              const taskKind = pickReadingTaskKind(objectives);
+              const resourceRecord = lessonPackage?.resources?.find(
+                (r) => r.id === (selected as { resourceId?: string }).resourceId,
+              );
+              const accessibilityBits: string[] = [];
+              if (resourceRecord?.audio === 'yes') accessibilityBits.push('Audio read-aloud available');
+              if (resourceRecord?.captions === 'yes') accessibilityBits.push('Closed captions');
+              if (resourceRecord?.transcript === 'yes') accessibilityBits.push('Transcript available');
+              if (resourceRecord?.keyboardNav === 'yes') accessibilityBits.push('Keyboard-navigable');
+              const accountLine =
+                resourceRecord?.account === 'free'
+                  ? 'No account required — open access.'
+                  : resourceRecord?.account === 'free-account'
+                    ? 'Free teacher account required.'
+                    : resourceRecord?.account === 'paid'
+                      ? 'Paid subscription required.'
+                      : '';
+
+              return (
+                <div className="print:break-before-page mt-8 print:mt-0 print:pt-8">
+                  <div className="border-2 border-[#1a1a1a] p-8 bg-white shadow-sm relative print:border-2 print:border-black print:shadow-none print:min-h-[90vh]">
+                    <div className="absolute top-4 right-4 text-xs font-mono border border-[#1a1a1a] p-1 print:border-black">Name: _________________</div>
+                    <div className="absolute top-4 left-4 text-xs font-mono opacity-50 flex items-center gap-1">
+                      <BookOpen size={12} /> Reading Companion
+                    </div>
+
+                    <h3 className="text-center font-bold text-lg mt-8 mb-1 uppercase tracking-widest print:font-mono">Today&apos;s Text</h3>
+                    <p className="text-center text-xs mb-6 italic opacity-70">Use this companion as you read.</p>
+
+                    {/* Text card */}
+                    <div className="border-2 border-[#1a1a1a] p-4 mb-6 grid grid-cols-[1fr_auto] gap-4 items-start print:border-black">
+                      <div>
+                        <div className="text-[10px] font-mono uppercase tracking-widest opacity-60 mb-1">Selected Text</div>
+                        <div className="font-bold text-base leading-tight mb-1">{selected.title}</div>
+                        <div className="text-xs opacity-80 mb-2">
+                          {resourceRecord?.author && <>by {resourceRecord.author} • </>}
+                          {selected.source}
+                          {selected.lexile && <> • Lexile {selected.lexile}</>}
+                        </div>
+                        {selected.rationale && (
+                          <p className="text-xs italic opacity-80 mb-2">Why this text: {selected.rationale}</p>
+                        )}
+                        {selected.url && (
+                          <div className="flex items-center gap-2 text-xs mt-2">
+                            <ExternalLink size={12} className="flex-shrink-0" />
+                            <a
+                              href={selected.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-blue-700 underline break-all print:text-black"
+                            >
+                              {selected.url}
+                            </a>
+                          </div>
+                        )}
+                        {accountLine && <div className="text-[11px] opacity-70 mt-1">{accountLine}</div>}
+                        {accessibilityBits.length > 0 && (
+                          <div className="flex flex-wrap gap-1 mt-2">
+                            {accessibilityBits.map((b) => (
+                              <span
+                                key={b}
+                                className="text-[10px] uppercase tracking-widest px-1.5 py-0.5 border border-[#1a1a1a] print:border-black"
+                              >
+                                {b}
+                              </span>
+                            ))}
+                          </div>
+                        )}
+                        {resourceRecord?.tasl && (
+                          <p className="text-[10px] opacity-60 mt-2 italic">
+                            Attribution: {resourceRecord.tasl}
+                          </p>
+                        )}
+                      </div>
+                      {selected.url && (
+                        <div className="flex flex-col items-center">
+                          <QRCodeSVG value={selected.url} size={88} level="M" />
+                          <div className="text-[8px] uppercase tracking-widest opacity-60 mt-1">Scan to read</div>
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Pre-reading */}
+                    <section className="mb-6">
+                      <div className="text-[10px] font-mono uppercase tracking-widest mb-2 border-b border-[#1a1a1a]/40 pb-1 print:border-black">
+                        Before You Read (2 min)
+                      </div>
+                      <p className="text-xs mb-2 opacity-80">
+                        Skim the title, headings, and first sentence. What do you predict this text is about?
+                      </p>
+                      <div className="h-12 border-b border-[#1a1a1a]/40 print:border-black"></div>
+                      <div className="h-12 border-b border-[#1a1a1a]/40 print:border-black"></div>
+                    </section>
+
+                    {/* During-reading note-catcher (objective-aware) */}
+                    <section className="mb-6">
+                      <div className="text-[10px] font-mono uppercase tracking-widest mb-2 border-b border-[#1a1a1a]/40 pb-1 print:border-black">
+                        While You Read — Note-Catcher
+                      </div>
+                      {taskKind === 'cer' && (
+                        <table className="w-full text-xs border-collapse">
+                          <thead>
+                            <tr className="border-b-2 border-[#1a1a1a] print:border-black">
+                              <th className="text-left p-2 font-['Oswald'] uppercase tracking-widest text-[10px] w-1/3">Claim</th>
+                              <th className="text-left p-2 font-['Oswald'] uppercase tracking-widest text-[10px] w-1/3">Evidence (quote + line/¶)</th>
+                              <th className="text-left p-2 font-['Oswald'] uppercase tracking-widest text-[10px] w-1/3">Reasoning (so what?)</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {[1, 2, 3].map((n) => (
+                              <tr key={n} className="border-b border-[#1a1a1a]/40 print:border-black h-20 align-top">
+                                <td className="p-2 border-r border-[#1a1a1a]/40 print:border-black">{n}.</td>
+                                <td className="p-2 border-r border-[#1a1a1a]/40 print:border-black"></td>
+                                <td className="p-2"></td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      )}
+                      {taskKind === 'facts-inferences' && (
+                        <table className="w-full text-xs border-collapse">
+                          <thead>
+                            <tr className="border-b-2 border-[#1a1a1a] print:border-black">
+                              <th className="text-left p-2 font-['Oswald'] uppercase tracking-widest text-[10px] w-1/2">What the text explicitly says</th>
+                              <th className="text-left p-2 font-['Oswald'] uppercase tracking-widest text-[10px] w-1/2">What I can infer</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {[1, 2, 3].map((n) => (
+                              <tr key={n} className="border-b border-[#1a1a1a]/40 print:border-black h-20 align-top">
+                                <td className="p-2 border-r border-[#1a1a1a]/40 print:border-black">{n}.</td>
+                                <td className="p-2"></td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      )}
+                      {taskKind === 'process' && (
+                        <div className="space-y-3 text-xs">
+                          <p className="opacity-80">As you read, capture each step of the process the text describes:</p>
+                          {[1, 2, 3, 4].map((n) => (
+                            <div key={n} className="flex gap-3 items-start">
+                              <div className="flex-shrink-0 w-6 h-6 border-2 border-[#1a1a1a] flex items-center justify-center font-bold print:border-black">
+                                {n}
+                              </div>
+                              <div className="flex-1 h-12 border-b border-[#1a1a1a]/40 print:border-black"></div>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </section>
+
+                    {/* Post-reading reflection */}
+                    <section>
+                      <div className="text-[10px] font-mono uppercase tracking-widest mb-2 border-b border-[#1a1a1a]/40 pb-1 print:border-black">
+                        After You Read (3 min)
+                      </div>
+                      <p className="text-xs mb-2 opacity-80">
+                        {taskKind === 'cer'
+                          ? 'Which piece of evidence most strongly supports your strongest claim? Why?'
+                          : taskKind === 'process'
+                            ? 'Where in this process is a misstep most likely? Explain.'
+                            : 'What was the most important idea in this text? How do you know?'}
+                      </p>
+                      <div className="h-12 border-b border-[#1a1a1a]/40 print:border-black"></div>
+                      <div className="h-12 border-b border-[#1a1a1a]/40 print:border-black"></div>
+                      <div className="h-12 border-b border-[#1a1a1a]/40 print:border-black"></div>
+                    </section>
+                  </div>
+                </div>
+              );
+            })()}
         </div>
       </div>
 

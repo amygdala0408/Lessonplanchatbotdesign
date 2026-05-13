@@ -5,6 +5,8 @@ import {
   type DOKLevel,
   type ChatTurnResult,
   type Objective,
+  type QuickReply,
+  type QuickReplyOption,
   LESSON_PHASE_LABELS,
   INSTRUCTIONAL_MODELS,
 } from '../types';
@@ -29,6 +31,29 @@ function cleanExtractedText(text: string | undefined, maxLength: number = 100): 
   }
 
   return cleaned;
+}
+
+/**
+ * Strip markdown formatting that occasionally leaks into JSON string values.
+ * Penny is a markdown-native model; if the generator leaves emphasis or code
+ * formatting in description text the printed plan ends up with literal `**`
+ * characters. Keep newlines/structure but drop the syntactic noise.
+ */
+function stripPlanMarkdown(text: string | undefined): string {
+  if (!text) return '';
+  return text
+    .replace(/\*\*([^*\n]+)\*\*/g, '$1')
+    .replace(/\*\*/g, '')
+    .replace(/__([^_\n]+)__/g, '$1')
+    .replace(/_(?=\S)([^_\n]+?)(?<=\S)_/g, '$1')
+    .replace(/(^|\s)\*(?=\S)([^*\n]+?)(?<=\S)\*(?=\s|$|[.,;:!?])/g, '$1$2')
+    .replace(/`([^`\n]+)`/g, '$1')
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+    .replace(/^#{1,6}\s+/gm, '')
+    .replace(/\u00A0/g, ' ')
+    .replace(/[ \t]+\n/g, '\n')
+    .replace(/\n{3,}/g, '\n\n')
+    .trim();
 }
 
 function isValidField(text: string | undefined, minLength: number = 2): boolean {
@@ -92,7 +117,15 @@ export function detectInstructionalModel(text: string): typeof INSTRUCTIONAL_MOD
 
 /**
  * Extracts structured lesson plan JSON from Penny's response.
- * Looks for JSON between [LESSON_PLAN_JSON] tags or attempts to parse markdown structure.
+ *
+ * Strict by design: ONLY returns data when the response contains an explicit
+ * JSON payload (an `[LESSON_PLAN_JSON]` block or a ```json``` code fence whose
+ * contents parse as a plan-shaped object). It deliberately does NOT mine
+ * markdown prose for plan-like phrases — that aggressive fallback used to
+ * misfire on every conversational turn now that the canonical finalize path
+ * lives in /api/finalize-plan (generateObject + Zod). For legacy callers
+ * (the Poe fallback path) the markdown miner is still available via
+ * `extractFromMarkdown(response)` directly.
  */
 export function extractLessonPlanFromResponse(response: string): Partial<LessonPlanData> | null {
   const jsonMatch = response.match(/\[LESSON_PLAN_JSON\]([\s\S]*?)\[\/LESSON_PLAN_JSON\]/);
@@ -109,13 +142,43 @@ export function extractLessonPlanFromResponse(response: string): Partial<LessonP
   if (codeBlockMatch) {
     try {
       const parsed = JSON.parse(codeBlockMatch[1].trim());
-      return normalizeLessonPlanData(parsed);
+      // Only treat the code block as a plan if it actually looks like one.
+      // Otherwise it's likely an illustrative snippet inside chat prose.
+      if (looksLikePlanShape(parsed)) {
+        return normalizeLessonPlanData(parsed);
+      }
     } catch (e) {
       console.error('Failed to parse JSON code block:', e);
     }
   }
 
-  return extractFromMarkdown(response);
+  return null;
+}
+
+/**
+ * Returns true when the parsed JSON has enough plan-shaped fields that we can
+ * confidently treat it as a lesson plan payload (vs. an illustrative snippet
+ * Penny pasted into the chat for some other reason).
+ */
+function looksLikePlanShape(parsed: unknown): boolean {
+  if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) return false;
+  const obj = parsed as Record<string, unknown>;
+  const planKeys = [
+    'title',
+    'objectives',
+    'procedure',
+    'gradeLevel',
+    'grade_level',
+    'rubric',
+    'exitSlip',
+    'exit_slip',
+    'textOptions',
+    'text_options',
+    'successCriteria',
+    'success_criteria',
+  ];
+  const hits = planKeys.filter((k) => obj[k] !== undefined).length;
+  return hits >= 2;
 }
 
 /**
@@ -148,12 +211,13 @@ function normalizeLessonPlanData(data: Record<string, unknown>): Partial<LessonP
   if (rawObjectives.length > 0) {
     normalized.objectives = rawObjectives.map((obj: unknown): string | Objective => {
       if (typeof obj === 'string') {
-        const dok = extractDOKLevel(obj);
-        return dok ? { text: obj, dok } : obj;
+        const clean = stripPlanMarkdown(obj);
+        const dok = extractDOKLevel(clean);
+        return dok ? { text: clean, dok } : clean;
       }
       if (typeof obj === 'object' && obj !== null) {
         const o = obj as Record<string, unknown>;
-        const text = String(o.text || o.objective || o.statement || obj);
+        const text = stripPlanMarkdown(String(o.text || o.objective || o.statement || obj));
         const dok = (o.dok || o.DOK || o.dok_level) as DOKLevel | undefined;
         return {
           text,
@@ -162,29 +226,31 @@ function normalizeLessonPlanData(data: Record<string, unknown>): Partial<LessonP
           isExtension: Boolean(o.isExtension || o.is_extension || o.extension),
         };
       }
-      return String(obj);
+      return stripPlanMarkdown(String(obj));
     });
   }
 
   if (Array.isArray(data.materials)) {
-    normalized.materials = data.materials.map(String);
+    normalized.materials = data.materials.map((m) => stripPlanMarkdown(String(m)));
   }
 
   // Procedure: detect canonical phase id from label.
   if (Array.isArray(data.procedure)) {
     normalized.procedure = data.procedure.map((step: unknown) => {
       if (typeof step === 'string') {
-        return { step, description: '', phase: detectLessonPhaseId(step) ?? undefined };
+        const clean = stripPlanMarkdown(step);
+        return { step: clean, description: '', phase: detectLessonPhaseId(clean) ?? undefined };
       }
       const s = step as Record<string, unknown>;
-      const label = String(s.step || s.name || s.phase || '');
+      const rawLabel = String(s.step || s.name || s.phase || '');
+      const label = stripPlanMarkdown(rawLabel);
       const phase = (s.phase && typeof s.phase === 'string'
         ? detectLessonPhaseId(s.phase)
         : null) ?? detectLessonPhaseId(label);
       return {
         step: label,
-        description: String(s.description || s.content || s.details || ''),
-        accommodations: s.accommodations ? String(s.accommodations) : undefined,
+        description: stripPlanMarkdown(String(s.description || s.content || s.details || '')),
+        accommodations: s.accommodations ? stripPlanMarkdown(String(s.accommodations)) : undefined,
         scaffoldIds: Array.isArray(s.scaffoldIds) ? s.scaffoldIds.map(String) : undefined,
         accommodationIds: Array.isArray(s.accommodationIds) ? s.accommodationIds.map(String) : undefined,
         durationMin: typeof s.durationMin === 'number' ? s.durationMin : undefined,
@@ -195,22 +261,23 @@ function normalizeLessonPlanData(data: Record<string, unknown>): Partial<LessonP
   } else if (Array.isArray(data.phases)) {
     normalized.procedure = (data.phases as unknown[]).map((phase: unknown) => {
       const p = phase as Record<string, unknown>;
-      const label = String(p.name || p.phase || p.step || '');
+      const label = stripPlanMarkdown(String(p.name || p.phase || p.step || ''));
+      const desc = stripPlanMarkdown(String(p.teacherMove || p.description || ''))
+        + (p.studentMove ? `\n\nStudent: ${stripPlanMarkdown(String(p.studentMove))}` : '');
       return {
         step: label,
-        description: String(p.teacherMove || p.description || '')
-          + (p.studentMove ? `\n\nStudent: ${p.studentMove}` : ''),
+        description: desc,
         accommodations: p.accommodations ? JSON.stringify(p.accommodations) : undefined,
         phase: detectLessonPhaseId(label) ?? undefined,
       };
     });
   }
 
-  if (data.assessment) normalized.assessment = String(data.assessment);
+  if (data.assessment) normalized.assessment = stripPlanMarkdown(String(data.assessment));
 
   const successCriteriaData = data.successCriteria || data.success_criteria;
   if (Array.isArray(successCriteriaData)) {
-    normalized.successCriteria = successCriteriaData.map((s: unknown) => String(s));
+    normalized.successCriteria = successCriteriaData.map((s: unknown) => stripPlanMarkdown(String(s)));
   }
 
   if (data.supports && typeof data.supports === 'object') {
@@ -219,23 +286,23 @@ function normalizeLessonPlanData(data: Record<string, unknown>): Partial<LessonP
     const el = s.el || s.EL;
     const iep = s.iep504 || s['IEP/504'] || s.iep;
     normalized.supports = {
-      all: Array.isArray(all) ? all.map(String) : [],
-      el: Array.isArray(el) ? el.map(String) : [],
-      iep504: Array.isArray(iep) ? iep.map(String) : [],
+      all: Array.isArray(all) ? all.map((x) => stripPlanMarkdown(String(x))) : [],
+      el: Array.isArray(el) ? el.map((x) => stripPlanMarkdown(String(x))) : [],
+      iep504: Array.isArray(iep) ? iep.map((x) => stripPlanMarkdown(String(x))) : [],
     };
   }
 
   if (data.equityNotes || data.equity_notes || data.equity) {
     const e = data.equityNotes || data.equity_notes || data.equity;
-    normalized.equityNotes = typeof e === 'string' ? e : JSON.stringify(e);
+    normalized.equityNotes = stripPlanMarkdown(typeof e === 'string' ? e : JSON.stringify(e));
   }
 
   if (data.exitSlip || data.exit_slip || data.exitTicket) {
     const e = data.exitSlip || data.exit_slip || data.exitTicket;
-    if (typeof e === 'string') normalized.exitSlip = e;
+    if (typeof e === 'string') normalized.exitSlip = stripPlanMarkdown(e);
     else if (typeof e === 'object' && e !== null) {
       const ed = e as Record<string, unknown>;
-      normalized.exitSlip = String(ed.prompt || ed.question || e);
+      normalized.exitSlip = stripPlanMarkdown(String(ed.prompt || ed.question || e));
     }
   }
 
@@ -245,14 +312,14 @@ function normalizeLessonPlanData(data: Record<string, unknown>): Partial<LessonP
       const score = Number(i.score || 0);
       return {
         score: (score >= 0 && score <= 3 ? score : 0) as 0 | 1 | 2 | 3,
-        description: String(i.description || i.criteria || ''),
+        description: stripPlanMarkdown(String(i.description || i.criteria || '')),
       };
     });
   }
 
   const teacherMods = data.teacherModifications || data.teacher_modifications || data.modifications;
   if (Array.isArray(teacherMods)) {
-    normalized.teacherModifications = teacherMods.map((m: unknown) => String(m));
+    normalized.teacherModifications = teacherMods.map((m: unknown) => stripPlanMarkdown(String(m)));
   }
 
   const textOpts = data.textOptions || data.text_options || data.texts;
@@ -260,11 +327,11 @@ function normalizeLessonPlanData(data: Record<string, unknown>): Partial<LessonP
     normalized.textOptions = textOpts.map((text: unknown) => {
       const t = text as Record<string, unknown>;
       return {
-        title: String(t.title || ''),
-        source: String(t.source || ''),
-        lexile: String(t.lexile || t.level || ''),
+        title: stripPlanMarkdown(String(t.title || '')),
+        source: stripPlanMarkdown(String(t.source || '')),
+        lexile: stripPlanMarkdown(String(t.lexile || t.level || '')),
         url: String(t.url || t.link || ''),
-        rationale: String(t.rationale || ''),
+        rationale: stripPlanMarkdown(String(t.rationale || '')),
         selected: Boolean(t.selected),
         resourceId: t.resourceId ? String(t.resourceId) : undefined,
         representationTags: Array.isArray(t.representationTags) ? t.representationTags.map(String) : undefined,
@@ -550,21 +617,116 @@ export function isWaitingForTextSelection(response: string): boolean {
 }
 
 /**
+ * Extract Penny's [QUICK_REPLIES] block.
+ *
+ * Contract (see PENNY_SYSTEM_PROMPT.md "Quick-Reply Chips"):
+ * ```
+ * [QUICK_REPLIES]
+ * {"prompt": "...", "kind": "duration", "options": ["30 min", "45 min"]}
+ * [/QUICK_REPLIES]
+ * ```
+ *
+ * `options` may be either a flat array of strings or an array of
+ * `{label, value?, hint?}` objects. Returns null when the block is missing,
+ * malformed JSON, or empty.
+ */
+export function extractQuickReplies(raw: string): QuickReply | null {
+  const match = raw.match(/\[QUICK_REPLIES\]([\s\S]*?)\[\/QUICK_REPLIES\]/i);
+  if (!match) return null;
+
+  let parsed: unknown;
+  try {
+    parsed = JSON.parse(match[1].trim());
+  } catch {
+    // Lenient fallback: a plain newline-separated list inside the block.
+    const lines = match[1]
+      .split('\n')
+      .map((l) => l.replace(/^[-•*\d.\s]+/, '').trim())
+      .filter(Boolean);
+    if (lines.length === 0) return null;
+    return {
+      options: lines.map((label) => ({ label })),
+    };
+  }
+
+  if (!parsed || typeof parsed !== 'object') return null;
+  const p = parsed as Record<string, unknown>;
+
+  let options: QuickReplyOption[] = [];
+  if (Array.isArray(p.options)) {
+    options = p.options
+      .map((o: unknown): QuickReplyOption | null => {
+        if (typeof o === 'string') {
+          const label = o.trim();
+          return label ? { label } : null;
+        }
+        if (o && typeof o === 'object') {
+          const obj = o as Record<string, unknown>;
+          const label = String(obj.label ?? obj.text ?? obj.value ?? '').trim();
+          if (!label) return null;
+          return {
+            label,
+            value: typeof obj.value === 'string' ? obj.value : undefined,
+            hint: typeof obj.hint === 'string' ? obj.hint : undefined,
+          };
+        }
+        return null;
+      })
+      .filter((x): x is QuickReplyOption => x !== null);
+  }
+
+  if (options.length === 0) return null;
+
+  return {
+    prompt: typeof p.prompt === 'string' ? p.prompt : undefined,
+    kind:
+      typeof p.kind === 'string'
+        ? (p.kind as QuickReply['kind'])
+        : undefined,
+    options,
+    multi: Boolean(p.multi),
+    blockFreeWrite: Boolean(p.blockFreeWrite ?? p.block_free_write),
+  };
+}
+
+/**
+ * Strip hidden machine blocks ([QUICK_REPLIES], [LESSON_PLAN_JSON]) from the
+ * visible assistant message. The plan + chips are still applied; the bubble
+ * just shouldn't include the raw JSON.
+ */
+export function stripHiddenBlocks(raw: string): string {
+  return raw
+    .replace(/\[QUICK_REPLIES\][\s\S]*?\[\/QUICK_REPLIES\]/gi, '')
+    .replace(/\[LESSON_PLAN_JSON\][\s\S]*?\[\/LESSON_PLAN_JSON\]/gi, '')
+    .replace(/```json[\s\S]*?```/gi, (block) =>
+      // Keep prose JSON blocks visible (e.g. illustrative code) but drop the
+      // ones that obviously contain a lesson plan or quick-replies payload.
+      /(\bprocedure\b|\bobjectives\b|\bquickReplies\b|\bQUICK_REPLIES\b)/i.test(block) ? '' : block,
+    )
+    .replace(/\n{3,}/g, '\n\n')
+    .trim();
+}
+
+/**
  * Single entry point used by app/page.tsx#handleSendMessage. Returns a typed
  * envelope describing what we extracted plus signals the phase machine needs.
  */
 export function parseTurn(rawResponse: string): ChatTurnResult {
   const extractedPlan = extractLessonPlanFromResponse(rawResponse);
   const hasJsonBlock = /\[LESSON_PLAN_JSON\]/i.test(rawResponse) || /```json/i.test(rawResponse);
+  const quickReplies = extractQuickReplies(rawResponse);
+  const visibleContent = stripHiddenBlocks(rawResponse);
 
   return {
     ok: true,
     plan: extractedPlan ?? undefined,
     rawResponse,
+    visibleContent,
     signals: {
       isWaitingForTextSelection: isWaitingForTextSelection(rawResponse),
       containsLessonPlanDraft: containsLessonPlanDraft(rawResponse),
       hasJsonBlock,
+      quickReplies,
     },
   };
 }

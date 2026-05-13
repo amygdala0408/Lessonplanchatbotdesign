@@ -3,6 +3,49 @@ export interface Message {
   role: 'user' | 'assistant';
   content: string;
   timestamp: Date;
+  /**
+   * Optional per-message quick-reply options. When the assistant ends a turn
+   * with a closed question, Penny emits a hidden `[QUICK_REPLIES]` block and
+   * the parser surfaces the parsed options here so the UI can render clickable
+   * chips. Clearing or never emitting means "free-write expected."
+   */
+  quickReplies?: QuickReply | null;
+}
+
+/**
+ * A small enumerated answer set the chat UI renders as one-click chips.
+ * Penny emits the underlying contract as a JSON object inside a hidden
+ * `[QUICK_REPLIES] … [/QUICK_REPLIES]` block at the end of any turn that
+ * expects an enumerable answer.
+ *
+ * `kind` is a hint for the UI (and for telemetry/testing); the canonical
+ * source of truth is `options[].value` (what we'll send back as the user's
+ * reply) and `options[].label` (what the teacher sees on the chip).
+ */
+export interface QuickReply {
+  prompt?: string;
+  kind?:
+    | 'duration'
+    | 'grade'
+    | 'subject'
+    | 'instructional_model'
+    | 'confirmation'
+    | 'multi'
+    | 'other';
+  options: QuickReplyOption[];
+  /** When true, the chip row accepts multiple selections + a "Done" submit. */
+  multi?: boolean;
+  /** When true, the free-write box is hidden entirely. Defaults to false. */
+  blockFreeWrite?: boolean;
+}
+
+export interface QuickReplyOption {
+  /** Display text on the chip. */
+  label: string;
+  /** Text sent back as the user's reply. Defaults to `label`. */
+  value?: string;
+  /** Optional short rationale shown under the chip. */
+  hint?: string;
 }
 
 // Canonical phase machine. Maps to the conversation contract in PENNY_SYSTEM_PROMPT.md
@@ -214,10 +257,18 @@ export interface ChatTurnResult {
   ok: boolean;
   plan?: Partial<LessonPlanData>;
   rawResponse: string;
+  /**
+   * Visible content with the hidden machine blocks ([QUICK_REPLIES],
+   * [LESSON_PLAN_JSON], etc.) stripped. Falls back to rawResponse when the
+   * parser didn't run.
+   */
+  visibleContent?: string;
   signals: {
     isWaitingForTextSelection: boolean;
     containsLessonPlanDraft: boolean;
     hasJsonBlock: boolean;
+    /** Parsed `[QUICK_REPLIES]` block, if any. Null when not present. */
+    quickReplies: QuickReply | null;
   };
   errors?: ValidationError[];
 }

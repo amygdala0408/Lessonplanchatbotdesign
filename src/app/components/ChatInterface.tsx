@@ -1,9 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, memo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { User, Bot, Sparkles, RotateCcw } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import { cn } from '../../lib/utils';
 import { Message } from '../../types';
+import { QuickReplyChips } from './QuickReplyChips';
 
 interface ChatInterfaceProps {
   messages: Message[];
@@ -16,10 +17,167 @@ interface ChatInterfaceProps {
   onReset?: () => void;
 }
 
+/**
+ * Memoized chat bubble. Re-renders only when content length, id, or
+ * quick-reply availability changes. Streaming updates change content
+ * length every chunk, which is fine — that's the only signal we need.
+ */
+const ChatBubble = memo(
+  function ChatBubble({
+    msg,
+    theme,
+    isClient,
+    isLastAssistant,
+    onPickQuickReply,
+  }: {
+    msg: Message;
+    theme: 'default' | 'coffee';
+    isClient: boolean;
+    isLastAssistant: boolean;
+    onPickQuickReply: (value: string) => void;
+  }) {
+    return (
+      <motion.div
+        key={msg.id}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0 }}
+        className={cn(
+          'flex flex-col gap-1 relative group',
+          msg.role === 'user' ? 'items-end' : 'items-start',
+        )}
+      >
+        <div
+          className={cn(
+            'flex gap-6 max-w-[85%] relative',
+            msg.role === 'user' ? 'flex-row-reverse' : '',
+          )}
+        >
+          <div
+            className={cn(
+              'w-12 h-12 border-2 flex items-center justify-center shrink-0 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] relative z-10 transition-colors duration-500',
+              msg.role === 'user'
+                ? theme === 'coffee'
+                  ? 'bg-[#e8e6df] text-[#2c241b] border-[#e8e6df]/20'
+                  : 'bg-[#1a1a1a] text-[#e8e6df] border-[#1a1a1a]'
+                : theme === 'coffee'
+                  ? 'bg-[#2c241b] text-[#e8e6df] border-[#e8e6df]/20'
+                  : 'bg-[#e6e2d6] text-[#1a1a1a] border-[#1a1a1a]',
+            )}
+          >
+            <div className="absolute inset-0 pointer-events-none opacity-20 bg-[url('https://www.transparenttextures.com/patterns/noise-lines.png')]"></div>
+            {msg.role === 'user' ? <User size={20} /> : <Bot size={20} />}
+          </div>
+
+          <div
+            className={cn(
+              "p-6 text-base font-['DM_Sans'] leading-relaxed border-2 relative transition-colors duration-500",
+              msg.role === 'user'
+                ? theme === 'coffee'
+                  ? 'bg-[#e8e6df] text-[#2c241b] border-[#e8e6df]/20 shadow-[4px_4px_0px_0px_rgba(255,255,255,0.1)]'
+                  : 'bg-[#1a1a1a] text-[#e8e6df] border-[#1a1a1a] shadow-[4px_4px_0px_0px_rgba(0,0,0,0.3)]'
+                : theme === 'coffee'
+                  ? 'bg-[#4a3b2d] text-[#e8e6df] border-[#e8e6df]/10 shadow-[8px_8px_0px_0px_rgba(0,0,0,0.2)]'
+                  : 'bg-white text-[#1a1a1a] border-[#1a1a1a] shadow-[8px_8px_0px_0px_rgba(0,0,0,0.1)]',
+            )}
+          >
+            <div
+              className={cn(
+                'absolute inset-0 pointer-events-none opacity-[0.05] mix-blend-multiply',
+                msg.role === 'user'
+                  ? "bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"
+                  : "bg-[url('https://www.transparenttextures.com/patterns/paper.png')]",
+              )}
+            ></div>
+
+            <div className="whitespace-pre-wrap relative z-10 prose prose-sm max-w-none prose-a:text-blue-500 prose-a:underline prose-a:font-medium hover:prose-a:text-blue-700">
+              <ReactMarkdown
+                components={{
+                  a: ({ href, children }) => (
+                    <a
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-500 underline font-medium hover:text-blue-700"
+                    >
+                      {children}
+                    </a>
+                  ),
+                  p: ({ children }) => <p className="mb-2 last:mb-0">{children}</p>,
+                  ul: ({ children }) => <ul className="list-disc pl-5 mb-2">{children}</ul>,
+                  ol: ({ children }) => <ol className="list-decimal pl-5 mb-2">{children}</ol>,
+                  li: ({ children }) => <li className="mb-1">{children}</li>,
+                  strong: ({ children }) => <strong className="font-bold">{children}</strong>,
+                  em: ({ children }) => <em className="italic">{children}</em>,
+                  h1: ({ children }) => <h1 className="text-xl font-bold mt-4 mb-2">{children}</h1>,
+                  h2: ({ children }) => <h2 className="text-lg font-bold mt-3 mb-2">{children}</h2>,
+                  h3: ({ children }) => <h3 className="text-base font-bold mt-2 mb-1">{children}</h3>,
+                  code: ({ children }) => (
+                    <code className="bg-black/10 px-1 py-0.5 rounded text-sm font-mono">{children}</code>
+                  ),
+                }}
+              >
+                {msg.content}
+              </ReactMarkdown>
+            </div>
+            <span
+              className={cn(
+                'text-[10px] opacity-50 mt-4 block font-mono uppercase tracking-widest pt-3 border-t border-dashed relative z-10 transition-colors duration-500',
+                msg.role === 'user'
+                  ? theme === 'coffee'
+                    ? 'border-[#2c241b]/30'
+                    : 'border-[#e8e6df]/30'
+                  : theme === 'coffee'
+                    ? 'border-[#e8e6df]/20'
+                    : 'border-[#1a1a1a]/20',
+              )}
+            >
+              {isClient
+                ? new Date(msg.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+                : ''}
+            </span>
+          </div>
+        </div>
+
+        {msg.role === 'assistant' && msg.quickReplies && msg.quickReplies.options.length > 0 && (
+          <QuickReplyChips
+            reply={msg.quickReplies}
+            theme={theme}
+            disabled={!isLastAssistant}
+            onPick={onPickQuickReply}
+          />
+        )}
+      </motion.div>
+    );
+  },
+  (prev, next) =>
+    prev.msg.id === next.msg.id &&
+    prev.msg.content.length === next.msg.content.length &&
+    prev.msg.quickReplies === next.msg.quickReplies &&
+    prev.isLastAssistant === next.isLastAssistant &&
+    prev.theme === next.theme &&
+    prev.isClient === next.isClient,
+);
+
 export function ChatInterface({ messages, onSendMessage, isTyping, theme = 'default', onFinalize, canFinalize = false, finalizeDisabledReason, onReset }: ChatInterfaceProps) {
   const [input, setInput] = useState('');
   const [isClient, setIsClient] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  // Index of the last assistant message — used to decide which quick-reply
+  // chip row is active (only the most recent assistant turn can be answered).
+  const lastAssistantIdx = (() => {
+    for (let i = messages.length - 1; i >= 0; i--) {
+      if (messages[i].role === 'assistant') return i;
+    }
+    return -1;
+  })();
+
+  // The active assistant message's quick-replies (if any) drive whether the
+  // free-write textbox is hidden when blockFreeWrite is set.
+  const activeQuickReplies =
+    lastAssistantIdx >= 0 ? messages[lastAssistantIdx].quickReplies ?? null : null;
+  const hideFreeWrite = !!activeQuickReplies?.blockFreeWrite && !isTyping;
 
   useEffect(() => {
     setIsClient(true);
@@ -134,81 +292,15 @@ export function ChatInterface({ messages, onSendMessage, isTyping, theme = 'defa
         )}
         
         <AnimatePresence>
-          {messages.map((msg) => (
-            <motion.div
+          {messages.map((msg, idx) => (
+            <ChatBubble
               key={msg.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0 }}
-              className={cn(
-                "flex gap-6 max-w-[85%] relative group",
-                msg.role === 'user' ? "ml-auto flex-row-reverse" : ""
-              )}
-            >
-              <div className={cn(
-                "w-12 h-12 border-2 flex items-center justify-center shrink-0 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] relative z-10 transition-colors duration-500",
-                msg.role === 'user' 
-                    ? (theme === 'coffee' ? "bg-[#e8e6df] text-[#2c241b] border-[#e8e6df]/20" : "bg-[#1a1a1a] text-[#e8e6df] border-[#1a1a1a]")
-                    : (theme === 'coffee' ? "bg-[#2c241b] text-[#e8e6df] border-[#e8e6df]/20" : "bg-[#e6e2d6] text-[#1a1a1a] border-[#1a1a1a]")
-              )}>
-                 <div className="absolute inset-0 pointer-events-none opacity-20 bg-[url('https://www.transparenttextures.com/patterns/noise-lines.png')]"></div>
-                {msg.role === 'user' ? <User size={20} /> : <Bot size={20} />}
-              </div>
-              
-              <div className={cn(
-                "p-6 text-base font-['DM_Sans'] leading-relaxed border-2 relative transition-colors duration-500",
-                msg.role === 'user' 
-                  ? (theme === 'coffee' 
-                      ? "bg-[#e8e6df] text-[#2c241b] border-[#e8e6df]/20 shadow-[4px_4px_0px_0px_rgba(255,255,255,0.1)]" 
-                      : "bg-[#1a1a1a] text-[#e8e6df] border-[#1a1a1a] shadow-[4px_4px_0px_0px_rgba(0,0,0,0.3)]")
-                  : (theme === 'coffee'
-                      ? "bg-[#4a3b2d] text-[#e8e6df] border-[#e8e6df]/10 shadow-[8px_8px_0px_0px_rgba(0,0,0,0.2)]"
-                      : "bg-white text-[#1a1a1a] border-[#1a1a1a] shadow-[8px_8px_0px_0px_rgba(0,0,0,0.1)]")
-              )}>
-                {/* Texture for bubbles */}
-                <div className={cn(
-                    "absolute inset-0 pointer-events-none opacity-[0.05] mix-blend-multiply",
-                    msg.role === 'user' ? "bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]" : "bg-[url('https://www.transparenttextures.com/patterns/paper.png')]"
-                )}></div>
-                
-                <div className="whitespace-pre-wrap relative z-10 prose prose-sm max-w-none prose-a:text-blue-500 prose-a:underline prose-a:font-medium hover:prose-a:text-blue-700">
-                  <ReactMarkdown
-                    components={{
-                      a: ({ href, children }) => (
-                        <a 
-                          href={href} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="text-blue-500 underline font-medium hover:text-blue-700"
-                        >
-                          {children}
-                        </a>
-                      ),
-                      p: ({ children }) => <p className="mb-2 last:mb-0">{children}</p>,
-                      ul: ({ children }) => <ul className="list-disc pl-5 mb-2">{children}</ul>,
-                      ol: ({ children }) => <ol className="list-decimal pl-5 mb-2">{children}</ol>,
-                      li: ({ children }) => <li className="mb-1">{children}</li>,
-                      strong: ({ children }) => <strong className="font-bold">{children}</strong>,
-                      em: ({ children }) => <em className="italic">{children}</em>,
-                      h1: ({ children }) => <h1 className="text-xl font-bold mt-4 mb-2">{children}</h1>,
-                      h2: ({ children }) => <h2 className="text-lg font-bold mt-3 mb-2">{children}</h2>,
-                      h3: ({ children }) => <h3 className="text-base font-bold mt-2 mb-1">{children}</h3>,
-                      code: ({ children }) => <code className="bg-black/10 px-1 py-0.5 rounded text-sm font-mono">{children}</code>,
-                    }}
-                  >
-                    {msg.content}
-                  </ReactMarkdown>
-                </div>
-                <span className={cn(
-                    "text-[10px] opacity-50 mt-4 block font-mono uppercase tracking-widest pt-3 border-t border-dashed relative z-10 transition-colors duration-500",
-                    msg.role === 'user' 
-                        ? (theme === 'coffee' ? "border-[#2c241b]/30" : "border-[#e8e6df]/30")
-                        : (theme === 'coffee' ? "border-[#e8e6df]/20" : "border-[#1a1a1a]/20")
-                )}>
-                  {isClient ? new Date(msg.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : ''}
-                </span>
-              </div>
-            </motion.div>
+              msg={msg}
+              theme={theme}
+              isClient={isClient}
+              isLastAssistant={idx === lastAssistantIdx}
+              onPickQuickReply={onSendMessage}
+            />
           ))}
         </AnimatePresence>
 
@@ -244,12 +336,36 @@ export function ChatInterface({ messages, onSendMessage, isTyping, theme = 'defa
       {/* Input Area */}
       <div className={cn(
           "p-8 border-t-4 z-10 relative shadow-[0_-10px_40px_rgba(0,0,0,0.05)] transition-colors duration-500",
-          theme === 'coffee' 
-            ? "bg-[#2c241b] border-[#e8e6df]/10" 
+          theme === 'coffee'
+            ? "bg-[#2c241b] border-[#e8e6df]/10"
             : "bg-[#e6e2d6] border-[#1a1a1a]"
       )}>
         <div className="absolute inset-0 pointer-events-none opacity-[0.05] bg-[url('https://www.transparenttextures.com/patterns/cardboard-flat.png')]"></div>
-        
+
+        {hideFreeWrite && (
+          <div className={cn(
+            "relative z-10 mb-3 flex items-center justify-between gap-3 px-4 py-2 text-[11px] font-['Oswald'] uppercase tracking-widest border-2 border-dashed",
+            theme === 'coffee'
+              ? "border-[#e8e6df]/30 text-[#e8e6df]/70 bg-[#3e3226]"
+              : "border-[#1a1a1a]/30 text-[#1a1a1a]/70 bg-white",
+          )}>
+            <span>Penny is waiting on a quick-pick answer above.</span>
+            {/* Escape hatch — let the teacher type a custom answer if their
+                situation doesn't fit the chips. */}
+            <button
+              type="button"
+              onClick={(e) => {
+                e.preventDefault();
+                const el = (e.currentTarget.parentElement?.parentElement?.querySelector('input[type="text"]') as HTMLInputElement | null);
+                el?.focus();
+              }}
+              className="underline opacity-80 hover:opacity-100"
+            >
+              Type a custom answer →
+            </button>
+          </div>
+        )}
+
         <form onSubmit={handleSubmit} className="relative flex items-end gap-4 z-10">
           <div className="flex-1 relative group">
             <div className="absolute inset-0 bg-[#1a1a1a] translate-x-1.5 translate-y-1.5 transition-transform group-focus-within:translate-x-2.5 group-focus-within:translate-y-2.5 pointer-events-none"></div>

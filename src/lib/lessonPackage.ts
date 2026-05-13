@@ -195,11 +195,44 @@ export function resolveLessonPackage(
   const citations = uniqueById(getCitations().filter((c) => citationIds.has(c.id)));
 
   // ----- Glossary ---------------------------------------------------------
-  const wantedLangs = new Set(['en', ...(learnerProfile?.homeLanguages ?? []).map((l) => l.toLowerCase())]);
+  // Prefer learner-profile home languages; default to en+es so we *always*
+  // surface a bilingual reference pair (covers the most common classroom
+  // case). The print package looks dramatically thinner without a glossary,
+  // and the catalog has 1000+ curated entries — using them is the whole
+  // point of having a content library.
+  const profileLangs = (learnerProfile?.homeLanguages ?? []).map((l) => l.toLowerCase());
+  const wantedLangs = new Set(['en', ...profileLangs, ...(profileLangs.length === 0 ? ['es'] : [])]);
   const vocab = new Set(inferVocabFromPlan(plan));
-  const glossary = getBilingualGlossary().filter(
+  const allGlossary = getBilingualGlossary();
+  let glossary = allGlossary.filter(
     (g) => wantedLangs.has(g.language) && vocab.has(g.term.toLowerCase()),
   );
+
+  // Always-on fallback: if plan-text inference yielded nothing useful, surface
+  // the top tier-2 academic verbs from the catalog (analyze, argue, cite,
+  // compare, evaluate, justify, infer, summarize, synthesize). These are the
+  // verbs that show up most often in DOK 2-4 objectives across subjects.
+  if (glossary.length < 6) {
+    const PRIORITY_TERMS = [
+      'analyze', 'argue', 'cite', 'compare', 'contrast', 'evaluate',
+      'justify', 'infer', 'summarize', 'synthesize', 'classify',
+      'construct', 'evidence', 'claim',
+    ];
+    const fallback = allGlossary.filter(
+      (g) => wantedLangs.has(g.language) && PRIORITY_TERMS.includes(g.term.toLowerCase()),
+    );
+    // Merge: keep any vocab-matched entries first, then top up with priority.
+    const seen = new Set(glossary.map((g) => `${g.id}|${g.language}`));
+    for (const g of fallback) {
+      const key = `${g.id}|${g.language}`;
+      if (!seen.has(key)) {
+        seen.add(key);
+        glossary.push(g);
+      }
+    }
+    // Cap to 24 entries so the print page stays one sheet.
+    glossary = glossary.slice(0, 24);
+  }
 
   // ----- Opener / Exit Slip ----------------------------------------------
   const opener = plan.openerId

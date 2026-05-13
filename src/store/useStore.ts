@@ -17,6 +17,21 @@ export interface LessonPackagePayload {
   exitSlip?: { id: string; subject: string; prompt: string; rubricSnippet?: string };
 }
 
+/**
+ * Lightweight telemetry for the multi-LLM strategy. Each chat / picker /
+ * generator round-trip pushes its model + latency here so the UI can render a
+ * "which model just handled this?" status chip. Not persisted — purely
+ * session-level visibility.
+ */
+export interface ModelTurn {
+  task: 'chat' | 'picker' | 'generator' | 'scorer' | 'patcher' | 'accommodation';
+  model: string;        // e.g., 'anthropic/claude-sonnet-4.5'
+  provider: string;     // 'ai-gateway' | 'poe'
+  latencyMs: number;
+  at: number;           // Date.now()
+  tools?: string[];     // e.g., ['pickCatalog']
+}
+
 interface AppState {
   messages: Message[];
   isTyping: boolean;
@@ -30,6 +45,7 @@ interface AppState {
   learnerProfile: LearnerProfile | null;
   validationErrors: ValidationError[];
   lessonPackage: LessonPackagePayload | null;
+  modelTurns: ModelTurn[];
 
   setMessages: (messages: Message[] | ((prev: Message[]) => Message[])) => void;
   setIsTyping: (isTyping: boolean) => void;
@@ -43,6 +59,7 @@ interface AppState {
   setLearnerProfile: (profile: LearnerProfile | null) => void;
   setValidationErrors: (errors: ValidationError[]) => void;
   setLessonPackage: (pkg: LessonPackagePayload | null) => void;
+  recordModelTurn: (turn: ModelTurn) => void;
   resetConversation: () => void;
   loadDemoMode: () => void;
 }
@@ -51,9 +68,10 @@ const initialMessages: Message[] = [
   {
     id: '1',
     role: 'assistant',
-    content: "Hi, I'm Penny. Drop your standard, lesson idea, or teaching dilemma, and I'll ask a few quick questions so we can transform it into rigorous, equitable, UDL-aligned instruction — with zero fluff and maybe one well-placed joke about unrealistic pacing guides.",
-    timestamp: new Date()
-  }
+    content:
+      "Hi, I'm Penny. Drop your standard, lesson idea, or teaching dilemma, and I'll ask a few quick questions so we can turn it into rigorous, equitable, UDL-aligned instruction. The Class Profile to your left already tells me who's in the room, so I won't re-interrogate. (And yes — there will be exactly one well-placed joke about pacing guides.)",
+    timestamp: new Date(),
+  },
 ];
 
 export const useStore = create<AppState>()(
@@ -71,6 +89,7 @@ export const useStore = create<AppState>()(
       learnerProfile: null,
       validationErrors: [],
       lessonPackage: null,
+      modelTurns: [],
 
       setMessages: (messages) => set((state) => ({
         messages: typeof messages === 'function' ? messages(state.messages) : messages
@@ -90,6 +109,10 @@ export const useStore = create<AppState>()(
       setLearnerProfile: (learnerProfile) => set({ learnerProfile }),
       setValidationErrors: (validationErrors) => set({ validationErrors }),
       setLessonPackage: (lessonPackage) => set({ lessonPackage }),
+      recordModelTurn: (turn) => set((state) => ({
+        // Cap at the last 20 turns so the array stays small.
+        modelTurns: [...state.modelTurns, turn].slice(-20),
+      })),
       resetConversation: () => set({
         messages: initialMessages,
         lessonPlan: initialLessonPlan,
@@ -101,6 +124,7 @@ export const useStore = create<AppState>()(
         learnerProfile: null,
         validationErrors: [],
         lessonPackage: null,
+        modelTurns: [],
       }),
       loadDemoMode: () => set({
         messages: demoMessages,

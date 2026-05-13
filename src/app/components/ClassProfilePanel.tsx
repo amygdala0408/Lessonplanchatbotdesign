@@ -2,9 +2,32 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { ChevronDown, ChevronUp, Users, Check } from 'lucide-react';
+import { ChevronDown, ChevronUp, Users, Check, Plus, X } from 'lucide-react';
 import { cn } from '../../lib/utils';
 import type { LearnerProfile, NeedsTag } from '../../types';
+
+// Curated set of high-frequency US K-12 home languages. `glossaryCoverage`
+// flags ones where our bilingual glossary catalog can render translations
+// today (en + es). Others still flow into the accommodations engine + system
+// prompt so Penny can plan for them, even when glossary cards aren't available.
+const LANGUAGE_OPTIONS: { code: string; label: string; glossaryCoverage: boolean }[] = [
+  { code: 'en', label: 'English', glossaryCoverage: true },
+  { code: 'es', label: 'Spanish', glossaryCoverage: true },
+  { code: 'zh', label: 'Chinese / Mandarin', glossaryCoverage: false },
+  { code: 'ar', label: 'Arabic', glossaryCoverage: false },
+  { code: 'vi', label: 'Vietnamese', glossaryCoverage: false },
+  { code: 'tl', label: 'Tagalog / Filipino', glossaryCoverage: false },
+  { code: 'ht', label: 'Haitian Creole', glossaryCoverage: false },
+  { code: 'ru', label: 'Russian', glossaryCoverage: false },
+  { code: 'ko', label: 'Korean', glossaryCoverage: false },
+  { code: 'pt', label: 'Portuguese', glossaryCoverage: false },
+  { code: 'fr', label: 'French', glossaryCoverage: false },
+  { code: 'so', label: 'Somali', glossaryCoverage: false },
+];
+
+function labelForLanguage(code: string): string {
+  return LANGUAGE_OPTIONS.find((l) => l.code === code)?.label ?? code.toUpperCase();
+}
 
 interface ClassProfilePanelProps {
   profile: LearnerProfile | null;
@@ -66,7 +89,10 @@ function summarize(p: LearnerProfile | null): string {
     bits.push(`ML L${p.multilingualLevel}`);
   }
   if (p.needsTags.length > 0) bits.push(`${p.needsTags.length} need tag${p.needsTags.length === 1 ? '' : 's'}`);
-  if (p.homeLanguages.length > 0) bits.push(p.homeLanguages.join('/'));
+  if (p.homeLanguages.length > 0) {
+    const labels = p.homeLanguages.map(labelForLanguage);
+    bits.push(labels.slice(0, 3).join('/') + (labels.length > 3 ? `+${labels.length - 3}` : ''));
+  }
   return bits.length === 0 ? 'No flags set' : bits.join(' · ');
 }
 
@@ -78,7 +104,8 @@ export function ClassProfilePanel({
   onToggle,
 }: ClassProfilePanelProps) {
   const p = profile ?? DEFAULT_PROFILE;
-  const [languagesText, setLanguagesText] = useState(p.homeLanguages.join(', '));
+  const [customLangOpen, setCustomLangOpen] = useState(false);
+  const [customLangText, setCustomLangText] = useState('');
 
   const update = (patch: Partial<LearnerProfile>) => {
     onChange({ ...p, ...patch });
@@ -91,13 +118,33 @@ export function ClassProfilePanel({
     });
   };
 
-  const commitLanguages = () => {
-    const langs = languagesText
-      .split(',')
-      .map((l) => l.trim().toLowerCase())
-      .filter(Boolean);
-    update({ homeLanguages: langs });
+  const toggleLanguage = (code: string) => {
+    const has = p.homeLanguages.includes(code);
+    update({
+      homeLanguages: has
+        ? p.homeLanguages.filter((l) => l !== code)
+        : [...p.homeLanguages, code],
+    });
   };
+
+  const commitCustomLanguage = () => {
+    const raw = customLangText.trim().toLowerCase();
+    if (!raw) {
+      setCustomLangOpen(false);
+      return;
+    }
+    // Accept either 2-letter ISO ("ur") or a label ("urdu"); we just lower-case
+    // and dedupe. The accommodations engine doesn't require ISO codes; this is
+    // a list of strings the system prompt passes through to Penny.
+    if (!p.homeLanguages.includes(raw)) {
+      update({ homeLanguages: [...p.homeLanguages, raw] });
+    }
+    setCustomLangText('');
+    setCustomLangOpen(false);
+  };
+
+  const knownCodes = new Set(LANGUAGE_OPTIONS.map((l) => l.code));
+  const customLanguages = p.homeLanguages.filter((c) => !knownCodes.has(c));
 
   const isCoffee = theme === 'coffee';
 
@@ -182,24 +229,117 @@ export function ClassProfilePanel({
                 </div>
               </div>
 
-              {/* Languages */}
+              {/* Home languages — chip multi-select */}
               <div>
-                <label className="font-['Oswald'] uppercase tracking-widest text-[10px] opacity-70 block mb-1.5">
-                  Home languages (ISO codes, comma-separated)
-                </label>
-                <input
-                  type="text"
-                  value={languagesText}
-                  onChange={(e) => setLanguagesText(e.target.value)}
-                  onBlur={commitLanguages}
-                  placeholder="es, ht, vi"
-                  className={cn(
-                    'w-full px-2.5 py-1.5 border text-xs font-mono outline-none',
-                    isCoffee
-                      ? 'bg-[#2c241b] border-[#e8e6df]/30 focus:border-[#e8e6df]'
-                      : 'bg-white border-[#1a1a1a]/30 focus:border-[#1a1a1a]',
+                <div className="font-['Oswald'] uppercase tracking-widest text-[10px] opacity-70 mb-1.5">
+                  Home languages in this class
+                </div>
+                <div className="flex flex-wrap gap-1.5">
+                  {LANGUAGE_OPTIONS.map((lang) => {
+                    const active = p.homeLanguages.includes(lang.code);
+                    return (
+                      <button
+                        key={lang.code}
+                        type="button"
+                        onClick={() => toggleLanguage(lang.code)}
+                        title={
+                          lang.glossaryCoverage
+                            ? `${lang.label} — bilingual glossary supported`
+                            : `${lang.label} — sentence-frame & accommodation supports`
+                        }
+                        className={cn(
+                          'px-2 py-1 text-[11px] border transition-colors flex items-center gap-1',
+                          active
+                            ? isCoffee
+                              ? 'bg-[#e8e6df] text-[#2c241b] border-[#e8e6df]'
+                              : 'bg-[#1a1a1a] text-white border-[#1a1a1a]'
+                            : isCoffee
+                              ? 'border-[#e8e6df]/30 hover:border-[#e8e6df]'
+                              : 'border-[#1a1a1a]/30 hover:border-[#1a1a1a]',
+                        )}
+                      >
+                        {active && <Check size={11} />}
+                        {lang.label}
+                        {lang.glossaryCoverage && (
+                          <span
+                            className={cn(
+                              'ml-0.5 text-[9px] uppercase tracking-widest font-bold opacity-70',
+                              active ? '' : 'text-green-700',
+                            )}
+                          >
+                            ✓glossary
+                          </span>
+                        )}
+                      </button>
+                    );
+                  })}
+
+                  {customLanguages.map((code) => (
+                    <span
+                      key={code}
+                      className={cn(
+                        'px-2 py-1 text-[11px] border inline-flex items-center gap-1',
+                        isCoffee
+                          ? 'bg-[#e8e6df] text-[#2c241b] border-[#e8e6df]'
+                          : 'bg-[#1a1a1a] text-white border-[#1a1a1a]',
+                      )}
+                    >
+                      <Check size={11} />
+                      {code}
+                      <button
+                        type="button"
+                        onClick={() => toggleLanguage(code)}
+                        aria-label={`Remove ${code}`}
+                        className="ml-0.5 opacity-70 hover:opacity-100"
+                      >
+                        <X size={10} />
+                      </button>
+                    </span>
+                  ))}
+
+                  {!customLangOpen ? (
+                    <button
+                      type="button"
+                      onClick={() => setCustomLangOpen(true)}
+                      className={cn(
+                        'px-2 py-1 text-[11px] border transition-colors flex items-center gap-1 border-dashed',
+                        isCoffee
+                          ? 'border-[#e8e6df]/30 hover:border-[#e8e6df]'
+                          : 'border-[#1a1a1a]/30 hover:border-[#1a1a1a]',
+                      )}
+                    >
+                      <Plus size={11} /> Other
+                    </button>
+                  ) : (
+                    <input
+                      type="text"
+                      autoFocus
+                      value={customLangText}
+                      placeholder="e.g. Urdu, Pashto"
+                      onChange={(e) => setCustomLangText(e.target.value)}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter') commitCustomLanguage();
+                        if (e.key === 'Escape') {
+                          setCustomLangText('');
+                          setCustomLangOpen(false);
+                        }
+                      }}
+                      onBlur={commitCustomLanguage}
+                      className={cn(
+                        'px-2 py-1 text-[11px] border outline-none',
+                        isCoffee
+                          ? 'bg-[#2c241b] border-[#e8e6df]/30 focus:border-[#e8e6df]'
+                          : 'bg-white border-[#1a1a1a]/30 focus:border-[#1a1a1a]',
+                      )}
+                    />
                   )}
-                />
+                </div>
+                {p.homeLanguages.length === 0 && (
+                  <p className="mt-1.5 text-[10px] italic opacity-60">
+                    Tap any languages your students speak at home. Penny will tailor
+                    accommodations and surface a bilingual glossary where supported.
+                  </p>
+                )}
               </div>
 
               {/* Needs tags */}

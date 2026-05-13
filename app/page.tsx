@@ -4,16 +4,19 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useReactToPrint } from 'react-to-print';
 import { Toaster, toast } from 'sonner';
 import { motion, AnimatePresence } from 'motion/react';
-import { Printer, BookOpen, PanelRightOpen, X, Moon, Sun, CheckCircle, Play } from 'lucide-react';
+import { Printer, BookOpen, PanelRightOpen, X, Moon, Sun, CheckCircle, Play, RotateCcw } from 'lucide-react';
 import { ChatInterface } from '@/components/ChatInterface';
 import { LessonPlan } from '@/components/LessonPlan';
 import { PennyFrame } from '@/components/PennyFrame';
 import { ClassProfilePanel } from '@/components/ClassProfilePanel';
 import { InstructionalModelChooser } from '@/components/InstructionalModelChooser';
+import { TextOptionPicker } from '@/components/TextOptionPicker';
+import { InlineStructuredPicker } from '@/components/InlineStructuredPicker';
+import { ModelStatusChip } from '@/components/ModelStatusChip';
 import { cn } from '@/lib/utils';
 import { useStore } from '@/store/useStore';
 import { Message, ChatTurnResult, ConversationPhase, LessonPlanData, ValidationError, InstructionalModel } from '@/types';
-import { parseTurn, extractStudentMaterials } from '@/lib/lessonPlanParser';
+import { parseTurn, extractStudentMaterials, stripHiddenBlocks, extractQuickReplies } from '@/lib/lessonPlanParser';
 import { nextPhase, canFinalize } from '@/lib/phaseMachine';
 import { validateLessonPlan, formatErrorsForRetry } from '@/lib/lessonPlanSchema';
 
@@ -34,6 +37,7 @@ export default function HomePage() {
     setMessages, setIsTyping, setLessonPlan, setIsPlanOpen, setHasPlanUpdated,
     addMessage, toggleTheme, setConversationPhase, setStudentMaterials,
     setLearnerProfile, setValidationErrors, setLessonPackage,
+    recordModelTurn,
     resetConversation, loadDemoMode,
   } = useStore();
 
@@ -96,6 +100,12 @@ export default function HomePage() {
         throw new Error('Failed to get response from Penny');
       }
 
+      // Capture multi-LLM routing info from server response headers.
+      const turnStartedAt = Date.now();
+      const respModel = response.headers.get('x-penny-model');
+      const respProvider = response.headers.get('x-penny-provider');
+      const respTools = response.headers.get('x-penny-tools');
+
       const reader = response.body?.getReader();
       const decoder = new TextDecoder();
       let fullResponse = '';
@@ -110,23 +120,64 @@ export default function HomePage() {
       addMessage(botMessage);
       setIsTyping(false);
 
+      // Buffer streaming chunks and flush once per animation frame so we don't
+      // thrash React with one setState per token. Also strip hidden machine
+      // blocks ([QUICK_REPLIES], [LESSON_PLAN_JSON]) from the visible bubble
+      // while still applying their effects when the stream completes.
+      let pendingFlush = false;
+      const scheduleFlush = () => {
+        if (pendingFlush) return;
+        pendingFlush = true;
+        const flush = () => {
+          pendingFlush = false;
+          const visible = stripHiddenBlocks(fullResponse);
+          setMessages((prev) =>
+            prev.map((msg) =>
+              msg.id === botMessageId ? { ...msg, content: visible } : msg,
+            ),
+          );
+        };
+        if (typeof requestAnimationFrame !== 'undefined') {
+          requestAnimationFrame(flush);
+        } else {
+          setTimeout(flush, 16);
+        }
+      };
+
       if (reader) {
         while (true) {
           const { done, value } = await reader.read();
           if (done) break;
-
           const chunk = decoder.decode(value, { stream: true });
           fullResponse += chunk;
-
-          setMessages((prev) =>
-            prev.map((msg) =>
-              msg.id === botMessageId ? { ...msg, content: fullResponse } : msg,
-            ),
-          );
+          scheduleFlush();
         }
       }
 
+      // Record the chat turn's model routing for the ModelStatusChip popover.
+      if (respModel) {
+        recordModelTurn({
+          task: 'chat',
+          model: respModel,
+          provider: respProvider ?? 'unknown',
+          latencyMs: Date.now() - turnStartedAt,
+          at: Date.now(),
+          tools: respTools ? respTools.split(',').map((t) => t.trim()) : undefined,
+        });
+      }
+
       const turn = parseTurn(fullResponse);
+
+      // Final visible content + quick-replies snap once streaming completes.
+      const finalVisible = turn.visibleContent ?? stripHiddenBlocks(fullResponse);
+      const finalQuickReplies = turn.signals.quickReplies ?? extractQuickReplies(fullResponse);
+      setMessages((prev) =>
+        prev.map((msg) =>
+          msg.id === botMessageId
+            ? { ...msg, content: finalVisible, quickReplies: finalQuickReplies }
+            : msg,
+        ),
+      );
 
       // Merge any extracted plan into store + persist student materials.
       if (turn.plan && Object.keys(turn.plan).length > 0) {
@@ -186,15 +237,21 @@ export default function HomePage() {
           isWaitingForTextSelection: false,
           containsLessonPlanDraft: false,
           hasJsonBlock: false,
+          quickReplies: null,
         },
         errors: [{ path: 'network', message: String(error), severity: 'error' }],
       };
     }
   };
 
-  // Finalize the lesson plan. Validates the resulting JSON against the schema
-  // and only advances to 'complete' when validation passes. Auto-retries once
-  // with a structured violation list before giving up.
+  // Finalize the lesson plan.
+  //
+  // Primary path (P0.5): /api/finalize-plan calls the generator model with
+  // generateObject + Zod schema. The response is *guaranteed* to be valid
+  // structured JSON or it errors. No more [LESSON_PLAN_JSON] regex extraction.
+  //
+  // Fallback path (gateway not configured): the legacy "ask the chat model to
+  // emit JSON between tags" flow. Removed once everyone is on the gateway.
   const handleFinalize = async () => {
     const guard = canFinalize(conversationPhase, isTyping, lessonPlan);
     if (!guard.ok) {
@@ -204,6 +261,134 @@ export default function HomePage() {
 
     setConversationPhase('drafting');
 
+    // Snapshot the conversation so the server has the same history the chat
+    // route would see.
+    const conversationHistory = messages.map((msg) => ({
+      role: msg.role,
+      content: msg.content,
+    }));
+
+    // ── Primary path: call the generator endpoint ──────────────────────────
+    const generatorResult = await finalizeViaGenerator({
+      plan: lessonPlan,
+      learnerProfile,
+      messages: conversationHistory,
+    });
+
+    if (generatorResult !== 'unavailable') {
+      if (generatorResult.ok && generatorResult.plan) {
+        const merged = { ...lessonPlan, ...generatorResult.plan } as LessonPlanData;
+        setLessonPlan(merged);
+        setValidationErrors([]);
+        setConversationPhase('complete');
+        toast.success('Lesson plan finalized.');
+        setIsPlanOpen(true);
+        void fetchLessonPackage(merged);
+        return;
+      }
+
+      // The generator endpoint ran but the plan didn't pass the finalize gate.
+      // Surface the structured errors and park at preview.
+      if (generatorResult.merged) {
+        setLessonPlan({ ...lessonPlan, ...generatorResult.merged } as LessonPlanData);
+      }
+      setValidationErrors(generatorResult.errors);
+      setConversationPhase('preview');
+      const blocking = generatorResult.errors.filter((e) => e.severity === 'error');
+      toast.error(
+        `Lesson plan still has ${blocking.length} issue${blocking.length === 1 ? '' : 's'}. Open the lesson preview to see the checklist.`,
+      );
+      return;
+    }
+
+    // ── Fallback path: legacy chat-based finalize ──────────────────────────
+    toast.info('Gateway not configured; finalizing via legacy chat flow.');
+    await handleFinalizeLegacy();
+  };
+
+  /**
+   * Calls /api/finalize-plan. Returns 'unavailable' when the gateway is not
+   * configured (503), so the caller can fall back to the legacy flow.
+   */
+  async function finalizeViaGenerator(args: {
+    plan: Partial<LessonPlanData>;
+    learnerProfile: typeof learnerProfile;
+    messages: { role: string; content: string }[];
+  }): Promise<
+    | 'unavailable'
+    | {
+        ok: boolean;
+        plan: Partial<LessonPlanData> | null;
+        merged: Partial<LessonPlanData> | null;
+        errors: ValidationError[];
+      }
+  > {
+    try {
+      const resp = await fetch('/api/finalize-plan', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(args),
+      });
+
+      if (resp.status === 503) return 'unavailable';
+      if (!resp.ok) {
+        const text = await resp.text().catch(() => '');
+        console.warn('[finalize-plan] non-OK:', resp.status, text);
+        toast.error('Penny had trouble finalizing. Falling back to the chat draft.');
+        return {
+          ok: false,
+          plan: null,
+          merged: null,
+          errors: [
+            {
+              path: '<root>',
+              message: `Finalize endpoint returned ${resp.status}`,
+              severity: 'error',
+            },
+          ],
+        };
+      }
+
+      const data = (await resp.json()) as {
+        ok: boolean;
+        plan: Partial<LessonPlanData> | null;
+        merged: Partial<LessonPlanData> | null;
+        errors: ValidationError[];
+        retryPrompt?: string;
+        meta?: { model?: string; latencyMs?: number; provider?: string };
+      };
+
+      if (data.meta?.model) {
+        console.info(
+          `[finalize-plan] model=${data.meta.model} latency=${data.meta.latencyMs}ms ok=${data.ok}`,
+        );
+        recordModelTurn({
+          task: 'generator',
+          model: data.meta.model,
+          provider: data.meta.provider ?? 'ai-gateway',
+          latencyMs: data.meta.latencyMs ?? 0,
+          at: Date.now(),
+        });
+      }
+
+      return {
+        ok: data.ok,
+        plan: data.plan,
+        merged: data.merged ?? null,
+        errors: data.errors ?? [],
+      };
+    } catch (err) {
+      console.warn('[finalize-plan] fetch failed, falling back:', err);
+      return 'unavailable';
+    }
+  }
+
+  /**
+   * Legacy finalize flow: ask the chat model to emit a [LESSON_PLAN_JSON]
+   * block, parse it, validate with /api/validate-plan, retry once.
+   * Retained as a fallback when the gateway isn't configured.
+   */
+  async function handleFinalizeLegacy() {
     const finalizePrompt = `Please finalize and output the complete lesson plan we've designed.
 
 Output the structured lesson plan data between [LESSON_PLAN_JSON] and [/LESSON_PLAN_JSON] tags using this exact JSON structure:
@@ -258,19 +443,14 @@ Hard requirements:
 
     const turn = await handleSendMessage(finalizePrompt);
     if (!turn.ok) {
-      // Network or stream error already toasted in handleSendMessage. Bring the
-      // user back to preview so they can try again.
       setConversationPhase('preview');
       return;
     }
 
-    // Validate the merged plan via the server endpoint so we get both
-    // structural checks and catalog-ID cross-validation in one round-trip.
     const merged = { ...lessonPlan, ...(turn.plan ?? {}) };
     let result = await validatePlanRemote(merged);
 
     if (!result.ok) {
-      // One auto-retry with a structured violation list.
       toast.info('Penny\'s draft missed a few quality gates. Asking her to fix it...');
       const retryPrompt = result.retryPrompt || formatErrorsForRetry(result.errors);
       const retryTurn = await handleSendMessage(retryPrompt);
@@ -283,20 +463,15 @@ Hard requirements:
       setConversationPhase('complete');
       toast.success('Lesson plan finalized.');
       setIsPlanOpen(true);
-      // Resolve the catalog package so the print pages render real
-      // accommodations/glossary/citations/misconceptions instead of
-      // placeholders. Failures here don't block finalize — the print
-      // package falls back to the default placeholders.
       void fetchLessonPackage(merged);
     } else {
-      // Park back at preview so the teacher can edit and retry.
       setConversationPhase('preview');
       const blocking = result.errors.filter((e) => e.severity === 'error');
       toast.error(
         `Lesson plan still has ${blocking.length} issue${blocking.length === 1 ? '' : 's'}. Open the lesson preview to see the checklist.`,
       );
     }
-  };
+  }
 
   // Resolves catalog references on the server so the print package can render
   // resolved content. Failures are logged; they don't block finalize.
@@ -356,6 +531,37 @@ Hard requirements:
       `Let's go with ${model}. Build the preview around that model and ask me to confirm before finalizing.`,
     );
   };
+
+  // Teacher picked one of Penny's 3 text options from the inline picker. We
+  // toggle `selected` on that option locally so the phase machine can advance
+  // and the catalog selectors get the right context on the next chat turn.
+  const handleTextOptionPick = async (index: number) => {
+    if (!lessonPlan.textOptions || lessonPlan.textOptions.length === 0) return;
+    const chosen = lessonPlan.textOptions[index];
+    if (!chosen) return;
+    setLessonPlan((prev) => ({
+      ...prev,
+      textOptions: (prev.textOptions ?? []).map((opt, i) => ({
+        ...opt,
+        selected: i === index,
+      })),
+    }));
+    toast.success(`Text locked in: ${chosen.title || `Option ${index + 1}`}`);
+    void handleSendMessage(
+      `Let's use "${chosen.title || `Option ${index + 1}`}". Recommend an instructional model that fits this text and the class profile.`,
+    );
+  };
+
+  // Which gathering-phase fields are still missing and need the inline picker
+  // to fill them. We only render the inline picker for the first missing
+  // field at a time so the chat doesn't get cluttered with 3 stacked widgets.
+  const missingGatheringField: 'subject' | 'gradeLevel' | 'duration' | null = (() => {
+    if (conversationPhase !== 'gathering') return null;
+    if (!lessonPlan.subject || lessonPlan.subject.trim().length < 2) return 'subject';
+    if (!lessonPlan.gradeLevel || lessonPlan.gradeLevel.trim().length < 1) return 'gradeLevel';
+    if (!lessonPlan.duration || lessonPlan.duration.trim().length < 2) return 'duration';
+    return null;
+  })();
 
   return (
     <div
@@ -444,6 +650,28 @@ Hard requirements:
                 <span className="text-xs uppercase tracking-widest">View Demo</span>
               </button>
             )}
+            <ModelStatusChip />
+            <button
+              onClick={() => {
+                if (typeof window !== 'undefined') {
+                  // Hard-clear any stale persisted state — useful when an older
+                  // build left polluted plan content in localStorage.
+                  try { window.localStorage.removeItem('penny-pedagogy-storage'); } catch { /* ignore */ }
+                }
+                resetConversation();
+                toast.success('Cleared. Fresh start ready.');
+              }}
+              title="Clear chat + lesson plan and start over"
+              className={cn(
+                'flex items-center gap-2 px-3 py-1.5 rounded-full border transition-all duration-300',
+                theme === 'coffee'
+                  ? 'border-amber-400/40 text-amber-300 hover:bg-amber-400/10'
+                  : 'border-amber-600/40 text-amber-700 hover:bg-amber-100',
+              )}
+            >
+              <RotateCcw size={14} />
+              <span className="text-[10px] uppercase tracking-widest font-bold">Start Fresh</span>
+            </button>
             <button
               onClick={toggleTheme}
               className={cn(
@@ -492,8 +720,49 @@ Hard requirements:
             }}
           />
 
-          {/* Phase-aware chooser: visible only during the instructional_model
-              phase. One click locks in the model and advances the phase. */}
+          {/* Phase-aware pickers — only the picker that matches the active phase
+              renders, so the chat surface stays focused. */}
+          {conversationPhase === 'gathering' && missingGatheringField && (
+            <div className="max-w-4xl mx-auto w-full">
+              <InlineStructuredPicker
+                field={missingGatheringField}
+                theme={theme}
+                onPick={(value) => {
+                  // Set the corresponding field on the plan immediately so the
+                  // server-side catalog selectors get the right context on the
+                  // *very next* chat turn. The user-facing message then nudges
+                  // Penny to move forward.
+                  setLessonPlan((prev) => {
+                    if (missingGatheringField === 'subject') {
+                      const subjectVal = value.replace(/^Subject:\s*/i, '').replace(/\.$/, '');
+                      return { ...prev, subject: subjectVal };
+                    }
+                    if (missingGatheringField === 'gradeLevel') {
+                      const grade = value.replace(/^Grade level:\s*/i, '').replace(/\.$/, '');
+                      return { ...prev, gradeLevel: grade };
+                    }
+                    if (missingGatheringField === 'duration') {
+                      const dur = value.replace(/^Class length:\s*/i, '').replace(/\.$/, '');
+                      return { ...prev, duration: dur };
+                    }
+                    return prev;
+                  });
+                  void handleSendMessage(value);
+                }}
+              />
+            </div>
+          )}
+
+          {conversationPhase === 'text_selection' && (lessonPlan.textOptions?.length ?? 0) >= 2 && (
+            <div className="max-w-4xl mx-auto w-full">
+              <TextOptionPicker
+                options={lessonPlan.textOptions ?? []}
+                theme={theme}
+                onPick={handleTextOptionPick}
+              />
+            </div>
+          )}
+
           {conversationPhase === 'instructional_model' && (
             <div className="max-w-4xl mx-auto w-full">
               <InstructionalModelChooser
