@@ -53,8 +53,13 @@ export async function POST(request: NextRequest) {
           url: t.url,
           license: t.license,
           licenseClass: t.licenseClass,
+          audience: t.audience,
+          format: t.format,
           captions: t.captions,
           transcript: t.transcript,
+          audio: t.audio,
+          keyboardNav: t.keyboardNav,
+          account: t.account,
           score: t.score,
         })),
         openers: selectOpeners(ctx, 3).map((o) => ({

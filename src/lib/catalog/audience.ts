@@ -17,6 +17,10 @@ const TEACHER_PD_PATTERNS = [
   /\brubric\b/i,
   /\bprofessional development\b/i,
   /\bteacher(?:'s)? guide\b/i,
+  /\bteaching students\b/i,
+  /\bteaching strategies\b/i,
+  /\bcurriculum\b/i,
+  /\bunit(?:s)?\b/i,
   /\bfacilitating\b/i,
   /\bevidence[-\s]?based\b/i,
   /\bvisible learning\b/i,
@@ -35,13 +39,11 @@ const STUDENT_FACING_OVERRIDES = [
   /\bprimary source\b/i,
   /\bpoems?\b/i,
   /\barticle\b/i,
-  /\btext\b/i,
   /\bclassroom activities\b/i,
   /\bsimulation\b/i,
   /\binteractive\b/i,
   /\blesson downloads?\b/i,
   /\belective course\b/i,
-  /\bstudent\b/i,
 ];
 
 export function inferResourceAudience(resource: ResourceAudienceInput): ResourceAudience {

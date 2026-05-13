@@ -28,7 +28,9 @@ describe('pickCatalog text audience filtering', () => {
 
     const ids = choices.map((choice) => choice.id);
     expect(ids).not.toContain('wwc_improving_adolescent_literacy_practice_guide');
+    expect(ids).not.toContain('wwc_providing_reading_interventions_for_grades_4_9');
     expect(ids).not.toContain('wwc_teaching_secondary_students_to_write_effectively');
+    expect(ids).not.toContain('understood_org_teaching_students_with_learning_differences');
     expect(ids).not.toContain('learning_for_justice_social_justice_standards');
   });
 });

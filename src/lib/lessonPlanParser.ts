@@ -187,16 +187,20 @@ function looksLikePlanShape(parsed: unknown): boolean {
 function normalizeLessonPlanData(data: Record<string, unknown>): Partial<LessonPlanData> {
   const normalized: Partial<LessonPlanData> = {};
 
-  if (data.title) normalized.title = String(data.title);
+  if (data.title) normalized.title = stripPlanMarkdown(String(data.title));
   if (data.gradeLevel || data.grade_level || data.grade) {
-    normalized.gradeLevel = String(data.gradeLevel || data.grade_level || data.grade);
+    normalized.gradeLevel = stripPlanMarkdown(String(data.gradeLevel || data.grade_level || data.grade));
   }
-  if (data.subject) normalized.subject = String(data.subject);
+  if (data.subject) normalized.subject = stripPlanMarkdown(String(data.subject));
   if (data.duration || data.time || data.length) {
-    normalized.duration = String(data.duration || data.time || data.length);
+    normalized.duration = stripPlanMarkdown(String(data.duration || data.time || data.length));
   }
   if (data.standard || data.standards) {
-    normalized.standard = String(data.standard || data.standards);
+    const standard = data.standard || data.standards;
+    normalized.standard =
+      typeof standard === 'string'
+        ? stripPlanMarkdown(standard)
+        : standard as LessonPlanData['standard'];
   }
 
   // Objectives — capture DOK if present, otherwise infer.
