@@ -33,7 +33,7 @@ export async function POST(request: NextRequest) {
     });
   }
 
-  if (!body?.decision) {
+  if (!body?.decision && !body?.scope) {
     return new Response(JSON.stringify({ error: 'Missing `decision` field.' }), {
       status: 400,
       headers: { 'Content-Type': 'application/json' },

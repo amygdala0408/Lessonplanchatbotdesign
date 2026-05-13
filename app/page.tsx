@@ -18,7 +18,6 @@ import { useStore } from '@/store/useStore';
 import { Message, ChatTurnResult, ConversationPhase, LessonPlanData, ValidationError, InstructionalModel } from '@/types';
 import { parseTurn, extractStudentMaterials, stripHiddenBlocks, extractQuickReplies } from '@/lib/lessonPlanParser';
 import { nextPhase, canFinalize } from '@/lib/phaseMachine';
-import { validateLessonPlan, formatErrorsForRetry } from '@/lib/lessonPlanSchema';
 
 const PHASE_LABELS: Record<ConversationPhase, string> = {
   gathering: 'Gathering',
@@ -28,6 +27,14 @@ const PHASE_LABELS: Record<ConversationPhase, string> = {
   drafting: 'Drafting',
   complete: 'Complete',
 };
+
+interface FinalizeProgress {
+  startedAt: number;
+  elapsedSeconds: number;
+  stage: 'preparing' | 'generating' | 'validating' | 'packaging';
+  model: string;
+  attempt: number;
+}
 
 export default function HomePage() {
   const {
@@ -44,10 +51,25 @@ export default function HomePage() {
   // Class-profile panel auto-expands during gathering, collapses thereafter
   // (the teacher can re-open it any time via the chip).
   const [classProfileExpanded, setClassProfileExpanded] = useState(true);
+  const [finalizeProgress, setFinalizeProgress] = useState<FinalizeProgress | null>(null);
   useEffect(() => {
     if (conversationPhase === 'gathering') setClassProfileExpanded(true);
     else setClassProfileExpanded(false);
   }, [conversationPhase]);
+  useEffect(() => {
+    if (!finalizeProgress) return;
+    const timer = window.setInterval(() => {
+      setFinalizeProgress((prev) => (
+        prev
+          ? {
+              ...prev,
+              elapsedSeconds: Math.floor((Date.now() - prev.startedAt) / 1000),
+            }
+          : null
+      ));
+    }, 1000);
+    return () => window.clearInterval(timer);
+  }, [finalizeProgress]);
 
   const componentRef = useRef<HTMLDivElement>(null);
 
@@ -244,14 +266,9 @@ export default function HomePage() {
     }
   };
 
-  // Finalize the lesson plan.
-  //
-  // Primary path (P0.5): /api/finalize-plan calls the generator model with
-  // generateObject + Zod schema. The response is *guaranteed* to be valid
-  // structured JSON or it errors. No more [LESSON_PLAN_JSON] regex extraction.
-  //
-  // Fallback path (gateway not configured): the legacy "ask the chat model to
-  // emit JSON between tags" flow. Removed once everyone is on the gateway.
+  // Finalize the lesson plan through the generator endpoint only. The legacy
+  // "[LESSON_PLAN_JSON]" chat fallback was intentionally removed because it can
+  // hide parser failures and render garbage when the gateway path is unavailable.
   const handleFinalize = async () => {
     const guard = canFinalize(conversationPhase, isTyping, lessonPlan);
     if (!guard.ok) {
@@ -260,6 +277,15 @@ export default function HomePage() {
     }
 
     setConversationPhase('drafting');
+    setIsTyping(true);
+    const startedAt = Date.now();
+    setFinalizeProgress({
+      startedAt,
+      elapsedSeconds: 0,
+      stage: 'preparing',
+      model: 'anthropic/claude-sonnet-4.5',
+      attempt: 1,
+    });
 
     // Snapshot the conversation so the server has the same history the chat
     // route would see.
@@ -268,18 +294,20 @@ export default function HomePage() {
       content: msg.content,
     }));
 
-    // ── Primary path: call the generator endpoint ──────────────────────────
-    const generatorResult = await finalizeViaGenerator({
-      plan: lessonPlan,
-      learnerProfile,
-      messages: conversationHistory,
-    });
+    try {
+      setFinalizeProgress((prev) => prev ? { ...prev, stage: 'generating' } : null);
+      const generatorResult = await finalizeViaGenerator({
+        plan: lessonPlan,
+        learnerProfile,
+        messages: conversationHistory,
+      });
 
-    if (generatorResult !== 'unavailable') {
       if (generatorResult.ok && generatorResult.plan) {
         const merged = { ...lessonPlan, ...generatorResult.plan } as LessonPlanData;
+        setFinalizeProgress((prev) => prev ? { ...prev, stage: 'packaging' } : null);
         setLessonPlan(merged);
         setValidationErrors([]);
+        setHasPlanUpdated(true);
         setConversationPhase('complete');
         toast.success('Lesson plan finalized.');
         setIsPlanOpen(true);
@@ -288,41 +316,40 @@ export default function HomePage() {
       }
 
       // The generator endpoint ran but the plan didn't pass the finalize gate.
-      // Surface the structured errors and park at preview.
+      // Surface the structured errors, render the merged plan anyway, and park
+      // at preview so the teacher can see exactly what needs repair.
+      setFinalizeProgress((prev) => prev ? { ...prev, stage: 'validating' } : null);
       if (generatorResult.merged) {
         setLessonPlan({ ...lessonPlan, ...generatorResult.merged } as LessonPlanData);
+        setHasPlanUpdated(true);
       }
       setValidationErrors(generatorResult.errors);
       setConversationPhase('preview');
+      setIsPlanOpen(true);
       const blocking = generatorResult.errors.filter((e) => e.severity === 'error');
       toast.error(
         `Lesson plan still has ${blocking.length} issue${blocking.length === 1 ? '' : 's'}. Open the lesson preview to see the checklist.`,
       );
-      return;
+    } finally {
+      setIsTyping(false);
+      setFinalizeProgress(null);
     }
-
-    // ── Fallback path: legacy chat-based finalize ──────────────────────────
-    toast.info('Gateway not configured; finalizing via legacy chat flow.');
-    await handleFinalizeLegacy();
   };
 
   /**
-   * Calls /api/finalize-plan. Returns 'unavailable' when the gateway is not
-   * configured (503), so the caller can fall back to the legacy flow.
+   * Calls /api/finalize-plan. A 503 is returned as a visible validation error
+   * instead of falling back to legacy chat JSON generation.
    */
   async function finalizeViaGenerator(args: {
     plan: Partial<LessonPlanData>;
     learnerProfile: typeof learnerProfile;
     messages: { role: string; content: string }[];
-  }): Promise<
-    | 'unavailable'
-    | {
-        ok: boolean;
-        plan: Partial<LessonPlanData> | null;
-        merged: Partial<LessonPlanData> | null;
-        errors: ValidationError[];
-      }
-  > {
+  }): Promise<{
+    ok: boolean;
+    plan: Partial<LessonPlanData> | null;
+    merged: Partial<LessonPlanData> | null;
+    errors: ValidationError[];
+  }> {
     try {
       const resp = await fetch('/api/finalize-plan', {
         method: 'POST',
@@ -330,15 +357,31 @@ export default function HomePage() {
         body: JSON.stringify(args),
       });
 
-      if (resp.status === 503) return 'unavailable';
+      if (resp.status === 503) {
+        const data = (await resp.json().catch(() => null)) as { errors?: ValidationError[] } | null;
+        const errors = data?.errors?.length
+          ? data.errors
+          : [
+              {
+                path: '<root>',
+                message: 'Finalize requires AI_GATEWAY_API_KEY in this environment.',
+                severity: 'error' as const,
+              },
+            ];
+        setValidationErrors(errors);
+        setConversationPhase('preview');
+        setIsPlanOpen(true);
+        toast.error('Finalize needs the AI Gateway key. The chat fallback has been removed to protect lesson quality.');
+        return { ok: false, plan: null, merged: lessonPlan, errors };
+      }
       if (!resp.ok) {
         const text = await resp.text().catch(() => '');
         console.warn('[finalize-plan] non-OK:', resp.status, text);
-        toast.error('Penny had trouble finalizing. Falling back to the chat draft.');
+        toast.error('Penny had trouble finalizing. Rendering the current draft with errors.');
         return {
           ok: false,
           plan: null,
-          merged: null,
+          merged: lessonPlan,
           errors: [
             {
               path: '<root>',
@@ -378,98 +421,19 @@ export default function HomePage() {
         errors: data.errors ?? [],
       };
     } catch (err) {
-      console.warn('[finalize-plan] fetch failed, falling back:', err);
-      return 'unavailable';
-    }
-  }
-
-  /**
-   * Legacy finalize flow: ask the chat model to emit a [LESSON_PLAN_JSON]
-   * block, parse it, validate with /api/validate-plan, retry once.
-   * Retained as a fallback when the gateway isn't configured.
-   */
-  async function handleFinalizeLegacy() {
-    const finalizePrompt = `Please finalize and output the complete lesson plan we've designed.
-
-Output the structured lesson plan data between [LESSON_PLAN_JSON] and [/LESSON_PLAN_JSON] tags using this exact JSON structure:
-
-[LESSON_PLAN_JSON]
-{
-  "title": "Lesson title",
-  "gradeLevel": "Grade level",
-  "subject": "Subject area",
-  "duration": "Time duration",
-  "standard": { "framework": "CCSS", "code": "CCSS.ELA-LITERACY.RI.11-12.6", "description": "..." },
-  "instructionalModel": "Explicit Instruction | 5E Inquiry | Project-Based Learning | Cooperative Learning | Socratic Seminar | Workshop Model | Flipped Classroom",
-  "objectives": [{"text": "Students will...", "dok": 3, "verb": "analyze"}],
-  "materials": ["Material 1", "Material 2"],
-  "procedure": [
-    {"phase": "launch", "step": "Set Purpose (10 min)", "description": "...", "accommodations": "Visual schedule posted; sentence stems available"},
-    {"phase": "model", "step": "Modeling (15 min)", "description": "...", "accommodations": "Think-aloud captioned"},
-    {"phase": "guided_practice", "step": "Guided Practice (25 min)", "description": "...", "accommodations": "Strategic pairs; sentence frames"},
-    {"phase": "independent_practice", "step": "Independent Practice (30 min)", "description": "...", "accommodations": "Reduced load option; alt response modes"},
-    {"phase": "exit_slip", "step": "Closure & Exit Slip (10 min)", "description": "...", "accommodations": "Bilingual glossary available"}
-  ],
-  "assessment": "Assessment description",
-  "successCriteria": ["I can ...", "I can ...", "I can ..."],
-  "supports": {
-    "all": ["Support for all students"],
-    "el": ["EL-specific supports"],
-    "iep504": ["IEP/504 accommodations"]
-  },
-  "equityNotes": "Representation tags and equity considerations",
-  "exitSlip": "Exit slip prompt aligned to the highest-DOK objective",
-  "rubric": [
-    {"score": 0, "description": "No understanding demonstrated"},
-    {"score": 1, "description": "Partial understanding"},
-    {"score": 2, "description": "Approaching mastery"},
-    {"score": 3, "description": "Full mastery with evidence"}
-  ],
-  "textOptions": [
-    {"title": "...", "source": "...", "lexile": "...", "url": "...", "rationale": "...", "selected": true},
-    {"title": "...", "source": "...", "lexile": "...", "url": "...", "rationale": "...", "selected": false},
-    {"title": "...", "source": "...", "lexile": "...", "url": "...", "rationale": "...", "selected": false}
-  ],
-  "teacherModifications": ["Optional modification 1", "Optional modification 2"]
-}
-[/LESSON_PLAN_JSON]
-
-Hard requirements:
-- Exactly 5 procedure phases in order: launch -> model -> guided_practice -> independent_practice -> exit_slip
-- Every procedure step has non-empty "accommodations" embedded
-- Exit slip aligned to the highest-DOK objective
-- Rubric has exactly 4 rows scored 0/1/2/3
-- Exactly one selected: true in textOptions, the others false`;
-
-    const turn = await handleSendMessage(finalizePrompt);
-    if (!turn.ok) {
+      console.warn('[finalize-plan] fetch failed:', err);
+      const errors: ValidationError[] = [
+        {
+          path: '<root>',
+          message: 'Finalize request failed before the generator returned. Check network/API configuration.',
+          severity: 'error',
+        },
+      ];
+      setValidationErrors(errors);
       setConversationPhase('preview');
-      return;
-    }
-
-    const merged = { ...lessonPlan, ...(turn.plan ?? {}) };
-    let result = await validatePlanRemote(merged);
-
-    if (!result.ok) {
-      toast.info('Penny\'s draft missed a few quality gates. Asking her to fix it...');
-      const retryPrompt = result.retryPrompt || formatErrorsForRetry(result.errors);
-      const retryTurn = await handleSendMessage(retryPrompt);
-      const retryMerged = { ...lessonPlan, ...(retryTurn.plan ?? {}) };
-      result = await validatePlanRemote(retryMerged);
-    }
-
-    setValidationErrors(result.errors);
-    if (result.ok) {
-      setConversationPhase('complete');
-      toast.success('Lesson plan finalized.');
       setIsPlanOpen(true);
-      void fetchLessonPackage(merged);
-    } else {
-      setConversationPhase('preview');
-      const blocking = result.errors.filter((e) => e.severity === 'error');
-      toast.error(
-        `Lesson plan still has ${blocking.length} issue${blocking.length === 1 ? '' : 's'}. Open the lesson preview to see the checklist.`,
-      );
+      toast.error('Penny had trouble finalizing. Rendering the current draft with errors.');
+      return { ok: false, plan: null, merged: lessonPlan, errors };
     }
   }
 
@@ -487,36 +451,6 @@ Hard requirements:
       setLessonPackage(pkg);
     } catch (err) {
       console.warn('[lesson-package] resolve failed:', err);
-    }
-  }
-
-  // Server-side plan validation (structural + catalog ID cross-checks). Falls
-  // back to client-side structural validation if the endpoint is unreachable
-  // so a hosting glitch doesn't strand the teacher.
-  async function validatePlanRemote(
-    plan: Partial<LessonPlanData>,
-  ): Promise<{ ok: boolean; errors: ValidationError[]; retryPrompt?: string }> {
-    try {
-      const resp = await fetch('/api/validate-plan', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ plan, gate: 'finalize' }),
-      });
-      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-      const data = (await resp.json()) as {
-        ok: boolean;
-        errors: ValidationError[];
-        retryPrompt?: string;
-      };
-      return data;
-    } catch (err) {
-      console.warn('[validate-plan] remote check failed, using local fallback:', err);
-      const local = validateLessonPlan(plan, 'finalize');
-      return {
-        ok: local.ok,
-        errors: local.errors,
-        retryPrompt: formatErrorsForRetry(local.errors),
-      };
     }
   }
 
@@ -719,6 +653,42 @@ Hard requirements:
               toast.success('Started a new conversation!');
             }}
           />
+
+          {finalizeProgress && (
+            <div className="max-w-4xl mx-auto w-full mt-4">
+              <div
+                className={cn(
+                  'border-2 p-4 shadow-[6px_6px_0px_0px_rgba(0,0,0,0.18)]',
+                  theme === 'coffee'
+                    ? 'bg-[#3e3226] border-[#e8e6df]/20 text-[#e8e6df]'
+                    : 'bg-white border-[#1a1a1a] text-[#1a1a1a]',
+                )}
+              >
+                <div className="flex items-center justify-between gap-4">
+                  <div>
+                    <div className="text-[10px] font-mono uppercase tracking-widest opacity-60">
+                      Finalizing lesson package
+                    </div>
+                    <div className="font-['Oswald'] uppercase tracking-widest font-bold mt-1">
+                      {finalizeProgress.stage === 'preparing' && 'Preparing context'}
+                      {finalizeProgress.stage === 'generating' && 'Generator is building the plan'}
+                      {finalizeProgress.stage === 'validating' && 'Checking quality gates'}
+                      {finalizeProgress.stage === 'packaging' && 'Resolving catalog package'}
+                    </div>
+                    <p className="text-xs opacity-70 mt-1">
+                      Model: {finalizeProgress.model} · Attempt {finalizeProgress.attempt} · {finalizeProgress.elapsedSeconds}s elapsed.
+                      This usually takes 60-90 seconds for a complete print-ready plan.
+                    </p>
+                  </div>
+                  <div className="flex gap-1">
+                    <span className="w-2.5 h-2.5 rounded-full bg-green-600 animate-bounce [animation-delay:-0.3s]"></span>
+                    <span className="w-2.5 h-2.5 rounded-full bg-green-600 animate-bounce [animation-delay:-0.15s]"></span>
+                    <span className="w-2.5 h-2.5 rounded-full bg-green-600 animate-bounce"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
 
           {/* Phase-aware pickers — only the picker that matches the active phase
               renders, so the chat surface stays focused. */}

@@ -21,7 +21,8 @@
     "account": "free",
     "representationTags": [
       "rtag.media.multimodal_resources"
-    ]
+    ],
+    "audience": "student"
   },
   {
     "id": "phet_photosynthesis_simulation",
@@ -45,7 +46,8 @@
     "account": "free",
     "representationTags": [
       "rtag.media.multimodal_resources"
-    ]
+    ],
+    "audience": "student"
   },
   {
     "id": "phet_projectile_motion",
@@ -70,7 +72,8 @@
     "account": "free",
     "representationTags": [
       "rtag.media.multimodal_resources"
-    ]
+    ],
+    "audience": "student"
   },
   {
     "id": "english_literature_oer_collection",
@@ -92,7 +95,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "writing_about_literature_collection",
@@ -114,7 +118,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "high_school_english_language_arts_for_remote_learning",
@@ -136,7 +141,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "math_open_reference_project_geometry",
@@ -158,7 +164,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "paul_s_online_math_notes",
@@ -180,7 +187,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "national_library_of_virtual_manipulatives",
@@ -202,7 +210,8 @@
     "keyboardNav": "yes",
     "audio": "unknown",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "wwc_improving_adolescent_literacy_practice_guide",
@@ -224,7 +233,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "teacher"
   },
   {
     "id": "wwc_providing_reading_interventions_for_grades_4_9",
@@ -246,7 +256,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "wwc_assisting_students_struggling_with_reading",
@@ -268,7 +279,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "teacher"
   },
   {
     "id": "pbs_learningmedia_the_beauty_of_pollination",
@@ -290,7 +302,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "pbs_learningmedia_we_shall_overcome_civil_rights",
@@ -312,7 +325,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "african_american_history_harlem_renaissance",
@@ -334,7 +348,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "native_american_literature_anthology",
@@ -356,7 +371,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "civil_rights_movement_primary_sources",
@@ -378,7 +394,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "open_anthology_of_earlier_american_literature",
@@ -400,7 +417,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "oer_commons_black_history_month_collection",
@@ -423,7 +441,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "the_american_yawp_open_u_s_history_textbook",
@@ -445,7 +464,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "hidden_figures_african_american_women_mathematicians_at_nasa",
@@ -469,7 +489,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "contributions_of_diverse_scientists",
@@ -491,7 +512,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "stem_role_models_from_historically_marginalized_groups",
@@ -513,7 +535,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "indigenous_knowledge_and_environmental_science",
@@ -535,7 +558,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "latinx_voices_in_u_s_history",
@@ -557,7 +581,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "asian_american_narratives",
@@ -580,7 +605,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "african_american_poetry_collection",
@@ -602,7 +628,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "free",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "women_in_science_contributions_across_history",
@@ -625,7 +652,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "phet_balancing_chemical_equations",
@@ -649,7 +677,8 @@
     "account": "free",
     "representationTags": [
       "rtag.media.multimodal_resources"
-    ]
+    ],
+    "audience": "student"
   },
   {
     "id": "phet_acid_base_solutions",
@@ -673,7 +702,8 @@
     "account": "free",
     "representationTags": [
       "rtag.media.multimodal_resources"
-    ]
+    ],
+    "audience": "student"
   },
   {
     "id": "phet_molarity",
@@ -697,7 +727,8 @@
     "account": "free",
     "representationTags": [
       "rtag.media.multimodal_resources"
-    ]
+    ],
+    "audience": "student"
   },
   {
     "id": "phet_graphing_quadratics",
@@ -721,7 +752,8 @@
     "account": "free",
     "representationTags": [
       "rtag.media.multimodal_resources"
-    ]
+    ],
+    "audience": "student"
   },
   {
     "id": "phet_graphing_lines",
@@ -745,7 +777,8 @@
     "account": "free",
     "representationTags": [
       "rtag.media.multimodal_resources"
-    ]
+    ],
+    "audience": "student"
   },
   {
     "id": "phet_function_builder",
@@ -769,7 +802,8 @@
     "account": "free",
     "representationTags": [
       "rtag.media.multimodal_resources"
-    ]
+    ],
+    "audience": "student"
   },
   {
     "id": "phet_trig_tour",
@@ -793,7 +827,8 @@
     "account": "free",
     "representationTags": [
       "rtag.media.multimodal_resources"
-    ]
+    ],
+    "audience": "student"
   },
   {
     "id": "phet_plate_tectonics",
@@ -817,7 +852,8 @@
     "account": "free",
     "representationTags": [
       "rtag.media.multimodal_resources"
-    ]
+    ],
+    "audience": "student"
   },
   {
     "id": "phet_wave_on_a_string",
@@ -841,7 +877,8 @@
     "account": "free",
     "representationTags": [
       "rtag.media.multimodal_resources"
-    ]
+    ],
+    "audience": "student"
   },
   {
     "id": "phet_natural_selection",
@@ -865,7 +902,8 @@
     "account": "free",
     "representationTags": [
       "rtag.media.multimodal_resources"
-    ]
+    ],
+    "audience": "student"
   },
   {
     "id": "phet_gene_expression_essentials",
@@ -889,7 +927,8 @@
     "account": "free",
     "representationTags": [
       "rtag.media.multimodal_resources"
-    ]
+    ],
+    "audience": "student"
   },
   {
     "id": "phet_gravity_and_orbits",
@@ -913,7 +952,8 @@
     "account": "free",
     "representationTags": [
       "rtag.media.multimodal_resources"
-    ]
+    ],
+    "audience": "student"
   },
   {
     "id": "phet_states_of_matter",
@@ -937,7 +977,8 @@
     "account": "free",
     "representationTags": [
       "rtag.media.multimodal_resources"
-    ]
+    ],
+    "audience": "student"
   },
   {
     "id": "openstax_algebra_and_trigonometry",
@@ -959,7 +1000,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "openstax_precalculus",
@@ -981,7 +1023,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "openstax_calculus_volume_1",
@@ -1003,7 +1046,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "openstax_statistics",
@@ -1025,7 +1069,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "openstax_chemistry_2e",
@@ -1047,7 +1092,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "openstax_biology_2e",
@@ -1069,7 +1115,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "openstax_physics",
@@ -1091,7 +1138,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "openstax_u_s_history",
@@ -1113,7 +1161,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "openstax_world_history_volume_1",
@@ -1135,7 +1184,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "openstax_world_history_volume_2",
@@ -1157,7 +1207,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "openstax_american_government_3e",
@@ -1179,7 +1230,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "openstax_economics_2e",
@@ -1201,7 +1253,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "openstax_psychology_2e",
@@ -1223,7 +1276,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "openstax_astronomy",
@@ -1245,7 +1299,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "openstax_environmental_science",
@@ -1267,7 +1322,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "library_of_congress_civil_rights_movement_primary_sources",
@@ -1289,7 +1345,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "free",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "library_of_congress_constitution_primary_source_set",
@@ -1311,7 +1368,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "free",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "library_of_congress_immigration_primary_sources",
@@ -1333,7 +1391,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "free",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "library_of_congress_dust_bowl_migration",
@@ -1355,7 +1414,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "free",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "library_of_congress_women_s_suffrage",
@@ -1377,7 +1437,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "free",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "library_of_congress_american_authors_19th_century",
@@ -1399,7 +1460,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "free",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "library_of_congress_harlem_renaissance",
@@ -1422,7 +1484,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "free",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "library_of_congress_world_war_ii",
@@ -1444,7 +1507,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "free",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "chronicling_america_historic_newspapers",
@@ -1467,7 +1531,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "free",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "pbs_learningmedia_nova_earth_system_science",
@@ -1489,7 +1554,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "pbs_learningmedia_american_experience",
@@ -1511,7 +1577,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "pbs_learningmedia_ken_burns_classroom",
@@ -1533,7 +1600,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "pbs_learningmedia_physics_in_motion",
@@ -1555,7 +1623,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "pbs_learningmedia_chemistry_matters",
@@ -1577,7 +1646,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "smithsonian_learning_lab_african_american_history",
@@ -1599,7 +1669,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "free",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "smithsonian_learning_lab_natural_history",
@@ -1621,7 +1692,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "free",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "smithsonian_learning_lab_american_history",
@@ -1643,7 +1715,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "free",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "smithsonian_learning_lab_air_and_space",
@@ -1666,7 +1739,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "free",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "smithsonian_learning_lab_american_indian",
@@ -1688,7 +1762,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "free",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "wwc_teaching_secondary_students_to_write_effectively",
@@ -1710,7 +1785,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "teacher"
   },
   {
     "id": "wwc_teaching_strategies_for_improving_algebra_knowledge",
@@ -1732,7 +1808,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "teacher"
   },
   {
     "id": "wwc_improving_mathematical_problem_solving_grades_4_8",
@@ -1754,7 +1831,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "teacher"
   },
   {
     "id": "wwc_teaching_math_to_young_children",
@@ -1776,7 +1854,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "teacher"
   },
   {
     "id": "wwc_using_technology_to_support_high_school_math",
@@ -1798,7 +1877,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "teacher"
   },
   {
     "id": "dpla_civil_war_primary_source_set",
@@ -1820,7 +1900,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "dpla_slavery_and_abolition",
@@ -1842,7 +1923,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "dpla_westward_expansion",
@@ -1864,7 +1946,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "dpla_great_depression",
@@ -1886,7 +1969,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "libretexts_chemistry",
@@ -1908,7 +1992,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "libretexts_biology",
@@ -1930,7 +2015,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "libretexts_mathematics",
@@ -1952,7 +2038,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "libretexts_physics",
@@ -1974,7 +2061,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "libretexts_geosciences",
@@ -1996,7 +2084,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "hippocampus_algebra_geometry",
@@ -2018,7 +2107,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "hippocampus_physics",
@@ -2040,7 +2130,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "hippocampus_biology",
@@ -2062,7 +2153,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "hippocampus_u_s_history",
@@ -2084,7 +2176,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "mit_opencourseware_high_school_resources",
@@ -2106,7 +2199,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "facing_history_holocaust_and_human_behavior",
@@ -2128,7 +2222,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "native_knowledge_360_native_perspectives",
@@ -2150,7 +2245,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "zinn_education_project_teaching_people_s_history",
@@ -2174,7 +2270,8 @@
     "account": "paid",
     "representationTags": [
       "rtag.context.multiple_perspectives"
-    ]
+    ],
+    "audience": "student"
   },
   {
     "id": "teaching_tolerance_learning_for_justice",
@@ -2199,7 +2296,8 @@
     "account": "unknown",
     "representationTags": [
       "rtag.context.multiple_perspectives"
-    ]
+    ],
+    "audience": "student"
   },
   {
     "id": "geogebra_math_tools_and_resources",
@@ -2221,7 +2319,8 @@
     "keyboardNav": "yes",
     "audio": "unknown",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "desmos_classroom_activities",
@@ -2243,7 +2342,8 @@
     "keyboardNav": "yes",
     "audio": "unknown",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "national_geographic_education",
@@ -2266,7 +2366,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "edsitement_neh_educational_resources",
@@ -2289,7 +2390,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "wgbh_bringing_the_universe_to_america_s_classrooms",
@@ -2311,7 +2413,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "casel_sel_101_introduction_to_social_emotional_learning",
@@ -2333,7 +2436,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "teacher"
   },
   {
     "id": "casel_school_guide_schoolwide_sel_implementation",
@@ -2355,7 +2459,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "teacher"
   },
   {
     "id": "casel_program_guide_evidence_based_sel_programs",
@@ -2377,7 +2482,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "teacher"
   },
   {
     "id": "greater_good_in_education_sel_practices_for_educators",
@@ -2399,7 +2505,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "greater_good_in_action_science_based_well_being_practices",
@@ -2421,7 +2528,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "the_science_of_happiness_course",
@@ -2443,7 +2551,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "random_acts_of_kindness_kindness_in_the_classroom_k_8",
@@ -2465,7 +2574,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "teacher"
   },
   {
     "id": "random_acts_of_kindness_high_school_elective_course",
@@ -2487,7 +2597,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "character_lab_playbooks_evidence_based_character_development",
@@ -2509,7 +2620,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "teacher"
   },
   {
     "id": "character_lab_grit_playbook",
@@ -2531,7 +2643,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "character_lab_growth_mindset_playbook",
@@ -2553,7 +2666,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "sanford_harmony_sel_program",
@@ -2576,7 +2690,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "learning_for_justice_social_justice_standards",
@@ -2600,7 +2715,8 @@
     "account": "unknown",
     "representationTags": [
       "rtag.context.multiple_perspectives"
-    ]
+    ],
+    "audience": "teacher"
   },
   {
     "id": "learning_for_justice_teaching_hard_history_framework",
@@ -2625,7 +2741,8 @@
     "account": "unknown",
     "representationTags": [
       "rtag.context.multiple_perspectives"
-    ]
+    ],
+    "audience": "teacher"
   },
   {
     "id": "learning_for_justice_let_s_talk_guide_for_difficult_conversations",
@@ -2649,7 +2766,8 @@
     "account": "unknown",
     "representationTags": [
       "rtag.context.multiple_perspectives"
-    ]
+    ],
+    "audience": "teacher"
   },
   {
     "id": "facing_history_choosing_to_participate",
@@ -2672,7 +2790,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "facing_history_identity_and_community",
@@ -2694,7 +2813,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "oer_commons_social_emotional_learning_collection",
@@ -2716,7 +2836,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "mindful_schools_mindfulness_curriculum_resources",
@@ -2738,7 +2859,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "edutopia_sel_resources_and_strategies",
@@ -2760,7 +2882,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "teacher"
   },
   {
     "id": "pbis_world_tier_1_sel_interventions",
@@ -2782,7 +2905,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "learning_to_give_philanthropy_education_lessons",
@@ -2805,7 +2929,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "yale_center_for_emotional_intelligence_ruler_overview",
@@ -2827,7 +2952,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "national_center_on_safe_supportive_learning_environments",
@@ -2849,7 +2975,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "second_step_sel_overview_and_sample_lessons",
@@ -2871,7 +2998,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "teacher"
   },
   {
     "id": "glsen_inclusive_curriculum_guide",
@@ -2893,7 +3021,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "glsen_lgbtq_history_month_resources",
@@ -2915,7 +3044,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "glsen_unheard_voices_oral_history_curriculum",
@@ -2937,7 +3067,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "disability_equality_education_high_school_lesson_plans",
@@ -2959,7 +3090,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "emerging_america_reform_to_equal_rights_disability_curriculum",
@@ -2981,7 +3113,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "facing_history_disability_rights_and_judy_heumann",
@@ -3003,7 +3136,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "neurodiversity_celebration_week_resource_hub",
@@ -3025,7 +3159,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "additude_magazine_educator_resources",
@@ -3047,7 +3182,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "chadd_teacher_to_teacher_program",
@@ -3069,7 +3205,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "aapi_history_hub_k_12_lesson_plans",
@@ -3091,7 +3228,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "learn_aapi_history_project",
@@ -3113,7 +3251,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "asian_american_education_project",
@@ -3135,7 +3274,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "smithsonian_asian_pacific_american_center_learning_together",
@@ -3157,7 +3297,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "free",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "edsitement_asian_american_and_pacific_islander_heritage_guide",
@@ -3179,7 +3320,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "nps_teaching_with_historic_places_aapi_heritage",
@@ -3201,7 +3343,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "wing_luke_museum_online_classroom",
@@ -3223,7 +3366,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "facing_history_aapi_resources_collection",
@@ -3245,7 +3389,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "teaching_the_middle_east_university_of_chicago",
@@ -3267,7 +3412,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "middle_east_institute_general_resources_for_teachers",
@@ -3289,7 +3435,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "teachmideast_middle_east_policy_council",
@@ -3311,7 +3458,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "upenn_middle_east_center_materials_for_educators",
@@ -3333,7 +3481,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "nc_consortium_for_middle_east_studies_teaching_resources",
@@ -3355,7 +3504,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "adc_arab_american_educational_materials",
@@ -3377,7 +3527,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "mathematically_gifted_and_black",
@@ -3399,7 +3550,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "lathisms_latinx_and_hispanics_in_mathematical_sciences",
@@ -3423,7 +3575,8 @@
     "account": "unknown",
     "representationTags": [
       "rtag.media.accessible_media"
-    ]
+    ],
+    "audience": "student"
   },
   {
     "id": "mathematicians_of_the_african_diaspora_mad_pages",
@@ -3445,7 +3598,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "indigenous_mathematicians",
@@ -3467,7 +3621,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "meet_a_mathematician_video_series",
@@ -3489,7 +3644,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "todos_mathematics_for_all",
@@ -3511,7 +3667,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "society_for_advancement_of_chicanos_hispanics_native_americans_in_science",
@@ -3533,7 +3690,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "national_association_of_mathematicians",
@@ -3555,7 +3713,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "advocates_for_human_rights_immigration_curriculum",
@@ -3577,7 +3736,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "color_n_colorado_immigration_classroom_resources",
@@ -3600,7 +3760,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "unhcr_against_all_odds_refugee_simulation",
@@ -3622,7 +3783,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "human_rights_education_usa_refugee_lesson_plans",
@@ -3644,7 +3806,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "human_rights_education_usa_immigrant_rights",
@@ -3666,7 +3829,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "libretexts_immigrant_and_refugee_families",
@@ -3688,7 +3852,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "oer_project_world_history_courses",
@@ -3710,7 +3875,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "teacher"
   },
   {
     "id": "share_my_lesson_aanhpi_heritage_collection",
@@ -3732,7 +3898,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "pbs_learningmedia_asian_americans_documentary",
@@ -3754,7 +3921,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "library_of_congress_asian_pacific_american_collections",
@@ -3776,7 +3944,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "free",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "japanese_american_national_museum_educator_resources",
@@ -3798,7 +3967,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "densho_japanese_american_incarceration_resources",
@@ -3820,7 +3990,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "chinese_historical_society_of_america_education",
@@ -3842,7 +4013,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "pbs_learningmedia_latino_americans",
@@ -3864,7 +4036,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "nea_teaching_latino_history",
@@ -3886,7 +4059,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "gilder_lehrman_latino_civil_rights_movement",
@@ -3908,7 +4082,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "learning_for_justice_latino_civil_rights",
@@ -3932,7 +4107,8 @@
     "account": "unknown",
     "representationTags": [
       "rtag.context.multiple_perspectives"
-    ]
+    ],
+    "audience": "student"
   },
   {
     "id": "national_museum_of_the_american_latino_education",
@@ -3954,7 +4130,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "free",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "lgbtq_history_digital_collaboratory",
@@ -3976,7 +4153,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "making_gay_history_podcast_and_resources",
@@ -4000,7 +4178,8 @@
     "account": "unknown",
     "representationTags": [
       "rtag.media.accessible_media"
-    ]
+    ],
+    "audience": "student"
   },
   {
     "id": "one_national_gay_lesbian_archives_education",
@@ -4022,7 +4201,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "spectra_diversity_lgbtq_workplace_and_school_resources",
@@ -4044,7 +4224,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "adl_lgbtq_curricular_resources",
@@ -4066,7 +4247,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "understood_org_teaching_students_with_learning_differences",
@@ -4088,7 +4270,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "international_dyslexia_association_educator_resources",
@@ -4110,7 +4293,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "yale_center_for_dyslexia_resources",
@@ -4132,7 +4316,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "autism_speaks_school_community_tool_kit",
@@ -4154,7 +4339,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "autism_society_education_resources",
@@ -4176,7 +4362,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "the_nora_project_disability_inclusion",
@@ -4198,7 +4385,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "museum_of_disability_history_curriculum",
@@ -4220,7 +4408,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "ada_national_network_youth_resources",
@@ -4242,7 +4431,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "just_say_hi_campaign_disability_awareness",
@@ -4264,7 +4454,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "nasa_s_neurodiversity_network_n3",
@@ -4286,7 +4477,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "free",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "stairway_to_stem_autistic_students_resources",
@@ -4308,7 +4500,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "black_girl_mathgic",
@@ -4330,7 +4523,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "girls_who_code_resources",
@@ -4352,7 +4546,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "code_org_cs_education_resources",
@@ -4374,7 +4569,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "exploring_the_nmaahc_african_american_history",
@@ -4396,7 +4592,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "free",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "pbs_african_american_history_collection",
@@ -4418,7 +4615,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "1619_project_curriculum",
@@ -4440,7 +4638,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "teaching_hard_history_american_slavery",
@@ -4464,7 +4663,8 @@
     "account": "unknown",
     "representationTags": [
       "rtag.context.multiple_perspectives"
-    ]
+    ],
+    "audience": "student"
   },
   {
     "id": "equal_justice_initiative_educational_resources",
@@ -4486,7 +4686,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "jewish_virtual_library_education",
@@ -4508,7 +4709,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "yad_vashem_educational_resources",
@@ -4530,7 +4732,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "usc_shoah_foundation_iwitness",
@@ -4552,7 +4755,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "national_wwii_museum_holocaust_resources",
@@ -4574,7 +4778,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "rural_schools_collaborative_resources",
@@ -4596,7 +4801,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "appalachian_regional_commission_education",
@@ -4618,7 +4824,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "first_generation_college_student_resources",
@@ -4640,7 +4847,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "foster_club_education_resources",
@@ -4662,7 +4870,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "diverse_bookfinder_multicultural_literature",
@@ -4684,7 +4893,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "we_need_diverse_books_resources",
@@ -4706,7 +4916,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "american_indians_in_children_s_literature",
@@ -4728,7 +4939,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "lee_low_books_diverse_classroom_library",
@@ -4750,7 +4962,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "teaching_for_change_social_justice_books",
@@ -4773,7 +4986,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "rethinking_schools_teaching_for_equity",
@@ -4795,7 +5009,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "commonlit_free_reading_passages_library",
@@ -4817,7 +5032,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "free-account",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "commonlit_paired_texts",
@@ -4839,7 +5055,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "free-account",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "commonlit_360_curriculum_units",
@@ -4861,7 +5078,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "free-account",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "teacher"
   },
   {
     "id": "readworks_k_12_reading_passages",
@@ -4883,7 +5101,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "free-account",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "readworks_article_a_day",
@@ -4905,7 +5124,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "free-account",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "readworks_stepreads_scaffolded_passages",
@@ -4927,7 +5147,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "free-account",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "newsela_current_events_at_multiple_reading_levels",
@@ -4951,7 +5172,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "paid",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "khan_academy_math_courses",
@@ -4973,7 +5195,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "free-account",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "khan_academy_science_courses",
@@ -4995,7 +5218,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "free-account",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "khan_academy_computing",
@@ -5017,7 +5241,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "free-account",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "khan_academy_economics",
@@ -5039,7 +5264,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "free-account",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "khan_academy_arts_and_humanities",
@@ -5062,7 +5288,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "free-account",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "khan_academy_test_prep_sat_lsat_mcat",
@@ -5084,7 +5311,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "free-account",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "ck_12_flexbooks_customizable_textbooks",
@@ -5107,7 +5335,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "ck_12_plix_interactive_simulations",
@@ -5130,7 +5359,8 @@
     "keyboardNav": "yes",
     "audio": "unknown",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "ck_12_adaptive_practice",
@@ -5153,7 +5383,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "teacher"
   },
   {
     "id": "illustrative_mathematics_problem_based_curriculum",
@@ -5175,7 +5406,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "illustrative_mathematics_math_tasks",
@@ -5197,7 +5429,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "teacher"
   },
   {
     "id": "open_up_resources_math_curriculum_im_aligned",
@@ -5219,7 +5452,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "open_up_resources_ela_curriculum",
@@ -5241,7 +5475,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "nctm_illuminations_math_lessons_and_activities",
@@ -5263,7 +5498,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "youcubed_growth_mindset_math",
@@ -5286,7 +5522,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "youcubed_week_of_inspirational_math",
@@ -5309,7 +5546,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "youcubed_mathematical_mindsets_resources",
@@ -5332,7 +5570,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "nrich_rich_mathematical_tasks",
@@ -5354,7 +5593,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "mathigon_interactive_math_courses",
@@ -5376,7 +5616,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "hhmi_biointeractive_classroom_resources",
@@ -5398,7 +5639,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "hhmi_biointeractive_click_learn_tutorials",
@@ -5420,7 +5662,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "hhmi_biointeractive_short_films",
@@ -5442,7 +5685,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "hhmi_biointeractive_data_points",
@@ -5464,7 +5708,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "concord_consortium_stem_simulations",
@@ -5486,7 +5731,8 @@
     "keyboardNav": "yes",
     "audio": "unknown",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "concord_consortium_codap_data_analysis",
@@ -5509,7 +5755,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "concord_consortium_model_based_learning",
@@ -5531,7 +5778,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "chemcollective_virtual_labs",
@@ -5553,7 +5801,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "chemcollective_stoichiometry_tutorials",
@@ -5575,7 +5824,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "icivics_civics_games_and_curriculum",
@@ -5597,7 +5847,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "icivics_drafting_board_legislation_simulation",
@@ -5619,7 +5870,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "icivics_supreme_decision_court_simulation",
@@ -5641,7 +5893,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "icivics_executive_command_president_simulation",
@@ -5663,7 +5916,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "icivics_civics_curriculum_units",
@@ -5685,7 +5939,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "stanford_history_education_group_reading_like_a_historian",
@@ -5707,7 +5962,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "stanford_history_education_group_civic_online_reasoning",
@@ -5730,7 +5986,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "stanford_history_education_group_evaluating_sources",
@@ -5752,7 +6009,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "stanford_history_education_group_beyond_the_bubble",
@@ -5774,7 +6032,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "docsteach_national_archives_primary_sources",
@@ -5796,7 +6055,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "docsteach_document_analysis_activities",
@@ -5818,7 +6078,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "docsteach_primary_source_sets",
@@ -5840,7 +6101,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "gilder_lehrman_institute_primary_sources",
@@ -5862,7 +6124,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "gilder_lehrman_ap_us_history_resources",
@@ -5884,7 +6147,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "world_history_encyclopedia",
@@ -5906,7 +6170,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "iris_center_evidence_based_practice_modules",
@@ -5928,7 +6193,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "teacher"
   },
   {
     "id": "iris_center_high_leverage_practices",
@@ -5950,7 +6216,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "iris_center_classroom_behavior_management",
@@ -5972,7 +6239,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "iris_center_rti_overview",
@@ -5994,7 +6262,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "iris_center_universal_design_for_learning",
@@ -6016,7 +6285,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "teacher"
   },
   {
     "id": "ncii_intensive_intervention_resources",
@@ -6038,7 +6308,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "ncii_academic_intervention_tools_chart",
@@ -6060,7 +6331,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "ncii_behavior_intervention_tools_chart",
@@ -6082,7 +6354,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "reading_rockets_teaching_strategies",
@@ -6104,7 +6377,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "reading_rockets_reading_101",
@@ -6126,7 +6400,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "reading_rockets_classroom_strategies",
@@ -6148,7 +6423,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "ld_online_learning_disabilities_resources",
@@ -6170,7 +6446,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "intervention_central_rti_resources",
@@ -6192,7 +6469,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "intervention_central_cbm_warehouse",
@@ -6214,7 +6492,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "wida_access_for_ells_resources",
@@ -6236,7 +6515,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "wida_can_do_descriptors",
@@ -6258,7 +6538,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "wida_english_language_development_standards",
@@ -6280,7 +6561,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "teacher"
   },
   {
     "id": "color_n_colorado_ell_strategies",
@@ -6302,7 +6584,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "color_n_colorado_reading_tips_in_multiple_languages",
@@ -6324,7 +6607,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "achieve_the_core_instructional_resources",
@@ -6347,7 +6631,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "achieve_the_core_text_complexity_resources",
@@ -6369,7 +6654,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "achieve_the_core_coherence_map",
@@ -6391,7 +6677,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "news_literacy_project_checkology",
@@ -6413,7 +6700,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "news_literacy_project_the_sift_newsletter",
@@ -6435,7 +6723,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "news_literacy_project_rumorguard",
@@ -6457,7 +6746,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "allsides_for_schools_media_bias_resources",
@@ -6480,7 +6770,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "mediawise_teen_fact_checking",
@@ -6502,7 +6793,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "teaching_channel_classroom_video_library",
@@ -6524,7 +6816,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "teacher"
   },
   {
     "id": "teaching_channel_deep_dive_courses",
@@ -6546,7 +6839,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "teacher"
   },
   {
     "id": "annenberg_learner_video_courses",
@@ -6568,7 +6862,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "teacher"
   },
   {
     "id": "annenberg_learner_teaching_math",
@@ -6590,7 +6885,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "teacher"
   },
   {
     "id": "annenberg_learner_teaching_reading",
@@ -6612,7 +6908,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "teacher"
   },
   {
     "id": "saylor_academy_high_school_courses",
@@ -6634,7 +6931,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "saylor_academy_college_level_courses",
@@ -6656,7 +6954,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "mit_opencourseware_high_school_courses",
@@ -6678,7 +6977,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "careeronestop_career_exploration",
@@ -6700,7 +7000,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "o_net_online_occupation_information",
@@ -6722,7 +7023,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "bureau_of_labor_statistics_occupational_outlook_handbook",
@@ -6744,7 +7046,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "my_next_move_career_assessment",
@@ -6766,7 +7069,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "poetry_foundation_poems_and_resources",
@@ -6788,7 +7092,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "poetry_foundation_poetry_for_children",
@@ -6810,7 +7115,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "poetry_foundation_poem_guides",
@@ -6832,7 +7138,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "writing_revolution_free_resources",
@@ -6854,7 +7161,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "cast_udl_guidelines",
@@ -6876,7 +7184,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "cast_udl_curriculum_toolkit",
@@ -6898,7 +7207,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "teacher"
   },
   {
     "id": "noaa_education_climate_and_weather",
@@ -6920,7 +7230,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "free",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "noaa_ocean_explorer_education",
@@ -6942,7 +7253,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "free",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "usgs_education_earth_science_resources",
@@ -6964,7 +7276,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "nasa_stem_engagement_educator_resources",
@@ -6986,7 +7299,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "free",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "nasa_jet_propulsion_laboratory_education",
@@ -7008,7 +7322,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "free",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "nasa_climate_kids",
@@ -7030,7 +7345,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "free",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "exploratorium_science_snacks",
@@ -7052,7 +7368,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "project_wild_environmental_education",
@@ -7074,7 +7391,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "engageny_math_and_ela_curriculum",
@@ -7097,7 +7415,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "learnzillion_curriculum_illustrative_math",
@@ -7120,7 +7439,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "teacher"
   },
   {
     "id": "prodigy_math_game_platform",
@@ -7142,7 +7462,8 @@
     "keyboardNav": "yes",
     "audio": "unknown",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "quill_org_writing_and_grammar",
@@ -7164,7 +7485,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "noredink_grammar_and_writing",
@@ -7186,7 +7508,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "free-account",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "flocabulary_hip_hop_educational_videos",
@@ -7208,7 +7531,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "brainpop_free_resources",
@@ -7230,7 +7554,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "paid",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "crash_course_youtube_educational_series",
@@ -7252,7 +7577,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "ted_ed_lessons_worth_sharing",
@@ -7274,7 +7600,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "facing_history_reconstruction_era",
@@ -7296,7 +7623,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "learning_for_justice_digital_literacy_framework",
@@ -7321,7 +7649,8 @@
     "account": "unknown",
     "representationTags": [
       "rtag.context.multiple_perspectives"
-    ]
+    ],
+    "audience": "teacher"
   },
   {
     "id": "common_sense_education_digital_citizenship",
@@ -7343,7 +7672,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "common_sense_education_media_literacy",
@@ -7365,7 +7695,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "scholastic_classroom_magazines_teacher_resources",
@@ -7389,7 +7720,8 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   },
   {
     "id": "readwritethink_literacy_resources",
@@ -7411,6 +7743,7 @@
     "keyboardNav": "yes",
     "audio": "yes",
     "account": "unknown",
-    "representationTags": []
+    "representationTags": [],
+    "audience": "student"
   }
 ]

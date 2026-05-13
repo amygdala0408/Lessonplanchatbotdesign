@@ -1089,10 +1089,13 @@ export const LessonPlan = forwardRef<HTMLDivElement, LessonPlanRenderProps>(({
                     </thead>
                     <tbody>
                       {lessonPackage.glossary.map((g) => (
-                        <tr key={g.id} className="border-b border-[#1a1a1a]/20 align-top print:border-black">
+                        <tr key={`${g.termId}-${g.language}`} className="border-b border-[#1a1a1a]/20 align-top print:border-black">
                           <td className="p-2 font-bold">{g.term}</td>
                           <td className="p-2 uppercase font-mono text-xs">{g.language}</td>
-                          <td className="p-2 leading-snug">{g.definition}</td>
+                          <td className="p-2 leading-snug">
+                            {g.translation && g.translation !== g.term ? `${g.translation}: ` : ''}
+                            {g.pedagogicalDefinition}
+                          </td>
                         </tr>
                       ))}
                     </tbody>

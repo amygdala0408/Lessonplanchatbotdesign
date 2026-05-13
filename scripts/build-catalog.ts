@@ -37,6 +37,7 @@ import type {
   ScaffoldType,
   StandardRecord,
 } from '../src/lib/catalog/types';
+import { inferResourceAudience } from '../src/lib/catalog/audience';
 import type { DOKLevel, InstructionalModel, LessonPhaseId } from '../src/types';
 
 const ROOT = path.resolve(__dirname, '..');
@@ -278,6 +279,7 @@ function buildEquipUdlRubric(): EquipUdlRubric {
  *  - subjectTags : maps the Subject column into normalized CatalogSubject values
  *  - account     : inferred from Source (PhET=free, Newsela=paid, etc.)
  *  - audio       : inferred from accessibility fields
+ *  - audience    : student vs teacher-PD/reference, inferred from title/source
  *  - representationTags: minimal heuristics by Source
  * --------------------------------------------------------------------------*/
 
@@ -350,7 +352,7 @@ function buildResources(): ResourceRecord[] {
     .filter((r) => r.Title && r.URL)
     .map((r) => {
       const id = slugify(r.Title);
-      return {
+      const resource = {
         id,
         title: r.Title,
         author: r.Author || '',
@@ -369,6 +371,10 @@ function buildResources(): ResourceRecord[] {
         audio: inferAudio(r.Captions || '', r.Transcript || ''),
         account: inferAccount(r.Source || ''),
         representationTags: inferRepresentationTags(r.Source || '', r.Accessibility || ''),
+      };
+      return {
+        ...resource,
+        audience: inferResourceAudience(resource),
       };
     });
   // De-duplicate by id (slug collisions are possible with very similar titles).

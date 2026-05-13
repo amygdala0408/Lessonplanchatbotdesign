@@ -9,9 +9,26 @@ import { demoLessonPlan, demoMessages } from '../data/demoData';
 export interface LessonPackagePayload {
   accommodationsByPhase?: Record<string, Array<{ id: string; name: string; teacherPrompt: string; studentMicrocopy: string; phaseScope?: string[]; slotTargets?: string[] }>>;
   misconceptions?: Array<{ id: string; misconception: string; probe: string; teacherMove: string }>;
-  glossary?: Array<{ id: string; term: string; language: string; gradeBand: string[]; definition: string }>;
+  glossary?: Array<{ termId: string; term: string; language: string; translation: string; pedagogicalDefinition: string }>;
   citations?: Array<{ id: string; reference: string; url?: string; topicTags: string[] }>;
-  resources?: Array<{ id: string; title: string; source: string; url: string; license: string; licenseClass: string; lexile?: number; gradeBand: string[] }>;
+  resources?: Array<{
+    id: string;
+    title: string;
+    author: string;
+    source: string;
+    url: string;
+    license: string;
+    licenseClass: string;
+    lexile?: number;
+    gradeBand?: string;
+    tasl: string;
+    audio?: 'yes' | 'no' | 'unknown';
+    captions: string;
+    transcript: string;
+    keyboardNav: string;
+    account?: 'free' | 'free-account' | 'paid' | 'unknown';
+    audience?: 'student' | 'teacher';
+  }>;
   scaffoldsByPhase?: Record<string, Array<{ id: string; name: string; type: string; dokLevel?: number; teacherMove: string; studentMove: string }>>;
   opener?: { id: string; subject: string; openerType: string; hookText: string };
   exitSlip?: { id: string; subject: string; prompt: string; rubricSnippet?: string };

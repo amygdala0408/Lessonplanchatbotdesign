@@ -93,7 +93,15 @@ export function buildSelectionContext(args: BuildCatalogContextArgs): SelectionC
  * ---------------------------------------------------------------------------*/
 
 interface CandidateBlock {
-  texts?: { id: string; title: string; source: string; license: string; url: string }[];
+  texts?: {
+    id: string;
+    title: string;
+    source: string;
+    license: string;
+    url: string;
+    audience: 'student';
+    format: string;
+  }[];
   instructionalModels?: { model: string; rationale: string }[];
   openers?: { id: string; type: string; topic: string; dokFloor: number }[];
   scaffolds?: Record<LessonPhaseId, { id: string; name: string; type: string; dok: number }[]>;
@@ -133,6 +141,8 @@ export function buildCatalogContext(args: BuildCatalogContextArgs): {
       source: r.source,
       license: r.license,
       url: r.url,
+      audience: 'student',
+      format: r.format,
     }));
   }
 
@@ -225,6 +235,8 @@ export function buildCatalogContext(args: BuildCatalogContextArgs): {
     'Do NOT invent new IDs. If nothing fits, ask a clarifying question instead of',
     'fabricating a resource. When you cite a text, copy the title/source/url',
     'verbatim from this list.):',
+    'For text selection, every CATALOG_CANDIDATES.texts[] row is student-facing;',
+    'never use teacher-PD/reference materials as student reading.',
     '```json',
     JSON.stringify(block, null, 2),
     '```',

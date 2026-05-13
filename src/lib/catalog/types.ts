@@ -97,6 +97,8 @@ export type ResourceLicenseClass =
   | 'paid'
   | 'unknown';
 
+export type ResourceAudience = 'student' | 'teacher';
+
 export interface ResourceRecord {
   id: string;
   title: string;
@@ -113,6 +115,7 @@ export interface ResourceRecord {
   captions: string;
   transcript: string;
   keyboardNav: string;
+  audience: ResourceAudience;
   // Backfilled / inferred metadata. Empty when unknown.
   gradeBand?: string;
   lexile?: number;

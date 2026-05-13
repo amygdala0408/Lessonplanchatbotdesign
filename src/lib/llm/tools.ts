@@ -119,6 +119,7 @@ export function buildPennyTools(bindings: ToolBindings) {
         return {
           decision: result.decision,
           choice: result.choice,
+          choices: result.choices,
           rationale: result.rationale,
           confidence: result.confidence,
           runnerUp: result.runnerUp,

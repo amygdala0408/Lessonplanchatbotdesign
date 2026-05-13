@@ -222,9 +222,9 @@ export function resolveLessonPackage(
       (g) => wantedLangs.has(g.language) && PRIORITY_TERMS.includes(g.term.toLowerCase()),
     );
     // Merge: keep any vocab-matched entries first, then top up with priority.
-    const seen = new Set(glossary.map((g) => `${g.id}|${g.language}`));
+    const seen = new Set(glossary.map((g) => `${g.termId}|${g.language}`));
     for (const g of fallback) {
-      const key = `${g.id}|${g.language}`;
+      const key = `${g.termId}|${g.language}`;
       if (!seen.has(key)) {
         seen.add(key);
         glossary.push(g);

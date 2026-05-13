@@ -15,6 +15,7 @@ import { z } from 'zod';
 
 import { buildSelectionContext } from '../catalogContext';
 import {
+  inferResourceFormat,
   selectExitSlips,
   selectInstructionalModelCandidates,
   selectMisconceptions,
@@ -23,7 +24,8 @@ import {
   selectStandards,
   selectTexts,
 } from '../catalog/selectors';
-import { getModel, getModelId, TASK_SETTINGS } from './router';
+import { isStudentFacingResource } from '../catalog/audience';
+import { getModel, getModelId, TASK_SETTINGS, isGatewayConfigured } from './router';
 import type { LearnerProfile, LessonPhaseId } from '../../types';
 
 /* ----------------------------------------------------------------------------
@@ -40,7 +42,9 @@ export type CatalogDecisionType =
   | 'scaffold';
 
 export interface CatalogPickInput {
-  decision: CatalogDecisionType;
+  decision?: CatalogDecisionType;
+  /** Backward-compatible alias used by older selector tests/docs. */
+  scope?: CatalogDecisionType;
   plan?: Record<string, unknown> | null;
   learnerProfile?: LearnerProfile | null;
   messages?: { role: string; content: string }[];
@@ -75,9 +79,23 @@ export const PickerOutputSchema = z.object({
 
 export type PickerOutput = z.infer<typeof PickerOutputSchema>;
 
+export const TextPickerOutputSchema = z.object({
+  chosenIds: z
+    .array(z.string().min(1))
+    .length(3, 'Choose exactly three student-facing text IDs.'),
+  rationale: z
+    .string()
+    .min(8, 'Give a 1-2 sentence teacher-facing reason.')
+    .max(360, 'Keep it under ~360 characters.'),
+  confidence: z.enum(['high', 'medium', 'low']),
+});
+
+export type TextPickerOutput = z.infer<typeof TextPickerOutputSchema>;
+
 export interface CatalogPickResult {
   decision: CatalogDecisionType;
   choice: unknown | null;
+  choices?: unknown[];
   rationale: string;
   confidence: 'high' | 'medium' | 'low';
   runnerUp: unknown | null;
@@ -91,18 +109,25 @@ export interface CatalogPickResult {
   };
 }
 
+function resolveDecision(input: CatalogPickInput): CatalogDecisionType {
+  const decision = input.decision ?? input.scope;
+  if (!decision) throw new Error('Catalog pick requires `decision` (or legacy `scope`).');
+  return decision;
+}
+
 /* ----------------------------------------------------------------------------
  * Candidate shaping
  * ---------------------------------------------------------------------------*/
 
 export function buildCandidates(input: CatalogPickInput): Candidate[] {
+  const decision = resolveDecision(input);
   const ctx = buildSelectionContext({
     currentPlan: input.plan ?? null,
     learnerProfile: input.learnerProfile ?? null,
     conversationHistory: input.messages ?? [],
   });
 
-  switch (input.decision) {
+  switch (decision) {
     case 'instructional_model': {
       const cands = selectInstructionalModelCandidates(ctx, input.limit ?? 5);
       return cands.map((c) => ({
@@ -112,7 +137,7 @@ export function buildCandidates(input: CatalogPickInput): Candidate[] {
       }));
     }
     case 'text': {
-      const cands = selectTexts(ctx, input.limit ?? 6);
+      const cands = selectTexts(ctx, input.limit ?? 9);
       return cands.map((c) => ({
         id: c.id,
         summary: {
@@ -122,6 +147,8 @@ export function buildCandidates(input: CatalogPickInput): Candidate[] {
           license: c.license,
           captions: c.captions,
           transcript: c.transcript,
+          audience: c.audience,
+          format: c.format,
           score: c.score,
         },
         record: c,
@@ -191,7 +218,7 @@ export function buildCandidates(input: CatalogPickInput): Candidate[] {
       }));
     }
     default: {
-      const _never: never = input.decision;
+      const _never: never = decision;
       throw new Error(`Unsupported decision type: ${_never}`);
     }
   }
@@ -209,7 +236,7 @@ function truncate(s: string | undefined, n: number): string {
 const DECISION_PROMPTS: Record<CatalogDecisionType, string> = {
   instructional_model:
     'Choose the instructional model that best matches this lesson context. Prefer models that fit the subject and the type of cognitive demand the topic requires. Avoid Project-Based Learning unless the duration is >= 90 minutes.',
-  text: 'Choose the single best primary text for this lesson. Prioritize accessibility (captions/transcript when video), license openness (OER/CC over paid), grade-level fit, and topical relevance. Cite by the catalog id only.',
+  text: 'Choose exactly three distinct student-facing texts for this lesson. Never choose professional-development, teacher-reference, framework, standards, or practice-guide rows as student reading. Prioritize accessibility, license openness, grade-level fit, topical relevance, and diversity across format/source/representation.',
   opener:
     'Choose the strongest opener (hook + learning intention frame) for the topic. Prefer openers whose DOK floor matches or sits one below the objective DOK.',
   exit_slip:
@@ -233,8 +260,9 @@ function buildPickerPrompt(
   candidates: Candidate[],
   retry: boolean,
 ): string {
+  const decision = resolveDecision(input);
   const context = {
-    decision: input.decision,
+    decision,
     phase: input.phase,
     plan: input.plan
       ? {
@@ -261,7 +289,7 @@ function buildPickerPrompt(
   };
 
   const lines = [
-    DECISION_PROMPTS[input.decision],
+    DECISION_PROMPTS[decision],
     '',
     'INPUT (JSON):',
     '```json',
@@ -291,13 +319,14 @@ function buildPickerPrompt(
 
 export async function pickCatalog(input: CatalogPickInput): Promise<CatalogPickResult> {
   const startedAt = Date.now();
+  const decision = resolveDecision(input);
   const modelId = getModelId('picker');
   const settings = TASK_SETTINGS.picker;
   const candidates = buildCandidates(input);
 
   if (candidates.length === 0) {
     return {
-      decision: input.decision,
+      decision,
       choice: null,
       rationale: 'No catalog candidates matched the current context.',
       confidence: 'low',
@@ -307,9 +336,13 @@ export async function pickCatalog(input: CatalogPickInput): Promise<CatalogPickR
     };
   }
 
+  if (decision === 'text') {
+    return pickTextCatalog(input, candidates, startedAt, modelId, settings);
+  }
+
   if (candidates.length === 1) {
     return {
-      decision: input.decision,
+      decision,
       choice: candidates[0].record,
       rationale: 'Only one viable candidate in the catalog for this context.',
       confidence: 'medium',
@@ -336,7 +369,7 @@ export async function pickCatalog(input: CatalogPickInput): Promise<CatalogPickR
           isEnabled: true,
           functionId: 'penny.picker',
           metadata: {
-            decision: input.decision,
+            decision,
             attempt,
             candidateCount: candidates.length,
           },
@@ -356,7 +389,7 @@ export async function pickCatalog(input: CatalogPickInput): Promise<CatalogPickR
 
   if (!picked) {
     return {
-      decision: input.decision,
+      decision,
       choice: candidates[0].record,
       rationale: 'Falling back to the highest-ranked deterministic candidate after the picker model returned invalid output.',
       confidence: 'low',
@@ -379,7 +412,7 @@ export async function pickCatalog(input: CatalogPickInput): Promise<CatalogPickR
       : null;
 
   return {
-    decision: input.decision,
+    decision,
     choice: chosen?.record ?? null,
     rationale: picked.rationale,
     confidence: picked.confidence,
@@ -392,4 +425,237 @@ export async function pickCatalog(input: CatalogPickInput): Promise<CatalogPickR
       latencyMs: Date.now() - startedAt,
     },
   };
+}
+
+async function pickTextCatalog(
+  input: CatalogPickInput,
+  candidates: Candidate[],
+  startedAt: number,
+  modelId: string,
+  settings: typeof TASK_SETTINGS.picker,
+): Promise<CatalogPickResult> {
+  const decision = resolveDecision(input);
+  const studentCandidates = candidates.filter((candidate) =>
+    isStudentFacingResource(candidate.record as Parameters<typeof isStudentFacingResource>[0]),
+  );
+  const candidatePool = studentCandidates.length > 0 ? studentCandidates : [];
+  const fallback = chooseDistinctTextCandidates(candidatePool, 3);
+
+  if (fallback.length === 0) {
+    return {
+      decision,
+      choice: null,
+      choices: [],
+      rationale: 'No student-facing text candidates matched the current context.',
+      confidence: 'low',
+      runnerUp: null,
+      candidates: [],
+      meta: { provider: 'ai-gateway', model: modelId, modelInvoked: false, latencyMs: Date.now() - startedAt },
+    };
+  }
+
+  if (!isGatewayConfigured() || candidatePool.length < 3) {
+    return buildTextResult({
+      picked: fallback,
+      candidates: candidatePool,
+      rationale:
+        candidatePool.length < 3
+          ? 'The catalog returned fewer than three student-facing matches, so Penny is surfacing every viable option.'
+          : 'Using the top three distinct student-facing catalog matches while the picker model is unavailable.',
+      confidence: candidatePool.length >= 3 ? 'medium' : 'low',
+      modelInvoked: false,
+      startedAt,
+      modelId,
+    });
+  }
+
+  const ids = new Set(candidatePool.map((c) => c.id));
+  let picked: TextPickerOutput | null = null;
+  let modelError: string | undefined;
+
+  for (const attempt of [0, 1] as const) {
+    try {
+      const { object } = await generateObject({
+        model: getModel('picker'),
+        schema: TextPickerOutputSchema,
+        system: PICKER_SYSTEM_PROMPT,
+        prompt: buildTextPickerPrompt(input, candidatePool, attempt > 0),
+        temperature: settings.temperature,
+        ...(settings.maxOutputTokens ? { maxOutputTokens: settings.maxOutputTokens } : {}),
+        experimental_telemetry: {
+          isEnabled: true,
+          functionId: 'penny.picker.texts',
+          metadata: {
+            decision,
+            attempt,
+            candidateCount: candidatePool.length,
+          },
+        },
+      });
+
+      const uniqueIds = Array.from(new Set(object.chosenIds));
+      if (uniqueIds.length === 3 && uniqueIds.every((id) => ids.has(id))) {
+        picked = { ...object, chosenIds: uniqueIds };
+        break;
+      }
+      console.warn(`[pickCatalog:text] attempt ${attempt} returned invalid ids "${object.chosenIds.join(', ')}"; retrying.`);
+    } catch (err) {
+      modelError = err instanceof Error ? err.message : String(err);
+      console.error(`[pickCatalog:text] generateObject failed (attempt ${attempt}):`, err);
+    }
+  }
+
+  if (!picked) {
+    return buildTextResult({
+      picked: fallback,
+      candidates: candidatePool,
+      rationale: 'Falling back to the top three distinct student-facing catalog matches after the picker model returned invalid output.',
+      confidence: 'low',
+      modelInvoked: true,
+      modelError: modelError ?? 'invalid_text_ids_after_retry',
+      startedAt,
+      modelId,
+    });
+  }
+
+  const byId = new Map(candidatePool.map((c) => [c.id, c]));
+  const selected = picked.chosenIds.map((id) => byId.get(id)).filter((c): c is Candidate => !!c);
+  return buildTextResult({
+    picked: selected,
+    candidates: candidatePool,
+    rationale: picked.rationale,
+    confidence: picked.confidence,
+    modelInvoked: true,
+    startedAt,
+    modelId,
+  });
+}
+
+function buildTextPickerPrompt(
+  input: CatalogPickInput,
+  candidates: Candidate[],
+  retry: boolean,
+): string {
+  const decision = resolveDecision(input);
+  const context = {
+    decision,
+    plan: input.plan
+      ? {
+          subject: (input.plan as { subject?: unknown }).subject ?? null,
+          gradeLevel: (input.plan as { gradeLevel?: unknown }).gradeLevel ?? null,
+          duration: (input.plan as { duration?: unknown }).duration ?? null,
+          title: (input.plan as { title?: unknown }).title ?? null,
+          objectives: (input.plan as { objectives?: unknown }).objectives ?? null,
+        }
+      : null,
+    learnerProfile: input.learnerProfile
+      ? {
+          hasIEP: input.learnerProfile.hasIEP ?? false,
+          has504: input.learnerProfile.has504 ?? false,
+          multilingualLevel: input.learnerProfile.multilingualLevel ?? null,
+          homeLanguages: input.learnerProfile.homeLanguages ?? [],
+          needsTags: input.learnerProfile.needsTags ?? [],
+        }
+      : null,
+    teacherInstruction: input.instruction || null,
+    candidates: candidates.map((c) => c.summary),
+  };
+
+  const lines = [
+    DECISION_PROMPTS.text,
+    '',
+    'INPUT (JSON):',
+    '```json',
+    JSON.stringify(context, null, 2),
+    '```',
+    '',
+    'RULES:',
+    '- `chosenIds` MUST contain exactly three unique IDs from the candidates list.',
+    '- Every chosen ID must have audience="student".',
+    '- The three picks should differ on at least one useful classroom axis: source, format, Lexile/complexity, accessibility, or representation.',
+    '- Never choose teacher-PD/reference rows such as Hattie, Marzano, Wiggins/McTighe, EQuIP, practice guides, frameworks, or standards documents as student reading.',
+    '- `rationale` is teacher-facing: warm, jargon-free, ≤2 sentences.',
+    '- `confidence` reflects how well the set fits the context.',
+  ];
+
+  if (retry) {
+    lines.push(
+      '',
+      'IMPORTANT: Your previous response did not return exactly three unique in-set student-facing IDs. Pick STRICTLY from the IDs shown above.',
+    );
+  }
+
+  return lines.join('\n');
+}
+
+function buildTextResult({
+  picked,
+  candidates,
+  rationale,
+  confidence,
+  modelInvoked,
+  modelError,
+  startedAt,
+  modelId,
+}: {
+  picked: Candidate[];
+  candidates: Candidate[];
+  rationale: string;
+  confidence: 'high' | 'medium' | 'low';
+  modelInvoked: boolean;
+  modelError?: string;
+  startedAt: number;
+  modelId: string;
+}): CatalogPickResult {
+  return {
+    decision: 'text',
+    choice: picked[0]?.record ?? null,
+    choices: picked.map((c) => c.record),
+    rationale,
+    confidence,
+    runnerUp: picked[1]?.record ?? null,
+    candidates: candidates.map((c) => c.record),
+    meta: {
+      provider: 'ai-gateway',
+      model: modelId,
+      modelInvoked,
+      ...(modelError ? { modelError } : {}),
+      latencyMs: Date.now() - startedAt,
+    },
+  };
+}
+
+function chooseDistinctTextCandidates(candidates: Candidate[], limit: number): Candidate[] {
+  const picked: Candidate[] = [];
+  const pickedIds = new Set<string>();
+  const pickedSources = new Set<string>();
+  const pickedFormats = new Set<string>();
+
+  const read = (candidate: Candidate) => candidate.record as {
+    id?: string;
+    title?: string;
+    source?: string;
+    url?: string;
+    accessibility?: string;
+    format?: string;
+  };
+
+  const take = (predicate: (record: ReturnType<typeof read>) => boolean) => {
+    for (const candidate of candidates) {
+      if (picked.length >= limit) return;
+      if (pickedIds.has(candidate.id)) continue;
+      const record = read(candidate);
+      if (!predicate(record)) continue;
+      picked.push(candidate);
+      pickedIds.add(candidate.id);
+      pickedSources.add((record.source ?? '').toLowerCase());
+      pickedFormats.add(record.format ?? inferResourceFormat(record));
+    }
+  };
+
+  take((r) => !pickedSources.has((r.source ?? '').toLowerCase()) && !pickedFormats.has(r.format ?? inferResourceFormat(r)));
+  take((r) => !pickedSources.has((r.source ?? '').toLowerCase()));
+  take(() => true);
+
+  return picked.slice(0, limit);
 }

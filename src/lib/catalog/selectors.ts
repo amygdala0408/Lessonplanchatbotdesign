@@ -28,6 +28,7 @@ import {
   getStandards,
   getBilingualGlossary,
 } from './index';
+import { inferResourceAudience, isStudentFacingResource } from './audience';
 import type {
   CatalogSubject,
   CitationRecord,
@@ -149,6 +150,21 @@ function gradeBandMatches(record: string[] | string | undefined, band: string | 
 
 export interface SelectedResource extends ResourceRecord {
   score: number;
+  format: string;
+}
+
+export function inferResourceFormat(resource: Pick<ResourceRecord, 'title' | 'source' | 'url' | 'accessibility'>): string {
+  const haystack = [resource.title, resource.source, resource.url, resource.accessibility]
+    .filter(Boolean)
+    .join(' ')
+    .toLowerCase();
+  if (/\bpoem|poetry|poets?\b/.test(haystack)) return 'poem';
+  if (/primary[-\s]?source|loc\.gov|library of congress|archives|document/.test(haystack)) return 'primary_source';
+  if (/article|commonlit|newsela|readworks|magazine/.test(haystack)) return 'article';
+  if (/simulation|interactive|phet|desmos/.test(haystack)) return 'interactive';
+  if (/video|youtube|pbs|ted|khan academy/.test(haystack)) return 'video';
+  if (/book|gutenberg|anthology|collection/.test(haystack)) return 'collection';
+  return 'resource';
 }
 
 export function selectTexts(ctx: SelectionContext, limit = 6): SelectedResource[] {
@@ -159,6 +175,7 @@ export function selectTexts(ctx: SelectionContext, limit = 6): SelectedResource[
   const resources = getResources();
   const scored: SelectedResource[] = resources
     .filter((r) => r.status === 'active')
+    .filter(isStudentFacingResource)
     .map((r) => {
       let score = 0;
       // Subject match
@@ -187,13 +204,44 @@ export function selectTexts(ctx: SelectionContext, limit = 6): SelectedResource[
       // for a backfill in P2. `band` is intentionally unused here so we don't
       // over-filter the 333 resources.
       void band;
-      return { ...r, score };
+      return {
+        ...r,
+        audience: inferResourceAudience(r),
+        format: inferResourceFormat(r),
+        score,
+      };
     });
 
-  return scored
+  const ranked = scored
     .filter((r) => r.score > 0)
-    .sort((a, b) => b.score - a.score)
-    .slice(0, limit);
+    .sort((a, b) => b.score - a.score);
+
+  return diversifyTextCandidates(ranked, limit);
+}
+
+function diversifyTextCandidates(candidates: SelectedResource[], limit: number): SelectedResource[] {
+  const picked: SelectedResource[] = [];
+  const pickedIds = new Set<string>();
+  const pickedSources = new Set<string>();
+  const pickedFormats = new Set<string>();
+
+  const take = (predicate: (r: SelectedResource) => boolean) => {
+    for (const candidate of candidates) {
+      if (picked.length >= limit) return;
+      if (pickedIds.has(candidate.id)) continue;
+      if (!predicate(candidate)) continue;
+      picked.push(candidate);
+      pickedIds.add(candidate.id);
+      pickedSources.add(candidate.source.toLowerCase());
+      pickedFormats.add(candidate.format);
+    }
+  };
+
+  take((r) => !pickedSources.has(r.source.toLowerCase()) && !pickedFormats.has(r.format));
+  take((r) => !pickedSources.has(r.source.toLowerCase()));
+  take(() => true);
+
+  return picked.slice(0, limit);
 }
 
 /* ----------------------------------------------------------------------------
