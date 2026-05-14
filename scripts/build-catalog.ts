@@ -37,7 +37,7 @@ import type {
   ScaffoldType,
   StandardRecord,
 } from '../src/lib/catalog/types';
-import { inferResourceAudience } from '../src/lib/catalog/audience';
+import { inferResourceAudience, inferResourceKind } from '../src/lib/catalog/audience';
 import type { DOKLevel, InstructionalModel, LessonPhaseId } from '../src/types';
 
 const ROOT = path.resolve(__dirname, '..');
@@ -372,9 +372,18 @@ function buildResources(): ResourceRecord[] {
         account: inferAccount(r.Source || ''),
         representationTags: inferRepresentationTags(r.Source || '', r.Accessibility || ''),
       };
+      // Classify the row into one of four `kind` lanes. Collections and
+      // teacher_reference rows are forced to `audience: 'teacher'` so the
+      // picker can never accidentally surface them as student readings.
+      const kind = inferResourceKind(resource);
+      const audience =
+        kind === 'collection' || kind === 'teacher_reference'
+          ? 'teacher'
+          : inferResourceAudience(resource);
       return {
         ...resource,
-        audience: inferResourceAudience(resource),
+        audience,
+        kind,
       };
     });
   // De-duplicate by id (slug collisions are possible with very similar titles).

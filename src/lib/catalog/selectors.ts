@@ -28,7 +28,7 @@ import {
   getStandards,
   getBilingualGlossary,
 } from './index';
-import { inferResourceAudience, isStudentFacingResource } from './audience';
+import { inferResourceAudience, inferResourceKind, isStudentFacingResource } from './audience';
 import type {
   CatalogSubject,
   CitationRecord,
@@ -180,11 +180,29 @@ export function selectTexts(ctx: SelectionContext, limit = 6): SelectedResource[
   const resources = getResources();
   const scored: SelectedResource[] = resources
     .filter((r) => r.status === 'active')
+    // Defense in depth: every layer that could surface a row as a "text"
+    // must agree the row is a real student-facing reading.
+    //
+    // 1. `kind === 'student_reading'` is the primary gate — we ONLY ever
+    //    offer single, specific readings (one article, one poem, one
+    //    primary source) as text options. Collections, libraries,
+    //    anthologies, databases, and teacher PD never qualify regardless
+    //    of how they're flagged elsewhere.
+    // 2. `isStudentFacingResource` (audience === 'student') is the legacy
+    //    gate; we keep it as a belt-and-suspenders check in case the build
+    //    classifies a row's `kind` one way and `audience` another.
+    .filter((r) => (r.kind ? r.kind === 'student_reading' : inferResourceKind(r) === 'student_reading'))
     .filter(isStudentFacingResource)
     .map((r) => {
       let score = 0;
-      // Subject match
-      if (subject === 'all' || r.subjectTags.includes(subject) || r.subjectTags.includes('all')) {
+      // Subject match. We deliberately removed the `subjectTags.includes('all')`
+      // wildcard bypass that previously let 53 'all'-tagged rows (mostly
+      // teacher PD and cross-domain resource hubs) score +4 against ANY
+      // subject prompt. After curation those rows are reclassified by `kind`
+      // and never reach this point, but the scoring also now demands an
+      // explicit subject match so a stray 'all'-tagged row can't crowd out
+      // real subject-aligned readings.
+      if (subject === 'all' || r.subjectTags.includes(subject)) {
         score += 4;
       }
       // Topic keyword overlap
@@ -202,7 +220,7 @@ export function selectTexts(ctx: SelectionContext, limit = 6): SelectedResource[
       if (r.transcript === 'yes') score += 1;
       if (r.keyboardNav === 'yes') score += 1;
       // Subtle penalty when subject doesn't match at all
-      if (subject !== 'all' && !r.subjectTags.includes(subject) && !r.subjectTags.includes('all')) {
+      if (subject !== 'all' && !r.subjectTags.includes(subject)) {
         score -= 5;
       }
       // Note: gradeBand isn't authoritative on resources yet; we leave room

@@ -99,6 +99,25 @@ export type ResourceLicenseClass =
 
 export type ResourceAudience = 'student' | 'teacher';
 
+/**
+ * What kind of resource this row represents.
+ *
+ * - `student_reading` — a single, specific student-facing reading or media
+ *   asset Penny can recommend as a lesson text. One article, one poem, one
+ *   short story, one primary source document, one short video.
+ * - `collection` — a browseable library/anthology/database/archive/hub. A
+ *   teacher uses these as a *finding aid* to pick a specific reading from.
+ *   They are NEVER themselves a student reading.
+ * - `teacher_reference` — professional development, frameworks, practice
+ *   guides, intervention research portals, advocacy hubs. Penny may mention
+ *   them to the teacher as background, but never picks them as student
+ *   readings.
+ * - `interactive` — simulations, interactive tools (PhET, Desmos, etc.) that
+ *   students actually use. Treated similarly to student_reading for text
+ *   selection but flagged for richer affordances later.
+ */
+export type ResourceKind = 'student_reading' | 'collection' | 'teacher_reference' | 'interactive';
+
 export interface ResourceRecord {
   id: string;
   title: string;
@@ -116,6 +135,8 @@ export interface ResourceRecord {
   transcript: string;
   keyboardNav: string;
   audience: ResourceAudience;
+  /** What kind of resource this is. See {@link ResourceKind}. */
+  kind: ResourceKind;
   // Backfilled / inferred metadata. Empty when unknown.
   gradeBand?: string;
   lexile?: number;
