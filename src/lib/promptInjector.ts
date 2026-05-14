@@ -2,45 +2,67 @@ import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
 
-// The system prompt and version are read once at module load (cold start) and
-// reused for every request. The PROMPT_VERSION is derived from the file's
-// SHA-256 hash so any edit to PENNY_SYSTEM_PROMPT.md automatically bumps the
-// version stamp without us having to remember.
+// Two files compose Penny's system context, in order:
+//   1. PENNY_SYSTEM_PROMPT.md   — pedagogy, voice, worked examples. The
+//      teacher-facing identity.
+//   2. PENNY_OPERATOR_NOTES.md  — mechanics: tool contracts, JSON tags,
+//      schema, machine-readable blocks. Never visible to the teacher.
+//
+// They're loaded once at module load (cold start) and reused for every
+// request. The version stamp is derived from the SHA-256 of BOTH files
+// concatenated, so editing either bumps the version automatically.
 
 const PROMPT_FILENAME = 'PENNY_SYSTEM_PROMPT.md';
+const OPERATOR_NOTES_FILENAME = 'PENNY_OPERATOR_NOTES.md';
 
 let cachedPrompt: string | null = null;
+let cachedOperatorNotes: string | null = null;
 let cachedVersion: string | null = null;
 
-function loadPrompt(): { prompt: string; version: string } {
-  if (cachedPrompt && cachedVersion) {
-    return { prompt: cachedPrompt, version: cachedVersion };
-  }
-
-  // Resolve from the project root. process.cwd() is the project root in
-  // both `next dev` and `next start`.
-  const promptPath = path.join(process.cwd(), PROMPT_FILENAME);
-  let raw: string;
+function readPromptFile(filename: string): string {
+  const promptPath = path.join(process.cwd(), filename);
   try {
-    raw = fs.readFileSync(promptPath, 'utf-8');
+    return fs.readFileSync(promptPath, 'utf-8');
   } catch (err) {
-    console.error(`[promptInjector] Failed to read ${PROMPT_FILENAME}:`, err);
-    raw = ''; // Fail open: return empty prompt so Poe bot fallback still works.
+    console.error(`[promptInjector] Failed to read ${filename}:`, err);
+    return '';
   }
+}
 
-  // Strip the "Copy this to your Poe bot" guidance + any HTML comments. We want
-  // the model to receive the pedagogical contract, not the operator notes.
-  const prompt = raw
+function cleanPromptText(raw: string): string {
+  return raw
     .replace(/\*\*Copy this to your Poe bot[^*]*\*\*/gi, '')
     .replace(/<!--[\s\S]*?-->/g, '')
     .trim();
+}
 
-  const hash = crypto.createHash('sha256').update(raw).digest('hex').slice(0, 8);
-  const version = `2026.05.10-${hash}`;
+function loadPrompt(): { prompt: string; operatorNotes: string; version: string } {
+  if (cachedPrompt !== null && cachedOperatorNotes !== null && cachedVersion !== null) {
+    return {
+      prompt: cachedPrompt,
+      operatorNotes: cachedOperatorNotes,
+      version: cachedVersion,
+    };
+  }
+
+  const rawPrompt = readPromptFile(PROMPT_FILENAME);
+  const rawNotes = readPromptFile(OPERATOR_NOTES_FILENAME);
+
+  const prompt = cleanPromptText(rawPrompt);
+  const operatorNotes = cleanPromptText(rawNotes);
+
+  // Version stamps both files so edits to either invalidate runtime caches.
+  const hash = crypto
+    .createHash('sha256')
+    .update(rawPrompt + '\n---\n' + rawNotes)
+    .digest('hex')
+    .slice(0, 8);
+  const version = `2026.05.13-${hash}`;
 
   cachedPrompt = prompt;
+  cachedOperatorNotes = operatorNotes;
   cachedVersion = version;
-  return { prompt, version };
+  return { prompt, operatorNotes, version };
 }
 
 export interface ChatMessage {
@@ -71,11 +93,20 @@ export interface BuildMessagesResult {
  * Penny edits the live draft instead of re-inventing it.
  */
 export function buildMessages(args: BuildMessagesArgs): BuildMessagesResult {
-  const { prompt, version } = loadPrompt();
+  const { prompt, operatorNotes, version } = loadPrompt();
   const messages: ChatMessage[] = [];
 
+  // 1. Pedagogy prompt — Penny's identity, voice, and worked examples. The
+  //    only file the teacher's experience is meant to reflect.
   if (prompt) {
     messages.push({ role: 'system', content: prompt });
+  }
+
+  // 2. Operator notes — mechanics (JSON tags, tool contracts, schema). These
+  //    must NOT bleed into Penny's prose. Kept as a separate system message
+  //    so the model can treat it as a wiring contract, not part of voice.
+  if (operatorNotes) {
+    messages.push({ role: 'system', content: operatorNotes });
   }
 
   // Inject a developer-style message with the current plan snapshot. We use
