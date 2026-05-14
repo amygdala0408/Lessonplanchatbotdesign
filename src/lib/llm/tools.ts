@@ -27,6 +27,7 @@ import {
   pickCatalog,
   type CatalogDecisionType,
   type CatalogPickInput,
+  type CatalogPickResult,
 } from './pickCatalog';
 import type { LearnerProfile, LessonPhaseId } from '../../types';
 
@@ -59,6 +60,15 @@ export interface ToolBindings {
   messages?: { role: string; content: string }[];
   /** Optional event hook for logging tool invocations to telemetry. */
   onPick?: (input: CatalogPickInput, result: { latencyMs: number; model: string }) => void;
+  /**
+   * Fires AFTER the picker resolves, with the full pick result. The chat
+   * route uses this to capture text-decision `choices[]` and append a
+   * `[TEXT_OPTIONS]` block to the streamed response so the client can
+   * populate `lessonPlan.textOptions` and unlock the picker UI + finalize
+   * gate. Distinct from `onPick` which fires earlier (and only carries
+   * input + telemetry meta) so existing callers stay untouched.
+   */
+  onPickResult?: (input: CatalogPickInput, result: CatalogPickResult) => void;
 }
 
 /**
@@ -106,11 +116,23 @@ export function buildPennyTools(bindings: ToolBindings) {
           messages: bindings.messages ?? [],
         });
 
+        const inputForHooks: CatalogPickInput = {
+          decision,
+          phase,
+          instruction,
+          plan: bindings.plan,
+          learnerProfile: bindings.learnerProfile,
+        };
+
         if (bindings.onPick) {
-          bindings.onPick(
-            { decision, phase, instruction, plan: bindings.plan, learnerProfile: bindings.learnerProfile },
-            { latencyMs: result.meta.latencyMs, model: result.meta.model },
-          );
+          bindings.onPick(inputForHooks, {
+            latencyMs: result.meta.latencyMs,
+            model: result.meta.model,
+          });
+        }
+
+        if (bindings.onPickResult) {
+          bindings.onPickResult(inputForHooks, result);
         }
 
         // Return a chat-model-friendly view. The model only needs the chosen

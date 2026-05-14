@@ -13,11 +13,14 @@ import { InstructionalModelChooser } from '@/components/InstructionalModelChoose
 import { TextOptionPicker } from '@/components/TextOptionPicker';
 import { InlineStructuredPicker } from '@/components/InlineStructuredPicker';
 import { ModelStatusChip } from '@/components/ModelStatusChip';
+import { ArtifactsPanel } from '@/components/ArtifactsPanel';
 import { cn } from '@/lib/utils';
 import { useStore } from '@/store/useStore';
 import { Message, ChatTurnResult, ConversationPhase, LessonPlanData, ValidationError, InstructionalModel } from '@/types';
 import { parseTurn, extractStudentMaterials, stripHiddenBlocks, extractQuickReplies } from '@/lib/lessonPlanParser';
 import { nextPhase, canFinalize } from '@/lib/phaseMachine';
+import { streamArtifacts } from '@/lib/api/artifacts';
+import type { ArtifactType } from '@/lib/llm/artifactSchemas';
 
 const PHASE_LABELS: Record<ConversationPhase, string> = {
   gathering: 'Gathering',
@@ -45,6 +48,7 @@ export default function HomePage() {
     addMessage, toggleTheme, setConversationPhase, setStudentMaterials,
     setLearnerProfile, setValidationErrors, setLessonPackage,
     recordModelTurn,
+    upsertArtifact, setArtifactStatus, resetArtifacts,
     resetConversation, loadDemoMode,
   } = useStore();
 
@@ -303,7 +307,12 @@ export default function HomePage() {
       });
 
       if (generatorResult.ok && generatorResult.plan) {
-        const merged = { ...lessonPlan, ...generatorResult.plan } as LessonPlanData;
+        // Prefer the server-merged plan (it already carries `qualityScore`
+        // from the EQuIP+UDL scorer). Fall back to client-side merge only
+        // when the server didn't return a merged shape.
+        const merged = (generatorResult.merged
+          ? ({ ...lessonPlan, ...generatorResult.merged } as LessonPlanData)
+          : ({ ...lessonPlan, ...generatorResult.plan } as LessonPlanData));
         setFinalizeProgress((prev) => prev ? { ...prev, stage: 'packaging' } : null);
         setLessonPlan(merged);
         setValidationErrors([]);
@@ -312,6 +321,10 @@ export default function HomePage() {
         toast.success('Lesson plan finalized.');
         setIsPlanOpen(true);
         void fetchLessonPackage(merged);
+        // Kick off the artifact-generator lane in parallel. Artifacts stream
+        // back over SSE into the store (`artifacts` + `artifactStatus`); the
+        // <ArtifactsPanel> in the lesson drawer renders them as they arrive.
+        void generateArtifactsForPlan(merged);
         return;
       }
 
@@ -394,16 +407,19 @@ export default function HomePage() {
 
       const data = (await resp.json()) as {
         ok: boolean;
+        structuralOk?: boolean;
         plan: Partial<LessonPlanData> | null;
         merged: Partial<LessonPlanData> | null;
         errors: ValidationError[];
         retryPrompt?: string;
+        qualityScore?: NonNullable<LessonPlanData['qualityScore']> | null;
+        scorecard?: { judgeUsed?: boolean } | null;
         meta?: { model?: string; latencyMs?: number; provider?: string };
       };
 
       if (data.meta?.model) {
         console.info(
-          `[finalize-plan] model=${data.meta.model} latency=${data.meta.latencyMs}ms ok=${data.ok}`,
+          `[finalize-plan] model=${data.meta.model} latency=${data.meta.latencyMs}ms ok=${data.ok} scored=${!!data.qualityScore}`,
         );
         recordModelTurn({
           task: 'generator',
@@ -412,6 +428,18 @@ export default function HomePage() {
           latencyMs: data.meta.latencyMs ?? 0,
           at: Date.now(),
         });
+        // Surface the scorer call too, when the LLM judge was actually
+        // invoked — gives the ModelStatusChip a real signal that the
+        // scoring lane is part of the pipeline.
+        if (data.scorecard?.judgeUsed) {
+          recordModelTurn({
+            task: 'scorer',
+            model: 'openai/gpt-5.5',
+            provider: data.meta.provider ?? 'ai-gateway',
+            latencyMs: 0,
+            at: Date.now(),
+          });
+        }
       }
 
       return {
@@ -434,6 +462,58 @@ export default function HomePage() {
       setIsPlanOpen(true);
       toast.error('Penny had trouble finalizing. Rendering the current draft with errors.');
       return { ok: false, plan: null, merged: lessonPlan, errors };
+    }
+  }
+
+  /**
+   * Kick off the artifact-generator lane. Streams SSE events into the store
+   * (`upsertArtifact` per artifact, `setArtifactStatus` for streaming/done).
+   * Pure side-effect — failures are logged but don't block finalize, since
+   * each artifact is best-effort and the panel renders graceful fallbacks
+   * for any that fail.
+   */
+  async function generateArtifactsForPlan(
+    plan: Partial<LessonPlanData>,
+    types?: ArtifactType[],
+  ) {
+    const selectedText = (plan.textOptions ?? []).find((t) => t.selected) ?? null;
+    resetArtifacts();
+    setArtifactStatus({ kind: 'streaming', startedAt: Date.now() });
+    try {
+      await streamArtifacts(
+        { plan, selectedText, learnerProfile, types },
+        {
+          onArtifact: (artifact) => upsertArtifact(artifact),
+          onError: (info) => console.warn('[artifacts] failed:', info.type, info.message),
+          onDone: ({ succeeded, failed, latencyMs, model }) => {
+            setArtifactStatus({ kind: 'done', latencyMs, succeeded, failed, model });
+            recordModelTurn({
+              task: 'artifact_generator',
+              model,
+              provider: 'ai-gateway',
+              latencyMs,
+              at: Date.now(),
+            });
+            if (succeeded.length > 0 && failed.length === 0) {
+              toast.success(`Generated ${succeeded.length} student artifacts.`);
+            } else if (succeeded.length > 0) {
+              toast.warning(
+                `Generated ${succeeded.length} of ${succeeded.length + failed.length} artifacts.`,
+              );
+            } else {
+              toast.error('Artifact generation failed.');
+            }
+          },
+          onFatal: (message) => {
+            setArtifactStatus({ kind: 'error', message });
+            console.error('[artifacts] fatal:', message);
+          },
+        },
+      );
+    } catch (err) {
+      const message = err instanceof Error ? err.message : String(err);
+      setArtifactStatus({ kind: 'error', message });
+      console.warn('[artifacts] streamArtifacts threw:', err);
     }
   }
 
@@ -869,12 +949,48 @@ export default function HomePage() {
                   )}
                 >
                   <div className="absolute inset-0 pointer-events-none opacity-[0.03] bg-[url('https://www.transparenttextures.com/patterns/paper.png')] z-0"></div>
-                  <div className="relative z-10">
+                  <div className="relative z-10 space-y-6">
                     <LessonPlan
                       ref={componentRef}
                       {...lessonPlan}
                       lessonPackage={lessonPackage}
                       studentMaterials={studentMaterials}
+                      onSectionRegenerated={(section, value) => {
+                        // Merge the regenerated section back into the plan.
+                        setLessonPlan((prev) => ({ ...prev, [section]: value }));
+                        toast.success(`Refreshed ${section}.`);
+                        // Best-effort: kick a fresh validate-plan pass so the
+                        // EQuIP+UDL scorecard updates with the new section.
+                        // Fire-and-forget — UI shows the new value immediately
+                        // and the scorecard refreshes when the response lands.
+                        void (async () => {
+                          try {
+                            const resp = await fetch('/api/validate-plan', {
+                              method: 'POST',
+                              headers: { 'Content-Type': 'application/json' },
+                              body: JSON.stringify({
+                                plan: { ...lessonPlan, [section]: value },
+                                gate: 'finalize',
+                              }),
+                            });
+                            const data = await resp.json().catch(() => null);
+                            if (data?.qualityScore) {
+                              setLessonPlan((prev) => ({
+                                ...prev,
+                                [section]: value,
+                                qualityScore: data.qualityScore,
+                              }));
+                            }
+                          } catch (err) {
+                            console.warn('[regenerate-section] re-score failed:', err);
+                          }
+                        })();
+                      }}
+                    />
+                    <ArtifactsPanel
+                      onRegenerate={(types) => {
+                        void generateArtifactsForPlan(lessonPlan, types);
+                      }}
                     />
                   </div>
                 </div>

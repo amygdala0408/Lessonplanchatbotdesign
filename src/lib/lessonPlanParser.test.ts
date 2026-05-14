@@ -3,6 +3,7 @@ import { describe, expect, it } from 'vitest';
 import {
   extractLessonPlanFromResponse,
   extractQuickReplies,
+  extractTextOptions,
   isWaitingForTextSelection,
   parseTurn,
   stripHiddenBlocks,
@@ -56,6 +57,47 @@ Here is the plan.
     const replies = extractQuickReplies(raw);
     expect(replies?.options.map((option) => option.label)).toEqual(['45 min', '60 min']);
     expect(stripHiddenBlocks(raw)).toBe('How long is class?');
+  });
+
+  it('extracts text options from a server-injected [TEXT_OPTIONS] block and surfaces them via parseTurn', () => {
+    const raw = `Here are 3 great options for RL.9-10.1.
+
+📚 Option 1: African American Poetry Collection
+📚 Option 2: CommonLit Free Library
+📚 Option 3: Library of Congress Civil Rights
+
+Which one would you like to anchor the lesson?
+
+[TEXT_OPTIONS]
+{"options":[
+  {"resourceId":"african_american_poetry_collection","title":"African American Poetry Collection","source":"OER Commons / Project Gutenberg","url":"https://www.gutenberg.org/ebooks/10031","rationale":"Culturally sustaining anchor text for RL.9-10.1.","accessibility":{"transcript":true,"audio":true}},
+  {"resourceId":"commonlit_free_reading_passages_library","title":"CommonLit: Free Reading Passages Library","source":"CommonLit","url":"https://www.commonlit.org/en/library","rationale":"Built-in WIDA scaffolds + Spanish support."},
+  {"resourceId":"library_of_congress_civil_rights","title":"LOC: Civil Rights Movement","source":"Library of Congress","url":"https://www.loc.gov/...","rationale":"Strong inference work."}
+]}
+[/TEXT_OPTIONS]`;
+
+    const opts = extractTextOptions(raw);
+    expect(opts).not.toBeNull();
+    expect(opts).toHaveLength(3);
+    expect(opts?.[0]?.resourceId).toBe('african_american_poetry_collection');
+    expect(opts?.[0]?.selected).toBe(false);
+    expect(opts?.[0]?.accessibility?.audio).toBe(true);
+    expect(opts?.[1]?.title).toBe('CommonLit: Free Reading Passages Library');
+
+    const visible = stripHiddenBlocks(raw);
+    expect(visible).not.toContain('[TEXT_OPTIONS]');
+    expect(visible).not.toContain('"resourceId"');
+    expect(visible).toContain('Which one would you like');
+
+    const turn = parseTurn(raw);
+    expect(turn.plan?.textOptions).toHaveLength(3);
+    expect(turn.plan?.textOptions?.[2]?.title).toBe('LOC: Civil Rights Movement');
+  });
+
+  it('returns null and leaves visible content untouched when no [TEXT_OPTIONS] block is present', () => {
+    const raw = `Just a regular reply with no machine block.`;
+    expect(extractTextOptions(raw)).toBeNull();
+    expect(parseTurn(raw).plan?.textOptions).toBeUndefined();
   });
 
   it('detects text-selection waiting turns', () => {

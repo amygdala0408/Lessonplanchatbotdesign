@@ -117,4 +117,36 @@ describe('validateLessonPlan', () => {
     expect(result.ok).toBe(false);
     expect(result.errors.some((error) => error.path === 'textOptions')).toBe(true);
   });
+
+  it('emits a DOK warning when an objective verb mismatches its claimed DOK', () => {
+    const mismatched: LessonPlanData = {
+      ...validPlan,
+      objectives: [
+        {
+          text: 'Students will list the main characters in the poem.',
+          dok: 3,
+          verb: 'list',
+        },
+      ],
+    };
+
+    const result = validateLessonPlan(mismatched, 'finalize');
+    // Plan should still pass (warnings are non-blocking).
+    expect(result.ok).toBe(true);
+    const dokWarnings = result.errors.filter(
+      (e) => e.severity === 'warning' && e.path.startsWith('objectives[0].dok'),
+    );
+    expect(dokWarnings.length).toBe(1);
+    expect(dokWarnings[0].message).toContain('list');
+    expect(dokWarnings[0].message).toContain('DOK 1');
+    expect(dokWarnings[0].message).toContain('DOK 3');
+  });
+
+  it('does not emit DOK warnings when the verb matches the claimed DOK', () => {
+    const result = validateLessonPlan(validPlan, 'finalize');
+    const dokWarnings = result.errors.filter(
+      (e) => e.severity === 'warning' && e.path.startsWith('objectives[0].dok'),
+    );
+    expect(dokWarnings).toHaveLength(0);
+  });
 });

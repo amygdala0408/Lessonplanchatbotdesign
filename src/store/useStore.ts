@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 import { Message, LessonPlanData, ConversationPhase, StudentMaterialsData, LearnerProfile, ValidationError } from '../types';
+import type { ArtifactPayload, ArtifactType } from '../lib/llm/artifactSchemas';
 import { initialLessonPlan, initialStudentMaterials } from '../data/defaults';
 import { demoLessonPlan, demoMessages } from '../data/demoData';
 // LessonPackagePayload is the client-shaped resolved package returned from
@@ -41,13 +42,27 @@ export interface LessonPackagePayload {
  * session-level visibility.
  */
 export interface ModelTurn {
-  task: 'chat' | 'picker' | 'generator' | 'scorer' | 'patcher' | 'accommodation';
+  task: 'chat' | 'picker' | 'generator' | 'scorer' | 'patcher' | 'accommodation' | 'artifact_generator';
   model: string;        // e.g., 'anthropic/claude-sonnet-4.5'
   provider: string;     // 'ai-gateway' | 'poe'
   latencyMs: number;
   at: number;           // Date.now()
   tools?: string[];     // e.g., ['pickCatalog']
 }
+
+/**
+ * Status envelope for the artifact lane. `idle` before the first generation,
+ * `streaming` while SSE events are still arriving, `done` once the route
+ * emits its `done` event. `error` only when the stream itself fatals — per-
+ * artifact failures show up as `failures[]` on the done state without
+ * promoting to `error`, so the renderer can fall back gracefully on a
+ * subset.
+ */
+export type ArtifactStatus =
+  | { kind: 'idle' }
+  | { kind: 'streaming'; startedAt: number }
+  | { kind: 'done'; latencyMs: number; succeeded: ArtifactType[]; failed: { type: ArtifactType; error: string }[]; model: string }
+  | { kind: 'error'; message: string };
 
 interface AppState {
   messages: Message[];
@@ -63,6 +78,9 @@ interface AppState {
   validationErrors: ValidationError[];
   lessonPackage: LessonPackagePayload | null;
   modelTurns: ModelTurn[];
+  /** Most recent artifact-generator output keyed by artifact type. */
+  artifacts: Partial<Record<ArtifactType, ArtifactPayload>>;
+  artifactStatus: ArtifactStatus;
 
   setMessages: (messages: Message[] | ((prev: Message[]) => Message[])) => void;
   setIsTyping: (isTyping: boolean) => void;
@@ -77,6 +95,11 @@ interface AppState {
   setValidationErrors: (errors: ValidationError[]) => void;
   setLessonPackage: (pkg: LessonPackagePayload | null) => void;
   recordModelTurn: (turn: ModelTurn) => void;
+  /** Replace one artifact in the dictionary (called per SSE event). */
+  upsertArtifact: (artifact: ArtifactPayload) => void;
+  setArtifactStatus: (status: ArtifactStatus) => void;
+  /** Wipe artifacts when the user starts a new finalize round. */
+  resetArtifacts: () => void;
   resetConversation: () => void;
   loadDemoMode: () => void;
 }
@@ -107,6 +130,8 @@ export const useStore = create<AppState>()(
       validationErrors: [],
       lessonPackage: null,
       modelTurns: [],
+      artifacts: {},
+      artifactStatus: { kind: 'idle' },
 
       setMessages: (messages) => set((state) => ({
         messages: typeof messages === 'function' ? messages(state.messages) : messages
@@ -130,6 +155,11 @@ export const useStore = create<AppState>()(
         // Cap at the last 20 turns so the array stays small.
         modelTurns: [...state.modelTurns, turn].slice(-20),
       })),
+      upsertArtifact: (artifact) => set((state) => ({
+        artifacts: { ...state.artifacts, [artifact.type]: artifact },
+      })),
+      setArtifactStatus: (artifactStatus) => set({ artifactStatus }),
+      resetArtifacts: () => set({ artifacts: {}, artifactStatus: { kind: 'idle' } }),
       resetConversation: () => set({
         messages: initialMessages,
         lessonPlan: initialLessonPlan,
@@ -142,6 +172,8 @@ export const useStore = create<AppState>()(
         validationErrors: [],
         lessonPackage: null,
         modelTurns: [],
+        artifacts: {},
+        artifactStatus: { kind: 'idle' },
       }),
       loadDemoMode: () => set({
         messages: demoMessages,

@@ -4,6 +4,9 @@ import { LessonPlanData, Objective, Standard, LESSON_PHASE_ORDER, LessonPhaseId 
 import type { LessonPackagePayload } from '../../store/useStore';
 import { ExternalLink, Volume2, BookOpen, Target, CheckCircle2, AlertTriangle, Languages, Quote, ShieldCheck } from 'lucide-react';
 import { QRCodeSVG } from 'qrcode.react';
+import { QualityScorecardStrip } from './QualityScorecardStrip';
+import { RegenerateSectionButton } from './RegenerateSectionButton';
+import type { RegenerableSectionId } from '../../lib/api/regenerateSection';
 
 const PHASE_DISPLAY: Record<LessonPhaseId, string> = {
   launch: 'Launch',
@@ -276,6 +279,13 @@ const FormattedText = ({ text, className = "" }: { text: string; className?: str
 };
 
 type LessonPlanRenderProps = LessonPlanData & {
+  /**
+   * Optional handler for the inline "Regenerate" affordance on each section.
+   * When provided, hover-targeted regenerate buttons render next to section
+   * headers so the teacher can rerun a single slice via /api/regenerate-section
+   * without losing the rest of the plan. Parent owns the merge-and-rescore.
+   */
+  onSectionRegenerated?: (section: RegenerableSectionId, value: unknown) => void;
   lessonPackage?: LessonPackagePayload | null;
   /**
    * Penny-emitted student materials (sentence frames, reading passages, etc.)
@@ -305,9 +315,60 @@ export const LessonPlan = forwardRef<HTMLDivElement, LessonPlanRenderProps>(({
   rubric,
   textOptions,
   teacherModifications,
+  qualityScore,
   lessonPackage,
   studentMaterials,
+  onSectionRegenerated,
+  ...restPlanProps
 }, ref) => {
+  // Reconstruct the lesson-plan snapshot from incoming props so the
+  // RegenerateSectionButton can hand the server full context. The spread
+  // captures any future LessonPlanData fields we add without manual sync.
+  const planSnapshot = {
+    title,
+    gradeLevel,
+    subject,
+    duration,
+    standard,
+    objectives,
+    materials,
+    procedure,
+    assessment,
+    successCriteria,
+    supports,
+    equityNotes,
+    exitSlip,
+    rubric,
+    textOptions,
+    teacherModifications,
+    qualityScore,
+    ...restPlanProps,
+  } as LessonPlanData;
+
+  const renderRegenButton = (section: RegenerableSectionId) => {
+    if (!onSectionRegenerated) return null;
+    const dim = qualityScore?.dimensions.find((d) => {
+      // Light mapping: "exitSlip" + "rubric" + "successCriteria" all roll up
+      // into the assessment_for_learning dimension; "supports" + "procedure
+      // accommodations" into access_supports; "equityNotes" into tone_clarity.
+      if (section === 'exitSlip' || section === 'rubric' || section === 'successCriteria' || section === 'assessment')
+        return d.name === 'assessment_for_learning';
+      if (section === 'supports') return d.name === 'access_supports';
+      if (section === 'objectives') return d.name === 'alignment_coherence';
+      if (section === 'procedure') return d.name === 'instructional_design';
+      if (section === 'equityNotes') return d.name === 'tone_clarity';
+      if (section === 'materials') return d.name === 'materials_licensing';
+      return false;
+    });
+    return (
+      <RegenerateSectionButton
+        plan={planSnapshot}
+        section={section}
+        scorerRationale={dim && dim.score < 3 ? dim.rationale : undefined}
+        onRegenerated={(value) => onSectionRegenerated(section, value)}
+      />
+    );
+  };
   // Generate stable reference ID
   const refId = useMemo(() => 
     generateStableRefId(title || '', subject || '', gradeLevel || ''), 
@@ -399,16 +460,25 @@ export const LessonPlan = forwardRef<HTMLDivElement, LessonPlanRenderProps>(({
         )}
       </header>
 
+      {qualityScore && (
+        <div className="mb-8 print:mb-6">
+          <QualityScorecardStrip qualityScore={qualityScore} />
+        </div>
+      )}
+
       {/* Grid Layout for Content */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 print:block">
         
         {/* Left Column: Objectives & Materials */}
         <div className="md:col-span-1 space-y-8 print:mb-8">
             <section className="print:mb-6">
-                <h3 className="font-['Oswald'] text-xl font-bold uppercase border-b-2 border-[#1a1a1a] mb-4 pb-1 print:font-mono print:text-lg print:border-black flex items-center gap-2">
-                  <Target size={18} className="print:hidden" />
-                  Objectives
-                </h3>
+                <div className="flex items-center justify-between border-b-2 border-[#1a1a1a] mb-4 pb-1 print:border-black">
+                  <h3 className="font-['Oswald'] text-xl font-bold uppercase print:font-mono print:text-lg flex items-center gap-2">
+                    <Target size={18} className="print:hidden" />
+                    Objectives
+                  </h3>
+                  {renderRegenButton('objectives')}
+                </div>
                 <ul className="space-y-3 text-sm leading-relaxed print:text-xs">
                     {objectives.map((obj, i) => {
                         const text = getObjectiveText(obj);
@@ -451,7 +521,10 @@ export const LessonPlan = forwardRef<HTMLDivElement, LessonPlanRenderProps>(({
             {/* Success Criteria */}
             {successCriteria && successCriteria.length > 0 && (
               <section className="print:mb-6">
-                <h3 className="font-['Oswald'] text-xl font-bold uppercase border-b-2 border-[#1a1a1a] mb-4 pb-1 print:font-mono print:text-lg print:border-black">Success Criteria</h3>
+                <div className="flex items-center justify-between border-b-2 border-[#1a1a1a] mb-4 pb-1 print:border-black">
+                  <h3 className="font-['Oswald'] text-xl font-bold uppercase print:font-mono print:text-lg">Success Criteria</h3>
+                  {renderRegenButton('successCriteria')}
+                </div>
                 <ul className="space-y-2 text-sm print:text-xs">
                   {successCriteria.map((criterion, i) => (
                     <li key={i} className="flex items-start gap-2">
@@ -466,7 +539,10 @@ export const LessonPlan = forwardRef<HTMLDivElement, LessonPlanRenderProps>(({
             {/* Supports & Scaffolds */}
             {supports && (supports.all?.length > 0 || supports.el?.length > 0 || supports.iep504?.length > 0) && (
               <section className="print:mb-6">
-                <h3 className="font-['Oswald'] text-xl font-bold uppercase border-b-2 border-[#1a1a1a] mb-4 pb-1 print:font-mono print:text-lg print:border-black">Supports & Scaffolds</h3>
+                <div className="flex items-center justify-between border-b-2 border-[#1a1a1a] mb-4 pb-1 print:border-black">
+                  <h3 className="font-['Oswald'] text-xl font-bold uppercase print:font-mono print:text-lg">Supports & Scaffolds</h3>
+                  {renderRegenButton('supports')}
+                </div>
                 <div className="space-y-4 text-sm print:text-xs">
                   {supports.all && supports.all.length > 0 && (
                     <div>
@@ -506,7 +582,10 @@ export const LessonPlan = forwardRef<HTMLDivElement, LessonPlanRenderProps>(({
         {/* Right Column: Procedure */}
         <div className="md:col-span-2 space-y-8">
             <section>
-                <h3 className="font-['Oswald'] text-xl font-bold uppercase border-b-2 border-[#1a1a1a] mb-6 pb-1 print:font-mono print:text-lg print:border-black">Procedure</h3>
+                <div className="flex items-center justify-between border-b-2 border-[#1a1a1a] mb-6 pb-1 print:border-black">
+                  <h3 className="font-['Oswald'] text-xl font-bold uppercase print:font-mono print:text-lg">Procedure</h3>
+                  {renderRegenButton('procedure')}
+                </div>
                 <div className="space-y-8">
                     {procedure.map((step, i) => (
                         <div key={i} className="group print:break-inside-avoid border-l-4 border-[#1a1a1a] pl-4 print:border-black">
@@ -525,7 +604,10 @@ export const LessonPlan = forwardRef<HTMLDivElement, LessonPlanRenderProps>(({
             </section>
 
             <section className="mt-8 pt-8 border-t-4 border-[#1a1a1a] print:border-t-2 print:border-black">
-                <h3 className="font-['Oswald'] text-xl font-bold uppercase mb-4 print:font-mono print:text-lg">Assessment</h3>
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="font-['Oswald'] text-xl font-bold uppercase print:font-mono print:text-lg">Assessment</h3>
+                  {renderRegenButton('assessment')}
+                </div>
                 <p className="text-sm leading-relaxed p-4 bg-white/50 border-l-4 border-[#1a1a1a] italic print:bg-white print:border-black print:text-xs print:font-mono">
                     {assessment || "Assessment details will be added here."}
                 </p>
@@ -534,7 +616,10 @@ export const LessonPlan = forwardRef<HTMLDivElement, LessonPlanRenderProps>(({
             {/* Exit Slip & Rubric */}
             {(exitSlip || (rubric && rubric.length > 0)) && (
               <section className="mt-8 pt-8 border-t-2 border-[#1a1a1a] border-dashed print:border-black">
-                <h3 className="font-['Oswald'] text-xl font-bold uppercase mb-4 print:font-mono print:text-lg">Exit Slip</h3>
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="font-['Oswald'] text-xl font-bold uppercase print:font-mono print:text-lg">Exit Slip</h3>
+                  {renderRegenButton('exitSlip')}
+                </div>
                 {exitSlip && (
                   <div className="p-4 bg-[#e6e2d6] border-2 border-[#1a1a1a] mb-4 print:bg-white print:border-black">
                     <p className="text-sm font-medium">{exitSlip}</p>
@@ -542,7 +627,10 @@ export const LessonPlan = forwardRef<HTMLDivElement, LessonPlanRenderProps>(({
                 )}
                 {rubric && rubric.length > 0 && (
                   <div className="mt-4">
-                    <h4 className="font-bold text-sm uppercase tracking-widest mb-3 opacity-70">Scoring Rubric (0-3)</h4>
+                    <div className="flex items-center justify-between mb-3">
+                      <h4 className="font-bold text-sm uppercase tracking-widest opacity-70">Scoring Rubric (0-3)</h4>
+                      {renderRegenButton('rubric')}
+                    </div>
                     <div className="grid grid-cols-4 gap-2 text-xs">
                       {rubric.map((r, i) => (
                         <div key={i} className="border border-[#1a1a1a] p-2 text-center print:border-black">
@@ -559,7 +647,10 @@ export const LessonPlan = forwardRef<HTMLDivElement, LessonPlanRenderProps>(({
             {/* Equity Notes */}
             {equityNotes && (
               <section className="mt-6 p-4 bg-purple-50 border-l-4 border-purple-600 print:bg-white print:border-black">
-                <h4 className="font-bold text-sm uppercase tracking-widest mb-2 text-purple-800 print:text-black">Equity Notes</h4>
+                <div className="flex items-center justify-between mb-2">
+                  <h4 className="font-bold text-sm uppercase tracking-widest text-purple-800 print:text-black">Equity Notes</h4>
+                  {renderRegenButton('equityNotes')}
+                </div>
                 <p className="text-sm text-purple-900 print:text-black">{equityNotes}</p>
               </section>
             )}

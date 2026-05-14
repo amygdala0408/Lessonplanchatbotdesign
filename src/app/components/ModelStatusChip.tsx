@@ -44,6 +44,8 @@ function taskColor(task: ModelTurn['task']): string {
       return 'bg-cyan-500/15 text-cyan-700 dark:text-cyan-300';
     case 'accommodation':
       return 'bg-violet-500/15 text-violet-700 dark:text-violet-300';
+    case 'artifact_generator':
+      return 'bg-fuchsia-500/15 text-fuchsia-700 dark:text-fuchsia-300';
   }
 }
 

@@ -14,6 +14,7 @@ import type { ConversationPhase, LearnerProfile, LessonPhaseId, LessonPlanData }
 import { LESSON_PHASE_ORDER } from '../types';
 
 import {
+  normalizeSubject,
   selectExitSlips,
   selectInstructionalModelCandidates,
   selectMisconceptions,
@@ -76,9 +77,34 @@ function deriveDokTarget(plan: Partial<LessonPlanData> | null | undefined): 1 | 
 export function buildSelectionContext(args: BuildCatalogContextArgs): SelectionContext {
   const plan = args.currentPlan ?? null;
   const recent = lastUserMessage(args.conversationHistory);
+
+  // In the `gathering` phase the plan is empty but the teacher almost always
+  // names the subject in their first message ("9th grade ELA, CCSS.ELA-…").
+  // Without a sniffed subject the catalog selectors fall back to scoring
+  // every active resource the same — that's why an ELA RL.9-10.1 prompt was
+  // surfacing NOAA Climate & Weather as a top-3 text option. Sniff the most
+  // recent user turn so subject-aware scoring kicks in immediately, before
+  // the chat model has had a chance to commit a structured plan.
+  const explicitSubject = (plan?.subject || '').trim();
+  let inferredSubject = explicitSubject;
+  if (!inferredSubject && recent) {
+    const sniffed = normalizeSubject(recent);
+    if (sniffed !== 'all') inferredSubject = sniffed;
+  }
+
+  // Same reasoning for grade level — a teacher who writes "9th grade ELA"
+  // wants the 9-12 band scored above K-2/3-5/6-8 even before the plan
+  // captures `gradeLevel` formally.
+  const explicitGrade = (plan?.gradeLevel || '').trim();
+  let inferredGrade = explicitGrade;
+  if (!inferredGrade && recent) {
+    const m = recent.match(/\b(?:grade\s*)?(K|kindergarten|\d{1,2})(?:st|nd|rd|th)?\s*(?:grade)?\b/i);
+    if (m) inferredGrade = m[0];
+  }
+
   return {
-    subject: plan?.subject || '',
-    gradeLevel: plan?.gradeLevel || '',
+    subject: inferredSubject,
+    gradeLevel: inferredGrade,
     topicKeyword: plan?.title || '',
     topicQuery: deriveTopic(plan, recent),
     dokTarget: deriveDokTarget(plan),

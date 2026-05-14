@@ -7,6 +7,7 @@ import {
   type Objective,
   type QuickReply,
   type QuickReplyOption,
+  type TextOption,
   LESSON_PHASE_LABELS,
   INSTRUCTIONAL_MODELS,
 } from '../types';
@@ -694,14 +695,93 @@ export function extractQuickReplies(raw: string): QuickReply | null {
 }
 
 /**
- * Strip hidden machine blocks ([QUICK_REPLIES], [LESSON_PLAN_JSON]) from the
- * visible assistant message. The plan + chips are still applied; the bubble
- * just shouldn't include the raw JSON.
+ * Extract a `[TEXT_OPTIONS]…[/TEXT_OPTIONS]` block emitted by the chat route
+ * after `pickCatalog({ decision: "text" })` resolves. Returns 3 normalized
+ * `TextOption` records the client can drop straight into
+ * `lessonPlan.textOptions` so the `TextOptionPicker` UI lights up and the
+ * `canFinalize` gate has the data it needs.
+ *
+ * Block shape (server-injected, never visible to the user):
+ *
+ * ```
+ * [TEXT_OPTIONS]
+ * {"options":[{"resourceId":"...","title":"...","source":"...","url":"...","rationale":"...","representationTags":[...],"accessibility":{...}}, ...]}
+ * [/TEXT_OPTIONS]
+ * ```
+ *
+ * Returns null if the block is missing, malformed, or empty. Callers should
+ * leave existing `textOptions` untouched when null is returned (don't wipe
+ * out a previously-set selection on follow-up turns).
+ */
+export function extractTextOptions(raw: string): TextOption[] | null {
+  const match = raw.match(/\[TEXT_OPTIONS\]([\s\S]*?)\[\/TEXT_OPTIONS\]/i);
+  if (!match) return null;
+
+  let parsed: unknown;
+  try {
+    parsed = JSON.parse(match[1].trim());
+  } catch {
+    return null;
+  }
+
+  if (!parsed || typeof parsed !== 'object') return null;
+  const wrapper = parsed as Record<string, unknown>;
+  const rawList = Array.isArray(wrapper.options)
+    ? wrapper.options
+    : Array.isArray(parsed)
+      ? (parsed as unknown[])
+      : null;
+  if (!rawList || rawList.length === 0) return null;
+
+  const options: TextOption[] = rawList
+    .map((entry): TextOption | null => {
+      if (!entry || typeof entry !== 'object') return null;
+      const o = entry as Record<string, unknown>;
+
+      const title = typeof o.title === 'string' ? o.title.trim() : '';
+      if (!title) return null;
+
+      const accRaw = (o.accessibility ?? {}) as Record<string, unknown>;
+      const accessibility = {
+        audio: typeof accRaw.audio === 'boolean' ? accRaw.audio : undefined,
+        captions: typeof accRaw.captions === 'boolean' ? accRaw.captions : undefined,
+        transcript: typeof accRaw.transcript === 'boolean' ? accRaw.transcript : undefined,
+        keyboardNav: typeof accRaw.keyboardNav === 'boolean' ? accRaw.keyboardNav : undefined,
+        accountRequired:
+          typeof accRaw.accountRequired === 'boolean' ? accRaw.accountRequired : undefined,
+      };
+      const hasAccessibility = Object.values(accessibility).some((v) => v !== undefined);
+
+      return {
+        title,
+        source: typeof o.source === 'string' ? o.source : '',
+        lexile: typeof o.lexile === 'string' ? o.lexile : '',
+        url: typeof o.url === 'string' ? o.url : '',
+        rationale: typeof o.rationale === 'string' ? o.rationale : '',
+        selected: false,
+        resourceId: typeof o.resourceId === 'string' ? o.resourceId : undefined,
+        representationTags: Array.isArray(o.representationTags)
+          ? o.representationTags.filter((t): t is string => typeof t === 'string')
+          : undefined,
+        accessibility: hasAccessibility ? accessibility : undefined,
+      };
+    })
+    .filter((x): x is TextOption => x !== null);
+
+  return options.length > 0 ? options : null;
+}
+
+/**
+ * Strip hidden machine blocks ([QUICK_REPLIES], [LESSON_PLAN_JSON],
+ * [TEXT_OPTIONS]) from the visible assistant message. The plan + chips +
+ * text options are still applied; the bubble just shouldn't include the
+ * raw JSON.
  */
 export function stripHiddenBlocks(raw: string): string {
   return raw
     .replace(/\[QUICK_REPLIES\][\s\S]*?\[\/QUICK_REPLIES\]/gi, '')
     .replace(/\[LESSON_PLAN_JSON\][\s\S]*?\[\/LESSON_PLAN_JSON\]/gi, '')
+    .replace(/\[TEXT_OPTIONS\][\s\S]*?\[\/TEXT_OPTIONS\]/gi, '')
     .replace(/```json[\s\S]*?```/gi, (block) =>
       // Keep prose JSON blocks visible (e.g. illustrative code) but drop the
       // ones that obviously contain a lesson plan or quick-replies payload.
@@ -719,11 +799,21 @@ export function parseTurn(rawResponse: string): ChatTurnResult {
   const extractedPlan = extractLessonPlanFromResponse(rawResponse);
   const hasJsonBlock = /\[LESSON_PLAN_JSON\]/i.test(rawResponse) || /```json/i.test(rawResponse);
   const quickReplies = extractQuickReplies(rawResponse);
+  const textOptions = extractTextOptions(rawResponse);
   const visibleContent = stripHiddenBlocks(rawResponse);
+
+  // If the chat route emitted a [TEXT_OPTIONS] block, surface those choices
+  // directly on the plan envelope so the existing handleSendMessage path
+  // (which already merges `result.plan` into the store) lights up
+  // `lessonPlan.textOptions` without any new wiring on the client.
+  const plan: Partial<LessonPlanData> | undefined =
+    textOptions && textOptions.length > 0
+      ? { ...(extractedPlan ?? {}), textOptions }
+      : extractedPlan ?? undefined;
 
   return {
     ok: true,
-    plan: extractedPlan ?? undefined,
+    plan,
     rawResponse,
     visibleContent,
     signals: {

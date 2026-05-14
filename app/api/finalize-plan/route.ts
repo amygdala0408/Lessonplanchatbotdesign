@@ -31,6 +31,8 @@ import { buildMessages } from '@/lib/promptInjector';
 import { buildCatalogContext } from '@/lib/catalogContext';
 import { validateLessonPlan, formatErrorsForRetry } from '@/lib/lessonPlanSchema';
 import { validateCatalogIds } from '@/lib/catalog/validateIds';
+import { suggestSimilarCatalogId } from '@/lib/catalog/closestIds';
+import { scoreLessonPlan, toPersistableQualityScore } from '@/lib/qualityScorer';
 import { generatorLessonPlanSchema, type GeneratorLessonPlan } from '@/lib/llm/generatorSchema';
 import {
   getModel,
@@ -162,7 +164,7 @@ export async function POST(request: NextRequest) {
     try {
       const extraInstruction =
         attempt > 0
-          ? `\n\nPRIOR ATTEMPT FAILED. Fix these specific issues and emit a NEW complete plan:\n${formatErrorsForRetry(validation.errors)}`
+          ? `\n\nPRIOR ATTEMPT FAILED. Fix these specific issues and emit a NEW complete plan:\n${formatErrorsForRetry(validation.errors, { suggestSimilar: suggestSimilarCatalogId })}`
           : body.fixInstructions
             ? `\n\nTEACHER NOTE: ${body.fixInstructions}`
             : '';
@@ -216,12 +218,34 @@ export async function POST(request: NextRequest) {
     }
   }
 
+  // Score the merged plan with the EQuIP+UDL rubric. Layer A always runs.
+  // Layer B (the LLM judge on the `scorer` task) runs only when the gateway
+  // is configured. The judge is best-effort — failures fall back to Layer A
+  // so finalize never blocks on a transient scorer error.
+  let qualityScore: NonNullable<Partial<LessonPlanData>['qualityScore']> | undefined;
+  let scorecard: Awaited<ReturnType<typeof scoreLessonPlan>> | undefined;
+  if (validation.ok) {
+    try {
+      scorecard = await scoreLessonPlan(merged, { useJudge: true });
+      qualityScore = toPersistableQualityScore(scorecard);
+      // Carry the score on the merged plan so the client persists it.
+      merged = { ...merged, qualityScore };
+    } catch (scorerErr) {
+      console.warn('[finalize-plan] scorer failed:', scorerErr);
+    }
+  }
+
   const responseBody = {
-    ok: validation.ok,
+    ok: validation.ok && (qualityScore?.passed ?? true),
+    structuralOk: validation.ok,
     plan: generated,
     merged,
     errors: validation.errors,
-    retryPrompt: validation.ok ? '' : formatErrorsForRetry(validation.errors),
+    qualityScore,
+    scorecard,
+    retryPrompt: validation.ok
+      ? ''
+      : formatErrorsForRetry(validation.errors, { suggestSimilar: suggestSimilarCatalogId }),
     meta: {
       provider: 'ai-gateway',
       model: modelId,

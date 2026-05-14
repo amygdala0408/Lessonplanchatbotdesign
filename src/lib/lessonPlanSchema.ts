@@ -6,6 +6,7 @@ import {
   type LessonPhaseId,
   type ValidationError,
 } from '../types';
+import { validateObjectiveDok } from './dokLexicon';
 
 // Standard code regex coverage for the four canonical frameworks. Conservative on
 // purpose: we want to reject obviously-wrong codes (e.g. "11th grade ELA") while
@@ -266,6 +267,24 @@ export function validateLessonPlan(
       }
     });
 
+    // DOK lexicon check: each objective with a claimed DOK level should use a
+    // verb whose canonical DOK is within 1 level of the claim. We treat this
+    // as a `warning` (not blocking) so an unfamiliar verb doesn't tank
+    // finalize, but the teacher sees the mismatch and a suggested fix.
+    const subjectForDok = plan.subject ?? null;
+    (plan.objectives ?? []).forEach((obj, i) => {
+      if (!obj || typeof obj === 'string') return;
+      const text = obj.text ?? '';
+      if (!text || typeof obj.dok !== 'number') return;
+      const dokWarnings = validateObjectiveDok({
+        objectiveText: text,
+        claimedDok: obj.dok,
+        subject: subjectForDok,
+        pathPrefix: `objectives[${i}].dok`,
+      });
+      errors.push(...dokWarnings);
+    });
+
     // Success criteria aligned to objectives.
     const objectives = plan.objectives ?? [];
     const successCriteria = plan.successCriteria ?? [];
@@ -336,14 +355,42 @@ export function validateLessonPlan(
 
 /**
  * Render validation errors as a structured retry prompt the model can act on.
- * Used by the auto-retry path in app/api/chat (P0 surfaces these to the user;
- * P1 routes them back into the model with a "fix and re-emit JSON only" prompt).
+ *
+ * Used by the auto-retry path in /api/finalize-plan and /api/validate-plan.
+ *
+ * Optionally accepts a `suggestSimilar` callback that, given an `id` and the
+ * error `path`, returns up to N catalog IDs similar to the offending one.
+ * When provided, each "Unknown … id" error is annotated with closest valid
+ * IDs so the model stops re-guessing on the next attempt.
+ *
+ * The schema module stays portable (no server-only deps); the API routes
+ * pass the catalog-aware suggester from `src/lib/catalog/closestIds.ts`.
  */
-export function formatErrorsForRetry(errors: ValidationError[]): string {
+export function formatErrorsForRetry(
+  errors: ValidationError[],
+  options?: {
+    suggestSimilar?: (args: { id: string; path: string }) => string[];
+  },
+): string {
   const blocking = errors.filter((e) => e.severity === 'error');
   if (blocking.length === 0) return '';
-  return [
+  const lines: string[] = [
     'Your previous lesson plan JSON failed validation. Re-emit ONLY the [LESSON_PLAN_JSON] block with these fixes (no commentary):',
-    ...blocking.map((e, i) => `${i + 1}. ${e.path}: ${e.message}`),
-  ].join('\n');
+  ];
+  blocking.forEach((e, i) => {
+    let line = `${i + 1}. ${e.path}: ${e.message}`;
+    const suggester = options?.suggestSimilar;
+    if (suggester) {
+      const m = e.message.match(/"([^"]+)"/);
+      const badId = m?.[1];
+      if (badId) {
+        const suggestions = suggester({ id: badId, path: e.path });
+        if (suggestions.length > 0) {
+          line += `\n   Closest valid ids: ${suggestions.map((s) => `"${s}"`).join(', ')}`;
+        }
+      }
+    }
+    lines.push(line);
+  });
+  return lines.join('\n');
 }
