@@ -29,6 +29,15 @@ The plan had 6 commits total. All six have landed. Live verification is the only
 
 **Static gates green after Commits 4–6:** `npx tsc --noEmit` clean, **63/63** unit tests pass (8 new phase-machine tests).
 
+### Two queued tasks for tomorrow's session
+
+1. **Prompt-voice review** of `PENNY_SYSTEM_PROMPT.md` (see below) before live UI verification.
+2. **Chat / picker panel navigation fix.** Surfaced during tonight's live-server check: the right-side column stacks the class profile, the text-option picker, and the instructional-model chooser ABOVE the chat scroll area, and none of those panes collapse after the teacher is done with them. The chat window ends up as a small scroll viewport even though there's empty space below; there's no clear affordance to minimize a picker after a pick is locked in. Likely fix touches `app/page.tsx` (already has a `classProfileExpanded` state that auto-collapses past `gathering` — extend that pattern to `TextOptionPicker` and `InstructionalModelChooser`, plus add a "Show picker again" link in the preview drawer for the rare case a teacher wants to re-open). Will solve together tomorrow before the acceptance-prompt walk-through.
+
+### Tonight's static + generator verification (no UI run)
+
+Production build is clean. All 10 routes compiled, `npm test` 63/63 green, `tsc --noEmit` clean. The generator + scorer pipeline was exercised end-to-end via `scripts/finalize-acceptance-prompt.mjs` against the live server, seeded with the acceptance-prompt context. Result: Opus 4.7 produced a complete *The Leap* / Workshop Model lesson plan in 80.9s; EQuIP+UDL Layer A + Layer B (GPT-5.5 judge) scored it **2.83 / 3.00 — PASSED**, with 5/6 dimensions at 3/3 and `materials_licensing` at 2/3 (artifact of the test harness — no URL was passed for the seed text; live UI carries the catalog URL through). Two non-blocking DOK-lexicon warnings (`cite`, `distinguish` not in lexicon). The chat + picker + phase-machine pipeline (Commits 4 and 5) was NOT exercised tonight; that's what tomorrow's UI run covers.
+
 ### Read PENNY_SYSTEM_PROMPT.md before kicking off live verification
 
 Commit 3 was landed without a teacher-voice review. Before the live run, read `PENNY_SYSTEM_PROMPT.md` (159 lines) end-to-end — especially the **three worked examples** (lines ~79–118):
