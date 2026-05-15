@@ -227,12 +227,20 @@ export default function HomePage() {
         }
       }
 
-      // Drive the phase machine off (current phase, plan after merge, signals).
+      // Drive the phase machine off (current phase, plan after merge, signals,
+      // and the conversation including the assistant turn we just appended —
+      // the unit-context guard needs prior turns to scan for the topic-confirm
+      // beat).
       const planAfterMerge = { ...lessonPlan, ...(turn.plan ?? {}) };
+      const phaseHistory = [
+        ...conversationHistory,
+        { role: 'assistant', content: turn.visibleContent ?? fullResponse },
+      ];
       const transition = nextPhase({
         current: conversationPhase,
         plan: planAfterMerge,
         turn,
+        messages: phaseHistory,
       });
       if (transition.next !== conversationPhase) {
         setConversationPhase(transition.next);

@@ -12,6 +12,14 @@ export interface PhaseContext {
   current: ConversationPhase;
   plan: Partial<LessonPlanData>;
   turn: ChatTurnResult;
+  /**
+   * Conversation history (everything in the store, including the current
+   * assistant turn after streaming finishes). Used by the unit-context guard
+   * so we can detect whether Penny asked about where the lesson sits in the
+   * unit before presenting text options. Optional for backward compatibility;
+   * callers that omit it lose the guard.
+   */
+  messages?: { role: string; content: string }[];
 }
 
 export interface PhaseTransition {
@@ -24,15 +32,32 @@ export interface PhaseTransition {
  * Decide the next conversation phase based on the current phase and the most
  * recent assistant turn. Never moves backwards. Never skips text_selection.
  */
-export function nextPhase({ current, plan, turn }: PhaseContext): PhaseTransition {
+export function nextPhase({ current, plan, turn, messages }: PhaseContext): PhaseTransition {
   // 'complete' is terminal until reset.
   if (current === 'complete') {
     return { next: 'complete', reason: 'terminal' };
   }
 
   // If Penny just presented 3 text options and is waiting, pin us at text_selection
-  // regardless of what we thought we were doing.
+  // regardless of what we thought we were doing — UNLESS we're still in
+  // `gathering` and the topic-confirm beat hasn't happened yet. The pedagogy
+  // contract says: after subject+grade+duration land, ask one short question
+  // about unit context (hook / mid-unit / transfer) BEFORE listing texts.
+  // When the model jumps straight to texts, we keep the conversation parked
+  // at gathering so the Finalize button stays gated and the regression is
+  // visible during live verification.
   if (turn.signals.isWaitingForTextSelection) {
+    if (current === 'gathering' && !hasUnitContextBeat(messages)) {
+      return {
+        next: 'gathering',
+        reason: 'text options presented before unit-context turn',
+        toast: {
+          kind: 'info',
+          message:
+            'Penny jumped ahead to texts. Tell her where this lesson sits in the unit (hook, mid-unit, or transfer) before locking a reading in.',
+        },
+      };
+    }
     return {
       next: 'text_selection',
       reason: 'assistant presented text options',
@@ -129,4 +154,55 @@ export function canFinalize(
     return { ok: false, reason: 'Exactly one text must be selected.' };
   }
   return { ok: true, reason: 'Ready to finalize.' };
+}
+
+/**
+ * Detect whether the conversation contains a "topic-confirm beat" — a prior
+ * Penny turn that asked about unit context (hook / mid-unit / transfer) AND
+ * a subsequent teacher reply. This is the pedagogy contract from the system
+ * prompt; the phase machine uses it to refuse a premature jump from
+ * `gathering` to `text_selection`.
+ *
+ * Heuristic, not parser:
+ * - Walk assistant turns that came BEFORE the current (text-options) turn.
+ * - Look for one that reads like a question (ends with `?` or contains a
+ *   question phrasing) AND mentions unit-context vocabulary.
+ * - Confirm there's at least one teacher reply between that question and
+ *   the current turn.
+ *
+ * Returns `true` if we should allow the text_selection transition.
+ * Returns `true` (permissive) when `messages` is omitted so legacy callers
+ * keep working; the live app always passes `messages`.
+ */
+function hasUnitContextBeat(messages?: { role: string; content: string }[]): boolean {
+  if (!messages || messages.length === 0) return true;
+
+  // The current assistant turn is the last assistant entry. We're looking for
+  // a prior assistant question, so scan everything before that.
+  let currentAssistantIdx = -1;
+  for (let i = messages.length - 1; i >= 0; i--) {
+    if (messages[i].role === 'assistant') {
+      currentAssistantIdx = i;
+      break;
+    }
+  }
+  if (currentAssistantIdx <= 0) return false;
+
+  const unitContextWords =
+    /\b(hook|mid[- ]?unit|transfer|assessment day|where (this|the lesson|it) (sits|lands|fits)|earlier in the unit|later in the unit|unit context|beginning of the unit|end of the unit|new unit|deepening)\b/i;
+
+  for (let i = currentAssistantIdx - 1; i >= 0; i--) {
+    const m = messages[i];
+    if (m.role !== 'assistant') continue;
+    const content = m.content ?? '';
+    if (!unitContextWords.test(content)) continue;
+    const isQuestion = /\?/.test(content);
+    if (!isQuestion) continue;
+
+    // Must be followed by a teacher reply BEFORE the current assistant turn.
+    for (let j = i + 1; j < currentAssistantIdx; j++) {
+      if (messages[j].role === 'user') return true;
+    }
+  }
+  return false;
 }
