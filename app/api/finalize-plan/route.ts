@@ -218,6 +218,25 @@ export async function POST(request: NextRequest) {
     }
   }
 
+  // When the generator transport blew up on both attempts there's no plan and
+  // no validation errors to show. Without this, the client banner stays empty
+  // and the teacher sees "Finalize failed" with nothing actionable. Surface
+  // the model/transport message as a top-level validation error so the
+  // existing "Quality gate flagged issues" panel renders it verbatim.
+  if (!generated && lastModelError) {
+    validation = {
+      ok: false,
+      errors: [
+        {
+          path: '<root>',
+          message: `Lesson generator transport failure: ${lastModelError}`,
+          severity: 'error',
+        },
+        ...validation.errors,
+      ],
+    };
+  }
+
   // Score the merged plan with the EQuIP+UDL rubric. Layer A always runs.
   // Layer B (the LLM judge on the `scorer` task) runs only when the gateway
   // is configured. The judge is best-effort — failures fall back to Layer A
