@@ -1,9 +1,9 @@
 # Penny Pedagogy Lesson Plan Generator - Build Log
 
 **Project:** Lessonplanchatbotdesign
-**Last updated:** May 13, 2026 (late-night session)
+**Last updated:** May 15, 2026 (commits 4–6 landed; live verification pending prompt review)
 **Active branch:** `cursor/top-tier-overhaul-c88e`
-**Latest commit:** `05088b0` — pedagogy-first prompt rewrite
+**Latest commit:** `c95fedb` — surface generator transport errors into validation banner
 
 ---
 
@@ -13,25 +13,31 @@ Penny Pedagogy is an equity-centered AI instructional design partner for high sc
 
 ---
 
-## ▶ Resume point — Penny Pedagogy-First Rebuild (in flight)
+## ▶ Resume point — Penny Pedagogy-First Rebuild (code complete, live verification pending)
 
-**Plan:** [`.cursor/plans/penny_pedagogy-first_rebuild_a608bd3b.plan.md`](.cursor/plans/penny_pedagogy-first_rebuild_a608bd3b.plan.md)
-
-The plan has 6 commits total. Three are done; three remain. Pick up tomorrow at Commit 4.
+The plan had 6 commits total. All six have landed. Live verification is the only step left, and it's gated on a quick prompt-voice review (see below).
 
 | # | Title | Status | Commit |
 |---|-------|--------|--------|
 | 1 | Smoke-test AI Gateway model slugs | ✅ done (no-op) | — all 4 slugs returned 200 |
 | 2 | Catalog curation — `kind` field + selector hygiene | ✅ done | `c023e1c` |
 | 3 | Pedagogy-first system prompt + operator notes split | ✅ done | `05088b0` |
-| 4 | Always-invoke `pickCatalog` + topic-confirm beat in phase machine | ⏳ next | — touches `src/lib/phaseMachine.ts` + operator notes |
-| 5 | Reframe picker reasoning around teacher decision criteria | ⏳ pending | — touches `src/lib/llm/pickCatalog.ts` |
-| 6 | Surface generator transport errors into validation banner | ⏳ pending | — touches `app/api/finalize-plan/route.ts` |
-| — | Live verification (acceptance prompt browser test) | ⏳ deferred to after Commit 6 | run all 6 verification behaviors end-to-end |
+| 4 | Phase-machine guard + always-invoke `pickCatalog` | ✅ done | `f96c84a` |
+| 5 | Reframe picker reasoning around teacher decision criteria | ✅ done | `3520975` |
+| 6 | Surface generator transport errors into validation banner | ✅ done | `c95fedb` |
+| — | Live verification (acceptance prompt browser test) | ⏳ pending prompt review | run all 6 verification behaviors end-to-end |
 
-**Verification deferred:** the plan asks for the acceptance prompt to be run after every commit. We did NOT run it tonight — only static gates (typecheck + 55/55 unit tests). The first live run should happen after Commit 4 lands, since Commit 3's worked examples assume the always-invoke-picker rule from Commit 4.
+**Static gates green after Commits 4–6:** `npx tsc --noEmit` clean, **63/63** unit tests pass (8 new phase-machine tests).
 
-**Risk note:** Commit 3 introduces the topic-confirm beat in the system prompt's worked examples, but the phase machine in `src/lib/phaseMachine.ts` doesn't yet enforce it. Without Commit 4, the model is *encouraged* to ask about unit context but is not *required* to. If live verification on Commit 4 shows Penny skipping the unit-context turn, the phase-machine guard is the lever to tighten.
+### Read PENNY_SYSTEM_PROMPT.md before kicking off live verification
+
+Commit 3 was landed without a teacher-voice review. Before the live run, read `PENNY_SYSTEM_PROMPT.md` (159 lines) end-to-end — especially the **three worked examples** (lines ~79–118):
+
+- First-turn topic-confirm response
+- Text-selection lead-with-why pattern
+- Finalize confirmation summary
+
+Flag anything that doesn't sound like the school's voice (cadence, vocabulary, the specific texts named in the example, the "rigor without access is gatekeeping" anchor framing). Easy to revise — these strings become the model's stylistic anchor for every conversation.
 
 ---
 
@@ -92,18 +98,41 @@ Verification: 55/55 tests pass; `tsc --noEmit` clean. Live verification deferred
 
 ---
 
-## How to resume tomorrow
+## Session log — May 15, 2026 (Commits 4–6)
 
-1. Open the plan: [`.cursor/plans/penny_pedagogy-first_rebuild_a608bd3b.plan.md`](.cursor/plans/penny_pedagogy-first_rebuild_a608bd3b.plan.md).
-2. Pick up at **Commit 4 — Topic-confirm beat + always-invoke picker for text decisions**.
-   - Patch A: In `PENNY_OPERATOR_NOTES.md`, the picker workflow already says "Always invoke `pickCatalog` before presenting text options." Verify in chat behavior; if Sonnet still skips it, tighten with an explicit rule near the top of the operator notes.
-   - Patch B: In `src/lib/phaseMachine.ts`, add a guard so `nextPhase` does NOT transition from `gathering` to `text_selection` until the conversation history contains evidence of a unit-context question/answer (heuristic: at least one Penny turn after subject+grade+duration are set, before any `[TEXT_OPTIONS]` block).
-3. Then **Commit 5 — picker reframe** in `src/lib/llm/pickCatalog.ts` (rewrite `DECISION_PROMPTS.text` and the `buildTextPickerPrompt` rules around teacher decision criteria + collection prohibition).
-4. Then **Commit 6 — surface generator transport errors** in `app/api/finalize-plan/route.ts` (~2-line fix per plan).
-5. Then **live verification**: run the acceptance prompt in the browser end-to-end:
+### Commit 4 — Phase-machine guard + always-invoke `pickCatalog` (`f96c84a`)
+**Two coupled mechanics so Penny can't race subject+grade+duration → texts in one turn.**
+
+- **`src/lib/phaseMachine.ts`** — added `messages?` to `PhaseContext` and a `hasUnitContextBeat(messages)` heuristic. When `current === 'gathering'` and the turn presents text options, the machine refuses to transition to `text_selection` unless a prior Penny turn (a) ends with `?`, (b) mentions unit-context vocabulary (`hook | mid-unit | transfer | assessment day | where this lands | earlier/later in the unit | new unit | deepening`), and (c) was followed by a teacher reply before the text-options turn. When the guard fires, phase stays at `gathering` (Finalize stays gated) and a toast names the regression. Permissive default when `messages` is omitted so legacy callers don't break.
+- **`app/page.tsx`** — pass the conversation history (user history + current assistant `visibleContent`) to `nextPhase`.
+- **`PENNY_OPERATOR_NOTES.md`** — lifted the two non-negotiables ("confirm unit context before texts" + "always invoke `pickCatalog` before any text decision") into a new section above the phase machine. The pickCatalog workflow section now lists which decisions trigger the tool, plus a one-line rejection of "I'll just suggest one from memory" as an excuse to skip it.
+- **`src/lib/phaseMachine.test.ts`** — new file. 8 tests: guard blocks the premature jump, allows the transition after a topic-confirm beat (`?` + unit-context vocab + teacher reply), recognizes "where this lesson lands in the unit" phrasing, doesn't block when phase is past gathering, falls through permissively when `messages` is omitted, plus regression coverage on the existing transitions.
+
+### Commit 5 — Picker reframe (`3520975`)
+**`src/lib/llm/pickCatalog.ts`** — rewrote `DECISION_PROMPTS.text` and the rules block in `buildTextPickerPrompt`.
+
+Old prompt read as a content-filter checklist (audience=student, diversity-across-axes). New prompt names the four teacher decision criteria in order: **(1) rigor** — does the text carry the standard's cognitive demand; **(2) access** — can the readers in *this* room actually engage with it (using the live learner profile, not as background); **(3) representation** — whose perspective is centered as expert; **(4) classroom variety** — meaningful choice, not three near-clones. The lead pick is the one Penny would recommend; the rationale anchors on that pick's fit.
+
+Collection prohibition is now an explicit **ABSOLUTE PROHIBITION** block with an enumerated disqualifier list (library / anthology / hub / archive / database / collection / curated set / framework / standards doc / PD reading / practice guide / teacher-reference site / platform homepage). The schema-conflict case (fewer than three single readings in candidates) is handled honestly — pick three, set `confidence: "low"`, let the rationale flag the thinness — never smuggle a collection into the third slot. Existing audience-filtering test still passes.
+
+### Commit 6 — Surface generator transport errors (`c95fedb`)
+**`app/api/finalize-plan/route.ts`** — after the two-attempt generator loop, when `!generated && lastModelError`, prepend a top-level `ValidationError` (path `<root>`, severity `error`, message `Lesson generator transport failure: <message>`) to `validation.errors`. The client's existing "Quality gate flagged issues" banner renders it verbatim. Closes the silent-failure gap where gateway 404s / schema-parse failures / rate-limits left the teacher staring at an empty banner with only a toast.
+
+---
+
+## How to resume — live verification
+
+1. **First**, re-read `PENNY_SYSTEM_PROMPT.md` (159 lines), focusing on the three worked examples (~lines 79–118). Flag any vocabulary, cadence, or anchor framing that doesn't match the school's voice — these strings shape every conversation. Easy to revise before live verification.
+2. Start the dev server (`npm run dev`) and confirm `AI_GATEWAY_API_KEY` is set in `.env.local`.
+3. Run the acceptance prompt in the browser end-to-end:
    > *"9th grade ELA, CCSS.ELA-LITERACY.RL.9-10.1, 60 minutes. 28 students, 3 ELs at WIDA 3, 2 IEPs (anxiety + organization + reading)."*
-
-   Confirm all 6 behaviors from the plan's Verification Protocol (lines 191–200): unit-context turn first, three specific student readings, no internal vocabulary, picker click advances phase, model click enables Finalize, Finalize produces complete drawer with rubric/exit slip/embedded supports.
+4. Confirm all 6 verification behaviors:
+   - **Unit-context turn first.** Penny mirrors the opening, then asks one short question about hook / mid-unit / transfer before any text options. (Phase guard catches regressions: if Penny jumps to texts, conversation pins at `gathering` and the "Penny jumped ahead" toast fires.)
+   - **Three specific student readings**, not collections / libraries / anthologies. Picker returns three `kind: 'student_reading'` candidates with `audience: 'student'`.
+   - **No internal vocabulary** in Penny's prose (`catalog`, `pickCatalog`, `the app`, `the gateway`, bracket tags, etc. — guarded by the prompt's "what you never say" section).
+   - **Picker click advances phase** from `text_selection` → `instructional_model`.
+   - **Model click enables Finalize** (advances to `preview`).
+   - **Finalize produces complete drawer**: 5 procedure phases in canonical order, embedded accommodations on every step, rubric (4 rows, scores 0–3), DOK-aligned exit slip, supports populated. Any transport failure now surfaces as a concrete banner message instead of empty UI.
 
 ---
 
