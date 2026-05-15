@@ -236,7 +236,17 @@ function truncate(s: string | undefined, n: number): string {
 const DECISION_PROMPTS: Record<CatalogDecisionType, string> = {
   instructional_model:
     'Choose the instructional model that best matches this lesson context. Prefer models that fit the subject and the type of cognitive demand the topic requires. Avoid Project-Based Learning unless the duration is >= 90 minutes.',
-  text: 'Choose exactly three distinct student-facing texts for this lesson. Never choose professional-development, teacher-reference, framework, standards, or practice-guide rows as student reading. Prioritize accessibility, license openness, grade-level fit, topical relevance, and diversity across format/source/representation.',
+  text: [
+    'You are picking three readings for a real teacher to choose between in the next two minutes of planning.',
+    '',
+    'A teacher in this seat is weighing four things, in this order:',
+    '  1. RIGOR — does the text carry the cognitive demand the standard requires? RL.9-10.1 needs claim + evidence work the text can sustain; HS-LS1 needs phenomenon-grounded reasoning the text supports.',
+    '  2. ACCESS — can the specific readers in this room actually engage with it? Consider Lexile vs. grade, length vs. duration, the presence of multilingual learners and IEPs in the learner profile, and whether audio / captions / transcript are available for the WIDA-leveled students.',
+    '  3. REPRESENTATION — does the text honor the students who will read it? Whose perspective gets centered as expert thinking? Avoid stacking three readings from one cultural lens.',
+    '  4. CLASSROOM VARIETY — give the teacher a meaningful choice, not three near-clones. The three picks should differ on at least one useful axis: source, format (article / short story / primary source / poem / short video), Lexile or complexity, accessibility profile, or representation lens.',
+    '',
+    'ABSOLUTE PROHIBITION: Each pick must be ONE specific student-facing reading the teacher can assign today. Never return a library, anthology, hub, archive, database, collection, curated set, framework document, standards document, professional-development reading, practice guide, teacher-reference site, or platform homepage. If the candidate list contains fewer than three qualifying single readings, still pick three (the schema requires it) but set `confidence: "low"` and let the rationale flag the thinness honestly so the teacher knows. Do NOT smuggle a collection or hub in as a third option.',
+  ].join('\n'),
   opener:
     'Choose the strongest opener (hook + learning intention frame) for the topic. Prefer openers whose DOK floor matches or sits one below the objective DOK.',
   exit_slip:
@@ -569,19 +579,18 @@ function buildTextPickerPrompt(
     JSON.stringify(context, null, 2),
     '```',
     '',
-    'RULES:',
-    '- `chosenIds` MUST contain exactly three unique IDs from the candidates list.',
-    '- Every chosen ID must have audience="student".',
-    '- The three picks should differ on at least one useful classroom axis: source, format, Lexile/complexity, accessibility, or representation.',
-    '- Never choose teacher-PD/reference rows such as Hattie, Marzano, Wiggins/McTighe, EQuIP, practice guides, frameworks, or standards documents as student reading.',
-    '- `rationale` is teacher-facing: warm, jargon-free, ≤2 sentences.',
-    '- `confidence` reflects how well the set fits the context.',
+    'OUTPUT RULES:',
+    '- `chosenIds` MUST contain exactly three unique IDs drawn verbatim from the candidates list above.',
+    '- Every chosen ID must have `audience: "student"`. If a candidate is a library / anthology / hub / archive / database / collection / curated set / framework / standards document / professional-development reading / practice guide / teacher-reference site, it is disqualified — even if the candidate list mistakenly carried it.',
+    '- The lead pick (first ID) is the one you would actually recommend to this teacher with this learner profile. Anchor the rationale on what makes the lead pick fit; only mention the other two if the contrast is useful.',
+    '- `rationale` is teacher-facing: warm, plainspoken, ≤2 sentences, no jargon, no "the model thinks…" framing. Speak as a colleague: "I\'d lead with X because [rigor reason]; Y is the alternative for [access / representation / texture reason]."',
+    '- `confidence` reflects how well the SET fits the context. Use "low" honestly when fewer than three good single-reading candidates exist — better to flag thinness than to pad with a weak third.',
   ];
 
   if (retry) {
     lines.push(
       '',
-      'IMPORTANT: Your previous response did not return exactly three unique in-set student-facing IDs. Pick STRICTLY from the IDs shown above.',
+      'IMPORTANT: Your previous response did not return exactly three unique in-set student-facing single-reading IDs. Pick STRICTLY from the IDs shown above. Schema still requires three; if the pool is thin, pick three anyway and set `confidence: "low"`.',
     );
   }
 
