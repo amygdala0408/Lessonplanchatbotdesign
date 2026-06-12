@@ -1,0 +1,154 @@
+{
+  "_meta": {
+    "status": "draft",
+    "source": "research-content-additions plan, item C1",
+    "note": "24 annotated score-calibration exemplars (6 dimensions x 4 levels) for the EQuIP+UDL judge. DRAFTS pending teacher voice review — edit freely; the judge prompt quotes these verbatim.",
+    "lastUpdated": "2026-06-11"
+  },
+  "exemplars": [
+    {
+      "dimension": "alignment_coherence",
+      "score": 3,
+      "exemplar": "Standard CCSS.ELA-LITERACY.RL.9-10.1 names citing strong evidence; the objective reads 'Students will analyze how two cited lines reveal the speaker's motivation (DOK 3)'; success criterion 'I can explain why my cited line proves my claim' mirrors it; the exit slip asks for one claim, one cited line, and a two-sentence justification.",
+      "annotation": "Every layer names the same cognitive work — cite, analyze, justify — and the exit slip measures exactly what the objective promises. Nothing is decorative."
+    },
+    {
+      "dimension": "alignment_coherence",
+      "score": 2,
+      "exemplar": "Standard RL.9-10.1 and a DOK 3 analyze objective are present, with three success criteria, but the exit slip asks students to 'summarize what you learned about the story today.'",
+      "annotation": "The chain holds until assessment: a summarize exit slip (DOK 2) cannot evidence an analyze objective, so end-to-end alignment can't be verified."
+    },
+    {
+      "dimension": "alignment_coherence",
+      "score": 1,
+      "exemplar": "The plan lists 'CCSS reading standards' without a code, one objective ('Students will understand theme'), and no success criteria; the exit slip exists but measures vocabulary recall.",
+      "annotation": "Pieces exist but none lock together: no specific standard, an unmeasurable 'understand' objective, and an assessment pointed at different content."
+    },
+    {
+      "dimension": "alignment_coherence",
+      "score": 0,
+      "exemplar": "No standard is identified anywhere in the plan, and the objectives field contains activity descriptions ('Students will do a gallery walk') rather than learning outcomes.",
+      "annotation": "Alignment is absent, not weak — there is nothing to align to. Activities are not objectives."
+    },
+    {
+      "dimension": "instructional_design",
+      "score": 3,
+      "exemplar": "All five phases run launch through exit_slip under Explicit Instruction: the model phase shows the teacher annotating one stanza aloud, guided practice has pairs rehearsing the same move on a new stanza with the teacher conferring, and independent practice releases students to a third stanza alone. Each phase names minutes and a teacherMoves recipe.",
+      "annotation": "A genuine gradual release: the cognitive work transfers from teacher to pairs to individuals across the same skill, and the recipe says how, not just what."
+    },
+    {
+      "dimension": "instructional_design",
+      "score": 2,
+      "exemplar": "All five phases are present in order with reasonable timing, but the model phase reads 'Teacher reviews how to cite evidence' and guided practice reads 'Students practice citing evidence in pairs.'",
+      "annotation": "The architecture is right but the steps are activity labels, not moves — a teacher must invent the think-aloud, the pairing rule, and the check before transitioning."
+    },
+    {
+      "dimension": "instructional_design",
+      "score": 1,
+      "exemplar": "The procedure jumps from a warm-up directly to independent work with no modeling or guided practice phase; two phases share the label 'work time.'",
+      "annotation": "Phases are missing, so students are asked to perform a skill no one demonstrated. This is a structural gap, not a wording problem."
+    },
+    {
+      "dimension": "instructional_design",
+      "score": 0,
+      "exemplar": "The procedure field contains two sentences: 'Students read the article. Then they answer the questions.'",
+      "annotation": "No instructional design is present — no phases, no model, no release, no checks."
+    },
+    {
+      "dimension": "access_supports",
+      "score": 3,
+      "exemplar": "Every phase embeds named accommodations (launch: bilingual glossary preview for WIDA-3 students; guided practice: sentence frames plus strategic pairing; exit slip: oral-rehearsal-before-writing) and all three lanes are populated, with the IEP/504 lane citing chunked directions and extended time matched to the profile's organization_support tag.",
+      "annotation": "Supports are phase-specific, lane-specific, and traceable to the actual learner profile — not a generic list stapled to the end."
+    },
+    {
+      "dimension": "access_supports",
+      "score": 2,
+      "exemplar": "All three lanes are populated and most phases embed an accommodation, but the independent practice phase has none and the EL lane repeats 'provide sentence frames' for every phase without naming which frames.",
+      "annotation": "Coverage is broad but thins exactly where students work alone — the phase where supports matter most — and the EL support is one move repeated, not differentiated."
+    },
+    {
+      "dimension": "access_supports",
+      "score": 1,
+      "exemplar": "A 'Differentiation' paragraph at the bottom says 'Teacher will differentiate as needed for ELs and students with IEPs.'",
+      "annotation": "An intention is stated but no support is actually designed; nothing tells the teacher what to hand which student during which phase."
+    },
+    {
+      "dimension": "access_supports",
+      "score": 0,
+      "exemplar": "The plan contains no accommodations on any step, all three support lanes are empty, and the learner profile flags three multilingual learners and two IEPs.",
+      "annotation": "Flagged learners with zero designed supports is a 0 even when the content is otherwise strong."
+    },
+    {
+      "dimension": "assessment_for_learning",
+      "score": 3,
+      "exemplar": "The exit slip asks for a claim, a cited line, and reasoning; the 0-3 rubric describes observable differences at each level ('2: claim and evidence present, reasoning restates the quote rather than explaining it'); success criteria are posted in student language; guided practice includes a mid-lesson organizer scan the teacher uses to regroup.",
+      "annotation": "Assessment happens during the lesson, not just at the end, and the rubric levels describe work quality concretely enough to sort real papers."
+    },
+    {
+      "dimension": "assessment_for_learning",
+      "score": 2,
+      "exemplar": "A DOK-aligned exit slip and a four-row rubric exist, but the rubric rows read 'excellent / good / fair / poor understanding of the concept' and there is no formative checkpoint before the exit slip.",
+      "annotation": "The instruments exist but the rubric can't discriminate actual student work, and the teacher first learns who struggled after the lesson ends."
+    },
+    {
+      "dimension": "assessment_for_learning",
+      "score": 1,
+      "exemplar": "Assessment is described as 'Teacher will check for understanding throughout the lesson'; there is an exit slip prompt but no rubric and no success criteria.",
+      "annotation": "Assessment is asserted rather than designed — no instrument, no criteria, no plan for responding to what the check reveals."
+    },
+    {
+      "dimension": "assessment_for_learning",
+      "score": 0,
+      "exemplar": "The plan has no exit slip, no rubric, no success criteria, and the assessment field is empty.",
+      "annotation": "There is no way for the teacher or students to know whether the objective was met."
+    },
+    {
+      "dimension": "materials_licensing",
+      "score": 3,
+      "exemplar": "Three text options each carry title, source, working URL, and Lexile band; the selected CommonLit text notes 'free teacher account, audio read-aloud available'; every scaffold and accommodation ID resolves to the curated catalog; the citation list names the research behind the named moves.",
+      "annotation": "A teacher can actually obtain every material, access needs are flagged up front, and nothing references resources that don't exist."
+    },
+    {
+      "dimension": "materials_licensing",
+      "score": 2,
+      "exemplar": "Three real texts with sources are listed, but the selected option's URL is missing and one option says 'any short story about risk would work here.'",
+      "annotation": "Materials are mostly real but the teacher still has to hunt for the primary text — the one material the lesson cannot run without."
+    },
+    {
+      "dimension": "materials_licensing",
+      "score": 1,
+      "exemplar": "The materials list names 'a relevant article' and 'worksheet packet' with no source, no URL, and two catalog IDs that don't resolve to anything.",
+      "annotation": "Placeholder materials and broken references mean the plan cannot be taught as written."
+    },
+    {
+      "dimension": "materials_licensing",
+      "score": 0,
+      "exemplar": "No texts are selected and the materials field is empty.",
+      "annotation": "Nothing to teach with."
+    },
+    {
+      "dimension": "tone_clarity",
+      "score": 3,
+      "exemplar": "Objectives are complete sentences with strong verbs; procedure steps read like one teacher talking to another ('Confer with the two flagged pairs first; listen for students naming why the line matters'); equity notes name the representation choice concretely ('Erdrich centers an Indigenous family's interdependence — invite, don't require, personal connections').",
+      "annotation": "Professional, warm, specific. The equity note does real work: it names what the text offers and how to honor it without spotlighting students."
+    },
+    {
+      "dimension": "tone_clarity",
+      "score": 2,
+      "exemplar": "The prose is clean and professional, but equity notes are one sentence ('This text features diverse characters') and two procedure steps lean on filler ('students do various activities to build understanding').",
+      "annotation": "Nothing is wrong, but the equity thinking is thin and the filler phrases force the teacher to guess what actually happens."
+    },
+    {
+      "dimension": "tone_clarity",
+      "score": 1,
+      "exemplar": "Objectives are sentence fragments ('theme analysis'), one procedure step is written in all caps ('STUDENTS MUST FINISH BEFORE THE BELL'), and there are no equity notes.",
+      "annotation": "The register undermines trust in the plan and the missing equity lens leaves representation choices unexamined."
+    },
+    {
+      "dimension": "tone_clarity",
+      "score": 0,
+      "exemplar": "The plan has no objectives or procedure prose to evaluate — fields contain placeholder text like 'TBD.'",
+      "annotation": "There is no teacher-facing language to assess."
+    }
+  ]
+}

@@ -45,6 +45,7 @@ import {
   getCitations,
 } from './catalog/index';
 import { extractObjectiveVerb, lookupVerbDok, normalizeDokSubject } from './dokLexicon';
+import { getEquipUdlExemplars } from './curated';
 import { getModel, getModelId, TASK_SETTINGS } from './llm/router';
 
 export type DimensionId =
@@ -75,6 +76,13 @@ export interface ScoreCard {
   judgeUsed: boolean;
   /** Layer A scores preserved for transparency / UI tooltips. */
   layerA: DimensionResult[];
+  /**
+   * Implementation Recipe Clarity (teacherMoves quality). Scored alongside —
+   * not inside — the six EQuIP+UDL dimensions so historical score deltas stay
+   * comparable. Deterministic `proceduralSpecificity` when judge is off;
+   * merged with the judge's read when Layer B runs. Target >= 2/3.
+   */
+  recipeClarity?: { score: DimScore; rationale: string; source: 'deterministic' | 'judge' | 'merged' };
 }
 
 const DIMENSION_TITLES: Record<DimensionId, string> = {
@@ -415,6 +423,53 @@ function scoreToneClarity(plan: Partial<LessonPlanData>): DimensionResult {
   };
 }
 
+/**
+ * Deterministic procedural-specificity check on the teacherMoves recipes
+ * (procedure-detail enhancement, Option B). Two signals:
+ *   1. Quoted teacher language — how many `launch` strings contain a verbatim
+ *      quoted question or directive.
+ *   2. Named conferring moves — how many `duringWork` strings use a move from
+ *      the conferring allowlist (confer, listen for, ask, redirect, ...).
+ */
+const CONFERRING_MOVES =
+  /\b(confer|conferring|listen(s|ing)? for|ask(s|ing)?|redirect(s|ing)?|push(es|ing)?|prompt(s|ing)?|circulat(e|es|ing)|cold[- ]call|probe(s|ing)?|track(s|ing)?|note(s|ing)? (down|which|who)|collect(s|ing)?|scan(s|ning)?)\b/i;
+
+const QUOTED_LANGUAGE = /[""][^""]{4,}[""]|"[^"]{4,}"/;
+
+export function scoreProceduralSpecificity(
+  plan: Partial<LessonPlanData>,
+): { score: DimScore; rationale: string } {
+  const procedure = plan.procedure ?? [];
+  const withMoves = procedure.filter((p) => !!p.teacherMoves);
+
+  if (procedure.length === 0 || withMoves.length === 0) {
+    return {
+      score: 0,
+      rationale: 'No teacherMoves recipes on any procedure step — the plan describes what happens but not how the teacher makes it happen.',
+    };
+  }
+
+  const quotedLaunches = withMoves.filter((p) => QUOTED_LANGUAGE.test(p.teacherMoves!.launch ?? '')).length;
+  const conferringDuringWork = withMoves.filter((p) => CONFERRING_MOVES.test(p.teacherMoves!.duringWork ?? '')).length;
+  const coverage = withMoves.length / procedure.length;
+  const quotedRatio = quotedLaunches / withMoves.length;
+  const conferringRatio = conferringDuringWork / withMoves.length;
+
+  let score: DimScore;
+  if (coverage < 1) {
+    score = 1;
+  } else if (quotedRatio >= 0.6 && conferringRatio >= 0.6) {
+    score = 3;
+  } else if (quotedRatio >= 0.4 || conferringRatio >= 0.4) {
+    score = 2;
+  } else {
+    score = 1;
+  }
+
+  const rationale = `${withMoves.length}/${procedure.length} phases carry teacherMoves; ${quotedLaunches}/${withMoves.length} launches quote verbatim teacher language; ${conferringDuringWork}/${withMoves.length} duringWork moves name a conferring move.`;
+  return { score, rationale };
+}
+
 function buildLayerA(plan: Partial<LessonPlanData>): DimensionResult[] {
   return [
     scoreAlignment(plan),
@@ -461,15 +516,73 @@ const judgeSchema = z.object({
       }),
     )
     .length(6),
+  implementationRecipeClarity: z.object({
+    score: z.union([z.literal(0), z.literal(1), z.literal(2), z.literal(3)]),
+    rationale: z.string().min(10).max(400),
+  }),
 });
 
-const JUDGE_SYSTEM = `You are an EQuIP+UDL rubric judge for K-12 lesson plans. You score the plan across exactly six dimensions on a 0–3 scale.
+/**
+ * Pedagogical-grounding bridge (commit 3): the judge scores against the
+ * ACTUAL EQuIP+UDL rubric descriptors from the catalog, not an imagined
+ * rubric. Built lazily so the catalog loader runs once, then cached.
+ */
+let cachedJudgeSystem: string | null = null;
+
+export function buildJudgeSystem(): string {
+  if (cachedJudgeSystem) return cachedJudgeSystem;
+
+  const rubric = getEquipUdlRubric();
+  const dimensionBlocks = rubric.criteria
+    .map((c) =>
+      [
+        `DIMENSION: ${c.id} (${c.title})`,
+        ...[...c.levels]
+          .sort((a, b) => b.score - a.score)
+          .map((l) => `  ${l.score} = ${l.descriptor}`),
+      ].join('\n'),
+    )
+    .join('\n\n');
+
+  // Score-calibration exemplar bank (curated draft, item C1). Graceful: when
+  // the curated file is absent the judge runs on descriptors alone.
+  const exemplars = getEquipUdlExemplars();
+  const exemplarBlock =
+    exemplars.length > 0
+      ? [
+          '',
+          'SCORE CALIBRATION EXEMPLARS (annotated reference points — match the plan against these, do not quote them back):',
+          ...DIMENSION_ORDER.flatMap((dim) => {
+            const forDim = exemplars
+              .filter((e) => e.dimension === dim)
+              .sort((a, b) => b.score - a.score);
+            if (forDim.length === 0) return [];
+            return [
+              `${dim}:`,
+              ...forDim.map((e) => `  [${e.score}] ${e.exemplar}\n      Why this is a ${e.score}: ${e.annotation}`),
+            ];
+          }),
+          '',
+        ].join('\n')
+      : '';
+
+  cachedJudgeSystem = `You are an EQuIP+UDL rubric judge for K-12 lesson plans. You score the plan across exactly six dimensions on a 0–3 scale, using the descriptors below. Score conservatively. Reserve 3 for genuinely teacher-ready quality.
+
+${dimensionBlocks}
+${exemplarBlock}
+ADDITIONAL DIMENSION: implementationRecipeClarity (Implementation Recipe Clarity)
+  3 = A substitute teacher could run every phase cold from the teacherMoves recipes alone: verbatim teacher language in quotes, named conferring moves, concrete check-for-understanding artifacts, and pre-planned ifStuck/ifAhead responses tied to the learner profile.
+  2 = Recipes are present and mostly concrete, but one or two phases lean on generic moves ("circulate and monitor") or lack quoted teacher language.
+  1 = Recipes exist but read as activity restatements — they say what happens, not what the teacher says and does.
+  0 = No teacherMoves recipes, or they are empty/boilerplate.
 
 Hard rules:
 - Use Layer-A deterministic findings (provided in the user message) as ground truth. You may be more critical than Layer A; you may NOT score higher than Layer A on a dimension where Layer A proved a structural deficit.
-- Score 0 only when the dimension is missing entirely. Reserve 3 for genuinely teacher-ready quality.
-- Rationales: 1–2 sentences, plain English, cite the specific gap or strength.
+- Score 0 only when the dimension is missing entirely.
+- Rationales: 1–2 sentences, plain English, cite the specific gap or strength against the descriptor above.
 - Do NOT include any commentary outside the JSON. Output a single object matching the schema.`;
+  return cachedJudgeSystem;
+}
 
 function summarizePlanForJudge(plan: Partial<LessonPlanData>): string {
   const std = describeStandard(plan);
@@ -480,6 +593,18 @@ function summarizePlanForJudge(plan: Partial<LessonPlanData>): string {
     phase: p.phase ?? p.step,
     description: (p.description ?? '').slice(0, 240),
     accommodations: (p.accommodations ?? '').slice(0, 200),
+    teacherMoves: p.teacherMoves
+      ? [
+          `launch: ${p.teacherMoves.launch}`,
+          `duringWork: ${p.teacherMoves.duringWork}`,
+          `cfu: ${p.teacherMoves.checkForUnderstanding}`,
+          `ifStuck: ${p.teacherMoves.ifStuck}`,
+          `ifAhead: ${p.teacherMoves.ifAhead}`,
+          `transition: ${p.teacherMoves.transition}`,
+        ]
+          .join(' | ')
+          .slice(0, 900)
+      : '(none)',
   }));
   return [
     `TITLE: ${plan.title ?? '(untitled)'}`,
@@ -490,7 +615,10 @@ function summarizePlanForJudge(plan: Partial<LessonPlanData>): string {
     `OBJECTIVES:\n  - ${objectives.join('\n  - ') || '(none)'}`,
     `SUCCESS CRITERIA:\n  - ${(plan.successCriteria ?? []).join('\n  - ') || '(none)'}`,
     `PROCEDURE:\n${procedure
-      .map((p, i) => `  ${i + 1}. [${p.phase}] ${p.description} (acc: ${p.accommodations || '—'})`)
+      .map(
+        (p, i) =>
+          `  ${i + 1}. [${p.phase}] ${p.description} (acc: ${p.accommodations || '—'})\n     teacherMoves: ${p.teacherMoves}`,
+      )
       .join('\n')}`,
     `EXIT SLIP: ${(plan.exitSlip ?? '').slice(0, 400)}`,
     `RUBRIC: ${(plan.rubric ?? []).map((r) => `${r.score}: ${r.description}`).join(' | ')}`,
@@ -513,22 +641,27 @@ function summarizeLayerAForJudge(layerA: DimensionResult[]): string {
     .join('\n');
 }
 
-async function runJudge(plan: Partial<LessonPlanData>, layerA: DimensionResult[]): Promise<DimensionResult[]> {
+async function runJudge(
+  plan: Partial<LessonPlanData>,
+  layerA: DimensionResult[],
+  specificity: { score: DimScore; rationale: string },
+): Promise<{ dimensions: DimensionResult[]; recipeClarity: { score: DimScore; rationale: string } }> {
   const settings = TASK_SETTINGS.scorer;
   const userMessage = [
     'LAYER-A DETERMINISTIC FINDINGS (treat as ground truth):',
     summarizeLayerAForJudge(layerA),
+    `- proceduralSpecificity = ${specificity.score}/3 — ${specificity.rationale}`,
     '',
     'PLAN SUMMARY:',
     summarizePlanForJudge(plan),
     '',
-    'Score the same six dimensions. Be tough but fair. Output the JSON object only.',
+    'Score the six rubric dimensions plus implementationRecipeClarity. Be tough but fair. Output the JSON object only.',
   ].join('\n');
 
   const { object } = await generateObject({
     model: getModel('scorer'),
     schema: judgeSchema,
-    system: JUDGE_SYSTEM,
+    system: buildJudgeSystem(),
     messages: [{ role: 'user', content: userMessage }],
     temperature: settings.temperature,
     ...(settings.maxOutputTokens ? { maxOutputTokens: settings.maxOutputTokens } : {}),
@@ -539,13 +672,19 @@ async function runJudge(plan: Partial<LessonPlanData>, layerA: DimensionResult[]
     },
   });
 
-  return object.dimensions.map((d) => ({
-    id: d.id as DimensionId,
-    title: DIMENSION_TITLES[d.id as DimensionId],
-    score: d.score as DimScore,
-    rationale: d.rationale,
-    source: 'judge' as const,
-  }));
+  return {
+    dimensions: object.dimensions.map((d) => ({
+      id: d.id as DimensionId,
+      title: DIMENSION_TITLES[d.id as DimensionId],
+      score: d.score as DimScore,
+      rationale: d.rationale,
+      source: 'judge' as const,
+    })),
+    recipeClarity: {
+      score: object.implementationRecipeClarity.score as DimScore,
+      rationale: object.implementationRecipeClarity.rationale,
+    },
+  };
 }
 
 /**
@@ -596,25 +735,48 @@ export async function scoreLessonPlan(
   options: ScoreOptions = {},
 ): Promise<ScoreCard> {
   const layerA = buildLayerA(plan);
+  const specificity = scoreProceduralSpecificity(plan);
 
   if (!options.useJudge) {
-    return summarizeCard(layerA, false, layerA);
+    return {
+      ...summarizeCard(layerA, false, layerA),
+      recipeClarity: { ...specificity, source: 'deterministic' },
+    };
   }
 
   try {
-    const layerB = await runJudge(plan, layerA);
+    const { dimensions: layerB, recipeClarity: judgeClarity } = await runJudge(plan, layerA, specificity);
     const merged = mergeScores(layerA, layerB);
-    return summarizeCard(merged, true, layerA);
+    // Recipe clarity merges like the rubric dimensions: deterministic floor
+    // of 0 can't be judged above 1; otherwise round the average.
+    const clarityScore: DimScore =
+      specificity.score === 0
+        ? (Math.min(1, judgeClarity.score) as DimScore)
+        : (Math.min(3, Math.max(0, Math.round((specificity.score + judgeClarity.score) / 2))) as DimScore);
+    return {
+      ...summarizeCard(merged, true, layerA),
+      recipeClarity: {
+        score: clarityScore,
+        rationale: judgeClarity.rationale || specificity.rationale,
+        source: 'merged',
+      },
+    };
   } catch (err) {
     console.warn('[qualityScorer] judge failed, falling back to Layer A:', err);
-    return summarizeCard(layerA, false, layerA);
+    return {
+      ...summarizeCard(layerA, false, layerA),
+      recipeClarity: { ...specificity, source: 'deterministic' },
+    };
   }
 }
 
 /** Synchronous variant — Layer A only. Useful for tests and fast paths. */
 export function scoreLessonPlanSync(plan: Partial<LessonPlanData>): ScoreCard {
   const layerA = buildLayerA(plan);
-  return summarizeCard(layerA, false, layerA);
+  return {
+    ...summarizeCard(layerA, false, layerA),
+    recipeClarity: { ...scoreProceduralSpecificity(plan), source: 'deterministic' },
+  };
 }
 
 /** Strip the `source` field for persistence on `LessonPlanData.qualityScore`. */
@@ -627,5 +789,8 @@ export function toPersistableQualityScore(card: ScoreCard): NonNullable<LessonPl
       score: d.score,
       rationale: d.rationale,
     })),
+    ...(card.recipeClarity
+      ? { recipeClarity: { score: card.recipeClarity.score, rationale: card.recipeClarity.rationale } }
+      : {}),
   };
 }

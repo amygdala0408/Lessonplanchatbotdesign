@@ -17,6 +17,7 @@ import { streamText, stepCountIs, type ModelMessage } from 'ai';
 
 import { buildMessages, getPromptVersion } from '@/lib/promptInjector';
 import { buildCatalogContext } from '@/lib/catalogContext';
+import { buildResearchAnchorsMessage } from '@/lib/researchAnchors';
 import {
   getModel,
   getModelId,
@@ -55,11 +56,24 @@ export async function POST(request: NextRequest) {
       console.warn('[chat] catalog context build failed, continuing without it:', err);
     }
 
+    // Research anchors: top-5 curated citations relevant to this lesson +
+    // class, so Penny grounds her rationale in real evidence. Best-effort.
+    let researchAnchorsMessage: string | null = null;
+    try {
+      researchAnchorsMessage = buildResearchAnchorsMessage({
+        plan: currentPlan,
+        learnerProfile,
+      });
+    } catch (err) {
+      console.warn('[chat] research anchors build failed, continuing without:', err);
+    }
+
     const { messages, promptVersion } = buildMessages({
       conversationHistory,
       currentPlan,
       learnerProfile,
       catalogCandidatesMessage,
+      researchAnchorsMessage,
     });
 
     const useGateway = isGatewayConfigured();

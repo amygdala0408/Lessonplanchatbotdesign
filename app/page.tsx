@@ -43,7 +43,7 @@ export default function HomePage() {
   const {
     messages, isTyping, lessonPlan, isPlanOpen, hasPlanUpdated, theme,
     conversationPhase, isDemoMode, learnerProfile, validationErrors, lessonPackage,
-    studentMaterials,
+    studentMaterials, artifacts,
     setMessages, setIsTyping, setLessonPlan, setIsPlanOpen, setHasPlanUpdated,
     addMessage, toggleTheme, setConversationPhase, setStudentMaterials,
     setLearnerProfile, setValidationErrors, setLessonPackage,
@@ -55,10 +55,18 @@ export default function HomePage() {
   // Class-profile panel auto-expands during gathering, collapses thereafter
   // (the teacher can re-open it any time via the chip).
   const [classProfileExpanded, setClassProfileExpanded] = useState(true);
+  // Same auto-collapse pattern for the two decision pickers: each expands
+  // when its phase becomes active, collapses once the teacher locks a choice
+  // (or the phase moves on), and stays re-openable via a slim chip so the
+  // chat keeps its vertical space after the decision is made.
+  const [textPickerExpanded, setTextPickerExpanded] = useState(false);
+  const [modelChooserExpanded, setModelChooserExpanded] = useState(false);
   const [finalizeProgress, setFinalizeProgress] = useState<FinalizeProgress | null>(null);
   useEffect(() => {
     if (conversationPhase === 'gathering') setClassProfileExpanded(true);
     else setClassProfileExpanded(false);
+    setTextPickerExpanded(conversationPhase === 'text_selection');
+    setModelChooserExpanded(conversationPhase === 'instructional_model');
   }, [conversationPhase]);
   useEffect(() => {
     if (!finalizeProgress) return;
@@ -811,25 +819,103 @@ export default function HomePage() {
             </div>
           )}
 
-          {conversationPhase === 'text_selection' && (lessonPlan.textOptions?.length ?? 0) >= 2 && (
+          {(['text_selection', 'instructional_model', 'preview', 'complete'] as ConversationPhase[]).includes(conversationPhase) &&
+            (lessonPlan.textOptions?.length ?? 0) >= 2 && (
             <div className="max-w-4xl mx-auto w-full">
-              <TextOptionPicker
-                options={lessonPlan.textOptions ?? []}
-                theme={theme}
-                onPick={handleTextOptionPick}
-              />
+              {textPickerExpanded ? (
+                <div>
+                  <div className="flex justify-end">
+                    <button
+                      onClick={() => setTextPickerExpanded(false)}
+                      className={cn(
+                        'text-[10px] uppercase tracking-widest font-bold px-2 py-1 opacity-60 hover:opacity-100 transition-opacity',
+                        theme === 'coffee' ? 'text-[#e8e6df]' : 'text-[#1a1a1a]',
+                      )}
+                    >
+                      Hide text options
+                    </button>
+                  </div>
+                  <TextOptionPicker
+                    options={lessonPlan.textOptions ?? []}
+                    theme={theme}
+                    onPick={(i) => {
+                      setTextPickerExpanded(false);
+                      void handleTextOptionPick(i);
+                    }}
+                  />
+                </div>
+              ) : (
+                <button
+                  onClick={() => setTextPickerExpanded(true)}
+                  className={cn(
+                    'mt-3 w-full flex items-center justify-between gap-2 px-4 py-2 border-2 text-left transition-colors',
+                    theme === 'coffee'
+                      ? 'border-[#e8e6df]/30 bg-[#3e3226] text-[#e8e6df] hover:border-[#e8e6df]/60'
+                      : 'border-[#1a1a1a]/40 bg-white text-[#1a1a1a] hover:border-[#1a1a1a]',
+                  )}
+                >
+                  <span className="text-[11px] uppercase tracking-widest font-bold truncate">
+                    {(() => {
+                      const chosen = (lessonPlan.textOptions ?? []).find((t) => t.selected);
+                      return chosen
+                        ? `Text locked: ${chosen.title}`
+                        : `${(lessonPlan.textOptions ?? []).length} text options ready`;
+                    })()}
+                  </span>
+                  <span className="text-[10px] uppercase tracking-widest font-bold opacity-60 shrink-0">
+                    {(lessonPlan.textOptions ?? []).some((t) => t.selected) ? 'Change text' : 'Show options'}
+                  </span>
+                </button>
+              )}
             </div>
           )}
 
-          {conversationPhase === 'instructional_model' && (
+          {(['instructional_model', 'preview', 'complete'] as ConversationPhase[]).includes(conversationPhase) && (
             <div className="max-w-4xl mx-auto w-full">
-              <InstructionalModelChooser
-                plan={lessonPlan}
-                learnerProfile={learnerProfile}
-                conversationHistory={messages.map((m) => ({ role: m.role, content: m.content }))}
-                theme={theme}
-                onSelect={handleInstructionalModelPick}
-              />
+              {modelChooserExpanded ? (
+                <div>
+                  <div className="flex justify-end">
+                    <button
+                      onClick={() => setModelChooserExpanded(false)}
+                      className={cn(
+                        'text-[10px] uppercase tracking-widest font-bold px-2 py-1 opacity-60 hover:opacity-100 transition-opacity',
+                        theme === 'coffee' ? 'text-[#e8e6df]' : 'text-[#1a1a1a]',
+                      )}
+                    >
+                      Hide model chooser
+                    </button>
+                  </div>
+                  <InstructionalModelChooser
+                    plan={lessonPlan}
+                    learnerProfile={learnerProfile}
+                    conversationHistory={messages.map((m) => ({ role: m.role, content: m.content }))}
+                    theme={theme}
+                    onSelect={(model) => {
+                      setModelChooserExpanded(false);
+                      void handleInstructionalModelPick(model);
+                    }}
+                  />
+                </div>
+              ) : (
+                <button
+                  onClick={() => setModelChooserExpanded(true)}
+                  className={cn(
+                    'mt-3 w-full flex items-center justify-between gap-2 px-4 py-2 border-2 text-left transition-colors',
+                    theme === 'coffee'
+                      ? 'border-[#e8e6df]/30 bg-[#3e3226] text-[#e8e6df] hover:border-[#e8e6df]/60'
+                      : 'border-[#1a1a1a]/40 bg-white text-[#1a1a1a] hover:border-[#1a1a1a]',
+                  )}
+                >
+                  <span className="text-[11px] uppercase tracking-widest font-bold truncate">
+                    {lessonPlan.instructionalModel
+                      ? `Model locked: ${lessonPlan.instructionalModel}`
+                      : 'Instructional model options ready'}
+                  </span>
+                  <span className="text-[10px] uppercase tracking-widest font-bold opacity-60 shrink-0">
+                    {lessonPlan.instructionalModel ? 'Change model' : 'Show options'}
+                  </span>
+                </button>
+              )}
             </div>
           )}
         </div>
@@ -963,6 +1049,7 @@ export default function HomePage() {
                       {...lessonPlan}
                       lessonPackage={lessonPackage}
                       studentMaterials={studentMaterials}
+                      artifacts={artifacts}
                       onSectionRegenerated={(section, value) => {
                         // Merge the regenerated section back into the plan.
                         setLessonPlan((prev) => ({ ...prev, [section]: value }));

@@ -7,6 +7,15 @@ import { QRCodeSVG } from 'qrcode.react';
 import { QualityScorecardStrip } from './QualityScorecardStrip';
 import { RegenerateSectionButton } from './RegenerateSectionButton';
 import type { RegenerableSectionId } from '../../lib/api/regenerateSection';
+import type {
+  ArtifactPayload,
+  ArtifactType,
+  GraphicOrganizer,
+  SentenceStems,
+  VocabularyPreview,
+  DiscussionProtocol,
+  SinglePointRubric,
+} from '../../lib/llm/artifactSchemas';
 
 const PHASE_DISPLAY: Record<LessonPhaseId, string> = {
   launch: 'Launch',
@@ -278,6 +287,224 @@ const FormattedText = ({ text, className = "" }: { text: string; className?: str
   );
 };
 
+/* -----------------------------------------------------------------------------
+ * Pipeline A artifact print pages.
+ *
+ * When the Opus artifact lane succeeded, these render the text-specific,
+ * learner-profile-aware versions of the student handouts. The heuristic
+ * templates below remain the fallback for any artifact that failed or for
+ * plans finalized before the artifact lane ran. (Closes Gaps 1-4 in
+ * docs/accommodations-artifacts-audit.md.)
+ * ---------------------------------------------------------------------------*/
+
+const AUDIENCE_LABELS: Record<string, string> = {
+  all: 'All Students',
+  el_emerging: 'ML — Emerging',
+  el_developing: 'ML — Developing',
+  el_expanding: 'ML — Expanding',
+  iep_504: 'IEP / 504',
+};
+
+/** Shared chrome for a one-per-page printable student handout. */
+function ArtifactPage({
+  cornerLabel,
+  title,
+  subtitle,
+  nameField = true,
+  children,
+}: {
+  cornerLabel: string;
+  title: string;
+  subtitle?: string;
+  nameField?: boolean;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="print:break-before-page mt-8 print:mt-0 print:pt-8">
+      <div className="border-2 border-[#1a1a1a] p-8 bg-white shadow-sm relative print:border-2 print:border-black print:shadow-none print:min-h-[90vh]">
+        {nameField && (
+          <div className="absolute top-4 right-4 text-xs font-mono border border-[#1a1a1a] p-1 print:border-black">Name: _________________</div>
+        )}
+        <div className="absolute top-4 left-4 text-xs font-mono opacity-50">{cornerLabel}</div>
+        <h3 className="text-center font-bold text-lg mt-8 mb-1 uppercase tracking-widest print:font-mono">{stripInlineMarkdown(title)}</h3>
+        {subtitle && <p className="text-center text-xs mb-6 italic opacity-70">{stripInlineMarkdown(subtitle)}</p>}
+        {children}
+      </div>
+    </div>
+  );
+}
+
+function TeacherNoteBox({ label, text }: { label: string; text: string }) {
+  if (!text) return null;
+  return (
+    <div className="mt-6 pt-3 border-t border-dashed border-[#1a1a1a]/40 print:border-black">
+      <div className="text-[10px] font-mono uppercase tracking-widest mb-1 opacity-60">{label}</div>
+      <p className="text-xs leading-relaxed opacity-90">{stripInlineMarkdown(text)}</p>
+    </div>
+  );
+}
+
+function ArtifactGraphicOrganizerPage({ data }: { data: GraphicOrganizer }) {
+  return (
+    <ArtifactPage cornerLabel="Graphic Organizer" title={data.title} subtitle={data.purpose}>
+      <div className="space-y-4 text-xs">
+        {data.cells.map((cell, i) => (
+          <div key={i} className="border-2 border-[#1a1a1a] p-3 print:border-black print:break-inside-avoid">
+            <div className="text-[10px] font-mono uppercase tracking-widest mb-1">{stripInlineMarkdown(cell.label)}</div>
+            <p className="opacity-80 text-[11px] mb-1">{stripInlineMarkdown(cell.prompt)}</p>
+            {cell.sentenceStem && (
+              <p className="italic opacity-70 text-[11px] mb-2">Try: &ldquo;{stripInlineMarkdown(cell.sentenceStem)}&rdquo;</p>
+            )}
+            {cell.wordBank && cell.wordBank.length > 0 && (
+              <div className="flex flex-wrap gap-1 mb-2">
+                {cell.wordBank.map((w, j) => (
+                  <span key={j} className="text-[10px] px-1.5 py-0.5 border border-[#1a1a1a]/50 print:border-black">{w}</span>
+                ))}
+              </div>
+            )}
+            {[1, 2, 3].map((n) => (
+              <div key={n} className="h-8 border-b border-[#1a1a1a]/40 print:border-black"></div>
+            ))}
+          </div>
+        ))}
+      </div>
+      <TeacherNoteBox label="Teacher notes" text={data.teacherNotes} />
+    </ArtifactPage>
+  );
+}
+
+function ArtifactSentenceStemsPage({ data }: { data: SentenceStems }) {
+  return (
+    <ArtifactPage
+      cornerLabel="Sentence Stems"
+      title={data.title}
+      subtitle="Use these frames to structure your talk and writing."
+    >
+      <div className="space-y-4">
+        {data.rows.map((row, i) => (
+          <div key={i} className="p-4 bg-[#f5f5f0] border-l-4 border-[#1a1a1a] print:bg-white print:break-inside-avoid">
+            <div className="flex items-baseline justify-between gap-2 mb-2">
+              <p className="font-medium text-sm">{stripInlineMarkdown(row.function)}</p>
+              <span className="text-[9px] font-bold uppercase tracking-widest px-1.5 py-0.5 border border-[#1a1a1a]/50 shrink-0 print:border-black">
+                {AUDIENCE_LABELS[row.audience] ?? row.audience}
+              </span>
+            </div>
+            <ul className="space-y-1.5">
+              {row.stems.map((stem, j) => (
+                <li key={j} className="text-sm italic">&ldquo;{stripInlineMarkdown(stem)}&rdquo;</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+      <TeacherNoteBox label="How to use these stems" text={data.usageNote} />
+    </ArtifactPage>
+  );
+}
+
+function ArtifactVocabularyPreviewPage({ data }: { data: VocabularyPreview }) {
+  return (
+    <ArtifactPage
+      cornerLabel="Vocabulary Preview"
+      title={data.title}
+      subtitle="Preview these words before reading. Check the box when you can use each one."
+    >
+      <div className="space-y-3 text-xs">
+        {data.terms.map((t, i) => (
+          <div key={i} className="border border-[#1a1a1a] p-3 print:border-black print:break-inside-avoid">
+            <div className="flex items-baseline gap-2 mb-1">
+              <span className="inline-block w-3.5 h-3.5 border border-[#1a1a1a] flex-shrink-0 print:border-black"></span>
+              <span className="font-bold text-sm">{stripInlineMarkdown(t.term)}</span>
+              {t.cognate && <span className="text-[11px] opacity-70 italic">{stripInlineMarkdown(t.cognate)}</span>}
+            </div>
+            <p className="mb-1"><span className="font-bold uppercase tracking-widest text-[9px] opacity-60">Means:</span> {stripInlineMarkdown(t.studentDefinition)}</p>
+            <p className="mb-1"><span className="font-bold uppercase tracking-widest text-[9px] opacity-60">In the text:</span> <em>{stripInlineMarkdown(t.exampleFromText)}</em></p>
+            <p><span className="font-bold uppercase tracking-widest text-[9px] opacity-60">Quick check:</span> {stripInlineMarkdown(t.quickCheck)}</p>
+          </div>
+        ))}
+      </div>
+      <TeacherNoteBox label="Preview routine" text={data.routine} />
+    </ArtifactPage>
+  );
+}
+
+function ArtifactDiscussionProtocolPage({ data }: { data: DiscussionProtocol }) {
+  const structureLabel = data.structure.replace(/_/g, ' ');
+  return (
+    <ArtifactPage
+      cornerLabel="Discussion Protocol"
+      title={data.title}
+      subtitle={`${structureLabel} · ${data.timeMinutes} minutes`}
+      nameField={false}
+    >
+      <div className="p-4 bg-[#f5f5f0] border-2 border-[#1a1a1a] mb-4 print:bg-white print:border-black">
+        <div className="text-[10px] font-mono uppercase tracking-widest mb-1">Driving question</div>
+        <p className="font-medium text-sm">{stripInlineMarkdown(data.drivingQuestion)}</p>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+        {data.roles.map((role, i) => (
+          <div key={i} className="border-2 border-[#1a1a1a] p-3 print:border-black print:break-inside-avoid">
+            <div className="font-bold text-sm mb-1">{stripInlineMarkdown(role.name)}</div>
+            <p className="opacity-80 mb-2">{stripInlineMarkdown(role.responsibility)}</p>
+            <ul className="space-y-1">
+              {role.promptStems.map((stem, j) => (
+                <li key={j} className="italic">&ldquo;{stripInlineMarkdown(stem)}&rdquo;</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+      <TeacherNoteBox label="Accountability — what gets collected" text={data.accountability} />
+      <TeacherNoteBox label="Multilingual learner support" text={data.elSupport} />
+    </ArtifactPage>
+  );
+}
+
+function ArtifactSinglePointRubricPage({ data }: { data: SinglePointRubric }) {
+  return (
+    <ArtifactPage
+      cornerLabel="Single-Point Rubric"
+      title={data.title}
+      subtitle={`${data.standardCode} — ${data.objective}`}
+    >
+      <table className="w-full text-xs border-collapse">
+        <thead>
+          <tr className="border-b-2 border-[#1a1a1a] print:border-black">
+            <th className="text-left p-2 font-['Oswald'] uppercase tracking-widest text-[10px] w-[30%]">Growing toward — next step</th>
+            <th className="text-left p-2 font-['Oswald'] uppercase tracking-widest text-[10px] w-[40%]">Proficient — the target</th>
+            <th className="text-left p-2 font-['Oswald'] uppercase tracking-widest text-[10px] w-[30%]">Stretching beyond</th>
+          </tr>
+        </thead>
+        <tbody>
+          {data.criteria.map((c, i) => (
+            <tr key={i} className="border-b border-[#1a1a1a]/40 align-top print:border-black print:break-inside-avoid">
+              <td className="p-2 border-r border-[#1a1a1a]/40 print:border-black opacity-80">{stripInlineMarkdown(c.growthCue)}</td>
+              <td className="p-2 border-r border-[#1a1a1a]/40 print:border-black">
+                <div className="font-bold mb-1">{stripInlineMarkdown(c.criterion)}</div>
+                {stripInlineMarkdown(c.proficient)}
+              </td>
+              <td className="p-2 opacity-80">{stripInlineMarkdown(c.extensionCue)}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      {data.studentSelfCheck.length > 0 && (
+        <div className="mt-5">
+          <div className="text-[10px] font-mono uppercase tracking-widest mb-2 opacity-60">Before you submit — check yourself</div>
+          <ul className="space-y-1.5 text-xs">
+            {data.studentSelfCheck.map((s, i) => (
+              <li key={i} className="flex items-start gap-2">
+                <span className="inline-block w-3 h-3 border border-[#1a1a1a] flex-shrink-0 mt-0.5 print:border-black"></span>
+                <span>{stripInlineMarkdown(s)}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </ArtifactPage>
+  );
+}
+
 type LessonPlanRenderProps = LessonPlanData & {
   /**
    * Optional handler for the inline "Regenerate" affordance on each section.
@@ -296,6 +523,12 @@ type LessonPlanRenderProps = LessonPlanData & {
     sentenceFrames?: { purpose?: string; frames: string[] }[];
     readingPassages?: { title: string; source: string; url: string; lexile?: string; content?: string }[];
   };
+  /**
+   * Pipeline A artifact-generator output (from the store's `artifacts`
+   * dictionary). When an artifact is present its text-specific print page
+   * replaces the heuristic template; missing artifacts fall back gracefully.
+   */
+  artifacts?: Partial<Record<ArtifactType, ArtifactPayload>>;
 };
 
 export const LessonPlan = forwardRef<HTMLDivElement, LessonPlanRenderProps>(({
@@ -318,9 +551,17 @@ export const LessonPlan = forwardRef<HTMLDivElement, LessonPlanRenderProps>(({
   qualityScore,
   lessonPackage,
   studentMaterials,
+  artifacts,
   onSectionRegenerated,
   ...restPlanProps
 }, ref) => {
+  // Typed accessors for the Pipeline A artifacts. Each is null unless the
+  // artifact lane produced (and schema-validated) that artifact.
+  const aOrganizer = artifacts?.graphic_organizer?.type === 'graphic_organizer' ? artifacts.graphic_organizer.data : null;
+  const aStems = artifacts?.sentence_stems?.type === 'sentence_stems' ? artifacts.sentence_stems.data : null;
+  const aVocab = artifacts?.vocabulary_preview?.type === 'vocabulary_preview' ? artifacts.vocabulary_preview.data : null;
+  const aProtocol = artifacts?.discussion_protocol?.type === 'discussion_protocol' ? artifacts.discussion_protocol.data : null;
+  const aRubric = artifacts?.single_point_rubric?.type === 'single_point_rubric' ? artifacts.single_point_rubric.data : null;
   // Reconstruct the lesson-plan snapshot from incoming props so the
   // RegenerateSectionButton can hand the server full context. The spread
   // captures any future LessonPlanData fields we add without manual sync.
@@ -598,6 +839,23 @@ export const LessonPlan = forwardRef<HTMLDivElement, LessonPlanRenderProps>(({
                             <div className="ml-11 text-sm leading-relaxed print:text-xs print:ml-0">
                                 <FormattedText text={step.description} className="text-[#1a1a1a]/90" />
                             </div>
+                            {step.teacherMoves && (
+                              <div className="ml-11 mt-3 grid grid-cols-1 sm:grid-cols-2 gap-px bg-[#1a1a1a]/30 border border-[#1a1a1a]/30 print:ml-0 print:bg-black print:border-black print:break-inside-avoid">
+                                {([
+                                  ['Launch', step.teacherMoves.launch],
+                                  ['During Work', step.teacherMoves.duringWork],
+                                  ['Check for Understanding', step.teacherMoves.checkForUnderstanding],
+                                  ['If Stuck', step.teacherMoves.ifStuck],
+                                  ['If Ahead', step.teacherMoves.ifAhead],
+                                  ['Transition', step.teacherMoves.transition],
+                                ] as [string, string][]).map(([label, text]) => (
+                                  <div key={label} className="bg-[#f7f5ef] p-2.5 print:bg-white">
+                                    <div className="text-[9px] font-mono font-bold uppercase tracking-widest opacity-60 mb-1">{label}</div>
+                                    <p className="text-xs leading-snug text-[#1a1a1a]/90">{stripInlineMarkdown(text)}</p>
+                                  </div>
+                                ))}
+                              </div>
+                            )}
                         </div>
                     ))}
                 </div>
@@ -812,8 +1070,10 @@ export const LessonPlan = forwardRef<HTMLDivElement, LessonPlanRenderProps>(({
               );
             })()}
 
-            {/* PAGE BREAK: Graphic Organizer — content-aware template */}
-            {(() => {
+            {/* PAGE BREAK: Graphic Organizer — Pipeline A artifact when present,
+                heuristic content-aware template as fallback */}
+            {aOrganizer && <ArtifactGraphicOrganizerPage data={aOrganizer} />}
+            {!aOrganizer && (() => {
               const kind = pickGraphicOrganizerKind(subject, objectives);
               const labelByKind: Record<GraphicOrganizerKind, string> = {
                 cer: 'Claim · Evidence · Reasoning',
@@ -989,8 +1249,10 @@ export const LessonPlan = forwardRef<HTMLDivElement, LessonPlanRenderProps>(({
               );
             })()}
 
-            {/* PAGE BREAK: Sentence Frames (if supports exist) */}
-            {supports && (supports.el?.length > 0 || supports.all?.length > 0) && (
+            {/* PAGE BREAK: Sentence Stems — Pipeline A differentiated rows when
+                present, legacy frames extracted from supports as fallback */}
+            {aStems && <ArtifactSentenceStemsPage data={aStems} />}
+            {!aStems && supports && (supports.el?.length > 0 || supports.all?.length > 0) && (
               <div className="print:break-before-page mt-8 print:mt-0 print:pt-8">
                   <div className="border-2 border-[#1a1a1a] p-8 bg-white shadow-sm relative print:border-2 print:border-black print:shadow-none print:min-h-[90vh]">
                       <div className="absolute top-4 right-4 text-xs font-mono border border-[#1a1a1a] p-1 print:border-black">Name: _________________</div>
@@ -1163,8 +1425,18 @@ export const LessonPlan = forwardRef<HTMLDivElement, LessonPlanRenderProps>(({
               </div>
             )}
 
-            {/* PAGE BREAK: Bilingual Glossary */}
-            {lessonPackage?.glossary && lessonPackage.glossary.length > 0 && (
+            {/* PAGE BREAK: Vocabulary Preview — Pipeline A text-specific terms
+                replace the generic bilingual glossary when present */}
+            {aVocab && <ArtifactVocabularyPreviewPage data={aVocab} />}
+
+            {/* PAGE BREAK: Discussion Protocol (Pipeline A only — no heuristic equivalent) */}
+            {aProtocol && <ArtifactDiscussionProtocolPage data={aProtocol} />}
+
+            {/* PAGE BREAK: Single-Point Rubric (Pipeline A only — no heuristic equivalent) */}
+            {aRubric && <ArtifactSinglePointRubricPage data={aRubric} />}
+
+            {/* PAGE BREAK: Bilingual Glossary (fallback when no vocabulary-preview artifact) */}
+            {!aVocab && lessonPackage?.glossary && lessonPackage.glossary.length > 0 && (
               <div className="print:break-before-page mt-8 print:mt-0 print:pt-8">
                 <div className="border-2 border-[#1a1a1a] p-8 bg-white shadow-sm relative print:border-2 print:border-black print:shadow-none print:min-h-[90vh]">
                   <div className="absolute top-4 left-4 text-xs font-mono opacity-50 flex items-center gap-1"><Languages size={12} /> Bilingual Glossary</div>

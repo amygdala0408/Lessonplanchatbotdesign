@@ -13,6 +13,7 @@ import fs from 'fs';
 import path from 'path';
 
 import { parseCsvMd, parseCsvMdRaw, splitList, toInt } from './catalog/parseCsvMd';
+import { TagDictionary } from './catalog/normalizeTags';
 import type {
   AccommodationCondition,
   AccommodationLabel,
@@ -51,6 +52,10 @@ function warn(msg: string) {
   warnings++;
   console.warn(`  [warn] ${msg}`);
 }
+
+// Accumulates canonical UDL/HLP tag mappings across scaffold + accommodation
+// builds; flushed to tag_dictionary.json in main().
+const tagDictionary = new TagDictionary();
 
 function writeJson(name: string, data: unknown, count?: number) {
   const filePath = path.join(OUT, name);
@@ -531,6 +536,7 @@ function buildScaffoldsForSubject(subject: CatalogSubject, file: string): Scaffo
       bloomLevel: (r.bloom_level || '').toLowerCase().trim(),
       dokLevel: normalizeDok(r.dok_level),
       udlHlpTags: splitList(r.udl_hlp_tags, /\|/),
+      udlHlpTagsCanonical: tagDictionary.normalizeAll(splitList(r.udl_hlp_tags, /\|/)),
       selStrand: (r.sel_strand || '').trim(),
       representationTags: splitList(r.representation_tags, /\|/).map((t) =>
         t.toLowerCase().trim(),
@@ -832,8 +838,16 @@ function buildAccommodations(): AccommodationRecord[] {
         teacherPrompt: r.teacher_prompt || '',
         studentMicrocopy: r.student_microcopy || '',
         udlHlpTags: splitList(r.udl_hlp_tags, /[;,|]/).map((t) => t.trim()),
+        udlHlpTagsCanonical: tagDictionary.normalizeAll(
+          splitList(r.udl_hlp_tags, /[;,|]/).map((t) => t.trim()),
+        ),
         artifact: artIndex.get(id),
-        evidence: evIndex.get(r.evidence_key || id),
+        // Evidence join: try the explicit evidence_key first, then fall back
+        // to the accommodation id itself. Several rules rows carry a stale
+        // evidence_key (e.g. `bilingual_glossary` vs the evidence file's
+        // `bilingual_glossary_es`), which silently dropped the research cite.
+        evidence:
+          (r.evidence_key ? evIndex.get(r.evidence_key) : undefined) ?? evIndex.get(id),
         elOnly: (r.el_only || '').toLowerCase() === 'true',
         languageSupportType: r.language_support_type || '',
       };
@@ -915,6 +929,11 @@ function main() {
   const citations = buildCitations();
   const accommodations = buildAccommodations();
   const standards = buildStandards();
+
+  // Canonical tag dictionary — built as a side effect of the scaffold +
+  // accommodation builds above.
+  const tagRecords = tagDictionary.toRecords();
+  writeJson('tag_dictionary.json', tagRecords, tagRecords.length);
 
   const counts = [
     { name: 'lesson_phases.json', rowCount: phases.length },

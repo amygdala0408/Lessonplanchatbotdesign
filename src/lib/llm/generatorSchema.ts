@@ -64,6 +64,49 @@ export const generatorStandardSchema = z
   })
   .describe('Primary standard the lesson addresses.');
 
+export const generatorTeacherMovesSchema = z
+  .object({
+    launch: z
+      .string()
+      .min(20)
+      .describe(
+        'The exact teacher-facing kickoff: 1-2 sentences of what the teacher SAYS or DOES to open this phase. Include the model question or directive verbatim, in quotation marks. Plain text, no markdown.',
+      ),
+    duringWork: z
+      .string()
+      .min(20)
+      .describe(
+        'What the teacher does while students work. 2-3 sentences. Name the conferring move, the data the teacher collects, and the specific student talk to listen for. Plain text, no markdown.',
+      ),
+    checkForUnderstanding: z
+      .string()
+      .min(15)
+      .describe(
+        'How the teacher knows the phase landed before transitioning. Name the artifact, signal, or evidence (cold call, sticky-note check, thumbs, organizer scan, exit-ticket preview). 1-2 sentences. Plain text, no markdown.',
+      ),
+    ifStuck: z
+      .string()
+      .min(15)
+      .describe(
+        'The pre-planned move if a student or pair freezes. Tie it to the accommodation lanes from the learner profile. 1-2 sentences. Plain text, no markdown.',
+      ),
+    ifAhead: z
+      .string()
+      .min(15)
+      .describe(
+        'The pre-planned stretch move if a pair finishes early. Align it to the highest-DOK objective. 1-2 sentences. Plain text, no markdown.',
+      ),
+    transition: z
+      .string()
+      .min(15)
+      .describe(
+        'How the teacher closes this phase and routes into the next one. 1-2 sentences. Name the signal (chime, slide change, anchor-chart pivot). Plain text, no markdown.',
+      ),
+  })
+  .describe(
+    'Concrete teacher moves for this phase — the execution recipe a substitute could run cold. Plain text in every field, no markdown.',
+  );
+
 export const generatorProcedureStepSchema = z
   .object({
     phase: z
@@ -81,8 +124,9 @@ export const generatorProcedureStepSchema = z
       .string()
       .min(20)
       .describe(
-        'Teacher-facing instructions for this phase: 2–4 complete sentences of PLAIN TEXT covering what the teacher does, what students do, and the transition. ABSOLUTELY NO markdown syntax: no **bold**, no *italics*, no `code`, no # headings, no [links](url), no leading -/• bullets. The printed lesson renders this string verbatim, so any markdown will appear as literal characters.',
+        'The WHAT summary for this phase: 2–4 complete sentences of PLAIN TEXT covering what happens and what students produce. The HOW lives in teacherMoves — do not duplicate it here. ABSOLUTELY NO markdown syntax: no **bold**, no *italics*, no `code`, no # headings, no [links](url), no leading -/• bullets. The printed lesson renders this string verbatim, so any markdown will appear as literal characters.',
       ),
+    teacherMoves: generatorTeacherMovesSchema,
     accommodations: z
       .string()
       .min(8)

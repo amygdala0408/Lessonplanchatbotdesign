@@ -109,6 +109,14 @@ export interface ResolvedAccommodation {
   udlHlpTags: string[];
   artifact?: AccommodationRecord['artifact'];
   evidence?: AccommodationRecord['evidence'];
+  /**
+   * Human-readable explanation of why this accommodation triggered for the
+   * current class — derived from the first matching `appliesWhen` clause
+   * (e.g., "multilingual level 3 (at or below 3); home languages: Spanish").
+   * Ships to the LLM so Penny can explain the support to the teacher instead
+   * of attaching it silently.
+   */
+  appliesWhenReason: string;
 }
 
 const ALL_PHASES: LessonPhaseId[] = [
@@ -118,6 +126,61 @@ const ALL_PHASES: LessonPhaseId[] = [
   'independent_practice',
   'exit_slip',
 ];
+
+/** Teacher-readable rendering of a single matched predicate condition. */
+function describeCondition(cond: AccommodationCondition, profile: LearnerProfile): string {
+  switch (cond.kind) {
+    case 'iep':
+      return cond.equals ? 'IEP plans in this class' : 'no IEP plans';
+    case 'plan_504':
+      return cond.equals ? '504 plans in this class' : 'no 504 plans';
+    case 'el':
+      return cond.equals ? 'active multilingual learners in this class' : 'no active multilingual learners';
+    case 'ml_level_lte': {
+      const langs = profile.homeLanguages?.length
+        ? `; home languages: ${profile.homeLanguages.join(', ')}`
+        : '';
+      return `multilingual level ${profile.multilingualLevel ?? '?'} (at or below ${cond.value}${langs})`;
+    }
+    case 'ml_level_gte':
+      return `multilingual level ${profile.multilingualLevel ?? '?'} (at or above ${cond.value})`;
+    case 'attn_chunk_minutes_lte':
+      return `attention chunking at or below ${cond.value} minutes`;
+    case 'needs_tag':
+      return `class need: ${String(cond.tag).replace(/_/g, ' ')}`;
+    case 'reading_band_in':
+      return `reading band in ${cond.values.join(' / ')}`;
+    default:
+      return '';
+  }
+}
+
+/**
+ * Why did this accommodation match? Returns the first matching clause rendered
+ * as a teacher-readable phrase. Label-only (empty-predicate) matches explain
+ * via the label that triggered.
+ */
+function describeMatch(
+  acc: AccommodationRecord,
+  profile: LearnerProfile,
+  ctx: AccommodationContext,
+): string {
+  if (acc.appliesWhen.length === 0) {
+    if (acc.labels.includes('All')) return 'universal support for every student';
+    if (acc.labels.includes('IEP') && profile.hasIEP) return 'IEP plans in this class';
+    if (acc.labels.includes('504') && profile.has504) return '504 plans in this class';
+    if (acc.labels.includes('EL')) return 'active multilingual learners in this class';
+    return '';
+  }
+  const matched = acc.appliesWhen.find((clause) =>
+    clause.every((c) => evalCondition(c, profile, ctx)),
+  );
+  if (!matched) return '';
+  return matched
+    .map((c) => describeCondition(c, profile))
+    .filter(Boolean)
+    .join(' + ');
+}
 
 /**
  * Evaluate every accommodation rule against the learner profile and return the
@@ -142,6 +205,7 @@ export function resolveAccommodations(
     udlHlpTags: a.udlHlpTags,
     artifact: a.artifact,
     evidence: a.evidence,
+    appliesWhenReason: describeMatch(a, profile, ctx),
   }));
 }
 

@@ -1,15 +1,65 @@
 # Penny Pedagogy Lesson Plan Generator - Build Log
 
 **Project:** Lessonplanchatbotdesign
-**Last updated:** May 15, 2026 (commits 4–6 landed; live verification pending prompt review)
+**Last updated:** June 11, 2026 (Top-Tier Quality Restoration — all four documented quality plans implemented; live scored run blocked on gateway billing)
 **Active branch:** `cursor/top-tier-overhaul-c88e`
-**Latest commit:** `c95fedb` — surface generator transport errors into validation banner
+**Latest commit:** `0c2b318` — docs: log generator pipeline live-verified at 2.83/3.0 EQuIP+UDL (restoration work is uncommitted on top)
 
 ---
 
 ## Overview
 
 Penny Pedagogy is an equity-centered AI instructional design partner for high school educators (grades 9-12). The application started as a Vite/Poe build, migrated to Next.js with Poe, and is now a multi-LLM choreography on the Vercel AI Gateway (Claude Sonnet 4.6 / Opus 4.7, GPT-5.5, GPT-4.1-mini).
+
+---
+
+## ▶ Resume point — Top-Tier Quality Restoration (June 11, 2026; code complete, live scoring blocked on billing)
+
+All four documented quality plans are now implemented in working tree (uncommitted). Static gates are fully green: **100/100 unit tests** (up from 63), `tsc --noEmit` clean, production `next build` clean (all 10 routes).
+
+| Phase | Work | Status |
+|-------|------|--------|
+| 0 | Silent procedure-summarizer bug fix in `generate-artifacts` (read `step`/`description`/`durationMin/Max`, not the nonexistent `phase.steps[]`) | ✅ |
+| 0 | Picker/chat navigation: `TextOptionPicker` + `InstructionalModelChooser` auto-collapse after lock-in, "show again" affordance | ✅ |
+| 0 | Prompt-voice pass on `PENNY_SYSTEM_PROMPT.md` worked examples (flags listed in session log below) | ✅ |
+| 1 | Pedagogical-grounding bridge, all 7 commits: widened `scaffoldDetails`/`accommodationDetails`/openers/exit slips in `CATALOG_CANDIDATES`, verbatim 6×4 rubric descriptors in the judge, `researchAnchors.ts` RESEARCH ANCHORS block, `SCAFFOLDS IN USE` block in the artifact lane, canonical UDL/HLP tag normalizer + `tag_dictionary.json` | ✅ |
+| 2 | Artifacts-to-print bridge: all five Pipeline A artifacts render as print pages in `LessonPlan.tsx` (vocabulary preview, sentence stems, graphic organizer, discussion protocol, single-point rubric) with heuristic Pipeline B fallback; one-shot exit-ticket retry (temp +0.1 + corrective hint) | ✅ |
+| 3 | Procedure `teacherMoves` (Option B): required six-field block (launch/duringWork/checkForUnderstanding/ifStuck/ifAhead/transition) in the generator schema, operator-notes contract, validator checks (thin fields + markdown = error; missing block / sparse quoted language = warning), deterministic `proceduralSpecificity` + judge-scored Implementation Recipe Clarity, 2-column print-safe micro-grid renderer, artifact-lane pass-through | ✅ |
+| 4 | Curated content drafts (pending teacher voice review): `equip_udl_exemplars.json` (24 annotated score anchors, wired into judge), `teacher_language_exemplars.json` (81 scaffolds, wired into candidate block as `teacherLanguageExemplars`), `why_for_teacher.json` (99 accommodation rationales, wired as `whyForTeacher`) — all behind graceful fallbacks in `src/lib/curated/` | ✅ |
+| — | **Live scored runs (baseline, bridge-verify, final acceptance)** | ⛔ **BLOCKED** — gateway key `vck_3ybT…` is free-tier: `anthropic/claude-sonnet-4.6` and `openai/gpt-5.5` return 403 "Free tier users do not have access to this model." Re-probed June 11 11:56 PM; unchanged. |
+
+### To resume after credits top-up
+
+1. `npm run dev`, run the May 15 acceptance prompt end-to-end (chat → picker → finalize → artifacts → print); confirm the 6 verification behaviors.
+2. Run `scripts/artifacts-acceptance-prompt.mjs` — expect 6/6 artifacts (exit-ticket retry now in place) and text-specific print pages.
+3. Record fresh EQuIP+UDL score — target ≥ 2.85 overall (prior baseline 2.83), ≥ 2/3 Implementation Recipe Clarity.
+4. Review the three draft curated files in `src/data/curated/` for voice; they're clearly marked `"status": "draft"`.
+
+---
+
+## Session log — June 11, 2026 (Top-Tier Quality Restoration)
+
+### What shipped (working tree, uncommitted)
+
+- **Phase 0.** Artifact-summarizer bug fix (`summarizePlanForArtifacts` now reads the real `step`/`description`/`durationMin/Max` fields — every prior artifact ran with an empty PROCEDURE block). Picker auto-collapse + "show again" links for `TextOptionPicker` and `InstructionalModelChooser`, mirroring the `classProfileExpanded` pattern.
+- **Phase 1 (bridge, 7 commits' worth).** `CATALOG_CANDIDATES` now ships curated CONTENT, not IDs: `scaffoldDetails` (teacherMoves/studentTasks/supports/fadePlan/whenNotToUse/formativeChecks/tags/evidence, 3 per phase), `accommodationDetails` (full teacherPrompt, evidence cite + URL, `appliesWhenReason`), openers with verbatim hook/probe/intention stems, exit slips with full 0-3 rubric prose. Verbatim 6×4 EQuIP+UDL descriptors inlined into the GPT-5.5 judge. New `src/lib/researchAnchors.ts` injects a top-5 RESEARCH ANCHORS block by framework + learner profile. `SCAFFOLDS IN USE` block in the artifact generator. Canonical tag normalizer (`scripts/catalog/normalizeTags.ts`) + `tag_dictionary.json` at catalog build. Budgets held: 18k generator / 12k chat, trimmed by relevance-ranked detail pops.
+- **Phase 2 (print bridge).** `LessonPlan.tsx` accepts the Pipeline A artifact record; all five artifact print pages render text-specific content with per-artifact heuristic fallback (`LessonPlan.print-bridge.test.tsx`, 8 tests). One-shot exit-ticket retry on schema failure (temp +0.1 + corrective hint from the validator complaint).
+- **Phase 3 (teacherMoves).** Required six-field recipe block on every generated procedure step; lenient intake schema keeps legacy plans valid. Validator: thin fields/markdown = error, missing block or <3 phases with quoted teacher language = warning. Scorer: deterministic `scoreProceduralSpecificity` (Layer A) + judge-scored Implementation Recipe Clarity, merged conservatively; low clarity surfaces as a finalize warning. Renderer: 2-column print-safe micro-grid under each step. Artifact lane sees the moves.
+- **Phase 4 (curated drafts).** Three draft banks in `src/data/curated/` behind the graceful `src/lib/curated/` loader: 24 score-calibration exemplars (judge prompt), teacher-language exemplars for 81 scaffolds (candidate block, max 2 per scaffold), 99 `why_for_teacher` rationales (accommodation details). All keys validated against the catalogs.
+
+### Verification
+
+- `npx vitest run`: **100/100** across 11 files (was 63/63 at session start).
+- `npx tsc --noEmit`: clean. `npx next build`: clean, all 10 routes.
+- Live scored run: **blocked.** Gateway probe at 11:56 PM returned 403 ("Free tier users do not have access to this model") for `anthropic/claude-sonnet-4.6` and `openai/gpt-5.5`; `gpt-4.1-mini` is reachable. Needs a credits top-up on the Vercel AI Gateway account, then the resume steps above.
+
+### Prompt-voice flags for your review (PENNY_SYSTEM_PROMPT.md — not changed)
+
+1. **Default pronoun:** "You sit beside her" (line 4) and "render in the drawer beside her" (line 153) assume the teacher is a woman. Intentional voice choice or generalize?
+2. **Closer:** the sign-off "Good lesson." (line 159) is clipped — confirm it sounds like the school, not like a bot.
+3. **Factual claims inside worked examples:** the text-selection example asserts "Audio available; we can pre-teach four words" about *The Leap* and characterizes *Two Kinds* / *Marigolds* by rigor and stamina. These strings become Penny's stylistic anchor; confirm the claims are ones you'd stand behind, since the model will imitate the pattern of asserting text features.
+4. **"Anxiety-aware partner pairing"** (finalize example) — compact coach-jargon; consider plainer phrasing if it doesn't match your voice.
+5. **Pushback example** (lines 29-32) leans on "DOK 2 anchor that sets up tomorrow's transfer" — more jargon-dense than the "plain language" rule the same file sets.
 
 ---
 
@@ -33,6 +83,67 @@ The plan had 6 commits total. All six have landed. Live verification is the only
 
 1. **Prompt-voice review** of `PENNY_SYSTEM_PROMPT.md` (see below) before live UI verification.
 2. **Chat / picker panel navigation fix.** Surfaced during tonight's live-server check: the right-side column stacks the class profile, the text-option picker, and the instructional-model chooser ABOVE the chat scroll area, and none of those panes collapse after the teacher is done with them. The chat window ends up as a small scroll viewport even though there's empty space below; there's no clear affordance to minimize a picker after a pick is locked in. Likely fix touches `app/page.tsx` (already has a `classProfileExpanded` state that auto-collapses past `gathering` — extend that pattern to `TextOptionPicker` and `InstructionalModelChooser`, plus add a "Show picker again" link in the preview drawer for the rare case a teacher wants to re-open). Will solve together tomorrow before the acceptance-prompt walk-through.
+
+### Four future-build plans documented (May 16) — no code changes yet
+
+These are written down now so any commits between today and their build window
+stay forward-compatible. All four are explicitly **not** implemented yet.
+
+1. **Procedure-detail enhancement** (`docs/plans/procedure-detail-enhancement.plan.md`).
+   Recommended Option B: add a structured `teacherMoves` block to each
+   procedure phase (launch / duringWork / checkForUnderstanding / ifStuck /
+   ifAhead / transition), update prompt + validator + scorer + renderer,
+   target ≥ 2/3 on a new *Implementation Recipe Clarity* judge dimension.
+   Lift ~1.5 days. Builds AFTER the picker-navigation fix, the
+   accommodations-artifact bridge, AND the pedagogical-grounding bridge.
+
+2. **Accommodations-artifact bridge** (`docs/accommodations-artifacts-audit.md`).
+   The Opus 4.7 artifact-generator lane is already shipping six high-quality,
+   text-specific artifacts (graphic organizer, sentence stems, exit ticket,
+   vocabulary preview, discussion protocol, single-point rubric) into
+   `<ArtifactsPanel>` — but they never reach the print bundle, which is what
+   evaluators actually scored. The fix is to extend `LessonPlan.tsx` to
+   render Pipeline A artifacts in the printable pages, with the existing
+   heuristic Pipeline B pack as fallback. Sample run for the May 15
+   acceptance prompt is saved at `scripts/sample-outputs/artifacts-the-leap.json`
+   (5 of 6 artifacts succeeded in ~34s; the exit-ticket schema validation
+   needs a one-shot retry — Gap #3 in the audit doc).
+
+3. **Pedagogical-grounding bridge** (`docs/plans/pedagogical-grounding-bridge.plan.md`).
+   Addresses the discovery that today's `CATALOG_CANDIDATES` strips the
+   curated catalog down to IDs + 1-2 fields, forcing the LLMs to improvise
+   pedagogical depth from pretraining instead of drawing from the
+   `scaffolds_{subject}` `teacher_moves` / `student_tasks` / `supports_list`,
+   the EQuIP+UDL rubric descriptors, and `research_citations.json`. Plan
+   defines 7 commits that widen the candidate block, ship the rubric
+   descriptors to the GPT-5.5 judge, inject a `RESEARCH ANCHORS` block per
+   generation, bridge scaffolds into the artifact generator, and normalize
+   UDL/HLP/CSP tag codes. Token budgets and tests defined per commit.
+   Expected scoring lift: ~2.83 → ~3.00 on EQuIP+UDL Layer B. Lift ~2 days.
+
+4. **Research-content additions** (`docs/plans/research-content-additions.plan.md`).
+   Companion to the bridge plan. Identifies (a) tagging structure
+   refinements that should land with the bridge (canonical UDL/HLP/CSP
+   codes, `evidence_citation_keys` on accommodations, `appliesWhen`
+   rationale strings) and (b) ranked-by-ROI list of NEW curated content
+   the user could author to push generations to genuine top-tier. Top
+   recommendations: EQuIP+UDL exemplar bank (~12h), `teacher_language_exemplars`
+   field on scaffolds (~13h for top 80), anchor lessons exemplar set
+   (~60h for 20 anchor lessons) — together ~85h of authoring time =
+   permanent, transformational quality lift that no competing product
+   would match.
+
+**Revised sequencing recommendation:**
+(1) picker-navigation fix + live UI verification →
+(2) pedagogical-grounding bridge (commits 1–7; raises baseline scoring
+   and unlocks downstream depth) →
+(3) accommodations-artifact bridge to print (visible unblocker on
+   evaluator scores) →
+(4) procedure-detail enhancement (raises implementation-recipe clarity,
+   benefits from the bridge being in place first).
+
+Optional content authoring (research-content additions plan) runs in
+parallel — none of it blocks shipping; all of it amplifies the bridge.
 
 ### Tonight's static + generator verification (no UI run)
 

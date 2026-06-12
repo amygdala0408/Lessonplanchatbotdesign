@@ -150,3 +150,90 @@ describe('validateLessonPlan', () => {
     expect(dokWarnings).toHaveLength(0);
   });
 });
+
+describe('validateLessonPlan — teacherMoves (procedure-detail enhancement)', () => {
+  const goodMoves = {
+    launch: 'Project paragraph 2 and say: "Find one line that shows what the speaker values."',
+    duringWork: 'Confer with flagged pairs first; listen for students naming why the line matters, and track which pairs cite stanza two.',
+    checkForUnderstanding: 'Scan each pair\'s organizer for one cited line before releasing to independent work.',
+    ifStuck: 'Hand the pair the bilingual glossary card and re-read the line aloud together.',
+    ifAhead: 'Ask the pair to find a counter-line that complicates their claim (DOK 3 stretch).',
+    transition: 'Chime, then pivot to the anchor chart: "Bring your strongest line to the carpet."',
+  };
+
+  const planWithMoves: LessonPlanData = {
+    ...validPlan,
+    procedure: validPlan.procedure.map((step) => ({ ...step, teacherMoves: { ...goodMoves } })),
+  };
+
+  it('emits only warnings (not errors) when teacherMoves is missing entirely', () => {
+    const result = validateLessonPlan(validPlan, 'finalize');
+    expect(result.ok).toBe(true);
+    const movesWarnings = result.errors.filter(
+      (e) => e.severity === 'warning' && e.path.includes('teacherMoves'),
+    );
+    expect(movesWarnings).toHaveLength(validPlan.procedure.length);
+  });
+
+  it('accepts a plan where every phase carries a complete teacherMoves recipe', () => {
+    const result = validateLessonPlan(planWithMoves, 'finalize');
+    expect(result.ok).toBe(true);
+    expect(result.errors.filter((e) => e.path.includes('teacherMoves'))).toHaveLength(0);
+  });
+
+  it('errors on a thin teacherMoves field', () => {
+    const thin: LessonPlanData = {
+      ...planWithMoves,
+      procedure: planWithMoves.procedure.map((step, i) =>
+        i === 0 ? { ...step, teacherMoves: { ...goodMoves, ifStuck: 'Help them.' } } : step,
+      ),
+    };
+    const result = validateLessonPlan(thin, 'finalize');
+    expect(result.ok).toBe(false);
+    expect(
+      result.errors.some(
+        (e) => e.severity === 'error' && e.path === 'procedure[0].teacherMoves.ifStuck',
+      ),
+    ).toBe(true);
+  });
+
+  it('errors on markdown leakage in a teacherMoves field', () => {
+    const leaky: LessonPlanData = {
+      ...planWithMoves,
+      procedure: planWithMoves.procedure.map((step, i) =>
+        i === 1
+          ? {
+              ...step,
+              teacherMoves: { ...goodMoves, launch: '**Say:** "Mark the line that shows tone." Then begin.' },
+            }
+          : step,
+      ),
+    };
+    const result = validateLessonPlan(leaky, 'finalize');
+    expect(result.ok).toBe(false);
+    expect(
+      result.errors.some(
+        (e) => e.severity === 'error' && e.path === 'procedure[1].teacherMoves.launch' && /markdown/i.test(e.message),
+      ),
+    ).toBe(true);
+  });
+
+  it('warns when fewer than 3 phases include verbatim quoted teacher language', () => {
+    const noQuotes = {
+      ...goodMoves,
+      launch: 'Open by projecting the focus question and naming the goal for the phase.',
+      transition: 'Ring the chime and direct students to the carpet for the debrief.',
+    };
+    const unquotedPlan: LessonPlanData = {
+      ...validPlan,
+      procedure: validPlan.procedure.map((step) => ({ ...step, teacherMoves: { ...noQuotes } })),
+    };
+    const result = validateLessonPlan(unquotedPlan, 'finalize');
+    expect(result.ok).toBe(true);
+    expect(
+      result.errors.some(
+        (e) => e.severity === 'warning' && e.path === 'procedure' && /quoted teacher language/i.test(e.message),
+      ),
+    ).toBe(true);
+  });
+});

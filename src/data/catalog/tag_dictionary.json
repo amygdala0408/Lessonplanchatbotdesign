@@ -1,0 +1,530 @@
+[
+  {
+    "canonical": "and_1_8_line_spacing_break_lengthy_passages_across_multiple_pages",
+    "labels": [
+      "and 1.8 line spacing. Break lengthy passages across multiple pages."
+    ],
+    "occurrences": 1
+  },
+  {
+    "canonical": "and_multiplication_division_facts_table_review_reference_sheet_use_before_starting_work",
+    "labels": [
+      "and multiplication/division facts table. Review reference sheet use before starting work."
+    ],
+    "occurrences": 1
+  },
+  {
+    "canonical": "fraction_tiles_during_math_instruction_and_practice",
+    "labels": [
+      "fraction tiles) during math instruction and practice."
+    ],
+    "occurrences": 1
+  },
+  {
+    "canonical": "hand_signals_for_transitions_instead_of_verbal_only_cues",
+    "labels": [
+      "hand signals) for transitions instead of verbal-only cues."
+    ],
+    "occurrences": 1
+  },
+  {
+    "canonical": "hlp.10",
+    "labels": [
+      "HLP10"
+    ],
+    "occurrences": 1
+  },
+  {
+    "canonical": "hlp.13",
+    "labels": [
+      "HLP13"
+    ],
+    "occurrences": 10
+  },
+  {
+    "canonical": "hlp.14",
+    "labels": [
+      "HLP14"
+    ],
+    "occurrences": 6
+  },
+  {
+    "canonical": "hlp.15",
+    "labels": [
+      "HLP15"
+    ],
+    "occurrences": 11
+  },
+  {
+    "canonical": "hlp.16",
+    "labels": [
+      "HLP16"
+    ],
+    "occurrences": 8
+  },
+  {
+    "canonical": "hlp.16.explicit_instruction",
+    "labels": [
+      "HLP Explicit Instruction",
+      "hlp explicit instruction"
+    ],
+    "occurrences": 283
+  },
+  {
+    "canonical": "hlp.17",
+    "labels": [
+      "HLP17"
+    ],
+    "occurrences": 4
+  },
+  {
+    "canonical": "hlp.18",
+    "labels": [
+      "HLP18"
+    ],
+    "occurrences": 10
+  },
+  {
+    "canonical": "hlp.19",
+    "labels": [
+      "HLP19"
+    ],
+    "occurrences": 9
+  },
+  {
+    "canonical": "hlp.20",
+    "labels": [
+      "HLP20"
+    ],
+    "occurrences": 2
+  },
+  {
+    "canonical": "hlp.22",
+    "labels": [
+      "HLP22"
+    ],
+    "occurrences": 5
+  },
+  {
+    "canonical": "hlp.22.feedback",
+    "labels": [
+      "HLP Feedback",
+      "hlp feedback"
+    ],
+    "occurrences": 79
+  },
+  {
+    "canonical": "hlp.7",
+    "labels": [
+      "HLP7"
+    ],
+    "occurrences": 22
+  },
+  {
+    "canonical": "hlp.8",
+    "labels": [
+      "HLP8"
+    ],
+    "occurrences": 1
+  },
+  {
+    "canonical": "hlp.9",
+    "labels": [
+      "HLP9"
+    ],
+    "occurrences": 5
+  },
+  {
+    "canonical": "hlp.building_relationships",
+    "labels": [
+      "HLP Building Relationships"
+    ],
+    "occurrences": 3
+  },
+  {
+    "canonical": "hlp.co_design",
+    "labels": [
+      "hlp co-design"
+    ],
+    "occurrences": 1
+  },
+  {
+    "canonical": "hlp.comparison",
+    "labels": [
+      "hlp comparison"
+    ],
+    "occurrences": 1
+  },
+  {
+    "canonical": "hlp.cooperative_learning",
+    "labels": [
+      "HLP Cooperative Learning",
+      "hlp cooperative learning"
+    ],
+    "occurrences": 75
+  },
+  {
+    "canonical": "hlp.differentiated_support",
+    "labels": [
+      "HLP Differentiated Support"
+    ],
+    "occurrences": 1
+  },
+  {
+    "canonical": "hlp.discourse",
+    "labels": [
+      "HLP Discourse",
+      "hlp discourse"
+    ],
+    "occurrences": 12
+  },
+  {
+    "canonical": "hlp.discussion",
+    "labels": [
+      "HLP Discussion"
+    ],
+    "occurrences": 5
+  },
+  {
+    "canonical": "hlp.exemplars",
+    "labels": [
+      "HLP Exemplars"
+    ],
+    "occurrences": 48
+  },
+  {
+    "canonical": "hlp.inquiry",
+    "labels": [
+      "hlp inquiry"
+    ],
+    "occurrences": 4
+  },
+  {
+    "canonical": "hlp.language_supports",
+    "labels": [
+      "hlp language supports"
+    ],
+    "occurrences": 7
+  },
+  {
+    "canonical": "hlp.modeling",
+    "labels": [
+      "HLP Modeling",
+      "hlp modeling"
+    ],
+    "occurrences": 4
+  },
+  {
+    "canonical": "hlp.motivation",
+    "labels": [
+      "hlp motivation"
+    ],
+    "occurrences": 1
+  },
+  {
+    "canonical": "hlp.multiple_representations",
+    "labels": [
+      "hlp multiple representations"
+    ],
+    "occurrences": 1
+  },
+  {
+    "canonical": "hlp.peer_collaboration",
+    "labels": [
+      "hlp peer collaboration"
+    ],
+    "occurrences": 2
+  },
+  {
+    "canonical": "hlp.questioning",
+    "labels": [
+      "hlp questioning"
+    ],
+    "occurrences": 7
+  },
+  {
+    "canonical": "hlp.relevance",
+    "labels": [
+      "hlp relevance"
+    ],
+    "occurrences": 2
+  },
+  {
+    "canonical": "hlp.representation",
+    "labels": [
+      "hlp representation"
+    ],
+    "occurrences": 4
+  },
+  {
+    "canonical": "hlp.routine",
+    "labels": [
+      "HLP Routine"
+    ],
+    "occurrences": 1
+  },
+  {
+    "canonical": "hlp.scaffolding",
+    "labels": [
+      "hlp scaffolding"
+    ],
+    "occurrences": 1
+  },
+  {
+    "canonical": "hlp.sel_integration",
+    "labels": [
+      "hlp sel integration"
+    ],
+    "occurrences": 1
+  },
+  {
+    "canonical": "hlp.self_regulation",
+    "labels": [
+      "HLP Self-Regulation",
+      "hlp self-regulation"
+    ],
+    "occurrences": 8
+  },
+  {
+    "canonical": "hlp.social_emotional_support",
+    "labels": [
+      "HLP Social-Emotional Support",
+      "hlp social/emotional support"
+    ],
+    "occurrences": 4
+  },
+  {
+    "canonical": "iris",
+    "labels": [
+      "IRIS"
+    ],
+    "occurrences": 1
+  },
+  {
+    "canonical": "siop",
+    "labels": [
+      "SIOP"
+    ],
+    "occurrences": 1
+  },
+  {
+    "canonical": "udl.1.1",
+    "labels": [
+      "UDL 1.1",
+      "udl 1.1"
+    ],
+    "occurrences": 12
+  },
+  {
+    "canonical": "udl.1.2",
+    "labels": [
+      "UDL 1.2",
+      "udl 1.2"
+    ],
+    "occurrences": 21
+  },
+  {
+    "canonical": "udl.1.3",
+    "labels": [
+      "UDL 1.3"
+    ],
+    "occurrences": 8
+  },
+  {
+    "canonical": "udl.1.4",
+    "labels": [
+      "UDL 1.4"
+    ],
+    "occurrences": 1
+  },
+  {
+    "canonical": "udl.2.1",
+    "labels": [
+      "UDL 2.1",
+      "UDL2.1",
+      "udl 2.1"
+    ],
+    "occurrences": 62
+  },
+  {
+    "canonical": "udl.2.5",
+    "labels": [
+      "UDL 2.5",
+      "UDL2.5",
+      "udl 2.5"
+    ],
+    "occurrences": 16
+  },
+  {
+    "canonical": "udl.3.1",
+    "labels": [
+      "UDL 3.1",
+      "udl 3.1"
+    ],
+    "occurrences": 19
+  },
+  {
+    "canonical": "udl.3.2",
+    "labels": [
+      "UDL 3.2"
+    ],
+    "occurrences": 101
+  },
+  {
+    "canonical": "udl.3.3",
+    "labels": [
+      "UDL 3.3",
+      "UDL3.3",
+      "udl 3.3"
+    ],
+    "occurrences": 327
+  },
+  {
+    "canonical": "udl.3.4",
+    "labels": [
+      "UDL 3.4"
+    ],
+    "occurrences": 1
+  },
+  {
+    "canonical": "udl.4.1",
+    "labels": [
+      "UDL 4.1"
+    ],
+    "occurrences": 5
+  },
+  {
+    "canonical": "udl.4.2",
+    "labels": [
+      "UDL 4.2"
+    ],
+    "occurrences": 6
+  },
+  {
+    "canonical": "udl.5.1",
+    "labels": [
+      "UDL 5.1",
+      "udl 5.1"
+    ],
+    "occurrences": 67
+  },
+  {
+    "canonical": "udl.5.2",
+    "labels": [
+      "UDL 5.2",
+      "udl 5.2"
+    ],
+    "occurrences": 15
+  },
+  {
+    "canonical": "udl.5.3",
+    "labels": [
+      "UDL 5.3",
+      "udl 5.3"
+    ],
+    "occurrences": 195
+  },
+  {
+    "canonical": "udl.6.1",
+    "labels": [
+      "UDL 6.1",
+      "udl 6.1"
+    ],
+    "occurrences": 84
+  },
+  {
+    "canonical": "udl.6.2",
+    "labels": [
+      "UDL 6.2",
+      "udl 6.2"
+    ],
+    "occurrences": 161
+  },
+  {
+    "canonical": "udl.6.3",
+    "labels": [
+      "UDL 6.3",
+      "udl 6.3"
+    ],
+    "occurrences": 111
+  },
+  {
+    "canonical": "udl.6.4",
+    "labels": [
+      "UDL 6.4",
+      "UDL6.4",
+      "udl 6.4"
+    ],
+    "occurrences": 160
+  },
+  {
+    "canonical": "udl.7.1",
+    "labels": [
+      "UDL 7.1"
+    ],
+    "occurrences": 15
+  },
+  {
+    "canonical": "udl.7.2",
+    "labels": [
+      "UDL 7.2",
+      "udl 7.2"
+    ],
+    "occurrences": 162
+  },
+  {
+    "canonical": "udl.7.3",
+    "labels": [
+      "UDL 7.3",
+      "udl 7.3"
+    ],
+    "occurrences": 83
+  },
+  {
+    "canonical": "udl.8.1",
+    "labels": [
+      "UDL 8.1",
+      "udl 8.1"
+    ],
+    "occurrences": 16
+  },
+  {
+    "canonical": "udl.8.3",
+    "labels": [
+      "UDL 8.3",
+      "udl 8.3"
+    ],
+    "occurrences": 109
+  },
+  {
+    "canonical": "udl.8.4",
+    "labels": [
+      "UDL 8.4",
+      "udl 8.4"
+    ],
+    "occurrences": 7
+  },
+  {
+    "canonical": "udl.9.1",
+    "labels": [
+      "UDL 9.1",
+      "udl 9.1"
+    ],
+    "occurrences": 5
+  },
+  {
+    "canonical": "udl.9.2",
+    "labels": [
+      "UDL 9.2"
+    ],
+    "occurrences": 11
+  },
+  {
+    "canonical": "udl.9.3",
+    "labels": [
+      "UDL 9.3",
+      "udl 9.3"
+    ],
+    "occurrences": 4
+  }
+]

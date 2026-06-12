@@ -80,6 +80,12 @@ export interface BuildMessagesArgs {
    * after the prompt and current plan snapshot.
    */
   catalogCandidatesMessage?: string | null;
+  /**
+   * Optional pre-rendered RESEARCH ANCHORS block (produced by
+   * `buildResearchAnchorsMessage`). Appended after the catalog candidates so
+   * the model can ground scaffold/accommodation rationale in real citations.
+   */
+  researchAnchorsMessage?: string | null;
 }
 
 export interface BuildMessagesResult {
@@ -142,6 +148,10 @@ export function buildMessages(args: BuildMessagesArgs): BuildMessagesResult {
 
   if (args.catalogCandidatesMessage) {
     messages.push({ role: 'system', content: args.catalogCandidatesMessage });
+  }
+
+  if (args.researchAnchorsMessage) {
+    messages.push({ role: 'system', content: args.researchAnchorsMessage });
   }
 
   for (const msg of args.conversationHistory) {

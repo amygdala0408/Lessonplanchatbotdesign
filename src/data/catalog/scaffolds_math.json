@@ -36,6 +36,11 @@
       "udl 9.3",
       "hlp cooperative learning"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.8.3",
+      "udl.9.3",
+      "hlp.cooperative_learning"
+    ],
     "selStrand": "relationship-skills",
     "representationTags": [
       "rtag.language.inclusive_language",
@@ -91,6 +96,12 @@
       "udl 6.3",
       "hlp cooperative learning"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.8.3",
+      "udl.2.1",
+      "udl.6.3",
+      "hlp.cooperative_learning"
+    ],
     "selStrand": "relationship-skills",
     "representationTags": [
       "rtag.language.inclusive_language",
@@ -144,6 +155,11 @@
       "udl 6.4",
       "udl 9.1",
       "hlp feedback"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.6.4",
+      "udl.9.1",
+      "hlp.22.feedback"
     ],
     "selStrand": "responsible-decision-making",
     "representationTags": [
@@ -199,6 +215,12 @@
       "udl 6.4",
       "hlp motivation"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.8.1",
+      "udl.7.3",
+      "udl.6.4",
+      "hlp.motivation"
+    ],
     "selStrand": "self-awareness",
     "representationTags": [
       "rtag.language.inclusive_language",
@@ -253,6 +275,12 @@
       "hlp social/emotional support",
       "hlp sel integration"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.7.2",
+      "udl.9.1",
+      "hlp.social_emotional_support",
+      "hlp.sel_integration"
+    ],
     "selStrand": "self-management",
     "representationTags": [
       "rtag.identity.neurodiversity",
@@ -305,6 +333,11 @@
       "udl 7.3",
       "udl 6.4",
       "hlp relevance"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.7.3",
+      "udl.6.4",
+      "hlp.relevance"
     ],
     "selStrand": "self-awareness",
     "representationTags": [
@@ -364,6 +397,13 @@
       "hlp modeling",
       "hlp feedback"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.7.2",
+      "udl.8.1",
+      "udl.6.4",
+      "hlp.modeling",
+      "hlp.22.feedback"
+    ],
     "selStrand": "self-management",
     "representationTags": [
       "rtag.language.inclusive_language",
@@ -416,6 +456,11 @@
       "udl 7.2",
       "udl 8.4",
       "hlp relevance"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.7.2",
+      "udl.8.4",
+      "hlp.relevance"
     ],
     "selStrand": "social-awareness",
     "representationTags": [
@@ -483,6 +528,14 @@
       "UDL 8.3",
       "HLP Cooperative Learning"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.5.3",
+      "udl.6.1",
+      "udl.6.2",
+      "udl.8.3",
+      "hlp.cooperative_learning"
+    ],
     "selStrand": "relationship-skills",
     "representationTags": [
       "rtag.pedagogy.collaborative_dialogue",
@@ -538,6 +591,12 @@
       "udl 2.1",
       "hlp questioning"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.1.1",
+      "udl.7.2",
+      "udl.2.1",
+      "hlp.questioning"
+    ],
     "selStrand": "social-awareness",
     "representationTags": [
       "rtag.pedagogy.project_based_relevance",
@@ -592,6 +651,13 @@
       "udl 2.5",
       "udl 2.1",
       "hlp representation"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.6.1",
+      "udl.2.5",
+      "udl.2.1",
+      "hlp.representation"
     ],
     "selStrand": "self-management",
     "representationTags": [
@@ -649,6 +715,14 @@
       "hlp feedback",
       "hlp peer collaboration"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.1.1",
+      "udl.5.2",
+      "udl.6.3",
+      "hlp.16.explicit_instruction",
+      "hlp.22.feedback",
+      "hlp.peer_collaboration"
+    ],
     "selStrand": "self-awareness",
     "representationTags": [
       "rtag.media.accessible_media",
@@ -703,6 +777,13 @@
       "udl 2.5",
       "udl 1.2",
       "hlp language supports"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.7.2",
+      "udl.2.5",
+      "udl.1.2",
+      "hlp.language_supports"
     ],
     "selStrand": "social-awareness",
     "representationTags": [
@@ -760,6 +841,14 @@
       "udl 3.1",
       "hlp questioning"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.8.3",
+      "udl.2.5",
+      "udl.1.2",
+      "udl.3.1",
+      "hlp.questioning"
+    ],
     "selStrand": "responsible-decision-making",
     "representationTags": [
       "rtag.media.accessible_media",
@@ -815,6 +904,13 @@
       "udl 2.5",
       "hlp multiple representations"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.7.2",
+      "udl.1.2",
+      "udl.5.3",
+      "udl.2.5",
+      "hlp.multiple_representations"
+    ],
     "selStrand": "responsible-decision-making",
     "representationTags": [
       "rtag.pedagogy.project_based_relevance",
@@ -868,6 +964,12 @@
       "udl 6.1",
       "udl 2.5",
       "hlp comparison"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.6.1",
+      "udl.2.5",
+      "hlp.comparison"
     ],
     "selStrand": "self-management",
     "representationTags": [
@@ -924,6 +1026,13 @@
       "udl 1.2",
       "hlp explicit instruction"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.6.3",
+      "udl.5.2",
+      "udl.1.2",
+      "hlp.16.explicit_instruction"
+    ],
     "selStrand": "self-awareness",
     "representationTags": [
       "rtag.media.accessible_media",
@@ -978,6 +1087,14 @@
       "udl 2.5",
       "udl 2.1",
       "hlp scaffolding"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.6.1",
+      "udl.5.1",
+      "udl.2.5",
+      "udl.2.1",
+      "hlp.scaffolding"
     ],
     "selStrand": "social-awareness",
     "representationTags": [
@@ -1034,6 +1151,13 @@
       "udl 2.1",
       "hlp representation"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.8.4",
+      "udl.5.2",
+      "udl.2.1",
+      "hlp.representation"
+    ],
     "selStrand": "relationship-skills",
     "representationTags": [
       "rtag.media.accessible_media",
@@ -1086,6 +1210,11 @@
       "udl 7.2",
       "udl 8.4",
       "hlp inquiry"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.7.2",
+      "udl.8.4",
+      "hlp.inquiry"
     ],
     "selStrand": "responsible-decision-making",
     "representationTags": [
@@ -1144,6 +1273,13 @@
       "udl 6.4",
       "hlp discourse"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.8.4",
+      "udl.7.3",
+      "udl.2.1",
+      "udl.6.4",
+      "hlp.discourse"
+    ],
     "selStrand": "social-awareness",
     "representationTags": [
       "rtag.context.global_voices",
@@ -1199,6 +1335,12 @@
       "udl 6.3",
       "hlp inquiry"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.7.2",
+      "udl.8.3",
+      "udl.6.3",
+      "hlp.inquiry"
+    ],
     "selStrand": "social-awareness",
     "representationTags": [
       "rtag.context.global_voices",
@@ -1253,6 +1395,12 @@
       "udl 8.4",
       "udl 6.4",
       "hlp inquiry"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.7.2",
+      "udl.8.4",
+      "udl.6.4",
+      "hlp.inquiry"
     ],
     "selStrand": "responsible-decision-making",
     "representationTags": [
@@ -1310,6 +1458,12 @@
       "udl 3.3",
       "hlp representation"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.7.3",
+      "udl.5.1",
+      "udl.3.3",
+      "hlp.representation"
+    ],
     "selStrand": "self-awareness",
     "representationTags": [
       "rtag.context.global_voices",
@@ -1365,6 +1519,12 @@
       "udl 8.1",
       "hlp discourse"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.7.3",
+      "udl.6.4",
+      "udl.8.1",
+      "hlp.discourse"
+    ],
     "selStrand": "relationship-skills",
     "representationTags": [
       "rtag.context.global_voices",
@@ -1418,6 +1578,11 @@
       "udl 7.2",
       "udl 8.3",
       "hlp co-design"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.7.2",
+      "udl.8.3",
+      "hlp.co_design"
     ],
     "selStrand": "relationship-skills",
     "representationTags": [
@@ -1473,6 +1638,12 @@
       "udl 2.1",
       "hlp modeling",
       "hlp feedback"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.7.3",
+      "udl.2.1",
+      "hlp.modeling",
+      "hlp.22.feedback"
     ],
     "selStrand": "self-awareness",
     "representationTags": [
@@ -1540,6 +1711,15 @@
       "UDL 7.3",
       "HLP Explicit Instruction"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.3.2",
+      "udl.3.3",
+      "udl.5.3",
+      "udl.6.2",
+      "udl.7.2",
+      "udl.7.3",
+      "hlp.16.explicit_instruction"
+    ],
     "selStrand": "social-awareness",
     "representationTags": [
       "rtag.identity.cultural_authenticity",
@@ -1595,6 +1775,10 @@
       "UDL 6.4",
       "HLP Discourse"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.6.4",
+      "hlp.discourse"
+    ],
     "selStrand": "relationship-skills",
     "representationTags": [
       "rtag.pedagogy.collaborative_dialogue",
@@ -1645,6 +1829,10 @@
     "udlHlpTags": [
       "UDL 8.3",
       "HLP Discourse"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.8.3",
+      "hlp.discourse"
     ],
     "selStrand": "relationship-skills",
     "representationTags": [
@@ -1697,6 +1885,10 @@
       "UDL 6.3",
       "HLP Cooperative Learning"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.6.3",
+      "hlp.cooperative_learning"
+    ],
     "selStrand": "relationship-skills",
     "representationTags": [
       "rtag.pedagogy.collaborative_dialogue",
@@ -1747,6 +1939,10 @@
     "udlHlpTags": [
       "UDL 2.1",
       "HLP Discourse"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.2.1",
+      "hlp.discourse"
     ],
     "selStrand": "relationship-skills",
     "representationTags": [
@@ -1811,6 +2007,14 @@
       "UDL 8.3",
       "HLP Explicit Instruction"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.6.2",
+      "udl.6.4",
+      "udl.7.3",
+      "udl.8.3",
+      "hlp.16.explicit_instruction"
+    ],
     "selStrand": "self-awareness",
     "representationTags": [
       "rtag.identity.neurodiversity",
@@ -1865,6 +2069,12 @@
       "UDL 3.3",
       "UDL 5.3",
       "HLP Explicit Instruction"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.3.2",
+      "udl.3.3",
+      "udl.5.3",
+      "hlp.16.explicit_instruction"
     ],
     "selStrand": "self-awareness",
     "representationTags": [
@@ -1922,6 +2132,12 @@
       "UDL 6.1",
       "HLP Explicit Instruction"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.5.3",
+      "udl.6.1",
+      "hlp.16.explicit_instruction"
+    ],
     "selStrand": "responsible-decision-making",
     "representationTags": [
       "rtag.media.graphic_organizers",
@@ -1978,6 +2194,13 @@
       "UDL 6.2",
       "HLP Explicit Instruction",
       "HLP Exemplars"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.6.1",
+      "udl.6.2",
+      "hlp.16.explicit_instruction",
+      "hlp.exemplars"
     ],
     "selStrand": "self-management",
     "representationTags": [
@@ -2043,6 +2266,14 @@
       "UDL 7.3",
       "HLP Explicit Instruction"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.3.1",
+      "udl.3.2",
+      "udl.5.3",
+      "udl.6.4",
+      "udl.7.3",
+      "hlp.16.explicit_instruction"
+    ],
     "selStrand": "self-awareness",
     "representationTags": [
       "rtag.language.home_language",
@@ -2099,6 +2330,12 @@
       "hlp explicit instruction",
       "hlp discourse"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.5.1",
+      "hlp.16.explicit_instruction",
+      "hlp.discourse"
+    ],
     "selStrand": "responsible-decision-making",
     "representationTags": [
       "rtag.language.inclusive_language",
@@ -2153,6 +2390,12 @@
       "hlp cooperative learning",
       "hlp language supports"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.2.1",
+      "udl.3.3",
+      "hlp.cooperative_learning",
+      "hlp.language_supports"
+    ],
     "selStrand": "relationship-skills",
     "representationTags": [
       "rtag.language.home_language",
@@ -2205,6 +2448,11 @@
       "udl 3.3",
       "hlp language supports",
       "hlp cooperative learning"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "hlp.language_supports",
+      "hlp.cooperative_learning"
     ],
     "selStrand": "relationship-skills",
     "representationTags": [
@@ -2259,6 +2507,11 @@
       "hlp language supports",
       "hlp feedback"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.5.3",
+      "hlp.language_supports",
+      "hlp.22.feedback"
+    ],
     "selStrand": "self-management",
     "representationTags": [
       "rtag.language.inclusive_language",
@@ -2312,6 +2565,12 @@
       "udl 5.1",
       "hlp explicit instruction",
       "hlp language supports"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.5.1",
+      "hlp.16.explicit_instruction",
+      "hlp.language_supports"
     ],
     "selStrand": "self-awareness",
     "representationTags": [
@@ -2368,6 +2627,13 @@
       "hlp explicit instruction",
       "hlp language supports"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.5.1",
+      "udl.6.3",
+      "hlp.16.explicit_instruction",
+      "hlp.language_supports"
+    ],
     "selStrand": "responsible-decision-making",
     "representationTags": [
       "rtag.media.accessible_media",
@@ -2422,6 +2688,13 @@
       "udl 6.3",
       "hlp representation",
       "hlp questioning"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.5.1",
+      "udl.6.3",
+      "hlp.representation",
+      "hlp.questioning"
     ],
     "selStrand": "self-management",
     "representationTags": [
@@ -2478,6 +2751,13 @@
       "hlp explicit instruction",
       "hlp discourse"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.1.1",
+      "udl.5.1",
+      "hlp.16.explicit_instruction",
+      "hlp.discourse"
+    ],
     "selStrand": "social-awareness",
     "representationTags": [
       "rtag.media.accessible_media",
@@ -2533,6 +2813,12 @@
       "udl 5.1",
       "hlp explicit instruction"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.1.1",
+      "udl.5.1",
+      "hlp.16.explicit_instruction"
+    ],
     "selStrand": "self-management",
     "representationTags": [
       "rtag.media.accessible_media",
@@ -2586,6 +2872,12 @@
       "udl 5.1",
       "hlp explicit instruction",
       "hlp questioning"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.5.1",
+      "hlp.16.explicit_instruction",
+      "hlp.questioning"
     ],
     "selStrand": "responsible-decision-making",
     "representationTags": [
@@ -2649,6 +2941,13 @@
       "UDL 7.3",
       "UDL 8.3",
       "HLP Explicit Instruction"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.6.4",
+      "udl.7.3",
+      "udl.8.3",
+      "hlp.16.explicit_instruction"
     ],
     "selStrand": "self-management",
     "representationTags": [
@@ -2715,6 +3014,15 @@
       "UDL 8.3",
       "HLP Explicit Instruction"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.5.3",
+      "udl.6.1",
+      "udl.6.2",
+      "udl.6.4",
+      "udl.8.3",
+      "hlp.16.explicit_instruction"
+    ],
     "selStrand": "responsible-decision-making",
     "representationTags": [
       "rtag.pedagogy.collaborative_dialogue",
@@ -2780,6 +3088,14 @@
       "UDL 8.3",
       "HLP Explicit Instruction"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.6.1",
+      "udl.6.2",
+      "udl.6.4",
+      "udl.8.3",
+      "hlp.16.explicit_instruction"
+    ],
     "selStrand": "self-awareness",
     "representationTags": [
       "rtag.pedagogy.student_voice",
@@ -2843,6 +3159,14 @@
       "UDL 8.1",
       "UDL 8.3",
       "HLP Cooperative Learning"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.5.3",
+      "udl.7.3",
+      "udl.8.1",
+      "udl.8.3",
+      "hlp.cooperative_learning"
     ],
     "selStrand": "relationship-skills",
     "representationTags": [
@@ -2911,6 +3235,15 @@
       "UDL 8.3",
       "HLP Explicit Instruction"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.5.3",
+      "udl.6.4",
+      "udl.7.3",
+      "udl.8.1",
+      "udl.8.3",
+      "hlp.16.explicit_instruction"
+    ],
     "selStrand": "self-awareness",
     "representationTags": [
       "rtag.identity.intersectional_identities",
@@ -2978,6 +3311,15 @@
       "UDL 7.2",
       "HLP Explicit Instruction"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.5.3",
+      "udl.6.1",
+      "udl.6.2",
+      "udl.6.4",
+      "udl.7.2",
+      "hlp.16.explicit_instruction"
+    ],
     "selStrand": "responsible-decision-making",
     "representationTags": [
       "rtag.pedagogy.project_based_relevance",
@@ -3042,6 +3384,14 @@
       "UDL 8.1",
       "UDL 8.3",
       "HLP Explicit Instruction"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.6.4",
+      "udl.7.3",
+      "udl.8.1",
+      "udl.8.3",
+      "hlp.16.explicit_instruction"
     ],
     "selStrand": "self-management",
     "representationTags": [
@@ -3108,6 +3458,15 @@
       "UDL 6.4",
       "HLP Explicit Instruction"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.3.1",
+      "udl.3.2",
+      "udl.3.3",
+      "udl.6.1",
+      "udl.6.2",
+      "udl.6.4",
+      "hlp.16.explicit_instruction"
+    ],
     "selStrand": "self-management",
     "representationTags": [
       "rtag.language.plain_language_access",
@@ -3172,6 +3531,15 @@
       "UDL 6.4",
       "UDL 8.3",
       "HLP Explicit Instruction"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.5.3",
+      "udl.6.1",
+      "udl.6.2",
+      "udl.6.4",
+      "udl.8.3",
+      "hlp.16.explicit_instruction"
     ],
     "selStrand": "self-management",
     "representationTags": [
@@ -3238,6 +3606,15 @@
       "UDL 8.3",
       "HLP Explicit Instruction"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.5.3",
+      "udl.6.1",
+      "udl.6.2",
+      "udl.6.4",
+      "udl.8.3",
+      "hlp.16.explicit_instruction"
+    ],
     "selStrand": "self-management",
     "representationTags": [
       "rtag.language.plain_language_access",
@@ -3292,6 +3669,12 @@
       "UDL 5.1",
       "UDL 6.2",
       "HLP Explicit Instruction"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.5.1",
+      "udl.6.2",
+      "hlp.16.explicit_instruction"
     ],
     "selStrand": "self-management",
     "representationTags": [
@@ -3359,6 +3742,16 @@
       "UDL 7.1",
       "HLP Explicit Instruction"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.5.1",
+      "udl.5.3",
+      "udl.6.1",
+      "udl.6.2",
+      "udl.6.4",
+      "udl.7.1",
+      "hlp.16.explicit_instruction"
+    ],
     "selStrand": "self-management",
     "representationTags": [
       "rtag.media.multimodal_resources",
@@ -3412,6 +3805,12 @@
       "udl 2.1",
       "udl 6.3",
       "hlp explicit instruction"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.7.3",
+      "udl.2.1",
+      "udl.6.3",
+      "hlp.16.explicit_instruction"
     ],
     "selStrand": "self-management",
     "representationTags": [
@@ -3467,6 +3866,12 @@
       "hlp explicit instruction",
       "hlp feedback"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.6.3",
+      "udl.2.1",
+      "hlp.16.explicit_instruction",
+      "hlp.22.feedback"
+    ],
     "selStrand": "self-management",
     "representationTags": [
       "rtag.identity.neurodiversity",
@@ -3520,6 +3925,12 @@
       "udl 5.1",
       "hlp explicit instruction",
       "hlp feedback"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.6.4",
+      "udl.5.1",
+      "hlp.16.explicit_instruction",
+      "hlp.22.feedback"
     ],
     "selStrand": "self-management",
     "representationTags": [
@@ -3576,6 +3987,13 @@
       "udl 7.2",
       "hlp self-regulation"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.1.1",
+      "udl.1.2",
+      "udl.3.1",
+      "udl.7.2",
+      "hlp.self_regulation"
+    ],
     "selStrand": "self-awareness",
     "representationTags": [
       "rtag.identity.disability_inclusion",
@@ -3629,6 +4047,12 @@
       "udl 5.3",
       "hlp explicit instruction",
       "hlp cooperative learning"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.6.3",
+      "udl.5.3",
+      "hlp.16.explicit_instruction",
+      "hlp.cooperative_learning"
     ],
     "selStrand": "self-management",
     "representationTags": [
@@ -3684,6 +4108,12 @@
       "hlp explicit instruction",
       "hlp feedback"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.6.3",
+      "udl.5.3",
+      "hlp.16.explicit_instruction",
+      "hlp.22.feedback"
+    ],
     "selStrand": "self-management",
     "representationTags": [
       "rtag.identity.neurodiversity",
@@ -3736,6 +4166,11 @@
       "udl 5.1",
       "udl 2.5",
       "hlp questioning"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.5.1",
+      "udl.2.5",
+      "hlp.questioning"
     ],
     "selStrand": "responsible-decision-making",
     "representationTags": [
@@ -3790,6 +4225,12 @@
       "udl 1.2",
       "hlp explicit instruction",
       "hlp feedback"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.6.3",
+      "udl.1.2",
+      "hlp.16.explicit_instruction",
+      "hlp.22.feedback"
     ],
     "selStrand": "self-management",
     "representationTags": [
@@ -3856,6 +4297,15 @@
       "UDL 7.2",
       "HLP Explicit Instruction"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.5.3",
+      "udl.6.1",
+      "udl.6.2",
+      "udl.6.4",
+      "udl.7.2",
+      "hlp.16.explicit_instruction"
+    ],
     "selStrand": "self-awareness",
     "representationTags": [
       "rtag.media.graphic_organizers",
@@ -3920,6 +4370,15 @@
       "UDL 6.4",
       "UDL 8.3",
       "HLP Cooperative Learning"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.5.1",
+      "udl.5.3",
+      "udl.6.1",
+      "udl.6.4",
+      "udl.8.3",
+      "hlp.cooperative_learning"
     ],
     "selStrand": "relationship-skills",
     "representationTags": [
@@ -3986,6 +4445,14 @@
       "UDL 6.4",
       "HLP Explicit Instruction"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.5.3",
+      "udl.6.1",
+      "udl.6.2",
+      "udl.6.4",
+      "hlp.16.explicit_instruction"
+    ],
     "selStrand": "self-management",
     "representationTags": [
       "rtag.language.plain_language_access",
@@ -4041,6 +4508,13 @@
       "hlp explicit instruction",
       "hlp language supports"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.2.5",
+      "udl.1.2",
+      "hlp.16.explicit_instruction",
+      "hlp.language_supports"
+    ],
     "selStrand": "self-management",
     "representationTags": [
       "rtag.language.inclusive_language",
@@ -4094,6 +4568,12 @@
       "udl 2.5",
       "udl 2.1",
       "hlp explicit instruction"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.2.5",
+      "udl.2.1",
+      "hlp.16.explicit_instruction"
     ],
     "selStrand": "self-management",
     "representationTags": [
@@ -4149,6 +4629,13 @@
       "hlp explicit instruction",
       "hlp feedback"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.6.3",
+      "udl.5.1",
+      "hlp.16.explicit_instruction",
+      "hlp.22.feedback"
+    ],
     "selStrand": "self-management",
     "representationTags": [
       "rtag.media.accessible_media",
@@ -4201,6 +4688,12 @@
       "udl 6.3",
       "udl 1.1",
       "hlp peer collaboration"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.6.3",
+      "udl.1.1",
+      "hlp.peer_collaboration"
     ],
     "selStrand": "self-management",
     "representationTags": [
@@ -4257,6 +4750,13 @@
       "hlp explicit instruction",
       "hlp questioning"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.6.3",
+      "udl.2.5",
+      "hlp.16.explicit_instruction",
+      "hlp.questioning"
+    ],
     "selStrand": "self-management",
     "representationTags": [
       "rtag.language.inclusive_language",
@@ -4312,6 +4812,13 @@
       "hlp explicit instruction",
       "hlp feedback"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.5.1",
+      "udl.6.3",
+      "hlp.16.explicit_instruction",
+      "hlp.22.feedback"
+    ],
     "selStrand": "self-management",
     "representationTags": [
       "rtag.media.accessible_media",
@@ -4366,6 +4873,12 @@
       "hlp explicit instruction",
       "hlp questioning"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.2.5",
+      "hlp.16.explicit_instruction",
+      "hlp.questioning"
+    ],
     "selStrand": "self-management",
     "representationTags": [
       "rtag.media.accessible_media",
@@ -4419,6 +4932,12 @@
       "udl 2.5",
       "hlp explicit instruction",
       "hlp feedback"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.2.5",
+      "hlp.16.explicit_instruction",
+      "hlp.22.feedback"
     ],
     "selStrand": "self-management",
     "representationTags": [
@@ -4484,6 +5003,15 @@
       "UDL 8.3",
       "HLP Cooperative Learning"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.5.3",
+      "udl.6.2",
+      "udl.7.2",
+      "udl.7.3",
+      "udl.8.3",
+      "hlp.cooperative_learning"
+    ],
     "selStrand": "self-awareness",
     "representationTags": [
       "rtag.pedagogy.project_based_relevance",
@@ -4540,6 +5068,13 @@
       "hlp discourse",
       "hlp feedback"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.5.1",
+      "udl.6.3",
+      "hlp.discourse",
+      "hlp.22.feedback"
+    ],
     "selStrand": "self-awareness",
     "representationTags": [
       "rtag.language.inclusive_language",
@@ -4595,6 +5130,13 @@
       "hlp explicit instruction",
       "hlp feedback"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.5.1",
+      "udl.6.2",
+      "hlp.16.explicit_instruction",
+      "hlp.22.feedback"
+    ],
     "selStrand": "self-management",
     "representationTags": [
       "rtag.language.inclusive_language",
@@ -4648,6 +5190,12 @@
       "udl 5.1",
       "hlp explicit instruction",
       "hlp cooperative learning"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.6.4",
+      "udl.5.1",
+      "hlp.16.explicit_instruction",
+      "hlp.cooperative_learning"
     ],
     "selStrand": "self-management",
     "representationTags": [
@@ -4703,6 +5251,13 @@
       "udl 5.1",
       "hlp explicit instruction",
       "hlp discourse"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.6.3",
+      "udl.5.1",
+      "hlp.16.explicit_instruction",
+      "hlp.discourse"
     ],
     "selStrand": "responsible-decision-making",
     "representationTags": [
@@ -4760,6 +5315,13 @@
       "hlp discourse",
       "hlp self-regulation"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.5.1",
+      "udl.2.5",
+      "hlp.discourse",
+      "hlp.self_regulation"
+    ],
     "selStrand": "self-management",
     "representationTags": [
       "rtag.language.inclusive_language",
@@ -4813,6 +5375,12 @@
       "udl 5.1",
       "hlp inquiry",
       "hlp discourse"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.5.1",
+      "hlp.inquiry",
+      "hlp.discourse"
     ],
     "selStrand": "self-management",
     "representationTags": [
@@ -4869,6 +5437,13 @@
       "hlp explicit instruction",
       "hlp feedback"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.6.3",
+      "udl.5.3",
+      "hlp.16.explicit_instruction",
+      "hlp.22.feedback"
+    ],
     "selStrand": "responsible-decision-making",
     "representationTags": [
       "rtag.identity.neurodiversity",
@@ -4922,6 +5497,12 @@
       "udl 5.1",
       "hlp explicit instruction",
       "hlp discourse"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.5.1",
+      "hlp.16.explicit_instruction",
+      "hlp.discourse"
     ],
     "selStrand": "responsible-decision-making",
     "representationTags": [
@@ -4987,6 +5568,14 @@
       "UDL 8.3",
       "HLP Explicit Instruction"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.6.1",
+      "udl.6.2",
+      "udl.6.4",
+      "udl.8.3",
+      "hlp.16.explicit_instruction"
+    ],
     "selStrand": "self-management",
     "representationTags": [
       "rtag.identity.neurodiversity",
@@ -5051,6 +5640,14 @@
       "UDL 6.2",
       "UDL 7.2",
       "HLP Explicit Instruction"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.3.2",
+      "udl.3.3",
+      "udl.5.3",
+      "udl.6.2",
+      "udl.7.2",
+      "hlp.16.explicit_instruction"
     ],
     "selStrand": "responsible-decision-making",
     "representationTags": [
@@ -5119,6 +5716,14 @@
       "HLP Explicit Instruction",
       "HLP Cooperative Learning"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.5.3",
+      "udl.6.1",
+      "udl.6.4",
+      "hlp.16.explicit_instruction",
+      "hlp.cooperative_learning"
+    ],
     "selStrand": "self-management",
     "representationTags": [
       "rtag.language.plain_language_access",
@@ -5184,6 +5789,15 @@
       "UDL 7.1",
       "HLP Explicit Instruction"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.5.3",
+      "udl.6.1",
+      "udl.6.2",
+      "udl.6.4",
+      "udl.7.1",
+      "hlp.16.explicit_instruction"
+    ],
     "selStrand": "self-awareness",
     "representationTags": [
       "rtag.identity.neurodiversity",
@@ -5247,6 +5861,14 @@
       "UDL 6.4",
       "UDL 8.3",
       "HLP Explicit Instruction"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.5.2",
+      "udl.6.2",
+      "udl.6.4",
+      "udl.8.3",
+      "hlp.16.explicit_instruction"
     ],
     "selStrand": "self-management",
     "representationTags": [
@@ -5313,6 +5935,15 @@
       "UDL 8.3",
       "HLP Explicit Instruction"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.1.2",
+      "udl.3.3",
+      "udl.5.1",
+      "udl.6.2",
+      "udl.6.4",
+      "udl.8.3",
+      "hlp.16.explicit_instruction"
+    ],
     "selStrand": "self-awareness",
     "representationTags": [
       "rtag.media.multimodal_resources",
@@ -5377,6 +6008,14 @@
       "UDL 7.2",
       "HLP Explicit Instruction"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.3.3",
+      "udl.6.1",
+      "udl.6.2",
+      "udl.6.4",
+      "udl.7.2",
+      "hlp.16.explicit_instruction"
+    ],
     "selStrand": "self-management",
     "representationTags": [
       "rtag.language.plain_language_access",
@@ -5431,6 +6070,12 @@
       "UDL 3.3",
       "UDL 6.2",
       "HLP Explicit Instruction"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.3.1",
+      "udl.3.3",
+      "udl.6.2",
+      "hlp.16.explicit_instruction"
     ],
     "selStrand": "self-management",
     "representationTags": [

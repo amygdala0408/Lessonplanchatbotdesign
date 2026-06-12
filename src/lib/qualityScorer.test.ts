@@ -1,6 +1,12 @@
 import { describe, expect, it } from 'vitest';
 
-import { scoreLessonPlanSync, toPersistableQualityScore } from './qualityScorer';
+import {
+  buildJudgeSystem,
+  scoreLessonPlanSync,
+  scoreProceduralSpecificity,
+  toPersistableQualityScore,
+} from './qualityScorer';
+import { getEquipUdlExemplars } from './curated';
 import type { LessonPlanData } from '@/types';
 
 const goldenPlan: LessonPlanData = {
@@ -200,5 +206,89 @@ describe('toPersistableQualityScore', () => {
     );
     // No `source` field on persistable form.
     expect((persistable.dimensions[0] as Record<string, unknown>).source).toBeUndefined();
+  });
+});
+
+describe('scoreProceduralSpecificity — teacherMoves recipe quality', () => {
+  const richMoves = {
+    launch: 'Project stanza one and say: "Underline the line that tells you what the speaker values."',
+    duringWork: 'Confer with the flagged pairs first and listen for students naming why their line matters; track which pairs cite stanza two.',
+    checkForUnderstanding: 'Scan each organizer for one cited line before releasing pairs.',
+    ifStuck: 'Hand the pair the bilingual glossary card and re-read the line aloud together.',
+    ifAhead: 'Ask the pair to find a counter-line that complicates their claim.',
+    transition: 'Chime, then pivot to the anchor chart for the debrief.',
+  };
+
+  it('scores 0 when no procedure step carries teacherMoves', () => {
+    const { score, rationale } = scoreProceduralSpecificity(goldenPlan);
+    expect(score).toBe(0);
+    expect(rationale).toContain('No teacherMoves');
+  });
+
+  it('scores 3 when every phase has quoted launches and named conferring moves', () => {
+    const plan: LessonPlanData = {
+      ...goldenPlan,
+      procedure: goldenPlan.procedure.map((p) => ({ ...p, teacherMoves: { ...richMoves } })),
+    };
+    const { score } = scoreProceduralSpecificity(plan);
+    expect(score).toBe(3);
+  });
+
+  it('scores 1 when recipes are generic (no quotes, no conferring moves)', () => {
+    const generic = {
+      ...richMoves,
+      launch: 'Open the phase by stating the goal and showing the agenda slide to everyone.',
+      duringWork: 'Walk around the room while students work on the task and keep an eye on progress.',
+    };
+    const plan: LessonPlanData = {
+      ...goldenPlan,
+      procedure: goldenPlan.procedure.map((p) => ({ ...p, teacherMoves: { ...generic } })),
+    };
+    const { score } = scoreProceduralSpecificity(plan);
+    expect(score).toBe(1);
+  });
+
+  it('scores 1 when only some phases carry teacherMoves', () => {
+    const plan: LessonPlanData = {
+      ...goldenPlan,
+      procedure: goldenPlan.procedure.map((p, i) =>
+        i < 2 ? { ...p, teacherMoves: { ...richMoves } } : p,
+      ),
+    };
+    const { score, rationale } = scoreProceduralSpecificity(plan);
+    expect(score).toBe(1);
+    expect(rationale).toContain('2/5 phases');
+  });
+
+  it('surfaces recipeClarity on the sync scorecard and the persistable score', () => {
+    const plan: LessonPlanData = {
+      ...goldenPlan,
+      procedure: goldenPlan.procedure.map((p) => ({ ...p, teacherMoves: { ...richMoves } })),
+    };
+    const card = scoreLessonPlanSync(plan);
+    expect(card.recipeClarity).toBeDefined();
+    expect(card.recipeClarity!.score).toBe(3);
+    expect(card.recipeClarity!.source).toBe('deterministic');
+    const persistable = toPersistableQualityScore(card);
+    expect(persistable.recipeClarity).toEqual({
+      score: 3,
+      rationale: expect.stringContaining('5/5 phases'),
+    });
+  });
+});
+
+describe('buildJudgeSystem — curated score-calibration exemplars (C1)', () => {
+  it('inlines the curated exemplar bank with annotated score anchors', () => {
+    const exemplars = getEquipUdlExemplars();
+    // The draft bank ships 24 entries (6 dimensions x 4 levels).
+    expect(exemplars.length).toBeGreaterThanOrEqual(24);
+
+    const system = buildJudgeSystem();
+    expect(system).toContain('SCORE CALIBRATION EXEMPLARS');
+    // Spot-check that real exemplar prose (not just headers) made it in.
+    const sample = exemplars.find((e) => e.score === 3);
+    expect(sample).toBeTruthy();
+    expect(system).toContain(sample!.exemplar.slice(0, 60));
+    expect(system).toContain(`Why this is a ${sample!.score}:`);
   });
 });

@@ -49,6 +49,7 @@ import {
   type ArtifactType,
   type ArtifactPayload,
 } from '@/lib/llm/artifactSchemas';
+import { getScaffoldsForSubject } from '@/lib/catalog';
 import type { LearnerProfile, LessonPlanData, TextOption } from '@/types';
 
 export const runtime = 'nodejs';
@@ -154,20 +155,85 @@ function summarizePlanForArtifacts(plan: Partial<LessonPlanData>): string {
 
   if (Array.isArray(plan.procedure) && plan.procedure.length > 0) {
     lines.push('PROCEDURE (phase summaries):');
-    for (const phase of plan.procedure) {
-      const id = (phase as { phaseId?: string; id?: string }).phaseId ?? (phase as { id?: string }).id ?? '?';
-      const minutes = (phase as { duration?: number; minutes?: number }).duration ?? (phase as { minutes?: number }).minutes;
-      const stepDescriptions = Array.isArray((phase as { steps?: unknown[] }).steps)
-        ? ((phase as { steps?: { description?: string }[] }).steps ?? [])
-            .map((s) => (typeof s.description === 'string' ? s.description : ''))
-            .filter(Boolean)
-            .join(' / ')
-        : '';
-      lines.push(`  - ${id}${minutes ? ` (${minutes}m)` : ''}: ${stepDescriptions || '(no steps)'}`);
+    for (const step of plan.procedure) {
+      const id = step.phase ?? step.step ?? '?';
+      const minutes =
+        step.durationMin != null
+          ? step.durationMax != null && step.durationMax !== step.durationMin
+            ? `${step.durationMin}-${step.durationMax}m`
+            : `${step.durationMin}m`
+          : '';
+      const label = step.step && step.step !== id ? ` "${step.step}"` : '';
+      lines.push(`  - ${id}${minutes ? ` (${minutes})` : ''}${label}: ${step.description || '(no description)'}`);
+      if (step.accommodations) {
+        lines.push(`    Accommodations in this phase: ${step.accommodations}`);
+      }
+      // Teacher-move recipe: artifacts must align to the actual named moves
+      // (e.g. the discussion protocol references the same anchor chart the
+      // teacher names in duringWork) instead of improvising a parallel plan.
+      if (step.teacherMoves) {
+        const tm = step.teacherMoves;
+        lines.push(`    Teacher moves: launch: ${tm.launch} | during: ${tm.duringWork} | CFU: ${tm.checkForUnderstanding} | if stuck: ${tm.ifStuck} | if ahead: ${tm.ifAhead} | transition: ${tm.transition}`);
+      }
+    }
+  }
+
+  if (plan.exitSlip) lines.push(`EXIT SLIP PROMPT: ${plan.exitSlip}`);
+  if (Array.isArray(plan.rubric) && plan.rubric.length > 0) {
+    lines.push('RUBRIC (0-3):');
+    for (const row of plan.rubric) {
+      lines.push(`  ${row.score}: ${row.description}`);
     }
   }
 
   return lines.join('\n');
+}
+
+/**
+ * SCAFFOLDS IN USE (pedagogical-grounding bridge, commit 6).
+ *
+ * The finalized plan names catalog scaffolds per procedure step
+ * (`scaffoldIds`). Resolving them here and shipping their curated teacher
+ * moves / student tasks / supports means each artifact aligns to the NAMED
+ * pedagogy of the lesson — the sentence stems echo the scaffold's language
+ * frames, the organizer mirrors its student tasks — instead of improvising
+ * a parallel structure the teacher never planned.
+ */
+function summarizeScaffoldsInUse(plan: Partial<LessonPlanData>): string {
+  const ids = new Map<string, string[]>(); // id -> phases using it
+  for (const step of plan.procedure ?? []) {
+    for (const id of step.scaffoldIds ?? []) {
+      const phases = ids.get(id) ?? [];
+      const phase = step.phase ?? step.step ?? '?';
+      if (!phases.includes(phase)) phases.push(phase);
+      ids.set(id, phases);
+    }
+  }
+  if (ids.size === 0) return '';
+
+  let catalog: ReturnType<typeof getScaffoldsForSubject>;
+  try {
+    catalog = getScaffoldsForSubject('all');
+  } catch (err) {
+    console.warn('[generate-artifacts] scaffold catalog unavailable:', err);
+    return '';
+  }
+  const byId = new Map(catalog.map((s) => [s.id, s]));
+
+  const lines: string[] = ['SCAFFOLDS IN USE (align every artifact to these named strategies):'];
+  let emitted = 0;
+  for (const [id, phases] of ids) {
+    if (emitted >= 6) break;
+    const s = byId.get(id);
+    if (!s) continue;
+    emitted++;
+    lines.push(`  - ${s.name} (${id}; used in: ${phases.join(', ')})`);
+    if (s.teacherMoves?.length) lines.push(`    Teacher moves: ${s.teacherMoves.slice(0, 3).join(' / ')}`);
+    if (s.studentTasks?.length) lines.push(`    Student tasks: ${s.studentTasks.slice(0, 3).join(' / ')}`);
+    if (s.supports?.length) lines.push(`    Supports: ${s.supports.slice(0, 3).join(' / ')}`);
+    if (s.fadePlan) lines.push(`    Fade plan: ${s.fadePlan}`);
+  }
+  return emitted > 0 ? lines.join('\n') : '';
 }
 
 function summarizeTextForArtifacts(text: TextOption | null | undefined): string {
@@ -216,6 +282,7 @@ function buildArtifactPrompt(
   const planSummary = summarizePlanForArtifacts(plan);
   const textSummary = summarizeTextForArtifacts(selectedText);
   const learnerSummary = summarizeLearnerProfile(learnerProfile);
+  const scaffoldsSummary = summarizeScaffoldsInUse(plan);
 
   return [
     `ARTIFACT TYPE: ${ARTIFACT_LABELS[type]} (schema id: ${type})`,
@@ -225,6 +292,7 @@ function buildArtifactPrompt(
     textSummary,
     '',
     learnerSummary,
+    ...(scaffoldsSummary ? ['', scaffoldsSummary] : []),
     '',
     `Generate the ${ARTIFACT_LABELS[type]} as a JSON object that matches the provided schema EXACTLY. Be specific to the chosen text and the highest-DOK objective. Do not output a generic template.`,
   ].join('\n');
@@ -242,44 +310,78 @@ async function generateOne(
 ): Promise<{ ok: true; artifact: ArtifactPayload } | { ok: false; type: ArtifactType; error: string }> {
   const settings = TASK_SETTINGS.artifact_generator;
   const schema = ARTIFACT_SCHEMAS[type] as z.ZodTypeAny;
-  const prompt = buildArtifactPrompt(type, plan, selectedText, learnerProfile);
+  const basePrompt = buildArtifactPrompt(type, plan, selectedText, learnerProfile);
 
-  try {
+  const attempt = async (prompt: string, temperature: number, attemptNo: number) => {
     const { object } = await generateObject({
       model: getModel('artifact_generator'),
       schema,
       system: SYSTEM_PROMPT,
       prompt,
-      temperature: settings.temperature,
+      temperature,
       ...(settings.maxOutputTokens ? { maxOutputTokens: settings.maxOutputTokens } : {}),
       experimental_telemetry: {
         isEnabled: true,
         functionId: 'penny.artifact_generator',
-        metadata: { artifactType: type },
+        metadata: { artifactType: type, attempt: attemptNo },
       },
     });
+    return object;
+  };
 
-    return {
-      ok: true,
-      artifact: { type, data: object } as ArtifactPayload,
-    };
-  } catch (err) {
-    let message: string;
-    let detail: unknown = null;
+  const describeError = (err: unknown): { message: string; detail: unknown; isSchemaFailure: boolean } => {
     if (err instanceof NoObjectGeneratedError) {
-      message = `Structured output failed: ${err.message}`;
-      detail = {
-        text: typeof err.text === 'string' ? err.text.slice(0, 800) : null,
-        cause: err.cause instanceof Error ? err.cause.message : String(err.cause ?? ''),
-        finishReason: (err as unknown as { finishReason?: string }).finishReason ?? null,
+      return {
+        message: `Structured output failed: ${err.message}`,
+        detail: {
+          text: typeof err.text === 'string' ? err.text.slice(0, 800) : null,
+          cause: err.cause instanceof Error ? err.cause.message : String(err.cause ?? ''),
+          finishReason: (err as unknown as { finishReason?: string }).finishReason ?? null,
+        },
+        isSchemaFailure: true,
       };
-    } else if (err instanceof Error) {
-      message = err.message;
-    } else {
-      message = String(err);
     }
-    console.error(`[generate-artifacts] ${type} failed:`, message, detail ?? '');
-    return { ok: false, type, error: message };
+    return {
+      message: err instanceof Error ? err.message : String(err),
+      detail: null,
+      isSchemaFailure: false,
+    };
+  };
+
+  try {
+    const object = await attempt(basePrompt, settings.temperature, 1);
+    return { ok: true, artifact: { type, data: object } as ArtifactPayload };
+  } catch (err) {
+    const first = describeError(err);
+
+    // Exit tickets are the schema-failure hotspot (banned-generic prompts +
+    // tight min/max bounds). When the first attempt fails schema validation,
+    // retry exactly once with a slightly looser temperature and a corrective
+    // hint built from the validator's complaint. Other artifact types fall
+    // through to the heuristic print templates, so they fail fast instead.
+    if (type === 'exit_ticket' && first.isSchemaFailure) {
+      console.warn(`[generate-artifacts] ${type} schema failure — retrying once:`, first.message);
+      const cause =
+        err instanceof NoObjectGeneratedError && err.cause instanceof Error ? err.cause.message.slice(0, 600) : '';
+      const retryPrompt = [
+        basePrompt,
+        '',
+        'IMPORTANT — your previous attempt FAILED schema validation. Correct these issues and emit valid JSON only:',
+        cause ? `Validator said: ${cause}` : 'The output did not match the schema (check string length bounds, required fields, and integer ranges).',
+        'Every question prompt must reference the chosen text or standard. Respect all min/max lengths. questions: 2-4 items, successCriteria: 2-4 items, timeMinutes: integer 2-15.',
+      ].join('\n');
+      try {
+        const object = await attempt(retryPrompt, Math.min(settings.temperature + 0.1, 1), 2);
+        return { ok: true, artifact: { type, data: object } as ArtifactPayload };
+      } catch (retryErr) {
+        const second = describeError(retryErr);
+        console.error(`[generate-artifacts] ${type} retry failed:`, second.message, second.detail ?? '');
+        return { ok: false, type, error: `${second.message} (after 1 retry)` };
+      }
+    }
+
+    console.error(`[generate-artifacts] ${type} failed:`, first.message, first.detail ?? '');
+    return { ok: false, type, error: first.message };
   }
 }
 

@@ -92,6 +92,25 @@ lesson.
    - Flipped Classroom
 4. **When nothing fits, say so.** Don't fabricate a URL, a Lexile, a
    platform, or an organization. Ask a clarifying question instead.
+5. **Ground prose in the curated details.** `CATALOG_CANDIDATES` carries
+   two detail arrays:
+   - `scaffoldDetails[]` — for every scaffold ID listed per phase: the
+     curated `teacherMoves`, `studentTasks`, `supports`, `fadePlan`,
+     `whenNotToUse`, `formativeChecks`, `udlHlpTags`, and
+     `evidenceKeys`. When a procedure step uses a scaffold ID, the
+     step's description and accommodations prose MUST draw on that
+     scaffold's curated moves — adapt the language to this text and
+     this class; never invent a parallel version of the pedagogy.
+   - `accommodationDetails[]` — for every accommodation ID: the full
+     `teacherPrompt`, the `evidenceCite`/`evidenceUrl` research basis,
+     and `appliesWhenReason` (why it triggered for THIS class). Use the
+     reason to explain supports to the teacher ("because two of your
+     students are at WIDA 3 with Spanish at home, I've attached…")
+     instead of attaching them silently.
+   - Openers carry verbatim `hookText` / `priorKnowledgeProbe` /
+     `learningIntentionStem`; exit slips carry the full `prompt`,
+     misconception `probe`, and verbatim `criteria0to3` rubric prose.
+     Use that curated language as the spine of what you emit.
 
 ---
 
@@ -242,11 +261,56 @@ The finalized plan must include:
    anticipated misconceptions referenced.
 10. **Rubric** — exactly 4 rows scored `{0, 1, 2, 3}`.
 11. **Teacher Modification Options**.
+12. **Teacher Moves** — every procedure step carries a six-field
+    `teacherMoves` execution recipe (see next section).
+
+### TEACHER MOVES — non-negotiable
+
+Every procedure step includes a `teacherMoves` object with six fields:
+`launch`, `duringWork`, `checkForUnderstanding`, `ifStuck`, `ifAhead`,
+`transition`. Each is 1-3 plain-text sentences focused on ONE teacher
+decision point. The `description` field stays the 2-4 sentence *what*
+summary; `teacherMoves` is the *how* recipe — written so a substitute
+teacher could run the phase cold from the page.
+
+Requirements:
+
+- `launch` includes the model question or directive **verbatim, inside
+  quotation marks** — the exact words the teacher says.
+- `duringWork` names the conferring move (confer, listen for, cold call,
+  redirect, probe), the data the teacher collects, and the specific
+  student talk to listen for.
+- `checkForUnderstanding` names a concrete artifact or signal
+  (sticky-note check, organizer scan, thumbs, exit-ticket preview).
+- `ifStuck` ties to the accommodation lanes from the learner profile.
+- `ifAhead` aligns to the highest-DOK objective, not busywork.
+- `transition` names the signal (chime, slide change, anchor-chart pivot).
+- At least 3 of the 5 phases must include verbatim quoted teacher
+  language somewhere in their six moves.
+
+Worked example — the difference between *what* and *how*:
+
+- `description` (the what): "Pairs annotate paragraphs 2-4 of the text,
+  marking evidence of the narrator's motivation. Pairs share one
+  annotation with another pair before the whole-class debrief."
+- `teacherMoves.launch` (the how): `Project paragraph 2 and say: "Watch
+  me mark the first line that tells me what Anna values — I'm
+  underlining 'she could not leave him' and writing MOTIVE in the
+  margin. Your turn: find one more in this paragraph with your partner."`
+- `teacherMoves.duringWork`: `Confer with the two pairs flagged in the
+  learner profile first; listen for students naming WHY the line matters
+  rather than retelling plot. Track on a clipboard which pairs cite
+  paragraph 4, to sequence the debrief.`
+
+Generic moves ("circulate and monitor", "check for understanding") will
+be flagged by the scorer. Name the move, the words, and the evidence.
 
 ### Hard validation rules (server enforces, retries with fixes)
 
 - `procedure.length === 5`, canonical order.
 - Every `procedure[i].accommodations` non-empty.
+- Every `procedure[i].teacherMoves` has all six fields, each ≥ 15 chars,
+  plain text (markdown in any field is a validation error).
 - `successCriteria.length >= objectives.length`.
 - `rubric` exactly 4 rows, scores `{0,1,2,3}`.
 - `textOptions.length === 3`, exactly one `selected: true`.

@@ -1,0 +1,334 @@
+{
+  "_meta": {
+    "status": "draft",
+    "source": "research-content-additions plan, item B1",
+    "note": "Verbatim teacher-language exemplars for the top ~80 scaffolds (16 per subject), keyed by scaffold id. Injected into CATALOG_CANDIDATES scaffoldDetails so Penny writes teacher moves in authentic classroom register. DRAFTS pending teacher voice review — every line should sound like words you would actually say.",
+    "lastUpdated": "2026-06-11"
+  },
+  "exemplars": {
+    "ela.academic_discourse_rubric": [
+      "Before we start, look at the rubric we built together last week. Which level were you at in yesterday's discussion, and what's one move that gets you to the next one?",
+      "I'm not listening for how many times you talk today. I'm listening for one comment that builds on someone else's idea — that's a level three move."
+    ],
+    "ela.academic_language_functions_toolkit": [
+      "You're about to compare, so flip your toolkit to the compare page. Borrow a phrase like 'While both texts..., only the second one...' and make it yours.",
+      "When you disagree in an academic discussion, you don't say 'that's wrong.' Try 'I see it differently because...' — same honesty, more power."
+    ],
+    "ela.accessibility_toolkit_introduction": [
+      "Everything on this menu — audio, larger text, the reading ruler — is for anyone who wants it. Trying a tool isn't a confession; it's a strategy.",
+      "Today I want everyone to test one support from the toolkit and tell me whether it earned a spot in your routine."
+    ],
+    "ela.active_listening_log": [
+      "While your partner shares, your only job is to catch their main idea. You'll write one line: 'I heard you say...' — and then check if you got it right.",
+      "Before you respond with your own idea, your log needs your partner's idea in it. Listening first is the move."
+    ],
+    "ela.anticipation_guide": [
+      "Read each statement and commit — agree or disagree, no fence-sitting. You can change your mind after we read, and the change is the interesting part.",
+      "You marked 'disagree' before we read. Now that you've finished the text, would you still? Show me the line that moved you or kept you put."
+    ],
+    "ela.argument_outline_tree": [
+      "Your claim is the trunk. Every branch has to grow out of it — if a piece of evidence doesn't connect back to the trunk, it belongs on a different tree.",
+      "Before you draft a single paragraph, walk me through your tree: claim, two branches of evidence, and where the counterclaim attaches."
+    ],
+    "ela.argument_rebuttal_roundtable": [
+      "When you rebut, start with what's strong in their argument: 'The best part of your case is... and here's where it breaks down.' We argue ideas, not people.",
+      "Everyone speaks once before anyone speaks twice. If your rebuttal got used, your job now is to strengthen it, not repeat it."
+    ],
+    "ela.argument_writing_structure": [
+      "An opinion says what you think. An argument proves it. Today we're turning your opinion about the ending into an argument with two pieces of evidence.",
+      "Check your draft: can you point to your claim with one finger and your reasoning with the other? If both fingers land on the same sentence, we have work to do."
+    ],
+    "ela.bilingual_glossary_builders": [
+      "You're the expert on your language here. Write the term in English, in your home language, and then — this is the important column — explain it the way you'd explain it to your cousin.",
+      "Add 'foreshadowing' to your glossary before we read. If the Spanish cognate helps, use it; if there isn't one, your own definition in either language counts."
+    ],
+    "ela.bilingual_sentence_frames": [
+      "Both frames say the same thing — one in English, one in Spanish. Rehearse it in whichever language gets your idea out, then we'll move it to academic English together.",
+      "Your idea is already strong. The frame is just the suit it wears for an academic audience."
+    ],
+    "ela.cer_paragraph_frame": [
+      "Claim first: what do you believe about this character? Then the line that proves it — with quotation marks — and then the part most people skip: WHY that line proves it.",
+      "Your evidence is great. Now the reasoning sentence: don't tell me what the quote says, tell me what it shows."
+    ],
+    "ela.character_arc_timeline": [
+      "Plot the character at chapter one and at the end. The question isn't who they are — it's what happened in between that changed them. Mark the turning point.",
+      "You've listed traits. Now show me movement: where on your timeline does 'confident' start to crack?"
+    ],
+    "ela.choice_reading_pathways": [
+      "All three pathways hit the same standard — you're choosing the door, not the destination. Pick the text that you'll actually want to keep reading at minute twenty.",
+      "You picked the graphic novel pathway. Same deal as everyone else: a claim about the protagonist with two pieces of evidence — panels count as text."
+    ],
+    "ela.code_switching_minilesson": [
+      "The way you talk with your friends is not wrong English — it's one of your Englishes. Today we're studying when each one is the power move.",
+      "Rewrite your text message as the opening of a cover letter. What changed? That's register, and you just proved you can control it."
+    ],
+    "ela.community_critical_inquiry_project": [
+      "Your research question has to matter to someone outside this room. Who in this community is affected, and who would want your answer?",
+      "Before you write, decide your audience: the principal, the city council, your block. The audience picks your evidence."
+    ],
+    "ela.community_issue_editorials": [
+      "An editorial isn't a complaint — it's a claim with receipts and an ask. What exactly do you want your reader to do by your last sentence?",
+      "Read the room you're writing for: what objection will your neighbors raise, and which paragraph answers it?"
+    ],
+    "math.affective_belonging_classroom": [
+      "In this room, a wrong answer with reasoning behind it moves us forward more than a right answer nobody can explain. Thank you for putting yours up.",
+      "Before we start group work: every person in your group gets asked for their thinking before any answer goes on the paper."
+    ],
+    "math.affective_collaborative_resilience": [
+      "Your group's first strategy didn't work. That's data, not defeat. Take one minute: what did the failed attempt teach you about the problem?",
+      "Round two rule: you can't reuse the strategy that stalled. What's a genuinely different way in?"
+    ],
+    "math.affective_goal_setting": [
+      "Last week you said your goal was to stop erasing your work when you got stuck. Look at today's page — did the goal hold? What's the evidence?",
+      "Pick a goal you can check at the end of class, not 'get better at math.' Something like: 'I'll write my first step within two minutes, even if I'm not sure.'"
+    ],
+    "math.affective_growth_mindset_talks": [
+      "You said 'I'm not a math person.' Let me reframe: you're not done yet. Show me where the problem pushed back, and we'll push there together.",
+      "I'm adding the word 'yet' to that sentence for you. 'I can't factor this... yet.' Now let's earn the yet."
+    ],
+    "math.affective_math_anxiety_reduction": [
+      "Same routine as every day: warm-up you've seen before, new idea in the middle, exit problem you'll be ready for. No surprises — that's a promise.",
+      "Your heart rate doesn't get a vote in your math ability. Take the breath, find the first step you know, and start there."
+    ],
+    "math.affective_math_identity": [
+      "The way you organized that table? That's mathematician behavior. Mathematicians aren't people with answers — they're people with systems.",
+      "This week's spotlight: a mathematician whose path looked like yours. Math has never belonged to one kind of person."
+    ],
+    "math.affective_productive_struggle_norms": [
+      "I'm setting a timer for four minutes of honest struggle before anyone can ask me a question. Being stuck is the workout — that's where the strength comes from.",
+      "You're frustrated — good, that means the problem is the right size. What have you tried? What did it tell you?"
+    ],
+    "math.affective_relevance_connections": [
+      "Before I show you the formula, tell me: how would YOU figure out whether the bigger pizza is actually the better deal?",
+      "This system of equations is the same math your phone uses to split a dinner bill with tip. You already think this way — we're just writing it down."
+    ],
+    "math.collaborative_problem_solving": [
+      "Roles up: facilitator keeps the group on the question, recorder writes only what the group agrees on, skeptic asks 'how do we know?' at least twice.",
+      "Your group's answer doesn't count until every member can explain it. Pick your shakiest explainer and rehearse them — I'm cold-calling in five minutes."
+    ],
+    "math.conceptual_equivalence_balance": [
+      "The equals sign is not a 'do it now' button — it's a balance scale. Whatever you do to one side, the other side feels it.",
+      "If I add three to the left pan, what does the right pan need to stay level? That's the whole game of solving equations."
+    ],
+    "math.conceptual_linear_relationships": [
+      "Slope isn't just rise over run — it's a rate with a story. In this graph, what is the 3 actually doing per week?",
+      "Show me your line three ways: the table, the equation, the graph. If the slope doesn't match in all three, one of them is lying."
+    ],
+    "math.conceptual_quadratic_visual": [
+      "Build x squared plus six x with the tiles. Now make it a perfect square — what's missing from the corner? That gap IS completing the square.",
+      "The parabola isn't abstract: it's every garden border problem you've ever seen. Width times length, with one variable doing both jobs."
+    ],
+    "math.conceptual_systems_multiple_rep": [
+      "Two equations, one question: where do these two stories collide? Find the crossing point on the graph first, then prove it with algebra.",
+      "Your graph says the lines cross at four, your algebra says five. They can't both be right — which representation do you trust, and why?"
+    ],
+    "math.cultural_community_data_projects": [
+      "This week's data set is our neighborhood: transit wait times by block. The math is real because the stakes are real.",
+      "Your statistics will be in front of people who live this data. Double-check the claim your graph makes — does the evidence carry it?"
+    ],
+    "math.cultural_critical_data_analysis": [
+      "Before you trust this chart, interrogate it: who collected this data, what did they leave out, and who benefits if you believe it?",
+      "The average says one thing; the distribution says another. Which story is the headline telling, and which is it hiding?"
+    ],
+    "math.cultural_ethnomath_connections": [
+      "Base-twenty counting, tessellation in textiles, the algorithms in braiding patterns — math has been everywhere, always. Today's geometry starts in Benin.",
+      "Your grandmother's recipe scaling is proportional reasoning. Bring one example of math from home this week — that's the ticket in."
+    ],
+    "science.accessibility_universal_design": [
+      "Before we build, audit: who can't use this design yet? A good engineer finds the barrier before the user does.",
+      "Test your prototype with the constraint card you drew — one-handed use, low vision, no sound. What breaks first, and what's your redesign?"
+    ],
+    "science.belonging_in_science": [
+      "Feeling like an outsider in a lab is common enough that scientists have a name for it. The doubt is normal; it is not evidence.",
+      "This week's scientist spotlight didn't come from money or connections — they came from a school like ours. Science is a method, not a membership."
+    ],
+    "science.bilingual_science_vocabulary": [
+      "'Photosynthesis' and 'fotosíntesis' are cousins — same Greek roots doing the same job. Your Spanish is a head start, not a detour.",
+      "Add the term to your two-column card: English on the left, your language on the right, your own sketch in the middle. The sketch is the part your brain keeps."
+    ],
+    "science.claim_evidence_reasoning_scaffold": [
+      "Your claim answers the question. Your evidence is the data — numbers from OUR experiment. Your reasoning is the bridge: what scientific rule connects the data to the claim?",
+      "You've got claim and evidence. Now the reasoning: don't repeat the numbers, tell me what principle makes those numbers mean what you say they mean."
+    ],
+    "science.climate_science_action": [
+      "The data is heavy, so we pair it with a lever: name one decision made in this city in the next year that this evidence could move.",
+      "Despair is not a scientific conclusion. What does the data say is still on the table, and who needs to hear it?"
+    ],
+    "science.collaborative_problem_solving": [
+      "Norms before content: every idea gets thirty seconds of consideration before anyone says no. The fastest way to a good answer is through three bad ones.",
+      "Your group is stuck on one approach. Rotate the recorder role and have the new recorder restate the problem in their own words — fresh phrasing finds fresh doors."
+    ],
+    "science.collaborative_sense_making_discussion": [
+      "Don't tell your group the answer — tell them what you noticed. 'I saw the temperature spike at two minutes' invites thinking; 'it's exothermic' ends it.",
+      "Build or challenge, those are your two moves: 'I agree because my data also...' or 'But how does that explain...?' Pick one and use it."
+    ],
+    "science.comm_1": [
+      "First pass: read for the gist only — one sentence, what is this section about? Second pass is where we mine the details.",
+      "You don't need every word. You need the claim of the paragraph. Headline it in five words, then we'll dig."
+    ],
+    "science.comm_10": [
+      "Every symbol is a word wearing a costume. Delta means 'change in' — so read this aloud as a sentence: 'the change in temperature over the change in time.'",
+      "Before you compute, translate: say the formula in plain English to your partner. If you can't say it, we're not ready to solve it."
+    ],
+    "science.comm_2": [
+      "'Thermo' means heat, 'meter' means measure. You now own about forty science words you've never seen yet. Break the next one apart yourself.",
+      "Circle the root, box the prefix. 'Exo-' and 'endo-' are opposites — once you know that pair, half this chapter unlocks."
+    ],
+    "science.comm_3": [
+      "In science writing, the data speaks first. Lead with what you measured, then what it means — opinion never outranks evidence.",
+      "Swap drafts: can your partner find your claim, your data, and your reasoning in under thirty seconds? If not, the structure needs work, not the science."
+    ],
+    "science.comm_4": [
+      "Discussion protocol: claim, then evidence, then one question for the group. If you speak without data, the group's job is to ask 'what's your evidence?'",
+      "Disagreement sounds like this: 'My data shows something different — can we compare procedures?' That's how scientists argue."
+    ],
+    "science.comm_5": [
+      "Before you read a single bar: what's on each axis, and what are the units? Every graph misread starts with a skipped axis.",
+      "What does this diagram NOT show you? Knowing the limits of a figure is as scientific as reading it."
+    ],
+    "science.comm_6": [
+      "Three questions for every source: who wrote it, who paid for it, and can the claim be checked? A pretty website answers none of those.",
+      "This article and this study disagree. Which one shows its data? Follow the evidence, not the confidence."
+    ],
+    "science.comm_7": [
+      "Close the article, then write the idea in your own words. If you can't, you don't have it yet — reread, don't copy.",
+      "Your paraphrase keeps the author's idea but uses your sentence. Then the citation hands the credit back. Both halves are required."
+    ],
+    "science.comm_8": [
+      "Your audience hasn't seen your data for three weeks like you have. First slide: the question. Second: what you found. Everything else serves those two.",
+      "Rehearse the transitions, not just the slides — 'this result led us to ask...' is what makes it a story instead of a stack."
+    ],
+    "science.comm_9": [
+      "Your notebook is evidence, not scratch paper. Date it, label it, and write what surprised you — future-you is the reader.",
+      "If another group repeated your procedure from your notes alone, would they get your result? That's the standard."
+    ],
+    "sel.assertive_communication_development": [
+      "Passive hides your need, aggressive bulldozes theirs. Assertive sounds like: 'I need the materials back by Friday so I can finish my part.' Need, reason, respect.",
+      "Try the frame: 'When you..., I feel..., and I need...' — say it to me first, then we'll take it to the real conversation."
+    ],
+    "sel.bias_reflection_protocol": [
+      "First thought isn't your fault; second thought is your responsibility. What did you assume here, and what's the evidence for and against it?",
+      "Run the swap test: if a different student had done the exact same thing, would your reaction change? Sit with whatever you just noticed."
+    ],
+    "sel.boundary_setting": [
+      "A boundary isn't mean — it's information. 'I can't lend that out' is a complete sentence, and you don't owe a paragraph after it.",
+      "Notice the guilt after you said no? That feeling is the old habit leaving, not proof you did something wrong."
+    ],
+    "sel.boundary_setting_practice": [
+      "Let's rehearse before the real thing: I'll be the friend who keeps pushing, you hold your no. We drill it here so it's there when you need it.",
+      "Your boundary, your script: one sentence, no apology in it. Now say it again like you mean it — because you do."
+    ],
+    "sel.bystander_intervention_training": [
+      "You have four moves when you see harm: interrupt directly, distract, delegate to an adult, or check in after. Doing nothing isn't on the list — pick the one that's safe for you.",
+      "Sometimes the bravest move is the quiet one: sitting next to the person afterward and saying 'that wasn't okay, and I saw it.'"
+    ],
+    "sel.civic_responsibility_action": [
+      "You don't need a title to have civic power. Who decided the thing you're mad about, and what's the channel for reaching them?",
+      "Pick an issue smaller than 'fix everything': one block, one policy, one meeting. Real change is rude — it shows up in person."
+    ],
+    "sel.collaboration_skill_building": [
+      "Today's collaboration target is air time: in your group of four, nobody talks twice until everyone's talked once.",
+      "Disagreeing with the idea is collaboration; dismissing the person is not. 'I see it differently' keeps both the idea and the teammate."
+    ],
+    "sel.community_issue_circle": [
+      "In circle, the talking piece does the managing: speak when you hold it, listen when you don't. Every perspective lands before any gets debated.",
+      "We're not solving today — we're understanding. After this round, name one view you heard that you hadn't considered."
+    ],
+    "sel.conflict_navigation_skills": [
+      "Avoiding the conflict doesn't shrink it — it just schedules it for later, with interest. Let's name the actual disagreement in one sentence.",
+      "Before you respond, pass their test: restate their side well enough that they say 'yes, that's it.' Then yours gets its turn."
+    ],
+    "sel.conflict_resolution_steps": [
+      "Step one is always cool-down — nobody negotiates well at a heart rate of 140. Then: each person states the problem, no interruptions, and we hunt for the fix together.",
+      "You've both said what happened. Now the harder question: what does each of you need to be okay going forward?"
+    ],
+    "sel.cultural_humility_development": [
+      "Swap 'I know about their culture' for 'what am I missing?' Humility isn't ignorance — it's keeping the question open.",
+      "You met one person from that community, so you've met exactly one person. What would you need to learn before any 'they' sentence is honest?"
+    ],
+    "sel.cultural_identity_exploration": [
+      "Your name, your language, your family's table — those are scholarly sources today. You're the only expert on this text.",
+      "Code-switching is a skill, not a betrayal. Both versions of you are real; today we honor the one school sees least."
+    ],
+    "sel.cultural_lens_analysis": [
+      "Before you judge the behavior, ask what it means where it's from. Eye contact, silence, directness — every one of those is a dialect.",
+      "Whose 'normal' is this rule built on? That question is the lens — keep it in your pocket all week."
+    ],
+    "sel.disability_identity_pride": [
+      "Disability is a way of moving through the world, not a discount on your worth. The problem to solve is the barrier, not you.",
+      "Self-advocacy sounds like: 'I learn best when... and I need...' — you're not asking a favor, you're stating a fact."
+    ],
+    "sel.emotion_regulation_toolkit": [
+      "Name it to tame it: is this anger, or is it embarrassment wearing anger's jacket? The right name picks the right tool.",
+      "Your toolkit has five moves — breath, movement, water, words, walk-away. Which one matches a seven-out-of-ten frustration?"
+    ],
+    "sel.empathy_development_practice": [
+      "Empathy isn't agreeing — it's accurately imagining. What might this character be feeling, and what in the text makes you think so?",
+      "Before you offer a fix, offer a mirror: 'That sounds exhausting.' Most people need to be heard before they can be helped."
+    ],
+    "ss.argument_evidence_structure": [
+      "Quotes are not an argument — they're ingredients. After every quote, your sentence: what does this evidence prove about your claim?",
+      "The evidence sandwich: your claim on top, the source in the middle, your analysis underneath. No naked quotes."
+    ],
+    "ss.bias_detection_framework": [
+      "Every source has a position — that's not a flaw, it's a fact. The skill is naming the position and reading through it, not throwing the source away.",
+      "Who wrote this, when, and what did they want their reader to do? Answer those three and you've found the bias without losing the evidence."
+    ],
+    "ss.black_history_integration": [
+      "Black history isn't a February unit — it's load-bearing American history. You can't explain this economy, this music, or this Constitution's amendments without it.",
+      "We're reading the freedpeople's own petitions, not just descriptions of them. Primary voices first."
+    ],
+    "ss.cause_effect_historical_analysis": [
+      "History never has one cause. Build the chain: what's the spark, what's the fuel, and what made the fuel flammable in the first place?",
+      "You found the immediate cause. Now go back twenty years — what condition had to exist for that spark to catch?"
+    ],
+    "ss.change_continuity_analysis": [
+      "Something always changes and something always persists. Track both columns — and then the real question: changed for whom?",
+      "The law changed in 1865. Ask the sharecropper's ledger whether life did. Change on paper and change in lives are different timelines."
+    ],
+    "ss.civic_action_planning": [
+      "Passion picks the issue; strategy wins it. Who has the power to change this, and what do they respond to — votes, money, attention, or shame?",
+      "Map your tactic to your target: a petition moves a school board; it doesn't move a corporation. Match the lever to the door."
+    ],
+    "ss.civic_issue_analysis": [
+      "Today's headline is a history question in disguise. What's the precedent — when has this country faced this choice before, and what happened?",
+      "Find three sources on this issue that disagree. The truth isn't in the middle — it's in checking whose evidence holds."
+    ],
+    "ss.civil_discourse_skill_building": [
+      "We argue ideas at full strength and protect people at full strength — both at once. Attack the reasoning, never the kid.",
+      "Before rebutting, steelman: state their best point so well they'd sign it. Then your counter actually counts."
+    ],
+    "ss.claim_evidence_reasoning_history": [
+      "A historical claim is arguable, specific, and anchored in time. 'The New Deal helped people' is a vibe; 'the CCC reshaped Western land use' is a claim.",
+      "Your reasoning must name the historical concept doing the work — causation, continuity, perspective. That's what separates analysis from summary."
+    ],
+    "ss.community_research_methods": [
+      "The internet doesn't know what your neighborhood knows. Who lived this history on your block, and what would you ask them?",
+      "Interview ethics first: consent, accurate quoting, and they see the final draft. Community knowledge is a gift, not a quarry."
+    ],
+    "ss.comparative_analysis_framework": [
+      "Pick your comparison criteria BEFORE you compare — economy, rights, daily life. Otherwise you're just listing facts in parallel columns.",
+      "You've found the similarities and differences. Now the payoff question: what does this comparison reveal that studying either one alone couldn't?"
+    ],
+    "ss.comparison_across_context": [
+      "Two revolutions, two centuries apart. Same playbook or coincidence? Your criteria decide — pick three and defend them.",
+      "A difference is only interesting if it's significant. Why does THIS difference matter to your question?"
+    ],
+    "ss.contextualization_paragraph": [
+      "Don't restate the prompt — set the stage. What three developments were already in motion when this story starts?",
+      "Funnel it: start with the era's big currents, then narrow to the moment your argument lives in. Broad to specific, in four sentences."
+    ],
+    "ss.continuity_change_analysis": [
+      "Draw the line from 1900 to 1950: what would a worker from the start recognize at the end, and what would stun them?",
+      "Rate the change: surface, structural, or revolutionary? Defend your rating with one piece of evidence from each decade."
+    ],
+    "ss.corroboration_matrix": [
+      "One document is an anecdote. Two agreeing documents are a pattern. A document that disagrees is a gift — now you have a real question.",
+      "Fill the matrix: where do sources two and four agree, and does source five's author have a reason to tell it differently?"
+    ],
+    "ss.cost_benefit_analysis": [
+      "Total benefit is a politician's number. The historian's question is distribution: who paid the costs, and who collected the gains?",
+      "The dam powered a million homes. Now list what the valley's farmers lost — both columns go on the ledger before you judge the policy."
+    ]
+  }
+}

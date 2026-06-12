@@ -43,10 +43,21 @@ export const objectiveSchema = z.union([
   }),
 ]);
 
+export const teacherMovesSchema = z.object({
+  launch: z.string(),
+  duringWork: z.string(),
+  checkForUnderstanding: z.string(),
+  ifStuck: z.string(),
+  ifAhead: z.string(),
+  transition: z.string(),
+});
+
 export const procedureStepSchema = z.object({
   phase: z.enum(LESSON_PHASE_ORDER as [LessonPhaseId, ...LessonPhaseId[]]).optional(),
   step: z.string().min(2),
   description: z.string().min(20),
+  // Lenient at intake (legacy plans lack it); the finalize gate checks quality.
+  teacherMoves: teacherMovesSchema.optional(),
   accommodations: z.string().optional(),
   scaffoldIds: z.array(z.string()).optional(),
   accommodationIds: z.array(z.string()).optional(),
@@ -266,6 +277,58 @@ export function validateLessonPlan(
         });
       }
     });
+
+    // Teacher moves: every fresh finalize carries the six-field execution
+    // recipe per phase. Missing block is a warning (legacy plans predate it);
+    // a present-but-thin or markdown-contaminated block is an error because
+    // the generator schema required it and the print layout renders verbatim.
+    const TEACHER_MOVE_FIELDS = [
+      'launch', 'duringWork', 'checkForUnderstanding', 'ifStuck', 'ifAhead', 'transition',
+    ] as const;
+    const MARKDOWN_LEAK = /(\*\*|__|^#{1,6}\s|`|\[[^\]]+\]\([^)]+\))/m;
+    let phasesWithQuotedLanguage = 0;
+    let phasesWithMoves = 0;
+    procedure.forEach((step, i) => {
+      const moves = step.teacherMoves;
+      if (!moves) {
+        errors.push({
+          path: `procedure[${i}].teacherMoves`,
+          message: `Phase "${step.step}" is missing the teacherMoves execution recipe (launch / duringWork / checkForUnderstanding / ifStuck / ifAhead / transition).`,
+          severity: 'warning',
+        });
+        return;
+      }
+      phasesWithMoves += 1;
+      for (const field of TEACHER_MOVE_FIELDS) {
+        const value = (moves[field] ?? '').trim();
+        if (value.length < 15) {
+          errors.push({
+            path: `procedure[${i}].teacherMoves.${field}`,
+            message: `Phase "${step.step}" teacherMoves.${field} is ${value.length === 0 ? 'empty' : 'too thin'} — write 1-3 concrete sentences (min 15 chars).`,
+            severity: 'error',
+          });
+        } else if (MARKDOWN_LEAK.test(value)) {
+          errors.push({
+            path: `procedure[${i}].teacherMoves.${field}`,
+            message: `Phase "${step.step}" teacherMoves.${field} contains markdown syntax; the printed plan renders this verbatim. Use plain text.`,
+            severity: 'error',
+          });
+        }
+      }
+      // Soft check: the recipe should contain verbatim teacher language
+      // (a quoted question or directive) somewhere in the six moves.
+      const allMoves = TEACHER_MOVE_FIELDS.map((f) => moves[f] ?? '').join(' ');
+      if (/[""][^""]{4,}[""]|"[^"]{4,}"/.test(allMoves)) {
+        phasesWithQuotedLanguage += 1;
+      }
+    });
+    if (phasesWithMoves > 0 && phasesWithQuotedLanguage < Math.min(3, phasesWithMoves)) {
+      errors.push({
+        path: 'procedure',
+        message: `Only ${phasesWithQuotedLanguage}/${phasesWithMoves} phases include verbatim quoted teacher language in teacherMoves. Aim for the exact words the teacher says (in quotation marks) in at least 3 phases.`,
+        severity: 'warning',
+      });
+    }
 
     // DOK lexicon check: each objective with a claimed DOK level should use a
     // verb whose canonical DOK is within 1 level of the claim. We treat this

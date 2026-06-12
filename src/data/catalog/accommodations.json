@@ -49,6 +49,10 @@
       "UDL 7.2",
       "HLP7"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.7.2",
+      "hlp.7"
+    ],
     "elOnly": false,
     "languageSupportType": ""
   },
@@ -94,6 +98,14 @@
       "UDL 5.1",
       "HLP19"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.5.1",
+      "hlp.19"
+    ],
+    "evidence": {
+      "citationText": "IRIS identifies response accommodations (e.g., scribing, alternate response modes) to allow students with motor/writing barriers to demonstrate knowledge. These change how students respond without changing learning targets.",
+      "sourceLink": "https://iris.peabody.vanderbilt.edu/module/jj1/cresource/q3/p09/"
+    },
     "elOnly": false,
     "languageSupportType": ""
   },
@@ -151,6 +163,10 @@
       "UDL 7.2",
       "HLP15"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.7.2",
+      "hlp.15"
+    ],
     "elOnly": false,
     "languageSupportType": ""
   },
@@ -201,6 +217,10 @@
       "UDL 7.3",
       "HLP7"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.7.3",
+      "hlp.7"
+    ],
     "elOnly": false,
     "languageSupportType": ""
   },
@@ -241,6 +261,14 @@
       "UDL 2.1",
       "HLP14"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.2.1",
+      "hlp.14"
+    ],
+    "evidence": {
+      "citationText": "UDL endorses embedded glossaries and symbol/vocabulary supports to access complex academic language. SIOP/dual-language resources also recommend leveraging L1 to scaffold L2 learning alongside clear content and language objectives.",
+      "sourceLink": "https://udlguidelines.cast.org/representation/language-symbols/vocabulary-symbols-structure/"
+    },
     "elOnly": true,
     "languageSupportType": "bilingual_glossary"
   },
@@ -289,6 +317,14 @@
       "UDL 5.2",
       "HLP14"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.5.2",
+      "hlp.14"
+    ],
+    "evidence": {
+      "citationText": "NCEO syntheses report positive, though nuanced, effects of calculator use when computation speed/accuracy is not the construct, with benefits on state math assessments and problem-solving items. Guidance stresses permitting calculators only on calculator-designated items to preserve validity.",
+      "sourceLink": "https://nceo.umn.edu/publications/OnlinePubs/Report402/default.htm"
+    },
     "elOnly": false,
     "languageSupportType": ""
   },
@@ -357,6 +393,10 @@
       "UDL 9.2",
       "HLP7"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.9.2",
+      "hlp.7"
+    ],
     "elOnly": false,
     "languageSupportType": ""
   },
@@ -405,6 +445,14 @@
       "UDL 1.2",
       "HLP15"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.1.2",
+      "hlp.15"
+    ],
+    "evidence": {
+      "citationText": "A review of 100+ studies shows captions significantly improve comprehension, attention, and memory for video across learner groups, with strong benefits for D/deaf and hard-of-hearing and multilingual learners. The review also notes policy expectations for educational captioning.",
+      "sourceLink": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5214590/"
+    },
     "elOnly": false,
     "languageSupportType": ""
   },
@@ -477,6 +525,11 @@
       "UDL 6.3",
       "HLP16"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.6.2",
+      "udl.6.3",
+      "hlp.16"
+    ],
     "elOnly": false,
     "languageSupportType": ""
   },
@@ -546,6 +599,14 @@
       "UDL 6.2",
       "HLP16"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.6.2",
+      "hlp.16"
+    ],
+    "evidence": {
+      "citationText": "HLP #16 (Use Explicit Instruction) emphasizes modeling and sequencing steps with clear, concise directions and frequent checks for understanding. “Chunk-and-check” procedures directly align with this practice and improve accuracy and access for diverse learners.",
+      "sourceLink": "https://highleveragepractices.org/2017-first-edition-materials/hlp-16-use-explicit-instruction"
+    },
     "elOnly": false,
     "languageSupportType": ""
   },
@@ -615,6 +676,10 @@
       "UDL 6.2",
       "HLP16"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.6.2",
+      "hlp.16"
+    ],
     "elOnly": false,
     "languageSupportType": ""
   },
@@ -664,6 +729,10 @@
     "udlHlpTags": [
       "UDL 1.2",
       "HLP15"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.1.2",
+      "hlp.15"
     ],
     "elOnly": false,
     "languageSupportType": ""
@@ -741,6 +810,10 @@
       "UDL 1.3",
       "HLP13"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.1.3",
+      "hlp.13"
+    ],
     "elOnly": false,
     "languageSupportType": ""
   },
@@ -815,6 +888,12 @@
       "HLP15",
       "HLP16"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.1.2",
+      "udl.3.3",
+      "hlp.15",
+      "hlp.16"
+    ],
     "elOnly": false,
     "languageSupportType": ""
   },
@@ -863,6 +942,11 @@
       "UDL 1.3",
       "UDL 2.1",
       "HLP13"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.1.3",
+      "udl.2.1",
+      "hlp.13"
     ],
     "elOnly": false,
     "languageSupportType": ""
@@ -934,6 +1018,10 @@
       "UDL 6.2",
       "HLP7"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.6.2",
+      "hlp.7"
+    ],
     "elOnly": false,
     "languageSupportType": ""
   },
@@ -986,6 +1074,10 @@
       "UDL 4.1",
       "HLP13"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.4.1",
+      "hlp.13"
+    ],
     "elOnly": false,
     "languageSupportType": ""
   },
@@ -1027,6 +1119,14 @@
       "UDL 7.3",
       "HLP18"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.7.3",
+      "hlp.18"
+    ],
+    "evidence": {
+      "citationText": "NCEO’s research synthesis (2013–2014) finds extended time is among the most-studied accommodations and can raise test performance for students with disabilities when speed isn’t part of the construct. Guidance stresses matching extension to student need and test purpose.",
+      "sourceLink": "https://nceo.umn.edu/publications/OnlinePubs/Report402/default.htm"
+    },
     "elOnly": false,
     "languageSupportType": ""
   },
@@ -1071,6 +1171,14 @@
       "UDL 7.3",
       "HLP18"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.7.3",
+      "hlp.18"
+    ],
+    "evidence": {
+      "citationText": "Across NCEO annual summaries, extended time remains widely used and often beneficial, but the amount should be set by the IEP/504 team based on what the test measures. The 2020 synthesis again highlights extended time as a frequent focus of effectiveness studies.",
+      "sourceLink": "https://nceo.umn.edu/publications/OnlinePubs/Report436/default.html"
+    },
     "elOnly": false,
     "languageSupportType": ""
   },
@@ -1143,6 +1251,10 @@
     "udlHlpTags": [
       "UDL 5.1",
       "HLP15"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.5.1",
+      "hlp.15"
     ],
     "elOnly": false,
     "languageSupportType": ""
@@ -1240,6 +1352,12 @@
       "HLP13",
       "HLP15"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.5.2",
+      "udl.6.2",
+      "hlp.13",
+      "hlp.15"
+    ],
     "elOnly": false,
     "languageSupportType": ""
   },
@@ -1311,6 +1429,14 @@
       "UDL 8.3",
       "HLP7"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.8.3",
+      "hlp.7"
+    ],
+    "evidence": {
+      "citationText": "HLP #17 (Flexible Grouping) and HLP #18 (Active Engagement) support structured small-group learning with clear roles and accountability. Assigning defined roles during cooperative tasks aligns with these practices to improve participation and achievement.",
+      "sourceLink": "https://highleveragepractices.org/instruction"
+    },
     "elOnly": false,
     "languageSupportType": ""
   },
@@ -1380,6 +1506,14 @@
       "UDL 5.3",
       "HLP13"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.5.3",
+      "hlp.13"
+    ],
+    "evidence": {
+      "citationText": "A review of 13 studies found guided notes boost note-taking accuracy and test performance for students who struggle with academic content. The strategy is easy to use during modeling/guided practice and promotes active engagement.",
+      "sourceLink": "https://www.tandfonline.com/doi/full/10.1080/1045988X.2010.548415"
+    },
     "elOnly": false,
     "languageSupportType": ""
   },
@@ -1425,6 +1559,10 @@
     "udlHlpTags": [
       "UDL 2.1",
       "HLP14"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.2.1",
+      "hlp.14"
     ],
     "elOnly": true,
     "languageSupportType": "leveled_summary"
@@ -1502,6 +1640,14 @@
       "UDL 2.1",
       "HLP14"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.2.1",
+      "hlp.14"
+    ],
+    "evidence": {
+      "citationText": "CAST’s UDL Guidelines call for clarifying vocabulary/syntax and embedding supports (e.g., glossaries, explicit structure) to aid comprehension. Providing leveled summaries aligns with these checkpoints for multiple means of representation.",
+      "sourceLink": "https://udlguidelines.cast.org/representation/language-symbols/vocabulary-symbols-structure/"
+    },
     "elOnly": false,
     "languageSupportType": ""
   },
@@ -1551,6 +1697,9 @@
     "studentMicrocopy": "base-ten blocks",
     "udlHlpTags": [
       "fraction tiles) during math instruction and practice."
+    ],
+    "udlHlpTagsCanonical": [
+      "fraction_tiles_during_math_instruction_and_practice"
     ],
     "elOnly": false,
     "languageSupportType": "number_line"
@@ -1603,6 +1752,9 @@
     "studentMicrocopy": "number line",
     "udlHlpTags": [
       "and multiplication/division facts table. Review reference sheet use before starting work."
+    ],
+    "udlHlpTagsCanonical": [
+      "and_multiplication_division_facts_table_review_reference_sheet_use_before_starting_work"
     ],
     "elOnly": false,
     "languageSupportType": "math_reference"
@@ -1673,6 +1825,14 @@
       "UDL 7.2",
       "HLP18"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.7.2",
+      "hlp.18"
+    ],
+    "evidence": {
+      "citationText": "Classroom studies show brief activity breaks improve on-task behavior; Mahar et al. (2006) reported significant gains in on-task behavior after a school-based PA program. Very brief high-intensity “FUNtervals” (≈4-min) also reduced off-task behavior in primary grades.",
+      "sourceLink": "https://pubmed.ncbi.nlm.nih.gov/17146314/"
+    },
     "elOnly": false,
     "languageSupportType": ""
   },
@@ -1732,6 +1892,10 @@
       "UDL 7.2",
       "HLP7"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.7.2",
+      "hlp.7"
+    ],
     "elOnly": false,
     "languageSupportType": ""
   },
@@ -1780,6 +1944,10 @@
     "udlHlpTags": [
       "UDL 9.2",
       "HLP15"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.9.2",
+      "hlp.15"
     ],
     "elOnly": false,
     "languageSupportType": ""
@@ -1850,6 +2018,10 @@
       "UDL 7.2",
       "HLP7"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.7.2",
+      "hlp.7"
+    ],
     "elOnly": false,
     "languageSupportType": ""
   },
@@ -1894,6 +2066,14 @@
       "UDL 7.3",
       "HLP7"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.7.3",
+      "hlp.7"
+    ],
+    "evidence": {
+      "citationText": "The IRIS Center identifies preferential seating (e.g., near the teacher or away from distractions) as a standard setting accommodation to increase access and attention. It adjusts the environment without changing expectations or the assessed construct.",
+      "sourceLink": "https://iris.peabody.vanderbilt.edu/module/acc/cresource/q2/p07/"
+    },
     "elOnly": false,
     "languageSupportType": ""
   },
@@ -1946,6 +2126,10 @@
     "udlHlpTags": [
       "UDL 5.1",
       "HLP15"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.5.1",
+      "hlp.15"
     ],
     "elOnly": false,
     "languageSupportType": ""
@@ -2015,6 +2199,10 @@
     "udlHlpTags": [
       "UDL 6.2",
       "HLP22"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.6.2",
+      "hlp.22"
     ],
     "elOnly": false,
     "languageSupportType": ""
@@ -2086,6 +2274,10 @@
     "udlHlpTags": [
       "UDL 7.3",
       "HLP7"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.7.3",
+      "hlp.7"
     ],
     "elOnly": false,
     "languageSupportType": ""
@@ -2161,6 +2353,14 @@
       "UDL 2.1",
       "HLP15"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.2.1",
+      "hlp.15"
+    ],
+    "evidence": {
+      "citationText": "NCEO reports show context-dependent effects for read-aloud/text-to-speech: appropriate when reading isn’t the target (e.g., many math tasks) but potentially construct-altering for reading comprehension. Technical Report 31 and later studies stress team judgment and validity.",
+      "sourceLink": "https://nceo.umn.edu/publications/OnlinePubs/Technical31.htm"
+    },
     "elOnly": false,
     "languageSupportType": ""
   },
@@ -2204,6 +2404,14 @@
       "UDL 7.3",
       "HLP7"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.7.3",
+      "hlp.7"
+    ],
+    "evidence": {
+      "citationText": "IRIS recommends reduced-distraction settings—like study carrels or noise-reducing headphones—to support attention and access. These settings help students demonstrate what they know without altering task demands.",
+      "sourceLink": "https://iris.peabody.vanderbilt.edu/module/acc/cresource/q2/p07/"
+    },
     "elOnly": false,
     "languageSupportType": ""
   },
@@ -2253,6 +2461,14 @@
       "UDL 5.3",
       "HLP17"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.5.3",
+      "hlp.17"
+    ],
+    "evidence": {
+      "citationText": "CEC’s High-Leverage Practices recommend adapting tasks/materials while preserving learning goals, which reduces extraneous load and focuses attention on essential content. Teachers should calibrate reductions to the target construct and evaluate impact.",
+      "sourceLink": "https://highleveragepractices.org/hlp-faculty-guides"
+    },
     "elOnly": false,
     "languageSupportType": ""
   },
@@ -2320,6 +2536,9 @@
     "studentMicrocopy": "increased white space",
     "udlHlpTags": [
       "and 1.8 line spacing. Break lengthy passages across multiple pages."
+    ],
+    "udlHlpTagsCanonical": [
+      "and_1_8_line_spacing_break_lengthy_passages_across_multiple_pages"
     ],
     "elOnly": false,
     "languageSupportType": "reduced_text_density"
@@ -2394,6 +2613,11 @@
       "UDL 7.3",
       "HLP17"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.5.3",
+      "udl.7.3",
+      "hlp.17"
+    ],
     "elOnly": false,
     "languageSupportType": ""
   },
@@ -2463,6 +2687,10 @@
       "UDL 9.2",
       "HLP7"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.9.2",
+      "hlp.7"
+    ],
     "elOnly": false,
     "languageSupportType": ""
   },
@@ -2521,6 +2749,10 @@
     "udlHlpTags": [
       "UDL 5.1",
       "HLP19"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.5.1",
+      "hlp.19"
     ],
     "elOnly": false,
     "languageSupportType": ""
@@ -2591,6 +2823,14 @@
       "UDL 5.2",
       "HLP20"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.5.2",
+      "hlp.20"
+    ],
+    "evidence": {
+      "citationText": "The SIOP Model emphasizes explicit language objectives and scaffolds for oral/written production; sentence frames are a core tactic for making academic language accessible. CAL briefs demonstrate integrating content and language objectives using SIOP in practice.",
+      "sourceLink": "https://www.cal.org/create/publications/briefs/using-the-siop-model-to-improve-middle-school-science-instruction.html"
+    },
     "elOnly": false,
     "languageSupportType": ""
   },
@@ -2633,6 +2873,10 @@
       "UDL 5.2",
       "HLP20"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.5.2",
+      "hlp.20"
+    ],
     "elOnly": true,
     "languageSupportType": "frames"
   },
@@ -2670,6 +2914,14 @@
       "UDL 7.3",
       "HLP7"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.7.3",
+      "hlp.7"
+    ],
+    "evidence": {
+      "citationText": "IRIS lists small-group/individual or separate rooms as setting accommodations to reduce noise and distractions during tests or instruction. NCEO policy summaries also track these as common accommodations across states.",
+      "sourceLink": "https://iris.peabody.vanderbilt.edu/module/acc/cresource/q2/p07/"
+    },
     "elOnly": false,
     "languageSupportType": ""
   },
@@ -2742,6 +2994,11 @@
       "UDL 5.1",
       "HLP19"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.4.2",
+      "udl.5.1",
+      "hlp.19"
+    ],
     "elOnly": false,
     "languageSupportType": ""
   },
@@ -2788,6 +3045,10 @@
     "udlHlpTags": [
       "UDL 7.3",
       "HLP7"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.7.3",
+      "hlp.7"
     ],
     "elOnly": false,
     "languageSupportType": ""
@@ -2838,6 +3099,10 @@
     "udlHlpTags": [
       "UDL 9.2",
       "HLP22"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.9.2",
+      "hlp.22"
     ],
     "elOnly": false,
     "languageSupportType": ""
@@ -2909,6 +3174,10 @@
       "UDL 6.2",
       "HLP15"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.6.2",
+      "hlp.15"
+    ],
     "elOnly": false,
     "languageSupportType": ""
   },
@@ -2961,6 +3230,11 @@
       "UDL 1.3",
       "UDL 2.1",
       "HLP19"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.1.3",
+      "udl.2.1",
+      "hlp.19"
     ],
     "elOnly": false,
     "languageSupportType": ""
@@ -3029,6 +3303,10 @@
       "UDL 7.2",
       "HLP7"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.7.2",
+      "hlp.7"
+    ],
     "elOnly": false,
     "languageSupportType": ""
   },
@@ -3081,6 +3359,11 @@
       "UDL 4.2",
       "HLP19"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.4.1",
+      "udl.4.2",
+      "hlp.19"
+    ],
     "elOnly": false,
     "languageSupportType": ""
   },
@@ -3132,6 +3415,11 @@
       "UDL 1.2",
       "UDL 2.1",
       "HLP13"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.1.2",
+      "udl.2.1",
+      "hlp.13"
     ],
     "elOnly": false,
     "languageSupportType": ""
@@ -3204,6 +3492,14 @@
       "UDL 7.2",
       "HLP7"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.7.2",
+      "hlp.7"
+    ],
+    "evidence": {
+      "citationText": "Systematic reviews identify visual activity schedules as an evidence-based practice for autistic learners, increasing independence and on-task behavior across settings. Practitioner briefs translate the research into concrete classroom steps.",
+      "sourceLink": "https://pubmed.ncbi.nlm.nih.gov/25081593/"
+    },
     "elOnly": false,
     "languageSupportType": ""
   },
@@ -3275,6 +3571,10 @@
       "UDL 6.2",
       "HLP7"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.6.2",
+      "hlp.7"
+    ],
     "elOnly": false,
     "languageSupportType": ""
   },
@@ -3342,6 +3642,9 @@
     "udlHlpTags": [
       "hand signals) for transitions instead of verbal-only cues."
     ],
+    "udlHlpTagsCanonical": [
+      "hand_signals_for_transitions_instead_of_verbal_only_cues"
+    ],
     "elOnly": false,
     "languageSupportType": "visual_cues"
   },
@@ -3390,6 +3693,10 @@
     "udlHlpTags": [
       "UDL 5.2",
       "HLP22"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.5.2",
+      "hlp.22"
     ],
     "elOnly": false,
     "languageSupportType": ""
@@ -3463,6 +3770,11 @@
       "UDL 5.2",
       "HLP19"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.4.2",
+      "udl.5.2",
+      "hlp.19"
+    ],
     "elOnly": false,
     "languageSupportType": ""
   },
@@ -3532,6 +3844,10 @@
     "udlHlpTags": [
       "UDL 6.2",
       "HLP14"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.6.2",
+      "hlp.14"
     ],
     "elOnly": false,
     "languageSupportType": ""
@@ -3605,6 +3921,11 @@
       "UDL 2.5",
       "HLP15"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.1.2",
+      "udl.2.5",
+      "hlp.15"
+    ],
     "elOnly": false,
     "languageSupportType": ""
   },
@@ -3655,6 +3976,10 @@
     "udlHlpTags": [
       "UDL 3.4",
       "HLP9"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.3.4",
+      "hlp.9"
     ],
     "evidence": {
       "citationText": "Steinbrenner et al. (2020). Evidence-Based Practices for Children, Youth, and Young Adults with Autism. NCAEP. Comprehensive review identifying 28 evidence-based practices for autism intervention including visual supports, social narratives, and peer-mediated interventions.",
@@ -3712,6 +4037,11 @@
       "UDL 6.1",
       "UDL 9.3",
       "HLP18"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.6.1",
+      "udl.9.3",
+      "hlp.18"
     ],
     "evidence": {
       "citationText": "AFIRM Team. Autism Focused Intervention Resources and Modules. UNC FPG. Free online modules providing step-by-step instructions for implementing evidence-based practices for autism, including antecedent-based interventions and task analysis.",
@@ -3778,6 +4108,11 @@
       "UDL 9.2",
       "HLP7"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.7.3",
+      "udl.9.2",
+      "hlp.7"
+    ],
     "evidence": {
       "citationText": "Steinbrenner et al. (2020). Evidence-Based Practices for Children, Youth, and Young Adults with Autism. NCAEP. Comprehensive review identifying 28 evidence-based practices for autism intervention including visual supports, social narratives, and peer-mediated interventions.",
       "sourceLink": "https://ncaep.fpg.unc.edu/wp-content/uploads/EBP-Report-2020.pdf"
@@ -3830,6 +4165,10 @@
     "udlHlpTags": [
       "UDL 7.3",
       "HLP7"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.7.3",
+      "hlp.7"
     ],
     "evidence": {
       "citationText": "Steinbrenner et al. (2020). Evidence-Based Practices for Children, Youth, and Young Adults with Autism. NCAEP. Comprehensive review identifying 28 evidence-based practices for autism intervention including visual supports, social narratives, and peer-mediated interventions.",
@@ -3888,6 +4227,11 @@
       "UDL 8.3",
       "HLP9",
       "HLP16"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.8.3",
+      "hlp.9",
+      "hlp.16"
     ],
     "evidence": {
       "citationText": "Steinbrenner et al. (2020). Evidence-Based Practices for Children, Youth, and Young Adults with Autism. NCAEP. Comprehensive review identifying 28 evidence-based practices for autism intervention including visual supports, social narratives, and peer-mediated interventions.",
@@ -3948,6 +4292,11 @@
       "HLP17",
       "HLP18"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.8.3",
+      "hlp.17",
+      "hlp.18"
+    ],
     "evidence": {
       "citationText": "Steinbrenner et al. (2020). Evidence-Based Practices for Children, Youth, and Young Adults with Autism. NCAEP. Comprehensive review identifying 28 evidence-based practices for autism intervention including visual supports, social narratives, and peer-mediated interventions.",
       "sourceLink": "https://ncaep.fpg.unc.edu/wp-content/uploads/EBP-Report-2020.pdf"
@@ -4002,6 +4351,11 @@
       "UDL 1.1",
       "UDL 3.1",
       "HLP16"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.1.1",
+      "udl.3.1",
+      "hlp.16"
     ],
     "evidence": {
       "citationText": "Steinbrenner et al. (2020). Evidence-Based Practices for Children, Youth, and Young Adults with Autism. NCAEP. Comprehensive review identifying 28 evidence-based practices for autism intervention including visual supports, social narratives, and peer-mediated interventions.",
@@ -4079,6 +4433,11 @@
       "UDL 6.4",
       "HLP16"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.6.2",
+      "udl.6.4",
+      "hlp.16"
+    ],
     "evidence": {
       "citationText": "AFIRM Team. Autism Focused Intervention Resources and Modules. UNC FPG. Free online modules providing step-by-step instructions for implementing evidence-based practices for autism, including antecedent-based interventions and task analysis.",
       "sourceLink": "https://afirm.fpg.unc.edu/afirm-modules/"
@@ -4135,6 +4494,10 @@
       "UDL 7.2",
       "HLP7"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.7.2",
+      "hlp.7"
+    ],
     "evidence": {
       "citationText": "AFIRM Team. Autism Focused Intervention Resources and Modules. UNC FPG. Free online modules providing step-by-step instructions for implementing evidence-based practices for autism, including antecedent-based interventions and task analysis.",
       "sourceLink": "https://afirm.fpg.unc.edu/afirm-modules/"
@@ -4190,6 +4553,11 @@
       "UDL 7.2",
       "HLP18"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.7.1",
+      "udl.7.2",
+      "hlp.18"
+    ],
     "evidence": {
       "citationText": "Steinbrenner et al. (2020). Evidence-Based Practices for Children, Youth, and Young Adults with Autism. NCAEP. Comprehensive review identifying 28 evidence-based practices for autism intervention including visual supports, social narratives, and peer-mediated interventions.",
       "sourceLink": "https://ncaep.fpg.unc.edu/wp-content/uploads/EBP-Report-2020.pdf"
@@ -4243,6 +4611,10 @@
     "udlHlpTags": [
       "UDL 2.1",
       "HLP13"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.2.1",
+      "hlp.13"
     ],
     "evidence": {
       "citationText": "Steinbrenner et al. (2020). Evidence-Based Practices for Children, Youth, and Young Adults with Autism. NCAEP. Comprehensive review identifying 28 evidence-based practices for autism intervention including visual supports, social narratives, and peer-mediated interventions.",
@@ -4301,6 +4673,12 @@
       "HLP7",
       "HLP22"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.6.4",
+      "udl.9.3",
+      "hlp.7",
+      "hlp.22"
+    ],
     "evidence": {
       "citationText": "Center on PBIS (2024). Positive Behavioral Interventions & Supports. Research-based framework for Tier 2/3 behavioral interventions including Check-In/Check-Out, self-monitoring, and function-based support.",
       "sourceLink": "https://www.pbis.org/"
@@ -4356,6 +4734,11 @@
       "UDL 6.4",
       "UDL 9.2",
       "HLP18"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.6.4",
+      "udl.9.2",
+      "hlp.18"
     ],
     "evidence": {
       "citationText": "Center on PBIS (2024). Positive Behavioral Interventions & Supports. Research-based framework for Tier 2/3 behavioral interventions including Check-In/Check-Out, self-monitoring, and function-based support.",
@@ -4417,6 +4800,11 @@
       "UDL 9.2",
       "HLP18"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.7.1",
+      "udl.9.2",
+      "hlp.18"
+    ],
     "evidence": {
       "citationText": "Center on PBIS (2024). Positive Behavioral Interventions & Supports. Research-based framework for Tier 2/3 behavioral interventions including Check-In/Check-Out, self-monitoring, and function-based support.",
       "sourceLink": "https://www.pbis.org/"
@@ -4469,6 +4857,11 @@
       "UDL 7.3",
       "UDL 9.2",
       "HLP9"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.7.3",
+      "udl.9.2",
+      "hlp.9"
     ],
     "evidence": {
       "citationText": "Center on PBIS (2024). Positive Behavioral Interventions & Supports. Research-based framework for Tier 2/3 behavioral interventions including Check-In/Check-Out, self-monitoring, and function-based support.",
@@ -4525,6 +4918,11 @@
       "HLP7",
       "HLP9"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.7.3",
+      "hlp.7",
+      "hlp.9"
+    ],
     "evidence": {
       "citationText": "Center on PBIS (2024). Positive Behavioral Interventions & Supports. Research-based framework for Tier 2/3 behavioral interventions including Check-In/Check-Out, self-monitoring, and function-based support.",
       "sourceLink": "https://www.pbis.org/"
@@ -4578,6 +4976,11 @@
       "UDL 9.2",
       "HLP18"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.7.1",
+      "udl.9.2",
+      "hlp.18"
+    ],
     "evidence": {
       "citationText": "Center on PBIS (2024). Positive Behavioral Interventions & Supports. Research-based framework for Tier 2/3 behavioral interventions including Check-In/Check-Out, self-monitoring, and function-based support.",
       "sourceLink": "https://www.pbis.org/"
@@ -4630,6 +5033,10 @@
       "UDL 8.1",
       "HLP22"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.8.1",
+      "hlp.22"
+    ],
     "evidence": {
       "citationText": "Center on PBIS (2024). Positive Behavioral Interventions & Supports. Research-based framework for Tier 2/3 behavioral interventions including Check-In/Check-Out, self-monitoring, and function-based support.",
       "sourceLink": "https://www.pbis.org/"
@@ -4680,6 +5087,10 @@
     "udlHlpTags": [
       "UDL 7.3",
       "HLP10"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.7.3",
+      "hlp.10"
     ],
     "evidence": {
       "citationText": "Center on PBIS (2024). Positive Behavioral Interventions & Supports. Research-based framework for Tier 2/3 behavioral interventions including Check-In/Check-Out, self-monitoring, and function-based support.",
@@ -4734,6 +5145,11 @@
       "HLP7",
       "HLP8"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.7.3",
+      "hlp.7",
+      "hlp.8"
+    ],
     "evidence": {
       "citationText": "Center on PBIS (2024). Positive Behavioral Interventions & Supports. Research-based framework for Tier 2/3 behavioral interventions including Check-In/Check-Out, self-monitoring, and function-based support.",
       "sourceLink": "https://www.pbis.org/"
@@ -4785,6 +5201,10 @@
     "udlHlpTags": [
       "UDL 9.2",
       "HLP9"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.9.2",
+      "hlp.9"
     ],
     "evidence": {
       "citationText": "Center on PBIS (2024). Positive Behavioral Interventions & Supports. Research-based framework for Tier 2/3 behavioral interventions including Check-In/Check-Out, self-monitoring, and function-based support.",
@@ -4838,6 +5258,11 @@
       "UDL 7.2",
       "UDL 7.3",
       "HLP18"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.7.2",
+      "udl.7.3",
+      "hlp.18"
     ],
     "evidence": {
       "citationText": "IRIS Center. Accommodations: Instructional and Testing Supports. Vanderbilt University. Comprehensive module on accommodation categories, selection, and implementation for students with disabilities.",
@@ -4900,6 +5325,11 @@
       "UDL 5.1",
       "HLP19"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.4.1",
+      "udl.5.1",
+      "hlp.19"
+    ],
     "evidence": {
       "citationText": "IRIS Center. Accommodations: Instructional and Testing Supports. Vanderbilt University. Comprehensive module on accommodation categories, selection, and implementation for students with disabilities.",
       "sourceLink": "https://iris.peabody.vanderbilt.edu/module/acc/"
@@ -4955,6 +5385,10 @@
       "UDL 4.2",
       "HLP19"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.4.2",
+      "hlp.19"
+    ],
     "evidence": {
       "citationText": "IRIS Center. Accommodations: Instructional and Testing Supports. Vanderbilt University. Comprehensive module on accommodation categories, selection, and implementation for students with disabilities.",
       "sourceLink": "https://iris.peabody.vanderbilt.edu/module/acc/"
@@ -5006,6 +5440,10 @@
     "udlHlpTags": [
       "UDL 4.2",
       "UDL 7.3"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.4.2",
+      "udl.7.3"
     ],
     "evidence": {
       "citationText": "IRIS Center. Accommodations: Instructional and Testing Supports. Vanderbilt University. Comprehensive module on accommodation categories, selection, and implementation for students with disabilities.",
@@ -5062,6 +5500,10 @@
       "UDL 7.3",
       "HLP13"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.7.3",
+      "hlp.13"
+    ],
     "evidence": {
       "citationText": "IRIS Center. Accommodations: Instructional and Testing Supports. Vanderbilt University. Comprehensive module on accommodation categories, selection, and implementation for students with disabilities.",
       "sourceLink": "https://iris.peabody.vanderbilt.edu/module/acc/"
@@ -5117,6 +5559,10 @@
       "UDL 4.1",
       "UDL 5.2"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.4.1",
+      "udl.5.2"
+    ],
     "evidence": {
       "citationText": "IRIS Center. Accommodations: Instructional and Testing Supports. Vanderbilt University. Comprehensive module on accommodation categories, selection, and implementation for students with disabilities.",
       "sourceLink": "https://iris.peabody.vanderbilt.edu/module/acc/"
@@ -5171,6 +5617,10 @@
       "UDL 8.3",
       "HLP17"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.8.3",
+      "hlp.17"
+    ],
     "evidence": {
       "citationText": "IRIS Center. Accommodations: Instructional and Testing Supports. Vanderbilt University. Comprehensive module on accommodation categories, selection, and implementation for students with disabilities.",
       "sourceLink": "https://iris.peabody.vanderbilt.edu/module/acc/"
@@ -5223,6 +5673,10 @@
       "UDL 4.2",
       "UDL 7.3"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.4.2",
+      "udl.7.3"
+    ],
     "evidence": {
       "citationText": "IRIS Center. Accommodations: Instructional and Testing Supports. Vanderbilt University. Comprehensive module on accommodation categories, selection, and implementation for students with disabilities.",
       "sourceLink": "https://iris.peabody.vanderbilt.edu/module/acc/"
@@ -5274,6 +5728,10 @@
     "udlHlpTags": [
       "UDL 1.1",
       "UDL 1.4"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.1.1",
+      "udl.1.4"
     ],
     "evidence": {
       "citationText": "W3C (2018). WCAG 2.1 Success Criterion 1.4.3 Contrast (Minimum). Establishes 4.5:1 minimum contrast ratio for normal text and 7:1 for enhanced accessibility, accommodating vision loss equivalent to 20/40-20/80 acuity.",
@@ -5331,6 +5789,11 @@
       "UDL 1.2",
       "UDL 1.3"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.1.1",
+      "udl.1.2",
+      "udl.1.3"
+    ],
     "evidence": {
       "citationText": "Perkins School for the Blind. Common Classroom Accommodations for Low Vision. Guidance on large print, verbal spatial cueing, and audio description for students with visual impairments.",
       "sourceLink": "https://www.perkins.org/"
@@ -5383,6 +5846,10 @@
     "udlHlpTags": [
       "UDL 1.1",
       "HLP13"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.1.1",
+      "hlp.13"
     ],
     "evidence": {
       "citationText": "Perkins School for the Blind. Common Classroom Accommodations for Low Vision. Guidance on large print, verbal spatial cueing, and audio description for students with visual impairments.",
@@ -5437,6 +5904,11 @@
       "UDL 1.3",
       "HLP19"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.1.1",
+      "udl.1.3",
+      "hlp.19"
+    ],
     "evidence": {
       "citationText": "CAST (2018). Universal Design for Learning Guidelines 2.2. Framework for optimizing teaching through multiple means of engagement, representation, and action/expression.",
       "sourceLink": "https://udlguidelines.cast.org/"
@@ -5488,6 +5960,10 @@
     "udlHlpTags": [
       "UDL 1.3",
       "UDL 2.1"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.1.3",
+      "udl.2.1"
     ],
     "evidence": {
       "citationText": "Perkins School for the Blind. Common Classroom Accommodations for Low Vision. Guidance on large print, verbal spatial cueing, and audio description for students with visual impairments.",
@@ -5541,6 +6017,10 @@
       "UDL 1.3",
       "HLP13"
     ],
+    "udlHlpTagsCanonical": [
+      "udl.1.3",
+      "hlp.13"
+    ],
     "evidence": {
       "citationText": "Perkins School for the Blind. Common Classroom Accommodations for Low Vision. Guidance on large print, verbal spatial cueing, and audio description for students with visual impairments.",
       "sourceLink": "https://www.perkins.org/"
@@ -5584,6 +6064,10 @@
       "HLP16",
       "UDL3.3"
     ],
+    "udlHlpTagsCanonical": [
+      "hlp.16",
+      "udl.3.3"
+    ],
     "evidence": {
       "citationText": "McLeskey et al. (2017). High-Leverage Practices in Special Education. HLP #16 (Explicit Instruction) emphasizes providing models with visible thinking and demonstrating what 'done' looks like through annotated exemplars.",
       "sourceLink": "https://highleveragepractices.org/"
@@ -5625,6 +6109,10 @@
     "udlHlpTags": [
       "HLP14",
       "UDL6.4"
+    ],
+    "udlHlpTagsCanonical": [
+      "hlp.14",
+      "udl.6.4"
     ],
     "evidence": {
       "citationText": "Graham & Harris (2005). Self-Regulated Strategy Development. Research shows self-monitoring checklists improve metacognition and task completion, particularly for students with executive function challenges.",
@@ -5669,6 +6157,10 @@
     "udlHlpTags": [
       "UDL2.1",
       "IRIS"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.2.1",
+      "iris"
     ],
     "evidence": {
       "citationText": "IRIS Center. Accommodations: Instructional and Testing Supports. Simplifying directions while maintaining expectations is a research-based presentation accommodation that reduces linguistic complexity without changing cognitive demand.",
@@ -5718,6 +6210,10 @@
     "udlHlpTags": [
       "UDL2.5",
       "SIOP"
+    ],
+    "udlHlpTagsCanonical": [
+      "udl.2.5",
+      "siop"
     ],
     "evidence": {
       "citationText": "Echevarría, Vogt, & Short (2017). Making Content Comprehensible for English Learners: The SIOP Model. Visual vocabulary cards with images, definitions, and text connections support academic language acquisition.",

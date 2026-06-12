@@ -29,6 +29,7 @@ import { generateObject, NoObjectGeneratedError } from 'ai';
 
 import { buildMessages } from '@/lib/promptInjector';
 import { buildCatalogContext } from '@/lib/catalogContext';
+import { buildResearchAnchorsMessage } from '@/lib/researchAnchors';
 import { validateLessonPlan, formatErrorsForRetry } from '@/lib/lessonPlanSchema';
 import { validateCatalogIds } from '@/lib/catalog/validateIds';
 import { suggestSimilarCatalogId } from '@/lib/catalog/closestIds';
@@ -126,11 +127,22 @@ export async function POST(request: NextRequest) {
     console.warn('[finalize-plan] catalog context build failed:', err);
   }
 
+  let researchAnchorsMessage: string | null = null;
+  try {
+    researchAnchorsMessage = buildResearchAnchorsMessage({
+      plan: currentPlan,
+      learnerProfile,
+    });
+  } catch (err) {
+    console.warn('[finalize-plan] research anchors build failed:', err);
+  }
+
   const { messages, promptVersion } = buildMessages({
     conversationHistory,
     currentPlan,
     learnerProfile: learnerProfile as Record<string, unknown> | null,
     catalogCandidatesMessage,
+    researchAnchorsMessage,
   });
 
   // Lift the primary Penny system prompt into the dedicated `system` param.
@@ -252,6 +264,17 @@ export async function POST(request: NextRequest) {
     } catch (scorerErr) {
       console.warn('[finalize-plan] scorer failed:', scorerErr);
     }
+  }
+
+  // Promote a weak Implementation Recipe Clarity score (teacherMoves quality)
+  // into a top-level warning so the teacher sees it on the checklist without
+  // it blocking finalize.
+  if (scorecard?.recipeClarity && scorecard.recipeClarity.score < 2) {
+    validation.errors.push({
+      path: '<root>',
+      message: `Implementation Recipe Clarity scored ${scorecard.recipeClarity.score}/3 — ${scorecard.recipeClarity.rationale}`,
+      severity: 'warning',
+    });
   }
 
   const responseBody = {

@@ -161,6 +161,27 @@ export interface Objective {
   isExtension?: boolean; // true for the optional DOK 4 extension
 }
 
+/**
+ * Structured execution recipe for a single lesson phase (Option B in
+ * docs/plans/procedure-detail-enhancement.plan.md). `description` stays the
+ * 2-4 sentence *what* summary; these six fields are the *how* — one teacher
+ * decision point each, 1-3 sentences, plain text.
+ */
+export interface TeacherMoves {
+  /** What the teacher SAYS or DOES to open the phase; model question verbatim in quotes. */
+  launch: string;
+  /** Conferring move + data collected + student talk to listen for while students work. */
+  duringWork: string;
+  /** The artifact/signal/evidence that proves the phase landed before transitioning. */
+  checkForUnderstanding: string;
+  /** Pre-planned move when a student or pair freezes; tied to the accommodation lanes. */
+  ifStuck: string;
+  /** Pre-planned stretch move for early finishers; aligned to the highest-DOK objective. */
+  ifAhead: string;
+  /** How the teacher closes the phase and routes into the next one; names the signal. */
+  transition: string;
+}
+
 export interface ProcedureStep {
   // Canonical id from lesson_phase_manifest.csv. Optional during P0 because
   // legacy demo data and markdown-only outputs may not carry it; the parser
@@ -169,6 +190,9 @@ export interface ProcedureStep {
   // Human label as Penny wrote it (e.g. "Set Purpose (10 min)").
   step: string;
   description: string;
+  // Structured teacher-move recipe. Optional for legacy plans; the generator
+  // schema requires it on every fresh finalize.
+  teacherMoves?: TeacherMoves;
   // Embedded accommodations as free text (P0). P1 swaps to accommodationIds[].
   accommodations?: string;
   // Catalog references resolved server-side (populated in P1).
@@ -240,6 +264,10 @@ export interface LessonPlanData {
     average: number;
     dimensions: { name: string; score: 0 | 1 | 2 | 3; rationale: string }[];
     passed: boolean;
+    // Implementation Recipe Clarity (teacherMoves quality), scored alongside
+    // the six EQuIP+UDL dimensions. Optional: plans scored before the
+    // procedure-detail enhancement won't carry it.
+    recipeClarity?: { score: 0 | 1 | 2 | 3; rationale: string };
   };
 
   // Catalog references resolved server-side (P1 fills these out).

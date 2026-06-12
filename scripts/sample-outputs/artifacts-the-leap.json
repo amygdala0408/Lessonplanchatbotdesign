@@ -1,0 +1,294 @@
+{
+  "single_point_rubric": {
+    "title": "Single-Point Rubric: Citing Strong Evidence in \"The Leap\"",
+    "standardCode": "CCSS.ELA-LITERACY.RL.9-10.1",
+    "objective": "Cite at least two pieces of strong textual evidence from \"The Leap\" to support an inference about how a character's past shapes their identity, and explain in writing how the evidence supports the inference.",
+    "criteria": [
+      {
+        "criterion": "Inference About Identity",
+        "proficient": "States a clear inference about how Anna's past (the circus, the fire, the rescue) shapes who she becomes, going beyond what the narrator says outright in \"The Leap.\"",
+        "growthCue": "Push past summary: ask yourself what Anna's choices in the past reveal about the woman she is now. Try the frame \"Anna's past as a ___ shows that she is ___.\"",
+        "extensionCue": "Layer a second inference that shows tension or change in Anna's identity across the story's flashbacks."
+      },
+      {
+        "criterion": "Evidence Selection",
+        "proficient": "Cites two specific, strong quotes from \"The Leap\" (with quotation marks and paragraph reference) that directly connect to the inference, not just any line that mentions Anna.",
+        "growthCue": "Reread your annotations from paragraphs 2 through 4 and swap any quote that only mentions the topic for one that proves your claim. Use the bilingual glossary if a word is blocking you.",
+        "extensionCue": "Choose evidence from two different moments in the story (for example, the trapeze fall and the house fire) to show a pattern across Anna's life."
+      },
+      {
+        "criterion": "Reasoning and Explanation",
+        "proficient": "Writes at least two sentences per quote explaining why it is strong evidence and how it links to the inference, using the CER organizer or a sentence frame.",
+        "growthCue": "For each quote, finish the sentence \"This is strong evidence because ___ and it shows Anna is ___.\" Avoid restating the quote.",
+        "extensionCue": "Analyze specific words or images from Erdrich's language (such as \"blind,\" \"weightless,\" or the braille detail) and explain what they reveal."
+      },
+      {
+        "criterion": "Organization and Conventions",
+        "proficient": "Response is organized as claim, then evidence, then reasoning; quotes are punctuated correctly and ideas are easy to follow.",
+        "growthCue": "Use the CER boxes in order and check that each quote has quotation marks and a paragraph number before submitting.",
+        "extensionCue": "Use a transition (\"Furthermore,\" \"In addition,\" \"This pattern continues when\") to connect your two pieces of evidence smoothly."
+      }
+    ],
+    "studentSelfCheck": [
+      "I can state an inference about how Anna's past shapes her identity in \"The Leap.\"",
+      "I can cite two specific quotes from the story with quotation marks and paragraph numbers.",
+      "I can explain in two sentences why each quote is strong evidence for my inference.",
+      "I can organize my response using the CER format or a sentence frame.",
+      "I can reread my work calmly and check it against the success criteria before turning it in."
+    ]
+  },
+  "discussion_protocol": {
+    "title": "Concentric Circles: Citing Strong Evidence on Anna's Identity in \"The Leap\"",
+    "structure": "concentric_circles",
+    "drivingQuestion": "How does Anna's past as a trapeze artist shape who she becomes as a mother in \"The Leap,\" and which two pieces of evidence from the story most strongly support your inference?",
+    "timeMinutes": 20,
+    "roles": [
+      {
+        "name": "Evidence Spotter",
+        "responsibility": "This student names a specific quote from \"The Leap\" (with paragraph number) and reads it aloud to their partner before sharing what it shows about Anna.",
+        "promptStems": [
+          "In paragraph ___, Erdrich writes, \"___,\" which shows that Anna...",
+          "The strongest evidence I found about Anna's identity is...",
+          "This quote is strong evidence because it directly shows..."
+        ]
+      },
+      {
+        "name": "Inference Builder",
+        "responsibility": "This student takes the partner's quote and pushes the thinking by stating what the evidence reveals about Anna beyond the literal words, connecting past trapeze life to her identity as a mother.",
+        "promptStems": [
+          "So the quote suggests that Anna's past taught her to...",
+          "Beyond what the words say, I can infer that Anna...",
+          "This connects to her identity as a mother because..."
+        ]
+      },
+      {
+        "name": "Evidence Challenger",
+        "responsibility": "This student respectfully tests whether the evidence is strong or weak, asking if a different quote from \"The Leap\" would support the inference even better.",
+        "promptStems": [
+          "Is that the strongest evidence, or would the quote about ___ work better?",
+          "I wonder if paragraph ___ gives us stronger proof because...",
+          "That evidence is strong because it is specific, but could we also use..."
+        ]
+      }
+    ],
+    "accountability": "Each student carries a Talk Tracker half-sheet folded into three columns labeled Quote, Inference, and Partner's Name. During each of the three rotations (inner circle rotates one seat left), students must record one quote with paragraph number from \"The Leap\" and one inference their partner contributed. At the end of the protocol, students staple the Talk Tracker to their CER graphic organizer so the teacher can verify that the two pieces of evidence on the CER actually surfaced during talk. The teacher collects both as a single artifact and scores the Talk Tracker for specificity of citation (paragraph numbers and direct quotes versus vague references).",
+    "elSupport": "For the WIDA-3 developing student whose home language is Spanish, pre-load a bilingual mini-glossary on a notecard with key terms from \"The Leap\" (trapeze/trapecio, blindfold/venda, lightning/relámpago, rescue/rescate) and allow them to start in the inner circle with a prepared sentence frame already filled in from the guided practice phase. Provide 30 seconds of silent think-time before each rotation so they can rehearse their quote aloud quietly in Spanish or English. Pair them intentionally in rotation two with a bilingual Spanish-speaking partner for a brain-break exchange. Anxiety and organization needs from the IEP are supported by giving the student the rotation order in advance on a printed card and allowing them to pass once per protocol using a written sticky-note response instead of speaking."
+  },
+  "sentence_stems": {
+    "title": "Talk and Writing Stems for Citing Strong Evidence in \"The Leap\"",
+    "pairing": "text_dependent",
+    "rows": [
+      {
+        "audience": "all",
+        "function": "Citing strong evidence",
+        "stems": [
+          "In paragraph ___ of \"The Leap,\" Erdrich writes that ___, which shows that Anna ___.",
+          "One strong piece of evidence that Anna's past as a trapeze artist shapes her identity is when ___.",
+          "The phrase \"___\" is strong evidence because it directly connects to ___ rather than just mentioning ___."
+        ]
+      },
+      {
+        "audience": "all",
+        "function": "Making an inference",
+        "stems": [
+          "Based on how Anna ___ in \"The Leap,\" I can infer that her identity is shaped by ___.",
+          "Even though the narrator does not say it directly, the detail about ___ suggests that Anna ___.",
+          "Anna's choice to ___ reveals that she still sees herself as ___."
+        ]
+      },
+      {
+        "audience": "el_developing",
+        "function": "Citing evidence with frames",
+        "stems": [
+          "The author Erdrich says, \"___.\" This shows me that Anna is ___.",
+          "One quote from \"The Leap\" is \"___\" on page ___. This quote is about ___.",
+          "This evidence is strong because it tells me ___ about Anna, not just ___."
+        ]
+      },
+      {
+        "audience": "el_developing",
+        "function": "Connecting evidence to inference",
+        "stems": [
+          "The quote \"___\" connects to my inference because the word ___ means ___.",
+          "In Spanish I would say ___, and in English the author uses the word ___ to show ___.",
+          "This detail about the fire and the ___ helps me understand that Anna ___."
+        ]
+      },
+      {
+        "audience": "el_emerging",
+        "function": "Naming evidence with support",
+        "stems": [
+          "I see the word ___ in paragraph ___. It means ___ (cognate: ___).",
+          "Anna did ___. This tells me she is ___.",
+          "My quote is \"___.\" My inference is ___."
+        ]
+      },
+      {
+        "audience": "iep_504",
+        "function": "Organizing claim, evidence, reason",
+        "stems": [
+          "My claim about Anna's identity is ___ (Box 1 on my CER organizer).",
+          "My first piece of evidence from \"The Leap\" is \"___\" and it is located in paragraph ___ (Box 2).",
+          "This evidence is strong, not weak, because it shows ___ about who Anna is, and a weak quote would only ___ (Box 3).",
+          "One more piece of evidence that supports the same idea is \"___,\" which adds that ___."
+        ]
+      },
+      {
+        "audience": "all",
+        "function": "Building on a partner",
+        "stems": [
+          "I want to add to what ___ said about Anna by pointing to paragraph ___, where Erdrich writes ___.",
+          "I see the evidence differently because the line \"___\" makes me think Anna ___ instead.",
+          "___'s quote and my quote both show that Anna's past as ___ still shapes how she ___ today."
+        ]
+      }
+    ],
+    "usageNote": "Model the \"all\" stems during the 10-minute mini-lesson think-aloud with paragraph 1, showing how a strong quote names a specific action or image from Anna's trapeze past, while a weak quote only mentions the circus in general. During guided practice on paragraphs 2 through 4, require partners to use at least one citing stem and one inference stem aloud before marking the shared text, which lowers anxiety by giving students exact words to start with. For the WIDA-3 Spanish-speaking students, pre-teach the cognates trapecio, identidad, and evidencia and let them rehearse the el_developing stems with a partner before writing; the el_emerging row is there as a further drop-down if a student freezes. For the student with the IEP, print the iep_504 row directly onto the CER graphic organizer so each stem is anchored to a labeled box, which addresses organization and reading support without singling the student out. During independent practice, require the stems in writing on the CER organizer, then fade them on the exit ticket by inviting students to either use a stem or write in their own words. If you swapped this lesson for an informational text or a different RL standard, you would rewrite the \"citing strong evidence\" row to reference paragraph structure or central idea instead of character imagery, and you would drop the trapeze-specific language in the inference row."
+  },
+  "graphic_organizer": {
+    "title": "Citing Strong Evidence: Anna's Identity in \"The Leap\"",
+    "purpose": "This organizer scaffolds the DOK 3 work of citing two pieces of strong textual evidence from \"The Leap\" and explaining how that evidence supports an inference about how Anna's past shapes her identity.",
+    "layout": "cer",
+    "cells": [
+      {
+        "label": "My Inference (Claim) About Anna",
+        "prompt": "Write one sentence stating what you infer about how Anna's past (the circus, the lightning, losing her first baby, the fire) shaped who she became. This is your claim about her identity, not a plot summary of \"The Leap.\"",
+        "sentenceStem": "In \"The Leap,\" Anna's past as a ________ shaped her identity because she became someone who ________.",
+        "wordBank": [
+          "trapeze artist",
+          "Flying Avalons",
+          "blindness",
+          "resilient",
+          "protective",
+          "attentive",
+          "courageous"
+        ]
+      },
+      {
+        "label": "Evidence #1 (Quote from \"The Leap\")",
+        "prompt": "Copy one exact quote from paragraphs 1-4 of \"The Leap\" that supports your inference. Put it in quotation marks and write the paragraph number. Choose a quote that shows Anna's action or trait, not just any line that mentions her.",
+        "sentenceStem": "Erdrich writes, \"________\" (paragraph ___).",
+        "wordBank": [
+          "paragraph",
+          "quotation",
+          "Anna",
+          "narrator"
+        ]
+      },
+      {
+        "label": "Why Evidence #1 Is Strong",
+        "prompt": "In two sentences, explain why this quote is strong evidence for your inference about Anna's identity. Strong means the quote directly shows the trait you claimed, not just hints at the topic.",
+        "sentenceStem": "This quote is strong evidence because it shows that Anna ________, which proves she is ________.",
+        "wordBank": [
+          "shows",
+          "proves",
+          "reveals",
+          "demonstrates",
+          "because",
+          "directly"
+        ]
+      },
+      {
+        "label": "Evidence #2 (Quote from \"The Leap\")",
+        "prompt": "Copy a second exact quote from a different part of \"The Leap\" that also supports your inference. Two quotes from the same paragraph is not enough variety. Include the paragraph number.",
+        "sentenceStem": "Later in the story, Erdrich writes, \"________\" (paragraph ___).",
+        "wordBank": [
+          "later",
+          "earlier",
+          "also",
+          "again",
+          "paragraph"
+        ]
+      },
+      {
+        "label": "Why Evidence #2 Is Strong",
+        "prompt": "In two sentences, explain why this second quote is strong evidence. Then explain how it adds something new to your claim that the first quote did not already show.",
+        "sentenceStem": "This quote is also strong because ________. It adds to my first piece of evidence by showing ________.",
+        "wordBank": [
+          "also",
+          "adds",
+          "furthermore",
+          "in addition",
+          "unlike",
+          "new detail"
+        ]
+      },
+      {
+        "label": "Putting It Together",
+        "prompt": "Write two to three sentences that tie both quotes back to your inference about how Anna's past shaped her identity. Use the word \"identity\" or \"shaped\" in your answer to stay tied to the objective.",
+        "sentenceStem": "Together, these two quotes show that Anna's past shaped her identity by ________.",
+        "wordBank": [
+          "together",
+          "both quotes",
+          "shaped",
+          "identity",
+          "past",
+          "therefore"
+        ]
+      }
+    ],
+    "teacherNotes": "Introduce this organizer after the mini-lesson think-aloud on paragraph 1, so students have already seen you sort one strong quote from one weak quote about Anna. Strong responses will pick quotes that show Anna's vigilance, physical skill, or memory of loss (such as her saving the narrator from the fire or her trained ear for the saxophone-like creak) and will explain the trait, not just paraphrase. Watch for the common misconception of choosing any quote that mentions Anna or the circus without tying it to identity; redirect by asking, \"What trait does this prove?\" For the WIDA 3 multilingual learners with Spanish as a home language, pre-teach cognates such as evidence/evidencia, identity/identidad, and inference/inferencia, and allow partner talk in Spanish or English before writing. For the student with an IEP flagging anxiety, organization, and reading support, provide a pre-highlighted copy of \"The Leap\" with paragraphs 1-4 numbered, chunk the organizer by revealing one row at a time, offer extended time into closure, and allow dictation of the explanation cells. If the chosen text were instead an informational article, the cells would shift to source credibility and data citation rather than character trait inference, so do not reuse this organizer as-is."
+  },
+  "vocabulary_preview": {
+    "title": "Vocabulary Preview: The Leap by Louise Erdrich",
+    "terms": [
+      {
+        "term": "cite",
+        "studentDefinition": "To point to a specific part of a text, like a quote or line, to back up what you are saying.",
+        "exampleFromText": "Standard-aligned example: When you cite evidence from The Leap, you copy the exact words Erdrich used about Anna and put them in quotation marks.",
+        "cognate": "Spanish: citar (to quote or cite a source)",
+        "quickCheck": "Show me one sentence from The Leap you could cite to prove Anna was once a trapeze artist."
+      },
+      {
+        "term": "evidence",
+        "studentDefinition": "Proof from the text, like a quote or detail, that supports an idea or inference you are making.",
+        "exampleFromText": "Standard-aligned example: A piece of evidence from The Leap might be the narrator saying her mother 'lives comfortably in extreme elements' to show Anna's bravery.",
+        "cognate": "Spanish: evidencia (proof, evidence)",
+        "quickCheck": "Thumbs up if this is strong evidence about Anna's identity: 'She was the surviving half of a blindfold trapeze act.' Why?"
+      },
+      {
+        "term": "inference",
+        "studentDefinition": "A smart guess you make by combining clues from the text with what you already know. It is not directly stated.",
+        "exampleFromText": "Standard-aligned example: From the line that Anna 'has never upon a single occasion' spoken of the lightning strike, you can infer the trauma still shapes who she is.",
+        "cognate": "Spanish: inferencia (an inference or conclusion drawn)",
+        "quickCheck": "Make one inference about Anna based on the fact that she saved the narrator from the burning house."
+      },
+      {
+        "term": "trapeze",
+        "studentDefinition": "A short bar hung by two ropes high in the air that circus performers swing and flip on.",
+        "exampleFromText": "From The Leap: 'My mother was the surviving half of a blindfold trapeze act.'",
+        "cognate": "Spanish: trapecio (same meaning, a trapeze bar)",
+        "quickCheck": "Point to the moment in paragraph 1 where the trapeze act becomes important to Anna's identity."
+      },
+      {
+        "term": "blindfold",
+        "studentDefinition": "A cloth tied over someone's eyes so they cannot see. As an action, it means to cover someone's eyes.",
+        "exampleFromText": "From The Leap: the 'blindfold trapeze act' Anna performed with her first husband, Harry Avalon.",
+        "cognate": "Spanish: false cognate. Spanish 'venda' means blindfold; 'ciego' means blind. Do not confuse with 'blindar' which means to shield with armor.",
+        "quickCheck": "Why does Erdrich include the word blindfold? What does it suggest about Anna's trust and skill?"
+      },
+      {
+        "term": "extreme elements",
+        "studentDefinition": "Very intense or dangerous conditions in nature, like fire, storms, or lightning.",
+        "exampleFromText": "From The Leap: the narrator says her mother 'lives comfortably in extreme elements.'",
+        "cognate": "Spanish: elementos extremos (very close cognate, same meaning)",
+        "quickCheck": "Name two 'extreme elements' that appear in The Leap and what they reveal about Anna."
+      },
+      {
+        "term": "surviving",
+        "studentDefinition": "Staying alive through something dangerous, sad, or difficult that others may not have lived through.",
+        "exampleFromText": "From The Leap: Anna is described as 'the surviving half' of the trapeze act after the lightning strike kills her partner.",
+        "cognate": "Spanish: sobrevivir (to survive)",
+        "quickCheck": "How does being a survivor shape Anna's identity later in the story?"
+      },
+      {
+        "term": "strong evidence",
+        "studentDefinition": "A quote or detail that clearly and directly supports your inference, not just a line that mentions the topic.",
+        "exampleFromText": "Standard-aligned example: For the inference that Anna is brave, 'She climbed the ladder' is weak; 'She lives comfortably in extreme elements' is strong because it shows a pattern across her life.",
+        "cognate": "Spanish: evidencia sólida or evidencia contundente (strong or solid evidence)",
+        "quickCheck": "Compare two quotes from The Leap. Which is stronger evidence that Anna's past shapes her identity, and why?"
+      }
+    ],
+    "routine": "Use a modified Marzano six-step preview before reading The Leap: describe each term in student-friendly language, have students restate in their own words or in Spanish, sketch a quick image (especially for trapeze, blindfold, and extreme elements), partner-discuss using the sentence frame 'I think ___ means ___ because ___,' re-engage with the quick check question, and end with a rapid matching game of term to definition. For the WIDA-3 multilingual learner, pre-load the Spanish cognates (citar, evidencia, inferencia, trapecio, sobrevivir) on a bilingual glossary card she can keep during independent CER work, and flag blindfold as a false-cognate trap. For the student with an IEP for anxiety, organization, and reading support, provide the preview card in advance, chunk it to four priority terms highlighted (cite, evidence, inference, strong evidence) so the cognitive load is manageable, and allow audio playback of definitions. Pair-share rather than cold-call to lower anxiety, and let students annotate the preview card during the mini-lesson so it doubles as a reference during guided and independent practice. If the chosen text were nonfiction or a different story, the term list would shift away from trapeze and blindfold toward text-specific Tier 3 words, but cite, evidence, inference, and strong evidence would remain because they are anchored to RL.9-10.1."
+  }
+}

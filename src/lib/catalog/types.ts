@@ -213,6 +213,8 @@ export interface ScaffoldRecord {
   bloomLevel: string;
   dokLevel: DOKLevel;
   udlHlpTags: string[];
+  /** Canonical forms (udl.3.3, hlp.16.explicit_instruction) for joins. */
+  udlHlpTagsCanonical?: string[];
   selStrand: string;
   representationTags: string[];
   cspTags: string[];
@@ -312,6 +314,8 @@ export interface AccommodationRecord {
   teacherPrompt: string;
   studentMicrocopy: string;
   udlHlpTags: string[];
+  /** Canonical forms (udl.3.3, hlp.16.explicit_instruction) for joins. */
+  udlHlpTagsCanonical?: string[];
   artifact?: AccommodationArtifactRef;
   evidence?: { citationText: string; sourceLink: string };
   elOnly: boolean;
