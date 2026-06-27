@@ -596,7 +596,7 @@ export default function HomePage() {
   return (
     <div
       className={cn(
-        "flex h-screen overflow-hidden font-['DM_Sans'] relative transition-colors duration-500",
+        "flex flex-col lg:flex-row min-h-screen lg:h-screen overflow-y-auto lg:overflow-hidden font-['DM_Sans'] relative transition-colors duration-500",
         theme === 'coffee' ? 'bg-[#2c241b] text-[#e8e6df]' : 'bg-[#dcdcd1] text-[#1a1a1a]',
       )}
     >
@@ -720,9 +720,69 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* MIDDLE COLUMN: CHAT */}
-      <div className="flex-1 flex flex-col relative z-0 h-full max-w-6xl mx-auto w-full">
-        <div className="p-4 md:p-12 h-full flex flex-col justify-center relative">
+      {/* MIDDLE COLUMN: CHAT
+          min-h-0 is required on this flex child so that nested flex-col
+          containers can shrink below their intrinsic height on desktop,
+          allowing the inner overflow-y-auto scroll region to work correctly. */}
+      <div className="flex-1 flex flex-col relative z-0 max-w-6xl mx-auto w-full min-h-0">
+
+        {/* Mobile top bar: visible on screens below lg, replaces the floating PennyFrame */}
+        <div
+          className={cn(
+            'lg:hidden flex items-center justify-between px-4 py-2 border-b-2 shrink-0 sticky top-0 z-20 transition-colors duration-500',
+            theme === 'coffee'
+              ? 'bg-[#3e3226] border-[#e8e6df]/20 text-[#e8e6df]'
+              : 'bg-[#e6e2d6] border-[#1a1a1a] text-[#1a1a1a]',
+          )}
+        >
+          <div className="flex items-center gap-2">
+            <PennyFrame size="sm" className="w-10 h-10" />
+            <span className="font-['Oswald'] uppercase tracking-widest text-sm font-bold">Penny Pedagogy</span>
+          </div>
+          <div className="flex items-center gap-2">
+            {!isDemoMode && messages.length <= 1 && (
+              <button
+                onClick={() => { loadDemoMode(); toast.success('Demo loaded!'); }}
+                className={cn(
+                  'flex items-center gap-1.5 px-2.5 py-1 rounded-full border text-[10px] font-bold uppercase tracking-widest transition-all',
+                  theme === 'coffee'
+                    ? 'border-green-500/50 text-green-400 bg-green-500/10'
+                    : 'border-green-600 text-green-700 bg-green-50',
+                )}
+              >
+                <Play size={12} />Demo
+              </button>
+            )}
+            <button
+              onClick={() => { resetConversation(); toast.success('Cleared.'); }}
+              title="Start fresh"
+              className={cn(
+                'flex items-center gap-1.5 px-2.5 py-1 rounded-full border text-[10px] font-bold uppercase tracking-widest transition-all',
+                theme === 'coffee'
+                  ? 'border-amber-400/40 text-amber-300 hover:bg-amber-400/10'
+                  : 'border-amber-600/40 text-amber-700 hover:bg-amber-100',
+              )}
+            >
+              <RotateCcw size={12} />Reset
+            </button>
+            <button
+              onClick={toggleTheme}
+              className={cn(
+                'flex items-center gap-1.5 px-2.5 py-1 rounded-full border text-[10px] font-bold uppercase tracking-widest transition-all',
+                theme === 'coffee'
+                  ? 'border-[#e8e6df]/30 text-[#e8e6df]/70'
+                  : 'border-[#1a1a1a]/30 text-[#1a1a1a]/70',
+              )}
+            >
+              {theme === 'coffee' ? <Sun size={12} /> : <Moon size={12} />}
+            </button>
+          </div>
+        </div>
+
+        {/* min-h-0 needed again here: flex children default to min-h of their
+            content; without this the ChatInterface cannot shrink when pickers
+            expand below it on the desktop fixed-height layout. */}
+        <div className="p-4 lg:p-12 flex-1 flex flex-col relative min-h-0">
           {/* Class profile sits above chat so Penny gets accommodation context
               from the very first turn. Auto-expanded during gathering, then
               collapsed but always re-openable via the chip. */}
@@ -919,10 +979,6 @@ export default function HomePage() {
             </div>
           )}
         </div>
-      </div>
-
-      <div className="lg:hidden fixed top-4 left-4 z-50">
-        <PennyFrame size="sm" className="w-16 h-16 shadow-lg" />
       </div>
 
       {/* RIGHT DRAWER TOGGLE BUTTON */}
