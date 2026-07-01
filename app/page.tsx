@@ -613,7 +613,7 @@ export default function HomePage() {
       {/* LEFT COLUMN: PENNY (Fixed Width) */}
       <div
         className={cn(
-          'hidden lg:flex flex-col w-[450px] h-full p-8 border-r-4 z-10 relative shadow-2xl shrink-0 transition-colors duration-500',
+          'hidden lg:flex flex-col w-[450px] h-full min-h-0 overflow-y-auto p-8 border-r-4 z-10 relative shadow-2xl shrink-0 transition-colors duration-500',
           theme === 'coffee' ? 'border-[#e8e6df]/20 bg-[#3e3226]' : 'border-[#1a1a1a] bg-[#e6e2d6]',
         )}
       >
@@ -724,7 +724,7 @@ export default function HomePage() {
           min-h-0 is required on this flex child so that nested flex-col
           containers can shrink below their intrinsic height on desktop,
           allowing the inner overflow-y-auto scroll region to work correctly. */}
-      <div className="flex-1 flex flex-col relative z-0 max-w-6xl mx-auto w-full min-h-0">
+      <div className="flex-1 flex flex-col relative z-0 max-w-6xl mx-auto w-full min-h-0 lg:overflow-hidden">
 
         {/* Mobile top bar: visible on screens below lg, replaces the floating PennyFrame */}
         <div

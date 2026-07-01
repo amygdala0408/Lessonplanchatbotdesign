@@ -201,7 +201,7 @@ export function ChatInterface({ messages, onSendMessage, isTyping, theme = 'defa
 
   return (
     <div className={cn(
-        "flex flex-col flex-1 min-h-[400px] relative overflow-hidden shadow-[16px_16px_0px_0px_rgba(26,26,26,0.9)] border-4 transition-colors duration-500 max-w-4xl mx-auto w-full",
+        "flex flex-col flex-1 min-h-[480px] relative overflow-hidden shadow-[16px_16px_0px_0px_rgba(26,26,26,0.9)] border-4 transition-colors duration-500 max-w-4xl mx-auto w-full",
         theme === 'coffee' 
             ? "bg-[#3e3226] border-[#e8e6df]/10 shadow-[16px_16px_0px_0px_rgba(44,36,27,0.9)]" 
             : "bg-[#fdfdfd] border-[#1a1a1a] shadow-[16px_16px_0px_0px_rgba(26,26,26,0.9)]"

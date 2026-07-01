@@ -182,7 +182,10 @@ export function ClassProfilePanel({
             transition={{ duration: 0.18 }}
             className="overflow-hidden"
           >
-            <div className="px-4 pb-4 pt-1 space-y-4 text-[12px]">
+            {/* Cap the expanded form to a fraction of the viewport on desktop and
+                let it scroll internally, so an open profile never pushes the chat
+                offscreen or forces the whole column to scroll awkwardly. */}
+            <div className="px-4 pb-4 pt-1 space-y-4 text-[12px] lg:max-h-[42vh] lg:overflow-y-auto scrollbar-thin">
               {/* Plans row */}
               <div className="flex flex-wrap gap-3">
                 <ToggleChip
