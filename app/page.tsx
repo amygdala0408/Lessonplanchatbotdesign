@@ -781,12 +781,15 @@ export default function HomePage() {
 
         {/* min-h-0 needed again here: flex children default to min-h of their
             content; without this the ChatInterface cannot shrink when pickers
-            expand below it on the desktop fixed-height layout. */}
-        <div className="p-4 lg:p-12 flex-1 flex flex-col relative min-h-0">
+            expand below it on the desktop fixed-height layout.
+            overflow-y-auto is the desktop safety net — on the lg fixed-height
+            shell an expanded class profile + pickers can exceed the viewport, so
+            this region scrolls instead of clipping. On mobile the root scrolls. */}
+        <div className="p-4 lg:p-12 flex-1 flex flex-col relative min-h-0 overflow-y-auto">
           {/* Class profile sits above chat so Penny gets accommodation context
               from the very first turn. Auto-expanded during gathering, then
               collapsed but always re-openable via the chip. */}
-          <div className="max-w-4xl mx-auto w-full">
+          <div className="max-w-4xl mx-auto w-full shrink-0">
             <ClassProfilePanel
               profile={learnerProfile}
               onChange={setLearnerProfile}
@@ -811,7 +814,7 @@ export default function HomePage() {
           />
 
           {finalizeProgress && (
-            <div className="max-w-4xl mx-auto w-full mt-4">
+            <div className="max-w-4xl mx-auto w-full mt-4 shrink-0">
               <div
                 className={cn(
                   'border-2 p-4 shadow-[6px_6px_0px_0px_rgba(0,0,0,0.18)]',
@@ -849,7 +852,7 @@ export default function HomePage() {
           {/* Phase-aware pickers — only the picker that matches the active phase
               renders, so the chat surface stays focused. */}
           {conversationPhase === 'gathering' && missingGatheringField && (
-            <div className="max-w-4xl mx-auto w-full">
+            <div className="max-w-4xl mx-auto w-full shrink-0">
               <InlineStructuredPicker
                 field={missingGatheringField}
                 theme={theme}
@@ -881,7 +884,7 @@ export default function HomePage() {
 
           {(['text_selection', 'instructional_model', 'preview', 'complete'] as ConversationPhase[]).includes(conversationPhase) &&
             (lessonPlan.textOptions?.length ?? 0) >= 2 && (
-            <div className="max-w-4xl mx-auto w-full">
+            <div className="max-w-4xl mx-auto w-full shrink-0">
               {textPickerExpanded ? (
                 <div>
                   <div className="flex justify-end">
@@ -931,7 +934,7 @@ export default function HomePage() {
           )}
 
           {(['instructional_model', 'preview', 'complete'] as ConversationPhase[]).includes(conversationPhase) && (
-            <div className="max-w-4xl mx-auto w-full">
+            <div className="max-w-4xl mx-auto w-full shrink-0">
               {modelChooserExpanded ? (
                 <div>
                   <div className="flex justify-end">

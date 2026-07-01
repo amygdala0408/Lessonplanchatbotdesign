@@ -260,7 +260,7 @@ export function ChatInterface({ messages, onSendMessage, isTyping, theme = 'defa
 
       {/* Messages Area */}
       <div className={cn(
-          "flex-1 overflow-y-auto p-8 space-y-10 z-10 scrollbar-thin scrollbar-track-transparent transition-colors duration-500 relative",
+          "flex-1 min-h-0 overflow-y-auto p-8 space-y-10 z-10 scrollbar-thin scrollbar-track-transparent transition-colors duration-500 relative",
           theme === 'coffee' 
             ? "bg-[#3e3226] scrollbar-thumb-[#e8e6df]/20" 
             : "bg-[#fdfdfd] scrollbar-thumb-[#1a1a1a]"
